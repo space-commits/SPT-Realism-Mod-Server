@@ -88,7 +88,7 @@ export class GenBotLvl extends BotLevelGenerator {
             }
         }
         else {
-            level = this.randomUtil.getInt(botLevelRange.min, botLevelRange.max);
+            level = this.chooseBotLevel(botLevelRange.min, botLevelRange.max, 1, 1.15);
         }
 
         for (let i = 0; i < level; i++) {
@@ -196,8 +196,8 @@ export class BotGen extends BotGenerator {
         equipment.FaceCover = gasMaskTier == 3 ? StaticArrays.gasEventMasksHigh : gasMaskTier == 2 ? StaticArrays.gasEventMasksMed : StaticArrays.gasEventMasksLow;
 
         if (ModTracker.tgcPresent && ((isPmc && gasMaskTier == 3) || botRole.includes("pmcbot") || botRole.includes("exusec") || botRole.includes("knight") || botRole.includes("pipe") || botRole.includes("bird"))) {
-            //equipment.FaceCover["672e2e756803734b60f5ac1e"] = 2;
-            //equipment.FaceCover["672e2e7517018293d11bbdc1"] = 2;
+            equipment.FaceCover["672e2e756803734b60f5ac1e"] = 2;
+            equipment.FaceCover["672e2e7517018293d11bbdc1"] = 2;
         }
 
         chances.equipment.Eyewear = 0;
@@ -424,15 +424,21 @@ export class BotGen extends BotGenerator {
         const botRole = botGenerationDetails.role.toLowerCase();
         const botLevel = genBotLvl.genBotLvl(botJsonTemplate.experience.level, botGenerationDetails, bot);
 
-        if (!botGenerationDetails.isPlayerScav && this.shouldSimulatePlayerScav(botRole)) {
+        // Only filter bot equipment, never players
+        if (!botGenerationDetails.isPlayerScav) { // && this.shouldSimulatePlayerScav(botRole)
             this.botEquipmentFilterService.filterBotEquipment(sessionId, botJsonTemplate, botLevel.level, botGenerationDetails);
         }
 
         bot.Info.Nickname = this.botNameService.generateUniqueBotNickname(botJsonTemplate, botGenerationDetails, botRole, this.botConfig.botRolesThatMustHaveUniqueName);
 
+        // Only run when generating a 'fake' playerscav, not actual player scav
+        if (!botGenerationDetails.isPlayerScav && this.shouldSimulatePlayerScav(botRole)) {
+            this.botNameService.addRandomPmcNameToBotMainProfileNicknameProperty(bot);
+            this.setRandomisedGameVersionAndCategory(bot.Info);
+        }
+
         //SPT has christmas and halloween stuff in bot inventories by default then removes it if not halloween or christams
         //so until I modify all bot loadouts I have to keep this, and then add christmas items manually to bots.
-
         if (!this.seasonalEventService.christmasEventEnabled()) {
             // Process all bots EXCEPT gifter, he needs christmas items
             if (botGenerationDetails.role !== "gifter") {
@@ -455,13 +461,14 @@ export class BotGen extends BotGenerator {
 
         // Remove hideout data if bot is not a PMC or pscav
         if (!(botGenerationDetails.isPmc || botGenerationDetails.isPlayerScav)) {
-            bot.Hideout = null;
+            bot.Hideout = undefined;
         }
 
         bot.Info.Experience = botLevel.exp;
         bot.Info.Level = botLevel.level;
         bot.Info.Settings.Experience = this.getExperienceRewardForKillByDifficulty(botJsonTemplate.experience.reward, botGenerationDetails.botDifficulty, botGenerationDetails.role);
         bot.Info.Settings.StandingForKill = this.getStandingChangeForKillByDifficulty(botJsonTemplate.experience.standingForKill, botGenerationDetails.botDifficulty, botGenerationDetails.role);
+        bot.Info.Settings.AggressorBonus = this.getAgressorBonusByDifficulty(botJsonTemplate.experience.aggressorBonus, botGenerationDetails.botDifficulty, botGenerationDetails.role);
         bot.Info.Settings.UseSimpleAnimator = botJsonTemplate.experience.useSimpleAnimator ?? false;
         bot.Info.Voice = this.weightedRandomHelper.getWeightedValue<string>(botJsonTemplate.appearance.voice);
         bot.Health = this.generateHealth(botJsonTemplate.health, botGenerationDetails.isPlayerScav);

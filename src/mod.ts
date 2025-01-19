@@ -113,6 +113,8 @@ import * as path from 'path';
 import * as fs from 'fs';
 import { BotGeneratorHelper } from "@spt/helpers/BotGeneratorHelper";
 import { BotNameService } from "@spt/services/BotNameService";
+import { IEndLocalRaidRequestData } from "@spt/models/eft/match/IEndLocalRaidRequestData";
+import { ExitStatus } from "@spt/models/enums/ExitStatis";
 
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");
@@ -574,7 +576,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             logger.warning("Map Name = " + matchInfo.location);
                             logger.warning("Map Type  = " + mapType);
                             logger.warning("Base Time: " + baseTime + " Real Time: " + realTime);
-                            logger.warning("Is Day = " + RaidInfoTracker.isNight);
+                            logger.warning("Is Night = " + RaidInfoTracker.isNight);
                         }
                         catch (err) {
                             logger.error("Realism Mod: Failed To Fetch Application Context Data" + err);
@@ -590,7 +592,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             "Realism-RunAtRaidEnd",
             [
                 {
-                    url: "/raid/profile/save",
+                    url: "client/match/local/end",
                     action: async (url, info, sessionID, output) => {
                         const postLoadDBService = container.resolve<DatabaseService>("DatabaseService");
                         const postLoadTables = postLoadDBService.getTables();
@@ -627,10 +629,9 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                                 quests.resetRepeatableQuests(profileData);
                             }
 
-                            //this.modifyMapLoot(locationConfig, RaidInfoTracker.mapName, info, sessionID, utils, logger);
+                            //this.modifyMapLoot(locationConfig, RaidInfoTracker.mapName, info, pmcData, sessionID, utils, logger);
 
                             this.checkEventQuests(pmcData);
-
                             player.correctNegativeHP(pmcData);
 
                             if (modConfig.realistic_player_health == true) {
@@ -806,9 +807,9 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             bots.forceBossSpawns();
         }
 
-        if (modConfig.boss_difficulty == true) {
-            bots.bossDifficulty();
-        }
+        // if (modConfig.boss_difficulty == true) {
+        //     bots.bossDifficulty();
+        // }
 
         if (modConfig.med_changes == true) {
             itemCloning.createCustomMedItems();
@@ -951,102 +952,101 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         locationConfig.staticLootMultiplier = playerMapLoot[profileId].staticLootMultiplier;
     }
 
-    // private modifyMapLoot(locationConfig: ILocationConfig, map: string, raidData: ISaveProgressRequestData, profileId: string, utils: Utils, logger: ILogger) {
+    private modifyMapLoot(locationConfig: ILocationConfig, map: string, raidData: IEndLocalRaidRequestData, pmcData: IPmcData, profileId: string, utils: Utils, logger: ILogger) {
 
-    //     let lootXp = 0;
+        //derive map specific modifier based on player looting XP. This will be done on raid end. Get last played map on raid end.
+        //have a json file with profile specific loot modifiers.
+        //reduce the loot modifiers by X% based on looting XP for that specific map.
+        //for all maps that aren't the map that was just reduced, increased loot modifiers by a fixed %, comparing against the base values to make sure it does not exceed them
+        //get prolile id, create new object if none existing, upate if existing.
+        //update SPT config with new data
 
-    //     if (raidData.exit !== PlayerRaidEndState.KILLED && raidData.exit !== PlayerRaidEndState.MISSING_IN_ACTION) {
-    //         const counters = raidData.profile.Stats.Eft.OverallCounters.Items;
-    //         for (const i in counters) {
-    //             const counter = counters[i];
-    //             if (counter.Key.includes("ExpLooting")) {
-    //                 logger.warning("Looting XP " + counter.Value);
-    //                 lootXp += counter.Value;
-    //             }
-    //         }
-    //     }
+        const exitStatus = raidData.results.result;
+        let lootXp = 0;
+        if (exitStatus !== ExitStatus.KILLED && exitStatus !== ExitStatus.MISSINGINACTION) {
+            const counters = pmcData.Stats.Eft.OverallCounters.Items;
+            for (const i in counters) {
+                const counter = counters[i];
+                if (counter.Key.includes("ExpLooting")) {
+                    logger.warning("Looting XP " + counter.Value);
+                    lootXp += counter.Value;
+                }
+            }
+        }
 
-    //     const looseModifier = lootXp * 0.00004;
-    //     const staticModifier = lootXp * 0.00002;
-    //     const minLooseLoot = 0.3;
-    //     const minstaticLoot = 0.4;
-    //     const looseLootRegenRate = 0.1;
-    //     const staticLootRegenRate = 0.05;
-    //     const baseLooseLoot: ILootMultiplier = baseMapLoot.looseLootMultiplier;
-    //     const baseStaticLoot: ILootMultiplier = baseMapLoot.staticLootMultiplier;
-    //     const originalLooseMapModi = baseLooseLoot[map];
-    //     const originalStaticMapModi = baseStaticLoot[map];
-    //     const mapAliases: { [key: string]: string[] } = {
-    //         "factory4_day": ["factory4_day", "factory4_night"],
-    //         "factory4_night": ["factory4_day", "factory4_night"]
-    //     };
-    //     const mapsToUpdate: string[] = mapAliases[map] || [map]; //if mapAliases has a key, use the corresponding array, otherwise make an array of our singular map
+        const looseModifier = lootXp * 0.00004;
+        const staticModifier = lootXp * 0.00002;
+        const minLooseLoot = 0.3;
+        const minstaticLoot = 0.4;
+        const looseLootRegenRate = 0.1;
+        const staticLootRegenRate = 0.05;
+        const baseLooseLoot: ILootMultiplier = baseMapLoot.looseLootMultiplier;
+        const baseStaticLoot: ILootMultiplier = baseMapLoot.staticLootMultiplier;
+        const originalLooseMapModi = baseLooseLoot[map];
+        const originalStaticMapModi = baseStaticLoot[map];
+        const mapAliases: { [key: string]: string[] } = {
+            "factory4_day": ["factory4_day", "factory4_night"],
+            "factory4_night": ["factory4_day", "factory4_night"]
+        };
+        const mapsToUpdate: string[] = mapAliases[map] || [map]; //if mapAliases has a key, use the corresponding array, otherwise make an array of our singular map
 
-    //     logger.warning("==============" + map + "==============");
-    //     logger.warning("==loose loot modi: " + looseModifier);
-    //     logger.warning("==static loot modi: " + staticModifier);
+        logger.warning("==============" + map + "==============");
+        logger.warning("==loose loot modi: " + looseModifier);
+        logger.warning("==static loot modi: " + staticModifier);
 
-    //     if (!playerMapLoot[profileId]) {
-    //         logger.warning("no profile found, creating new entry");
-    //         playerMapLoot[profileId] =
-    //         {
-    //             looseLootMultiplier: { ...baseLooseLoot },
-    //             staticLootMultiplier: { ...baseStaticLoot }
-    //         }
-    //     }
+        if (!playerMapLoot[profileId]) {
+            logger.warning("no profile found, creating new entry");
+            playerMapLoot[profileId] =
+            {
+                looseLootMultiplier: { ...baseLooseLoot },
+                staticLootMultiplier: { ...baseStaticLoot }
+            }
+        }
 
-    //     logger.warning("Found profile entry ");
-    //     let looseLootModis = playerMapLoot[profileId].looseLootMultiplier;
-    //     let staticLootModis = playerMapLoot[profileId].staticLootMultiplier;
+        logger.warning("Found profile entry ");
+        let looseLootModis = playerMapLoot[profileId].looseLootMultiplier;
+        let staticLootModis = playerMapLoot[profileId].staticLootMultiplier;
 
-    //     mapsToUpdate.forEach((currentMap) => {
-    //         logger.warning("current loose loot modi: " + looseLootModis[currentMap]);
-    //         logger.warning("current static loot modi: " + staticLootModis[currentMap]);
+        mapsToUpdate.forEach((currentMap) => {
+            logger.warning("current loose loot modi: " + looseLootModis[currentMap]);
+            logger.warning("current static loot modi: " + staticLootModis[currentMap]);
 
-    //         looseLootModis[map] = utils.clampNumber(looseLootModis[currentMap] - looseModifier, minLooseLoot, originalLooseMapModi);
-    //         staticLootModis[map] = utils.clampNumber(staticLootModis[currentMap] - staticModifier, minstaticLoot, originalStaticMapModi);
+            looseLootModis[map] = utils.clampNumber(looseLootModis[currentMap] - looseModifier, minLooseLoot, originalLooseMapModi);
+            staticLootModis[map] = utils.clampNumber(staticLootModis[currentMap] - staticModifier, minstaticLoot, originalStaticMapModi);
 
-    //         logger.warning("modified loose loot modi: " + looseLootModis[currentMap]);
-    //         logger.warning("modified static loot modi: " + staticLootModis[currentMap]);
-    //     });
+            logger.warning("modified loose loot modi: " + looseLootModis[currentMap]);
+            logger.warning("modified static loot modi: " + staticLootModis[currentMap]);
+        });
 
-    //     logger.warning("==Regenerating other map loot");
+        logger.warning("==Regenerating other map loot");
 
-    //     for (const i in playerMapLoot[profileId].staticLootMultiplier) {
-    //         logger.warning("==");
-    //         logger.warning("map " + i);
-    //         if (!mapsToUpdate.includes(i)) {
-    //             let looseMapLootModis = playerMapLoot[profileId].looseLootMultiplier;
-    //             let staticMapLootModis = playerMapLoot[profileId].staticLootMultiplier;
+        for (const i in playerMapLoot[profileId].staticLootMultiplier) {
+            logger.warning("==");
+            logger.warning("map " + i);
+            if (!mapsToUpdate.includes(i)) {
+                let looseMapLootModis = playerMapLoot[profileId].looseLootMultiplier;
+                let staticMapLootModis = playerMapLoot[profileId].staticLootMultiplier;
 
-    //             logger.warning("current loose loot modi: " + looseMapLootModis[i]);
-    //             logger.warning("current static loot modi: " + staticMapLootModis[i]);
+                logger.warning("current loose loot modi: " + looseMapLootModis[i]);
+                logger.warning("current static loot modi: " + staticMapLootModis[i]);
 
-    //             looseMapLootModis[i] = utils.clampNumber(looseMapLootModis[i] + looseLootRegenRate, minLooseLoot, baseLooseLoot[i]);
-    //             staticMapLootModis[i] = utils.clampNumber(staticMapLootModis[i] + staticLootRegenRate, minstaticLoot, baseStaticLoot[i]);
+                looseMapLootModis[i] = utils.clampNumber(looseMapLootModis[i] + looseLootRegenRate, minLooseLoot, baseLooseLoot[i]);
+                staticMapLootModis[i] = utils.clampNumber(staticMapLootModis[i] + staticLootRegenRate, minstaticLoot, baseStaticLoot[i]);
 
-    //             logger.warning("modified loose loot modi: " + looseMapLootModis[i]);
-    //             logger.warning("modified static loot modi: " + staticMapLootModis[i]);
-    //         }
-    //     }
+                logger.warning("modified loose loot modi: " + looseMapLootModis[i]);
+                logger.warning("modified static loot modi: " + staticMapLootModis[i]);
+            }
+        }
 
-    //     utils.writeConfigJSON(playerMapLoot, 'data/player_lootModifiers.json');
+        utils.writeConfigJSON(playerMapLoot, 'data/player_lootModifiers.json');
 
-    //     logger.warning("==Saved to file");
+        logger.warning("==Saved to file");
 
-    //     locationConfig.looseLootMultiplier = playerMapLoot[profileId].looseLootMultiplier;
-    //     locationConfig.staticLootMultiplier = playerMapLoot[profileId].staticLootMultiplier;
+        locationConfig.looseLootMultiplier = playerMapLoot[profileId].looseLootMultiplier;
+        locationConfig.staticLootMultiplier = playerMapLoot[profileId].staticLootMultiplier;
 
-    //     logger.warning("==Updated SPT configs");
-
-    //     //derive map specific modifier based on player looting XP. This will be done on raid end. Get last played map on raid end.
-    //     //have a json file with profile specific loot modifiers.
-    //     //reduce the loot modifiers by X% based on looting XP for that specific map.
-    //     //for all maps that aren't the map that was just reduced, increased loot modifiers by a fixed %, comparing against the base values to make sure it does not exceed them
-    //     //get prolile id, create new object if none existing, upate if existing.
-    //     //update SPT config with new data
-
-    // }
+        logger.warning("==Updated SPT configs");
+    }
 
     private checkForSeasonalEvents(logger: ILogger, seasonalEventsService: SeasonalEventService, seasonalConfig: ISeasonalEventConfig, weatherConfig: IWeatherConfig, logGreetings: boolean = false) {
         if (modConfig.enable_hazard_zones) {

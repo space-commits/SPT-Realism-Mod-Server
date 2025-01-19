@@ -1904,8 +1904,8 @@ export class BotLoader {
         }
 
         if (ModTracker.tgcPresent) {
-            //this.raiderBase.inventory.equipment.FaceCover["672e2e756803734b60f5ac1e"] = 1;
-            //this.raiderBase.inventory.equipment.FaceCover["672e2e7517018293d11bbdc1"] = 1;
+            this.raiderBase.inventory.equipment.FaceCover["672e2e756803734b60f5ac1e"] = 1;
+            this.raiderBase.inventory.equipment.FaceCover["672e2e7517018293d11bbdc1"] = 1;
         }
 
         BotTierTracker.raiderTier = 2;
@@ -1988,8 +1988,8 @@ export class BotLoader {
         }
 
         if (ModTracker.tgcPresent) {
-            //this.raiderBase.inventory.equipment.FaceCover["672e2e756803734b60f5ac1e"] = 1;
-            //this.raiderBase.inventory.equipment.FaceCover["672e2e7517018293d11bbdc1"] = 1;
+            this.raiderBase.inventory.equipment.FaceCover["672e2e756803734b60f5ac1e"] = 1;
+            this.raiderBase.inventory.equipment.FaceCover["672e2e7517018293d11bbdc1"] = 1;
         }
 
         BotTierTracker.raiderTier = 3;

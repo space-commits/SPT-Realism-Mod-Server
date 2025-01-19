@@ -43,7 +43,7 @@ class GenBotLvl extends BotLevelGenerator_1.BotLevelGenerator {
             }
         }
         else {
-            level = this.randomUtil.getInt(botLevelRange.min, botLevelRange.max);
+            level = this.chooseBotLevel(botLevelRange.min, botLevelRange.max, 1, 1.15);
         }
         for (let i = 0; i < level; i++) {
             exp += expTable[i].exp;
@@ -340,10 +340,16 @@ class BotGen extends BotGenerator_1.BotGenerator {
         const botInvGen = new BotInvGen(this.logger, this.hashUtil, this.randomUtil, this.databaseService, applicationContext, botWeaponGenerator, botLootGenerator, botGeneratorHelper, this.profileHelper, this.botHelper, this.weightedRandomHelper, itemHelper, weatherHelper, localisationService, this.botEquipmentFilterService, botEquipmentModPoolService, botEquipmentModGenerator, this.configServer);
         const botRole = botGenerationDetails.role.toLowerCase();
         const botLevel = genBotLvl.genBotLvl(botJsonTemplate.experience.level, botGenerationDetails, bot);
-        if (!botGenerationDetails.isPlayerScav && this.shouldSimulatePlayerScav(botRole)) {
+        // Only filter bot equipment, never players
+        if (!botGenerationDetails.isPlayerScav) { // && this.shouldSimulatePlayerScav(botRole)
             this.botEquipmentFilterService.filterBotEquipment(sessionId, botJsonTemplate, botLevel.level, botGenerationDetails);
         }
         bot.Info.Nickname = this.botNameService.generateUniqueBotNickname(botJsonTemplate, botGenerationDetails, botRole, this.botConfig.botRolesThatMustHaveUniqueName);
+        // Only run when generating a 'fake' playerscav, not actual player scav
+        if (!botGenerationDetails.isPlayerScav && this.shouldSimulatePlayerScav(botRole)) {
+            this.botNameService.addRandomPmcNameToBotMainProfileNicknameProperty(bot);
+            this.setRandomisedGameVersionAndCategory(bot.Info);
+        }
         //SPT has christmas and halloween stuff in bot inventories by default then removes it if not halloween or christams
         //so until I modify all bot loadouts I have to keep this, and then add christmas items manually to bots.
         if (!this.seasonalEventService.christmasEventEnabled()) {
@@ -362,12 +368,13 @@ class BotGen extends BotGenerator_1.BotGenerator {
         // }
         // Remove hideout data if bot is not a PMC or pscav
         if (!(botGenerationDetails.isPmc || botGenerationDetails.isPlayerScav)) {
-            bot.Hideout = null;
+            bot.Hideout = undefined;
         }
         bot.Info.Experience = botLevel.exp;
         bot.Info.Level = botLevel.level;
         bot.Info.Settings.Experience = this.getExperienceRewardForKillByDifficulty(botJsonTemplate.experience.reward, botGenerationDetails.botDifficulty, botGenerationDetails.role);
         bot.Info.Settings.StandingForKill = this.getStandingChangeForKillByDifficulty(botJsonTemplate.experience.standingForKill, botGenerationDetails.botDifficulty, botGenerationDetails.role);
+        bot.Info.Settings.AggressorBonus = this.getAgressorBonusByDifficulty(botJsonTemplate.experience.aggressorBonus, botGenerationDetails.botDifficulty, botGenerationDetails.role);
         bot.Info.Settings.UseSimpleAnimator = botJsonTemplate.experience.useSimpleAnimator ?? false;
         bot.Info.Voice = this.weightedRandomHelper.getWeightedValue(botJsonTemplate.appearance.voice);
         bot.Health = this.generateHealth(botJsonTemplate.health, botGenerationDetails.isPlayerScav);

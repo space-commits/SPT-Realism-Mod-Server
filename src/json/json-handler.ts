@@ -214,9 +214,24 @@ export class ItemStatHandler {
 
     private ammoPusherHelper(fileItem: any, serverTemplates: Record<string, ITemplateItem>) {
         if (fileItem.ItemID in serverTemplates) {
-            let serverItem = serverTemplates[fileItem.ItemID];
+            let serverItem = serverTemplates[fileItem.ItemID]; //this will be the reskin item's stats, which I want to reset
+            let baseItem = serverItem; //temp set it to server template
+            
+            if (fileItem.TemplateID != undefined) {
+                baseItem = serverTemplates[fileItem.TemplateID]; //if it's a reskin, need the server stats of the item the skin is based on
+                fileItem = this.modifiedItems[fileItem.TemplateID]; //if it's a reskin, need the realism specific stats of the item the skin is based on
+            }
+
+            this.modifiedItems[fileItem.ItemID] = fileItem;//store the item in an object to be used later for reskins
 
             serverItem._props.PenetrationPower = fileItem.PenetrationPower != undefined ? fileItem.PenetrationPower : serverItem._props.PenetrationPower;
+            serverItem._props.Weight = fileItem.Weight != undefined ? fileItem.Weight : serverItem._props.Weight;
+            serverItem._props.InitialSpeed = fileItem.InitialSpeed != undefined ? fileItem.InitialSpeed : serverItem._props.InitialSpeed;
+            serverItem._props.BulletMassGram = fileItem.BulletMassGram != undefined ? fileItem.BulletMassGram : serverItem._props.BulletMassGram;
+            serverItem._props.BulletDiameterMilimeters = fileItem.BulletDiameterMilimeters != undefined ? fileItem.BulletDiameterMilimeters : serverItem._props.BulletDiameterMilimeters;
+            serverItem._props.ammoAccr = fileItem.ammoAccr != undefined ? fileItem.ammoAccr : serverItem._props.ammoAccr;
+            serverItem._props.DurabilityBurnModificator = fileItem.DurabilityBurnModificator != undefined ? fileItem.DurabilityBurnModificator : serverItem._props.DurabilityBurnModificator;
+            serverItem._props.HeatFactor = fileItem.HeatFactor != undefined ? fileItem.HeatFactor : serverItem._props.HeatFactor;
             serverItem._props.Damage = fileItem.Damage != undefined ? fileItem.Damage : serverItem._props.Damage;
             serverItem._props.ArmorDamage = 1;
             serverItem._props.casingMass = 1;
