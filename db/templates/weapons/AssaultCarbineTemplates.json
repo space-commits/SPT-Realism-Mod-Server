@@ -602,8 +602,9 @@
         "BaseFixSpeed": 1.3,
         "OffsetRotation": 0.009,
         "RecoilIntensity": 0.2,
+        "BurstShotsCount": 2,
         "weapFireType": [
-            "fullauto"
+            "fullauto"        
         ]
     }
 }

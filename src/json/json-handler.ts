@@ -317,6 +317,9 @@ export class ItemStatHandler {
                 serverItem._props.RecoilCenter = fileItem.RecoilCenter != null && fileItem.RecoilCenter != undefined ? fileItem.RecoilCenter : serverItem._props.RecoilCenter;
                 serverItem._props.CanQueueSecondShot = fileItem.CanQueueSecondShot != null ? fileItem.CanQueueSecondShot : serverItem._props.CanQueueSecondShot;
 
+                if (fileItem?.BurstShotsCount !== undefined) {
+                    serverItem._props.BurstShotsCount = fileItem.BurstShotsCount;
+                }
                 if (fileItem?.weapFireType !== undefined) {
                     serverItem._props.weapFireType = fileItem.weapFireType;
                 }

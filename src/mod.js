@@ -36,8 +36,8 @@ const arrays_1 = require("./utils/arrays");
 const meds_1 = require("./items/meds");
 const player_1 = require("./player/player");
 const weapons_globals_1 = require("./weapons/weapons_globals");
-// import { BotLoader } from "./bots/bots";
-// import { BotGen } from "./bots/bot_gen";
+const bots_1 = require("./bots/bots");
+const bot_gen_1 = require("./bots/bot_gen");
 const items_1 = require("./items/items");
 const json_gen_1 = require("./json/json_gen");
 const quests_1 = require("./traders/quests");
@@ -159,28 +159,25 @@ class Main {
             }
         ], "RealismMod");
         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
-            // const botLevelGenerator = container.resolve<BotLevelGenerator>("BotLevelGenerator");
-            // const botDifficultyHelper = container.resolve<BotDifficultyHelper>("BotDifficultyHelper");
-            // const botInventoryGenerator = container.resolve<BotInventoryGenerator>("BotInventoryGenerator");
-            // const botHelper = container.resolve<BotHelper>("BotHelper");
-            // const botEquipmentFilterService = container.resolve<BotEquipmentFilterService>("BotEquipmentFilterService");
-            // const seasonalEventService = container.resolve<SeasonalEventService>("SeasonalEventService");
-            // const itemFilterService = container.resolve<ItemFilterService>("ItemFilterService"); const botGen = new BotGen(
-            //     logger, hashUtil, randomUtil, timeUtil,
-            //     profileHelper, databaseService, botInventoryGenerator,
-            //     botLevelGenerator, botEquipmentFilterService, weightedRandomHelper,
-            //     botHelper, botDifficultyHelper, seasonalEventService,
-            //     localisationService, itemFilterService, configServer, cloner);
-            // container.afterResolution("BotGenerator", (_t, result: BotGenerator) => {
-            //     result.prepareAndGenerateBot = (sessionId: string, botGenerationDetails: IBotGenerationDetails): IBotBase => {
-            //         return botGen.myPrepareAndGenerateBot(sessionId, botGenerationDetails);
-            //     }
-            // }, { frequency: "Always" });
-            // container.afterResolution("BotGenerator", (_t, result: BotGenerator) => {
-            //     result.generatePlayerScav = (sessionId: string, role: string, difficulty: string, botTemplate: IBotType): IBotBase => {
-            //         return botGen.myGeneratePlayerScav(sessionId, role, difficulty, botTemplate);
-            //     }
-            // }, { frequency: "Always" });
+            const botLevelGenerator = container.resolve("BotLevelGenerator");
+            const botInventoryGenerator = container.resolve("BotInventoryGenerator");
+            const botHelper = container.resolve("BotHelper");
+            const botEquipmentFilterService = container.resolve("BotEquipmentFilterService");
+            const seasonalEventService = container.resolve("SeasonalEventService");
+            const botGeneratorHelper = container.resolve("BotGeneratorHelper");
+            const botNameService = container.resolve("BotNameService");
+            const itemFilterService = container.resolve("ItemFilterService");
+            const botGen = new bot_gen_1.BotGen(logger, hashUtil, randomUtil, timeUtil, profileHelper, databaseService, botInventoryGenerator, botLevelGenerator, botEquipmentFilterService, weightedRandomHelper, botHelper, botGeneratorHelper, seasonalEventService, itemFilterService, botNameService, configServer, cloner);
+            container.afterResolution("BotGenerator", (_t, result) => {
+                result.prepareAndGenerateBot = (sessionId, botGenerationDetails) => {
+                    return botGen.myPrepareAndGenerateBot(sessionId, botGenerationDetails);
+                };
+            }, { frequency: "Always" });
+            container.afterResolution("BotGenerator", (_t, result) => {
+                result.generatePlayerScav = (sessionId, role, difficulty, botTemplate) => {
+                    return botGen.myGeneratePlayerScav(sessionId, role, difficulty, botTemplate);
+                };
+            }, { frequency: "Always" });
         }
         container.afterResolution("TraderAssortHelper", (_t, result) => {
             result.resetExpiredTrader = (trader) => {
@@ -199,25 +196,25 @@ class Main {
                 };
             }, { frequency: "Always" });
         }
-        if (modConfig.insurance_changes == true) {
-            // const eventOutputHolder = container.resolve<EventOutputHolder>("HttpResponseUtil");
-            // const saveServer = container.resolve<SaveServer>("SaveServer");
-            // const itemHelper = container.resolve<ItemHelper>("ItemHelper");
-            // const insruanceService = container.resolve<InsuranceService>("InsuranceService");
-            // const mailSendService = container.resolve<MailSendService>("MailSendService");
-            // const ragfairPriceService = container.resolve<RagfairPriceService>("RagfairPriceService");
-            // const localizationService = container.resolve<LocalisationService>("LocalisationService");
-            // const dialogueHelper = container.resolve<DialogueHelper>("DialogueHelper");
-            // const paymentService = container.resolve<PaymentService>("PaymentService");
-            // const insuranceOverride = new InsuranceOverride(
-            //     logger, randomUtil, mathUtil, hashUtil, eventOutputHolder, timeUtil, saveServer, databaseService, itemHelper, profileHelper,
-            //     dialogueHelper, weightedRandomHelper, traderHelper, paymentService, insruanceService, mailSendService, ragfairPriceService, localizationService, configServer, cloner);
-            // container.afterResolution("InsuranceController", (_t, result: InsuranceController) => {
-            //     result.processReturnByProfile = (sessionID: string): void => {
-            //         return insuranceOverride.myProcessReturnByProfile(sessionID);
-            //     }
-            // }, { frequency: "Always" });
-        }
+        // if (modConfig.insurance_changes == true) {
+        //     const eventOutputHolder = container.resolve<EventOutputHolder>("HttpResponseUtil");
+        //     const saveServer = container.resolve<SaveServer>("SaveServer");
+        //     const itemHelper = container.resolve<ItemHelper>("ItemHelper");
+        //     const insruanceService = container.resolve<InsuranceService>("InsuranceService");
+        //     const mailSendService = container.resolve<MailSendService>("MailSendService");
+        //     const ragfairPriceService = container.resolve<RagfairPriceService>("RagfairPriceService");
+        //     const localizationService = container.resolve<LocalisationService>("LocalisationService");
+        //     const dialogueHelper = container.resolve<DialogueHelper>("DialogueHelper");
+        //     const paymentService = container.resolve<PaymentService>("PaymentService");
+        //     const insuranceOverride = new InsuranceOverride(
+        //         logger, randomUtil, mathUtil, hashUtil, eventOutputHolder, timeUtil, saveServer, databaseService, itemHelper, profileHelper,
+        //         dialogueHelper, weightedRandomHelper, traderHelper, paymentService, insruanceService, mailSendService, ragfairPriceService, localizationService, configServer, cloner);
+        //     container.afterResolution("InsuranceController", (_t, result: InsuranceController) => {
+        //         result.processReturnByProfile = (sessionID: string): void => {
+        //             return insuranceOverride.myProcessReturnByProfile(sessionID);
+        //         }
+        //     }, { frequency: "Always" });
+        // }
         // if (modConfig.airdrop_changes == true) {
         //     const locationGenerator = container.resolve<LocationGenerator>("LocationGenerator");
         //     const lootGenerator = container.resolve<LootGenerator>("LootGenerator");
@@ -231,7 +228,7 @@ class Main {
         //         }
         //     }, { frequency: "Always" });
         // }
-        staticRouterModService.registerStaticRouter("CheckProfile", [
+        staticRouterModService.registerStaticRouter("Realism-CheckProfile", [
             {
                 url: "/client/game/version/validate",
                 action: async (url, info, sessionID, output) => {
@@ -303,38 +300,42 @@ class Main {
                         if (modConfig.logEverything == true) {
                             logger.info("Realism Mod: Profile Checked");
                         }
-                        return HttpResponse.nullResponse();
                     }
-                    catch (e) {
-                        logger.error("Realism Mod: Error Checking Player Profile: " + e);
-                        return HttpResponse.nullResponse();
+                    catch (err) {
+                        logger.error("Realism Mod: Error Checking Player Profile: " + err);
                     }
-                }
-            }
-        ], "aki");
-        staticRouterModService.registerStaticRouter("runOnGameLogout", [
-            {
-                url: "/client/game/logout",
-                action: async (url, info, sessionID, output) => {
-                    const profileHelper = container.resolve("ProfileHelper");
-                    const profileData = profileHelper.getFullProfile(sessionID);
-                    let playerCount = 0;
-                    let cumulativePlayerLevel = 0;
-                    delete utils_1.ProfileTracker.playerRecord[profileData.info.id];
-                    Object.values(utils_1.ProfileTracker.playerRecord).forEach(value => {
-                        const playerLevel = Number(value);
-                        if (!isNaN(playerLevel)) {
-                            cumulativePlayerLevel += playerLevel;
-                            playerCount += 1;
-                        }
-                    });
-                    utils_1.ProfileTracker.averagePlayerLevel = playerCount > 0 ? cumulativePlayerLevel / playerCount : 1;
-                    logger.logWithColor(`Realism Mod: Players in server ${playerCount}, average level: ${utils_1.ProfileTracker.averagePlayerLevel}`, LogTextColor_1.LogTextColor.GREEN);
                     return output;
                 }
             }
-        ], "aki");
-        staticRouterModService.registerStaticRouter("runAtProfileCreation", [
+        ], "Realism");
+        staticRouterModService.registerStaticRouter("Realism-RunOnGameLogout", [
+            {
+                url: "/client/game/logout",
+                action: async (url, info, sessionID, output) => {
+                    try {
+                        const profileHelper = container.resolve("ProfileHelper");
+                        const profileData = profileHelper.getFullProfile(sessionID);
+                        let playerCount = 0;
+                        let cumulativePlayerLevel = 0;
+                        delete utils_1.ProfileTracker.playerRecord[profileData.info.id];
+                        Object.values(utils_1.ProfileTracker.playerRecord).forEach(value => {
+                            const playerLevel = Number(value);
+                            if (!isNaN(playerLevel)) {
+                                cumulativePlayerLevel += playerLevel;
+                                playerCount += 1;
+                            }
+                        });
+                        utils_1.ProfileTracker.averagePlayerLevel = playerCount > 0 ? cumulativePlayerLevel / playerCount : 1;
+                        logger.logWithColor(`Realism Mod: Players in server ${playerCount}, average level: ${utils_1.ProfileTracker.averagePlayerLevel}`, LogTextColor_1.LogTextColor.GREEN);
+                    }
+                    catch (err) {
+                        logger.error("Realism Mod: Error At Log Out: " + err);
+                    }
+                    return output;
+                }
+            }
+        ], "Realism");
+        staticRouterModService.registerStaticRouter("Realism-RunAtProfileCreation", [
             {
                 url: "/client/game/profile/create",
                 action: async (url, info, sessionID, output) => {
@@ -352,18 +353,17 @@ class Main {
                             player.correctNewHealth(pmcData, scavData);
                         }
                         logger.info("Realism Mod: New Profile Modified");
-                        return HttpResponse.nullResponse();
                     }
                     catch (e) {
                         logger.error("Realism Mod: Error Editing New Profile: " + e);
-                        return HttpResponse.nullResponse();
                     }
+                    return output;
                 }
             }
-        ], "aki");
-        staticRouterModService.registerStaticRouter("runAtRaidStart", [
+        ], "Realism");
+        staticRouterModService.registerStaticRouter("Realism-RunAtRaidStart", [
             {
-                url: "/client/raid/configuration",
+                url: "/client/match/local/start",
                 action: async (url, info, sessionID, output) => {
                     try {
                         const postLoadDBService = container.resolve("DatabaseService");
@@ -375,7 +375,7 @@ class Main {
                         const pmcConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.PMC);
                         const arrays = new arrays_1.BotArrays(postLoadTables);
                         const utils = new utils_1.Utils(postLoadTables);
-                        //const bots = new BotLoader(logger, postLoadTables, configServer, modConfig, arrays, utils);
+                        const bots = new bots_1.BotLoader(logger, postLoadTables, configServer, modConfig, arrays, utils);
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         const profileData = profileHelper.getFullProfile(sessionID);
                         //had a concern that bot loot cache isn't being reset properly since I've overriden it with my own implementation, so to be safe...
@@ -405,7 +405,7 @@ class Main {
                         }
                         utils_1.RaidInfoTracker.mapType = mapType;
                         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
-                            //bots.updateBots(pmcData, logger, modConfig, bots, utils);
+                            bots.updateBots(pmcData, logger, modConfig, bots, utils);
                         }
                         if (!utils_1.ModTracker.swagPresent) { //!ModTracker.qtbPresent && 
                             pmcConf.convertIntoPmcChance.laboratory = {
@@ -424,16 +424,15 @@ class Main {
                         logger.warning("Map Type  = " + mapType);
                         logger.warning("Base Time: " + baseTime + " Real Time: " + realTime);
                         logger.warning("Is Day = " + utils_1.RaidInfoTracker.isNight);
-                        return HttpResponse.nullResponse();
                     }
-                    catch (e) {
-                        logger.error("Realism Mod: Failed To Fetch Application Context Data" + e);
-                        return HttpResponse.nullResponse();
+                    catch (err) {
+                        logger.error("Realism Mod: Failed To Fetch Application Context Data" + err);
                     }
+                    return output;
                 }
             }
-        ], "aki");
-        staticRouterModService.registerStaticRouter("runAtRaidEnd", [
+        ], "Realism");
+        staticRouterModService.registerStaticRouter("Realism-RunAtRaidEnd", [
             {
                 url: "/raid/profile/save",
                 action: async (url, info, sessionID, output) => {
@@ -476,15 +475,14 @@ class Main {
                         if (modConfig.logEverything == true) {
                             logger.info("Realism Mod: Updated at Raid End");
                         }
-                        return HttpResponse.nullResponse();
                     }
-                    catch (e) {
-                        logger.error("Realism Mod: Error Updating At Raid End: " + e);
-                        return HttpResponse.nullResponse();
+                    catch (err) {
+                        logger.error("Realism Mod: Error Updating At Raid End: " + err);
                     }
+                    return output;
                 }
             }
-        ], "aki");
+        ], "Realism");
     }
     backupProfile(profileData, logger) {
         const profileFileData = JSON.stringify(profileData, null, 4);
@@ -550,7 +548,7 @@ class Main {
         const ammo = new ammo_1.Ammo(logger, tables, modConfig);
         const armor = new armor_1.Armor(logger, tables, modConfig);
         const attachBase = new attatchment_base_1.AttachmentBase(logger, tables, modConfig, utils);
-        // const bots = new BotLoader(logger, tables, configServer, modConfig, arrays, utils);
+        const bots = new bots_1.BotLoader(logger, tables, configServer, modConfig, arrays, utils);
         const itemsClass = new items_1.ItemsClass(logger, tables, modConfig, inventoryConf, raidConf, aKIFleaConf, itemConf);
         const consumables = new meds_1.Consumables(logger, tables, modConfig, medItems, foodItems, medBuffs, foodBuffs, stimBuffs);
         const player = new player_1.Player(logger, tables, modConfig, medItems, utils);
@@ -570,7 +568,6 @@ class Main {
         // jsonGen.weapTemplatesCodeGen();
         // jsonGen.gearTemplatesCodeGen();
         // jsonGen.ammoTemplatesCodeGen();
-        // this.dllChecker(logger, modConfig);
         this.checkForSeasonalEvents(logger, seasonalEventsService, seeasonalEventConfig, weatherConfig, true);
         if (modConfig.enable_hazard_zones) {
             quests.loadHazardQuests();
@@ -597,26 +594,26 @@ class Main {
         //maps.loadSpawnChanges(locationConfig);
         //airdrop.loadAirdropChanges();
         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
-            //bots.loadBots();
+            bots.loadBots();
         }
         if (modConfig.bot_testing == true && modConfig.bot_test_weps_enabled == true && modConfig.all_scavs == true && modConfig.bot_test_tier == 4) {
             logger.warning("Realism Mod: testing enabled, bots will be limited to a cap of 1");
-            //bots.testBotCap();
+            bots.testBotCap();
         }
         else if (modConfig.increased_bot_cap == true && utils_1.ModTracker.swagPresent == false) { //&& ModTracker.qtbPresent == false
-            //bots.increaseBotCap();
+            bots.increaseBotCap();
         }
         else if (modConfig.spawn_waves == true && utils_1.ModTracker.swagPresent == false) { //  && ModTracker.qtbPresent == false
-            //bots.increasePerformance();
+            bots.increasePerformance();
         }
         if (modConfig.bot_names == true) {
-            //bots.botNames();
+            bots.botNames();
         }
         if (modConfig.guarantee_boss_spawn == true) {
-            //bots.forceBossSpawns();
+            bots.forceBossSpawns();
         }
         if (modConfig.boss_difficulty == true) {
-            //bots.bossDifficulty();
+            bots.bossDifficulty();
         }
         if (modConfig.med_changes == true) {
             itemCloning.createCustomMedItems();
@@ -629,13 +626,13 @@ class Main {
         if (modConfig.stim_changes == true) {
             consumables.loadStims();
         }
-        //bots.botHpMulti();
+        bots.botHpMulti();
         fleaChangesPostDB.loadFleaGlobal(); //has to run post db load, otherwise item templates are undefined 
         fleaChangesPreDB.loadFleaConfig(); //probably redundant, but just in case
         traders.loadTraderRepairs();
-        if (modConfig.headset_changes) {
-            // gear.loadHeadsetTweaks();
-        }
+        // if (modConfig.headset_changes) {
+        //     gear.loadHeadsetTweaks();
+        // }
         if (modConfig.remove_quest_fir_req == true) {
             quests.removeFIRQuestRequire();
         }
