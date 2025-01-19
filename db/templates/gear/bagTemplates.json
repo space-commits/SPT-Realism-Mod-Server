@@ -505,5 +505,18 @@
         "mousePenalty": 0,
         "weaponErgonomicPenalty": 0,
         "TemplateType": "gear"
+    },
+    "66b5f247af44ca0014063c02": {
+        "$type": "RealismMod.Gear, RealismMod",
+        "ItemID": "66b5f247af44ca0014063c02",
+        "Name": "vertx",
+        "AllowADS": true,
+        "LoyaltyLevel": 1,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 1.1,
+        "speedPenaltyPercent": -1.5,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear"
     }
 }

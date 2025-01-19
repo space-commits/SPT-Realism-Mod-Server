@@ -12,7 +12,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 29,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -29,7 +29,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 24,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -46,7 +46,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -63,7 +63,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -80,7 +80,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 27,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -97,7 +97,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 26,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -114,7 +114,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 31,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -131,7 +131,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 22,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -149,7 +149,7 @@
         "HorizontalRecoil": 0,
         "CameraRecoil": 0,
         "ChamberSpeed": 33,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Flash": -22,
         "TemplateType": "weaponmod"
@@ -167,7 +167,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 18,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -185,7 +185,7 @@
         "HorizontalRecoil": 0,
         "CameraRecoil": 0,
         "ChamberSpeed": 32,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Flash": -10,
         "TemplateType": "weaponmod"
@@ -203,7 +203,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 35,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -220,7 +220,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 35,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -237,7 +237,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 32.5,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Flash": -30,
         "TemplateType": "weaponmod"
@@ -287,7 +287,7 @@
         "FixSpeed": 0,
         "Ergonomics": 0,
         "Weight": 0.45,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -304,7 +304,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -321,7 +321,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 23,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Flash": -18,
         "TemplateType": "weaponmod"
@@ -339,7 +339,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -356,7 +356,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 38,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -373,7 +373,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": -5,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -390,7 +390,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -407,7 +407,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -425,7 +425,7 @@
         "HorizontalRecoil": 0,
         "CameraRecoil": 0,
         "ChamberSpeed": 37,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Flash": -20,
         "TemplateType": "weaponmod"
@@ -443,7 +443,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 32,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -460,7 +460,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 25,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -477,7 +477,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": -5,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -494,7 +494,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 18,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -509,7 +509,7 @@
         "Ergonomics": 0,
         "Weight": 0.013,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -524,7 +524,7 @@
         "Ergonomics": 0,
         "Weight": 0.011,
         "ChamberSpeed": 18,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -539,7 +539,7 @@
         "Weight": 0.043,
         "ChamberSpeed": 36,
         "Flash": -18,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -554,7 +554,7 @@
         "Weight": 0.035,
         "ChamberSpeed": 30,
         "Flash": -15,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0
     }
 }

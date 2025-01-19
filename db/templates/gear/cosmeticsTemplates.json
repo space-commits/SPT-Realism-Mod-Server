@@ -702,7 +702,6 @@
         "MaskToUse": "gp5",
         "TemplateType": "gear"
     },
-
     "6176a48d732a664031271438": {
         "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6176a48d732a664031271438",

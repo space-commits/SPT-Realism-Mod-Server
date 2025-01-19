@@ -84,6 +84,10 @@ import { IConfig, IGlobals } from "@spt/models/eft/common/IGlobals";
 //import { ISaveProgressRequestData } from "@spt/models/eft/inRaid/ISaveProgressRequestData";
 import { PlayerRaidEndState } from "@spt/models/enums/PlayerRaidEndState";
 import { WeatherGenerator } from "@spt/generators/WeatherGenerator";
+import { BotGeneratorHelper } from "@spt/helpers/BotGeneratorHelper";
+import { BotNameService } from "@spt/services/BotNameService";
+import { IEndLocalRaidRequestData } from "@spt/models/eft/match/IEndLocalRaidRequestData";
+import { ExitStatus } from "@spt/models/enums/ExitStatis";
 
 import { AttachmentBase } from "./weapons/attatchment_base";
 import { FleaChangesPreDBLoad, TieredFlea, FleaChangesPostDBLoad } from "./traders/fleamarket";
@@ -111,10 +115,6 @@ import { info } from "console";
 
 import * as path from 'path';
 import * as fs from 'fs';
-import { BotGeneratorHelper } from "@spt/helpers/BotGeneratorHelper";
-import { BotNameService } from "@spt/services/BotNameService";
-import { IEndLocalRaidRequestData } from "@spt/models/eft/match/IEndLocalRaidRequestData";
-import { ExitStatus } from "@spt/models/enums/ExitStatis";
 
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");

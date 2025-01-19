@@ -28,8 +28,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": 0,
-        "RecoilDamping": 0.85,
-        "RecoilHandDamping": 0.55,
+        "RecoilDamping": 0.84,
+        "RecoilHandDamping": 0.45,
         "WeaponAllowADS": false,
         "Weight": 0.939,
         "DurabilityBurnRatio": 0.09,
@@ -43,8 +43,8 @@
         "IsManuallyOperated": false,
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
-        "OffsetRotation": 0.015,
-        "RecoilIntensity": 0.2,
+        "OffsetRotation": 0.01,
+        "RecoilIntensity": 0.2185,
         "TemplateType": "gun"
     },
     "668e71a8dadf42204c032ce1": {
@@ -76,8 +76,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": 0,
-        "RecoilDamping": 0.85,
-        "RecoilHandDamping": 0.55,
+        "RecoilDamping": 0.84,
+        "RecoilHandDamping": 0.45,
         "WeaponAllowADS": false,
         "Weight": 1.128,
         "DurabilityBurnRatio": 0.09,
@@ -91,8 +91,8 @@
         "IsManuallyOperated": false,
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
-        "OffsetRotation": 0.015,
-        "RecoilIntensity": 0.2,
+        "OffsetRotation": 0.01,
+        "RecoilIntensity": 0.2185,
         "TemplateType": "gun"
     },
     "66992b349950f5f4cd06029f": {
@@ -124,8 +124,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": 0,
-        "RecoilDamping": 0.85,
-        "RecoilHandDamping": 0.55,
+        "RecoilDamping": 0.84,
+        "RecoilHandDamping": 0.45,
         "WeaponAllowADS": false,
         "Weight": 2.26,
         "DurabilityBurnRatio": 0.05,
@@ -139,8 +139,8 @@
         "IsManuallyOperated": false,
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
-        "OffsetRotation": 0.016,
-        "RecoilIntensity": 0.2,
+        "OffsetRotation": 0.01,
+        "RecoilIntensity": 0.2185,
         "TemplateType": "gun"
     },
     "62e14904c2699c0ec93adc47": {
@@ -271,8 +271,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": 0,
-        "RecoilDamping": 0.86,
-        "RecoilHandDamping": 0.6,
+        "RecoilDamping": 0.85,
+        "RecoilHandDamping": 0.45,
         "WeaponAllowADS": false,
         "Weight": 0.35,
         "DurabilityBurnRatio": 0.3,
@@ -287,7 +287,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.22,
+        "RecoilIntensity": 0.2185,
         "TemplateType": "gun"
     },
     "59f9cabd86f7743a10721f46": {
@@ -334,8 +334,8 @@
         "IsManuallyOperated": false,
         "BaseChamberCheckSpeed": 1.3,
         "BaseFixSpeed": 1.3,
-        "OffsetRotation": 0.015,
-        "RecoilIntensity": 0.22,
+        "OffsetRotation": 0.01,
+        "RecoilIntensity": 0.2185,
         "TemplateType": "gun"
     },
     "59984ab886f7743e98271174": {
@@ -367,8 +367,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": -1.2,
-        "RecoilDamping": 0.85,
-        "RecoilHandDamping": 0.5,
+        "RecoilDamping": 0.84,
+        "RecoilHandDamping": 0.45,
         "WeaponAllowADS": false,
         "Weight": 1.809,
         "DurabilityBurnRatio": 0.08,
@@ -383,7 +383,7 @@
         "BaseChamberCheckSpeed": 1.3,
         "BaseFixSpeed": 1.3,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.21,
+        "RecoilIntensity": 0.2185,
         "TemplateType": "gun"
     },
     "5e00903ae9dc277128008b87": {
@@ -415,7 +415,7 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": -10,
-        "RecoilDamping": 0.85,
+        "RecoilDamping": 0.84,
         "RecoilHandDamping": 0.45,
         "WeaponAllowADS": false,
         "Weight": 0.75,
@@ -463,7 +463,7 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": -10,
-        "RecoilDamping": 0.85,
+        "RecoilDamping": 0.84,
         "RecoilHandDamping": 0.45,
         "WeaponAllowADS": false,
         "Weight": 0.75,
@@ -511,8 +511,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": -11.8,
-        "RecoilDamping": 0.8,
-        "RecoilHandDamping": 0.4,
+        "RecoilDamping": 0.85,
+        "RecoilHandDamping": 0.45,
         "WeaponAllowADS": false,
         "Weight": 0.924,
         "DurabilityBurnRatio": 0.12,
@@ -526,7 +526,7 @@
         "IsManuallyOperated": false,
         "BaseChamberCheckSpeed": 0.8,
         "BaseFixSpeed": 0.8,
-        "OffsetRotation": 0.005,
+        "OffsetRotation": 0.01,
         "RecoilIntensity": 0.2185,
         "TemplateType": "gun"
     },
@@ -559,7 +559,7 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": -1.2,
-        "RecoilDamping": 0.82,
+        "RecoilDamping": 0.84,
         "RecoilHandDamping": 0.45,
         "WeaponAllowADS": false,
         "Weight": 1.097,
@@ -574,8 +574,8 @@
         "IsManuallyOperated": false,
         "BaseChamberCheckSpeed": 0.8,
         "BaseFixSpeed": 0.8,
-        "OffsetRotation": 0.005,
-        "RecoilIntensity": 0.21,
+        "OffsetRotation": 0.01,
+        "RecoilIntensity": 0.2185,
         "TemplateType": "gun"
     },
     "58948c8e86f77409493f7266": {
@@ -655,8 +655,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": 0,
-        "RecoilDamping": 0.85,
-        "RecoilHandDamping": 0.65,
+        "RecoilDamping": 0.84,
+        "RecoilHandDamping": 0.45,
         "WeaponAllowADS": false,
         "Weight": 1.8,
         "DurabilityBurnRatio": 0.45,
@@ -671,7 +671,7 @@
         "BaseChamberCheckSpeed": 0.9,
         "BaseFixSpeed": 0.9,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.25,
+        "RecoilIntensity": 0.2185,
         "TemplateType": "gun"
     },
     "5fb64bc92b1b027b1f50bcf2": {
@@ -703,8 +703,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": 0,
-        "RecoilDamping": 0.85,
-        "RecoilHandDamping": 0.65,
+        "RecoilDamping": 0.84,
+        "RecoilHandDamping": 0.45,
         "WeaponAllowADS": false,
         "Weight": 1.86,
         "DurabilityBurnRatio": 0.4,
@@ -719,7 +719,7 @@
         "BaseChamberCheckSpeed": 0.9,
         "BaseFixSpeed": 0.9,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.255,
+        "RecoilIntensity": 0.2185,
         "TemplateType": "gun"
     },
     "5fc3e272f8b6a877a729eac5": {
@@ -752,7 +752,7 @@
         "ShotgunDispersion": 0,
         "Velocity": 0,
         "RecoilDamping": 0.85,
-        "RecoilHandDamping": 0.55,
+        "RecoilHandDamping": 0.45,
         "WeaponAllowADS": false,
         "Weight": 1.22,
         "DurabilityBurnRatio": 0.22,
@@ -767,7 +767,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1.2,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.2,
+        "RecoilIntensity": 0.2185,
         "TemplateType": "gun"
     },
     "5cc82d76e24e8d00134b4b83": {
@@ -847,8 +847,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": 0,
-        "RecoilDamping": 0.85,
-        "RecoilHandDamping": 0.5,
+        "RecoilDamping": 0.84,
+        "RecoilHandDamping": 0.45,
         "WeaponAllowADS": false,
         "Weight": 1.445,
         "DurabilityBurnRatio": 0.25,
@@ -895,8 +895,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": 0,
-        "RecoilDamping": 0.85,
-        "RecoilHandDamping": 0.5,
+        "RecoilDamping": 0.84,
+        "RecoilHandDamping": 0.45,
         "WeaponAllowADS": false,
         "Weight": 1.58,
         "DurabilityBurnRatio": 0.2,
@@ -911,7 +911,7 @@
         "BaseChamberCheckSpeed": 1.25,
         "BaseFixSpeed": 1.1,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.218,
+        "RecoilIntensity": 0.2185,
         "TemplateType": "gun"
     },
     "5ea03f7400685063ec28bfa8": {
@@ -958,7 +958,7 @@
         "IsManuallyOperated": false,
         "BaseChamberCheckSpeed": 1.2,
         "BaseFixSpeed": 1,
-        "OffsetRotation": 0.0122,
+        "OffsetRotation": 0.012,
         "RecoilIntensity": 0.2185,
         "TemplateType": "gun"
     },
@@ -1006,7 +1006,7 @@
         "IsManuallyOperated": false,
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
-        "OffsetRotation": 0.015,
+        "OffsetRotation": 0.01,
         "RecoilIntensity": 0.2185,
         "TemplateType": "gun"
     },
@@ -1054,8 +1054,8 @@
         "IsManuallyOperated": false,
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
-        "OffsetRotation": 0.015,
-        "RecoilIntensity": 0.219,
+        "OffsetRotation": 0.01,
+        "RecoilIntensity": 0.2185,
         "TemplateType": "gun"
     },
     "57f4c844245977379d5c14d1": {
@@ -1088,7 +1088,7 @@
         "ShotgunDispersion": 10,
         "Velocity": 13.5,
         "RecoilDamping": 0.85,
-        "RecoilHandDamping": 0.5,
+        "RecoilHandDamping": 0.45,
         "WeaponAllowADS": true,
         "Weight": 1.33,
         "DurabilityBurnRatio": 0.15,
@@ -1102,7 +1102,7 @@
         "IsManuallyOperated": false,
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
-        "OffsetRotation": 0.02,
-        "RecoilIntensity": 0.22
+        "OffsetRotation": 0.01,
+        "RecoilIntensity": 0.2185
     }
 }

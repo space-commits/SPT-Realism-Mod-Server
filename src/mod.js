@@ -29,6 +29,7 @@ const ContextVariableType_1 = require("C:/snapshot/project/obj/context/ContextVa
 ;
 const LogTextColor_1 = require("C:/snapshot/project/obj/models/spt/logging/LogTextColor");
 const LogBackgroundColor_1 = require("C:/snapshot/project/obj/models/spt/logging/LogBackgroundColor");
+const ExitStatis_1 = require("C:/snapshot/project/obj/models/enums/ExitStatis");
 const attatchment_base_1 = require("./weapons/attatchment_base");
 const fleamarket_1 = require("./traders/fleamarket");
 const utils_1 = require("./utils/utils");
@@ -53,7 +54,6 @@ const ammo_1 = require("./ballistics/ammo");
 const armor_1 = require("./ballistics/armor");
 const path = __importStar(require("path"));
 const fs = __importStar(require("fs"));
-const ExitStatis_1 = require("C:/snapshot/project/obj/models/enums/ExitStatis");
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");
 const medBuffs = require("../db/items/buffs.json");

@@ -240,8 +240,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": 0,
-        "RecoilDamping": 0.84,
-        "RecoilHandDamping": 0.56,
+        "RecoilDamping": 0.86,
+        "RecoilHandDamping": 0.45,
         "WeaponAllowADS": false,
         "Weight": 0.82,
         "DurabilityBurnRatio": 0.35,
@@ -256,7 +256,7 @@
         "BaseChamberCheckSpeed": 1.15,
         "BaseFixSpeed": 1.15,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.135,
+        "RecoilIntensity": 0.207,
         "RecoilCenter": {
             "x": 0,
             "y": -0.45,
@@ -293,8 +293,8 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": 0,
-        "RecoilDamping": 0.84,
-        "RecoilHandDamping": 0.56,
+        "RecoilDamping": 0.86,
+        "RecoilHandDamping": 0.45,
         "WeaponAllowADS": false,
         "Weight": 0.82,
         "DurabilityBurnRatio": 0.35,
@@ -309,7 +309,7 @@
         "BaseChamberCheckSpeed": 1.17,
         "BaseFixSpeed": 1.17,
         "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.14,
+        "RecoilIntensity": 0.207,
         "RecoilCenter": {
             "x": 0,
             "y": -0.45,
@@ -604,7 +604,7 @@
         "RecoilIntensity": 0.2,
         "BurstShotsCount": 2,
         "weapFireType": [
-            "fullauto"        
+            "fullauto"
         ]
     }
 }

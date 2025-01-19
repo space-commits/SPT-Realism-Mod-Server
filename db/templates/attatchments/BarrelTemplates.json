@@ -22,7 +22,7 @@
         "Weight": 0.374,
         "ShotgunDispersion": 1,
         "Loudness": 30,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Flash": 30,
         "TemplateType": "weaponmod"
@@ -50,7 +50,7 @@
         "Weight": 0.336,
         "ShotgunDispersion": 1,
         "Loudness": 30,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Flash": 30,
         "TemplateType": "weaponmod"
@@ -78,7 +78,7 @@
         "Weight": 0.464,
         "ShotgunDispersion": 1,
         "Loudness": 30,
-        "LoyaltyLevel": 5,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Flash": 30,
         "TemplateType": "weaponmod"
@@ -106,7 +106,7 @@
         "Weight": 0.464,
         "ShotgunDispersion": 1,
         "Loudness": 30,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Flash": 30,
         "TemplateType": "weaponmod"
@@ -134,7 +134,7 @@
         "Weight": 0.464,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Flash": 0,
         "TemplateType": "weaponmod"
@@ -162,7 +162,7 @@
         "Weight": 2.3,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Flash": 0,
         "TemplateType": "weaponmod"
@@ -190,7 +190,7 @@
         "Weight": 2.53,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Flash": 0,
         "TemplateType": "weaponmod"
@@ -218,7 +218,7 @@
         "Weight": 2.1,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Flash": 0,
         "TemplateType": "weaponmod"
@@ -246,7 +246,7 @@
         "Weight": 2,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Flash": 0,
         "TemplateType": "weaponmod"
@@ -274,7 +274,7 @@
         "Weight": 2.4,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Flash": -50,
         "TemplateType": "weaponmod"
@@ -301,7 +301,7 @@
         "Weight": 2.4,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -327,7 +327,7 @@
         "Weight": 1.33,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -382,7 +382,7 @@
         "Weight": 1.2,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -408,7 +408,7 @@
         "Weight": 1.1,
         "ShotgunDispersion": 1.025,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -434,7 +434,7 @@
         "Weight": 0.47,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -460,7 +460,7 @@
         "Weight": 1.4,
         "ShotgunDispersion": 0.9,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -492,7 +492,7 @@
         "Weight": 0.8,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Flash": -60,
         "TemplateType": "weaponmod"
@@ -519,7 +519,7 @@
         "Weight": 2.4,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -550,7 +550,7 @@
         "Weight": 0.25,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -576,7 +576,7 @@
         "Weight": 2.2,
         "ShotgunDispersion": 0.94,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -602,7 +602,7 @@
         "Weight": 1.23,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -628,7 +628,7 @@
         "Weight": 0.91,
         "ShotgunDispersion": 1.1,
         "Loudness": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -655,7 +655,7 @@
         "Weight": 1.2,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -681,7 +681,7 @@
         "Weight": 0.8,
         "ShotgunDispersion": 0.85,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -707,7 +707,7 @@
         "Weight": 1.5,
         "ShotgunDispersion": 0.8,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -761,7 +761,7 @@
         "Weight": 0.6305,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -788,7 +788,7 @@
         "Weight": 0.509,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -815,7 +815,7 @@
         "Weight": 0.7326,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -845,7 +845,7 @@
         "Weight": 0.9616,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -879,7 +879,7 @@
         "Weight": 0.78,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -914,7 +914,7 @@
         "Weight": 0.99,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -940,7 +940,7 @@
         "Weight": 0.7,
         "ShotgunDispersion": 1.22,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -967,7 +967,7 @@
         "Weight": 0.409,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -993,7 +993,7 @@
         "Weight": 0.479,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1075,7 +1075,7 @@
         "Weight": 1.25,
         "ShotgunDispersion": 1.2,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1106,7 +1106,7 @@
         "Weight": 0.19,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1132,7 +1132,7 @@
         "Weight": 0.8,
         "ShotgunDispersion": 0.95,
         "Loudness": 0,
-        "LoyaltyLevel":20,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1159,7 +1159,7 @@
         "Weight": 2.378,
         "ShotgunDispersion": 1,
         "Loudness": -60,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1187,7 +1187,7 @@
         "Weight": 2.112,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1213,7 +1213,7 @@
         "Weight": 1.55,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1242,7 +1242,7 @@
         "Weight": 0.28,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1274,7 +1274,7 @@
         "Weight": 0.5,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1309,7 +1309,7 @@
         "Weight": 1.1,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1335,7 +1335,7 @@
         "Weight": 0.8,
         "ShotgunDispersion": 0.88,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1367,7 +1367,7 @@
         "Weight": 0.835,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1411,7 +1411,7 @@
         "Weight": 0.615,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1444,7 +1444,7 @@
         "Weight": 0.465,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1477,7 +1477,7 @@
         "Weight": 1.03,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1504,7 +1504,7 @@
         "Weight": 1.05,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1530,7 +1530,7 @@
         "Weight": 0.91,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1556,7 +1556,7 @@
         "Weight": 1.1,
         "ShotgunDispersion": 1.12,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1583,7 +1583,7 @@
         "Weight": 1.12,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1609,7 +1609,7 @@
         "Weight": 1.2,
         "ShotgunDispersion": 1.025,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1636,7 +1636,7 @@
         "Weight": 0.35,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1670,7 +1670,7 @@
         "Weight": 1.2,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1696,7 +1696,7 @@
         "Weight": 0.75,
         "ShotgunDispersion": 1.17,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1722,7 +1722,7 @@
         "Weight": 1.35,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1755,7 +1755,7 @@
         "Weight": 0.16,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1781,7 +1781,7 @@
         "Weight": 1.55,
         "ShotgunDispersion": 0.9,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1807,7 +1807,7 @@
         "Weight": 1.25,
         "ShotgunDispersion": 1.1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1837,7 +1837,7 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1863,7 +1863,7 @@
         "Weight": 0.2,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1889,7 +1889,7 @@
         "Weight": 0.113,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1916,7 +1916,7 @@
         "Weight": 1.05,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1942,7 +1942,7 @@
         "Weight": 0.17,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1969,7 +1969,7 @@
         "Weight": 1.13,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2003,7 +2003,7 @@
         "Weight": 0.47,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2029,7 +2029,7 @@
         "Weight": 1.26,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2055,7 +2055,7 @@
         "Weight": 0.85,
         "ShotgunDispersion": 1.12,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2082,7 +2082,7 @@
         "Weight": 0.9,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2109,7 +2109,7 @@
         "Weight": 1.02,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2135,7 +2135,7 @@
         "Weight": 0.8,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2161,7 +2161,7 @@
         "Weight": 0.8,
         "ShotgunDispersion": 1.18,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2188,7 +2188,7 @@
         "Weight": 1.12,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2214,7 +2214,7 @@
         "Weight": 1,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2240,7 +2240,7 @@
         "Weight": 0.095,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2267,7 +2267,7 @@
         "Weight": 0.39,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2293,7 +2293,7 @@
         "Weight": 1.24,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2375,7 +2375,7 @@
         "Weight": 0.509,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2401,7 +2401,7 @@
         "Weight": 0.62,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2428,7 +2428,7 @@
         "Weight": 0.69,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2455,7 +2455,7 @@
         "Weight": 1.6,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2481,7 +2481,7 @@
         "Weight": 0.8,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2508,7 +2508,7 @@
         "Weight": 1.02,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2534,7 +2534,7 @@
         "Weight": 1.35,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2560,7 +2560,7 @@
         "Weight": 1.25,
         "ShotgunDispersion": 1.08,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2586,7 +2586,7 @@
         "Weight": 0.288,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2612,7 +2612,7 @@
         "Weight": 0.241,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2638,7 +2638,7 @@
         "Weight": 0.19,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2664,7 +2664,7 @@
         "Weight": 0.131,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2690,7 +2690,7 @@
         "Weight": 0.13,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2716,7 +2716,7 @@
         "Weight": 0.288,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2742,7 +2742,7 @@
         "Weight": 0.15,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2768,7 +2768,7 @@
         "Weight": 0.128,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2804,7 +2804,7 @@
         "Weight": 0.5,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2830,7 +2830,7 @@
         "Weight": 0.16,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2858,7 +2858,7 @@
         "Weight": 0.8,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2884,7 +2884,7 @@
         "Weight": 0.122,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2910,7 +2910,7 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2936,7 +2936,7 @@
         "Weight": 0.834,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2968,7 +2968,7 @@
         "Weight": 0.6,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2994,7 +2994,7 @@
         "Weight": 0.51,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3020,7 +3020,7 @@
         "Weight": 0.409,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3046,7 +3046,7 @@
         "Weight": 1.55,
         "ShotgunDispersion": 0.85,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3072,7 +3072,7 @@
         "Weight": 0.06,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3106,7 +3106,7 @@
         "Weight": 1.93,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3132,7 +3132,7 @@
         "Weight": 0.21,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3158,7 +3158,7 @@
         "Weight": 0.94,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3184,7 +3184,7 @@
         "Weight": 0.17,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3210,7 +3210,7 @@
         "Weight": 2.5,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3236,7 +3236,7 @@
         "Weight": 0.141,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3262,7 +3262,7 @@
         "Weight": 1.1,
         "ShotgunDispersion": 0.8,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3319,7 +3319,7 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3345,7 +3345,7 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3372,7 +3372,7 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3398,7 +3398,7 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3424,7 +3424,7 @@
         "Weight": 0.8,
         "ShotgunDispersion": 1.25,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3451,7 +3451,7 @@
         "Weight": 1.45,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3477,7 +3477,7 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3503,7 +3503,7 @@
         "Weight": 1.35,
         "ShotgunDispersion": 0.9,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3529,7 +3529,7 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3555,7 +3555,7 @@
         "Weight": 1.25,
         "ShotgunDispersion": 1.025,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3581,7 +3581,7 @@
         "Weight": 0.2,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3619,7 +3619,7 @@
         "Weight": 0.409,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3645,7 +3645,7 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3671,7 +3671,7 @@
         "Weight": 1,
         "ShotgunDispersion": 0.9,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3697,7 +3697,7 @@
         "Weight": 0.8,
         "ShotgunDispersion": 0.95,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3723,7 +3723,7 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3780,7 +3780,7 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3842,7 +3842,7 @@
         "Weight": 0.7,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3875,7 +3875,7 @@
         "Weight": 0.81,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3901,7 +3901,7 @@
         "Weight": 1.3,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3930,7 +3930,7 @@
         "Weight": 1.53,
         "ShotgunDispersion": 1.9,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3956,7 +3956,7 @@
         "Weight": 0.18,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3982,7 +3982,7 @@
         "Weight": 0.163,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4008,7 +4008,7 @@
         "Weight": 0.17,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4034,7 +4034,7 @@
         "Weight": 0.11,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4060,7 +4060,7 @@
         "Weight": 0.12,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4086,7 +4086,7 @@
         "Weight": 1.04,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4113,7 +4113,7 @@
         "Weight": 1.11,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4139,7 +4139,7 @@
         "Weight": 1.2,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4165,7 +4165,7 @@
         "Weight": 1.2,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4191,7 +4191,7 @@
         "Weight": 1.45,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4217,7 +4217,7 @@
         "Weight": 1.45,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4251,7 +4251,7 @@
         "Weight": 0.83,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4284,7 +4284,7 @@
         "Weight": 0.96,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4314,7 +4314,7 @@
         "Weight": 1.2,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4340,7 +4340,7 @@
         "Weight": 0.062,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4366,7 +4366,7 @@
         "Weight": 0.06,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4392,7 +4392,7 @@
         "Weight": 0.415,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4419,7 +4419,7 @@
         "Weight": 0.83,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4445,7 +4445,7 @@
         "Weight": 0.535,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4471,7 +4471,7 @@
         "Weight": 0.53,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4497,7 +4497,7 @@
         "Weight": 0.11,
         "ShotgunDispersion": 1,
         "Loudness": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4553,7 +4553,7 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "MalfChance": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4580,7 +4580,7 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "MalfChance": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4607,7 +4607,7 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "MalfChance": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4634,7 +4634,7 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "MalfChance": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4661,7 +4661,7 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "MalfChance": 0,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4689,7 +4689,7 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "MalfChance": 0,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4745,7 +4745,103 @@
         "ShotgunDispersion": 1,
         "Loudness": 0,
         "MalfChance": 0,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0
+    },
+    "66ffac601f7492c901027bbb": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
+        "ItemID": "66ffac601f7492c901027bbb",
+        "Name": "barrel_aa12_mps_330mm_12g",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 7,
+        "AutoROF": 8,
+        "SemiROF": 4,
+        "ModMalfunctionChance": 5,
+        "Convergence": 0,
+        "Accuracy": 0,
+        "CenterOfImpact": 0.14,
+        "HeatFactor": 0.9,
+        "CoolFactor": 0.9,
+        "DurabilityBurnModificator": 1.15,
+        "Velocity": -13.5,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.8,
+        "ShotgunDispersion": 1.55,
+        "Loudness": 0,
+        "MalfChance": 0
+    },
+    "670fd03dc424cf758f006946": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
+        "ItemID": "670fd03dc424cf758f006946",
+        "Name": "barrel_aa12_mps_threaded_342mm_12g",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "AutoROF": 5,
+        "SemiROF": 2.5,
+        "ModMalfunctionChance": 4,
+        "Convergence": 0,
+        "Accuracy": 0,
+        "CenterOfImpact": 0.12,
+        "HeatFactor": 0.94,
+        "CoolFactor": 0.94,
+        "DurabilityBurnModificator": 1.1,
+        "Velocity": -12.5,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.97,
+        "ShotgunDispersion": 1.53,
+        "Loudness": 0,
+        "MalfChance": 0
+    },
+    "670fd0a8d8d4eae4790c8187": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
+        "ItemID": "670fd0a8d8d4eae4790c8187",
+        "Name": "barrel_aa12_mps_threaded_417mm_12g",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "AutoROF": 2.5,
+        "SemiROF": 1.25,
+        "ModMalfunctionChance": -2.5,
+        "Convergence": 0,
+        "Accuracy": 0,
+        "CenterOfImpact": 0.1,
+        "HeatFactor": 0.96,
+        "CoolFactor": 0.96,
+        "DurabilityBurnModificator": 1.05,
+        "Velocity": -10,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 1.03,
+        "ShotgunDispersion": 1.45,
+        "Loudness": 0,
+        "MalfChance": 0
+    },
+    "670fced86a7e274b1a0964e8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
+        "ItemID": "670fced86a7e274b1a0964e8",
+        "Name": "barrel_aa12_mps_457mm_12g",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": -6,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": -5,
+        "Convergence": 0,
+        "Accuracy": 0,
+        "CenterOfImpact": 0.09,
+        "HeatFactor": 1,
+        "CoolFactor": 1,
+        "DurabilityBurnModificator": 1,
+        "Velocity": -8,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 1.14,
+        "ShotgunDispersion": 1.42,
+        "Loudness": 0,
+        "MalfChance": 0
     }
 }

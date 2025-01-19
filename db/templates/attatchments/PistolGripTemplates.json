@@ -13,7 +13,7 @@
         "ConflictingItems": [],
         "Weight": 0.12,
         "Handling": 15,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -31,7 +31,7 @@
         "ConflictingItems": [],
         "Weight": 0.11,
         "AimStability": 15,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -48,7 +48,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.09,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "AimStability": 10,
         "TemplateType": "weaponmod"
@@ -66,7 +66,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.1,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -83,9 +83,25 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.09,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
+    },
+    "661f8995c341ea101e0d33e8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
+        "ItemID": "661f8995c341ea101e0d33e8",
+        "Name": "pistolgrip_pm_pm_laser_grip",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": -10,
+        "Dispersion": -5,
+        "AimSpeed": 4,
+        "Ergonomics": 7,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Weight": 0.09,
+        "AimStability": 5,
+        "Handling": 3
     },
     "648afce7ec6bb25b2608defb": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -100,7 +116,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.072,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "AimStability": 15,
         "TemplateType": "weaponmod"
@@ -118,7 +134,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.072,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "AimStability": 15,
         "TemplateType": "weaponmod"
@@ -136,7 +152,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.114,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 15,
         "TemplateType": "weaponmod"
@@ -154,7 +170,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.102,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -171,7 +187,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.102,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -188,7 +204,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.102,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -205,7 +221,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.055,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -222,7 +238,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 10,
         "TemplateType": "weaponmod"
@@ -240,7 +256,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -257,7 +273,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.09,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -274,7 +290,7 @@
         "Accuracy": 10,
         "ConflictingItems": [],
         "Weight": 0.07,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 15,
         "AimStability": -15,
@@ -293,7 +309,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.06,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "AimStability": 15,
         "Handling": -15,
@@ -312,7 +328,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "AimStability": -12,
         "Handling": 5,
@@ -331,7 +347,7 @@
         "Accuracy": 5,
         "ConflictingItems": [],
         "Weight": 0.09,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 10,
         "TemplateType": "weaponmod"
@@ -349,7 +365,7 @@
         "Accuracy": 5,
         "ConflictingItems": [],
         "Weight": 0.09,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 10,
         "TemplateType": "weaponmod"
@@ -367,7 +383,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "AimStability": -10,
         "TemplateType": "weaponmod"
@@ -385,7 +401,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 15,
         "AimStability": -10,
@@ -404,7 +420,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.09,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "AimStability": 10,
         "Handling": 5,
@@ -423,7 +439,7 @@
         "Accuracy": 10,
         "ConflictingItems": [],
         "Weight": 0.09,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 17,
         "TemplateType": "weaponmod"
@@ -441,7 +457,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.09,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "AimStability": 5,
         "Handling": 10,
@@ -460,7 +476,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.27,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 5,
         "TemplateType": "weaponmod"
@@ -478,7 +494,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.12,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -495,7 +511,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.22,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 12,
         "TemplateType": "weaponmod"
@@ -513,7 +529,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.2,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "AimStability": 20,
         "TemplateType": "weaponmod"
@@ -531,7 +547,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.12,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 6,
         "TemplateType": "weaponmod"
@@ -549,7 +565,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.14,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -566,7 +582,7 @@
         "Accuracy": 5,
         "ConflictingItems": [],
         "Weight": 0.15,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "AimStability": 15,
         "TemplateType": "weaponmod"
@@ -584,7 +600,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.12,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 4.5,
         "TemplateType": "weaponmod"
@@ -602,7 +618,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.05,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 3,
         "TemplateType": "weaponmod"
@@ -620,7 +636,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.09,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -637,7 +653,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.09,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -654,7 +670,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 1,
         "TemplateType": "weaponmod"
@@ -672,7 +688,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.065,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 1,
         "TemplateType": "weaponmod"
@@ -690,7 +706,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 1,
         "TemplateType": "weaponmod"
@@ -708,7 +724,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -725,7 +741,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 1,
         "TemplateType": "weaponmod"
@@ -743,7 +759,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.153,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -760,7 +776,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.153,
-        "LoyaltyLevel": 5,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -777,7 +793,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 5,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "AimStability": 3,
         "TemplateType": "weaponmod"
@@ -795,7 +811,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 1,
         "TemplateType": "weaponmod"
@@ -813,7 +829,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.091,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 4,
         "TemplateType": "weaponmod"
@@ -831,7 +847,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.091,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 4,
         "TemplateType": "weaponmod"
@@ -849,7 +865,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.11,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 3,
         "TemplateType": "weaponmod"
@@ -867,7 +883,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.11,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 3,
         "TemplateType": "weaponmod"
@@ -885,7 +901,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.13,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 6,
         "TemplateType": "weaponmod"
@@ -903,7 +919,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.13,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 6,
         "TemplateType": "weaponmod"
@@ -921,7 +937,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.09,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 3,
         "TemplateType": "weaponmod"
@@ -939,7 +955,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.19,
-        "LoyaltyLevel": 5,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "AimStability": 3,
         "TemplateType": "weaponmod"
@@ -975,7 +991,7 @@
         "Accuracy": 3.5,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "AimStability": 7.5,
         "TemplateType": "weaponmod"
@@ -993,7 +1009,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.09,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 5,
         "TemplateType": "weaponmod"
@@ -1011,7 +1027,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.09,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 5,
         "TemplateType": "weaponmod"
@@ -1029,7 +1045,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.045,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1046,7 +1062,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1063,7 +1079,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.1,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "AimStability": 3,
         "TemplateType": "weaponmod"
@@ -1081,7 +1097,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1098,7 +1114,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.087,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1115,7 +1131,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.085,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1132,7 +1148,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "AimStability": 4,
         "TemplateType": "weaponmod"
@@ -1150,7 +1166,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "AimStability": 4,
         "TemplateType": "weaponmod"
@@ -1168,7 +1184,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.05,
-        "LoyaltyLevel": 5,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "AimStability": 2,
         "TemplateType": "weaponmod"
@@ -1186,7 +1202,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.05,
-        "LoyaltyLevel": 5,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "AimStability": 2,
         "TemplateType": "weaponmod"
@@ -1204,7 +1220,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 6,
         "TemplateType": "weaponmod"
@@ -1222,7 +1238,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 6,
         "TemplateType": "weaponmod"
@@ -1240,7 +1256,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.064,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1257,7 +1273,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "AimStability": 3,
         "TemplateType": "weaponmod"
@@ -1275,7 +1291,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.05,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1292,7 +1308,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 6,
         "TemplateType": "weaponmod"
@@ -1310,7 +1326,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "AimStability": 3,
         "Handling": 1,
@@ -1329,7 +1345,7 @@
         "Accuracy": 5.5,
         "ConflictingItems": [],
         "Weight": 0.11,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "AimStability": 15,
         "TemplateType": "weaponmod"
@@ -1347,7 +1363,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 2,
         "AimStability": 2,
@@ -1366,7 +1382,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "AimStability": 3,
         "Handling": 1,
@@ -1385,7 +1401,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.038,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1402,7 +1418,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 6,
         "TemplateType": "weaponmod"
@@ -1420,7 +1436,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "AimStability": 2,
         "Handling": 2,
@@ -1439,7 +1455,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 6,
         "TemplateType": "weaponmod"
@@ -1457,7 +1473,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.092,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "AimStability": 2,
         "Handling": 3,
@@ -1476,7 +1492,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.088,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "AimStability": 5,
         "TemplateType": "weaponmod"
@@ -1494,7 +1510,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.11,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1511,7 +1527,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.13,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 6,
         "TemplateType": "weaponmod"
@@ -1529,7 +1545,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.113,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 4.5,
         "TemplateType": "weaponmod"
@@ -1547,7 +1563,7 @@
         "Accuracy": 5,
         "ConflictingItems": [],
         "Weight": 0.16,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 6,
         "TemplateType": "weaponmod"
@@ -1565,7 +1581,7 @@
         "Accuracy": 5,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "AimStability": 12,
         "TemplateType": "weaponmod"
@@ -1583,7 +1599,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "AimStability": 8,
         "Handling": 4,
@@ -1602,7 +1618,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.071,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1619,7 +1635,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "AimStability": 3,
         "TemplateType": "weaponmod"
@@ -1637,7 +1653,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.09,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 6,
         "TemplateType": "weaponmod"
@@ -1655,7 +1671,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.146,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 3,
         "TemplateType": "weaponmod"
@@ -1673,7 +1689,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 2,
         "TemplateType": "weaponmod"
@@ -1691,7 +1707,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 2,
         "TemplateType": "weaponmod"
@@ -1709,7 +1725,7 @@
         "Accuracy": 3,
         "ConflictingItems": [],
         "Weight": 0.1,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "AimStability": 10,
         "Handling": 6,
@@ -1728,7 +1744,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 5,
         "TemplateType": "weaponmod"
@@ -1746,7 +1762,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.13,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 6,
         "TemplateType": "weaponmod"
@@ -1767,7 +1783,7 @@
             "57c450252459772d28133253"
         ],
         "Weight": 0.065,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 2,
         "TemplateType": "weaponmod"
@@ -1785,7 +1801,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.15,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 4,
         "TemplateType": "weaponmod"
@@ -1803,7 +1819,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.135,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 6,
         "TemplateType": "weaponmod"
@@ -1824,7 +1840,7 @@
             "607d5aa50494a626335e12ed"
         ],
         "Weight": 0.13,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 2,
         "TemplateType": "weaponmod"
@@ -1842,7 +1858,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.11,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "Handling": 6,
         "TemplateType": "weaponmod"
@@ -1860,7 +1876,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1877,7 +1893,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1894,7 +1910,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.146,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1911,7 +1927,7 @@
         "Accuracy": 1.5,
         "ConflictingItems": [],
         "Weight": 0.045,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1928,7 +1944,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.06,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1946,7 +1962,7 @@
         "ConflictingItems": [],
         "Weight": 0.132,
         "Handling": 5,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1963,7 +1979,7 @@
         "Accuracy": 2,
         "ConflictingItems": [],
         "Weight": 0.033,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1982,7 +1998,7 @@
         "Weight": 0.08,
         "Handling": 2,
         "AimStability": 3.5,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1999,7 +2015,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2016,7 +2032,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.101,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2033,7 +2049,7 @@
         "Accuracy": 5,
         "ConflictingItems": [],
         "Weight": 0.098,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2050,7 +2066,7 @@
         "Accuracy": 5,
         "ConflictingItems": [],
         "Weight": 0.098,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2068,7 +2084,7 @@
         "AimStability": 3,
         "ConflictingItems": [],
         "Weight": 0.039,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2086,7 +2102,7 @@
         "Handling": 4,
         "ConflictingItems": [],
         "Weight": 0.042,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2104,7 +2120,22 @@
         "Handling": 4,
         "ConflictingItems": [],
         "Weight": 0.042,
-        "LoyaltyLevel": 3,
+        "LoyaltyLevel": 0,
         "Price": 0
+    },
+    "6565b91666492762f5029c0b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
+        "ItemID": "6565b91666492762f5029c0b",
+        "Name": "pistolgrip_val_tochmash_val_std_blk",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "Dispersion": 0,
+        "AimSpeed": 0,
+        "Ergonomics": 3,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Weight": 0.146,
+        "Handling": 2
     }
 }

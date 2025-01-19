@@ -1734,8 +1734,8 @@ class BotLoader {
             this.raiderBase.inventory.equipment.Eyewear = {};
         }
         if (utils_1.ModTracker.tgcPresent) {
-            //this.raiderBase.inventory.equipment.FaceCover["672e2e756803734b60f5ac1e"] = 1;
-            //this.raiderBase.inventory.equipment.FaceCover["672e2e7517018293d11bbdc1"] = 1;
+            this.raiderBase.inventory.equipment.FaceCover["672e2e756803734b60f5ac1e"] = 1;
+            this.raiderBase.inventory.equipment.FaceCover["672e2e7517018293d11bbdc1"] = 1;
         }
         utils_1.BotTierTracker.raiderTier = 2;
         if (this.modConfig.logEverything == true) {
@@ -1811,8 +1811,8 @@ class BotLoader {
             this.raiderBase.inventory.equipment.Eyewear = {};
         }
         if (utils_1.ModTracker.tgcPresent) {
-            //this.raiderBase.inventory.equipment.FaceCover["672e2e756803734b60f5ac1e"] = 1;
-            //this.raiderBase.inventory.equipment.FaceCover["672e2e7517018293d11bbdc1"] = 1;
+            this.raiderBase.inventory.equipment.FaceCover["672e2e756803734b60f5ac1e"] = 1;
+            this.raiderBase.inventory.equipment.FaceCover["672e2e7517018293d11bbdc1"] = 1;
         }
         utils_1.BotTierTracker.raiderTier = 3;
         if (this.modConfig.logEverything == true) {

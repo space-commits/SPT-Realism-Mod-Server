@@ -1580,7 +1580,7 @@ export class Ammo {
             //JHP
             if (serverItem._id === "66a0d1c87d0d369e270bb9de") {
                 serverItem._props.PenetrationPower = 30;
-                serverItem._props.ArmorDamage = 1.1;
+                serverItem._props.ArmorDamage = 1.25;
                 serverItem._props.Damage = 150;
                 serverItem._props.RicochetChance = 0.1;
                 serverItem._props.FragmentationChance = 0;
@@ -1601,7 +1601,7 @@ export class Ammo {
             //JSP
             if (serverItem._id === "66a0d1f88486c69fce00fdf6") {
                 serverItem._props.PenetrationPower = 35;
-                serverItem._props.ArmorDamage = 1.075;
+                serverItem._props.ArmorDamage = 1.15;
                 serverItem._props.Damage = 130;
                 serverItem._props.RicochetChance = 0.1;
                 serverItem._props.FragmentationChance = 0.1;
@@ -1643,7 +1643,7 @@ export class Ammo {
             //Copper
             if (serverItem._id === "66a0d1e0ed648d72fe064d06") {
                 serverItem._props.PenetrationPower = 49;
-                serverItem._props.ArmorDamage = 1.2;
+                serverItem._props.ArmorDamage = 1.3;
                 serverItem._props.Damage = 100;
                 serverItem._props.RicochetChance = 0.4;
                 serverItem._props.FragmentationChance = 0.05;
