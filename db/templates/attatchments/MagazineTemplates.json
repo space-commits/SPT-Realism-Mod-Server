@@ -13,7 +13,7 @@
         "Weight": 0.2,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -31,7 +31,7 @@
         "Weight": 0.227,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -49,7 +49,7 @@
         "Weight": 0.217,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -67,7 +67,7 @@
         "Weight": 0.25,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -85,7 +85,7 @@
         "Weight": 0.245,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -103,7 +103,7 @@
         "Weight": 0.26,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -121,7 +121,7 @@
         "Weight": 0.3,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -139,7 +139,7 @@
         "Weight": 0.18,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -157,7 +157,7 @@
         "Weight": 0.18,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -175,7 +175,7 @@
         "Weight": 0.423,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -193,7 +193,7 @@
         "Weight": 1.5,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -211,7 +211,7 @@
         "Weight": 0.28,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -229,7 +229,7 @@
         "Weight": 0.35,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -247,7 +247,7 @@
         "Weight": 0.8,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -265,7 +265,7 @@
         "Weight": 0.25,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -283,7 +283,7 @@
         "Weight": 0.11,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -301,7 +301,7 @@
         "Weight": 0.11,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -337,7 +337,7 @@
         "Weight": 0.095,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -355,7 +355,7 @@
         "Weight": 0.11,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -373,7 +373,7 @@
         "Weight": 0.13,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -389,7 +389,7 @@
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
         "Weight": 0.19,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -407,7 +407,7 @@
         "Weight": 0.21,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -425,7 +425,7 @@
         "Weight": 0.66,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -443,7 +443,7 @@
         "Weight": 0.1,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -461,7 +461,7 @@
         "Weight": 0.1,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -479,7 +479,7 @@
         "Weight": 0.11,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -497,7 +497,7 @@
         "Weight": 0.085,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -515,7 +515,7 @@
         "Weight": 0.124,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -533,7 +533,7 @@
         "Weight": 0.2,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -551,7 +551,7 @@
         "Weight": 0.124,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -569,7 +569,7 @@
         "Weight": 0.227,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -587,7 +587,7 @@
         "Weight": 0.3,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -605,7 +605,7 @@
         "Weight": 0.156,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -623,7 +623,7 @@
         "Weight": 0.3,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -641,7 +641,7 @@
         "Weight": 0.3,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -659,7 +659,7 @@
         "Weight": 0.25,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -681,7 +681,7 @@
         "Weight": 0.255,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -699,7 +699,7 @@
         "Weight": 0.4,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -721,7 +721,7 @@
         "Weight": 0.299,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -743,7 +743,7 @@
         "Weight": 0.34,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 5,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -761,7 +761,7 @@
         "Weight": 0.1,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -779,7 +779,7 @@
         "Weight": 0.4,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -797,7 +797,7 @@
         "Weight": 0.28,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -815,7 +815,7 @@
         "Weight": 0.6,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -833,7 +833,7 @@
         "Weight": 0.115,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -851,7 +851,7 @@
         "Weight": 0.112,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -869,7 +869,7 @@
         "Weight": 0.112,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -889,7 +889,7 @@
         "Weight": 0.4,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -915,7 +915,7 @@
         "Weight": 0.227,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -933,7 +933,7 @@
         "Weight": 0.5,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -951,7 +951,7 @@
         "Weight": 0.5,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -969,7 +969,7 @@
         "Weight": 0.09,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -987,7 +987,7 @@
         "Weight": 0.3,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1005,7 +1005,7 @@
         "Weight": 0.5,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1023,7 +1023,7 @@
         "Weight": 0.5,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1041,7 +1041,7 @@
         "Weight": 0.12,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1059,7 +1059,7 @@
         "Weight": 0.5,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1077,7 +1077,7 @@
         "Weight": 0.6,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1095,7 +1095,7 @@
         "Weight": 0.5,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1113,7 +1113,7 @@
         "Weight": 0.41,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1131,7 +1131,7 @@
         "Weight": 0.52,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1149,7 +1149,7 @@
         "Weight": 0.35,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1167,7 +1167,7 @@
         "Weight": 0.1,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1185,7 +1185,7 @@
         "Weight": 0.16,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1203,7 +1203,7 @@
         "Weight": 0.2,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1221,7 +1221,7 @@
         "Weight": 0.2,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1239,7 +1239,7 @@
         "Weight": 0.159,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1257,7 +1257,7 @@
         "Weight": 0.226,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1275,7 +1275,7 @@
         "Weight": 0.34,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1293,7 +1293,7 @@
         "Weight": 0.7,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1318,7 +1318,7 @@
         "Weight": 0.5,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1348,7 +1348,7 @@
         "Weight": 0.4,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1366,7 +1366,7 @@
         "Weight": 0.33,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1384,7 +1384,7 @@
         "Weight": 0.35,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1402,7 +1402,7 @@
         "Weight": 0.35,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1420,7 +1420,7 @@
         "Weight": 0.27,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1438,7 +1438,7 @@
         "Weight": 0.35,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1456,7 +1456,7 @@
         "Weight": 0.29,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1474,7 +1474,7 @@
         "Weight": 0.49,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1492,7 +1492,7 @@
         "Weight": 0.49,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1510,7 +1510,7 @@
         "Weight": 0.7,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 5,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1528,7 +1528,7 @@
         "Weight": 0.18,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1546,7 +1546,7 @@
         "Weight": 0.27,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 5,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1564,7 +1564,7 @@
         "Weight": 0.32,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1582,7 +1582,7 @@
         "Weight": 0.138,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1600,7 +1600,7 @@
         "Weight": 0.2,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1618,7 +1618,7 @@
         "Weight": 0.138,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1636,7 +1636,7 @@
         "Weight": 0.138,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1654,7 +1654,7 @@
         "Weight": 0.138,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1672,7 +1672,7 @@
         "Weight": 0.2,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1690,7 +1690,7 @@
         "Weight": 0.58,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 5,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1708,7 +1708,7 @@
         "Weight": 0.12,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1726,7 +1726,7 @@
         "Weight": 0.125,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1744,7 +1744,7 @@
         "Weight": 0.138,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1762,7 +1762,7 @@
         "Weight": 0.117,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1780,7 +1780,7 @@
         "Weight": 0.16,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1798,7 +1798,7 @@
         "Weight": 0.17,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1816,7 +1816,7 @@
         "Weight": 0.117,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1834,7 +1834,7 @@
         "Weight": 0.14,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1852,7 +1852,7 @@
         "Weight": 0.117,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1870,7 +1870,7 @@
         "Weight": 0.185,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1888,7 +1888,7 @@
         "Weight": 1.043,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1906,7 +1906,7 @@
         "Weight": 0.197,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1924,7 +1924,7 @@
         "Weight": 0.112,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1942,7 +1942,7 @@
         "Weight": 0.45,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1960,7 +1960,7 @@
         "Weight": 0.215,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1978,7 +1978,7 @@
         "Weight": 0.2,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1996,7 +1996,7 @@
         "Weight": 0.17,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2014,7 +2014,7 @@
         "Weight": 0.156,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2032,7 +2032,7 @@
         "Weight": 0.32,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2050,7 +2050,7 @@
         "Weight": 0.2,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2068,7 +2068,7 @@
         "Weight": 0.46,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2086,7 +2086,7 @@
         "Weight": 0.72,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2104,7 +2104,7 @@
         "Weight": 0.215,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2122,7 +2122,7 @@
         "Weight": 0.37,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2140,7 +2140,7 @@
         "Weight": 0.2,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2158,7 +2158,7 @@
         "Weight": 0.12,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2176,7 +2176,7 @@
         "Weight": 0.7,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2194,7 +2194,7 @@
         "Weight": 0.2,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2212,7 +2212,7 @@
         "Weight": 0.2,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2230,7 +2230,7 @@
         "Weight": 0.24,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2248,7 +2248,7 @@
         "Weight": 0.9,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2266,7 +2266,7 @@
         "Weight": 0.3,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2284,7 +2284,7 @@
         "Weight": 0.215,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2302,7 +2302,7 @@
         "Weight": 0.3,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2320,7 +2320,7 @@
         "Weight": 0.3,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2338,7 +2338,7 @@
         "Weight": 0.215,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2356,7 +2356,7 @@
         "Weight": 0.185,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2374,7 +2374,7 @@
         "Weight": 0.19,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2392,7 +2392,7 @@
         "Weight": 0.215,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2410,7 +2410,7 @@
         "Weight": 0.112,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2428,7 +2428,7 @@
         "Weight": 0.13,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2446,7 +2446,7 @@
         "Weight": 0.14,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2464,7 +2464,7 @@
         "Weight": 0.2,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2482,7 +2482,7 @@
         "Weight": 0.68,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2500,7 +2500,7 @@
         "Weight": 0.25,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2518,7 +2518,7 @@
         "Weight": 0.3,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2529,14 +2529,14 @@
         "ModType": "long_mag",
         "ReloadSpeed": -3,
         "Ergonomics": 0,
-        "MalfunctionChance": 0.2,
+        "MalfunctionChance": 0.3,
         "LoadUnloadModifier": 0,
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
         "Weight": 0.45,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2567,7 +2567,7 @@
         "Weight": 0.1,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2585,7 +2585,7 @@
         "Weight": 0.15,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2603,7 +2603,7 @@
         "Weight": 0.2,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2621,7 +2621,7 @@
         "Weight": 0.096,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2639,7 +2639,7 @@
         "Weight": 0.1,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2657,7 +2657,7 @@
         "Weight": 0.15,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2675,7 +2675,7 @@
         "Weight": 0.6,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2693,7 +2693,7 @@
         "Weight": 0.12,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2711,7 +2711,7 @@
         "Weight": 0.17,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2729,7 +2729,7 @@
         "Weight": 0.64,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2747,7 +2747,7 @@
         "Weight": 0.06,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2765,7 +2765,7 @@
         "Weight": 0.067,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2783,7 +2783,7 @@
         "Weight": 0.072,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2801,7 +2801,7 @@
         "Weight": 0.08,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2819,7 +2819,7 @@
         "Weight": 0.082,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2837,7 +2837,7 @@
         "Weight": 0.105,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2855,7 +2855,7 @@
         "Weight": 0.044,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2873,7 +2873,7 @@
         "Weight": 0.364,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2891,7 +2891,7 @@
         "Weight": 0.08,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2909,7 +2909,7 @@
         "Weight": 0.099,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2927,7 +2927,7 @@
         "Weight": 0.092,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2945,7 +2945,7 @@
         "Weight": 0.45,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2963,7 +2963,7 @@
         "Weight": 0.14,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2981,7 +2981,7 @@
         "Weight": 0.17,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2999,7 +2999,7 @@
         "Weight": 0.3,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3017,7 +3017,7 @@
         "Weight": 0.65,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3035,7 +3035,7 @@
         "Weight": 0.38,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3053,7 +3053,7 @@
         "Weight": 0.9,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3071,7 +3071,7 @@
         "Weight": 0.105,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3089,7 +3089,7 @@
         "Weight": 0.044,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3107,7 +3107,7 @@
         "Weight": 0.096,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3125,7 +3125,7 @@
         "Weight": 0.11,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3143,7 +3143,7 @@
         "Weight": 0.17,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3161,7 +3161,7 @@
         "Weight": 0.096,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3179,7 +3179,7 @@
         "Weight": 0.18,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3197,7 +3197,7 @@
         "Weight": 0.16,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3215,7 +3215,7 @@
         "Weight": 0.24,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3233,7 +3233,7 @@
         "Weight": 0.17,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3251,7 +3251,7 @@
         "Weight": 0.088,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3269,7 +3269,7 @@
         "Weight": 0.103,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3287,7 +3287,7 @@
         "Weight": 0.128,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3305,7 +3305,7 @@
         "Weight": 0.096,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3323,7 +3323,7 @@
         "Weight": 0.2,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3341,7 +3341,7 @@
         "Weight": 0.14,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3359,7 +3359,7 @@
         "Weight": 0.17,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3377,7 +3377,7 @@
         "Weight": 0.085,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3395,7 +3395,7 @@
         "Weight": 0.109,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3411,7 +3411,7 @@
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
         "Weight": 0.23,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3427,7 +3427,7 @@
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
         "Weight": 0.17,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3443,7 +3443,7 @@
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
         "Weight": 0.13,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3459,7 +3459,7 @@
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
         "Weight": 0.1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3475,7 +3475,7 @@
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
         "Weight": 0.13,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3491,7 +3491,7 @@
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
         "Weight": 0.142,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3507,7 +3507,7 @@
         "CheckTimeModifier": -30,
         "ConflictingItems": [],
         "Weight": 0.112,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3523,7 +3523,7 @@
         "CheckTimeModifier": -30,
         "ConflictingItems": [],
         "Weight": 0.14,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3539,7 +3539,7 @@
         "CheckTimeModifier": -20,
         "ConflictingItems": [],
         "Weight": 0.106,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3555,7 +3555,7 @@
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
         "Weight": 0.05,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 5,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3571,7 +3571,7 @@
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
         "Weight": 0.3,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3587,7 +3587,7 @@
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
         "Weight": 0.8,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3603,7 +3603,7 @@
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
         "Weight": 0.35,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3619,7 +3619,7 @@
         "CheckTimeModifier": 0,
         "ConflictingItems": [],
         "Weight": 0.35,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },

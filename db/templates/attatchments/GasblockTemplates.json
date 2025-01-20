@@ -18,7 +18,7 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.141,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "Flash": -18,
         "TemplateType": "weaponmod"
@@ -42,7 +42,7 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.17,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "Flash": -20,
         "TemplateType": "weaponmod"
@@ -66,7 +66,7 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.12,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "Flash": -10,
         "TemplateType": "weaponmod"
@@ -90,7 +90,7 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.12,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -113,7 +113,7 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.12,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -136,7 +136,7 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.12,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -159,7 +159,7 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.11,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -182,7 +182,7 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.12,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -205,7 +205,7 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "Flash": -20,
         "TemplateType": "weaponmod"
@@ -229,7 +229,7 @@
         "ConflictingItems": [],
         "Ergonomics": 5,
         "Weight": 0.12,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -252,7 +252,7 @@
         "ConflictingItems": [],
         "Ergonomics": 14,
         "Weight": 0.55,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "Flash": -17,
         "TemplateType": "weaponmod"
@@ -276,7 +276,7 @@
         "ConflictingItems": [],
         "Ergonomics": 14,
         "Weight": 0.385,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "Flash": -15,
         "TemplateType": "weaponmod"
@@ -300,7 +300,7 @@
         "ConflictingItems": [],
         "Ergonomics": 14,
         "Weight": 0.385,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "Flash": -15,
         "TemplateType": "weaponmod"
@@ -324,7 +324,7 @@
         "ConflictingItems": [],
         "Ergonomics": 12.5,
         "Weight": 0.48,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "Flash": -18,
         "TemplateType": "weaponmod"
@@ -348,7 +348,7 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.03,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -373,7 +373,7 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.095,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "Flash": 5,
         "TemplateType": "weaponmod"
@@ -399,7 +399,7 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.049,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "Flash": -5,
         "TemplateType": "weaponmod"
@@ -429,7 +429,7 @@
         ],
         "Ergonomics": 0,
         "Weight": 0.218,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "Flash": -25,
         "TemplateType": "weaponmod"
@@ -459,7 +459,7 @@
         ],
         "Ergonomics": 0,
         "Weight": 0.136,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -472,7 +472,7 @@
         "HorizontalRecoil": 5,
         "Dispersion": 2,
         "CameraRecoil": 7,
-        "AutoROF": 3,
+        "AutoROF": 3,   
         "SemiROF": 5,
         "Convergence": 8,
         "ModMalfunctionChance": -10,
@@ -484,7 +484,7 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.053,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "Flash": 10,
         "TemplateType": "weaponmod"
@@ -510,7 +510,7 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.05,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "Flash": -10,
         "TemplateType": "weaponmod"
@@ -536,7 +536,7 @@
         "Ergonomics": 0,
         "Weight": 0.064,
         "Convergence": -10,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "Flash": -25,
         "TemplateType": "weaponmod"
@@ -566,7 +566,7 @@
         ],
         "Ergonomics": 0,
         "Weight": 0.12,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -589,7 +589,7 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.06,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "Flash": -15,
         "TemplateType": "weaponmod"
@@ -613,7 +613,7 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.049,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "Flash": -20,
         "TemplateType": "weaponmod"
@@ -637,7 +637,7 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.12,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -660,7 +660,7 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.12,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -683,7 +683,7 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.12,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -707,7 +707,7 @@
         "Ergonomics": 0,
         "Weight": 0.12,
         "MalfChance": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -731,7 +731,7 @@
         "Ergonomics": 0,
         "Weight": 0.12,
         "MalfChance": 0,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -756,7 +756,7 @@
         "Weight": 0.049,
         "MalfChance": 0,
         "Flash": -16,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     }
 }

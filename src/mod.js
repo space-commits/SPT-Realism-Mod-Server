@@ -569,6 +569,7 @@ class Main {
         // jsonGen.weapTemplatesCodeGen();
         // jsonGen.gearTemplatesCodeGen();
         // jsonGen.ammoTemplatesCodeGen();
+        // jsonGen.genArmorMods();
         this.checkForSeasonalEvents(logger, seasonalEventsService, seeasonalEventConfig, weatherConfig, true);
         if (modConfig.enable_hazard_zones) {
             quests.loadHazardQuests();

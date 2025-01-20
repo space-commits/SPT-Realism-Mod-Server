@@ -115,6 +115,7 @@ import { info } from "console";
 
 import * as path from 'path';
 import * as fs from 'fs';
+import { json } from "stream/consumers";
 
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");
@@ -252,11 +253,11 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             const botHelper = container.resolve<BotHelper>("BotHelper");
             const botEquipmentFilterService = container.resolve<BotEquipmentFilterService>("BotEquipmentFilterService");
             const seasonalEventService = container.resolve<SeasonalEventService>("SeasonalEventService");
-            const botGeneratorHelper = container.resolve<BotGeneratorHelper>("BotGeneratorHelper"); 
-            const botNameService = container.resolve<BotNameService>("BotNameService"); 
-            const itemFilterService = container.resolve<ItemFilterService>("ItemFilterService"); 
-            
-             const botGen = new BotGen(
+            const botGeneratorHelper = container.resolve<BotGeneratorHelper>("BotGeneratorHelper");
+            const botNameService = container.resolve<BotNameService>("BotNameService");
+            const itemFilterService = container.resolve<ItemFilterService>("ItemFilterService");
+
+            const botGen = new BotGen(
                 logger, hashUtil, randomUtil, timeUtil,
                 profileHelper, databaseService, botInventoryGenerator,
                 botLevelGenerator, botEquipmentFilterService, weightedRandomHelper,
@@ -435,10 +436,10 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                 {
                     url: "/client/game/logout",
                     action: async (url, info, sessionID, output) => {
-                        try{
+                        try {
                             const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
                             const profileData = profileHelper.getFullProfile(sessionID)
-    
+
                             let playerCount = 0;
                             let cumulativePlayerLevel = 0;
                             delete ProfileTracker.playerRecord[profileData.info.id];
@@ -449,14 +450,14 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                                     playerCount += 1;
                                 }
                             });
-    
+
                             ProfileTracker.averagePlayerLevel = playerCount > 0 ? cumulativePlayerLevel / playerCount : 1;
                             logger.logWithColor(`Realism Mod: Players in server ${playerCount}, average level: ${ProfileTracker.averagePlayerLevel}`, LogTextColor.GREEN);
                         }
-                        catch(err){
+                        catch (err) {
                             logger.error("Realism Mod: Error At Log Out: " + err);
                         }
-             
+
                         return output;
                     }
                 }
@@ -750,6 +751,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         // jsonGen.weapTemplatesCodeGen();
         // jsonGen.gearTemplatesCodeGen();
         // jsonGen.ammoTemplatesCodeGen();
+        // jsonGen.genArmorMods();
 
         this.checkForSeasonalEvents(logger, seasonalEventsService, seeasonalEventConfig, weatherConfig, true);
 

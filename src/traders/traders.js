@@ -292,18 +292,18 @@ class Traders {
         for (let item in trader.assort.items) {
             if (trader.assort.items[item].parentId !== "hideout")
                 continue;
-            let offer = trader.assort.items[item];
-            let offerId = offer._id;
-            let offerTpl = offer._tpl;
+            const offer = trader.assort.items[item];
+            const offerId = offer._id;
+            const offerTpl = offer._tpl;
             if (template[offerTpl]) {
-                let barter = trader?.assort?.barter_scheme[offerId][0][0];
-                let templateItem = template[offerTpl];
-                let loyaltyLvl = templateItem?.LoyaltyLevel !== undefined ? templateItem?.LoyaltyLevel : 3;
+                const barter = trader?.assort?.barter_scheme[offerId][0][0];
+                const templateItem = template[offerTpl];
+                const loyaltyLvl = templateItem?.LoyaltyLevel !== undefined ? templateItem?.LoyaltyLevel : 2;
                 if (this.itemDB()[barter?._tpl]?._parent !== enums_1.ParentClasses.MONEY) {
-                    trader.assort.loyal_level_items[offerId] = Math.max(1, loyaltyLvl - 1);
+                    trader.assort.loyal_level_items[offerId] = this.utils.clampNumber(loyaltyLvl - 1, 1, 4);
                 }
                 else {
-                    trader.assort.loyal_level_items[offerId] = Math.min(4, loyaltyLvl);
+                    trader.assort.loyal_level_items[offerId] = this.utils.clampNumber(loyaltyLvl, 1, 4);
                 }
             }
         }

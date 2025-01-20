@@ -19,7 +19,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.239,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "Handling": 10,
         "TemplateType": "weaponmod"
@@ -44,7 +44,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.239,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "Handling": 10,
         "TemplateType": "weaponmod"
@@ -69,7 +69,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.253,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -93,7 +93,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.041,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -117,7 +117,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.454,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -141,7 +141,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.102,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "AimStability": -11.25,
         "TemplateType": "weaponmod"
@@ -166,7 +166,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.381,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "AimStability": -15,
         "Handling": -15,
@@ -192,7 +192,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.41,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "AimStability": 5,
         "TemplateType": "weaponmod"
@@ -217,7 +217,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.45,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "AimStability": 5,
         "TemplateType": "weaponmod"
@@ -242,7 +242,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.65,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -266,7 +266,7 @@
         "StockAllowADS": true,
         "ConflictingItems": [],
         "Weight": 0.29,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -292,7 +292,7 @@
         "Weight": 0.04,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -318,7 +318,7 @@
         "Weight": 0.03,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -344,7 +344,7 @@
         "Weight": 0.062,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -370,7 +370,7 @@
         "Weight": 1.217,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -396,7 +396,7 @@
         "Weight": 0.5,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -422,7 +422,7 @@
         "Weight": 0.6,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -448,7 +448,7 @@
         "Weight": 0.643,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 5,
         "Price": 0,
         "Handling": 18,
         "TemplateType": "weaponmod"
@@ -473,7 +473,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.21,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "AimStability": -10,
         "TemplateType": "weaponmod"
@@ -498,7 +498,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.204,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "AimStability": -5,
         "TemplateType": "weaponmod"
@@ -523,7 +523,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.35,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -547,7 +547,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.4,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -571,7 +571,7 @@
         "StockAllowADS": true,
         "ConflictingItems": [],
         "Weight": 0.28,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -595,7 +595,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.24,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -619,7 +619,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.31,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -643,7 +643,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.25,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -667,7 +667,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.175,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -691,7 +691,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.23,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 5,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -715,7 +715,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.2,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -739,7 +739,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.127,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -763,7 +763,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.12,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -787,7 +787,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.142,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -811,7 +811,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.19,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -835,7 +835,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.31,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -859,7 +859,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.31,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -883,7 +883,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.31,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -907,7 +907,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.31,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -931,7 +931,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.22,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "Handling": 11,
         "TemplateType": "weaponmod"
@@ -956,7 +956,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.2,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "Handling": 10,
         "TemplateType": "weaponmod"
@@ -981,7 +981,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.12,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "Handling": 8,
         "TemplateType": "weaponmod"
@@ -1006,7 +1006,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.06,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1030,7 +1030,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.09,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "Handling": 5,
         "AimStability": 5,
@@ -1056,7 +1056,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.155,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "AimStability": -9,
         "TemplateType": "weaponmod"
@@ -1081,7 +1081,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.055,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "Handling": 3,
         "TemplateType": "weaponmod"
@@ -1106,7 +1106,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.155,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "Handling": 3,
         "TemplateType": "weaponmod"
@@ -1131,7 +1131,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.215,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "Handling": 6,
         "TemplateType": "weaponmod"
@@ -1156,7 +1156,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.273,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "Handling": -4,
         "TemplateType": "weaponmod"
@@ -1182,7 +1182,7 @@
         "ConflictingItems": [],
         "Weight": 0.114,
         "DurabilityBurnModificator": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1207,7 +1207,7 @@
         "ConflictingItems": [],
         "Weight": 0.188,
         "DurabilityBurnModificator": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1233,7 +1233,7 @@
         "ConflictingItems": [],
         "Weight": 0.109,
         "DurabilityBurnModificator": 0.9,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1259,7 +1259,7 @@
         "ConflictingItems": [],
         "Weight": 0.115,
         "DurabilityBurnModificator": 0.95,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1285,7 +1285,7 @@
         "Weight": 0.11,
         "DurabilityBurnModificator": 1.08,
         "Convergence": 10,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 5,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1311,7 +1311,7 @@
         "Weight": 0.11,
         "DurabilityBurnModificator": 1.08,
         "Convergence": 10,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1336,7 +1336,7 @@
         "ConflictingItems": [],
         "Weight": 0.136,
         "DurabilityBurnModificator": 0.98,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1361,7 +1361,7 @@
         "ConflictingItems": [],
         "Weight": 0.086,
         "DurabilityBurnModificator": 0.9,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1386,7 +1386,7 @@
         "ConflictingItems": [],
         "Weight": 0.086,
         "DurabilityBurnModificator": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1412,7 +1412,7 @@
         "Weight": 0.086,
         "DurabilityBurnModificator": 0.94,
         "Convergence": 5,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1437,7 +1437,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.3,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "AimStability": -12,
         "TemplateType": "weaponmod"
@@ -1462,7 +1462,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.162,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1522,7 +1522,7 @@
             "628a85ee6b1d481ff772e9d5"
         ],
         "Weight": 0.695,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1546,7 +1546,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.397,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 6,
         "TemplateType": "weaponmod"
@@ -1571,7 +1571,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.198,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "Handling": 7,
         "TemplateType": "weaponmod"
@@ -1596,7 +1596,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.4,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "Handling": 5,
         "TemplateType": "weaponmod"
@@ -1621,7 +1621,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.4,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "Handling": 5,
         "TemplateType": "weaponmod"
@@ -1646,7 +1646,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.585,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 20,
         "TemplateType": "weaponmod"
@@ -1671,7 +1671,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.057,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "AimStability": 10,
         "TemplateType": "weaponmod"
@@ -1696,7 +1696,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.283,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "Handling": 4,
         "TemplateType": "weaponmod"
@@ -1721,7 +1721,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.181,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1745,7 +1745,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.308,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "AimStability": 6,
         "Handling": 4,
@@ -1807,7 +1807,7 @@
             "627254cc9c563e6e442c398f"
         ],
         "Weight": 0.499,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "AimStability": 10,
         "TemplateType": "weaponmod"
@@ -1832,7 +1832,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.155,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -1857,7 +1857,7 @@
         "ConflictingItems": [],
         "Weight": 0.573,
         "DurabilityBurnModificator": 1.1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "AimStability": -12,
         "TemplateType": "weaponmod"
@@ -1883,7 +1883,7 @@
         "ConflictingItems": [],
         "Weight": 0.4,
         "DurabilityBurnModificator": 1.05,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "AimStability": -15,
         "TemplateType": "weaponmod"
@@ -1909,7 +1909,7 @@
         "ConflictingItems": [],
         "Weight": 0.4,
         "DurabilityBurnModificator": 1.05,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "AimStability": -15,
         "TemplateType": "weaponmod"
@@ -1934,7 +1934,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.601,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "Handling": 18,
         "TemplateType": "weaponmod"
@@ -1959,7 +1959,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.601,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "Handling": 18,
         "TemplateType": "weaponmod"
@@ -1984,7 +1984,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.59,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "Handling": 12,
         "TemplateType": "weaponmod"
@@ -2009,7 +2009,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.271,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 8,
         "TemplateType": "weaponmod"
@@ -2034,7 +2034,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.788,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "AimStability": 30,
         "TemplateType": "weaponmod"
@@ -2059,7 +2059,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.788,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "AimStability": 30,
         "TemplateType": "weaponmod"
@@ -2084,7 +2084,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.762,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "AimStability": 33,
         "TemplateType": "weaponmod"
@@ -2109,7 +2109,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.213,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "AimStability": -15,
         "Handling": -15,
@@ -2135,7 +2135,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.27,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "AimStability": -15,
         "TemplateType": "weaponmod"
@@ -2160,7 +2160,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.28,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2184,7 +2184,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.47,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "AimStability": -10,
         "TemplateType": "weaponmod"
@@ -2209,7 +2209,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.148,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "Handling": 8,
         "TemplateType": "weaponmod"
@@ -2234,7 +2234,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.226,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 3,
         "Handling": 1,
@@ -2260,7 +2260,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.226,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 3,
         "Handling": 1,
@@ -2286,7 +2286,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.226,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 3,
         "Handling": 1,
@@ -2312,7 +2312,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.226,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 3,
         "Handling": 1,
@@ -2338,7 +2338,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.226,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "AimStability": 3,
         "Handling": 1,
@@ -2364,7 +2364,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.226,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "AimStability": 2,
         "Handling": 4,
@@ -2390,7 +2390,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.226,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "AimStability": 2,
         "Handling": 4,
@@ -2416,7 +2416,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.276,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "Handling": 9,
         "TemplateType": "weaponmod"
@@ -2441,7 +2441,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.148,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "AimStability": 6,
         "TemplateType": "weaponmod"
@@ -2466,7 +2466,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.369,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "Handling": 6,
         "AimStability": 6,
@@ -2492,7 +2492,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.369,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "Handling": 6,
         "AimStability": 6,
@@ -2518,7 +2518,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.481,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "Handling": 11,
         "TemplateType": "weaponmod"
@@ -2543,7 +2543,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.35,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "Handling": 6,
         "TemplateType": "weaponmod"
@@ -2568,7 +2568,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.35,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "Handling": 6,
         "TemplateType": "weaponmod"
@@ -2593,7 +2593,7 @@
         "StockAllowADS": true,
         "ConflictingItems": [],
         "Weight": 0.65,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "AimStability": -10,
         "TemplateType": "weaponmod"
@@ -2618,7 +2618,7 @@
         "StockAllowADS": true,
         "ConflictingItems": [],
         "Weight": 0.645,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "AimStability": -10,
         "TemplateType": "weaponmod"
@@ -2643,7 +2643,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.35,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "Handling": 5,
         "TemplateType": "weaponmod"
@@ -2668,7 +2668,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.218,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2716,7 +2716,7 @@
             "628a6678ccaab13006640e49"
         ],
         "Weight": 0.525,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "AimStability": 10,
         "TemplateType": "weaponmod"
@@ -2741,7 +2741,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.449,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "Handling": 13,
         "TemplateType": "weaponmod"
@@ -2766,7 +2766,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.519,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "AimStability": 8,
         "Handling": 4,
@@ -2792,7 +2792,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.45,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "Handling": 9,
         "TemplateType": "weaponmod"
@@ -2817,7 +2817,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.18,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 5,
         "Price": 0,
         "AimStability": -10,
         "TemplateType": "weaponmod"
@@ -2842,7 +2842,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.35,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "Handling": 6,
         "TemplateType": "weaponmod"
@@ -2867,7 +2867,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.264,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "AimStability": 2,
         "TemplateType": "weaponmod"
@@ -2892,7 +2892,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.264,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2916,7 +2916,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.264,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2940,7 +2940,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.218,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -2964,7 +2964,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.45,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "Handling": 5,
         "TemplateType": "weaponmod"
@@ -2989,7 +2989,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.45,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "Handling": 4,
         "TemplateType": "weaponmod"
@@ -3014,7 +3014,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.45,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "Handling": 5,
         "TemplateType": "weaponmod"
@@ -3039,7 +3039,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.45,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "Handling": 4,
         "TemplateType": "weaponmod"
@@ -3064,7 +3064,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.425,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "AimStability": 10,
         "Handling": 2,
@@ -3090,7 +3090,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.39,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "AimStability": 19,
         "TemplateType": "weaponmod"
@@ -3115,7 +3115,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.7,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "AimStability": 23,
         "TemplateType": "weaponmod"
@@ -3140,7 +3140,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.5,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3164,7 +3164,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.55,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "AimStability": 6,
         "TemplateType": "weaponmod"
@@ -3313,7 +3313,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.3,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3337,7 +3337,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.3,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3361,7 +3361,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.06,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "AimStability": 7.5,
         "TemplateType": "weaponmod"
@@ -3386,7 +3386,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.06,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "AimStability": 7.5,
         "TemplateType": "weaponmod"
@@ -3411,7 +3411,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.35,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "Handling": 6,
         "TemplateType": "weaponmod"
@@ -3436,7 +3436,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.35,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "Handling": 6,
         "TemplateType": "weaponmod"
@@ -3461,7 +3461,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.86,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "AimStability": 30,
         "TemplateType": "weaponmod"
@@ -3486,7 +3486,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.8,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "AimStability": -8,
         "TemplateType": "weaponmod"
@@ -3511,7 +3511,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.95,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "Handling": 21,
         "TemplateType": "weaponmod"
@@ -3536,7 +3536,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.81,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "AimStability": 15,
         "Handling": 5,
@@ -3562,7 +3562,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.8,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "Handling": 10,
         "TemplateType": "weaponmod"
@@ -3701,7 +3701,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.354,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "Handling": 3,
         "TemplateType": "weaponmod"
@@ -3726,7 +3726,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.501,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "AimStability": -5,
         "TemplateType": "weaponmod"
@@ -3751,7 +3751,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.462,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "Handling": 5,
         "TemplateType": "weaponmod"
@@ -3776,7 +3776,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.396,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "AimStability": -10,
         "TemplateType": "weaponmod"
@@ -3801,7 +3801,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.27,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "Handling": 8,
         "TemplateType": "weaponmod"
@@ -3826,7 +3826,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.336,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 5,
         "Price": 0,
         "Handling": 5,
         "AimStability": 8,
@@ -3852,7 +3852,7 @@
         "StockAllowADS": true,
         "ConflictingItems": [],
         "Weight": 0.18,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3876,7 +3876,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.13,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -3900,7 +3900,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.653,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "AimStability": -12,
         "TemplateType": "weaponmod"
@@ -3925,7 +3925,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.454,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "Handling": 7,
         "AimStability": 5,
@@ -3951,7 +3951,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.255,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "Handling": 5,
         "TemplateType": "weaponmod"
@@ -3976,7 +3976,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.3,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "Handling": 6,
         "TemplateType": "weaponmod"
@@ -4001,7 +4001,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.25,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4025,7 +4025,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.2,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4049,7 +4049,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.2,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4073,7 +4073,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.15,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "AimStability": -11,
         "TemplateType": "weaponmod"
@@ -4099,7 +4099,7 @@
         "StockAllowADS": true,
         "ConflictingItems": [],
         "Weight": 0.15,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4124,7 +4124,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.39,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 20,
         "TemplateType": "weaponmod"
@@ -4149,7 +4149,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.56,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "Handling": 10,
         "TemplateType": "weaponmod"
@@ -4174,7 +4174,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.47,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "AimStability": 10,
         "TemplateType": "weaponmod"
@@ -4199,7 +4199,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.772,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4223,7 +4223,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 1.043,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "Handling": 10,
         "AimStability": 10,
@@ -4249,7 +4249,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.64,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "Handling": 9,
         "TemplateType": "weaponmod"
@@ -4274,7 +4274,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.4,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "AimStability": -20,
         "TemplateType": "weaponmod"
@@ -4299,7 +4299,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.68,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 12,
         "Handling": 6,
@@ -4325,7 +4325,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.68,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 12,
         "Handling": 6,
@@ -4351,7 +4351,7 @@
         "StockAllowADS": true,
         "ConflictingItems": [],
         "Weight": 0.26,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "AimStability": -12,
         "TemplateType": "weaponmod"
@@ -4376,7 +4376,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.44,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "AimStability": 5,
         "TemplateType": "weaponmod"
@@ -4401,7 +4401,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.45,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "AimStability": 11,
         "TemplateType": "weaponmod"
@@ -4426,7 +4426,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.51,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "Handling": 6,
         "AimStability": 10,
@@ -4452,7 +4452,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.64,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "AimStability": 9,
         "TemplateType": "weaponmod"
@@ -4477,7 +4477,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.46,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "AimStability": 7,
         "TemplateType": "weaponmod"
@@ -4502,7 +4502,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.64,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "Handling": 7,
         "TemplateType": "weaponmod"
@@ -4527,7 +4527,7 @@
         "StockAllowADS": true,
         "ConflictingItems": [],
         "Weight": 0.1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "AimStability": -10,
         "TemplateType": "weaponmod"
@@ -4552,7 +4552,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.64,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "Handling": 10,
         "TemplateType": "weaponmod"
@@ -4579,7 +4579,7 @@
         "Weight": 0.4,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4605,7 +4605,7 @@
         "Weight": 0.4,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4631,7 +4631,7 @@
             "5b3f7bf05acfc433000ecf6b"
         ],
         "Weight": 1.05,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4659,7 +4659,7 @@
         "Weight": 1.905,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 30,
         "TemplateType": "weaponmod"
@@ -4688,7 +4688,7 @@
         "Weight": 2.659,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "Handling": 15,
         "TemplateType": "weaponmod"
@@ -4715,7 +4715,7 @@
         "Weight": 1.004,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "Handling": 5,
         "TemplateType": "weaponmod"
@@ -4742,7 +4742,7 @@
         "Weight": 1.9,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "Handling": 10,
         "TemplateType": "weaponmod"
@@ -4767,7 +4767,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 1.004,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 20,
         "TemplateType": "weaponmod"
@@ -4794,7 +4794,7 @@
         "Weight": 1.25,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "Handling": 8,
         "TemplateType": "weaponmod"
@@ -4821,7 +4821,7 @@
         "Weight": 1.07,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 24,
         "TemplateType": "weaponmod"
@@ -4848,7 +4848,7 @@
         "Weight": 1.25,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4872,7 +4872,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.22,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "Handling": 9.5,
         "TemplateType": "weaponmod"
@@ -4897,7 +4897,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.15,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -4921,7 +4921,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.52,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "AimStability": 36.5,
         "TemplateType": "weaponmod"
@@ -4946,7 +4946,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.44,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 38,
         "TemplateType": "weaponmod"
@@ -4973,7 +4973,7 @@
         "Weight": 1.15,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "Handling": 8,
         "TemplateType": "weaponmod"
@@ -5000,7 +5000,7 @@
         "Weight": 2.513,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "AimStability": 14,
         "TemplateType": "weaponmod"
@@ -5027,7 +5027,7 @@
         "Weight": 0.467,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "AimStability": 33,
         "TemplateType": "weaponmod"
@@ -5059,7 +5059,7 @@
         "Weight": 0.62,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -5085,7 +5085,7 @@
         "Weight": 0.51,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "AimStability": 37,
         "Handling": 4,
@@ -5118,7 +5118,7 @@
         "Weight": 1.8,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 36,
         "Handling": 10,
@@ -5150,7 +5150,7 @@
         "Weight": 1.1,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "Handling": 15,
         "TemplateType": "weaponmod"
@@ -5177,7 +5177,7 @@
         "Weight": 1.02,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "AimStability": 32,
         "TemplateType": "weaponmod"
@@ -5209,7 +5209,7 @@
         "Weight": 0.9,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -5235,7 +5235,7 @@
         "Weight": 0.12,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -5269,7 +5269,7 @@
         "Weight": 2.2,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "AimStability": 26,
         "Handling": 14,
@@ -5305,7 +5305,7 @@
         "Weight": 1.8,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "Handling": 8,
         "TemplateType": "weaponmod"
@@ -5329,10 +5329,10 @@
         "ModMalfunctionChance": 0,
         "StockAllowADS": false,
         "ConflictingItems": [],
-        "Weight": 0.74,
+        "Weight": 0.740,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "Handling": 4,
         "TemplateType": "weaponmod"
@@ -5359,7 +5359,7 @@
         "Weight": 0.703,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "Handling": 4,
         "TemplateType": "weaponmod"
@@ -5386,7 +5386,7 @@
         "Weight": 1.034,
         "HeatFactor": 1.05,
         "CoolFactor": 0.9,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "Handling": 5,
         "TemplateType": "weaponmod"
@@ -5413,7 +5413,7 @@
         "Weight": 0.75,
         "HeatFactor": 1.1,
         "CoolFactor": 0.95,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "Handling": 7,
         "TemplateType": "weaponmod"
@@ -5440,7 +5440,7 @@
         "Weight": 1.55,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "Handling": 10,
         "TemplateType": "weaponmod"
@@ -5469,7 +5469,7 @@
         "Weight": 1.6,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -5500,7 +5500,7 @@
         "Weight": 1.8,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -5530,7 +5530,7 @@
         "Weight": 1.75,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -5556,7 +5556,7 @@
         "Weight": 0.85,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "AimStability": -10,
         "TemplateType": "weaponmod"
@@ -5585,7 +5585,7 @@
         "Weight": 0.8,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "AimStability": -10,
         "TemplateType": "weaponmod"
@@ -5612,7 +5612,7 @@
         "Weight": 1.2,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "Handling": 16,
         "TemplateType": "weaponmod"
@@ -5639,7 +5639,7 @@
         "Weight": 2,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "AimStability": 30,
         "TemplateType": "weaponmod"
@@ -5664,7 +5664,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.155,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "AimStability": 15,
         "TemplateType": "weaponmod"
@@ -5691,7 +5691,7 @@
         "Weight": 1.29,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "AimStability": 10,
         "Handling": 5,
@@ -5719,7 +5719,7 @@
         "Weight": 1.25,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "AimStability": 5,
         "Handling": 10,
@@ -5747,7 +5747,7 @@
         "Weight": 1.25,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "AimStability": -10,
         "TemplateType": "weaponmod"
@@ -5773,7 +5773,7 @@
         "ConflictingItems": [],
         "Weight": 0.5,
         "AimStability": -15,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -5798,7 +5798,7 @@
         "ConflictingItems": [],
         "Weight": 0.7,
         "Handling": 10,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -5824,7 +5824,7 @@
         "Weight": 0.055,
         "AimStability": -7,
         "Handling": 8,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -5848,7 +5848,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 1.12,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 1,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -5877,7 +5877,7 @@
         "Weight": 0.227,
         "AimStability": 6,
         "Handling": 4,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -5906,7 +5906,7 @@
         "Weight": 0.227,
         "AimStability": 6,
         "Handling": 4,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -5931,7 +5931,7 @@
         "ConflictingItems": [],
         "Weight": 0.055,
         "Handling": 2,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -5957,7 +5957,7 @@
         "Weight": 0.063,
         "Handling": 3,
         "AimStability": -5,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 3,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -5981,7 +5981,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.2,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -6005,7 +6005,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.162,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -6031,7 +6031,7 @@
         "Weight": 0.226,
         "AimStability": 4,
         "Handling": 2.5,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -6056,7 +6056,7 @@
         "ConflictingItems": [],
         "Weight": 1.1,
         "Handling": 18,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0,
         "TemplateType": "weaponmod"
     },
@@ -6081,7 +6081,7 @@
         "ConflictingItems": [],
         "Weight": 0.45,
         "Handling": 10,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 2,
         "Price": 0
     },
     "66ffac9e316b08f6840a73e6": {
