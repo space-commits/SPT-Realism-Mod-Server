@@ -747,6 +747,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         const descGen = new DescriptionGen(tables, modConfig, logger);
         const jsonHand = new ItemStatHandler(tables, logger);
 
+        //Remember to back up json data before using this, and make sure it isn't overriding existing json objects
         // jsonGen.attTemplatesCodeGen();
         // jsonGen.weapTemplatesCodeGen();
         // jsonGen.gearTemplatesCodeGen();

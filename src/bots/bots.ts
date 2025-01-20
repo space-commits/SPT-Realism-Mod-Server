@@ -1271,6 +1271,11 @@ export class BotLoader {
             botJsonTemplate.inventory.equipment.FaceCover = { ...usecLO.FaceCoverLabs };
             botJsonTemplate.inventory.equipment.Eyewear = {};
             botJsonTemplate.chances.equipment.FaceCover = 100;
+
+            if (ModTracker.tgcPresent) {
+                botJsonTemplate.inventory.equipment.FaceCover["672e2e756803734b60f5ac1e"] = 1;
+                botJsonTemplate.inventory.equipment.FaceCover["672e2e7517018293d11bbdc1"] = 1;
+            }
         }
 
         if (RaidInfoTracker.mapName === "reservebase" || RaidInfoTracker.mapName === "rezervbase") {
@@ -1647,6 +1652,11 @@ export class BotLoader {
             botJsonTemplate.inventory.equipment.FaceCover = { ...bearLO.FaceCoverLabs };
             botJsonTemplate.inventory.equipment.Eyewear = {};
             botJsonTemplate.chances.equipment.FaceCover = 100;
+   
+            if (ModTracker.tgcPresent) {
+                botJsonTemplate.inventory.equipment.FaceCover["672e2e756803734b60f5ac1e"] = 1;
+                botJsonTemplate.inventory.equipment.FaceCover["672e2e7517018293d11bbdc1"] = 1;
+            }
         }
 
         if (RaidInfoTracker.mapName === "reservebase" || RaidInfoTracker.mapName === "rezervbase") {
@@ -1744,6 +1754,11 @@ export class BotLoader {
             botJsonTemplate.inventory.equipment.FaceCover = { ...bearLO.FaceCoverLabs };
             botJsonTemplate.inventory.equipment.Eyewear = {};
             botJsonTemplate.chances.equipment.FaceCover = 100;
+
+            if (ModTracker.tgcPresent) {
+                botJsonTemplate.inventory.equipment.FaceCover["672e2e756803734b60f5ac1e"] = 1;
+                botJsonTemplate.inventory.equipment.FaceCover["672e2e7517018293d11bbdc1"] = 1;
+            }
         }
 
         if (RaidInfoTracker.mapName === "reservebase" || RaidInfoTracker.mapName === "rezervbase") {
@@ -3443,7 +3458,7 @@ export class BotLoader {
         const odds = isPriest ? 30 : 60;
 
         this.cultistHelper(clonedJson, botJsonTemplate);
-        
+
         if (isPriest) botJsonTemplate.appearance = clonedJson.appearance;
         botJsonTemplate.inventory.Ammo = clonedJson.inventory.Ammo;
         botJsonTemplate.chances = clonedJson.chances;

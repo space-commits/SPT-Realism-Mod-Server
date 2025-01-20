@@ -181,7 +181,6 @@ export class BotGen extends BotGenerator {
 
     //for events where bots will need gas masks at all times
     private addGasMasksToBots(equipment: IEquipment, chances: IChances, botRole: string, isPmc: boolean, pmcTier: number) {
-
         let gasMaskTier = 0;
 
         if (isPmc) {
@@ -198,6 +197,7 @@ export class BotGen extends BotGenerator {
         if (ModTracker.tgcPresent && ((isPmc && gasMaskTier == 3) || botRole.includes("pmcbot") || botRole.includes("exusec") || botRole.includes("knight") || botRole.includes("pipe") || botRole.includes("bird"))) {
             equipment.FaceCover["672e2e756803734b60f5ac1e"] = 2;
             equipment.FaceCover["672e2e7517018293d11bbdc1"] = 2;
+            equipment.FaceCover["672e2e7504b1f1d5b0e4209c"] = 1;
         }
 
         chances.equipment.Eyewear = 0;
@@ -1002,19 +1002,23 @@ export class BotWepGen extends BotWeaponGenerator {
         return true;
     }
 
+    //preset format has changed serveral times and I'm tired of updating them.
     private reformatPreset(presetFile, presetObj) {
-        if (presetFile[presetObj].hasOwnProperty("root")) {
-
-            // presetFile[presetObj] = presetFile[presetFile[presetObj].name];
+        if (presetFile[presetObj].hasOwnProperty("root") || presetFile[presetObj].hasOwnProperty("Root")) { 
+            const isUpperCase = presetFile[presetObj].Root !== undefined ? true : false;
+            const parent = isUpperCase ? presetFile[presetObj].Root : presetFile[presetObj].root
+            const id = isUpperCase ? presetFile[presetObj].Id : presetFile[presetObj].id
+            const items = isUpperCase ? presetFile[presetObj].Items : presetFile[presetObj].items
+            const name = isUpperCase ? presetFile[presetObj].Name : presetFile[presetObj].name
 
             presetFile[presetObj] =
             {
-                "_id": presetFile[presetObj].id,
+                "_id": id,
                 "_type": "Preset",
                 "_changeWeaponName": false,
-                "_name": presetFile[presetObj].name,
-                "_parent": presetFile[presetObj].root,
-                "_items": presetFile[presetObj].items
+                "_name": name,
+                "_parent": parent,
+                "_items": items
             }
         }
     }

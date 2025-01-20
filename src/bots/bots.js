@@ -1176,6 +1176,10 @@ class BotLoader {
             botJsonTemplate.inventory.equipment.FaceCover = { ...usecLO.FaceCoverLabs };
             botJsonTemplate.inventory.equipment.Eyewear = {};
             botJsonTemplate.chances.equipment.FaceCover = 100;
+            if (utils_1.ModTracker.tgcPresent) {
+                botJsonTemplate.inventory.equipment.FaceCover["672e2e756803734b60f5ac1e"] = 1;
+                botJsonTemplate.inventory.equipment.FaceCover["672e2e7517018293d11bbdc1"] = 1;
+            }
         }
         if (utils_1.RaidInfoTracker.mapName === "reservebase" || utils_1.RaidInfoTracker.mapName === "rezervbase") {
             botJsonTemplate.inventory.equipment.FaceCover["60363c0c92ec1c31037959f5"] = 20; //gp7
@@ -1505,6 +1509,10 @@ class BotLoader {
             botJsonTemplate.inventory.equipment.FaceCover = { ...bearLO.FaceCoverLabs };
             botJsonTemplate.inventory.equipment.Eyewear = {};
             botJsonTemplate.chances.equipment.FaceCover = 100;
+            if (utils_1.ModTracker.tgcPresent) {
+                botJsonTemplate.inventory.equipment.FaceCover["672e2e756803734b60f5ac1e"] = 1;
+                botJsonTemplate.inventory.equipment.FaceCover["672e2e7517018293d11bbdc1"] = 1;
+            }
         }
         if (utils_1.RaidInfoTracker.mapName === "reservebase" || utils_1.RaidInfoTracker.mapName === "rezervbase") {
             botJsonTemplate.inventory.equipment.FaceCover["60363c0c92ec1c31037959f5"] = 20; //gp7
@@ -1587,6 +1595,10 @@ class BotLoader {
             botJsonTemplate.inventory.equipment.FaceCover = { ...bearLO.FaceCoverLabs };
             botJsonTemplate.inventory.equipment.Eyewear = {};
             botJsonTemplate.chances.equipment.FaceCover = 100;
+            if (utils_1.ModTracker.tgcPresent) {
+                botJsonTemplate.inventory.equipment.FaceCover["672e2e756803734b60f5ac1e"] = 1;
+                botJsonTemplate.inventory.equipment.FaceCover["672e2e7517018293d11bbdc1"] = 1;
+            }
         }
         if (utils_1.RaidInfoTracker.mapName === "reservebase" || utils_1.RaidInfoTracker.mapName === "rezervbase") {
             botJsonTemplate.inventory.equipment.FaceCover["60363c0c92ec1c31037959f5"] = 20; //gp7
