@@ -44,7 +44,7 @@ const json_gen_1 = require("./json/json_gen");
 const quests_1 = require("./traders/quests");
 const traders_1 = require("./traders/traders");
 // import { Airdrops } from "./misc/airdrops";
-// import { Spawns } from "./bots/spawns";
+const spawns_1 = require("./bots/spawns");
 const gear_1 = require("./items/gear");
 const seasonalevents_1 = require("./misc/seasonalevents");
 const item_cloning_1 = require("./items/item_cloning");
@@ -246,7 +246,7 @@ class Main {
                     const utils = new utils_1.Utils(postLoadTables);
                     const tieredFlea = new fleamarket_1.TieredFlea(postLoadTables, aKIFleaConf);
                     const player = new player_1.Player(logger, postLoadTables, modConfig, medItems, utils);
-                    //const maps = new Spawns(logger, postLoadTables, modConfig, postLoadTables.locations, utils);
+                    const maps = new spawns_1.Spawns(logger, postLoadTables, modConfig, postLoadTables.locations, utils);
                     const quests = new quests_1.Quests(logger, postLoadTables, modConfig);
                     const randomizeTraderAssort = new traders_1.RandomizeTraderAssort();
                     const pmcData = profileHelper.getPmcProfile(sessionID);
@@ -296,7 +296,7 @@ class Main {
                             tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, utils_1.ProfileTracker.averagePlayerLevel);
                         }
                         if (modConfig.boss_spawns == true) {
-                            //maps.setBossSpawnChance(ProfileTracker.averagePlayerLevel);
+                            maps.setBossSpawnChance(utils_1.ProfileTracker.averagePlayerLevel);
                         }
                         if (modConfig.logEverything == true) {
                             logger.info("Realism Mod: Profile Checked");
@@ -466,7 +466,7 @@ class Main {
                         if (modConfig.enable_hazard_zones) {
                             quests.resetRepeatableQuests(profileData);
                         }
-                        //this.modifyMapLoot(locationConfig, RaidInfoTracker.mapName, info, pmcData, sessionID, utils, logger);
+                        this.modifyMapLoot(locationConfig, utils_1.RaidInfoTracker.mapName, info, pmcData, sessionID, utils, logger);
                         this.checkEventQuests(pmcData);
                         player.correctNegativeHP(pmcData);
                         if (modConfig.realistic_player_health == true) {
@@ -560,7 +560,7 @@ class Main {
         const quests = new quests_1.Quests(logger, tables, modConfig);
         const traders = new traders_1.Traders(logger, tables, modConfig, traderConf, utils);
         // const airdrop = new Airdrops(logger, modConfig, airConf);
-        // const maps = new Spawns(logger, tables, modConfig, tables.locations, utils);
+        const maps = new spawns_1.Spawns(logger, tables, modConfig, tables.locations, utils);
         const gear = new gear_1.Gear(tables, logger, modConfig);
         const itemCloning = new item_cloning_1.ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new description_gen_1.DescriptionGen(tables, modConfig, logger);
@@ -589,12 +589,12 @@ class Main {
         }
         if (modConfig.realistic_ballistics) {
             itemCloning.createCustomPlates();
-            //bots.setBotHealth();
+            bots.setBotHealth();
         }
         if (modConfig.open_zones_fix == true && !utils_1.ModTracker.swagPresent) {
-            //maps.openZonesFix();
+            maps.openZonesFix();
         }
-        //maps.loadSpawnChanges(locationConfig);
+        maps.loadSpawnChanges(locationConfig);
         //airdrop.loadAirdropChanges();
         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
             bots.loadBots();
@@ -615,6 +615,7 @@ class Main {
         if (modConfig.guarantee_boss_spawn == true) {
             bots.forceBossSpawns();
         }
+        //need to add diffuclity values to experience obj or abandon
         // if (modConfig.boss_difficulty == true) {
         //     bots.bossDifficulty();
         // }

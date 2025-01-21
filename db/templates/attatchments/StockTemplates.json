@@ -2583,7 +2583,7 @@
         "Dispersion": 0,
         "CameraRecoil": 10,
         "AimSpeed": 0,
-        "Ergonomics": 0,
+        "Ergonomics": 3,
         "Accuracy": 9,
         "HasShoulderContact": true,
         "BlocksFolding": false,
@@ -2608,7 +2608,7 @@
         "Dispersion": 0,
         "CameraRecoil": 10,
         "AimSpeed": 0,
-        "Ergonomics": 0,
+        "Ergonomics": 3,
         "Accuracy": 0,
         "HasShoulderContact": true,
         "BlocksFolding": false,
@@ -2657,8 +2657,8 @@
         "HorizontalRecoil": 0,
         "Dispersion": 0,
         "CameraRecoil": 6,
-        "AimSpeed": 5,
-        "Ergonomics": 0,
+        "AimSpeed": 2,
+        "Ergonomics": 3,
         "Accuracy": 0,
         "HasShoulderContact": true,
         "BlocksFolding": false,
@@ -2881,8 +2881,8 @@
         "HorizontalRecoil": 0,
         "Dispersion": 0,
         "CameraRecoil": 6,
-        "AimSpeed": 5,
-        "Ergonomics": 1.5,
+        "AimSpeed": 2,
+        "Ergonomics": 3,
         "Accuracy": 0,
         "HasShoulderContact": true,
         "BlocksFolding": false,
@@ -2908,8 +2908,8 @@
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
         "CameraRecoil": 6,
-        "AimSpeed": 5,
-        "Ergonomics": 1.5,
+        "AimSpeed": 2,
+        "Ergonomics": 3,
         "Accuracy": 0,
         "HasShoulderContact": true,
         "BlocksFolding": false,
@@ -2929,8 +2929,8 @@
         "HorizontalRecoil": -1,
         "Dispersion": 0,
         "CameraRecoil": 5,
-        "AimSpeed": 4,
-        "Ergonomics": 1.5,
+        "AimSpeed": 2,
+        "Ergonomics": 3,
         "Accuracy": 0,
         "HasShoulderContact": true,
         "BlocksFolding": false,
@@ -3188,7 +3188,8 @@
         "BlocksFolding": true,
         "StockAllowADS": false,
         "ConflictingItems": [],
-        "Weight": 0.29
+        "Weight": 0.29,
+        "LoyaltyLevel": 4
     },
     "66ffc20ba73a7bce3d0b45ab": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3209,7 +3210,8 @@
         "BlocksFolding": true,
         "StockAllowADS": false,
         "ConflictingItems": [],
-        "Weight": 0.29
+        "Weight": 0.29,
+        "LoyaltyLevel": 4
     },
     "66ffc246a81a4f85e70d4d06": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3230,7 +3232,8 @@
         "BlocksFolding": true,
         "StockAllowADS": false,
         "ConflictingItems": [],
-        "Weight": 0.076
+        "Weight": 0.076,
+        "LoyaltyLevel": 4
     },
     "66ffc2bd132225f0fe0611d8": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3248,7 +3251,8 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.22,
-        "AimStability": 6
+        "AimStability": 6,
+        "LoyaltyLevel": 2
     },
     "66ffc2ecfe9b3825960652f7": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3266,7 +3270,8 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.22,
-        "AimStability": 6
+        "AimStability": 6,
+        "LoyaltyLevel": 2
     },
     "618167616ef05c2ce828f1a8": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3587,7 +3592,8 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.14,
-        "AimStability": -5
+        "AimStability": -5,
+        "LoyaltyLevel": 4
     },
     "622f14e899892a7f9e08f6c5": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3609,7 +3615,7 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.453,
-        "LoyaltyLevel": 0,
+        "LoyaltyLevel": 4,
         "Price": 0,
         "AimStability": 12,
         "TemplateType": "weaponmod"
@@ -3634,7 +3640,8 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.41,
-        "AimStability": 10
+        "AimStability": 10,
+        "LoyaltyLevel": 3
     },
     "67110d5ed1758189fc0bd221": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3657,7 +3664,8 @@
         "ConflictingItems": [],
         "Weight": 0.06,
         "AimStability": -5,
-        "Handling": 5
+        "Handling": 5,
+        "LoyaltyLevel": 3
     },
     "67110d6fa71d1f123d021cd3": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3679,7 +3687,8 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.06,
-        "AimStability": 4
+        "AimStability": 4,
+        "LoyaltyLevel": 3
     },
     "622f140da5958f63c67f1735": {
         "$type": "RealismMod.WeaponMod, RealismMod",

@@ -13,6 +13,11 @@
             "ForceSpawn": false,
             "IgnoreMaxBots": false,
             "RandomTimeSpawn": false,
+            "SpawnMode": [
+                "pve"
+            ],
+            "DependKarma": false,
+            "DependKarmaPVE": false,
             "Supports": [
                 {
                     "BossEscortAmount": "2",
@@ -50,6 +55,11 @@
             "BossPlayer": false,
             "BossZone": "ZoneCarShowroom",
             "RandomTimeSpawn": false,
+            "SpawnMode": [
+                "pve"
+            ],
+            "DependKarma": false,
+            "DependKarmaPVE": false,
             "Supports": null,
             "Time": -1,
             "TriggerId": "",
@@ -65,6 +75,11 @@
             "BossPlayer": false,
             "BossZone": "ZoneCarShowroom_main_roof",
             "RandomTimeSpawn": false,
+            "SpawnMode": [
+                "pve"
+            ],
+            "DependKarma": false,
+            "DependKarmaPVE": false,
             "Supports": null,
             "Time": 99999,
             "TriggerId": "BossBoarBorn",
@@ -93,6 +108,11 @@
             "BossPlayer": false,
             "BossZone": "ZoneSW01,ZoneConstruction,ZoneCinema,ZoneFactory,ZoneHotel_1,ZoneHotel_2,ZoneConcordia_1,ZoneConcordiaParking",
             "RandomTimeSpawn": false,
+            "SpawnMode": [
+                "pve"
+            ],
+            "DependKarma": false,
+            "DependKarmaPVE": false,
             "Supports": [
                 {
                     "BossEscortAmount": "2",
@@ -130,6 +150,11 @@
             "BossPlayer": false,
             "BossZone": "ZoneSW01,ZoneConstruction,ZoneCinema,ZoneFactory,ZoneHotel_1,ZoneHotel_2,ZoneConcordia_1,ZoneConcordiaParking",
             "RandomTimeSpawn": false,
+            "SpawnMode": [
+                "pve"
+            ],
+            "DependKarma": false,
+            "DependKarmaPVE": false,
             "Supports": null,
             "Time": -1,
             "TriggerId": "",
@@ -145,6 +170,11 @@
             "BossPlayer": false,
             "BossZone": "ZoneSW01,ZoneConstruction,ZoneCinema,ZoneFactory,ZoneHotel_1,ZoneHotel_2,ZoneConcordia_1,ZoneConcordiaParking",
             "RandomTimeSpawn": false,
+            "SpawnMode": [
+                "pve"
+            ],
+            "DependKarma": false,
+            "DependKarmaPVE": false,
             "Supports": null,
             "Time": -1
         },
@@ -226,6 +256,30 @@
     ],
     "CustomsBossLocationSpawn": [
         {
+            "BossChance": 20,
+            "BossDifficult": "normal",
+            "BossEscortAmount": "0",
+            "BossEscortDifficult": "normal",
+            "BossEscortType": "sectantWarrior",
+            "BossName": "bossPartisan",
+            "BossPlayer": false,
+            "BossZone": "",
+            "Delay": 0,
+            "DependKarma": true,
+            "DependKarmaPVE": false,
+            "ForceSpawn": false,
+            "IgnoreMaxBots": true,
+            "RandomTimeSpawn": false,
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
+            "Supports": null,
+            "Time": 900,
+            "TriggerId": "PARTISAN_TRIGGER",
+            "TriggerName": "botEvent"
+        },
+        {
             "BossName": "sectantPriest",
             "BossChance": 35,
             "BossZone": "ZoneScavBase,ZoneDormitory,ZoneCustoms,ZoneGasStation,ZoneCrossRoad",
@@ -233,10 +287,15 @@
             "BossDifficult": "normal",
             "BossEscortType": "sectantWarrior",
             "BossEscortDifficult": "normal",
-            "BossEscortAmount":  "3,3,3,3,3,4,4,4,5",
+            "BossEscortAmount": "3,3,3,3,3,4,4,4,5",
             "Time": -1,
             "Supports": null,
             "RandomTimeSpawn": false,
+            "SpawnMode": [
+                "pve"
+            ],
+            "DependKarma": false,
+            "DependKarmaPVE": false,
             "Delay": 0,
             "ForceSpawn": false,
             "IgnoreMaxBots": false,
@@ -251,10 +310,15 @@
             "BossDifficult": "normal",
             "BossEscortType": "sectantWarrior",
             "BossEscortDifficult": "normal",
-            "BossEscortAmount":  "3,3,3,3,3,3,4,4,4",
+            "BossEscortAmount": "3,3,3,3,3,3,4,4,4",
             "Time": -1,
             "Supports": null,
             "RandomTimeSpawn": false,
+            "SpawnMode": [
+                "pve"
+            ],
+            "DependKarma": false,
+            "DependKarmaPVE": false,
             "Delay": 0,
             "ForceSpawn": false,
             "IgnoreMaxBots": false,
@@ -269,10 +333,15 @@
             "BossDifficult": "normal",
             "BossEscortType": "sectantWarrior",
             "BossEscortDifficult": "normal",
-            "BossEscortAmount":  "3,3,3,3,3,3,4,4,4",
+            "BossEscortAmount": "3,3,3,3,3,3,4,4,4",
             "Time": -1,
             "Supports": null,
             "RandomTimeSpawn": false,
+            "SpawnMode": [
+                "pve"
+            ],
+            "DependKarma": false,
+            "DependKarmaPVE": false,
             "Delay": 0,
             "ForceSpawn": false,
             "IgnoreMaxBots": false,
@@ -289,6 +358,11 @@
             "BossPlayer": false,
             "BossZone": "ZoneScavBase,ZoneDormitory,ZoneGasStation,ZoneOldAZS,ZoneBlockPost,ZoneTankSquare",
             "RandomTimeSpawn": false,
+            "SpawnMode": [
+                "pve"
+            ],
+            "DependKarma": false,
+            "DependKarmaPVE": false,
             "Supports": null,
             "Time": -1
         },
@@ -388,6 +462,11 @@
             "BossPlayer": false,
             "BossZone": "ZoneCustoms,ZoneOldAZS,ZoneBlockPost,ZoneTankSquare",
             "RandomTimeSpawn": false,
+            "SpawnMode": [
+                "pve"
+            ],
+            "DependKarma": false,
+            "DependKarmaPVE": false,
             "Supports": null,
             "Time": 10
         },
@@ -726,6 +805,11 @@
             "BossPlayer": false,
             "BossZone": "Zone_Island",
             "RandomTimeSpawn": false,
+            "SpawnMode": [
+                "pve"
+            ],
+            "DependKarma": false,
+            "DependKarmaPVE": false,
             "Supports": null,
             "Time": -1,
             "TriggerId": "",
@@ -898,6 +982,30 @@
             "Time": -1,
             "Supports": null,
             "RandomTimeSpawn": false
+        },
+        {
+            "BossChance": 30,
+            "BossDifficult": "normal",
+            "BossEscortAmount": "0",
+            "BossEscortDifficult": "normal",
+            "BossEscortType": "sectantWarrior",
+            "BossName": "bossPartisan",
+            "BossPlayer": false,
+            "BossZone": "",
+            "Delay": 0,
+            "DependKarma": true,
+            "DependKarmaPVE": false,
+            "ForceSpawn": false,
+            "IgnoreMaxBots": true,
+            "RandomTimeSpawn": false,
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
+            "Supports": null,
+            "Time": 900,
+            "TriggerId": "PARTISAN_TRIGGER",
+            "TriggerName": "botEvent"
         }
     ],
     "ReserveBossLocationSpawn": [
@@ -1042,6 +1150,30 @@
     ],
     "ShorelineBossLocationSpawn": [
         {
+            "BossChance": 20,
+            "BossDifficult": "normal",
+            "BossEscortAmount": "0",
+            "BossEscortDifficult": "normal",
+            "BossEscortType": "sectantWarrior",
+            "BossName": "bossPartisan",
+            "BossPlayer": false,
+            "BossZone": "",
+            "Delay": 0,
+            "DependKarma": true,
+            "DependKarmaPVE": false,
+            "ForceSpawn": false,
+            "IgnoreMaxBots": true,
+            "RandomTimeSpawn": false,
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
+            "Supports": null,
+            "Time": 900,
+            "TriggerId": "PARTISAN_TRIGGER",
+            "TriggerName": "botEvent"
+        },
+        {
             "BossChance": 50,
             "BossDifficult": "normal",
             "BossEscortAmount": "3,4",
@@ -1051,6 +1183,11 @@
             "BossPlayer": false,
             "BossZone": "ZonePort,ZoneGreenHouses,ZoneSanatorium1,ZoneSanatorium2",
             "RandomTimeSpawn": false,
+            "SpawnMode": [
+                "pve"
+            ],
+            "DependKarma": false,
+            "DependKarmaPVE": false,
             "Supports": null,
             "Time": -1
         },
@@ -1234,6 +1371,30 @@
     ],
     "WoodsBossLocationSpawn": [
         {
+            "BossChance": 20,
+            "BossDifficult": "normal",
+            "BossEscortAmount": "0",
+            "BossEscortDifficult": "normal",
+            "BossEscortType": "sectantWarrior",
+            "BossName": "bossPartisan",
+            "BossPlayer": false,
+            "BossZone": "",
+            "Delay": 0,
+            "DependKarma": true,
+            "DependKarmaPVE": false,
+            "ForceSpawn": false,
+            "IgnoreMaxBots": true,
+            "RandomTimeSpawn": false,
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
+            "Supports": null,
+            "Time": 900,
+            "TriggerId": "PARTISAN_TRIGGER",
+            "TriggerName": "botEvent"
+        },
+        {
             "BossName": "bossKojaniy",
             "BossChance": 50,
             "BossZone": "ZoneWoodCutter",
@@ -1392,6 +1553,11 @@
             "BossPlayer": false,
             "BossZone": "BotZoneFloor2",
             "RandomTimeSpawn": false,
+            "SpawnMode": [
+                "pve"
+            ],
+            "DependKarma": false,
+            "DependKarmaPVE": false,
             "Supports": null,
             "Time": -1
         },

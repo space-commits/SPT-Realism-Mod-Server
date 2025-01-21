@@ -2052,7 +2052,8 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.27,
-        "MalfChance": 0
+        "MalfChance": 0,
+        "LoyaltyLevel": 2
     },
     "67110d8d388bded67304ceb4": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2067,6 +2068,7 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.7,
-        "MalfChance": 0
+        "MalfChance": 0,
+        "LoyaltyLevel": 3
     }
 }

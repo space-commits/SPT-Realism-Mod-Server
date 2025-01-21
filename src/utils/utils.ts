@@ -138,7 +138,7 @@ export class Utils {
 
     public isNight(time: string, map: string): boolean {
         const [hours, minutes] = time.split(":");
-        const isNightByHours = parseInt(hours) < 5 && parseInt(hours) >= 21;
+        const isNightByHours = parseInt(hours) < 5 || parseInt(hours) >= 21;
         const isNightByMap = map == "factory4_night";
         if (isNightByHours || isNightByMap) {
             return true;

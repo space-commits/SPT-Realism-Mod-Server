@@ -144,7 +144,7 @@
     "maxBotCapLow": {
         "factory4_day": 10,
         "factory4_night": 10,
-        "bigmap": 13,
+        "bigmap": 12,
         "woods": 15,
         "shoreline": 14,
         "lighthouse": 12,

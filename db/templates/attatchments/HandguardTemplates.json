@@ -4022,7 +4022,8 @@
         "HeatFactor": 1.045,
         "CoolFactor": 0.962,
         "ConflictingItems": [],
-        "Weight": 0.07
+        "Weight": 0.07,
+        "LoyaltyLevel": 1
     },
     "6565bb7eb4b12a56eb04b084": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -4039,7 +4040,8 @@
         "HeatFactor": 1.045,
         "CoolFactor": 0.962,
         "ConflictingItems": [],
-        "Weight": 0.07
+        "Weight": 0.07,
+        "LoyaltyLevel": 1
     },
     "67069d66af4890b09f0006ec": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -4056,7 +4058,8 @@
         "CoolFactor": 0.9,
         "ConflictingItems": [],
         "Weight": 0.51,
-        "Handling": 4
+        "Handling": 4,
+        "LoyaltyLevel": 3
     },
     "67069d8dad91f3a63c0bc2b4": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -4073,6 +4076,7 @@
         "CoolFactor": 0.96,
         "ConflictingItems": [],
         "Weight": 0.44,
-        "AimStability": 6
+        "AimStability": 6,
+        "LoyaltyLevel": 4
     }
 }

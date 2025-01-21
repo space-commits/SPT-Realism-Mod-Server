@@ -9,6 +9,7 @@ const bearLO = require("../../db/bots/loadouts/PMCs/bearLO.json");
 const usecLO = require("../../db/bots/loadouts/PMCs/usecLO.json");
 const tier5LO = require("../../db/bots/loadouts/PMCs/tier5PMC.json");
 const raiderLO = require("../../db/bots/loadouts/special/raiderLO.json");
+const zombieLO = require("../../db/bots/loadouts/special/zombieLO.json");
 const rogueLO = require("../../db/bots/loadouts/special/rogueLO.json");
 const knightLO = require("../../db/bots/loadouts/bosses/goons/knightLO.json");
 const bigpipeLO = require("../../db/bots/loadouts/bosses/goons/bigpipeLO.json");
@@ -256,6 +257,10 @@ class BotLoader {
         if (this.modConfig.realistic_raider_rogue_health == true) {
             this.setBotHPHelper(this.arrays.rogueRaiderList);
             this.raiderBase.health = raiderLO.health;
+        }
+        if (this.modConfig.realistic_zombies == true) {
+            this.setBotHPHelper(this.arrays.zombiesList);
+            this.raiderBase.health = zombieLO.health;
         }
         if (this.modConfig.realistic_cultist_health == true) {
             this.priestBase.health = priestLO.health;

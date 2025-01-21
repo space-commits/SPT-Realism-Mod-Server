@@ -10,6 +10,7 @@ export class BotArrays {
     public standardBotHPArr: IBotType[];
     public bossFollowerArr: IBotType[];
     public rogueRaiderList: IBotType[];
+    public zombiesList: IBotType[];
 
     constructor(private tables: IDatabaseTables) {
         let botDB = this.tables.bots.types;
@@ -56,6 +57,13 @@ export class BotArrays {
             botDB["sectantpriest"]
         ];
 
+        this.zombiesList = [
+            botDB["infectedAssault"],
+            botDB["infectedPmc"],
+            botDB["infectedCivil"],
+            botDB["infectedLaborant"],
+            botDB["infectedTagilla"]
+        ];
 
         this.standardBotHPArr = [
             botDB["usec"],

@@ -103,7 +103,7 @@ import { JsonGen } from "./json/json_gen";
 import { Quests } from "./traders/quests";
 import { RagCallback, RandomizeTraderAssort, TraderRefresh, Traders } from "./traders/traders";
 // import { Airdrops } from "./misc/airdrops";
-// import { Spawns } from "./bots/spawns";
+import { Spawns } from "./bots/spawns";
 import { Gear } from "./items/gear";
 import { EventTracker } from "./misc/seasonalevents";
 import { ItemCloning } from "./items/item_cloning";
@@ -354,7 +354,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         const utils = new Utils(postLoadTables);
                         const tieredFlea = new TieredFlea(postLoadTables, aKIFleaConf);
                         const player = new Player(logger, postLoadTables, modConfig, medItems, utils);
-                        //const maps = new Spawns(logger, postLoadTables, modConfig, postLoadTables.locations, utils);
+                        const maps = new Spawns(logger, postLoadTables, modConfig, postLoadTables.locations, utils);
                         const quests = new Quests(logger, postLoadTables, modConfig);
                         const randomizeTraderAssort = new RandomizeTraderAssort();
                         const pmcData = profileHelper.getPmcProfile(sessionID);
@@ -413,7 +413,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                                 tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, ProfileTracker.averagePlayerLevel);
                             }
                             if (modConfig.boss_spawns == true) {
-                                //maps.setBossSpawnChance(ProfileTracker.averagePlayerLevel);
+                                maps.setBossSpawnChance(ProfileTracker.averagePlayerLevel);
                             }
 
                             if (modConfig.logEverything == true) {
@@ -539,9 +539,9 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             }
                             if (matchInfo.timeVariant === "CURR") {
                                 realTime = utils.getTime(baseTime, 0);
-                            }
+                            }        
                             RaidInfoTracker.isNight = utils.isNight(realTime, matchInfo.location);
-
+               
                             if (StaticArrays.cqbMaps.includes(RaidInfoTracker.mapName)) {
                                 mapType = "cqb";
                             }
@@ -552,7 +552,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                                 mapType = "urban";
                             }
                             RaidInfoTracker.mapType = mapType;
-
+                           
                             if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {
                                 bots.updateBots(pmcData, logger, modConfig, bots, utils);
                             }
@@ -630,7 +630,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                                 quests.resetRepeatableQuests(profileData);
                             }
 
-                            //this.modifyMapLoot(locationConfig, RaidInfoTracker.mapName, info, pmcData, sessionID, utils, logger);
+                            this.modifyMapLoot(locationConfig, RaidInfoTracker.mapName, info, pmcData, sessionID, utils, logger);
 
                             this.checkEventQuests(pmcData);
                             player.correctNegativeHP(pmcData);
@@ -741,7 +741,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         const quests = new Quests(logger, tables, modConfig);
         const traders = new Traders(logger, tables, modConfig, traderConf, utils);
         // const airdrop = new Airdrops(logger, modConfig, airConf);
-        // const maps = new Spawns(logger, tables, modConfig, tables.locations, utils);
+        const maps = new Spawns(logger, tables, modConfig, tables.locations, utils);
         const gear = new Gear(tables, logger, modConfig);
         const itemCloning = new ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const descGen = new DescriptionGen(tables, modConfig, logger);
@@ -776,14 +776,14 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
 
         if (modConfig.realistic_ballistics) {
             itemCloning.createCustomPlates();
-            //bots.setBotHealth();
+            bots.setBotHealth();
         }
 
         if (modConfig.open_zones_fix == true && !ModTracker.swagPresent) {
-            //maps.openZonesFix();
+            maps.openZonesFix();
         }
 
-        //maps.loadSpawnChanges(locationConfig);
+        maps.loadSpawnChanges(locationConfig);
 
         //airdrop.loadAirdropChanges();
 
@@ -810,6 +810,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             bots.forceBossSpawns();
         }
 
+        //need to add diffuclity values to experience obj or abandon
         // if (modConfig.boss_difficulty == true) {
         //     bots.bossDifficulty();
         // }

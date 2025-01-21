@@ -69,7 +69,7 @@ export class FleaChangesPreDBLoad {
             //disabled due to SPT changes
             // this.fleaConf.dynamic.condition = custFleaConfig.condition;
 
-            //need to chec kif globalDB is initialized at this stage
+            //need to check if globalDB is initialized at this stage
             // this.globalDB.ratingDecreaseCount = 0.12;
             // this.globalDB.ratingIncreaseCount = 0.1;
 

@@ -3,6 +3,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -15,6 +19,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneConstruction",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -27,6 +35,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneCarShowroom",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -39,6 +51,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneCinema",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -51,6 +67,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneFactory",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -63,6 +83,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneHotel_1",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -75,6 +99,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneHotel_2",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -87,6 +115,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneConcordia_1",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -99,6 +131,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneColumn",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -111,6 +147,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneConcordiaParking",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -123,6 +163,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneSW01",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -135,6 +179,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneConstruction",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -147,6 +195,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneCarShowroom",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -159,6 +211,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneCinema",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -171,6 +227,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneFactory",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -183,6 +243,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneHotel_1",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -195,6 +259,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneHotel_2",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -207,6 +275,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneConcordia_1",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -219,6 +291,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneColumn",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -231,6 +307,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneConcordiaParking",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -243,6 +323,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneClimova",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -255,6 +339,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneSW01",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -267,6 +355,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneMvd",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -279,6 +371,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneSnipeCinema",
             "WildSpawnType": "marksman",
             "isPlayers": true,
@@ -291,6 +387,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneSnipeCarShowroom",
             "WildSpawnType": "marksman",
             "isPlayers": true,
@@ -303,6 +403,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneSnipeBuilding",
             "WildSpawnType": "marksman",
             "isPlayers": true,
@@ -315,6 +419,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneSnipeSW01",
             "WildSpawnType": "marksman",
             "isPlayers": true,
@@ -329,6 +437,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -341,6 +453,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneSanatorium1",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -353,6 +469,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneSanatorium2",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -365,6 +485,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZonePassFar",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -377,6 +501,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZonePassClose",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -389,6 +517,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneTunnel",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -401,6 +533,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneStartVillage",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -413,6 +549,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneBunker",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -425,6 +565,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneGreenHouses",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -437,6 +581,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneIsland",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -449,6 +597,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneGasStation",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -461,6 +613,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneMeteoStation",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -473,6 +629,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZonePowerStation",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -485,6 +645,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneBusStation",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -497,6 +661,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneRailWays",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -509,6 +677,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZonePort",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -521,6 +693,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneForestTruck",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -533,6 +709,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneForestSpawn",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -545,6 +725,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneForestGasStation",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -557,6 +741,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneBunkeSniper",
             "WildSpawnType": "marksman",
             "isPlayers": true,
@@ -569,6 +757,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZonePowerStationSniper",
             "WildSpawnType": "marksman",
             "isPlayers": true,
@@ -581,6 +773,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneSW00",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -593,6 +789,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneCard1",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -605,6 +805,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZonePassFar",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -617,6 +821,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZonePassClose",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -629,6 +837,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneTunnel",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -641,6 +853,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneStartVillage",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -653,6 +869,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneBunker",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -665,6 +885,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneGreenHouses",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -677,6 +901,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneIsland",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -689,6 +917,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneGasStation",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -701,6 +933,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneMeteoStation",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -713,6 +949,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZonePowerStation",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -725,6 +965,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneBusStation",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -737,6 +981,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneRailWays",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -749,6 +997,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZonePort",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -761,6 +1013,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneForestTruck",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -773,6 +1029,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneForestSpawn",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -785,6 +1045,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneForestGasStation",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -797,6 +1061,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneBunkeSniper",
             "WildSpawnType": "marksman",
             "isPlayers": true,
@@ -809,6 +1077,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZonePowerStationSniper",
             "WildSpawnType": "marksman",
             "isPlayers": true,
@@ -821,6 +1093,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -833,6 +1109,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -847,6 +1127,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneWoodCutter",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -859,6 +1143,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneRedHouse",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -871,6 +1159,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneHouse",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -883,6 +1175,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneBigRocks",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -895,6 +1191,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneRoad",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -907,6 +1207,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneMiniHouse",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -919,6 +1223,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneScavBase2",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -931,6 +1239,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneBrokenVill",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -943,6 +1255,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneClearVill",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -955,6 +1271,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneHighRocks",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -967,6 +1287,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneWoodCutter",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -979,6 +1303,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneRedHouse",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -991,6 +1319,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneHouse",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1003,6 +1335,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneBigRocks",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1015,6 +1351,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneRoad",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1027,6 +1367,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneMiniHouse",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1039,6 +1383,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneScavBase2",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1051,6 +1399,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneBrokenVill",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1063,6 +1415,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneClearVill",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1075,6 +1431,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneHighRocks",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1087,6 +1447,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1099,6 +1463,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1111,6 +1479,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1123,6 +1495,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1135,6 +1511,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1147,6 +1527,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1161,6 +1545,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneRailStrorage",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1173,6 +1561,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZonePTOR1",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1185,6 +1577,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZonePTOR2",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1197,6 +1593,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneBarrack",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1209,6 +1609,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneBunkerStorage",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1221,6 +1625,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneSubStorage",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1233,6 +1641,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneSubCommand",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1245,6 +1657,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneRailStrorage",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1257,6 +1673,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZonePTOR1",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1269,6 +1689,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZonePTOR2",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1281,6 +1705,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneBarrack",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1293,6 +1721,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneBunkerStorage",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1305,6 +1737,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneSubStorage",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1317,6 +1753,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1329,6 +1769,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1341,6 +1785,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1353,6 +1801,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1365,6 +1817,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneSubCommand",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1379,6 +1835,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "BotZoneBasement",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1391,6 +1851,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "BotZoneFloor1",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1403,6 +1867,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "BotZoneFloor2",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1415,6 +1883,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "BotZoneBasement",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1427,6 +1899,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "BotZoneFloor1",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1439,6 +1915,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "BotZoneFloor2",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1451,6 +1931,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "BotZoneBasement",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1463,6 +1947,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "BotZoneFloor1",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1475,6 +1963,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "BotZoneFloor2",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1489,6 +1981,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "BotZone",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1501,6 +1997,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "BotZone",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1513,6 +2013,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "BotZone",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1525,6 +2029,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "BotZone",
             "WildSpawnType": "assault",
             "isPlayers": false,
@@ -1537,6 +2045,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "BotZone",
             "WildSpawnType": "assault",
             "isPlayers": false,
@@ -1551,6 +2063,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "Zone_Chalet",
             "WildSpawnType": "assault",
             "isPlayers": false,
@@ -1563,6 +2079,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "Zone_LongRoad",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1575,6 +2095,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "Zone_Village",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1587,6 +2111,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "Zone_DestroyedHouse",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1599,6 +2127,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "Zone_Rocks",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1611,6 +2143,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "Zone_Containers",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1623,6 +2159,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "Zone_Bridge",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1635,6 +2175,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "Zone_OldHouse",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1647,6 +2191,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "Zone_SniperPeak",
             "WildSpawnType": "marksman",
             "isPlayers": false,
@@ -1659,6 +2207,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "Zone_Chalet",
             "WildSpawnType": "assault",
             "isPlayers": false,
@@ -1671,6 +2223,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "Zone_LongRoad",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1683,6 +2239,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "Zone_Village",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1695,6 +2255,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "Zone_DestroyedHouse",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1707,6 +2271,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "Zone_Rocks",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1719,6 +2287,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "Zone_Containers",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1731,6 +2303,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "Zone_Bridge",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1743,6 +2319,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "Zone_OldHouse",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1755,6 +2335,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "Zone_SniperPeak",
             "WildSpawnType": "marksman",
             "isPlayers": false,
@@ -1767,6 +2351,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "",
             "WildSpawnType": "assault",
             "isPlayers": false,
@@ -1779,6 +2367,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "",
             "WildSpawnType": "assault",
             "isPlayers": false,
@@ -1791,6 +2383,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "",
             "WildSpawnType": "assault",
             "isPlayers": false,
@@ -1803,6 +2399,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "",
             "WildSpawnType": "assault",
             "isPlayers": false,
@@ -1817,6 +2417,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneBrige",
             "WildSpawnType": "assault",
             "isPlayers": false,
@@ -1829,6 +2433,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneCustoms",
             "WildSpawnType": "assault",
             "isPlayers": false,
@@ -1841,6 +2449,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneDormitory",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1853,6 +2465,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneGasStation",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1865,6 +2481,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneFactoryCenter",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1877,6 +2497,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneFactorySide",
             "WildSpawnType": "assault",
             "isPlayers": false,
@@ -1889,6 +2513,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneOldAZS",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1901,6 +2529,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneSnipeBrige",
             "WildSpawnType": "marksman",
             "isPlayers": false,
@@ -1913,6 +2545,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneSnipeTower",
             "WildSpawnType": "marksman",
             "isPlayers": false,
@@ -1925,6 +2561,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneSnipeFactory",
             "WildSpawnType": "marksman",
             "isPlayers": false,
@@ -1937,6 +2577,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneBlockPost",
             "WildSpawnType": "assault",
             "isPlayers": false,
@@ -1949,6 +2593,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneBlockPostSniper",
             "WildSpawnType": "marksman",
             "isPlayers": false,
@@ -1961,6 +2609,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneCrossRoad",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1973,6 +2625,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneScavBase",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1985,6 +2641,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneWade",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -1997,6 +2657,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneTankSquare",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -2009,6 +2673,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneBlockPostSniper3",
             "WildSpawnType": "marksman",
             "isPlayers": true,
@@ -2021,6 +2689,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneBrige",
             "WildSpawnType": "assault",
             "isPlayers": false,
@@ -2033,6 +2705,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneCustoms",
             "WildSpawnType": "assault",
             "isPlayers": false,
@@ -2045,6 +2721,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneDormitory",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -2057,6 +2737,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneGasStation",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -2069,6 +2753,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneFactoryCenter",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -2081,6 +2769,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneFactorySide",
             "WildSpawnType": "assault",
             "isPlayers": false,
@@ -2093,6 +2785,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneOldAZS",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -2105,6 +2801,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneBlockPost",
             "WildSpawnType": "assault",
             "isPlayers": false,
@@ -2117,6 +2817,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneCrossRoad",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -2129,6 +2833,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneScavBase",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -2141,6 +2849,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneWade",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -2153,6 +2865,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneTankSquare",
             "WildSpawnType": "assault",
             "isPlayers": true,
@@ -2167,6 +2883,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneCenter",
             "WildSpawnType": "assault",
             "isPlayers": false,
@@ -2179,6 +2899,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneGoshan",
             "WildSpawnType": "assault",
             "isPlayers": false,
@@ -2191,6 +2915,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneOLI",
             "WildSpawnType": "assault",
             "isPlayers": false,
@@ -2203,6 +2931,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneIDEA",
             "WildSpawnType": "assault",
             "isPlayers": false,
@@ -2215,6 +2947,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneRoad",
             "WildSpawnType": "assault",
             "isPlayers": false,
@@ -2227,6 +2963,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneIDEAPark",
             "WildSpawnType": "assault",
             "isPlayers": false,
@@ -2239,6 +2979,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZonePowerStation",
             "WildSpawnType": "assault",
             "isPlayers": false,
@@ -2251,6 +2995,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneTrucks",
             "WildSpawnType": "assault",
             "isPlayers": false,
@@ -2263,6 +3011,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneCenterBot",
             "WildSpawnType": "assault",
             "isPlayers": false,
@@ -2275,6 +3027,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneCenter",
             "WildSpawnType": "assault",
             "isPlayers": false,
@@ -2287,6 +3043,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneGoshan",
             "WildSpawnType": "assault",
             "isPlayers": false,
@@ -2299,6 +3059,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneOLI",
             "WildSpawnType": "assault",
             "isPlayers": false,
@@ -2311,6 +3075,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneIDEA",
             "WildSpawnType": "assault",
             "isPlayers": false,
@@ -2323,6 +3091,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneRoad",
             "WildSpawnType": "assault",
             "isPlayers": false,
@@ -2335,6 +3107,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneIDEAPark",
             "WildSpawnType": "assault",
             "isPlayers": false,
@@ -2347,6 +3123,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZonePowerStation",
             "WildSpawnType": "assault",
             "isPlayers": false,
@@ -2359,6 +3139,10 @@
         {
             "BotPreset": "hard",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneTrucks",
             "WildSpawnType": "assault",
             "isPlayers": false,
@@ -2371,6 +3155,10 @@
         {
             "BotPreset": "normal",
             "BotSide": "Savage",
+            "SpawnMode": [
+                "regular",
+                "pve"
+            ],
             "SpawnPoints": "ZoneCenterBot",
             "WildSpawnType": "assault",
             "isPlayers": false,
