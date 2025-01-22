@@ -712,10 +712,10 @@
         "HasShoulderContact": false,
         "Ergonomics": 80,
         "VerticalRecoil": 152,
-        "HorizontalRecoil": 405,
+        "HorizontalRecoil": 400,
         "Dispersion": 8,
-        "CameraRecoil": 0.078,
-        "VisualMulti": 1.08,
+        "CameraRecoil": 0.075,
+        "VisualMulti": 1.05,
         "Convergence": 9.5,
         "RecoilAngle": 78,
         "BaseMalfunctionChance": 0.0024,
@@ -745,8 +745,8 @@
         "IsManuallyOperated": false,
         "BaseChamberCheckSpeed": 0.95,
         "BaseFixSpeed": 1,
-        "OffsetRotation": 0.0155,
-        "RecoilIntensity": 0.2
+        "OffsetRotation": 0.015,
+        "RecoilIntensity": 0.18
     },
     "67124dcfa3541f2a1f0e788b": {
         "$type": "RealismMod.Gun, RealismMod",
@@ -759,10 +759,10 @@
         "HasShoulderContact": false,
         "Ergonomics": 80,
         "VerticalRecoil": 152,
-        "HorizontalRecoil": 405,
+        "HorizontalRecoil": 400,
         "Dispersion": 8,
-        "CameraRecoil": 0.078,
-        "VisualMulti": 1.08,
+        "CameraRecoil": 0.075,
+        "VisualMulti": 1.05,
         "Convergence": 9.5,
         "RecoilAngle": 78,
         "BaseMalfunctionChance": 0.0018,
@@ -792,7 +792,7 @@
         "IsManuallyOperated": false,
         "BaseChamberCheckSpeed": 0.95,
         "BaseFixSpeed": 1,
-        "OffsetRotation": 0.0155,
-        "RecoilIntensity": 0.2
+        "OffsetRotation": 0.015,
+        "RecoilIntensity": 0.18
     }
 }

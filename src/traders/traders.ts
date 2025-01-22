@@ -86,7 +86,6 @@ export class Traders {
     }
 
     public modifyInsurance(insurance: IInsuranceConfig) {
-
         insurance.returnChancePercent[fenceId] = 10;
         this.tables.traders[fenceId].base.loyaltyLevels.forEach(ll => {
             ll.insurance_price_coef = 14;
@@ -113,14 +112,14 @@ export class Traders {
 
         if (modConfig.insurance_changes) {
             insurance.minAttachmentRoublePriceToBeTaken = 1000;
-            insurance.chanceNoAttachmentsTakenPercent = 20;
+            insurance.chanceNoAttachmentsTakenPercent = 25;
             insurance.runIntervalSeconds = 300;
 
-            this.tables.traders[prapId].base.insurance.min_return_hour = 1;
-            this.tables.traders[prapId].base.insurance.max_return_hour = 2;
+            this.tables.traders[prapId].base.insurance.min_return_hour = 0;
+            this.tables.traders[prapId].base.insurance.max_return_hour = 0;
 
-            this.tables.traders[theraId].base.insurance.min_return_hour = 1;
-            this.tables.traders[theraId].base.insurance.max_return_hour = 1;
+            this.tables.traders[theraId].base.insurance.min_return_hour = 0;
+            this.tables.traders[theraId].base.insurance.max_return_hour = 0;
 
             this.tables.traders[prapId].base.loyaltyLevels.forEach(ll => {
                 ll.insurance_price_coef = Math.round(ll.insurance_price_coef * 1.25);
@@ -129,7 +128,7 @@ export class Traders {
                 ll.insurance_price_coef = Math.round(ll.insurance_price_coef * 1.25);
             });
 
-            insurance.returnChancePercent[prapId] = 30;
+            insurance.returnChancePercent[prapId] = 35;
             insurance.returnChancePercent[theraId] = 90;
 
             this.tables.globals.config.Insurance.MaxStorageTimeInHour = 168;

@@ -4,7 +4,7 @@ import { ConfigServer } from "@spt/servers/ConfigServer";
 import { ConfigTypes } from "@spt/models/enums/ConfigTypes";
 import { EquipmentFilters, IBotConfig } from "@spt/models/spt/config/IBotConfig";
 import { BotTierTracker, Utils, RaidInfoTracker, ModTracker } from "../utils/utils";
-import { IBotType } from "@spt/models/eft/common/tables/IBotType";
+import { IBotType, IHealth } from "@spt/models/eft/common/tables/IBotType";
 import { IPmcConfig } from "@spt/models/spt/config/IPmcConfig";
 import { ILocations } from "@spt/models/spt/server/ILocations";
 import { EventTracker } from "../misc/seasonalevents";
@@ -276,13 +276,12 @@ export class BotLoader {
         }
 
         if (this.modConfig.realistic_raider_rogue_health == true) {
-            this.setBotHPHelper(this.arrays.rogueRaiderList);
+            this.setBotHPHelper(this.arrays.rogueRaiderArr);
             this.raiderBase.health = raiderLO.health;
         }
 
         if (this.modConfig.realistic_zombies == true) {
-            this.setBotHPHelper(this.arrays.zombiesList);
-            this.raiderBase.health = zombieLO.health;
+            this.setBotHPFromArr(this.arrays.zombiesArr, zombieLO.health);
         }
 
         if (this.modConfig.realistic_cultist_health == true) {
@@ -305,6 +304,12 @@ export class BotLoader {
                 }
             }
             botArr[bot].health.Temperature = botHealth.health.Temperature;
+        }
+    }
+
+    private setBotHPFromArr(botArr: IBotType[], healthObj: IHealth){
+        for (let zombie of botArr) {
+            zombie.health = healthObj;
         }
     }
 

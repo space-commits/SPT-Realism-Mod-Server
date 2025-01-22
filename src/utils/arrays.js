@@ -9,8 +9,8 @@ class BotArrays {
     cultistArr;
     standardBotHPArr;
     bossFollowerArr;
-    rogueRaiderList;
-    zombiesList;
+    rogueRaiderArr;
+    zombiesArr;
     constructor(tables) {
         this.tables = tables;
         let botDB = this.tables.bots.types;
@@ -44,7 +44,7 @@ class BotArrays {
             botDB["followerkolontaysecurity"],
             botDB["followerkolontayassault"]
         ];
-        this.rogueRaiderList = [
+        this.rogueRaiderArr = [
             botDB["pmcbot"],
             botDB["exusec"]
         ];
@@ -52,12 +52,12 @@ class BotArrays {
             botDB["sectantwarrior"],
             botDB["sectantpriest"]
         ];
-        this.zombiesList = [
-            botDB["infectedAssault"],
-            botDB["infectedPmc"],
-            botDB["infectedCivil"],
-            botDB["infectedLaborant"],
-            botDB["infectedTagilla"]
+        this.zombiesArr = [
+            botDB["infectedassault"],
+            botDB["infectedpmc"],
+            botDB["infectedcivil"],
+            botDB["infectedlaborant"],
+            botDB["infectedtagilla"]
         ];
         this.standardBotHPArr = [
             botDB["usec"],

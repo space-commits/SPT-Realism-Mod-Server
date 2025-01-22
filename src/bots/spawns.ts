@@ -4,6 +4,10 @@ import { ILogger } from "../../types/models/spt/utils/ILogger";
 import { ModTracker, Utils } from "../utils/utils";
 import { EventTracker } from "../misc/seasonalevents";
 import { ILocationConfig } from "@spt/models/spt/config/ILocationConfig";
+import { DatabaseService } from "@spt/services/DatabaseService";
+import { ISeasonalEventConfig } from "@spt/models/spt/config/ISeasonalEventConfig";
+import { IBossLocationSpawn } from "@spt/models/eft/common/ILocationBase";
+import { IGlobals } from "@spt/models/eft/common/IGlobals";
 
 
 const botZones = require("../../db/maps/spawnZones.json");
@@ -13,47 +17,19 @@ const spawnWaves = require("../../db/maps/spawnWaves.json");
 export class Spawns {
     constructor(private logger: ILogger, private tables: IDatabaseTables, private modConf, private mapDB: ILocations, private utils: Utils) { }
 
-
-    public setBossSpawnChance(level: number) {
-        if (level <= 5) {
-            this.bossSpawnHelper(0);
-        }
-        else if (level <= 10) {
-            this.bossSpawnHelper(0.05);
-        }
-        else if (level <= 15) {
-            this.bossSpawnHelper(0.1);
-        }
-        else if (level <= 20) {
-            this.bossSpawnHelper(0.15);
-        }
-        else if (level <= 25) {
-            this.bossSpawnHelper(0.25);
-        }
-        else if (level <= 30) {
-            this.bossSpawnHelper(0.4);
-        }
-        else if (level <= 35) {
-            this.bossSpawnHelper(0.6);
-        }
-        else if (level <= 40) {
-            this.bossSpawnHelper(0.7);
-        }
-        else if (level <= 45) {
-            this.bossSpawnHelper(0.8);
-        }
-        else if (level <= 50) {
-            this.bossSpawnHelper(0.9);
-        }
-        else if (level > 50) {
-            this.bossSpawnHelper(1);
-        }
+    public setBossSpawnChance(level: number, databaseService: DatabaseService, seasonalEventConfig: ISeasonalEventConfig) {
+        level = level <= 5 ? 0 : level;
+        let levelFactor = (level * 2) / 100;
+        let spawnModifier = Math.pow(levelFactor, 1.85);
+        spawnModifier = this.utils.clampNumber(spawnModifier, 0, 1);
+        this.bossSpawnHelper(spawnModifier, databaseService, seasonalEventConfig);
+        this.logger.warning("Realism boss spawn modifier " + spawnModifier);
     }
 
-    private bossSpawnHelper(chanceMulti: number) {
-
+    private bossSpawnHelper(chanceMulti: number, databaseService: DatabaseService, seasonalEventConfig: ISeasonalEventConfig) {
         //refresh boss spawn chances
         this.loadBossSpawnChanges();
+        //if (this.modConf.realistic_zombies) this.configureZombies(databaseService, seasonalEventConfig);
 
         for (let i in this.mapDB) {
             let mapBase = this.mapDB[i]?.base;
@@ -89,8 +65,35 @@ export class Spawns {
         }
     }
 
-    public loadSpawnChanges(locationConfig: ILocationConfig) {
 
+    protected configureZombies(databaseService: DatabaseService, seasonalEventConfig: ISeasonalEventConfig) {
+        const infectionLevel = 100;
+        const chance = 5;
+        const globals: IGlobals = databaseService.getGlobals();
+        const infectionHalloween = globals.config.SeasonActivity.InfectionHalloween;
+        const botsToAddPerMap = seasonalEventConfig.eventBossSpawns["halloweenzombies"];
+        infectionHalloween.Enabled = true;
+        //infectionHalloween.DisplayUIEnabled = true;
+        //this.tables.locations.bigmap.base.BossLocationSpawn = [];
+        //this.tables.locations.bigmap.base.waves = [];       
+        const mapKeys = Object.keys(botsToAddPerMap) ?? [];
+        const locations = databaseService.getLocations();
+        for (const mapKey of mapKeys) {
+            const bossesToAdd = botsToAddPerMap[mapKey];
+            for (const boss of bossesToAdd) {
+                const map = locations[mapKey].base;
+                const mapBosses: IBossLocationSpawn[] = map.BossLocationSpawn;
+                map.Events.Halloween2024.InfectionPercentage = infectionLevel;
+                globals.LocationInfection[mapKey] = infectionLevel;
+                let rnd = this.utils.pickRandNumInRange(1, 100);
+                if (rnd < chance && !mapBosses.some((bossSpawn) => bossSpawn.BossName === boss.BossName)) {
+                    map.BossLocationSpawn.push(...bossesToAdd);
+                }
+            }
+        }
+    }
+
+    public loadSpawnChanges() {
         //&& ModTracker.swagPresent == false
         this.loadBossSpawnChanges();
 

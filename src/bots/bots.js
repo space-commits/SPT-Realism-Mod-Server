@@ -255,12 +255,11 @@ class BotLoader {
             this.reshFollowerBase.health = reshFollowerLO.health;
         }
         if (this.modConfig.realistic_raider_rogue_health == true) {
-            this.setBotHPHelper(this.arrays.rogueRaiderList);
+            this.setBotHPHelper(this.arrays.rogueRaiderArr);
             this.raiderBase.health = raiderLO.health;
         }
         if (this.modConfig.realistic_zombies == true) {
-            this.setBotHPHelper(this.arrays.zombiesList);
-            this.raiderBase.health = zombieLO.health;
+            this.setBotHPFromArr(this.arrays.zombiesArr, zombieLO.health);
         }
         if (this.modConfig.realistic_cultist_health == true) {
             this.priestBase.health = priestLO.health;
@@ -281,6 +280,11 @@ class BotLoader {
                 }
             }
             botArr[bot].health.Temperature = botHealth.health.Temperature;
+        }
+    }
+    setBotHPFromArr(botArr, healthObj) {
+        for (let zombie of botArr) {
+            zombie.health = healthObj;
         }
     }
     //this thing is demonic and cursed
