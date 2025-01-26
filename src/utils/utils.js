@@ -145,7 +145,9 @@ class Utils {
         const [hours, minutes] = time.split(":");
         const isNightByHours = parseInt(hours) < 5 || parseInt(hours) >= 21;
         const isNightByMap = map == "factory4_night";
-        if (isNightByHours || isNightByMap) {
+        const isDayByMap = map == "factory4_day" || map == "laboratory";
+        ;
+        if (!isDayByMap && (isNightByHours || isNightByMap)) {
             return true;
         }
         else {

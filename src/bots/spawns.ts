@@ -23,7 +23,6 @@ export class Spawns {
         let spawnModifier = Math.pow(levelFactor, 1.85);
         spawnModifier = this.utils.clampNumber(spawnModifier, 0, 1);
         this.bossSpawnHelper(spawnModifier, databaseService, seasonalEventConfig);
-        this.logger.warning("Realism boss spawn modifier " + spawnModifier);
     }
 
     private bossSpawnHelper(chanceMulti: number, databaseService: DatabaseService, seasonalEventConfig: ISeasonalEventConfig) {

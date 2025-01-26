@@ -16,7 +16,7 @@ import { BotModLimits, BotWeaponModLimitService } from "@spt/services/BotWeaponM
 import { __String } from "typescript";
 import { BotHelper } from "@spt/helpers/BotHelper";
 import { BotEquipmentModPoolService } from "@spt/services/BotEquipmentModPoolService";
-import { EquipmentFilters, IArmorPlateWeights } from "@spt/models/spt/config/IBotConfig";
+import { EquipmentFilters, IArmorPlateWeights, IRandomisedResourceValues } from "@spt/models/spt/config/IBotConfig";
 import { BotGeneratorHelper } from "@spt/helpers/BotGeneratorHelper";
 import { BotGenerator } from "@spt/generators/BotGenerator";
 import { BotLevelGenerator } from "@spt/generators/BotLevelGenerator";
@@ -1243,19 +1243,22 @@ export class BotGenHelper extends BotGeneratorHelper {
         }
 
         if (itemTemplate._props.MaxHpResource) {
+            let medRandomization: IRandomisedResourceValues = {"resourcePercent": 30, "chanceMaxResourcePercent": 35 };
             itemProperties.MedKit = {
                 HpResource: this.getRandomizedResourceValue(
                     itemTemplate._props.MaxHpResource,
-                    this.botConfig.lootItemResourceRandomization[botRole]?.meds,
+                    medRandomization,
                 )
             };
         }
 
         if (itemTemplate._props.MaxResource && itemTemplate._props.foodUseTime) {
+            let foodRandomization: IRandomisedResourceValues = {"resourcePercent": 35, "chanceMaxResourcePercent": 60 };
+            //this.botConfig.lootItemResourceRandomization[botRole]?.food
             itemProperties.FoodDrink = {
                 HpPercent: this.getRandomizedResourceValue(
                     itemTemplate._props.MaxResource,
-                    this.botConfig.lootItemResourceRandomization[botRole]?.food,
+                    foodRandomization,
                 )
             };
         }

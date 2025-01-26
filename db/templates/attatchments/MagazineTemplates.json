@@ -3668,7 +3668,7 @@
         "Name": "mag_aa12_mps_aa12_drum_mag_12g_20",
         "ModType": "",
         "ReloadSpeed": -15,
-        "Ergonomics": -8,
+        "Ergonomics": 0,
         "MalfunctionChance": 0.26,
         "LoadUnloadModifier": 15,
         "CheckTimeModifier": 0,
