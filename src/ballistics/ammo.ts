@@ -104,7 +104,7 @@ export class Ammo {
                 serverItem._props.PenetrationPower = 18;
                 serverItem._props.ArmorDamage = 1;
                 serverItem._props.ProjectileCount = 20; //12
-                serverItem._props.Damage = 192; //192 / 8
+                serverItem._props.Damage = 192 / 8; //192 / 8
                 serverItem._props.InitialSpeed = 415;
                 serverItem._props.RicochetChance = 0.28;
                 serverItem._props.FragmentationChance = 0.22;

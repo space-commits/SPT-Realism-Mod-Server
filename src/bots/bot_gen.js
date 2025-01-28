@@ -988,13 +988,16 @@ class BotGenHelper extends BotGeneratorHelper_1.BotGeneratorHelper {
             }
         }
         if (itemTemplate._props.MaxHpResource) {
+            let medRandomization = { "resourcePercent": 30, "chanceMaxResourcePercent": 50 };
             itemProperties.MedKit = {
-                HpResource: this.getRandomizedResourceValue(itemTemplate._props.MaxHpResource, this.botConfig.lootItemResourceRandomization[botRole]?.meds)
+                HpResource: this.getRandomizedResourceValue(itemTemplate._props.MaxHpResource, medRandomization)
             };
         }
         if (itemTemplate._props.MaxResource && itemTemplate._props.foodUseTime) {
+            let foodRandomization = { "resourcePercent": 40, "chanceMaxResourcePercent": 60 };
+            //this.botConfig.lootItemResourceRandomization[botRole]?.food
             itemProperties.FoodDrink = {
-                HpPercent: this.getRandomizedResourceValue(itemTemplate._props.MaxResource, this.botConfig.lootItemResourceRandomization[botRole]?.food)
+                HpPercent: this.getRandomizedResourceValue(itemTemplate._props.MaxResource, foodRandomization)
             };
         }
         if (modConfig.enable_hazard_zones && itemTemplate._props.MaxResource && itemTemplate._id === "590c595c86f7747884343ad7") {

@@ -149,7 +149,6 @@ export class Utils {
             return false;
         }
     }
-
 }
 
 export class ModTracker {

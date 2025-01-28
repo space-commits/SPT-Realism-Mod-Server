@@ -1243,7 +1243,7 @@ export class BotGenHelper extends BotGeneratorHelper {
         }
 
         if (itemTemplate._props.MaxHpResource) {
-            let medRandomization: IRandomisedResourceValues = {"resourcePercent": 30, "chanceMaxResourcePercent": 35 };
+            let medRandomization: IRandomisedResourceValues = {"resourcePercent": 30, "chanceMaxResourcePercent": 20 };
             itemProperties.MedKit = {
                 HpResource: this.getRandomizedResourceValue(
                     itemTemplate._props.MaxHpResource,
@@ -1253,7 +1253,7 @@ export class BotGenHelper extends BotGeneratorHelper {
         }
 
         if (itemTemplate._props.MaxResource && itemTemplate._props.foodUseTime) {
-            let foodRandomization: IRandomisedResourceValues = {"resourcePercent": 35, "chanceMaxResourcePercent": 60 };
+            let foodRandomization: IRandomisedResourceValues = {"resourcePercent": 40, "chanceMaxResourcePercent": 30 };
             //this.botConfig.lootItemResourceRandomization[botRole]?.food
             itemProperties.FoodDrink = {
                 HpPercent: this.getRandomizedResourceValue(

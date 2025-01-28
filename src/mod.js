@@ -740,8 +740,7 @@ class Main {
             for (const i in counters) {
                 const counter = counters[i];
                 if (counter.Key.includes("ExpLooting")) {
-                    logger.warning("Looting XP " + counter.Value);
-                    lootXp += Math.min(counter.Value, 100);
+                    lootXp += Math.min(counter.Value, 1000);
                 }
             }
         }

@@ -313,7 +313,7 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": 0,
-        "RecoilDamping": 0.865,
+        "RecoilDamping": 0.8,
         "RecoilHandDamping": 0.4,
         "WeaponAllowADS": false,
         "Weight": 1.71,
@@ -328,8 +328,8 @@
         "IsManuallyOperated": false,
         "BaseChamberCheckSpeed": 0.9,
         "BaseFixSpeed": 0.85,
-        "OffsetRotation": 0.01,
-        "RecoilIntensity": 0.23,
+        "OffsetRotation": 0.008,
+        "RecoilIntensity": 0.2,
         "TemplateType": "gun"
     },
     "5df8ce05b11454561e39243b": {
