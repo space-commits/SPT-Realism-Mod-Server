@@ -158,13 +158,13 @@ class Traders {
             this.traderConf.fence.discountOptions.equipmentPresetMinMax.max = 2;
             this.traderConf.fence.discountOptions.weaponPresetMinMax.min = 0;
             this.traderConf.fence.discountOptions.weaponPresetMinMax.max = 5;
-            this.traderConf.fence.regenerateAssortsOnRefresh = true;
+            this.traderConf.fence.regenerateAssortsOnRefresh = false; //enabling this makes the assort refresh whenever an item is bought
             this.traderConf.fence.equipmentPresetMinMax.min = 0;
             this.traderConf.fence.equipmentPresetMinMax.max = 1;
             this.traderConf.fence.weaponPresetMinMax.min = 0;
             this.traderConf.fence.weaponPresetMinMax.max = 3;
-            this.traderConf.fence.partialRefreshChangePercent = 20;
-            this.traderConf.fence.assortSize = 30;
+            this.traderConf.fence.partialRefreshChangePercent = 10;
+            this.traderConf.fence.assortSize = 20;
             this.traderConf.fence.itemPriceMult = 1.8;
             this.traderConf.fence.presetPriceMult = 2.25;
             this.traderConf.fence.itemTypeLimits = fenceLimits.itemTypeLimits;

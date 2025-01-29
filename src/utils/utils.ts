@@ -5,9 +5,12 @@ import * as path from 'path';
 import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
 import crypto from "node:crypto";
+import { IMods } from "@spt/models/eft/common/tables/IBotType";
+import { StaticArrays } from "./arrays";
 
 const fs = require('fs');
 const modConfig = require("../../config/config.json");
+const armorTemplate = require("../../db/bots/loadouts/templates/armorMods.json");
 
 export class Utils {
 
@@ -81,6 +84,34 @@ export class Utils {
         }
     }
 
+    public addGasMaskFilters(mods: IMods) {
+        StaticArrays.gasMasks.forEach(g => {
+            mods[g] = {
+                "mod_equipment": [
+                    "590c595c86f7747884343ad7"
+                ]
+            }
+        });
+    }
+
+    public addArmorInserts(mods: IMods) {
+        Object.keys(armorTemplate).forEach(outerKey => {
+            // If the outer key exists in mods, compare inner keys
+            if (mods[outerKey]) {
+                Object.keys(armorTemplate[outerKey]).forEach(innerKey => {
+                    // If the inner key doesn't exist in mods, insert it
+                    if (!mods[outerKey][innerKey]) {
+                        mods[outerKey][innerKey] = armorTemplate[outerKey][innerKey];
+                    }
+                });
+            }
+            //if mods doesnt have the outer key, insert it
+            else {
+                mods[outerKey] = armorTemplate[outerKey];
+            }
+        });
+    }
+
     public probabilityWeighter(items: any, weights: number[]): any {
         function add(a, b) { return a + b; }
         let totalWeight = weights.reduce(add, 0);
@@ -152,11 +183,11 @@ export class Utils {
 }
 
 export class ModTracker {
-    static batteryModPresent: boolean = false;
     static sainPresent: boolean = false;
     static swagPresent: boolean = false;
     static tgcPresent: boolean = false;
     static qtbPresent: boolean = false;
+    static qtbSpawnsActive: boolean = false;
     static alpPresent: boolean = false;
 }
 
@@ -174,6 +205,7 @@ export class RaidInfoTracker {
     static isNight: boolean = false;
     static mapType: string = "";
     static mapName: string = "";
+    static generatedBotsCount: number = 0;
     // static activeRaids: RaidInfo[] = [];
 }
 

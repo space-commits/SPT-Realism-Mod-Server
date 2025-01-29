@@ -60,7 +60,7 @@
         "infectedTagilla": 1
     },
     "presetBatch": {
-        "assault": 20,
+        "assault": 30,
         "bossBully": 5,
         "bossGluhar": 5,
         "bossKilla": 5,
@@ -74,49 +74,49 @@
         "bossPartisan": 5,
         "cursedAssault": 10,
         "followerBully": 10,
-        "followerGluharAssault": 5,
-        "followerGluharScout": 5,
-        "followerGluharSecurity": 5,
-        "followerGluharSnipe": 5,
-        "followerKojaniy": 5,
+        "followerGluharAssault": 10,
+        "followerGluharScout": 10,
+        "followerGluharSecurity": 10,
+        "followerGluharSnipe": 10,
+        "followerKojaniy": 10,
         "followerSanitar": 10,
-        "followerTagilla": 5,
-        "followerBirdEye": 5,
-        "followerBigPipe": 5,
-        "followerZryachiy": 5,
+        "followerTagilla": 10,
+        "followerBirdEye": 10,
+        "followerBigPipe": 10,
+        "followerZryachiy": 10,
         "followerTest": 5,
-        "followerBoar": 5,
+        "followerBoar": 10,
         "marksman": 10,
         "pmcBot": 20,
-        "sectantPriest": 5,
-        "sectantWarrior": 15,
-        "gifter": 1,
-        "test": 1,
+        "sectantPriest": 15,
+        "sectantWarrior": 30,
+        "gifter": 5,
+        "test": 5,
         "exUsec": 15,
-        "arenaFighterEvent": 1,
-        "arenaFighter": 1,
-        "crazyAssaultEvent": 1,
+        "arenaFighterEvent": 5,
+        "arenaFighter": 5,
+        "crazyAssaultEvent": 5,
         "bossBoar": 5,
         "bossBoarSniper": 5,
-        "followerBoarClose1": 5,
-        "followerBoarClose2": 5,
-        "followerKolontayAssault": 5,
-        "followerKolontaySecurity": 5,
+        "followerBoarClose1": 10,
+        "followerBoarClose2": 10,
+        "followerKolontayAssault": 10,
+        "followerKolontaySecurity": 10,
         "shooterBTR": 1,
         "peacefullZryachiyEvent": 1,
         "ravangeZryachiyEvent": 1,
         "sectactPriestEvent": 1,
-        "pmcUSEC": 15,
-        "pmcBEAR": 15,
+        "pmcUSEC": 30,
+        "pmcBEAR": 30,
         "peacemaker": 1,
         "skier": 1,
         "sectantPredvestnik": 5,
         "sectantPrizrak": 5,
         "sectantOni": 5,
-        "infectedAssault": 30,
-        "infectedPmc": 30,
-        "infectedCivil": 30,
-        "infectedLaborant": 30,
+        "infectedAssault": 35,
+        "infectedPmc": 35,
+        "infectedCivil": 35,
+        "infectedLaborant": 35,
         "infectedTagilla": 5
     },
     "cartridgeBlacklist": [],
@@ -754,7 +754,7 @@
         "convertIntoPmcChance": {
             "default": {
                 "assault": {
-                    "min": 20,
+                    "min": 35,
                     "max": 40
                 },
                 "cursedassault": {
@@ -828,8 +828,8 @@
         "convertIntoPmcChance": {
             "default": {
                 "assault": {
-                    "min": 25,
-                    "max": 35
+                    "min": 30,
+                    "max": 40
                 },
                 "cursedassault": {
                     "min": 28,
@@ -902,8 +902,8 @@
         "convertIntoPmcChance": {
             "default": {
                 "assault": {
-                    "min": 30,
-                    "max": 35
+                    "min": 25,
+                    "max": 40
                 },
                 "cursedassault": {
                     "min": 25,

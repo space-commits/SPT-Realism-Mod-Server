@@ -170,6 +170,21 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         this.checkForMods(preSptModLoader, logger, modConfig);
         flea.loadFleaConfig();
 
+        //way of checking if QB spawn system is active, and disabling certain aspects of Realism's spawn changes to compenstate
+        dynamicRouter.registerDynamicRouter(
+            `DynamicQuestingBotsSpawnSystemCheck`,
+            [
+                {
+                    url: "/QuestingBots/AdjustPMCConversionChances/",
+                    action: async (output: string) => {
+                        ModTracker.qtbSpawnsActive = true;
+                        return output;
+                    }
+                }
+            ],
+            "QuestingBotsSpawnSystemCheck"
+        );
+
         dynamicRouter.registerDynamicRouter(
             "realismGetConfig",
             [
@@ -523,6 +538,8 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             const pmcData = profileHelper.getPmcProfile(sessionID);
                             const profileData = profileHelper.getFullProfile(sessionID);
 
+                            RaidInfoTracker.generatedBotsCount = 0;
+                            
                             //had a concern that bot loot cache isn't being reset properly since I've overriden it with my own implementation, so to be safe...
                             // const myGetLootCache = new MyLootCache(logger, jsonUtil, itemHelper, postLoadDBServer, pmcLootGenerator, localisationService, ragfairPriceService);
                             // myGetLootCache.myClearCache();
@@ -621,7 +638,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         // myGetLootCache.myClearCache();
 
                         try {
-
+                            RaidInfoTracker.generatedBotsCount = 0;
                             //update global player level
                             this.checkPlayerLevel(sessionID, profileData, pmcData, logger);
 
@@ -782,7 +799,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             maps.openZonesFix();
         }
 
-        maps.loadSpawnChanges();
+        maps.loadSpawnChanges(locationConfig);
 
         //airdrop.loadAirdropChanges();
 
@@ -871,6 +888,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             if (modConfig.realistic_ballistics == true) {
                 ammo.loadAmmoStats();
                 armor.loadArmorStats();
+                ammo.grenadeTweaks();
             }
 
             if (modConfig.recoil_attachment_overhaul) {
@@ -890,7 +908,6 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             if (modConfig.recoil_attachment_overhaul) {
                 ammo.loadAmmoFirerateChanges();
                 quests.fixMechancicQuests();
-                ammo.grenadeTweaks();
             }
 
             gear.loadGearConflicts();

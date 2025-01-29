@@ -98,6 +98,16 @@ class Main {
         const flea = new fleamarket_1.FleaChangesPreDBLoad(logger, fleaConf, modConfig);
         this.checkForMods(preSptModLoader, logger, modConfig);
         flea.loadFleaConfig();
+        //way of checking if QB spawn system is active, and disabling certain aspects of Realism's spawn changes to compenstate
+        dynamicRouter.registerDynamicRouter(`DynamicQuestingBotsSpawnSystemCheck`, [
+            {
+                url: "/QuestingBots/AdjustPMCConversionChances/",
+                action: async (output) => {
+                    utils_1.ModTracker.qtbSpawnsActive = true;
+                    return output;
+                }
+            }
+        ], "QuestingBotsSpawnSystemCheck");
         dynamicRouter.registerDynamicRouter("realismGetConfig", [
             {
                 url: "/RealismMod/GetConfig",
@@ -379,6 +389,7 @@ class Main {
                         const bots = new bots_1.BotLoader(logger, postLoadTables, configServer, modConfig, arrays, utils);
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         const profileData = profileHelper.getFullProfile(sessionID);
+                        utils_1.RaidInfoTracker.generatedBotsCount = 0;
                         //had a concern that bot loot cache isn't being reset properly since I've overriden it with my own implementation, so to be safe...
                         // const myGetLootCache = new MyLootCache(logger, jsonUtil, itemHelper, postLoadDBServer, pmcLootGenerator, localisationService, ragfairPriceService);
                         // myGetLootCache.myClearCache();
@@ -460,6 +471,7 @@ class Main {
                     // const myGetLootCache = new MyLootCache(logger, jsonUtil, itemHelper, postLoadDBServer, pmcLootGenerator, localisationService, ragfairPriceService);
                     // myGetLootCache.myClearCache();
                     try {
+                        utils_1.RaidInfoTracker.generatedBotsCount = 0;
                         //update global player level
                         this.checkPlayerLevel(sessionID, profileData, pmcData, logger);
                         if (modConfig.tiered_flea == true)
@@ -596,7 +608,7 @@ class Main {
         if (modConfig.open_zones_fix == true && !utils_1.ModTracker.swagPresent) {
             maps.openZonesFix();
         }
-        maps.loadSpawnChanges();
+        maps.loadSpawnChanges(locationConfig);
         //airdrop.loadAirdropChanges();
         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
             bots.loadBots();
@@ -665,6 +677,7 @@ class Main {
             if (modConfig.realistic_ballistics == true) {
                 ammo.loadAmmoStats();
                 armor.loadArmorStats();
+                ammo.grenadeTweaks();
             }
             if (modConfig.recoil_attachment_overhaul) {
                 jsonHand.pushModsToServer();
@@ -679,7 +692,6 @@ class Main {
             if (modConfig.recoil_attachment_overhaul) {
                 ammo.loadAmmoFirerateChanges();
                 quests.fixMechancicQuests();
-                ammo.grenadeTweaks();
             }
             gear.loadGearConflicts();
             jsonHand.modifiedItems = {}; //empty temp template object

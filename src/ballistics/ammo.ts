@@ -103,7 +103,7 @@ export class Ammo {
             if (serverItem._id === "560d5e524bdc2d25448b4571") {
                 serverItem._props.PenetrationPower = 18;
                 serverItem._props.ArmorDamage = 1;
-                serverItem._props.ProjectileCount = 20; //12
+                serverItem._props.ProjectileCount = 8; //12
                 serverItem._props.Damage = 192 / 8; //192 / 8
                 serverItem._props.InitialSpeed = 415;
                 serverItem._props.RicochetChance = 0.28;
@@ -4027,42 +4027,42 @@ export class Ammo {
                 serverItem._props.Contusion.x = 1.5;
                 serverItem._props.Contusion.y = 19;
                 serverItem._props.Contusion.z = 20;
-                serverItem._props.FragmentsCount = 50;
+                serverItem._props.FragmentsCount = 55;
             }
             //m381
             if (serverItem._id === "5ede474b0c226a66f5402622") {
                 serverItem._props.Contusion.x = 1.5;
                 serverItem._props.Contusion.y = 12;
                 serverItem._props.Contusion.z = 17;
-                serverItem._props.FragmentsCount = 40;
+                serverItem._props.FragmentsCount = 45;
             }
             //m386
             if (serverItem._id === "5ede475b549eed7c6d5c18fb") {
                 serverItem._props.Contusion.x = 1.5;
                 serverItem._props.Contusion.y = 20;
                 serverItem._props.Contusion.z = 25;
-                serverItem._props.FragmentsCount = 60;
+                serverItem._props.FragmentsCount = 65;
             }
             //m406
             if (serverItem._id === "5ede4739e0350d05467f73e8") {
                 serverItem._props.Contusion.x = 1.5;
                 serverItem._props.Contusion.y = 20;
                 serverItem._props.Contusion.z = 25;
-                serverItem._props.FragmentsCount = 6;
+                serverItem._props.FragmentsCount = 65;
             }
             //m433
             if (serverItem._id === "5f0c892565703e5c461894e9") {
                 serverItem._props.Contusion.x = 1.5;
                 serverItem._props.Contusion.y = 22;
                 serverItem._props.Contusion.z = 27;
-                serverItem._props.FragmentsCount = 70;
+                serverItem._props.FragmentsCount = 75;
             }
             //m441
             if (serverItem._id === "5ede47405b097655935d7d16") {
                 serverItem._props.Contusion.x = 1.5;
                 serverItem._props.Contusion.y = 12;
                 serverItem._props.Contusion.z = 17;
-                serverItem._props.FragmentsCount = 40;
+                serverItem._props.FragmentsCount = 45;
             }
         }
         if (this.modConf.logEverything == true) {

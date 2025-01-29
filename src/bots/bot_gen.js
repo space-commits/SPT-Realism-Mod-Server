@@ -22,7 +22,6 @@ const ItemTpl_1 = require("C:/snapshot/project/obj/models/enums/ItemTpl");
 const MemberCategory_1 = require("C:/snapshot/project/obj/models/enums/MemberCategory");
 const seasonalevents_1 = require("../misc/seasonalevents");
 const armorPlateWeights = require("../../db/bots/loadouts/templates/armorPlateWeights.json");
-const armorTemplate = require("../../db/bots/loadouts/templates/armorMods.json");
 const modConfig = require("../../config/config.json");
 class GenBotLvl extends BotLevelGenerator_1.BotLevelGenerator {
     genBotLvl(levelDetails, botGenerationDetails, bot) {
@@ -57,6 +56,8 @@ class GenBotLvl extends BotLevelGenerator_1.BotLevelGenerator {
 }
 exports.GenBotLvl = GenBotLvl;
 class BotGen extends BotGenerator_1.BotGenerator {
+    placeHolderBotCache = [];
+    placeHolderPlayerScavCache = [];
     isBotUSEC(botRole) {
         return (botRole.toLocaleLowerCase().includes("usec"));
     }
@@ -149,35 +150,14 @@ class BotGen extends BotGenerator_1.BotGenerator {
         chances.equipmentMods.mod_equipment_001 = 0;
         chances.equipmentMods.mod_equipment_002 = 0;
     }
-    //yeah too lazy to manually add gas mask filters 
-    pushGasMaskFilter(mods) {
-        arrays_1.StaticArrays.gasMasks.forEach(g => {
-            mods[g] = {
-                "mod_equipment": [
-                    "590c595c86f7747884343ad7"
-                ]
-            };
-        });
-    }
-    //too lazy to manually add the json for new armor slots, it should be ok...
-    addArmorInserts(mods) {
-        Object.keys(armorTemplate).forEach(outerKey => {
-            // If the outer key exists in mods, compare inner keys
-            if (mods[outerKey]) {
-                Object.keys(armorTemplate[outerKey]).forEach(innerKey => {
-                    // If the inner key doesn't exist in mods, insert it
-                    if (!mods[outerKey][innerKey]) {
-                        mods[outerKey][innerKey] = armorTemplate[outerKey][innerKey];
-                    }
-                });
-            }
-            //if mods doesnt have the outer key, insert it
-            else {
-                mods[outerKey] = armorTemplate[outerKey];
-            }
-        });
-    }
     myGeneratePlayerScav(sessionId, role, difficulty, botTemplate) {
+        //since spawn changes, bots just keep being generated at regular intervals. Causes stutter. Skip bot gen and return a cached bot.
+        utils_1.RaidInfoTracker.generatedBotsCount += 1;
+        if (modConfig.spawn_waves && !utils_1.ModTracker.qtbPresent) {
+            if (utils_1.RaidInfoTracker.generatedBotsCount > 250 && this.placeHolderPlayerScavCache.length !== 0) {
+                return this.checkIfShouldReturnCahcedBot(this.placeHolderPlayerScavCache);
+            }
+        }
         let bot = this.getCloneOfBotBase();
         bot.Info.Settings.BotDifficulty = difficulty;
         bot.Info.Settings.Role = role;
@@ -192,9 +172,9 @@ class BotGen extends BotGenerator_1.BotGenerator {
             botDifficulty: difficulty,
             isPlayerScav: true,
         };
-        this.addArmorInserts(botTemplate.inventory.mods);
-        this.pushGasMaskFilter(botTemplate.inventory.mods);
         bot = this.myGenerateBot(sessionId, bot, botTemplate, botGenDetails, 1);
+        if (this.placeHolderPlayerScavCache.length === 0)
+            this.placeHolderPlayerScavCache.push(bot);
         return bot;
     }
     assignPMCtier(utils, botRole, botLoader, preparedBotBase, botJsonTemplateClone) {
@@ -252,7 +232,23 @@ class BotGen extends BotGenerator_1.BotGenerator {
         }
         return pmcTier;
     }
+    checkIfShouldReturnCahcedBot(cache) {
+        const bot = cache[0];
+        bot._id = this.hashUtil.generate();
+        bot.aid = this.hashUtil.generateAccountId();
+        bot.Info.Nickname = this.hashUtil.generate();
+        bot.Info.MainProfileNickname = this.hashUtil.generate();
+        bot.Info.LowerNickname = this.hashUtil.generate();
+        return bot;
+    }
     myPrepareAndGenerateBot(sessionId, botGenerationDetails) {
+        //since spawn changes, bots just keep being generated at regular intervals. Causes stutter. Skip bot gen and return a cached bot.
+        utils_1.RaidInfoTracker.generatedBotsCount += 1;
+        if (modConfig.spawn_waves && !utils_1.ModTracker.qtbPresent) {
+            if (utils_1.RaidInfoTracker.generatedBotsCount > 250 && this.placeHolderBotCache.length !== 0) {
+                return this.checkIfShouldReturnCahcedBot(this.placeHolderBotCache);
+            }
+        }
         const postLoadDBServer = tsyringe_1.container.resolve("DatabaseServer");
         const tables = postLoadDBServer.getTables();
         const arrays = new arrays_1.BotArrays(tables);
@@ -288,10 +284,10 @@ class BotGen extends BotGenerator_1.BotGenerator {
         //this is highly ineffecient as I am doing it per bot generated, not ideal but for now it works until I figure out a better way
         if (seasonalevents_1.EventTracker.doGasEvent || (seasonalevents_1.EventTracker.hasExploded && !seasonalevents_1.EventTracker.endExplosionEvent) || (seasonalevents_1.EventTracker.isPreExplosion && botRole.toLowerCase() == "pmcbot"))
             this.addGasMasksToBots(botJsonTemplateClone.inventory.equipment, botJsonTemplateClone.chances, botRole.toLocaleLowerCase(), isPMC, pmcTier);
-        this.addArmorInserts(botJsonTemplateClone.inventory.mods);
-        this.pushGasMaskFilter(botJsonTemplateClone.inventory.mods);
-        return this.myGenerateBot(sessionId, preparedBotBase, botJsonTemplateClone, botGenerationDetails, pmcTier);
-        ;
+        const bot = this.myGenerateBot(sessionId, preparedBotBase, botJsonTemplateClone, botGenerationDetails, pmcTier);
+        if (this.placeHolderBotCache.length === 0)
+            this.placeHolderBotCache.push(bot);
+        return bot;
     }
     setBotMemberAndGameEdition(botInfo, pmcTier) {
         // Special case
@@ -988,13 +984,13 @@ class BotGenHelper extends BotGeneratorHelper_1.BotGeneratorHelper {
             }
         }
         if (itemTemplate._props.MaxHpResource) {
-            let medRandomization = { "resourcePercent": 30, "chanceMaxResourcePercent": 50 };
+            let medRandomization = { "resourcePercent": 30, "chanceMaxResourcePercent": 20 };
             itemProperties.MedKit = {
                 HpResource: this.getRandomizedResourceValue(itemTemplate._props.MaxHpResource, medRandomization)
             };
         }
         if (itemTemplate._props.MaxResource && itemTemplate._props.foodUseTime) {
-            let foodRandomization = { "resourcePercent": 40, "chanceMaxResourcePercent": 60 };
+            let foodRandomization = { "resourcePercent": 40, "chanceMaxResourcePercent": 30 };
             //this.botConfig.lootItemResourceRandomization[botRole]?.food
             itemProperties.FoodDrink = {
                 HpPercent: this.getRandomizedResourceValue(itemTemplate._props.MaxResource, foodRandomization)

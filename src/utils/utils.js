@@ -29,8 +29,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.BotTierTracker = exports.RaidInfoTracker = exports.ConfigChecker = exports.ProfileTracker = exports.ModTracker = exports.Utils = void 0;
 const path = __importStar(require("path"));
 const node_crypto_1 = __importDefault(require("node:crypto"));
+const arrays_1 = require("./arrays");
 const fs = require('fs');
 const modConfig = require("../../config/config.json");
+const armorTemplate = require("../../db/bots/loadouts/templates/armorMods.json");
 class Utils {
     tables;
     constructor(tables) {
@@ -94,6 +96,32 @@ class Utils {
             profileItem.upd.Repairable.MaxDurability = templateItem._props.MaxDurability;
         }
     }
+    addGasMaskFilters(mods) {
+        arrays_1.StaticArrays.gasMasks.forEach(g => {
+            mods[g] = {
+                "mod_equipment": [
+                    "590c595c86f7747884343ad7"
+                ]
+            };
+        });
+    }
+    addArmorInserts(mods) {
+        Object.keys(armorTemplate).forEach(outerKey => {
+            // If the outer key exists in mods, compare inner keys
+            if (mods[outerKey]) {
+                Object.keys(armorTemplate[outerKey]).forEach(innerKey => {
+                    // If the inner key doesn't exist in mods, insert it
+                    if (!mods[outerKey][innerKey]) {
+                        mods[outerKey][innerKey] = armorTemplate[outerKey][innerKey];
+                    }
+                });
+            }
+            //if mods doesnt have the outer key, insert it
+            else {
+                mods[outerKey] = armorTemplate[outerKey];
+            }
+        });
+    }
     probabilityWeighter(items, weights) {
         function add(a, b) { return a + b; }
         let totalWeight = weights.reduce(add, 0);
@@ -156,11 +184,11 @@ class Utils {
 }
 exports.Utils = Utils;
 class ModTracker {
-    static batteryModPresent = false;
     static sainPresent = false;
     static swagPresent = false;
     static tgcPresent = false;
     static qtbPresent = false;
+    static qtbSpawnsActive = false;
     static alpPresent = false;
 }
 exports.ModTracker = ModTracker;
@@ -178,6 +206,7 @@ class RaidInfoTracker {
     static isNight = false;
     static mapType = "";
     static mapName = "";
+    static generatedBotsCount = 0;
 }
 exports.RaidInfoTracker = RaidInfoTracker;
 class BotTierTracker {

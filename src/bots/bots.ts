@@ -168,6 +168,15 @@ export class BotLoader {
             this.botConfPMC().backpackLoot.blacklist.push(this.lootBlacklist()[i]);
         }
 
+        //I hate this as much as you do
+        const pmcLo = [bearLO.bearLO1, bearLO.bearLO2, bearLO.bearLO3, 
+            bearLO.bearLO4, usecLO.usecLO1,  usecLO.usecLO2,  usecLO.usecLO3, 
+            usecLO.usecLO4, tier5LO.tier5LO, rogueLO.rogueLO1, rogueLO.rogueLO2,
+            rogueLO.rogueLO3, raiderLO.raiderLO1, raiderLO.raiderLO2, raiderLO.raiderLO3];
+        for(let i in pmcLo){
+            this.utils.addArmorInserts(pmcLo[i].inventory.mods);
+            this.utils.addGasMaskFilters(pmcLo[i].inventory.mods);
+        }
 
         if (this.modConfig.logEverything == true) {
             this.logger.info("Bots Loaded");
@@ -442,48 +451,48 @@ export class BotLoader {
         }
     }
 
-    private setBossTiers(pmcData, bots: BotLoader, helper: Utils) {
-        this.setBossTierHelper(pmcData, "scav", bots, helper);
-        this.setBossTierHelper(pmcData, "raider", bots, helper);
-        this.setBossTierHelper(pmcData, "rogue", bots, helper);
-        this.setBossTierHelper(pmcData, "goons", bots, helper);
-        this.setBossTierHelper(pmcData, "killa", bots, helper);
-        this.setBossTierHelper(pmcData, "tagilla", bots, helper);
-        this.setBossTierHelper(pmcData, "sanitar", bots, helper);
-        this.setBossTierHelper(pmcData, "reshalla", bots, helper);
-        this.setBossTierHelper(pmcData, "cult", bots, helper);
+    private setBotTiers(pmcData, bots: BotLoader) {
+        this.setBotTierHelper(pmcData, "scav", bots);
+        this.setBotTierHelper(pmcData, "raider", bots);
+        this.setBotTierHelper(pmcData, "rogue", bots,);
+        this.setBotTierHelper(pmcData, "goons", bots,);
+        this.setBotTierHelper(pmcData, "killa", bots,);
+        this.setBotTierHelper(pmcData, "tagilla", bots,);
+        this.setBotTierHelper(pmcData, "sanitar", bots,);
+        this.setBotTierHelper(pmcData, "reshalla", bots,);
+        this.setBotTierHelper(pmcData, "cult", bots,);
     }
 
-    private setBossTierHelper(pmcData: IPmcData, type: string, bots: BotLoader, utils: Utils) {
+    private setBotTierHelper(pmcData: IPmcData, type: string, bots: BotLoader) {
         let tier = 1;
         let tierArray = [1, 2, 3];
 
         if (pmcData.Info.Level <= 5) {
-            tier = utils.probabilityWeighter(tierArray, [100, 0, 0]);
+            tier = this.utils.probabilityWeighter(tierArray, [100, 0, 0]);
         }
         if (pmcData.Info.Level <= 10) {
-            tier = utils.probabilityWeighter(tierArray, [100, 0, 0]);
+            tier = this.utils.probabilityWeighter(tierArray, [100, 0, 0]);
         }
         if (pmcData.Info.Level <= 15) {
-            tier = utils.probabilityWeighter(tierArray, [90, 10, 0]);
+            tier = this.utils.probabilityWeighter(tierArray, [90, 10, 0]);
         }
         if (pmcData.Info.Level <= 20) {
-            tier = utils.probabilityWeighter(tierArray, [60, 30, 0]);
+            tier = this.utils.probabilityWeighter(tierArray, [60, 30, 0]);
         }
         if (pmcData.Info.Level <= 25) {
-            tier = utils.probabilityWeighter(tierArray, [50, 40, 10]);
+            tier = this.utils.probabilityWeighter(tierArray, [50, 40, 10]);
         }
         if (pmcData.Info.Level <= 30) {
-            tier = utils.probabilityWeighter(tierArray, [40, 40, 20]);
+            tier = this.utils.probabilityWeighter(tierArray, [40, 40, 20]);
         }
         if (pmcData.Info.Level <= 35) {
-            tier = utils.probabilityWeighter(tierArray, [20, 40, 40]);
+            tier = this.utils.probabilityWeighter(tierArray, [20, 40, 40]);
         }
         if (pmcData.Info.Level <= 40) {
-            tier = utils.probabilityWeighter(tierArray, [20, 30, 50]);
+            tier = this.utils.probabilityWeighter(tierArray, [20, 30, 50]);
         }
         if (pmcData.Info.Level > 40) {
-            tier = utils.probabilityWeighter(tierArray, [10, 20, 70]);
+            tier = this.utils.probabilityWeighter(tierArray, [10, 20, 70]);
         }
 
         if (type === "cult") {
@@ -542,7 +551,7 @@ export class BotLoader {
         }
     }
 
-    public updateBots(pmcData: IPmcData, logger: ILogger, config: any, bots: BotLoader, helper: Utils) {
+    public updateBots(pmcData: IPmcData, logger: ILogger, config: any, bots: BotLoader, utils: Utils) {
         let property = pmcData?.Info?.Level;
         if (property === undefined) {
             bots.botConfig1();
@@ -575,7 +584,7 @@ export class BotLoader {
                 if (pmcData.Info.Level > 35) {
                     bots.botConfig3();
                 }
-                this.setBossTiers(pmcData, bots, helper);
+                this.setBotTiers(pmcData, bots);
                 if (config.logEverything == true) {
                     logger.info("Realism Mod: Bot Tiers Have Been Set");
                 }
@@ -583,6 +592,11 @@ export class BotLoader {
             if (this.modConfig.force_boss_items == true) {
                 bots.forceBossItems();
             }
+        }
+        for(const i in this.tables.bots.types){
+            let bot: IBotType = this.tables.bots.types[i];
+            utils.addArmorInserts(bot.inventory.mods);
+            utils.addGasMaskFilters(bot.inventory.mods);
         }
     }
 
@@ -609,7 +623,7 @@ export class BotLoader {
 
         this.botConfPMC().isUsec = rmBotConfig.pmc1.isUsec;
 
-        if (ModTracker.swagPresent == false && this.modConfig.spawn_waves == true) { //ModTracker.qtbPresent == false && 
+        if (!ModTracker.swagPresent && this.modConfig.spawn_waves && !ModTracker.qtbSpawnsActive) {  
             this.botConfPMC().convertIntoPmcChance = rmBotConfig.pmc1.convertIntoPmcChance;
         }
 
@@ -687,7 +701,7 @@ export class BotLoader {
 
         this.botConfPMC().isUsec = rmBotConfig.pmc2.isUsec;
 
-        if (ModTracker.swagPresent == false && this.modConfig.spawn_waves == true) { //ModTracker.qtbPresent == false && 
+        if (!ModTracker.swagPresent && this.modConfig.spawn_waves && !ModTracker.qtbSpawnsActive) { 
             this.botConfPMC().convertIntoPmcChance = rmBotConfig.pmc2.convertIntoPmcChance;
         }
 
@@ -763,7 +777,7 @@ export class BotLoader {
 
         this.botConfPMC().isUsec = rmBotConfig.pmc3.isUsec;
 
-        if (ModTracker.swagPresent == false && this.modConfig.spawn_waves == true) { //ModTracker.qtbPresent == false && 
+        if (!ModTracker.swagPresent && this.modConfig.spawn_waves && !ModTracker.qtbSpawnsActive) { 
             this.botConfPMC().convertIntoPmcChance = rmBotConfig.pmc3.convertIntoPmcChance;
         }
 

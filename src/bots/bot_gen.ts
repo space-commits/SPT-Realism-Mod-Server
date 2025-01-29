@@ -62,7 +62,6 @@ import { MathUtil } from "@spt/utils/MathUtil";
 import { WeatherHelper } from "@spt/helpers/WeatherHelper";
 
 const armorPlateWeights = require("../../db/bots/loadouts/templates/armorPlateWeights.json");
-const armorTemplate = require("../../db/bots/loadouts/templates/armorMods.json");
 const modConfig = require("../../config/config.json");
 
 export class GenBotLvl extends BotLevelGenerator {
@@ -105,6 +104,9 @@ export class GenBotLvl extends BotLevelGenerator {
 }
 
 export class BotGen extends BotGenerator {
+
+    private placeHolderBotCache: IBotBase[] = [];
+    private placeHolderPlayerScavCache: IBotBase[] = [];
 
     private isBotUSEC(botRole: string): boolean {
         return (botRole.toLocaleLowerCase().includes("usec"));
@@ -208,37 +210,15 @@ export class BotGen extends BotGenerator {
         chances.equipmentMods.mod_equipment_002 = 0;
     }
 
-    //yeah too lazy to manually add gas mask filters 
-    private pushGasMaskFilter(mods: IMods) {
-        StaticArrays.gasMasks.forEach(g => {
-            mods[g] = {
-                "mod_equipment": [
-                    "590c595c86f7747884343ad7"
-                ]
-            }
-        });
-    }
-
-    //too lazy to manually add the json for new armor slots, it should be ok...
-    private addArmorInserts(mods: IMods) {
-        Object.keys(armorTemplate).forEach(outerKey => {
-            // If the outer key exists in mods, compare inner keys
-            if (mods[outerKey]) {
-                Object.keys(armorTemplate[outerKey]).forEach(innerKey => {
-                    // If the inner key doesn't exist in mods, insert it
-                    if (!mods[outerKey][innerKey]) {
-                        mods[outerKey][innerKey] = armorTemplate[outerKey][innerKey];
-                    }
-                });
-            }
-            //if mods doesnt have the outer key, insert it
-            else {
-                mods[outerKey] = armorTemplate[outerKey];
-            }
-        });
-    }
-
     public myGeneratePlayerScav(sessionId: string, role: string, difficulty: string, botTemplate: IBotType): IBotBase {
+        //since spawn changes, bots just keep being generated at regular intervals. Causes stutter. Skip bot gen and return a cached bot.
+        RaidInfoTracker.generatedBotsCount += 1;
+        if (modConfig.spawn_waves && !ModTracker.qtbPresent) {
+            if (RaidInfoTracker.generatedBotsCount > 250 && this.placeHolderPlayerScavCache.length !== 0) {
+                return this.checkIfShouldReturnCahcedBot(this.placeHolderPlayerScavCache);
+            }
+        }
+
         let bot = this.getCloneOfBotBase();
         bot.Info.Settings.BotDifficulty = difficulty;
         bot.Info.Settings.Role = role;
@@ -255,10 +235,8 @@ export class BotGen extends BotGenerator {
             isPlayerScav: true,
         };
 
-        this.addArmorInserts(botTemplate.inventory.mods);
-        this.pushGasMaskFilter(botTemplate.inventory.mods);
         bot = this.myGenerateBot(sessionId, bot, botTemplate, botGenDetails, 1);
-
+        if (this.placeHolderPlayerScavCache.length === 0) this.placeHolderPlayerScavCache.push(bot);
         return bot;
     }
 
@@ -312,8 +290,26 @@ export class BotGen extends BotGenerator {
         return pmcTier;
     }
 
+    public checkIfShouldReturnCahcedBot(cache: IBotBase[]): IBotBase {
+        const bot = cache[0];
+        bot._id = this.hashUtil.generate();
+        bot.aid = this.hashUtil.generateAccountId();
+        bot.Info.Nickname = this.hashUtil.generate();
+        bot.Info.MainProfileNickname = this.hashUtil.generate();
+        bot.Info.LowerNickname = this.hashUtil.generate();
+        return bot;
+    }
 
     public myPrepareAndGenerateBot(sessionId: string, botGenerationDetails: IBotGenerationDetails): IBotBase {
+
+        //since spawn changes, bots just keep being generated at regular intervals. Causes stutter. Skip bot gen and return a cached bot.
+        RaidInfoTracker.generatedBotsCount += 1;
+        if (modConfig.spawn_waves && !ModTracker.qtbPresent) {
+            if (RaidInfoTracker.generatedBotsCount > 250 && this.placeHolderBotCache.length !== 0) {
+                return this.checkIfShouldReturnCahcedBot(this.placeHolderBotCache);
+            }
+        }
+
         const postLoadDBServer = container.resolve<DatabaseServer>("DatabaseServer");
         const tables = postLoadDBServer.getTables();
         const arrays = new BotArrays(tables);
@@ -357,10 +353,10 @@ export class BotGen extends BotGenerator {
         //this is highly ineffecient as I am doing it per bot generated, not ideal but for now it works until I figure out a better way
 
         if (EventTracker.doGasEvent || (EventTracker.hasExploded && !EventTracker.endExplosionEvent) || (EventTracker.isPreExplosion && botRole.toLowerCase() == "pmcbot")) this.addGasMasksToBots(botJsonTemplateClone.inventory.equipment, botJsonTemplateClone.chances, botRole.toLocaleLowerCase(), isPMC, pmcTier);
-        this.addArmorInserts(botJsonTemplateClone.inventory.mods);
-        this.pushGasMaskFilter(botJsonTemplateClone.inventory.mods);
 
-        return this.myGenerateBot(sessionId, preparedBotBase, botJsonTemplateClone, botGenerationDetails, pmcTier);;
+        const bot = this.myGenerateBot(sessionId, preparedBotBase, botJsonTemplateClone, botGenerationDetails, pmcTier);
+        if (this.placeHolderBotCache.length === 0) this.placeHolderBotCache.push(bot);
+        return bot;
     }
 
     private setBotMemberAndGameEdition(botInfo: IInfo, pmcTier: number): string {
@@ -1004,7 +1000,7 @@ export class BotWepGen extends BotWeaponGenerator {
 
     //preset format has changed serveral times and I'm tired of updating them.
     private reformatPreset(presetFile, presetObj) {
-        if (presetFile[presetObj].hasOwnProperty("root") || presetFile[presetObj].hasOwnProperty("Root")) { 
+        if (presetFile[presetObj].hasOwnProperty("root") || presetFile[presetObj].hasOwnProperty("Root")) {
             const isUpperCase = presetFile[presetObj].Root !== undefined ? true : false;
             const parent = isUpperCase ? presetFile[presetObj].Root : presetFile[presetObj].root
             const id = isUpperCase ? presetFile[presetObj].Id : presetFile[presetObj].id
@@ -1243,7 +1239,7 @@ export class BotGenHelper extends BotGeneratorHelper {
         }
 
         if (itemTemplate._props.MaxHpResource) {
-            let medRandomization: IRandomisedResourceValues = {"resourcePercent": 30, "chanceMaxResourcePercent": 20 };
+            let medRandomization: IRandomisedResourceValues = { "resourcePercent": 30, "chanceMaxResourcePercent": 20 };
             itemProperties.MedKit = {
                 HpResource: this.getRandomizedResourceValue(
                     itemTemplate._props.MaxHpResource,
@@ -1253,7 +1249,7 @@ export class BotGenHelper extends BotGeneratorHelper {
         }
 
         if (itemTemplate._props.MaxResource && itemTemplate._props.foodUseTime) {
-            let foodRandomization: IRandomisedResourceValues = {"resourcePercent": 40, "chanceMaxResourcePercent": 30 };
+            let foodRandomization: IRandomisedResourceValues = { "resourcePercent": 40, "chanceMaxResourcePercent": 30 };
             //this.botConfig.lootItemResourceRandomization[botRole]?.food
             itemProperties.FoodDrink = {
                 HpPercent: this.getRandomizedResourceValue(

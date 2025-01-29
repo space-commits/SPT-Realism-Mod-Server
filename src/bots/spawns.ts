@@ -6,7 +6,7 @@ import { EventTracker } from "../misc/seasonalevents";
 import { ILocationConfig } from "@spt/models/spt/config/ILocationConfig";
 import { DatabaseService } from "@spt/services/DatabaseService";
 import { ISeasonalEventConfig } from "@spt/models/spt/config/ISeasonalEventConfig";
-import { IBossLocationSpawn } from "@spt/models/eft/common/ILocationBase";
+import { IBossLocationSpawn, ILocationBase } from "@spt/models/eft/common/ILocationBase";
 import { IGlobals } from "@spt/models/eft/common/IGlobals";
 
 
@@ -51,16 +51,16 @@ export class Spawns {
 
     public loadBossSpawnChanges() {
         if (this.modConf.boss_spawns == true) {
-            this.tables.locations.bigmap.base.BossLocationSpawn = JSON.parse(JSON.stringify(bossSpawns.CustomsBossLocationSpawn));
-            this.tables.locations.factory4_day.base.BossLocationSpawn = JSON.parse(JSON.stringify(bossSpawns.FactoryDayBossLocationSpawn));
-            this.tables.locations.factory4_night.base.BossLocationSpawn = JSON.parse(JSON.stringify(bossSpawns.FactoryNightBossLocationSpawn));
-            this.tables.locations.rezervbase.base.BossLocationSpawn = JSON.parse(JSON.stringify(bossSpawns.ReserveBossLocationSpawn));
-            this.tables.locations.interchange.base.BossLocationSpawn = JSON.parse(JSON.stringify(bossSpawns.InterchangeBossLocationSpawn));
-            this.tables.locations.shoreline.base.BossLocationSpawn = JSON.parse(JSON.stringify(bossSpawns.ShorelineBossLocationSpawn));
-            this.tables.locations.lighthouse.base.BossLocationSpawn = JSON.parse(JSON.stringify(bossSpawns.LighthouseBossLocationSpawn));
-            this.tables.locations.laboratory.base.BossLocationSpawn = JSON.parse(JSON.stringify(bossSpawns.LabsBossLocationSpawn));
-            this.tables.locations.woods.base.BossLocationSpawn = JSON.parse(JSON.stringify(bossSpawns.WoodsBossLocationSpawn));
-            this.tables.locations.tarkovstreets.base.BossLocationSpawn = JSON.parse(JSON.stringify(bossSpawns.StreetsBossLocationSpawn));
+            this.mapDB.bigmap.base.BossLocationSpawn = JSON.parse(JSON.stringify(bossSpawns.CustomsBossLocationSpawn));
+            this.mapDB.factory4_day.base.BossLocationSpawn = JSON.parse(JSON.stringify(bossSpawns.FactoryDayBossLocationSpawn));
+            this.mapDB.factory4_night.base.BossLocationSpawn = JSON.parse(JSON.stringify(bossSpawns.FactoryNightBossLocationSpawn));
+            this.mapDB.rezervbase.base.BossLocationSpawn = JSON.parse(JSON.stringify(bossSpawns.ReserveBossLocationSpawn));
+            this.mapDB.interchange.base.BossLocationSpawn = JSON.parse(JSON.stringify(bossSpawns.InterchangeBossLocationSpawn));
+            this.mapDB.shoreline.base.BossLocationSpawn = JSON.parse(JSON.stringify(bossSpawns.ShorelineBossLocationSpawn));
+            this.mapDB.lighthouse.base.BossLocationSpawn = JSON.parse(JSON.stringify(bossSpawns.LighthouseBossLocationSpawn));
+            this.mapDB.laboratory.base.BossLocationSpawn = JSON.parse(JSON.stringify(bossSpawns.LabsBossLocationSpawn));
+            this.mapDB.woods.base.BossLocationSpawn = JSON.parse(JSON.stringify(bossSpawns.WoodsBossLocationSpawn));
+            this.mapDB.tarkovstreets.base.BossLocationSpawn = JSON.parse(JSON.stringify(bossSpawns.StreetsBossLocationSpawn));
         }
     }
 
@@ -73,10 +73,10 @@ export class Spawns {
         const botsToAddPerMap = seasonalEventConfig.eventBossSpawns["halloweenzombies"];
         infectionHalloween.Enabled = true;
         //infectionHalloween.DisplayUIEnabled = true;
-        //this.tables.locations.bigmap.base.BossLocationSpawn = [];
-        //this.tables.locations.bigmap.base.waves = [];       
+        //this.mapDB.bigmap.base.BossLocationSpawn = [];
+        //this.mapDB.bigmap.base.waves = [];       
         const mapKeys = Object.keys(botsToAddPerMap) ?? [];
-        const locations = databaseService.getLocations();
+        const locations =  this.mapDB;
         for (const mapKey of mapKeys) {
             const bossesToAdd = botsToAddPerMap[mapKey];
             for (const boss of bossesToAdd) {
@@ -92,25 +92,47 @@ export class Spawns {
         }
     }
 
-    public loadSpawnChanges() {
+    public loadSpawnChanges(locationConfig: ILocationConfig) {
         //&& ModTracker.swagPresent == false
         this.loadBossSpawnChanges();
 
         //SPT does its own custom PMC waves, this couble be doubling up or interfering in some way
-        // if (this.modConf.spawn_waves == true && ModTracker.swagPresent == false ) { //&& ModTracker.qtbPresent == false
-        //     locationConfig.customWaves.normal = {}; //get rid of the extra waves of scavs SPT adds for no good reason
-        //     locationConfig.customWaves.boss = {}; //get rid of extra PMC spawns
-        //     this.tables.locations.bigmap.base.waves = spawnWaves.CustomsWaves;
-        //     this.tables.locations.lighthouse.base.waves = spawnWaves.LighthouseWaves;
-        //     this.tables.locations.factory4_day.base.waves = spawnWaves.FactoryWaves;
-        //     this.tables.locations.factory4_night.base.waves = spawnWaves.FactoryWaves;
-        //     this.tables.locations.interchange.base.waves = spawnWaves.InterchangeWaves;
-        //     this.tables.locations.shoreline.base.waves = spawnWaves.ShorelineWaves;
-        //     this.tables.locations.rezervbase.base.waves = spawnWaves.ReserveWaves;
-        //     this.tables.locations.tarkovstreets.base.waves = spawnWaves.StreetsWaves;
-        //     this.tables.locations.woods.base.waves = spawnWaves.WoodsWaves;
-        //     this.tables.locations.laboratory.base.waves = spawnWaves.LabsWaves;
-        // }
+        if (this.modConf.spawn_waves && !ModTracker.swagPresent && !ModTracker.qtbSpawnsActive) {
+            locationConfig.customWaves.normal = {}; //get rid of the extra waves of scavs SPT adds for no good reason
+            locationConfig.customWaves.boss = {}; //get rid of extra PMC spawns
+            locationConfig.addCustomBotWavesToMaps = false;
+            locationConfig.splitWaveIntoSingleSpawnsSettings.enabled = false;
+            // this.mapDB.bigmap.base.waves = spawnWaves.CustomsWaves;
+            // this.mapDB.lighthouse.base.waves = spawnWaves.LighthouseWaves;
+            //this.mapDB.factory4_day.base.waves = spawnWaves.FactoryWaves;
+            //this.mapDB.factory4_night.base.waves = spawnWaves.FactoryWaves;
+            // this.mapDB.interchange.base.waves = spawnWaves.InterchangeWaves;
+            // this.mapDB.shoreline.base.waves = spawnWaves.ShorelineWaves;
+            // this.mapDB.rezervbase.base.waves = spawnWaves.ReserveWaves;
+            // this.mapDB.tarkovstreets.base.waves = spawnWaves.StreetsWaves;
+            // this.mapDB.woods.base.waves = spawnWaves.WoodsWaves;
+            // this.mapDB.laboratory.base.waves = spawnWaves.LabsWaves;
+            // this.mapDB.sandbox.base.waves = spawnWaves.GroundZeroWaves;
+            // this.mapDB.sandbox_high.base.waves = spawnWaves.GroundZeroWaves;
+            for (const i in this.mapDB) {
+                const map = this.mapDB[i]?.base;
+                if (map !== undefined && map?.BossLocationSpawn !== undefined) {  
+                    if (map.NonWaveGroupScenario) map.NonWaveGroupScenario.Enabled = false;
+                    map.BotStart = 0;
+                    map["BotStartPlayer"] = 0;
+                    map.BotStop = 30;
+                    map.BotSpawnPeriodCheck = 10000000;
+                    map.BotSpawnTimeOnMin = 1000000;
+                    map.BotSpawnTimeOnMax = 10000000;
+                    map.BotSpawnTimeOffMin = 1000000;
+                    map.BotSpawnTimeOffMax = 10000000;
+                    map.BotSpawnCountStep = 10000000;
+                    // map.NewSpawn = false;
+                    // map.OldSpawn = true;
+                   map["NewSpawnForPlayers"] = false;
+                }
+            }
+        }
 
         if (this.modConf.logEverything == true) {
             this.logger.info("Map Spawn Changes Loaded");
@@ -120,7 +142,7 @@ export class Spawns {
     public openZonesFix() {
 
         for (let location in botZones.zones) {
-            this.tables.locations[location].base.OpenZones = botZones.zones[location];
+            this.mapDB[location].base.OpenZones = botZones.zones[location];
         }
 
         if (this.modConf.logEverything == true) {
