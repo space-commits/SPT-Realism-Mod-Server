@@ -106,7 +106,6 @@ export class GenBotLvl extends BotLevelGenerator {
 export class BotGen extends BotGenerator {
 
     private placeHolderBotCache: IBotBase[] = [];
-    private placeHolderPlayerScavCache: IBotBase[] = [];
 
     private isBotUSEC(botRole: string): boolean {
         return (botRole.toLocaleLowerCase().includes("usec"));
@@ -153,7 +152,6 @@ export class BotGen extends BotGenerator {
 
     //skew the tiering of PMCs based on map
     private botTierMapFactor(tier: number, utils: Utils): number {
-
         const highTier: string[] = ["rezervbase", "reservebase", "tarkovstreets"];
         const midTier: string[] = ["factory4_night"];
         const lowTier: string[] = ["bigmap", "customs", "interchange", "lighthouse"];
@@ -211,14 +209,6 @@ export class BotGen extends BotGenerator {
     }
 
     public myGeneratePlayerScav(sessionId: string, role: string, difficulty: string, botTemplate: IBotType): IBotBase {
-        //since spawn changes, bots just keep being generated at regular intervals. Causes stutter. Skip bot gen and return a cached bot.
-        RaidInfoTracker.generatedBotsCount += 1;
-        if (modConfig.spawn_waves && !ModTracker.qtbPresent) {
-            if (RaidInfoTracker.generatedBotsCount > 250 && this.placeHolderPlayerScavCache.length !== 0) {
-                return this.checkIfShouldReturnCahcedBot(this.placeHolderPlayerScavCache);
-            }
-        }
-
         let bot = this.getCloneOfBotBase();
         bot.Info.Settings.BotDifficulty = difficulty;
         bot.Info.Settings.Role = role;
@@ -234,10 +224,7 @@ export class BotGen extends BotGenerator {
             botDifficulty: difficulty,
             isPlayerScav: true,
         };
-
-        bot = this.myGenerateBot(sessionId, bot, botTemplate, botGenDetails, 1);
-        if (this.placeHolderPlayerScavCache.length === 0) this.placeHolderPlayerScavCache.push(bot);
-        return bot;
+        return this.myGenerateBot(sessionId, bot, botTemplate, botGenDetails, 1);;
     }
 
     private assignPMCtier(utils: Utils, botRole: string, botLoader: BotLoader, preparedBotBase: IBotBase, botJsonTemplateClone: IBotType): number {
@@ -301,11 +288,11 @@ export class BotGen extends BotGenerator {
     }
 
     public myPrepareAndGenerateBot(sessionId: string, botGenerationDetails: IBotGenerationDetails): IBotBase {
-
         //since spawn changes, bots just keep being generated at regular intervals. Causes stutter. Skip bot gen and return a cached bot.
+        if(RaidInfoTracker.generatedBotsCount == 0) this.placeHolderBotCache = [];
         RaidInfoTracker.generatedBotsCount += 1;
         if (modConfig.spawn_waves && !ModTracker.qtbPresent) {
-            if (RaidInfoTracker.generatedBotsCount > 250 && this.placeHolderBotCache.length !== 0) {
+            if (RaidInfoTracker.generatedBotsCount > 600 && this.placeHolderBotCache.length !== 0) {
                 return this.checkIfShouldReturnCahcedBot(this.placeHolderBotCache);
             }
         }

@@ -881,7 +881,6 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         player.loadPlayerStats();
         player.playerProfiles(jsonUtil);
         weaponsGlobals.loadGlobalWeps();
-
         //have to run this async to ensure correct load order
         (async () => {
 
@@ -898,7 +897,6 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             jsonHand.pushGearToServer();
 
             await jsonHand.processUserJsonFiles();
-
             descGen.descriptionGen();
 
             if (modConfig.malf_changes == true) {

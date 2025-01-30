@@ -57,7 +57,6 @@ class GenBotLvl extends BotLevelGenerator_1.BotLevelGenerator {
 exports.GenBotLvl = GenBotLvl;
 class BotGen extends BotGenerator_1.BotGenerator {
     placeHolderBotCache = [];
-    placeHolderPlayerScavCache = [];
     isBotUSEC(botRole) {
         return (botRole.toLocaleLowerCase().includes("usec"));
     }
@@ -151,13 +150,6 @@ class BotGen extends BotGenerator_1.BotGenerator {
         chances.equipmentMods.mod_equipment_002 = 0;
     }
     myGeneratePlayerScav(sessionId, role, difficulty, botTemplate) {
-        //since spawn changes, bots just keep being generated at regular intervals. Causes stutter. Skip bot gen and return a cached bot.
-        utils_1.RaidInfoTracker.generatedBotsCount += 1;
-        if (modConfig.spawn_waves && !utils_1.ModTracker.qtbPresent) {
-            if (utils_1.RaidInfoTracker.generatedBotsCount > 250 && this.placeHolderPlayerScavCache.length !== 0) {
-                return this.checkIfShouldReturnCahcedBot(this.placeHolderPlayerScavCache);
-            }
-        }
         let bot = this.getCloneOfBotBase();
         bot.Info.Settings.BotDifficulty = difficulty;
         bot.Info.Settings.Role = role;
@@ -172,10 +164,8 @@ class BotGen extends BotGenerator_1.BotGenerator {
             botDifficulty: difficulty,
             isPlayerScav: true,
         };
-        bot = this.myGenerateBot(sessionId, bot, botTemplate, botGenDetails, 1);
-        if (this.placeHolderPlayerScavCache.length === 0)
-            this.placeHolderPlayerScavCache.push(bot);
-        return bot;
+        return this.myGenerateBot(sessionId, bot, botTemplate, botGenDetails, 1);
+        ;
     }
     assignPMCtier(utils, botRole, botLoader, preparedBotBase, botJsonTemplateClone) {
         const baseTier = (this.getPMCTier(utils));
@@ -243,9 +233,12 @@ class BotGen extends BotGenerator_1.BotGenerator {
     }
     myPrepareAndGenerateBot(sessionId, botGenerationDetails) {
         //since spawn changes, bots just keep being generated at regular intervals. Causes stutter. Skip bot gen and return a cached bot.
+        if (utils_1.RaidInfoTracker.generatedBotsCount == 0)
+            this.placeHolderBotCache = [];
         utils_1.RaidInfoTracker.generatedBotsCount += 1;
+        this.logger.warning("bot " + utils_1.RaidInfoTracker.generatedBotsCount);
         if (modConfig.spawn_waves && !utils_1.ModTracker.qtbPresent) {
-            if (utils_1.RaidInfoTracker.generatedBotsCount > 250 && this.placeHolderBotCache.length !== 0) {
+            if (utils_1.RaidInfoTracker.generatedBotsCount > 600 && this.placeHolderBotCache.length !== 0) {
                 return this.checkIfShouldReturnCahcedBot(this.placeHolderBotCache);
             }
         }

@@ -142,7 +142,7 @@ export class ItemStatHandler {
         );
     }
 
-    private handleMasks(fileItem: any, serverItem: ITemplateItem){
+    private handleMasks(fileItem: any, serverItem: ITemplateItem) {
         if (fileItem?.IsGasMask != undefined && fileItem?.IsGasMask === true && fileItem?.MaskToUse !== undefined) {
             serverItem._props.FaceShieldComponent = true;
             serverItem._props.FaceShieldMask = "NoMask";
@@ -151,7 +151,7 @@ export class ItemStatHandler {
             serverItem._props.MaxDurability = 25;
             serverItem._props.RepairCost = 200;
             serverItem._props.Durability = serverItem._props.MaxDurability;
-            if(modConfig.enable_hazard_zones){
+            if (modConfig.enable_hazard_zones) {
                 this.addGasFilterSlot(serverItem);
             }
         }
@@ -180,7 +180,7 @@ export class ItemStatHandler {
 
             serverItem._props.speedPenaltyPercent = fileItem.speedPenaltyPercent != undefined ? fileItem.speedPenaltyPercent : baseItem._props.speedPenaltyPercent;
             serverItem._props.mousePenalty = fileItem.mousePenalty != undefined ? fileItem.mousePenalty : baseItem._props.mousePenalty;
-            serverItem._props.weaponErgonomicPenalty =  fileItem.weaponErgonomicPenalty != undefined ? fileItem.weaponErgonomicPenalty : baseItem._props.weaponErgonomicPenalty;
+            serverItem._props.weaponErgonomicPenalty = fileItem.weaponErgonomicPenalty != undefined ? fileItem.weaponErgonomicPenalty : baseItem._props.weaponErgonomicPenalty;
 
             if (serverItem._props?.armorClass != undefined) {
                 serverItem._props.armorClass = fileItem.ArmorLevel != undefined ? fileItem.ArmorLevel : serverItem._props.armorClass;
@@ -216,7 +216,7 @@ export class ItemStatHandler {
         if (fileItem.ItemID in serverTemplates) {
             let serverItem = serverTemplates[fileItem.ItemID]; //this will be the reskin item's stats, which I want to reset
             let baseItem = serverItem; //temp set it to server template
-            
+
             if (fileItem.TemplateID != undefined) {
                 baseItem = serverTemplates[fileItem.TemplateID]; //if it's a reskin, need the server stats of the item the skin is based on
                 fileItem = this.modifiedItems[fileItem.TemplateID]; //if it's a reskin, need the realism specific stats of the item the skin is based on
@@ -282,7 +282,7 @@ export class ItemStatHandler {
         if (fileItem.ItemID in serverTemplates) {
             let serverItem = serverTemplates[fileItem.ItemID]; //this will be the reskin item's stats, which I want to reset
             let baseItem = serverItem; //temp set it to server template
-
+            
             if (fileItem.TemplateID != undefined) {
                 baseItem = serverTemplates[fileItem.TemplateID]; //if it's a reskin, need the server stats of the item the skin is based on
                 fileItem = this.modifiedItems[fileItem.TemplateID]; //if it's a reskin, need the realism specific stats of the item the skin is based on
@@ -363,16 +363,16 @@ export class ItemStatHandler {
                     const jsonData = JSON.parse(data);
 
                     for (let i in jsonData) {
-                        if (jsonData[i].$type.includes("Gun")) {
+                        if ((modConfig.recoil_attachment_overhaul || modConfig.realistic_ballistics) && jsonData[i].$type.includes("Gun")) {
                             this.weapPusherHelper(jsonData[i], this.itemDB());
                         }
-                        if (jsonData[i].$type.includes("WeaponMod")) {
+                        if (modConfig.recoil_attachment_overhaul && jsonData[i].$type.includes("WeaponMod")) {
                             this.modPusherHelper(jsonData[i], this.itemDB());
                         }
                         if (jsonData[i].$type.includes("Gear")) {
                             this.gearPusherHelper(jsonData[i], this.itemDB());
                         }
-                        if (jsonData[i].$type.includes("Ammo")) {
+                        if (modConfig.realistic_ballistics && jsonData[i].$type.includes("Ammo")) {
                             this.ammoPusherHelper(jsonData[i], this.itemDB());
                         }
                     }
