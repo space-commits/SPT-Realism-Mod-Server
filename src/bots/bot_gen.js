@@ -236,8 +236,7 @@ class BotGen extends BotGenerator_1.BotGenerator {
         if (utils_1.RaidInfoTracker.generatedBotsCount == 0)
             this.placeHolderBotCache = [];
         utils_1.RaidInfoTracker.generatedBotsCount += 1;
-        this.logger.warning("bot " + utils_1.RaidInfoTracker.generatedBotsCount);
-        if (modConfig.spawn_waves && !utils_1.ModTracker.qtbPresent) {
+        if (modConfig.spawn_waves == true && !utils_1.ModTracker.qtbPresent && !utils_1.ModTracker.swagPresent) {
             if (utils_1.RaidInfoTracker.generatedBotsCount > 600 && this.placeHolderBotCache.length !== 0) {
                 return this.checkIfShouldReturnCahcedBot(this.placeHolderBotCache);
             }

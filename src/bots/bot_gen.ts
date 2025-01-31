@@ -291,7 +291,7 @@ export class BotGen extends BotGenerator {
         //since spawn changes, bots just keep being generated at regular intervals. Causes stutter. Skip bot gen and return a cached bot.
         if(RaidInfoTracker.generatedBotsCount == 0) this.placeHolderBotCache = [];
         RaidInfoTracker.generatedBotsCount += 1;
-        if (modConfig.spawn_waves && !ModTracker.qtbPresent) {
+        if (modConfig.spawn_waves == true && !ModTracker.qtbPresent && !ModTracker.swagPresent) {
             if (RaidInfoTracker.generatedBotsCount > 600 && this.placeHolderBotCache.length !== 0) {
                 return this.checkIfShouldReturnCahcedBot(this.placeHolderBotCache);
             }

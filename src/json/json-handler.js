@@ -320,10 +320,10 @@ class ItemStatHandler {
                     const data = await readFile(filePath, 'utf8');
                     const jsonData = JSON.parse(data);
                     for (let i in jsonData) {
-                        if (modConfig.recoil_attachment_overhaul && jsonData[i].$type.includes("Gun")) {
+                        if ((modConfig.recoil_attachment_overhaul || modConfig.realistic_ballistics) && jsonData[i].$type.includes("Gun")) {
                             this.weapPusherHelper(jsonData[i], this.itemDB());
                         }
-                        if ((modConfig.recoil_attachment_overhaul || modConfig.realistic_ballistics) && jsonData[i].$type.includes("WeaponMod")) {
+                        if (modConfig.recoil_attachment_overhaul && jsonData[i].$type.includes("WeaponMod")) {
                             this.modPusherHelper(jsonData[i], this.itemDB());
                         }
                         if (jsonData[i].$type.includes("Gear")) {

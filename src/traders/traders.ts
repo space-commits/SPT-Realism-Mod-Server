@@ -955,36 +955,20 @@ export class RandomizeTraderAssort {
     }
 
     private adjustPriceByCategory(barter: IBarterScheme, itemTemplId: string, cost: number) {
-        if (this.itemDB[itemTemplId]._parent === ParentClasses.AMMO) {
-            barter.count = cost * 3;
-        }
-        if (this.itemDB[itemTemplId]._parent === ParentClasses.AMMO_BOX) {
-            barter.count = cost * 3;
-        }
-        if (this.itemDB[itemTemplId]._parent === ParentClasses.DRUGS) {
-            barter.count = cost * 2;
-        }
-        if (this.itemDB[itemTemplId]._parent === ParentClasses.MEDKIT) {
-            barter.count = cost * 2;
-        }
-        if (this.itemDB[itemTemplId]._parent === ParentClasses.MEDS) {
-            barter.count = cost * 2;
-        }
-        if (this.itemDB[itemTemplId]._parent === ParentClasses.STIMULATOR) {
-            barter.count = cost * 2.5;
-        }
-        if (this.itemDB[itemTemplId]._parent === ParentClasses.MEDICAL_SUPPLIES) {
-            barter.count = cost * 2;
-        }
-        if (this.itemDB[itemTemplId]._parent === ParentClasses.FOOD) {
-            barter.count = cost * 2;
-        }
-        if (this.itemDB[itemTemplId]._parent === ParentClasses.DRINK) {
-            barter.count = cost * 2;
-        }
-        if (this.itemDB[itemTemplId]._parent === ParentClasses.HEADWEAR) {
-            barter.count = cost * 0.55;
-        }
+        const item = this.itemDB[itemTemplId];
+        if (item === undefined) return;
+        const itemParent = this.itemDB[itemTemplId]?._parent;
+        if (itemParent === undefined) return;
+        if (itemParent === ParentClasses.AMMO) barter.count = cost * 3;
+        if (itemParent === ParentClasses.AMMO_BOX) barter.count = cost * 3;
+        if (itemParent === ParentClasses.DRUGS) barter.count = cost * 2;
+        if (itemParent === ParentClasses.MEDKIT) barter.count = cost * 2;
+        if (itemParent === ParentClasses.MEDS) barter.count = cost * 2;
+        if (itemParent === ParentClasses.STIMULATOR) barter.count = cost * 2.5;
+        if (itemParent === ParentClasses.MEDICAL_SUPPLIES) barter.count = cost * 2;
+        if (itemParent === ParentClasses.FOOD) barter.count = cost * 2;
+        if (itemParent === ParentClasses.DRINK) barter.count = cost * 2;
+        if (itemParent === ParentClasses.HEADWEAR) barter.count = cost * 0.55;
     }
 
     public randomizeLL(ll: Record<string, number>, i: string) {

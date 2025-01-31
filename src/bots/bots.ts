@@ -623,7 +623,7 @@ export class BotLoader {
 
         this.botConfPMC().isUsec = rmBotConfig.pmc1.isUsec;
 
-        if (!ModTracker.swagPresent && this.modConfig.spawn_waves && !ModTracker.qtbSpawnsActive) {  
+        if (this.modConfig.spawn_waves == true && !ModTracker.swagPresent && !ModTracker.qtbSpawnsActive) {  
             this.botConfPMC().convertIntoPmcChance = rmBotConfig.pmc1.convertIntoPmcChance;
         }
 

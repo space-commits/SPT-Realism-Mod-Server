@@ -602,7 +602,7 @@ class BotLoader {
         this.botConfPMC().maxVestLootTotalRub = rmBotConfig.pmc1.maxVestLootTotalRub;
         this.botConfPMC().looseWeaponInBackpackChancePercent = rmBotConfig.pmc1.looseWeaponInBackpackChancePercent;
         this.botConfPMC().isUsec = rmBotConfig.pmc1.isUsec;
-        if (!utils_1.ModTracker.swagPresent && this.modConfig.spawn_waves && !utils_1.ModTracker.qtbSpawnsActive) {
+        if (this.modConfig.spawn_waves == true && !utils_1.ModTracker.swagPresent && !utils_1.ModTracker.qtbSpawnsActive) {
             this.botConfPMC().convertIntoPmcChance = rmBotConfig.pmc1.convertIntoPmcChance;
         }
         this.botConf().itemSpawnLimits.pmc = pmcLootLimits.PMCLootLimit1;

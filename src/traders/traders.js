@@ -841,36 +841,32 @@ class RandomizeTraderAssort {
         }
     }
     adjustPriceByCategory(barter, itemTemplId, cost) {
-        if (this.itemDB[itemTemplId]._parent === enums_1.ParentClasses.AMMO) {
+        const item = this.itemDB[itemTemplId];
+        if (item === undefined)
+            return;
+        const itemParent = this.itemDB[itemTemplId]?._parent;
+        if (itemParent === undefined)
+            return;
+        if (itemParent === enums_1.ParentClasses.AMMO)
             barter.count = cost * 3;
-        }
-        if (this.itemDB[itemTemplId]._parent === enums_1.ParentClasses.AMMO_BOX) {
+        if (itemParent === enums_1.ParentClasses.AMMO_BOX)
             barter.count = cost * 3;
-        }
-        if (this.itemDB[itemTemplId]._parent === enums_1.ParentClasses.DRUGS) {
+        if (itemParent === enums_1.ParentClasses.DRUGS)
             barter.count = cost * 2;
-        }
-        if (this.itemDB[itemTemplId]._parent === enums_1.ParentClasses.MEDKIT) {
+        if (itemParent === enums_1.ParentClasses.MEDKIT)
             barter.count = cost * 2;
-        }
-        if (this.itemDB[itemTemplId]._parent === enums_1.ParentClasses.MEDS) {
+        if (itemParent === enums_1.ParentClasses.MEDS)
             barter.count = cost * 2;
-        }
-        if (this.itemDB[itemTemplId]._parent === enums_1.ParentClasses.STIMULATOR) {
+        if (itemParent === enums_1.ParentClasses.STIMULATOR)
             barter.count = cost * 2.5;
-        }
-        if (this.itemDB[itemTemplId]._parent === enums_1.ParentClasses.MEDICAL_SUPPLIES) {
+        if (itemParent === enums_1.ParentClasses.MEDICAL_SUPPLIES)
             barter.count = cost * 2;
-        }
-        if (this.itemDB[itemTemplId]._parent === enums_1.ParentClasses.FOOD) {
+        if (itemParent === enums_1.ParentClasses.FOOD)
             barter.count = cost * 2;
-        }
-        if (this.itemDB[itemTemplId]._parent === enums_1.ParentClasses.DRINK) {
+        if (itemParent === enums_1.ParentClasses.DRINK)
             barter.count = cost * 2;
-        }
-        if (this.itemDB[itemTemplId]._parent === enums_1.ParentClasses.HEADWEAR) {
+        if (itemParent === enums_1.ParentClasses.HEADWEAR)
             barter.count = cost * 0.55;
-        }
     }
     randomizeLL(ll, i) {
         let level = ll[i];
