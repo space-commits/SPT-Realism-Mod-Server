@@ -44,8 +44,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.015,
-        "RecoilIntensity": 0.345,
-        "TemplateType": "gun"
+        "RecoilIntensity": 0.345
     },
     "6217726288ed9f0845317459": {
         "$type": "RealismMod.Gun, RealismMod",
@@ -92,8 +91,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.015,
-        "RecoilIntensity": 0.345,
-        "TemplateType": "gun"
+        "RecoilIntensity": 0.345
     },
     "62178c4d4ecf221597654e3d": {
         "$type": "RealismMod.Gun, RealismMod",
@@ -140,8 +138,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.015,
-        "RecoilIntensity": 0.345,
-        "TemplateType": "gun"
+        "RecoilIntensity": 0.345
     },
     "62178be9d0050232da3485d9": {
         "$type": "RealismMod.Gun, RealismMod",
@@ -188,8 +185,7 @@
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.015,
-        "RecoilIntensity": 0.345,
-        "TemplateType": "gun"
+        "RecoilIntensity": 0.345
     },
     "624c0b3340357b5f566e8766": {
         "$type": "RealismMod.Gun, RealismMod",

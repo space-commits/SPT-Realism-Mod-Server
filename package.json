@@ -4,7 +4,7 @@
     "main": "src/mod.js",
     "license": "CC BY-NC-ND 4.0",
     "author": "Fontaine",
-    "sptVersion": "3.10.x",
+    "sptVersion": "3.10.5",
     "loadBefore": [],
 	"loadAfter": [],
 	"incompatibilities": [],

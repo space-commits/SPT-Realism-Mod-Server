@@ -297,16 +297,16 @@ export class Traders {
         if (modConfig.realistic_ballistics == true) this.setBasePrice(AmmoTemplates, trader);
     }
 
-    public setBasePrice(db: any[], trader: ITrader) {
+    public setBasePrice(templates: any[], trader: ITrader) {
         for (let item in trader.assort.items) { //loop offers
             if (trader.assort.items[item].parentId !== "hideout") continue;
             let offer = trader.assort.items[item];
             let offerId = offer._id;
             let offerTpl = offer._tpl;
-            if (db[offerTpl]) {
+            if (templates[offerTpl]) {
                 let barter = trader?.assort?.barter_scheme[offerId][0][0];
                 if (this.itemDB()[barter?._tpl]?._parent !== ParentClasses.MONEY) continue;
-                let templateItem = db[offerTpl];
+                let templateItem = templates[offerTpl];
                 let priceModifier = templateItem?.BasePriceModifier !== undefined ? templateItem?.BasePriceModifier : 1;
                 barter.count *= priceModifier;
             }
@@ -385,6 +385,9 @@ export class Traders {
         }
 
         if (this.modConf.enable_hazard_zones == true) {
+            //m53a1 gas mask
+            this.assortItemPusher(this.utils.genId(), pkId, "67a13809c3bc1e2fa47e6eec", 1, "5696686a4bdc2da3298b456a", 4, false, 210);
+
             //trimodol
             this.assortBarterPusher("670ee6b57b09b6f86184c761", theraId, "637b620db7afa97bfc3d7009", 1, { "59e361e886f774176c10a2a5": 2, "5b4335ba86f7744d2837a264": 1 }, 3)
             this.addQuestAssortUnlock("670ee6b57b09b6f86184c761", "66dad1a18cbba6e558486336", theraId, false);

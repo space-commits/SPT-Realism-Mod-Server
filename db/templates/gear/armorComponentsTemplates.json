@@ -8,9 +8,7 @@
         "ArmorClass": "Abbr. NIJ IIIA",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "Price": 0,
-        "TemplateType": "gear"
+        "ReloadSpeedMulti": 1
     },
     "5d6d3be5a4b9361bc73bc763": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -21,9 +19,7 @@
         "ArmorClass": "GOST 2",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "Price": 0,
-        "TemplateType": "gear"
+        "ReloadSpeedMulti": 1
     },
     "5a16badafcdbcb001865f72d": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -34,9 +30,7 @@
         "ArmorClass": "NIJ IIIA",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "Price": 0,
-        "TemplateType": "gear"
+        "ReloadSpeedMulti": 1
     },
     "5c1793902e221602b21d3de2": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -47,9 +41,7 @@
         "ArmorClass": "NIJ IIIA",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "Price": 0,
-        "TemplateType": "gear"
+        "ReloadSpeedMulti": 1
     },
     "5e00cfa786f77469dc6e5685": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -60,9 +52,7 @@
         "ArmorClass": "17gr V0 ≥ 731 m/s",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "Price": 0,
-        "TemplateType": "gear"
+        "ReloadSpeedMulti": 1
     },
     "5e01f31d86f77465cf261343": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -73,9 +63,7 @@
         "ArmorClass": "17gr V0 ≥ 731 m/s",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "Price": 0,
-        "TemplateType": "gear"
+        "ReloadSpeedMulti": 1
     },
     "5c0e66e2d174af02a96252f4": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -86,9 +74,7 @@
         "ArmorClass": "7.62x39 MSC @ 732 m/s",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "Price": 0,
-        "TemplateType": "gear"
+        "ReloadSpeedMulti": 1
     },
     "5c178a942e22164bef5ceca3": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -99,9 +85,7 @@
         "ArmorClass": "NIJ IIIA",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "Price": 0,
-        "TemplateType": "gear"
+        "ReloadSpeedMulti": 1
     },
     "5ea18c84ecf1982c7712d9a2": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -112,9 +96,7 @@
         "ArmorClass": "NIJ III",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "Price": 0,
-        "TemplateType": "gear"
+        "ReloadSpeedMulti": 1
     },
     "5e00cdd986f7747473332240": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -126,8 +108,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "BlocksMouth": true,
-        "TemplateType": "gear"
+        "BlocksMouth": true
     },
     "5ac4c50d5acfc40019262e87": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -139,8 +120,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "BlocksMouth": true,
-        "TemplateType": "gear"
+        "BlocksMouth": true
     },
     "5b46238386f7741a693bcf9c": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -152,8 +132,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "BlocksMouth": true,
-        "TemplateType": "gear"
+        "BlocksMouth": true
     },
     "5f60c85b58eff926626a60f7": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -165,8 +144,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "BlocksMouth": true,
-        "TemplateType": "gear"
+        "BlocksMouth": true
     },
     "5aa7e3abe5b5b000171d064d": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -178,8 +156,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "BlocksMouth": true,
-        "TemplateType": "gear"
+        "BlocksMouth": true
     },
     "5ca2113f86f7740b2547e1d2": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -191,8 +168,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "BlocksMouth": true,
-        "TemplateType": "gear"
+        "BlocksMouth": true
     },
     "5d6d3829a4b9361bc8618943": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -204,8 +180,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "BlocksMouth": true,
-        "TemplateType": "gear"
+        "BlocksMouth": true
     },
     "5c0e842486f77443a74d2976": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -217,8 +192,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "BlocksMouth": true,
-        "TemplateType": "gear"
+        "BlocksMouth": true
     },
     "5aa7e373e5b5b000137b76f0": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -230,8 +204,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "BlocksMouth": true,
-        "TemplateType": "gear"
+        "BlocksMouth": true
     },
     "5a16b7e1fcdbcb00165aa6c9": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -243,8 +216,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "BlocksMouth": true,
-        "TemplateType": "gear"
+        "BlocksMouth": true
     },
     "5a16b672fcdbcb001912fa83": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -255,9 +227,7 @@
         "ArmorClass": "Gentex PRS-1011",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "Price": 0,
-        "TemplateType": "gear"
+        "ReloadSpeedMulti": 1
     },
     "5c0919b50db834001b7ce3b9": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -269,8 +239,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "BlocksMouth": true,
-        "TemplateType": "gear"
+        "BlocksMouth": true
     },
     "5e01f37686f774773c6f6c15": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -282,8 +251,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "BlocksMouth": true,
-        "TemplateType": "gear"
+        "BlocksMouth": true
     },
     "5ea058e01dbce517f324b3e2": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -295,8 +263,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "BlocksMouth": true,
-        "TemplateType": "gear"
+        "BlocksMouth": true
     },
     "5f60c076f2bcbb675b00dac2": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -308,8 +275,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "BlocksMouth": true,
-        "TemplateType": "gear"
+        "BlocksMouth": true
     },
     "5a16ba61fcdbcb098008728a": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -321,8 +287,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "BlocksMouth": true,
-        "TemplateType": "gear"
+        "BlocksMouth": true
     },
     "5f60bf4558eff926626a60f2": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -333,9 +298,7 @@
         "ArmorClass": "MIL-PRF-32432 (GL)",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "Price": 0,
-        "TemplateType": "gear"
+        "ReloadSpeedMulti": 1
     },
     "60a7ad3a0c5cb24b0134664a": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -346,8 +309,7 @@
         "ArmorClass": "Unclassified",
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "BlocksMouth": true,
-        "TemplateType": "gear"
+        "BlocksMouth": true
     },
     "60a7ad2a2198820d95707a2e": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -358,8 +320,7 @@
         "ArmorClass": "Unclassified",
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "BlocksMouth": true,
-        "TemplateType": "gear"
+        "BlocksMouth": true
     },
     "6570a88c8f221f3b210353b7": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -368,11 +329,9 @@
         "AllowADS": false,
         "LoyaltyLevel": 3,
         "ArmorClass": "124gr 9mm FMJ V0 ≥ 427 m/s",
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 1,
-        "BlocksMouth": true,
-        "TemplateType": "gear"
+        "BlocksMouth": true
     },
     "65719f9ef392ad76c50a2ec8": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -381,10 +340,8 @@
         "AllowADS": true,
         "LoyaltyLevel": 3,
         "ArmorClass": "GOST 2",
-        "Price": 0,
         "ReloadSpeedMulti": 1,
         "Comfort": 1,
-        "BlocksMouth": true,
-        "TemplateType": "gear"
+        "BlocksMouth": true
     }
 }

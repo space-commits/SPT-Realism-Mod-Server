@@ -9,8 +9,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5b4329075acfc400153b78ff": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -22,8 +21,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5a43943586f77416ad2f06e2": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -35,8 +33,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5aa2b89be5b5b0001569311f": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -48,8 +45,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5f60e784f2bcbb675b00dac7": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -61,8 +57,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5f99418230835532b445e954": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -74,8 +69,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5aa2b9ede5b5b000137b758b": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -87,8 +81,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5ab8f20c86f7745cdb629fb2": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -100,8 +93,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5b40e5e25acfc4001a599bea": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -113,8 +105,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "603619720ca681766b6a0fc4": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -126,8 +117,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5aa2b87de5b5b00016327c25": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -139,8 +129,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "59e770f986f7742cbe3164ef": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -152,8 +141,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5f60e7788adaa7100c3adb49": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -165,8 +153,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5b43271c5acfc432ff4dce65": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -178,8 +165,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "61c18db6dfd64163ea78fbb4": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -191,8 +177,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "572b7fa124597762b472f9d2": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -204,8 +189,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "572b7d8524597762b472f9d1": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -217,8 +201,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5aa2a7e8e5b5b00016327c16": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -230,8 +213,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5f60e6403b85f6263c14558c": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -243,8 +225,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "60361b5a9a15b10d96792291": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -256,8 +237,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5d96141523f0ea1b7f2aacab": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -269,8 +249,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5b4327aa5acfc400175496e0": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -282,8 +261,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "60a7acf20c5cb24b01346648": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -295,8 +273,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5aa2ba19e5b5b00014028f4e": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -308,8 +285,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "59e7708286f7742cbd762753": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -321,8 +297,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5a43957686f7742a2c2f11b0": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -334,8 +309,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5aa2ba46e5b5b000137b758d": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -347,8 +321,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5bd073c986f7747f627e796c": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -360,8 +333,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "6040de02647ad86262233012": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -373,8 +345,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "60361a7497633951dc245eb4": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -386,8 +357,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5b40e61f5acfc4001a599bec": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -399,8 +369,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5c066ef40db834001966a595": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -412,8 +381,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5aa2b8d7e5b5b00014028f4a": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -425,8 +393,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5f994730c91ed922dd355de3": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -438,8 +405,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "618aef6d0a5a59657e5f55ee": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -451,8 +417,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "60b52e5bc7d8103275739d67": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -464,8 +429,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "636270263f2495c26f00b007": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -477,8 +441,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "628e4dd1f477aa12234918aa": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -490,8 +453,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "603618feffd42c541047f771": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -503,8 +465,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "60361b0b5a45383c122086a1": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -516,8 +477,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "62a5c2c98ec41a51b34739c0": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -529,8 +489,7 @@
         "BlocksMouth": true,
         "speedPenaltyPercent": -5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -10,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -10
     },
     "62a5c333ec21e50cad3b5dc6": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -542,8 +501,7 @@
         "BlocksMouth": true,
         "speedPenaltyPercent": -5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -10,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -10
     },
     "62a5c41e8ec41a51b34739c3": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -555,8 +513,7 @@
         "BlocksMouth": true,
         "speedPenaltyPercent": -5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -10,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -10
     },
     "62963c18dbc8ab5f0d382d0b": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -568,8 +525,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5e54f79686f7744022011103": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -584,8 +540,7 @@
         "weaponErgonomicPenalty": -10,
         "IsGasMask": true,
         "GasProtection": 0.01346,
-        "RadProtection": 0,
-        "TemplateType": "gear"
+        "RadProtection": 0
     },
     "5b432b6c5acfc4001a599bf0": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -597,8 +552,7 @@
         "BlocksMouth": true,
         "speedPenaltyPercent": -5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -10,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -10
     },
     "5bd071d786f7747e707b93a3": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -610,8 +564,7 @@
         "BlocksMouth": true,
         "speedPenaltyPercent": -5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -10,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -10
     },
     "5bd0716d86f774171822ef4b": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -623,8 +576,7 @@
         "BlocksMouth": true,
         "speedPenaltyPercent": -5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -10,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -10
     },
     "5bd06f5d86f77427101ad47c": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -636,8 +588,7 @@
         "BlocksMouth": true,
         "speedPenaltyPercent": -5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -10,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -10
     },
     "62a09dd4621468534a797ac7": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -649,8 +600,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "59e7715586f7742ee5789605": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -665,8 +615,23 @@
         "weaponErgonomicPenalty": -20,
         "IsGasMask": true,
         "GasProtection": 0.3,
-        "RadProtection": 0.2,
-        "TemplateType": "gear"
+        "RadProtection": 0.2
+    },
+    "67a13809c3bc1e2fa47e6eec": {
+        "$type": "RealismMod.Gear, RealismMod",
+        "ItemID": "67a13809c3bc1e2fa47e6eec",
+        "Name": "item_equipment_facecover_gasmask_m53a1",
+        "AllowADS": true,
+        "LoyaltyLevel": 4,
+        "ReloadSpeedMulti": 1,
+        "BlocksMouth": true,
+        "speedPenaltyPercent": -3.5,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": -10,
+        "IsGasMask": true,
+        "GasProtection": 0.74,
+        "RadProtection": 0.7,
+        "MaskToUse": "tgc"
     },
     "60363c0c92ec1c31037959f5": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -676,14 +641,13 @@
         "LoyaltyLevel": 4,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": -5,
+        "speedPenaltyPercent": -6,
         "mousePenalty": 0,
         "weaponErgonomicPenalty": -20,
         "IsGasMask": true,
-        "GasProtection": 0.87,
+        "GasProtection": 0.86,
         "RadProtection": 0.6,
-        "MaskToUse": "gp5",
-        "TemplateType": "gear"
+        "MaskToUse": "gp5"
     },
     "5b432c305acfc40019478128": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -697,10 +661,9 @@
         "mousePenalty": 0,
         "weaponErgonomicPenalty": -24,
         "IsGasMask": true,
-        "GasProtection": 0.75,
-        "RadProtection": 0.71,
-        "MaskToUse": "gp5",
-        "TemplateType": "gear"
+        "GasProtection": 0.65,
+        "RadProtection": 0.82,
+        "MaskToUse": "gp5"
     },
     "6176a48d732a664031271438": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -712,8 +675,7 @@
         "BlocksMouth": true,
         "speedPenaltyPercent": -5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -10,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -10
     },
     "635267ab3c89e2112001f826": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -725,8 +687,7 @@
         "BlocksMouth": true,
         "speedPenaltyPercent": -5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -10,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -10
     },
     "6176a40f0b8c0312ac75a3d3": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -738,8 +699,7 @@
         "BlocksMouth": true,
         "speedPenaltyPercent": -5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -10,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -10
     },
     "572b7f1624597762ae139822": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -751,8 +711,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5ab8f39486f7745cd93a1cca": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -764,8 +723,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5ab8f4ff86f77431c60d91ba": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -777,8 +735,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5c1a1e3f2e221602b66cc4c2": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -790,8 +747,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "63626d904aa74b8fe30ab426": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -803,8 +759,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "607f201b3c672b3b3a24a800": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -816,8 +771,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5b432f3d5acfc4704b4a1dfb": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -829,8 +783,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "62a61bbf8ec41a51b34758d2": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -842,8 +795,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5b4326435acfc433000ed01d": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -855,8 +807,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5e71f6be86f77429f2683c44": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -868,8 +819,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5b4325355acfc40019478126": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -881,8 +831,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5e54f76986f7740366043752": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -894,8 +843,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5fd8d28367cb5e077335170f": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -907,8 +855,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5e71fad086f77422443d4604": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -920,8 +867,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5bd073a586f7747e6f135799": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -933,8 +879,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "572b7fa524597762b747ce82": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -946,8 +891,7 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5ab8f85d86f7745cd93a1cf5": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -959,7 +903,6 @@
         "BlocksMouth": false,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     }
 }

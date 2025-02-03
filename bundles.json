@@ -54,6 +54,13 @@
         "shaders",
         "cubemaps"
       ]
+    },
+    {
+      "key": "m53a1_gas_mask.bundle",
+      "dependencyKeys": [
+        "shaders",
+        "cubemaps"
+      ]
     }
   ]
 }

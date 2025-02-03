@@ -231,6 +231,9 @@ class ItemStatHandler {
             serverItem._props.Weight = fileItem.Weight != undefined ? fileItem.Weight : 0;
             serverItem._props.ShotgunDispersion = fileItem.ShotgunDispersion != undefined ? fileItem.ShotgunDispersion : 1;
             serverItem._props.Loudness = fileItem.Loudness != undefined ? fileItem.Loudness : 0;
+            let confFileItems = fileItem.ConflictingItems ?? [];
+            serverItem._props.ConflictingItems = [...new Set([...serverItem._props.ConflictingItems, ...confFileItems])];
+            ;
             let isScope = serverItem._id === enums_1.ParentClasses.COLLIMATOR || serverItem._id === enums_1.ParentClasses.COMPACT_COLLIMATOR || serverItem._parent === enums_1.ParentClasses.ASSAULT_SCOPE || serverItem._parent === enums_1.ParentClasses.SPECIAL_SCOPE || serverItem._parent === enums_1.ParentClasses.OPTIC_SCOPE || serverItem._parent === enums_1.ParentClasses.THEMALVISION || serverItem._parent === enums_1.ParentClasses.NIGHTVISION;
             ;
             if (isScope != true) {

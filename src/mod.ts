@@ -760,9 +760,9 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         const maps = new Spawns(logger, tables, modConfig, tables.locations, utils);
         const gear = new Gear(tables, logger, modConfig);
         const itemCloning = new ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
-        const descGen = new DescriptionGen(tables, modConfig, logger);
-        const jsonHand = new ItemStatHandler(tables, logger);
-
+        const statHandler = new ItemStatHandler(tables, logger);
+        const descGen = new DescriptionGen(tables, modConfig, logger, statHandler);
+        
         //Remember to back up json data before using this, and make sure it isn't overriding existing json objects
         // jsonGen.attTemplatesCodeGen();
         // jsonGen.weapTemplatesCodeGen();
@@ -891,12 +891,12 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             }
 
             if (modConfig.recoil_attachment_overhaul) {
-                jsonHand.pushModsToServer();
-                jsonHand.pushWeaponsToServer();
+                statHandler.pushModsToServer();
+                statHandler.pushWeaponsToServer();
             }
-            jsonHand.pushGearToServer();
+            statHandler.pushGearToServer();
 
-            await jsonHand.processUserJsonFiles();
+            await statHandler.processUserJsonFiles();
             descGen.descriptionGen();
 
             if (modConfig.malf_changes == true) {
@@ -910,7 +910,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
 
             gear.loadGearConflicts();
 
-            jsonHand.modifiedItems = {}; //empty temp template object
+            statHandler.modifiedItems = {}; //empty temp template object
         })();
     }
 

@@ -198,6 +198,7 @@ export class BotGen extends BotGenerator {
             equipment.FaceCover["672e2e756803734b60f5ac1e"] = 2;
             equipment.FaceCover["672e2e7517018293d11bbdc1"] = 2;
             equipment.FaceCover["672e2e7504b1f1d5b0e4209c"] = 1;
+            equipment.FaceCover["67a13809c3bc1e2fa47e6eec"] = 1;
         }
 
         chances.equipment.Eyewear = 0;
@@ -289,9 +290,9 @@ export class BotGen extends BotGenerator {
 
     public myPrepareAndGenerateBot(sessionId: string, botGenerationDetails: IBotGenerationDetails): IBotBase {
         //since spawn changes, bots just keep being generated at regular intervals. Causes stutter. Skip bot gen and return a cached bot.
-        if(RaidInfoTracker.generatedBotsCount == 0) this.placeHolderBotCache = [];
+        if (RaidInfoTracker.generatedBotsCount == 0) this.placeHolderBotCache = [];
         RaidInfoTracker.generatedBotsCount += 1;
-        if (modConfig.spawn_waves == true && !ModTracker.qtbPresent && !ModTracker.swagPresent) {
+        if (modConfig.spawn_waves == true && !ModTracker.qtbSpawnsActive && !ModTracker.swagPresent) {
             if (RaidInfoTracker.generatedBotsCount > 600 && this.placeHolderBotCache.length !== 0) {
                 return this.checkIfShouldReturnCahcedBot(this.placeHolderBotCache);
             }
@@ -1226,24 +1227,16 @@ export class BotGenHelper extends BotGeneratorHelper {
         }
 
         if (itemTemplate._props.MaxHpResource) {
-            let medRandomization: IRandomisedResourceValues = { "resourcePercent": 30, "chanceMaxResourcePercent": 20 };
-            itemProperties.MedKit = {
-                HpResource: this.getRandomizedResourceValue(
-                    itemTemplate._props.MaxHpResource,
-                    medRandomization,
-                )
-            };
+            const medRandomization: IRandomisedResourceValues = { "resourcePercent": 30, "chanceMaxResourcePercent": 20 };
+            const resource = Math.max(1, this.getRandomizedResourceValue(itemTemplate._props.MaxResource, medRandomization));
+            itemProperties.MedKit = { HpResource: resource };
         }
 
         if (itemTemplate._props.MaxResource && itemTemplate._props.foodUseTime) {
-            let foodRandomization: IRandomisedResourceValues = { "resourcePercent": 40, "chanceMaxResourcePercent": 30 };
             //this.botConfig.lootItemResourceRandomization[botRole]?.food
-            itemProperties.FoodDrink = {
-                HpPercent: this.getRandomizedResourceValue(
-                    itemTemplate._props.MaxResource,
-                    foodRandomization,
-                )
-            };
+            const foodRandomization: IRandomisedResourceValues = { "resourcePercent": 40, "chanceMaxResourcePercent": 30 };
+            const resource = Math.max(1, this.getRandomizedResourceValue(itemTemplate._props.MaxResource, foodRandomization));
+            itemProperties.FoodDrink = { HpPercent: resource };
         }
 
         if (modConfig.enable_hazard_zones && itemTemplate._props.MaxResource && itemTemplate._id === "590c595c86f7747884343ad7") {

@@ -49,8 +49,7 @@
             "x": 0,
             "y": -0.4,
             "z": 0
-        },
-        "TemplateType": "gun"
+        }
     },
     "61f7c9e189e6fb1a5e3ea78d": {
         "$type": "RealismMod.Gun, RealismMod",
@@ -102,8 +101,7 @@
             "x": 0,
             "y": -0.4,
             "z": 0
-        },
-        "TemplateType": "gun"
+        }
     },
     "5bfd297f0db834001a669119": {
         "$type": "RealismMod.Gun, RealismMod",
@@ -155,8 +153,7 @@
             "x": 0,
             "y": -0.48,
             "z": 0
-        },
-        "TemplateType": "gun"
+        }
     },
     "5ae08f0a5acfc408fb1398a1": {
         "$type": "RealismMod.Gun, RealismMod",
@@ -208,8 +205,7 @@
             "x": 0,
             "y": -0.48,
             "z": 0
-        },
-        "TemplateType": "gun"
+        }
     },
     "55801eed4bdc2d89578b4588": {
         "$type": "RealismMod.Gun, RealismMod",
@@ -261,8 +257,7 @@
             "x": 0,
             "y": -0.43,
             "z": 0
-        },
-        "TemplateType": "gun"
+        }
     },
     "588892092459774ac91d4b11": {
         "$type": "RealismMod.Gun, RealismMod",
@@ -314,8 +309,7 @@
             "x": 0,
             "y": -0.4,
             "z": 0
-        },
-        "TemplateType": "gun"
+        }
     },
     "5df24cf80dee1b22f862e9bc": {
         "$type": "RealismMod.Gun, RealismMod",
@@ -367,8 +361,7 @@
             "x": 0,
             "y": -0.3,
             "z": 0
-        },
-        "TemplateType": "gun"
+        }
     },
     "5bfea6e90db834001b7347f3": {
         "$type": "RealismMod.Gun, RealismMod",
@@ -420,8 +413,7 @@
             "x": 0,
             "y": -0.45,
             "z": 0
-        },
-        "TemplateType": "gun"
+        }
     },
     "627e14b21713922ded6f2c15": {
         "$type": "RealismMod.Gun, RealismMod",

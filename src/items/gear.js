@@ -37,12 +37,16 @@ class Gear {
         }
     }
     loadGearConflicts() {
-        let armorCompArr = [];
+        let faceShieldArray = [];
         //remove certain helmets from GP7 conflicts
         this.itemDB()["60363c0c92ec1c31037959f5"]._props.ConflictingItems = this.itemDB()["60363c0c92ec1c31037959f5"]._props.ConflictingItems.filter(i => i !== "5e4bfc1586f774264f7582d3");
         for (let item in this.itemDB()) {
             let serverItem = this.itemDB()[item];
+            if (serverItem._props.FaceShieldComponent == true) {
+                faceShieldArray.push(serverItem._id);
+            }
             if (this.modConfig.headgear_conflicts == true) {
+                //remove headset conflicts from helmets
                 if (serverItem._parent === enums_1.ParentClasses.HEADWEAR) {
                     for (let c in serverItem._props.ConflictingItems) {
                         let confItem = serverItem._props.ConflictingItems[c];
@@ -51,27 +55,24 @@ class Gear {
                         }
                     }
                 }
-                if (serverItem._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT && serverItem._props.HasHinge == true) {
-                    armorCompArr.push(serverItem._id);
-                }
-                if (arrays_1.StaticArrays.conflNVGomponents.includes(serverItem._id)) {
-                    let confItems = serverItem._props.ConflictingItems;
-                    serverItem._props.ConflictingItems = confItems.concat(armorCompArr);
-                }
-                if (arrays_1.StaticArrays.conflHats.includes(serverItem._id)) {
-                    let confItems = this.itemDB()[item]._props.ConflictingItems;
-                    this.itemDB()[item]._props.ConflictingItems = arrays_1.StaticArrays.conflMasks.concat(confItems);
-                }
-            }
-            //custom mask overlays will bug out if using actual faceshield at the same time
-            if ((this.modConfig.realistic_ballistics == true || this.modConfig.enable_hazard_zones == true) && serverItem._props.FaceShieldComponent == true) {
-                arrays_1.StaticArrays.confMaskOverlays.forEach(element => {
-                    if (serverItem._id !== element) {
-                        serverItem._props.ConflictingItems.push(element);
-                    }
-                });
+                // if (StaticArrays.conflHats.includes(serverItem._id)) {
+                //     let confItems = this.itemDB()[item]._props.ConflictingItems;
+                //     this.itemDB()[item]._props.ConflictingItems = StaticArrays.conflMasks.concat(confItems);
+                // }
             }
         }
+        //custom mask overlays will bug out if using actual faceshield at the same time
+        if ((this.modConfig.realistic_ballistics == true || this.modConfig.enable_hazard_zones == true)) {
+            arrays_1.StaticArrays.confMaskOverlays.forEach(element => {
+                const item = this.itemDB()[element];
+                item._props.ConflictingItems = item._props.ConflictingItems.concat(faceShieldArray);
+            });
+        }
+        //make sure NVGs and FS conflict
+        arrays_1.StaticArrays.conflNVGomponents.forEach(element => {
+            const item = this.itemDB()[element];
+            item._props.ConflictingItems = item._props.ConflictingItems.concat(faceShieldArray);
+        });
     }
 }
 exports.Gear = Gear;

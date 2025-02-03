@@ -262,7 +262,10 @@ export class ItemStatHandler {
             serverItem._props.Weight = fileItem.Weight != undefined ? fileItem.Weight : 0;
             serverItem._props.ShotgunDispersion = fileItem.ShotgunDispersion != undefined ? fileItem.ShotgunDispersion : 1;
             serverItem._props.Loudness = fileItem.Loudness != undefined ? fileItem.Loudness : 0;
-
+            
+            let confFileItems: string[] =  fileItem.ConflictingItems ?? [];
+            serverItem._props.ConflictingItems = [...new Set([...serverItem._props.ConflictingItems, ...confFileItems])];;
+            
             let isScope = serverItem._id === ParentClasses.COLLIMATOR || serverItem._id === ParentClasses.COMPACT_COLLIMATOR || serverItem._parent === ParentClasses.ASSAULT_SCOPE || serverItem._parent === ParentClasses.SPECIAL_SCOPE || serverItem._parent === ParentClasses.OPTIC_SCOPE || serverItem._parent === ParentClasses.THEMALVISION || serverItem._parent === ParentClasses.NIGHTVISION;;
             if (isScope != true) {
                 serverItem._props.HasShoulderContact = fileItem.HasShoulderContact;

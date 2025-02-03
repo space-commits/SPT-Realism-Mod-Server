@@ -754,8 +754,8 @@
         "convertIntoPmcChance": {
             "default": {
                 "assault": {
-                    "min": 35,
-                    "max": 40
+                    "min": 30,
+                    "max": 50
                 },
                 "cursedassault": {
                     "min": 30,
@@ -828,8 +828,8 @@
         "convertIntoPmcChance": {
             "default": {
                 "assault": {
-                    "min": 30,
-                    "max": 40
+                    "min": 35,
+                    "max": 50
                 },
                 "cursedassault": {
                     "min": 28,
@@ -902,8 +902,8 @@
         "convertIntoPmcChance": {
             "default": {
                 "assault": {
-                    "min": 25,
-                    "max": 40
+                    "min": 40,
+                    "max": 45
                 },
                 "cursedassault": {
                     "min": 25,

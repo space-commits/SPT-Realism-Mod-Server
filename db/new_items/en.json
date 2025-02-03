@@ -14,6 +14,11 @@
 			"Name": "6Kh4 Bayonet",
 			"ShortName": "6Kh4 Bayonet",
 			"Description": "6Kh4 bayonet for use with both AKM and AK-74 pattern assault rifles."
+		},
+		"67a13809c3bc1e2fa47e6eec": {
+			"Name": "M53A1 Gas Mask",
+			"ShortName": "M53A1",
+			"Description": "The M53A1 gas mask is an improved single filter port variant of the M5, a series of gas masks based on the M50 and specifically developed to meet the unique requirements of Special Operations Forces (SOF) operators."
 		}
 	}
 }

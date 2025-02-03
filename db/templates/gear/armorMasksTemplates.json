@@ -7,8 +7,7 @@
         "LoyaltyLevel": 4,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "MaskToUse": "atomic",
-        "TemplateType": "gear"
+        "MaskToUse": "atomic"
     },
     "6570aead4d84f81fd002a033": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -21,8 +20,7 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "MaskToUse": "atomic",
-        "TemplateType": "gear"
+        "MaskToUse": "atomic"
     },
     "657089638db3adca1009f4ca": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -35,8 +33,7 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "MaskToUse": "atomic",
-        "TemplateType": "gear"
+        "MaskToUse": "atomic"
     },
     "5b432b2f5acfc4771e1c6622": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -49,8 +46,7 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "MaskToUse": "atomic",
-        "TemplateType": "gear"
+        "MaskToUse": "atomic"
     },
     "603409c80ca681766b6a0fb2": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -61,9 +57,7 @@
         "ArmorClass": "Anti-Shatter Resistance V50 ≥ 230 m/s",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "Price": 0,
-        "TemplateType": "gear"
+        "ReloadSpeedMulti": 1
     },
     "5b432be65acfc433000ed01f": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -74,9 +68,7 @@
         "ArmorClass": "Anti-Shatter Resistance V50 ≥ 350 m/s",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "Price": 0,
-        "TemplateType": "gear"
+        "ReloadSpeedMulti": 1
     },
     "59e770b986f7742cbd762754": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -87,9 +79,7 @@
         "ArmorClass": "Unclassified",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "Price": 0,
-        "TemplateType": "gear"
+        "ReloadSpeedMulti": 1
     },
     "5c1a1cc52e221602b3136e3d": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -100,9 +90,7 @@
         "ArmorClass": "MIL-PRF 31013",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "Price": 0,
-        "TemplateType": "gear"
+        "ReloadSpeedMulti": 1
     },
     "62a61c988ec41a51b34758d5": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -113,9 +101,7 @@
         "ArmorClass": "Unclassified",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "Price": 0,
-        "TemplateType": "gear"
+        "ReloadSpeedMulti": 1
     },
     "5c0d32fcd174af02a1659c75": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -126,9 +112,7 @@
         "ArmorClass": "ANSI/ISEA Z87.1+",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "Price": 0,
-        "TemplateType": "gear"
+        "ReloadSpeedMulti": 1
     },
     "5d5fca1ea4b93635fd598c07": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -139,8 +123,6 @@
         "ArmorClass": "ANSI Z87.1-2015",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "Price": 0,
-        "TemplateType": "gear"
+        "ReloadSpeedMulti": 1
     }
 }

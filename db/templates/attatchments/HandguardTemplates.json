@@ -14,9 +14,7 @@
         "CoolFactor": 1.1,
         "ConflictingItems": [],
         "Weight": 0.567,
-        "LoyaltyLevel": 3,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 3
     },
     "66012d64c752a02bbe05e69b": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -33,9 +31,7 @@
         "CoolFactor": 1.1,
         "ConflictingItems": [],
         "Weight": 0.567,
-        "LoyaltyLevel": 30,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 30
     },
     "66012d003dff5074ed002e2c": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -53,9 +49,7 @@
         "ConflictingItems": [],
         "Weight": 0.479,
         "LoyaltyLevel": 2,
-        "Price": 0,
-        "AimStability": 3,
-        "TemplateType": "weaponmod"
+        "AimStability": 3
     },
     "6698c8c736ba38d29101770b": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -72,9 +66,7 @@
         "CoolFactor": 1,
         "ConflictingItems": [],
         "Weight": 0.15,
-        "LoyaltyLevel": 1,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 1
     },
     "6699313af74fef4dfd0b04f6": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -92,9 +84,7 @@
         "ConflictingItems": [],
         "Weight": 0.18,
         "LoyaltyLevel": 2,
-        "Price": 0,
-        "Handling": 15,
-        "TemplateType": "weaponmod"
+        "Handling": 15
     },
     "66993149558c59581e03c028": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -112,9 +102,7 @@
         "ConflictingItems": [],
         "Weight": 0.18,
         "LoyaltyLevel": 2,
-        "Price": 0,
-        "AimStability": 15,
-        "TemplateType": "weaponmod"
+        "AimStability": 15
     },
     "6565c3ab977bcc2dbb01c2e7": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -131,9 +119,7 @@
         "CoolFactor": 1,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 1,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 1
     },
     "6568a6bf2c5fb7afc70bc424": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -150,9 +136,7 @@
         "CoolFactor": 1,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 3,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 3
     },
     "65144f546ddb773afa0e35e1": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -169,9 +153,7 @@
         "CoolFactor": 1,
         "ConflictingItems": [],
         "Weight": 0.07,
-        "LoyaltyLevel": 1,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 1
     },
     "6491c6f6ef312a876705191b": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -188,9 +170,7 @@
         "CoolFactor": 1.1,
         "ConflictingItems": [],
         "Weight": 0.36,
-        "LoyaltyLevel": 4,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 4
     },
     "607d5aa50494a626335e12ed": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -209,9 +189,7 @@
         "ConflictingItems": [],
         "Weight": 0.8,
         "LoyaltyLevel": 1,
-        "Price": 0,
-        "AimStability": 5,
-        "TemplateType": "weaponmod"
+        "AimStability": 5
     },
     "606ee5c81246154cad35d65e": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -230,9 +208,7 @@
         "ConflictingItems": [],
         "Weight": 0.31,
         "LoyaltyLevel": 3,
-        "Price": 0,
-        "Handling": 6,
-        "TemplateType": "weaponmod"
+        "Handling": 6
     },
     "6123649463849f3d843da7c4": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -251,10 +227,8 @@
         "ConflictingItems": [],
         "Weight": 0.8,
         "LoyaltyLevel": 1,
-        "Price": 0,
         "Handling": 5,
-        "AimStability": 5,
-        "TemplateType": "weaponmod"
+        "AimStability": 5
     },
     "6259c4347d6aab70bc23a190": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -273,9 +247,7 @@
         "ConflictingItems": [],
         "Weight": 0.136,
         "LoyaltyLevel": 1,
-        "Price": 0,
-        "Handling": 6,
-        "TemplateType": "weaponmod"
+        "Handling": 6
     },
     "5e848d51e4dbc5266a4ec63b": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -293,9 +265,7 @@
         "CoolFactor": 1,
         "ConflictingItems": [],
         "Weight": 0.58,
-        "LoyaltyLevel": 1,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 1
     },
     "56deed6ed2720b4c698b4583": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -314,9 +284,7 @@
         "ConflictingItems": [],
         "Weight": 0.31,
         "LoyaltyLevel": 1,
-        "Price": 0,
-        "Handling": 2,
-        "TemplateType": "weaponmod"
+        "Handling": 2
     },
     "61f7b85367ddd414173fdb36": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -335,9 +303,7 @@
         "ConflictingItems": [],
         "Weight": 0.182,
         "LoyaltyLevel": 1,
-        "Price": 0,
-        "AimStability": 5,
-        "TemplateType": "weaponmod"
+        "AimStability": 5
     },
     "61f8024263dc1250e26eb029": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -356,9 +322,7 @@
         "ConflictingItems": [],
         "Weight": 0.13,
         "LoyaltyLevel": 2,
-        "Price": 0,
-        "Handling": 5,
-        "TemplateType": "weaponmod"
+        "Handling": 5
     },
     "55d45d3f4bdc2d972f8b456c": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -376,9 +340,7 @@
         "CoolFactor": 1,
         "ConflictingItems": [],
         "Weight": 0.8,
-        "LoyaltyLevel": 1,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 1
     },
     "55d45f484bdc2d972f8b456d": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -397,9 +359,7 @@
         "ConflictingItems": [],
         "Weight": 0.5,
         "ReloadSpeed": 0,
-        "LoyaltyLevel": 1,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 1
     },
     "5e87076ce2db31558c75a11d": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -418,9 +378,7 @@
         "ConflictingItems": [],
         "Weight": 0.65,
         "ReloadSpeed": 0,
-        "LoyaltyLevel": 1,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 1
     },
     "5eea21647547d6330471b3c9": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -440,9 +398,7 @@
         "Weight": 0.6,
         "ReloadSpeed": 0,
         "LoyaltyLevel": 3,
-        "Price": 0,
-        "AimStability": 5,
-        "TemplateType": "weaponmod"
+        "AimStability": 5
     },
     "5a788089c5856700142fdd9c": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -461,9 +417,7 @@
         "ConflictingItems": [],
         "Weight": 0.5,
         "ReloadSpeed": 0,
-        "LoyaltyLevel": 1,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 1
     },
     "5a788068c5856700137e4c8f": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -483,9 +437,7 @@
         "Weight": 0.6,
         "ReloadSpeed": 0,
         "LoyaltyLevel": 3,
-        "Price": 0,
-        "AimStability": 5,
-        "TemplateType": "weaponmod"
+        "AimStability": 5
     },
     "5a788031c585673f2b5c1c79": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -505,9 +457,7 @@
         "Weight": 0.8,
         "ReloadSpeed": 0,
         "LoyaltyLevel": 1,
-        "Price": 0,
-        "Handling": 2,
-        "TemplateType": "weaponmod"
+        "Handling": 2
     },
     "5f2aa47a200e2c0ee46efa71": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -524,9 +474,7 @@
         "CoolFactor": 1,
         "ConflictingItems": [],
         "Weight": 0.221,
-        "LoyaltyLevel": 1,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 1
     },
     "5cdaa99dd7f00c002412d0b2": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -543,9 +491,7 @@
         "CoolFactor": 1,
         "ConflictingItems": [],
         "Weight": 0.27,
-        "LoyaltyLevel": 1,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 1
     },
     "5c48a14f2e2216152006edd7": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -563,9 +509,7 @@
         "ConflictingItems": [],
         "Weight": 0.269,
         "LoyaltyLevel": 1,
-        "Price": 0,
-        "AimStability": 4,
-        "TemplateType": "weaponmod"
+        "AimStability": 4
     },
     "5dcbd6b46ec07c0c4347a564": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -583,9 +527,7 @@
         "ConflictingItems": [],
         "Weight": 0.269,
         "LoyaltyLevel": 1,
-        "Price": 0,
-        "AimStability": 4,
-        "TemplateType": "weaponmod"
+        "AimStability": 4
     },
     "62386b2adf47d66e835094b2": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -606,9 +548,7 @@
         ],
         "Weight": 0.23,
         "LoyaltyLevel": 2,
-        "Price": 0,
-        "AimStability": 2,
-        "TemplateType": "weaponmod"
+        "AimStability": 2
     },
     "62386b7153757417e93a4e9f": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -629,10 +569,8 @@
         ],
         "Weight": 0.28,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "AimStability": 3,
-        "Handling": 1,
-        "TemplateType": "weaponmod"
+        "Handling": 1
     },
     "6231654c71b5bc3baa1078e5": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -653,9 +591,7 @@
         ],
         "Weight": 0.38,
         "LoyaltyLevel": 1,
-        "Price": 0,
-        "AimStability": 4,
-        "TemplateType": "weaponmod"
+        "AimStability": 4
     },
     "61712eae6c780c1e710c9a1d": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -672,9 +608,7 @@
         "CoolFactor": 1.056,
         "ConflictingItems": [],
         "Weight": 0.43,
-        "LoyaltyLevel": 1,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 1
     },
     "5bb20de5d4351e0035629e59": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -691,9 +625,7 @@
         "CoolFactor": 1.01,
         "ConflictingItems": [],
         "Weight": 0.399,
-        "LoyaltyLevel": 1,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 1
     },
     "5bb20df1d4351e00347787d5": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -710,9 +642,7 @@
         "CoolFactor": 1.01,
         "ConflictingItems": [],
         "Weight": 0.4,
-        "LoyaltyLevel": 1,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 1
     },
     "5c6d10fa2e221600106f3f23": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -730,9 +660,7 @@
         "ConflictingItems": [],
         "Weight": 0.28,
         "LoyaltyLevel": 4,
-        "Price": 0,
-        "AimStability": 2,
-        "TemplateType": "weaponmod"
+        "AimStability": 2
     },
     "5c6c2c9c2e2216000f2002e4": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -750,9 +678,7 @@
         "ConflictingItems": [],
         "Weight": 0.25,
         "LoyaltyLevel": 3,
-        "Price": 0,
-        "AimStability": 5,
-        "TemplateType": "weaponmod"
+        "AimStability": 5
     },
     "5c6d11072e2216000e69d2e4": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -774,9 +700,7 @@
         ],
         "Weight": 0.37,
         "LoyaltyLevel": 4,
-        "Price": 0,
-        "AimStability": 4,
-        "TemplateType": "weaponmod"
+        "AimStability": 4
     },
     "5c6d10e82e221601da357b07": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -794,10 +718,8 @@
         "ConflictingItems": [],
         "Weight": 0.39,
         "LoyaltyLevel": 3,
-        "Price": 0,
         "AimStability": 2,
-        "Handling": 2,
-        "TemplateType": "weaponmod"
+        "Handling": 2
     },
     "5c6d11152e2216000f2003e7": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -815,9 +737,7 @@
         "ConflictingItems": [],
         "Weight": 0.44,
         "LoyaltyLevel": 4,
-        "Price": 0,
-        "AimStability": 6,
-        "TemplateType": "weaponmod"
+        "AimStability": 6
     },
     "5bb20dfcd4351e00334c9e24": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -839,9 +759,7 @@
         ],
         "Weight": 0.54,
         "LoyaltyLevel": 2,
-        "Price": 0,
-        "Handling": 2,
-        "TemplateType": "weaponmod"
+        "Handling": 2
     },
     "61703001d92c473c77021497": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -859,9 +777,7 @@
         "ConflictingItems": [],
         "Weight": 0.55,
         "LoyaltyLevel": 2,
-        "Price": 0,
-        "Handling": 2,
-        "TemplateType": "weaponmod"
+        "Handling": 2
     },
     "6065880c132d4d12c81fd8da": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -882,10 +798,8 @@
         ],
         "Weight": 0.155,
         "LoyaltyLevel": 3,
-        "Price": 0,
         "Handling": 1,
-        "AimStability": 1,
-        "TemplateType": "weaponmod"
+        "AimStability": 1
     },
     "5d00ede1d7ad1a0940739a76": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -908,9 +822,7 @@
         ],
         "Weight": 0.502,
         "LoyaltyLevel": 2,
-        "Price": 0,
-        "Handling": 2.5,
-        "TemplateType": "weaponmod"
+        "Handling": 2.5
     },
     "5d00ef6dd7ad1a0940739b16": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -933,10 +845,8 @@
         ],
         "Weight": 0.58,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "Handling": 2,
-        "AimStability": 1.5,
-        "TemplateType": "weaponmod"
+        "AimStability": 1.5
     },
     "5f6336bbda967c74a42e9932": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -958,9 +868,7 @@
         ],
         "Weight": 0.326,
         "LoyaltyLevel": 3,
-        "Price": 0,
-        "AimStability": 6,
-        "TemplateType": "weaponmod"
+        "AimStability": 6
     },
     "5df916dfbb49d91fb446d6b9": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -985,10 +893,8 @@
         ],
         "Weight": 0.42,
         "LoyaltyLevel": 4,
-        "Price": 0,
         "Handling": 2,
-        "AimStability": 4,
-        "TemplateType": "weaponmod"
+        "AimStability": 4
     },
     "6065881d1246154cad35d637": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1014,10 +920,8 @@
         ],
         "Weight": 0.366,
         "LoyaltyLevel": 4,
-        "Price": 0,
         "Handling": 3,
-        "AimStability": 3,
-        "TemplateType": "weaponmod"
+        "AimStability": 3
     },
     "5c0e2f5cd174af02a012cfc9": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1037,9 +941,7 @@
             "55d3632e4bdc2d972f8b4569"
         ],
         "Weight": 0.385,
-        "LoyaltyLevel": 1,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 1
     },
     "5ae30db85acfc408fb139a05": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1056,9 +958,7 @@
         "CoolFactor": 0.978,
         "ConflictingItems": [],
         "Weight": 0.168,
-        "LoyaltyLevel": 1,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 1
     },
     "637f57a68d137b27f70c4968": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1076,9 +976,7 @@
         "ConflictingItems": [],
         "Weight": 0.129,
         "LoyaltyLevel": 1,
-        "Price": 0,
-        "Handling": 2,
-        "TemplateType": "weaponmod"
+        "Handling": 2
     },
     "63f4ba71f31d4a33b87bd046": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1103,9 +1001,7 @@
         ],
         "Weight": 0.103,
         "LoyaltyLevel": 2,
-        "Price": 0,
-        "AimStability": 3,
-        "TemplateType": "weaponmod"
+        "AimStability": 3
     },
     "5d00e0cbd7ad1a6c6566a42d": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1124,9 +1020,7 @@
             "5c0e2f94d174af029f650d56"
         ],
         "Weight": 0.171,
-        "LoyaltyLevel": 1,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 1
     },
     "5d00f63bd7ad1a59283b1c1e": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1145,9 +1039,7 @@
             "5c0e2f94d174af029f650d56"
         ],
         "Weight": 0.171,
-        "LoyaltyLevel": 2,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 2
     },
     "637f589af5ef8c33840d36d3": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1167,9 +1059,7 @@
         ],
         "Weight": 0.094,
         "LoyaltyLevel": 1,
-        "Price": 0,
-        "Handling": 2,
-        "TemplateType": "weaponmod"
+        "Handling": 2
     },
     "63969c9019971040b005049b": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1189,9 +1079,7 @@
         ],
         "Weight": 0.094,
         "LoyaltyLevel": 2,
-        "Price": 0,
-        "Handling": 2,
-        "TemplateType": "weaponmod"
+        "Handling": 2
     },
     "55d459824bdc2d892f8b4573": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1208,9 +1096,7 @@
         "CoolFactor": 1.05,
         "ConflictingItems": [],
         "Weight": 0.252,
-        "LoyaltyLevel": 1,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 1
     },
     "637f57b78d137b27f70c496a": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1227,9 +1113,7 @@
         "CoolFactor": 1,
         "ConflictingItems": [],
         "Weight": 0.097,
-        "LoyaltyLevel": 1,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 1
     },
     "5d123102d7ad1a004e475fe5": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1250,9 +1134,7 @@
             "56ea8d2fd2720b7c698b4570"
         ],
         "Weight": 0.24,
-        "LoyaltyLevel": 3,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 3
     },
     "637f57d2f5ef8c33840d36c4": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1274,10 +1156,8 @@
         ],
         "Weight": 0.072,
         "LoyaltyLevel": 3,
-        "Price": 0,
         "Handling": 1.5,
-        "AimStability": 2.5,
-        "TemplateType": "weaponmod"
+        "AimStability": 2.5
     },
     "5c78f2792e221600106f4683": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1297,9 +1177,7 @@
         ],
         "Weight": 0.19,
         "LoyaltyLevel": 1,
-        "Price": 0,
-        "AimStability": 3,
-        "TemplateType": "weaponmod"
+        "AimStability": 3
     },
     "6034e3cb0ddce744014cb870": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1321,10 +1199,8 @@
         ],
         "Weight": 0.155,
         "LoyaltyLevel": 3,
-        "Price": 0,
         "Handling": 1,
-        "AimStability": 2,
-        "TemplateType": "weaponmod"
+        "AimStability": 2
     },
     "5c9a26332e2216001219ea70": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1342,9 +1218,7 @@
         "ConflictingItems": [],
         "Weight": 0.35,
         "LoyaltyLevel": 2,
-        "Price": 0,
-        "Handling": 3.5,
-        "TemplateType": "weaponmod"
+        "Handling": 3.5
     },
     "55f84c3c4bdc2d5f408b4576": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1361,9 +1235,7 @@
         "CoolFactor": 1.033,
         "ConflictingItems": [],
         "Weight": 0.299,
-        "LoyaltyLevel": 3,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 3
     },
     "638f1ff84822287cad04be9d": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1381,9 +1253,7 @@
         "ConflictingItems": [],
         "Weight": 0.099,
         "LoyaltyLevel": 3,
-        "Price": 0,
-        "Handling": 3.5,
-        "TemplateType": "weaponmod"
+        "Handling": 3.5
     },
     "588b56d02459771481110ae2": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1400,9 +1270,7 @@
         "CoolFactor": 1.033,
         "ConflictingItems": [],
         "Weight": 0.299,
-        "LoyaltyLevel": 3,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 3
     },
     "6396aaa9a52ace83df0840ab": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1420,9 +1288,7 @@
         "ConflictingItems": [],
         "Weight": 0.099,
         "LoyaltyLevel": 3,
-        "Price": 0,
-        "Handling": 3.5,
-        "TemplateType": "weaponmod"
+        "Handling": 3.5
     },
     "5ea16acdfadf1d18c87b0784": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1444,9 +1310,7 @@
         ],
         "Weight": 0.332,
         "LoyaltyLevel": 4,
-        "Price": 0,
-        "AimStability": 4.5,
-        "TemplateType": "weaponmod"
+        "AimStability": 4.5
     },
     "595cf16b86f77427440c32e2": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1464,10 +1328,8 @@
         "ConflictingItems": [],
         "Weight": 0.5,
         "LoyaltyLevel": 4,
-        "Price": 0,
         "Handling": 3,
-        "AimStability": 1.5,
-        "TemplateType": "weaponmod"
+        "AimStability": 1.5
     },
     "5c6d5d8b2e221644fc630b39": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1489,9 +1351,7 @@
         ],
         "Weight": 0.209,
         "LoyaltyLevel": 2,
-        "Price": 0,
-        "AimStability": 3.5,
-        "TemplateType": "weaponmod"
+        "AimStability": 3.5
     },
     "619b5db699fb192e7430664f": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1514,10 +1374,8 @@
         ],
         "Weight": 0.343,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "Handling": 1,
-        "AimStability": 2.5,
-        "TemplateType": "weaponmod"
+        "AimStability": 2.5
     },
     "5c78f2612e221600114c9f0d": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1543,10 +1401,8 @@
         ],
         "Weight": 0.305,
         "LoyaltyLevel": 4,
-        "Price": 0,
         "Handling": 2,
-        "AimStability": 2.5,
-        "TemplateType": "weaponmod"
+        "AimStability": 2.5
     },
     "5d122e7bd7ad1a07102d6d7f": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1568,9 +1424,7 @@
             "55d35ee94bdc2d61338b4568"
         ],
         "Weight": 0.32,
-        "LoyaltyLevel": 4,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 4
     },
     "637f57c532b66e7e320a6676": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1593,10 +1447,8 @@
         ],
         "Weight": 0.096,
         "LoyaltyLevel": 4,
-        "Price": 0,
         "Handling": 2,
-        "AimStability": 3,
-        "TemplateType": "weaponmod"
+        "AimStability": 3
     },
     "6034e3e20ddce744014cb878": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1620,10 +1472,8 @@
         ],
         "Weight": 0.2,
         "LoyaltyLevel": 4,
-        "Price": 0,
         "Handling": 1.5,
-        "AimStability": 3,
-        "TemplateType": "weaponmod"
+        "AimStability": 3
     },
     "6087e0336d0bd7580617bb7a": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1647,9 +1497,7 @@
         ],
         "Weight": 0.25,
         "LoyaltyLevel": 3,
-        "Price": 0,
-        "AimStability": 5,
-        "TemplateType": "weaponmod"
+        "AimStability": 5
     },
     "5c9a25172e2216000f20314e": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1671,9 +1519,7 @@
             "55d35ee94bdc2d61338b4568"
         ],
         "Weight": 0.375,
-        "LoyaltyLevel": 4,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 4
     },
     "638f2003bbd47aeb9e0ff637": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1691,9 +1537,7 @@
         "ConflictingItems": [],
         "Weight": 0.125,
         "LoyaltyLevel": 3,
-        "Price": 0,
-        "Handling": 5.5,
-        "TemplateType": "weaponmod"
+        "Handling": 5.5
     },
     "5a329052c4a28200741e22d3": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1711,9 +1555,7 @@
         "ConflictingItems": [],
         "Weight": 0.31,
         "LoyaltyLevel": 3,
-        "Price": 0,
-        "AimStability": 5.5,
-        "TemplateType": "weaponmod"
+        "AimStability": 5.5
     },
     "5ea16ada09aa976f2e7a51be": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1736,10 +1578,8 @@
         ],
         "Weight": 0.422,
         "LoyaltyLevel": 5,
-        "Price": 0,
         "AimStability": 4.5,
-        "Handling": 1.5,
-        "TemplateType": "weaponmod"
+        "Handling": 1.5
     },
     "5c78f26f2e221601da3581d1": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1761,9 +1601,7 @@
         ],
         "Weight": 0.23,
         "LoyaltyLevel": 1,
-        "Price": 0,
-        "AimStability": 5,
-        "TemplateType": "weaponmod"
+        "AimStability": 5
     },
     "5b2cfa535acfc432ff4db7a0": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1784,9 +1622,7 @@
         ],
         "Weight": 0.38,
         "LoyaltyLevel": 3,
-        "Price": 0,
-        "AimStability": 10,
-        "TemplateType": "weaponmod"
+        "AimStability": 10
     },
     "63888bbd28e5cc32cc09d2b6": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1810,10 +1646,8 @@
         ],
         "Weight": 0.425,
         "LoyaltyLevel": 4,
-        "Price": 0,
         "AimStability": 8,
-        "Handling": 1,
-        "TemplateType": "weaponmod"
+        "Handling": 1
     },
     "595cfa8b86f77427437e845b": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1834,10 +1668,8 @@
         ],
         "Weight": 0.58,
         "LoyaltyLevel": 3,
-        "Price": 0,
         "Handling": 4.5,
-        "AimStability": 2.5,
-        "TemplateType": "weaponmod"
+        "AimStability": 2.5
     },
     "5c78f2492e221600114c9f04": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1860,10 +1692,8 @@
         ],
         "Weight": 0.355,
         "LoyaltyLevel": 4,
-        "Price": 0,
         "Handling": 2.5,
-        "AimStability": 3,
-        "TemplateType": "weaponmod"
+        "AimStability": 3
     },
     "6034e3d953a60014f970617b": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1889,10 +1719,8 @@
         ],
         "Weight": 0.22,
         "LoyaltyLevel": 4,
-        "Price": 0,
         "Handling": 2,
-        "AimStability": 4,
-        "TemplateType": "weaponmod"
+        "AimStability": 4
     },
     "640b20359ab20e15ee445fa9": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1918,10 +1746,8 @@
         ],
         "Weight": 0.343,
         "LoyaltyLevel": 3,
-        "Price": 0,
         "AimStability": 4,
-        "Handling": 1.5,
-        "TemplateType": "weaponmod"
+        "Handling": 1.5
     },
     "5d4405f0a4b9361e6a4e6bd9": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1946,10 +1772,8 @@
         ],
         "Weight": 0.38,
         "LoyaltyLevel": 4,
-        "Price": 0,
         "AimStability": 9,
-        "Handling": 2,
-        "TemplateType": "weaponmod"
+        "Handling": 2
     },
     "576169e62459773c69055191": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1967,9 +1791,7 @@
         "ConflictingItems": [],
         "Weight": 0.18,
         "LoyaltyLevel": 1,
-        "Price": 0,
-        "Handling": 4,
-        "TemplateType": "weaponmod"
+        "Handling": 4
     },
     "58272b392459774b4c7b3ccd": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -1988,9 +1810,7 @@
             "5c61a40d2e2216001403158d"
         ],
         "Weight": 0.408,
-        "LoyaltyLevel": 1,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 1
     },
     "5827272a24597748c74bdeea": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2013,9 +1833,7 @@
             "5c90c3622e221601da359851"
         ],
         "Weight": 0.428,
-        "LoyaltyLevel": 2,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 2
     },
     "5f63418ef5750b524b45f116": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2039,9 +1857,7 @@
             "5c90c3622e221601da359851"
         ],
         "Weight": 0.37,
-        "LoyaltyLevel": 3,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 3
     },
     "6086b5731246154cad35d6c7": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2059,10 +1875,8 @@
         "ConflictingItems": [],
         "Weight": 0.24,
         "LoyaltyLevel": 5,
-        "Price": 0,
         "Handling": 6,
-        "AimStability": 4,
-        "TemplateType": "weaponmod"
+        "AimStability": 4
     },
     "5c471c6c2e221602b66cd9ae": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2079,9 +1893,7 @@
         "CoolFactor": 1.008,
         "ConflictingItems": [],
         "Weight": 0.25,
-        "LoyaltyLevel": 1,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 1
     },
     "5e56991336989c75ab4f03f6": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2099,10 +1911,8 @@
         "ConflictingItems": [],
         "Weight": 0.48,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "AimStability": 6,
-        "Handling": 3,
-        "TemplateType": "weaponmod"
+        "Handling": 3
     },
     "5e5699df2161e06ac158df6f": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2119,9 +1929,7 @@
         "CoolFactor": 1.107,
         "ConflictingItems": [],
         "Weight": 0.65,
-        "LoyaltyLevel": 3,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 3
     },
     "5dfcd0e547101c39625f66f9": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2155,10 +1963,8 @@
         ],
         "Weight": 0.89,
         "LoyaltyLevel": 4,
-        "Price": 0,
         "AimStability": 3,
-        "Handling": 6,
-        "TemplateType": "weaponmod"
+        "Handling": 6
     },
     "649ec127c93611967b034957": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2175,9 +1981,7 @@
         "CoolFactor": 0.97,
         "ConflictingItems": [],
         "Weight": 0.134,
-        "LoyaltyLevel": 1,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 1
     },
     "5beec3e30db8340019619424": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2194,9 +1998,7 @@
         "CoolFactor": 0.963,
         "ConflictingItems": [],
         "Weight": 0.167,
-        "LoyaltyLevel": 1,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 1
     },
     "628b916469015a4e1711ed8d": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2213,9 +2015,7 @@
         "CoolFactor": 1,
         "ConflictingItems": [],
         "Weight": 0.617,
-        "LoyaltyLevel": 1,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 1
     },
     "57dc32dc245977596d4ef3d3": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2233,9 +2033,7 @@
         "ConflictingItems": [],
         "Weight": 0.116,
         "LoyaltyLevel": 1,
-        "Price": 0,
-        "Handling": 1,
-        "TemplateType": "weaponmod"
+        "Handling": 1
     },
     "57ffa9f4245977728561e844": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2252,9 +2050,7 @@
         "CoolFactor": 0.97,
         "ConflictingItems": [],
         "Weight": 0.155,
-        "LoyaltyLevel": 2,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 2
     },
     "647db1eca8d3399c380d195c": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2277,9 +2073,7 @@
         ],
         "Weight": 0.15,
         "AimStability": 5,
-        "LoyaltyLevel": 4,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 4
     },
     "5d15ce51d7ad1a1eff619092": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2301,9 +2095,7 @@
         ],
         "Weight": 0.25,
         "LoyaltyLevel": 4,
-        "Price": 0,
-        "Handling": 5,
-        "TemplateType": "weaponmod"
+        "Handling": 5
     },
     "5a957c3fa2750c00137fa5f7": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2335,9 +2127,7 @@
         ],
         "Weight": 0.52,
         "LoyaltyLevel": 2,
-        "Price": 0,
-        "Handling": 3,
-        "TemplateType": "weaponmod"
+        "Handling": 3
     },
     "5648b1504bdc2d9d488b4584": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2355,9 +2145,7 @@
         "ConflictingItems": [],
         "Weight": 0.25,
         "LoyaltyLevel": 1,
-        "Price": 0,
-        "AimStability": 1,
-        "TemplateType": "weaponmod"
+        "AimStability": 1
     },
     "59d64f2f86f77417193ef8b3": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2375,9 +2163,7 @@
         "ConflictingItems": [],
         "Weight": 0.26,
         "LoyaltyLevel": 1,
-        "Price": 0,
-        "Handling": 1,
-        "TemplateType": "weaponmod"
+        "Handling": 1
     },
     "59e6284f86f77440d569536f": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2395,9 +2181,7 @@
         "ConflictingItems": [],
         "Weight": 0.26,
         "LoyaltyLevel": 1,
-        "Price": 0,
-        "Handling": 1,
-        "TemplateType": "weaponmod"
+        "Handling": 1
     },
     "59e898ee86f77427614bd225": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2415,9 +2199,7 @@
         "ConflictingItems": [],
         "Weight": 0.26,
         "LoyaltyLevel": 1,
-        "Price": 0,
-        "Handling": 1,
-        "TemplateType": "weaponmod"
+        "Handling": 1
     },
     "5cbda9f4ae9215000e5b9bfc": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2435,9 +2217,7 @@
         "ConflictingItems": [],
         "Weight": 0.25,
         "LoyaltyLevel": 3,
-        "Price": 0,
-        "AimStability": 1,
-        "TemplateType": "weaponmod"
+        "AimStability": 1
     },
     "5648b0744bdc2d363b8b4578": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2455,9 +2235,7 @@
         "ConflictingItems": [],
         "Weight": 0.26,
         "LoyaltyLevel": 1,
-        "Price": 0,
-        "Handling": 1,
-        "TemplateType": "weaponmod"
+        "Handling": 1
     },
     "5cbda392ae92155f3c17c39f": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2474,9 +2252,7 @@
         "CoolFactor": 0.962,
         "ConflictingItems": [],
         "Weight": 0.27,
-        "LoyaltyLevel": 1,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 1
     },
     "57cffddc24597763133760c6": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2494,10 +2270,8 @@
         "ConflictingItems": [],
         "Weight": 0.221,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "Handling": 2,
-        "AimStability": 2,
-        "TemplateType": "weaponmod"
+        "AimStability": 2
     },
     "57cffe20245977632f391a9d": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2515,10 +2289,8 @@
         "ConflictingItems": [],
         "Weight": 0.221,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "Handling": 2,
-        "AimStability": 2,
-        "TemplateType": "weaponmod"
+        "AimStability": 2
     },
     "57cff947245977638e6f2a19": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2536,10 +2308,8 @@
         "ConflictingItems": [],
         "Weight": 0.221,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "Handling": 2,
-        "AimStability": 2,
-        "TemplateType": "weaponmod"
+        "AimStability": 2
     },
     "57cffd8224597763b03fc609": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2557,10 +2327,8 @@
         "ConflictingItems": [],
         "Weight": 0.221,
         "LoyaltyLevel": 3,
-        "Price": 0,
         "Handling": 2,
-        "AimStability": 2,
-        "TemplateType": "weaponmod"
+        "AimStability": 2
     },
     "57cffe0024597763b03fc60b": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2578,10 +2346,8 @@
         "ConflictingItems": [],
         "Weight": 0.221,
         "LoyaltyLevel": 4,
-        "Price": 0,
         "Handling": 2,
-        "AimStability": 2,
-        "TemplateType": "weaponmod"
+        "AimStability": 2
     },
     "5d1b198cd7ad1a604869ad72": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2599,9 +2365,7 @@
         "ConflictingItems": [],
         "Weight": 0.221,
         "LoyaltyLevel": 2,
-        "Price": 0,
-        "AimStability": 3.5,
-        "TemplateType": "weaponmod"
+        "AimStability": 3.5
     },
     "5d4aaa54a4b9365392071170": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2619,9 +2383,7 @@
         "ConflictingItems": [],
         "Weight": 0.221,
         "LoyaltyLevel": 3,
-        "Price": 0,
-        "AimStability": 3.5,
-        "TemplateType": "weaponmod"
+        "AimStability": 3.5
     },
     "5d4aaa73a4b9365392071175": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2639,9 +2401,7 @@
         "ConflictingItems": [],
         "Weight": 0.221,
         "LoyaltyLevel": 4,
-        "Price": 0,
-        "AimStability": 3.5,
-        "TemplateType": "weaponmod"
+        "AimStability": 3.5
     },
     "5d2c829448f0353a5c7d6674": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2659,10 +2419,8 @@
         "ConflictingItems": [],
         "Weight": 0.28,
         "LoyaltyLevel": 1,
-        "Price": 0,
         "AimStability": 2,
-        "Handling": 6,
-        "TemplateType": "weaponmod"
+        "Handling": 6
     },
     "5c617a5f2e2216000f1e81b3": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2680,10 +2438,8 @@
         "ConflictingItems": [],
         "Weight": 0.19,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "Handling": 3.5,
-        "AimStability": 1.5,
-        "TemplateType": "weaponmod"
+        "AimStability": 1.5
     },
     "5648b4534bdc2d3d1c8b4580": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2701,9 +2457,7 @@
         "ConflictingItems": [],
         "Weight": 0.27,
         "LoyaltyLevel": 3,
-        "Price": 0,
-        "Handling": 4,
-        "TemplateType": "weaponmod"
+        "Handling": 4
     },
     "5648ae314bdc2d3d1c8b457f": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2720,9 +2474,7 @@
         "CoolFactor": 1.035,
         "ConflictingItems": [],
         "Weight": 0.22,
-        "LoyaltyLevel": 1,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 1
     },
     "5a9d56c8a2750c0032157146": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2740,10 +2492,8 @@
         "ConflictingItems": [],
         "Weight": 0.26,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "Handling": 1,
-        "AimStability": 3,
-        "TemplateType": "weaponmod"
+        "AimStability": 3
     },
     "5a9d6d34a2750c00141e07da": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2767,10 +2517,8 @@
         ],
         "Weight": 0.26,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "Handling": 5,
-        "AimStability": 7,
-        "TemplateType": "weaponmod"
+        "AimStability": 7
     },
     "5f6331e097199b7db2128dc2": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2806,9 +2554,7 @@
         ],
         "Weight": 0.42,
         "LoyaltyLevel": 2,
-        "Price": 0,
-        "AimStability": 3,
-        "TemplateType": "weaponmod"
+        "AimStability": 3
     },
     "6389f1dfc879ce63f72fc43e": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2855,9 +2601,7 @@
         ],
         "Weight": 0.536,
         "LoyaltyLevel": 3,
-        "Price": 0,
-        "AimStability": 4,
-        "TemplateType": "weaponmod"
+        "AimStability": 4
     },
     "5cf4e3f3d7f00c06595bc7f0": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2875,9 +2619,7 @@
         "ConflictingItems": [],
         "Weight": 0.26,
         "LoyaltyLevel": 3,
-        "Price": 0,
-        "Handling": 6,
-        "TemplateType": "weaponmod"
+        "Handling": 6
     },
     "5c9a1c422e221600106f69f0": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2897,10 +2639,8 @@
         ],
         "Weight": 0.31,
         "LoyaltyLevel": 4,
-        "Price": 0,
         "Handling": 2,
-        "AimStability": 4.5,
-        "TemplateType": "weaponmod"
+        "AimStability": 4.5
     },
     "5c9a1c3a2e2216000e69fb6a": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2920,10 +2660,8 @@
         ],
         "Weight": 0.31,
         "LoyaltyLevel": 3,
-        "Price": 0,
         "Handling": 2,
-        "AimStability": 4.5,
-        "TemplateType": "weaponmod"
+        "AimStability": 4.5
     },
     "5c9a07572e221644f31c4b32": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2943,10 +2681,8 @@
         ],
         "Weight": 0.31,
         "LoyaltyLevel": 3,
-        "Price": 0,
         "Handling": 2,
-        "AimStability": 4.5,
-        "TemplateType": "weaponmod"
+        "AimStability": 4.5
     },
     "5efaf417aeb21837e749c7f2": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2964,9 +2700,7 @@
         "ConflictingItems": [],
         "Weight": 0.371,
         "LoyaltyLevel": 4,
-        "Price": 0,
-        "Handling": 5.5,
-        "TemplateType": "weaponmod"
+        "Handling": 5.5
     },
     "59fb375986f7741b681b81a6": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2984,10 +2718,8 @@
         "ConflictingItems": [],
         "Weight": 0.26,
         "LoyaltyLevel": 3,
-        "Price": 0,
         "AimStability": 8,
-        "Handling": 3,
-        "TemplateType": "weaponmod"
+        "Handling": 3
     },
     "5c17664f2e2216398b5a7e3c": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3009,10 +2741,8 @@
         ],
         "Weight": 0.397,
         "LoyaltyLevel": 4,
-        "Price": 0,
         "AimStability": 4,
-        "Handling": 5,
-        "TemplateType": "weaponmod"
+        "Handling": 5
     },
     "5b800e9286f7747a8b04f3ff": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3035,9 +2765,7 @@
         ],
         "Weight": 0.167,
         "LoyaltyLevel": 4,
-        "Price": 0,
-        "AimStability": 9,
-        "TemplateType": "weaponmod"
+        "AimStability": 9
     },
     "5b80242286f77429445e0b47": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3060,9 +2788,7 @@
         ],
         "Weight": 0.167,
         "LoyaltyLevel": 5,
-        "Price": 0,
-        "AimStability": 9,
-        "TemplateType": "weaponmod"
+        "AimStability": 9
     },
     "637ba19df7ca6372bf2613d7": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3080,9 +2806,7 @@
         "CoolFactor": 0.981,
         "ConflictingItems": [],
         "Weight": 0.12,
-        "LoyaltyLevel": 1,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 1
     },
     "62e15547db1a5c41971c1b5e": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3100,9 +2824,7 @@
         "CoolFactor": 0.981,
         "ConflictingItems": [],
         "Weight": 0.12,
-        "LoyaltyLevel": 1,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 1
     },
     "5d2f259b48f0355a844acd74": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3120,9 +2842,7 @@
         "ConflictingItems": [],
         "Weight": 0.241,
         "LoyaltyLevel": 1,
-        "Price": 0,
-        "Handling": 6,
-        "TemplateType": "weaponmod"
+        "Handling": 6
     },
     "5926f34786f77469195bfe92": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3140,9 +2860,7 @@
         "ConflictingItems": [],
         "Weight": 0.13,
         "LoyaltyLevel": 1,
-        "Price": 0,
-        "AimStability": 10,
-        "TemplateType": "weaponmod"
+        "AimStability": 10
     },
     "5926c36d86f77467a92a8629": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3160,10 +2878,8 @@
         "ConflictingItems": [],
         "Weight": 0.241,
         "LoyaltyLevel": 1,
-        "Price": 0,
         "Handling": 6,
-        "AimStability": 2,
-        "TemplateType": "weaponmod"
+        "AimStability": 2
     },
     "5a9548c9159bd400133e97b3": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3180,9 +2896,7 @@
         "CoolFactor": 0.994,
         "ConflictingItems": [],
         "Weight": 0.278,
-        "LoyaltyLevel": 2,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 2
     },
     "5d19cd96d7ad1a4a992c9f52": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3200,9 +2914,7 @@
         "ConflictingItems": [],
         "Weight": 0.308,
         "LoyaltyLevel": 3,
-        "Price": 0,
-        "Handling": 3,
-        "TemplateType": "weaponmod"
+        "Handling": 3
     },
     "5d010d1cd7ad1a59283b1ce7": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3219,9 +2931,7 @@
         "CoolFactor": 1,
         "ConflictingItems": [],
         "Weight": 0.308,
-        "LoyaltyLevel": 2,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 2
     },
     "5b099a9d5acfc47a8607efe7": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3238,9 +2948,7 @@
         "CoolFactor": 1.01,
         "ConflictingItems": [],
         "Weight": 0.48,
-        "LoyaltyLevel": 2,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 2
     },
     "5b7bee755acfc400196d5383": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3258,10 +2966,8 @@
         "ConflictingItems": [],
         "Weight": 0.232,
         "LoyaltyLevel": 3,
-        "Price": 0,
         "Handling": 2,
-        "AimStability": 3,
-        "TemplateType": "weaponmod"
+        "AimStability": 3
     },
     "5b7be1ca5acfc400170e2d2f": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3278,9 +2984,7 @@
         "CoolFactor": 1.016,
         "ConflictingItems": [],
         "Weight": 0.61,
-        "LoyaltyLevel": 2,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 2
     },
     "5b7bed205acfc400161d08cc": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3298,10 +3002,8 @@
         "ConflictingItems": [],
         "Weight": 0.61,
         "LoyaltyLevel": 1,
-        "Price": 0,
         "AimStability": 4,
-        "Handling": 6,
-        "TemplateType": "weaponmod"
+        "Handling": 6
     },
     "5b7d671b5acfc43d82528ddd": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3319,10 +3021,8 @@
         "ConflictingItems": [],
         "Weight": 0.51,
         "LoyaltyLevel": 0,
-        "Price": 0,
         "AimStability": 8,
-        "Handling": 4,
-        "TemplateType": "weaponmod"
+        "Handling": 4
     },
     "5b7bebc85acfc43bca706666": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3340,10 +3040,8 @@
         "ConflictingItems": [],
         "Weight": 0.269,
         "LoyaltyLevel": 4,
-        "Price": 0,
         "Handling": 3,
-        "AimStability": 8,
-        "TemplateType": "weaponmod"
+        "AimStability": 8
     },
     "5b7be2345acfc400196d524a": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3361,10 +3059,8 @@
         "ConflictingItems": [],
         "Weight": 0.211,
         "LoyaltyLevel": 4,
-        "Price": 0,
         "Handling": 4,
-        "AimStability": 7,
-        "TemplateType": "weaponmod"
+        "AimStability": 7
     },
     "5b7bedd75acfc43d825283f9": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3382,10 +3078,8 @@
         "ConflictingItems": [],
         "Weight": 0.224,
         "LoyaltyLevel": 4,
-        "Price": 0,
         "Handling": 5,
-        "AimStability": 5,
-        "TemplateType": "weaponmod"
+        "AimStability": 5
     },
     "5fbc226eca32ed67276c155d": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3403,10 +3097,8 @@
         "ConflictingItems": [],
         "Weight": 0.39,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "Handling": 3,
-        "AimStability": 2,
-        "TemplateType": "weaponmod"
+        "AimStability": 2
     },
     "5fbc227aa56d053a3543f79e": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3437,10 +3129,8 @@
         ],
         "Weight": 0.43,
         "LoyaltyLevel": 4,
-        "Price": 0,
         "Handling": 3.5,
-        "AimStability": 5,
-        "TemplateType": "weaponmod"
+        "AimStability": 5
     },
     "5c5db5f22e2216000e5e47e8": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3458,9 +3148,7 @@
         "ConflictingItems": [],
         "Weight": 0.08,
         "LoyaltyLevel": 2,
-        "Price": 0,
-        "AimStability": 2,
-        "TemplateType": "weaponmod"
+        "AimStability": 2
     },
     "5894a42086f77426d2590762": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3477,9 +3165,7 @@
         "CoolFactor": 1.016,
         "ConflictingItems": [],
         "Weight": 0.302,
-        "LoyaltyLevel": 1,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 1
     },
     "5c5db5fc2e2216000f1b2842": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3497,10 +3183,8 @@
         "ConflictingItems": [],
         "Weight": 0.14,
         "LoyaltyLevel": 3,
-        "Price": 0,
         "Handling": 2,
-        "AimStability": 4,
-        "TemplateType": "weaponmod"
+        "AimStability": 4
     },
     "5c5db6302e2216000e5e47f0": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3518,10 +3202,8 @@
         "ConflictingItems": [],
         "Weight": 0.226,
         "LoyaltyLevel": 3,
-        "Price": 0,
         "Handling": 3,
-        "AimStability": 6,
-        "TemplateType": "weaponmod"
+        "AimStability": 6
     },
     "5c5db63a2e2216000f1b284a": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3539,10 +3221,8 @@
         "ConflictingItems": [],
         "Weight": 0.269,
         "LoyaltyLevel": 3,
-        "Price": 0,
         "Handling": 3.5,
-        "AimStability": 8,
-        "TemplateType": "weaponmod"
+        "AimStability": 8
     },
     "5c59529a2e221602b177d160": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3560,10 +3240,8 @@
         "ConflictingItems": [],
         "Weight": 0.144,
         "LoyaltyLevel": 4,
-        "Price": 0,
         "Handling": 3,
-        "AimStability": 10,
-        "TemplateType": "weaponmod"
+        "AimStability": 10
     },
     "5888976c24597754281f93f5": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3581,9 +3259,7 @@
         "ConflictingItems": [],
         "Weight": 0.323,
         "LoyaltyLevel": 1,
-        "Price": 0,
-        "AimStability": 11,
-        "TemplateType": "weaponmod"
+        "AimStability": 11
     },
     "5fc235db2770a0045c59c683": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3608,9 +3284,7 @@
         ],
         "Weight": 0.4,
         "LoyaltyLevel": 1,
-        "Price": 0,
-        "Handling": 5,
-        "TemplateType": "weaponmod"
+        "Handling": 5
     },
     "6281209662cba23f6c4d7a19": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3628,11 +3302,9 @@
         "ConflictingItems": [],
         "Weight": 0.43,
         "LoyaltyLevel": 4,
-        "Price": 0,
         "Handling": 3,
         "AimStability": 8
-,
-        "TemplateType": "weaponmod"
+
     },
     "5df25d3bfd6b4e6e2276dc9a": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3650,10 +3322,8 @@
         "ConflictingItems": [],
         "Weight": 0.36,
         "LoyaltyLevel": 2,
-        "Price": 0,
         "Handling": 5,
-        "AimStability": 10,
-        "TemplateType": "weaponmod"
+        "AimStability": 10
     },
     "5cde7afdd7f00c000d36b89d": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3673,9 +3343,7 @@
         ],
         "Weight": 0.39,
         "LoyaltyLevel": 3,
-        "Price": 0,
-        "AimStability": 8,
-        "TemplateType": "weaponmod"
+        "AimStability": 8
     },
     "623c3c1f37b4b31470357737": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3695,9 +3363,7 @@
         ],
         "Weight": 0.33,
         "LoyaltyLevel": 4,
-        "Price": 0,
-        "AimStability": 10,
-        "TemplateType": "weaponmod"
+        "AimStability": 10
     },
     "634f03d40384a3ba4f06f874": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3715,9 +3381,7 @@
         "CoolFactor": 0.97,
         "ConflictingItems": [],
         "Weight": 0.1,
-        "LoyaltyLevel": 1,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 1
     },
     "634f08a21f9f536910079b5a": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3735,9 +3399,7 @@
         "CoolFactor": 0.97,
         "ConflictingItems": [],
         "Weight": 0.1,
-        "LoyaltyLevel": 1,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 1
     },
     "644675573d52156624001fc9": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3755,9 +3417,7 @@
         "CoolFactor": 0.95,
         "ConflictingItems": [],
         "Weight": 0.167,
-        "LoyaltyLevel": 1,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 1
     },
     "6448f2f6d4928d46d30be3f6": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3775,9 +3435,7 @@
         "CoolFactor": 0.97,
         "ConflictingItems": [],
         "Weight": 0.167,
-        "LoyaltyLevel": 1,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 1
     },
     "647dba3142c479dde701b654": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3798,9 +3456,7 @@
         ],
         "Weight": 0.315,
         "Handling": 4,
-        "LoyaltyLevel": 3,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 3
     },
     "647dd2b8a12ebf96c3031655": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3826,9 +3482,7 @@
         "Weight": 0.355,
         "Handling": 4,
         "AimStability": 3,
-        "LoyaltyLevel": 3,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 3
     },
     "647de824196bf69818044c93": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3851,9 +3505,7 @@
             "63d3d44a2a49307baf09386d"
         ],
         "Weight": 0.094,
-        "LoyaltyLevel": 2,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 2
     },
     "647def638295ebcb5b02f05b": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3874,9 +3526,7 @@
         ],
         "Weight": 0.033,
         "AimStability": 4,
-        "LoyaltyLevel": 2,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 2
     },
     "6513f05a94c72326990a3866": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3895,9 +3545,7 @@
         "ConflictingItems": [],
         "Weight": 0.25,
         "Handling": 5,
-        "LoyaltyLevel": 1,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 1
     },
     "651bfe4d1065f87f082e7209": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3923,9 +3571,7 @@
         ],
         "Weight": 0.27,
         "AimStability": 10,
-        "LoyaltyLevel": 1,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 1
     },
     "652910ef50dc782999054b97": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3944,9 +3590,7 @@
         "Weight": 0.43,
         "AimStability": 2,
         "Handling": 4,
-        "LoyaltyLevel": 1,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 1
     },
     "653ecc425a1690d9d90491e4": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3964,9 +3608,7 @@
         "CoolFactor": 1.05,
         "ConflictingItems": [],
         "Weight": 0.1,
-        "LoyaltyLevel": 2,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 2
     },
     "653ecd065a1690d9d90491e6": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -3984,9 +3626,7 @@
         "CoolFactor": 0.97,
         "ConflictingItems": [],
         "Weight": 0.22,
-        "LoyaltyLevel": 3,
-        "Price": 0,
-        "TemplateType": "weaponmod"
+        "LoyaltyLevel": 3
     },
     "653ece125a1690d9d90491e8": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -4004,8 +3644,7 @@
         "CoolFactor": 0.98,
         "ConflictingItems": [],
         "Weight": 0.21,
-        "LoyaltyLevel": 3,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "651178336cad06c37c049eb4": {
         "$type": "RealismMod.WeaponMod, RealismMod",

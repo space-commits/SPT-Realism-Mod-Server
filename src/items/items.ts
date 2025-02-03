@@ -135,7 +135,6 @@ export class ItemsClass {
                 "57dbb57e2459774673234890",
                 "57da93632459771cb65bf83f"
             ];
-        //m9    
         for (let i in this.itemDB()["55d3632e4bdc2d972f8b4569"]._props.Slots[0]._props.filters[0].Filter) {
             let item = this.itemDB()["55d3632e4bdc2d972f8b4569"]._props.Slots[0]._props.filters[0].Filter[i];
             if (item !== "544a38634bdc2d58388b4568" && item !== "5c0fafb6d174af02a96260ba" && item !== "56ea8180d2720bf2698b456a") {
@@ -189,8 +188,8 @@ export class ItemsClass {
         }
     }
 
-    public loadItemBlacklists(){
-        for(let i in StaticArrays.blacklistedItems){
+    public loadItemBlacklists() {
+        for (let i in StaticArrays.blacklistedItems) {
             this.itemConfig.blacklist.push(StaticArrays.blacklistedItems[i]);
             this.itemConfig.rewardItemBlacklist.push(StaticArrays.blacklistedItems[i]);
         }

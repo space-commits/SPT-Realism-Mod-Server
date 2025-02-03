@@ -236,7 +236,7 @@ class BotGen extends BotGenerator_1.BotGenerator {
         if (utils_1.RaidInfoTracker.generatedBotsCount == 0)
             this.placeHolderBotCache = [];
         utils_1.RaidInfoTracker.generatedBotsCount += 1;
-        if (modConfig.spawn_waves == true && !utils_1.ModTracker.qtbPresent && !utils_1.ModTracker.swagPresent) {
+        if (modConfig.spawn_waves == true && !utils_1.ModTracker.qtbSpawnsActive && !utils_1.ModTracker.swagPresent) {
             if (utils_1.RaidInfoTracker.generatedBotsCount > 600 && this.placeHolderBotCache.length !== 0) {
                 return this.checkIfShouldReturnCahcedBot(this.placeHolderBotCache);
             }
@@ -976,17 +976,15 @@ class BotGenHelper extends BotGeneratorHelper_1.BotGeneratorHelper {
             }
         }
         if (itemTemplate._props.MaxHpResource) {
-            let medRandomization = { "resourcePercent": 30, "chanceMaxResourcePercent": 20 };
-            itemProperties.MedKit = {
-                HpResource: this.getRandomizedResourceValue(itemTemplate._props.MaxHpResource, medRandomization)
-            };
+            const medRandomization = { "resourcePercent": 30, "chanceMaxResourcePercent": 20 };
+            const resource = Math.max(1, this.getRandomizedResourceValue(itemTemplate._props.MaxResource, medRandomization));
+            itemProperties.MedKit = { HpResource: resource };
         }
         if (itemTemplate._props.MaxResource && itemTemplate._props.foodUseTime) {
-            let foodRandomization = { "resourcePercent": 40, "chanceMaxResourcePercent": 30 };
             //this.botConfig.lootItemResourceRandomization[botRole]?.food
-            itemProperties.FoodDrink = {
-                HpPercent: this.getRandomizedResourceValue(itemTemplate._props.MaxResource, foodRandomization)
-            };
+            const foodRandomization = { "resourcePercent": 40, "chanceMaxResourcePercent": 30 };
+            const resource = Math.max(1, this.getRandomizedResourceValue(itemTemplate._props.MaxResource, foodRandomization));
+            itemProperties.FoodDrink = { HpPercent: resource };
         }
         if (modConfig.enable_hazard_zones && itemTemplate._props.MaxResource && itemTemplate._id === "590c595c86f7747884343ad7") {
             itemProperties.Resource = { Value: Math.floor(Math.random() * 61) + 35, UnitsConsumed: 0 };
