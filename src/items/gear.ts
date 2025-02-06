@@ -18,19 +18,19 @@ export class Gear {
     }
 
     public loadSpecialSlotChanges() {
-        const gasId = "590a3efd86f77437d351a25b";
-        const geingerId = "5672cb724bdc2dc2088b456b";
+
+        let itemsToAdd: string[] = [...StaticArrays.hazardDetectionDevices, ...StaticArrays.gasMasks];
 
         this.itemDB()["627a4e6b255f7527fb05a0f6"]._props.Slots.forEach(slot => {
-            slot._props.filters[0].Filter.push(gasId, geingerId);
+            slot._props.filters[0].Filter.push(...itemsToAdd);
         });
         this.itemDB()["65e080be269cbd5c5005e529"]._props.Slots.forEach(slot => {
-            slot._props.filters[0].Filter.push(gasId, geingerId);
+            slot._props.filters[0].Filter.push(...itemsToAdd);
         });
         //SVM pockets compatbility
         if (this.itemDB()["a8edfb0bce53d103d3f62b9b"]) {
             this.itemDB()["a8edfb0bce53d103d3f62b9b"]._props.Slots.forEach(slot => {
-                slot._props.filters[0].Filter.push(gasId, geingerId);
+                slot._props.filters[0].Filter.push(...itemsToAdd);
             });
         }
     }

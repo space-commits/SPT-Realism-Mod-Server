@@ -306,6 +306,10 @@ class StaticArrays {
         "5b432c305acfc40019478128": 2,
         "59e7715586f7742ee5789605": 7
     };
+    static hazardDetectionDevices = [
+        "590a3efd86f77437d351a25b",
+        "5672cb724bdc2dc2088b456b"
+    ];
     static botLootBlacklist = [
         "6783adb2a43ec97b902c4080",
         "6783ad9f56a70af01706bf5f",
