@@ -34,8 +34,8 @@ export class InsuranceOverride extends InsuranceController {
             )} items, in profile ${sessionID}`,
         );
 
-        // Iterate over each of the insurance packages.
-        for (const insured of insuranceDetails) {
+         // Iterate over each of the insurance packages.
+         for (const insured of insuranceDetails) {
             // Create a new root parent ID for the message we'll be sending the player
             const rootItemParentID = this.hashUtil.generate();
 

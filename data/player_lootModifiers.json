@@ -149,7 +149,7 @@
         "staticLootMultiplier": {
             "bigmap": 0.8599999999999999,
             "develop": 1,
-            "factory4_day": 1,
+            "factory4_day": 0.98,
             "factory4_night": 1,
             "interchange": 1,
             "laboratory": 1,
