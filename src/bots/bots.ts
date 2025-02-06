@@ -8,7 +8,7 @@ import { IBotType, IHealth } from "@spt/models/eft/common/tables/IBotType";
 import { IPmcConfig } from "@spt/models/spt/config/IPmcConfig";
 import { ILocations } from "@spt/models/spt/server/ILocations";
 import { EventTracker } from "../misc/seasonalevents";
-import { BotArrays } from "../utils/arrays";
+import { BotArrays, StaticArrays } from "../utils/arrays";
 import { IPmcData } from "@spt/models/eft/common/IPmcData";
 
 const scavLO = require("../../db/bots/loadouts/scavs/scavLO.json");
@@ -87,19 +87,6 @@ export class BotLoader {
     botConfPMC(): IPmcConfig {
         return this.configServ.getConfig<IPmcConfig>(ConfigTypes.PMC);
     }
-
-    lootBlacklist(): string[] {
-        return [
-            "6783adb2a43ec97b902c4080",
-            "6783ad9f56a70af01706bf5f",
-            "6783ad886700d7d90daf548d",
-            "6783ad5fce6705d14a117b15",
-            "6783adc3899d65035b52e21b",
-            "6783ad365524129829f0099d",
-            "6783ad5260cc8e9597065ec5"
-        ];
-    }
-
     public loadBots() {
 
         if (this.modConfig.dynamic_loot_pmcs === true) {
@@ -162,20 +149,18 @@ export class BotLoader {
         this.botConf().playerScavBrainType = pmcTypes.playerScavBrainType;
         this.botConf().chanceAssaultScavHasPlayerScavName = 0;
 
-        for (let i in this.lootBlacklist()) {
-            this.botConfPMC().vestLoot.blacklist.push(this.lootBlacklist()[i]);
-            this.botConfPMC().pocketLoot.blacklist.push(this.lootBlacklist()[i]);
-            this.botConfPMC().backpackLoot.blacklist.push(this.lootBlacklist()[i]);
-        }
+        this.botConfPMC().vestLoot.blacklist.push(...StaticArrays.botLootBlacklist);
+        this.botConfPMC().pocketLoot.blacklist.push(...StaticArrays.botLootBlacklist);
+        this.botConfPMC().backpackLoot.blacklist.push(...StaticArrays.botLootBlacklist);
 
         //I hate this as much as you do
-        const pmcLo = [bearLO.bearLO1, bearLO.bearLO2, bearLO.bearLO3,
+        const botLOs = [bearLO.bearLO1, bearLO.bearLO2, bearLO.bearLO3,
         bearLO.bearLO4, usecLO.usecLO1, usecLO.usecLO2, usecLO.usecLO3,
         usecLO.usecLO4, tier5LO.tier5LO, rogueLO.rogueLO1, rogueLO.rogueLO2,
         rogueLO.rogueLO3, raiderLO.raiderLO1, raiderLO.raiderLO2, raiderLO.raiderLO3];
-        for (let i in pmcLo) {
-            this.utils.addArmorInserts(pmcLo[i].inventory.mods);
-            this.utils.addGasMaskFilters(pmcLo[i].inventory.mods);
+        for (let i in botLOs) {
+            this.utils.addArmorInserts(botLOs[i].inventory.mods);
+            this.utils.addGasMaskFilters(botLOs[i].inventory.mods);
         }
 
         if (this.modConfig.logEverything == true) {
@@ -701,7 +686,7 @@ export class BotLoader {
 
         this.botConfPMC().isUsec = rmBotConfig.pmc2.isUsec;
 
-        if (!ModTracker.swagPresent && this.modConfig.spawn_waves && !ModTracker.qtbSpawnsActive) {
+        if (this.modConfig.spawn_waves == true && !ModTracker.swagPresent && !ModTracker.qtbSpawnsActive) {
             this.botConfPMC().convertIntoPmcChance = rmBotConfig.pmc2.convertIntoPmcChance;
         }
 
@@ -777,7 +762,7 @@ export class BotLoader {
 
         this.botConfPMC().isUsec = rmBotConfig.pmc3.isUsec;
 
-        if (!ModTracker.swagPresent && this.modConfig.spawn_waves && !ModTracker.qtbSpawnsActive) {
+        if (this.modConfig.spawn_waves == true && !ModTracker.swagPresent && !ModTracker.qtbSpawnsActive) {
             this.botConfPMC().convertIntoPmcChance = rmBotConfig.pmc3.convertIntoPmcChance;
         }
 

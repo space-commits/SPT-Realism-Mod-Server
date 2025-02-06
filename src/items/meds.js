@@ -42,7 +42,6 @@ class Consumables {
             this.itemDB()["6783adc3899d65035b52e21b"]._props.StimulatorBuffs = "Buffs_Damage";
             this.itemDB()["6783ad365524129829f0099d"]._props.StimulatorBuffs = "Buffs_Adrenal";
             this.itemDB()["6783ad5260cc8e9597065ec5"]._props.StimulatorBuffs = "Buffs_Regenerative";
-            this.itemDB()["6783ad5260cc8e9597065ec5"]._props.StimulatorBuffs = "Buffs_Regenerative";
             ///Custom///
             this.itemDB()["6783aca07b1449bd298b10f8"]._props.StimulatorBuffs = this.medItems.SJ0.StimulatorBuffs;
         }

@@ -1586,14 +1586,14 @@
         "ItemID": "64b7af434b75259c590fa893",
         "Name": "patron_762x39_pp",
         "LoyaltyLevel": 3,
-        "BasePriceModifier": 0.8
+        "BasePriceModifier": 0.7
     },
     "64b7af5a8532cf95ee0a0dbd": {
         "$type": "RealismMod.Ammo, RealismMod",
         "ItemID": "64b7af5a8532cf95ee0a0dbd",
         "Name": "patron_762x39_fmj",
         "LoyaltyLevel": 2,
-        "BasePriceModifier": 1
+        "BasePriceModifier": 1.1
     },
     "64b7af734b75259c590fa895": {
         "$type": "RealismMod.Ammo, RealismMod",

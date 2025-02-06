@@ -97,7 +97,7 @@ export class Spawns {
         this.loadBossSpawnChanges();
 
         //SPT does its own custom PMC waves, this couble be doubling up or interfering in some way
-        if (this.modConf.spawn_waves && !ModTracker.swagPresent && !ModTracker.qtbSpawnsActive) {
+        if (this.modConf.spawn_waves == true && !ModTracker.swagPresent && !ModTracker.qtbSpawnsActive) {
             locationConfig.customWaves.normal = {}; //get rid of the extra waves of scavs SPT adds for no good reason
             locationConfig.customWaves.boss = {}; //get rid of extra PMC spawns
             locationConfig.addCustomBotWavesToMaps = false;

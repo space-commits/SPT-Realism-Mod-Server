@@ -144,16 +144,16 @@
     "maxBotCapLow": {
         "factory4_day": 10,
         "factory4_night": 10,
-        "bigmap": 12,
+        "bigmap": 13,
         "woods": 15,
         "shoreline": 14,
         "lighthouse": 12,
         "rezervbase": 12,
         "interchange": 11,
         "laboratory": 14,
-        "tarkovstreets": 10,
-        "sandbox": 10,
-        "sandbox_high": 10,
+        "tarkovstreets": 11,
+        "sandbox": 11,
+        "sandbox_high": 11,
         "default": 12
     },
     "testBotCap": {

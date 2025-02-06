@@ -341,7 +341,7 @@
         "CanBeUsedInRaid": true,
         "HeavyBleedHealType": "surgical",
         "HPRestoreAmount": 105,
-        "HPRestoreTick": 0.85
+        "HPRestoreTick": 0.95
     },
     "5d02797c86f774203f38e30a": {
         "$type": "RealismMod.Consumable, RealismMod",
@@ -360,6 +360,6 @@
         "CanBeUsedInRaid": true,
         "HeavyBleedHealType": "surgical",
         "HPRestoreAmount": 64,
-        "HPRestoreTick": 0.95
+        "HPRestoreTick": 1.1
     }
 }

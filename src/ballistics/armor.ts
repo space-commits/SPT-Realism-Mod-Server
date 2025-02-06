@@ -27,14 +27,18 @@ export class Armor {
     }
 
     public loadArmorStats() {
-        for (const key in this.armMat()) {
-            const mat: IArmorType = this.armMat()[key];
-            mat.MinRepairDegradation = 0.5;
-            mat.MaxRepairDegradation = 1;
-            mat.MinRepairKitDegradation = 0.1;
-            mat.MaxRepairKitDegradation = 0.25;
+        if (this.modConf.trader_repair_changes) {
+            for (const key in this.armMat()) {
+                const mat: IArmorType = this.armMat()[key];
+                mat.MinRepairDegradation = 0.5;
+                mat.MaxRepairDegradation = 1;
+                mat.MinRepairKitDegradation = 0.05;
+                mat.MaxRepairKitDegradation = 0.15;
+            }
+            this.armMat().Glass.MinRepairKitDegradation = 0.99;
+            this.armMat().Glass.MaxRepairKitDegradation = 1;
         }
-   
+
         //Armor Destructibility values
         this.armMat().Glass.Destructibility = 0.45;
         this.armMat().Aramid.Destructibility = 0.33;

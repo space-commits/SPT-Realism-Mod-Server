@@ -1140,8 +1140,10 @@ export class BotWepGen extends BotWeaponGenerator {
             }
         }
         catch {
-            this.logger.warning(`Realism Mod: Failed To Find Custom Preset For Bot ${botRole} At Tier ${tier}. Do not panic, read the warning, do not report this.`);
-            this.logger.warning(this.localisationService.getText("bot-weapon_generated_incorrect_using_default", weaponTpl));
+            if (modConfig.logEverything == true) {
+                this.logger.warning(`Realism Mod: Failed To Find Custom Preset For Bot ${botRole} At Tier ${tier}. Do not panic, read the warning, do not report this.`);
+                this.logger.warning(this.localisationService.getText("bot-weapon_generated_incorrect_using_default", weaponTpl))
+            };
 
             let preset: IPreset;
             for (const presetObj of Object.values(tables.globals.ItemPresets)) {

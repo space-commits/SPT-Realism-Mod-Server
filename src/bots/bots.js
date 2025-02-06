@@ -4,6 +4,7 @@ exports.BotLoader = void 0;
 const ConfigTypes_1 = require("C:/snapshot/project/obj/models/enums/ConfigTypes");
 const utils_1 = require("../utils/utils");
 const seasonalevents_1 = require("../misc/seasonalevents");
+const arrays_1 = require("../utils/arrays");
 const scavLO = require("../../db/bots/loadouts/scavs/scavLO.json");
 const bearLO = require("../../db/bots/loadouts/PMCs/bearLO.json");
 const usecLO = require("../../db/bots/loadouts/PMCs/usecLO.json");
@@ -89,17 +90,6 @@ class BotLoader {
     botConfPMC() {
         return this.configServ.getConfig(ConfigTypes_1.ConfigTypes.PMC);
     }
-    lootBlacklist() {
-        return [
-            "6783adb2a43ec97b902c4080",
-            "6783ad9f56a70af01706bf5f",
-            "6783ad886700d7d90daf548d",
-            "6783ad5fce6705d14a117b15",
-            "6783adc3899d65035b52e21b",
-            "6783ad365524129829f0099d",
-            "6783ad5260cc8e9597065ec5"
-        ];
-    }
     loadBots() {
         if (this.modConfig.dynamic_loot_pmcs === true) {
             this.botConfPMC().looseWeaponInBackpackChancePercent = 0;
@@ -156,19 +146,17 @@ class BotLoader {
         this.botConfPMC().backpackLoot.blacklist = [];
         this.botConf().playerScavBrainType = pmcTypes.playerScavBrainType;
         this.botConf().chanceAssaultScavHasPlayerScavName = 0;
-        for (let i in this.lootBlacklist()) {
-            this.botConfPMC().vestLoot.blacklist.push(this.lootBlacklist()[i]);
-            this.botConfPMC().pocketLoot.blacklist.push(this.lootBlacklist()[i]);
-            this.botConfPMC().backpackLoot.blacklist.push(this.lootBlacklist()[i]);
-        }
+        this.botConfPMC().vestLoot.blacklist.push(...arrays_1.StaticArrays.botLootBlacklist);
+        this.botConfPMC().pocketLoot.blacklist.push(...arrays_1.StaticArrays.botLootBlacklist);
+        this.botConfPMC().backpackLoot.blacklist.push(...arrays_1.StaticArrays.botLootBlacklist);
         //I hate this as much as you do
-        const pmcLo = [bearLO.bearLO1, bearLO.bearLO2, bearLO.bearLO3,
+        const botLOs = [bearLO.bearLO1, bearLO.bearLO2, bearLO.bearLO3,
             bearLO.bearLO4, usecLO.usecLO1, usecLO.usecLO2, usecLO.usecLO3,
             usecLO.usecLO4, tier5LO.tier5LO, rogueLO.rogueLO1, rogueLO.rogueLO2,
             rogueLO.rogueLO3, raiderLO.raiderLO1, raiderLO.raiderLO2, raiderLO.raiderLO3];
-        for (let i in pmcLo) {
-            this.utils.addArmorInserts(pmcLo[i].inventory.mods);
-            this.utils.addGasMaskFilters(pmcLo[i].inventory.mods);
+        for (let i in botLOs) {
+            this.utils.addArmorInserts(botLOs[i].inventory.mods);
+            this.utils.addGasMaskFilters(botLOs[i].inventory.mods);
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("Bots Loaded");
@@ -669,7 +657,7 @@ class BotLoader {
         this.botConfPMC().maxVestLootTotalRub = rmBotConfig.pmc2.maxVestLootTotalRub;
         this.botConfPMC().looseWeaponInBackpackChancePercent = rmBotConfig.pmc2.looseWeaponInBackpackChancePercent;
         this.botConfPMC().isUsec = rmBotConfig.pmc2.isUsec;
-        if (!utils_1.ModTracker.swagPresent && this.modConfig.spawn_waves && !utils_1.ModTracker.qtbSpawnsActive) {
+        if (this.modConfig.spawn_waves == true && !utils_1.ModTracker.swagPresent && !utils_1.ModTracker.qtbSpawnsActive) {
             this.botConfPMC().convertIntoPmcChance = rmBotConfig.pmc2.convertIntoPmcChance;
         }
         this.botConf().itemSpawnLimits.pmc = pmcLootLimits.PMCLootLimit2;
@@ -736,7 +724,7 @@ class BotLoader {
         this.botConfPMC().maxVestLootTotalRub = rmBotConfig.pmc3.maxVestLootTotalRub;
         this.botConfPMC().looseWeaponInBackpackChancePercent = rmBotConfig.pmc3.looseWeaponInBackpackChancePercent;
         this.botConfPMC().isUsec = rmBotConfig.pmc3.isUsec;
-        if (!utils_1.ModTracker.swagPresent && this.modConfig.spawn_waves && !utils_1.ModTracker.qtbSpawnsActive) {
+        if (this.modConfig.spawn_waves == true && !utils_1.ModTracker.swagPresent && !utils_1.ModTracker.qtbSpawnsActive) {
             this.botConfPMC().convertIntoPmcChance = rmBotConfig.pmc3.convertIntoPmcChance;
         }
         this.botConf().itemSpawnLimits.pmc = pmcLootLimits.PMCLootLimit3;
@@ -1199,10 +1187,7 @@ class BotLoader {
             botJsonTemplate.inventory.equipment.FaceCover = { ...usecLO.FaceCoverLabs };
             botJsonTemplate.inventory.equipment.Eyewear = {};
             botJsonTemplate.chances.equipment.FaceCover = 100;
-            if (utils_1.ModTracker.tgcPresent) {
-                botJsonTemplate.inventory.equipment.FaceCover["672e2e756803734b60f5ac1e"] = 1;
-                botJsonTemplate.inventory.equipment.FaceCover["672e2e7517018293d11bbdc1"] = 1;
-            }
+            this.addOptionalGasMasks(botJsonTemplate);
         }
         if (utils_1.RaidInfoTracker.mapName === "reservebase" || utils_1.RaidInfoTracker.mapName === "rezervbase") {
             botJsonTemplate.inventory.equipment.FaceCover["60363c0c92ec1c31037959f5"] = 20; //gp7
@@ -1532,10 +1517,7 @@ class BotLoader {
             botJsonTemplate.inventory.equipment.FaceCover = { ...bearLO.FaceCoverLabs };
             botJsonTemplate.inventory.equipment.Eyewear = {};
             botJsonTemplate.chances.equipment.FaceCover = 100;
-            if (utils_1.ModTracker.tgcPresent) {
-                botJsonTemplate.inventory.equipment.FaceCover["672e2e756803734b60f5ac1e"] = 1;
-                botJsonTemplate.inventory.equipment.FaceCover["672e2e7517018293d11bbdc1"] = 1;
-            }
+            this.addOptionalGasMasks(botJsonTemplate);
         }
         if (utils_1.RaidInfoTracker.mapName === "reservebase" || utils_1.RaidInfoTracker.mapName === "rezervbase") {
             botJsonTemplate.inventory.equipment.FaceCover["60363c0c92ec1c31037959f5"] = 20; //gp7
@@ -1568,6 +1550,15 @@ class BotLoader {
         }
         if (this.modConfig.logEverything == true) {
             this.logger.info("bearLoad5 loaded");
+        }
+    }
+    addOptionalGasMasks(botJsonTemplate) {
+        if (utils_1.ModTracker.tgcPresent) {
+            botJsonTemplate.inventory.equipment.FaceCover["672e2e756803734b60f5ac1e"] = 1;
+            botJsonTemplate.inventory.equipment.FaceCover["672e2e7517018293d11bbdc1"] = 1;
+        }
+        if (this.modConfig.enable_hazard_zones) {
+            botJsonTemplate.inventory.equipment.FaceCover["67a13809c3bc1e2fa47e6eec"] = 1;
         }
     }
     tier5PMCLoad(botJsonTemplate) {
@@ -1618,10 +1609,7 @@ class BotLoader {
             botJsonTemplate.inventory.equipment.FaceCover = { ...bearLO.FaceCoverLabs };
             botJsonTemplate.inventory.equipment.Eyewear = {};
             botJsonTemplate.chances.equipment.FaceCover = 100;
-            if (utils_1.ModTracker.tgcPresent) {
-                botJsonTemplate.inventory.equipment.FaceCover["672e2e756803734b60f5ac1e"] = 1;
-                botJsonTemplate.inventory.equipment.FaceCover["672e2e7517018293d11bbdc1"] = 1;
-            }
+            this.addOptionalGasMasks(botJsonTemplate);
         }
         if (utils_1.RaidInfoTracker.mapName === "reservebase" || utils_1.RaidInfoTracker.mapName === "rezervbase") {
             botJsonTemplate.inventory.equipment.FaceCover["60363c0c92ec1c31037959f5"] = 20; //gp7
@@ -1768,10 +1756,7 @@ class BotLoader {
             this.raiderBase.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 };
             this.raiderBase.inventory.equipment.Eyewear = {};
         }
-        if (utils_1.ModTracker.tgcPresent) {
-            this.raiderBase.inventory.equipment.FaceCover["672e2e756803734b60f5ac1e"] = 1;
-            this.raiderBase.inventory.equipment.FaceCover["672e2e7517018293d11bbdc1"] = 1;
-        }
+        this.addOptionalGasMasks(this.raiderBase);
         utils_1.BotTierTracker.raiderTier = 2;
         if (this.modConfig.logEverything == true) {
             this.logger.info("raiderLoad2 loaded");
@@ -1845,10 +1830,7 @@ class BotLoader {
             this.raiderBase.inventory.equipment.FaceCover = { "60363c0c92ec1c31037959f5": 1 };
             this.raiderBase.inventory.equipment.Eyewear = {};
         }
-        if (utils_1.ModTracker.tgcPresent) {
-            this.raiderBase.inventory.equipment.FaceCover["672e2e756803734b60f5ac1e"] = 1;
-            this.raiderBase.inventory.equipment.FaceCover["672e2e7517018293d11bbdc1"] = 1;
-        }
+        this.addOptionalGasMasks(this.raiderBase);
         utils_1.BotTierTracker.raiderTier = 3;
         if (this.modConfig.logEverything == true) {
             this.logger.info("raiderLoad3 loaded");

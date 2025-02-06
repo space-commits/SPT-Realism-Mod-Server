@@ -141,6 +141,7 @@ class BotGen extends BotGenerator_1.BotGenerator {
             equipment.FaceCover["672e2e756803734b60f5ac1e"] = 2;
             equipment.FaceCover["672e2e7517018293d11bbdc1"] = 2;
             equipment.FaceCover["672e2e7504b1f1d5b0e4209c"] = 1;
+            equipment.FaceCover["67a13809c3bc1e2fa47e6eec"] = 1;
         }
         chances.equipment.Eyewear = 0;
         chances.equipment.FaceCover = 100;
@@ -901,8 +902,11 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
             }
         }
         catch {
-            this.logger.warning(`Realism Mod: Failed To Find Custom Preset For Bot ${botRole} At Tier ${tier}. Do not panic, read the warning, do not report this.`);
-            this.logger.warning(this.localisationService.getText("bot-weapon_generated_incorrect_using_default", weaponTpl));
+            if (modConfig.logEverything == true) {
+                this.logger.warning(`Realism Mod: Failed To Find Custom Preset For Bot ${botRole} At Tier ${tier}. Do not panic, read the warning, do not report this.`);
+                this.logger.warning(this.localisationService.getText("bot-weapon_generated_incorrect_using_default", weaponTpl));
+            }
+            ;
             let preset;
             for (const presetObj of Object.values(tables.globals.ItemPresets)) {
                 if (presetObj._items[0]._tpl === weaponTpl) {

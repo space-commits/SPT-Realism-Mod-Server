@@ -189,10 +189,9 @@ export class ItemsClass {
     }
 
     public loadItemBlacklists() {
-        for (let i in StaticArrays.blacklistedItems) {
-            this.itemConfig.blacklist.push(StaticArrays.blacklistedItems[i]);
-            this.itemConfig.rewardItemBlacklist.push(StaticArrays.blacklistedItems[i]);
-        }
+        this.itemConfig.blacklist.push(...StaticArrays.blacklistedItems);
+        this.itemConfig.rewardItemBlacklist.push(...StaticArrays.blacklistedItems);
+        this.itemConfig.lootableItemBlacklist.push(...StaticArrays.blacklistedItems);
     }
 
     public loadItemsRestrictions() {

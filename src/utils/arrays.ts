@@ -154,7 +154,7 @@ export class StaticArrays {
         "laboratory",
         "interchange"
     ]
-    
+
     static blacklistedItems = [
         "6783adb2a43ec97b902c4080",
         "6783ad9f56a70af01706bf5f",
@@ -333,7 +333,18 @@ export class StaticArrays {
         "5b432c305acfc40019478128": 2,
         "59e7715586f7742ee5789605": 7
     };
-    
+
+
+    static botLootBlacklist = [
+        "6783adb2a43ec97b902c4080",
+        "6783ad9f56a70af01706bf5f",
+        "6783ad886700d7d90daf548d",
+        "6783ad5fce6705d14a117b15",
+        "6783adc3899d65035b52e21b",
+        "6783ad365524129829f0099d",
+        "6783ad5260cc8e9597065ec5"
+    ];
+
     static traders = [
         "54cb50c76803fa8b248b4571",
         "54cb57776803fa99248b456e",

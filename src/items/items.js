@@ -175,10 +175,9 @@ class ItemsClass {
         }
     }
     loadItemBlacklists() {
-        for (let i in arrays_1.StaticArrays.blacklistedItems) {
-            this.itemConfig.blacklist.push(arrays_1.StaticArrays.blacklistedItems[i]);
-            this.itemConfig.rewardItemBlacklist.push(arrays_1.StaticArrays.blacklistedItems[i]);
-        }
+        this.itemConfig.blacklist.push(...arrays_1.StaticArrays.blacklistedItems);
+        this.itemConfig.rewardItemBlacklist.push(...arrays_1.StaticArrays.blacklistedItems);
+        this.itemConfig.lootableItemBlacklist.push(...arrays_1.StaticArrays.blacklistedItems);
     }
     loadItemsRestrictions() {
         if (this.modConfig.all_examined == true) {
