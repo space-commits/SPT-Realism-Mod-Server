@@ -1,5 +1,6 @@
 {
     "5df8a42886f77412640e2e75": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5df8a42886f77412640e2e75",
         "Name": "item_equipment_rig_multipurpose",
         "AllowADS": true,
@@ -11,10 +12,10 @@
         "Comfort": 0.8,
         "speedPenaltyPercent": -0.12,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5c0e6a1586f77404597b4965": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5c0e6a1586f77404597b4965",
         "Name": "item_equipment_rig_beltab",
         "AllowADS": true,
@@ -26,10 +27,10 @@
         "Comfort": 1.12,
         "speedPenaltyPercent": -1,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "603648ff5a45383c122086ac": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "603648ff5a45383c122086ac",
         "Name": "item_equipment_rig_azimut_black",
         "AllowADS": true,
@@ -41,10 +42,10 @@
         "Comfort": 0.87,
         "speedPenaltyPercent": -0.75,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5ca20abf86f77418567a43f2": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5ca20abf86f77418567a43f2",
         "Name": "item_equipment_rig_triton",
         "AllowADS": true,
@@ -56,10 +57,10 @@
         "Comfort": 0.76,
         "speedPenaltyPercent": -0.45,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5648a69d4bdc2ded0b8b457b": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5648a69d4bdc2ded0b8b457b",
         "Name": "bearRig",
         "AllowADS": true,
@@ -71,10 +72,10 @@
         "Comfort": 0.95,
         "speedPenaltyPercent": -0.4,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "572b7adb24597762ae139821": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "572b7adb24597762ae139821",
         "Name": "wild_vest",
         "AllowADS": true,
@@ -86,10 +87,10 @@
         "Comfort": 1.12,
         "speedPenaltyPercent": -0.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "628baf0b967de16aab5a4f36": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "628baf0b967de16aab5a4f36",
         "Name": "item_equipment_rig_boss_birdeye",
         "AllowADS": true,
@@ -101,10 +102,10 @@
         "Comfort": 0.77,
         "speedPenaltyPercent": -0.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "6034cf5fffd42c541047f72e": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6034cf5fffd42c541047f72e",
         "Name": "item_equipment_rig_umka_m33",
         "AllowADS": true,
@@ -116,10 +117,10 @@
         "Comfort": 0.9,
         "speedPenaltyPercent": -0.55,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5e4abc1f86f774069619fbaa": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5e4abc1f86f774069619fbaa",
         "Name": "item_equipment_rig_bankrobber",
         "AllowADS": true,
@@ -131,10 +132,10 @@
         "Comfort": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5ab8dab586f77441cd04f2a2": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5ab8dab586f77441cd04f2a2",
         "Name": "wartech_mk3",
         "AllowADS": true,
@@ -146,10 +147,10 @@
         "Comfort": 0.8,
         "speedPenaltyPercent": -0.4,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "59e7643b86f7742cbf2c109a": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "59e7643b86f7742cbf2c109a",
         "Name": "wartech_vest",
         "AllowADS": true,
@@ -161,10 +162,10 @@
         "Comfort": 1,
         "speedPenaltyPercent": -0.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5fd4c4fa16cac650092f6771": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5fd4c4fa16cac650092f6771",
         "Name": "item_equipment_rig_idea",
         "AllowADS": true,
@@ -176,10 +177,10 @@
         "Comfort": 1.08,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5fd4c5477a8d854fa0105061": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5fd4c5477a8d854fa0105061",
         "Name": "item_equipment_rig_ctactical",
         "AllowADS": true,
@@ -191,10 +192,10 @@
         "Comfort": 1.05,
         "speedPenaltyPercent": -0.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "592c2d1a86f7746dbe2af32a": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "592c2d1a86f7746dbe2af32a",
         "Name": "ana_tactical",
         "AllowADS": true,
@@ -206,10 +207,10 @@
         "Comfort": 0.9,
         "speedPenaltyPercent": -0.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5b44c8ea86f7742d1627baf1": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5b44c8ea86f7742d1627baf1",
         "Name": "item_equipment_rig_commando",
         "AllowADS": true,
@@ -221,10 +222,10 @@
         "Comfort": 0.79,
         "speedPenaltyPercent": -0.4,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5e4abfed86f77406a2713cf7": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5e4abfed86f77406a2713cf7",
         "Name": "item_equipment_rig_tarzan",
         "AllowADS": true,
@@ -236,10 +237,10 @@
         "Comfort": 0.9,
         "speedPenaltyPercent": -0.45,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5fd4c60f875c30179f5d04c2": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5fd4c60f875c30179f5d04c2",
         "Name": "item_equipment_rig_bssmk1",
         "AllowADS": true,
@@ -251,10 +252,10 @@
         "Comfort": 0.77,
         "speedPenaltyPercent": -0.15,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5f5f41f56760b4138443b352": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5f5f41f56760b4138443b352",
         "Name": "item_equipment_rig_thunderbolt",
         "AllowADS": true,
@@ -266,10 +267,10 @@
         "Comfort": 0.74,
         "speedPenaltyPercent": -0.1,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5929a2a086f7744f4b234d43": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5929a2a086f7744f4b234d43",
         "Name": "bear_rig_6h112",
         "AllowADS": true,
@@ -281,10 +282,10 @@
         "Comfort": 0.88,
         "speedPenaltyPercent": -0.45,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5e9db13186f7742f845ee9d3": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5e9db13186f7742f845ee9d3",
         "Name": "item_equipment_rig_bearing",
         "AllowADS": true,
@@ -296,10 +297,10 @@
         "Comfort": 0.78,
         "speedPenaltyPercent": -0.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5d5d85c586f774279a21cbdb": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5d5d85c586f774279a21cbdb",
         "Name": "item_equipment_rig_d3crx",
         "AllowADS": true,
@@ -311,10 +312,10 @@
         "Comfort": 0.79,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5d5d8ca986f7742798716522": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5d5d8ca986f7742798716522",
         "Name": "item_equipment_rig_micro",
         "AllowADS": true,
@@ -326,10 +327,10 @@
         "Comfort": 1,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "6034d0230ca681766b6a0fb5": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6034d0230ca681766b6a0fb5",
         "Name": "item_equipment_rig_cs_assault",
         "AllowADS": true,
@@ -341,10 +342,10 @@
         "Comfort": 1.2,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "63611865ba5b90db0c0399d1": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "63611865ba5b90db0c0399d1",
         "Name": "item_equipment_rig_boss_zryachi",
         "AllowADS": true,
@@ -356,10 +357,10 @@
         "Comfort": 1,
         "speedPenaltyPercent": -1,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "6040dd4ddcf9592f401632d2": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6040dd4ddcf9592f401632d2",
         "Name": "item_equipment_rig_azimut_surpat",
         "AllowADS": true,
@@ -371,10 +372,10 @@
         "Comfort": 0.87,
         "speedPenaltyPercent": -0.75,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5c0e9f2c86f77432297fe0a3": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5c0e9f2c86f77432297fe0a3",
         "Name": "item_equipment_rig_commando_black",
         "AllowADS": true,
@@ -386,10 +387,10 @@
         "Comfort": 0.79,
         "speedPenaltyPercent": -0.4,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "60a6220e953894617404b00a": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "60a6220e953894617404b00a",
         "Name": "item_equipment_rig_sprofi_recon",
         "AllowADS": true,
@@ -401,10 +402,10 @@
         "Comfort": 0.76,
         "speedPenaltyPercent": -0.4,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "60a621c49c197e4e8c4455e6": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "60a621c49c197e4e8c4455e6",
         "Name": "item_equipment_rig_sprofi_mk2_ak",
         "AllowADS": true,
@@ -416,10 +417,10 @@
         "Comfort": 0.745,
         "speedPenaltyPercent": -0.35,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "64be7095047e826eae02b0c1": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "64be7095047e826eae02b0c1",
         "Name": "item_equipment_rig_rscr_zulu",
         "AllowADS": true,
@@ -431,10 +432,10 @@
         "Comfort": 0.9,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "64be7110bf597ba84a0a41ea": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "64be7110bf597ba84a0a41ea",
         "Name": "item_equipment_rig_chicom",
         "AllowADS": true,
@@ -446,7 +447,6 @@
         "Comfort": 0.8,
         "speedPenaltyPercent": -0.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     }
 }

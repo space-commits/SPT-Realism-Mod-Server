@@ -213,7 +213,7 @@ class Player {
             this.globalDB().Stamina.SafeHeightOverweight = 10000;
         }
         if (this.modConfig.med_changes == true) {
-            this.globalDB().Health.Effects.Existence.EnergyDamage = 1;
+            this.globalDB().Health.Effects.Existence.EnergyDamage = 1.12;
             this.globalDB().Health.Effects.Exhaustion.Damage = 0.25;
             this.globalDB().Health.Effects.Exhaustion.DefaultDelay = 60;
             this.globalDB().Health.Effects.Existence.HydrationDamage = 1.5;
@@ -222,8 +222,8 @@ class Player {
             this.globalDB().Health.Effects.Dehydration.DefaultDelay = 60;
         }
         if (this.modConfig.realistic_ballistics == true) {
-            this.globalDB().LegsOverdamage = 3; // 2
-            this.globalDB().HandsOverdamage = 2.4; //0.56
+            this.globalDB().LegsOverdamage = 2.9; // 2
+            this.globalDB().HandsOverdamage = 2; //0.56
             this.globalDB().StomachOverdamage = 3.4; //2.8
         }
         if (this.modConfig.realistic_player_health == true) {

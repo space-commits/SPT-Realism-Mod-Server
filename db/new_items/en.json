@@ -1,19 +1,24 @@
 {
 	"templates": {
-		"mosin_bayonet": {
+		"6783afddef9d6f5d579c43f1": {
 			"Name": "Mosin Nagant M1891/30 Bayonet",
 			"ShortName": "Mosin Bayonet",
 			"Description": " M1891/30 pattern bayonet used during WW2 by the Soviet Union. More effective against political prisoners than charging towards machine gun fire with."
 		},
-		"m9_bayonet": {
+		"6783b041281387d669fd3722": {
 			"Name": "M9 Bayonet Replica",
 			"ShortName": "M9 Bayonet",
 			"Description": "Replica of the M9 Bayonet, a multi-purpose knife and bayonet officially adopted in 1986 by the United States."
 		},
-		"6kh4_bayonet": {
+		"6783b079e4585dfb0fec3c73": {
 			"Name": "6Kh4 Bayonet",
 			"ShortName": "6Kh4 Bayonet",
 			"Description": "6Kh4 bayonet for use with both AKM and AK-74 pattern assault rifles."
+		},
+		"67a13809c3bc1e2fa47e6eec": {
+			"Name": "M53A1 Gas Mask",
+			"ShortName": "M53A1",
+			"Description": "The M53A1 gas mask is an improved single filter port variant of the M5, a series of gas masks based on the M50 and specifically developed to meet the unique requirements of Special Operations Forces (SOF) operators."
 		}
 	}
 }

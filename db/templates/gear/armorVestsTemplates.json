@@ -1,5 +1,6 @@
 {
     "5ab8e79e86f7742d8b372e78": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5ab8e79e86f7742d8b372e78",
         "Name": "armor_gjel",
         "AllowADS": true,
@@ -11,10 +12,10 @@
         "Comfort": 1.05,
         "speedPenaltyPercent": -2.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -2,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -2
     },
     "5ab8e4ed86f7742d8e50c7fa": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5ab8e4ed86f7742d8e50c7fa",
         "Name": "armor_un",
         "AllowADS": true,
@@ -26,10 +27,10 @@
         "Comfort": 1.05,
         "speedPenaltyPercent": -2.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -1.5,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -1.5
     },
     "545cdb794bdc2d3a198b456a": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "545cdb794bdc2d3a198b456a",
         "Name": "heavy",
         "AllowADS": true,
@@ -41,10 +42,10 @@
         "Comfort": 1.08,
         "speedPenaltyPercent": -6,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -7,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -7
     },
     "5c0e53c886f7747fa54205c7": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5c0e53c886f7747fa54205c7",
         "Name": "item_equipment_armor_6b13_digital",
         "AllowADS": true,
@@ -56,10 +57,10 @@
         "Comfort": 1.12,
         "speedPenaltyPercent": -5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -6,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -6
     },
     "5c0e51be86f774598e797894": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5c0e51be86f774598e797894",
         "Name": "item_equipment_armor_6b13_flora",
         "AllowADS": true,
@@ -71,10 +72,10 @@
         "Comfort": 1.12,
         "speedPenaltyPercent": -5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -6,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -6
     },
     "5c0e541586f7747fa54205c9": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5c0e541586f7747fa54205c9",
         "Name": "item_equipment_armor_6b13_killa",
         "AllowADS": true,
@@ -86,10 +87,10 @@
         "Comfort": 1.05,
         "speedPenaltyPercent": -5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -6,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -6
     },
     "5df8a2ca86f7740bfe6df777": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5df8a2ca86f7740bfe6df777",
         "Name": "item_equipment_armor_6b2",
         "AllowADS": true,
@@ -101,14 +102,14 @@
         "Comfort": 1.1,
         "speedPenaltyPercent": -3,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -3,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -3
     },
     "5c0e5bab86f77461f55ed1f3": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5c0e5bab86f77461f55ed1f3",
         "Name": "item_equipment_armor_6b23_digital",
         "AllowADS": true,
-        "LoyaltyLevel": 4,
+        "LoyaltyLevel": 3,
         "ArmorClass": "GOST 4",
         "CanSpall": false,
         "SpallReduction": 1,
@@ -116,10 +117,10 @@
         "Comfort": 1.1,
         "speedPenaltyPercent": -6,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -6,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -6
     },
     "5c0e57ba86f7747fa141986d": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5c0e57ba86f7747fa141986d",
         "Name": "item_equipment_armor_6b23_mflora",
         "AllowADS": true,
@@ -131,10 +132,10 @@
         "Comfort": 1.1,
         "speedPenaltyPercent": -6,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -6,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -6
     },
     "5fd4c474dd870108a754b241": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5fd4c474dd870108a754b241",
         "Name": "item_equipment_armor_custom_hexgrid",
         "AllowADS": true,
@@ -146,10 +147,10 @@
         "Comfort": 0.85,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "609e8540d5c319764c2bc2e9": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "609e8540d5c319764c2bc2e9",
         "Name": "item_equipment_armor_custom_thorcrv",
         "AllowADS": true,
@@ -161,10 +162,10 @@
         "Comfort": 0.95,
         "speedPenaltyPercent": -1.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -1,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -1
     },
     "60a283193cb70855c43a381d": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "60a283193cb70855c43a381d",
         "Name": "item_equipment_armor_custom_thorintcar",
         "AllowADS": true,
@@ -176,10 +177,10 @@
         "Comfort": 1.05,
         "speedPenaltyPercent": -4.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -3.5,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -3.5
     },
     "5e9dacf986f774054d6b89f4": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5e9dacf986f774054d6b89f4",
         "Name": "item_equipment_armor_defender2",
         "AllowADS": true,
@@ -191,10 +192,10 @@
         "Comfort": 1.045,
         "speedPenaltyPercent": -4.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -2.5,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -2.5
     },
     "62a09d79de7ac81993580530": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "62a09d79de7ac81993580530",
         "Name": "item_equipment_armor_drd",
         "AllowADS": true,
@@ -206,10 +207,10 @@
         "Comfort": 1,
         "speedPenaltyPercent": -3,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -8,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -8
     },
     "5b44cd8b86f774503d30cba2": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5b44cd8b86f774503d30cba2",
         "Name": "item_equipment_armor_iotv",
         "AllowADS": true,
@@ -221,10 +222,10 @@
         "Comfort": 1.05,
         "speedPenaltyPercent": -5.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -3.5,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -3.5
     },
     "5b44cf1486f77431723e3d05": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5b44cf1486f77431723e3d05",
         "Name": "item_equipment_armor_iotv_1",
         "AllowADS": true,
@@ -236,10 +237,10 @@
         "Comfort": 1.025,
         "speedPenaltyPercent": -3.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -3.5,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -3.5
     },
     "5b44d0de86f774503d30cba8": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5b44d0de86f774503d30cba8",
         "Name": "item_equipment_armor_iotv_2",
         "AllowADS": true,
@@ -251,14 +252,14 @@
         "Comfort": 1.035,
         "speedPenaltyPercent": -4.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -1.5,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -1.5
     },
     "5b44d22286f774172b0c9de8": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5b44d22286f774172b0c9de8",
         "Name": "item_equipment_armor_kirasa",
         "AllowADS": true,
-        "LoyaltyLevel": 1,
+        "LoyaltyLevel": 2,
         "ArmorClass": "GOST 2",
         "CanSpall": false,
         "SpallReduction": 1,
@@ -266,10 +267,10 @@
         "Comfort": 1.07,
         "speedPenaltyPercent": -3,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -3,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -3
     },
     "5f5f41476bdad616ad46d631": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5f5f41476bdad616ad46d631",
         "Name": "item_equipment_armor_korundvm",
         "AllowADS": true,
@@ -281,10 +282,10 @@
         "Comfort": 1.07,
         "speedPenaltyPercent": -5.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -5.5,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -5.5
     },
     "607f20859ee58b18e41ecd90": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "607f20859ee58b18e41ecd90",
         "Name": "item_equipment_armor_paca_twitch",
         "AllowADS": true,
@@ -296,10 +297,10 @@
         "Comfort": 1.05,
         "speedPenaltyPercent": -1.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -1,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -1
     },
     "5ca2151486f774244a3b8d30": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5ca2151486f774244a3b8d30",
         "Name": "item_equipment_armor_redut_m",
         "AllowADS": true,
@@ -311,10 +312,10 @@
         "Comfort": 1.05,
         "speedPenaltyPercent": -5.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -2.5,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -2.5
     },
     "5ca21c6986f77479963115a7": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5ca21c6986f77479963115a7",
         "Name": "item_equipment_armor_redut_t",
         "AllowADS": true,
@@ -326,10 +327,10 @@
         "Comfort": 1.065,
         "speedPenaltyPercent": -6.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -4.5,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -4.5
     },
     "5e4abb5086f77406975c9342": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5e4abb5086f77406975c9342",
         "Name": "item_equipment_armor_slick",
         "AllowADS": true,
@@ -341,10 +342,10 @@
         "Comfort": 0.88,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "6038b4ca92ec1c3103795a0d": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6038b4ca92ec1c3103795a0d",
         "Name": "item_equipment_armor_slick_olive",
         "AllowADS": true,
@@ -356,10 +357,10 @@
         "Comfort": 0.88,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "6038b4b292ec1c3103795a0b": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6038b4b292ec1c3103795a0b",
         "Name": "item_equipment_armor_slick_tan",
         "AllowADS": true,
@@ -371,10 +372,10 @@
         "Comfort": 0.88,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5c0e655586f774045612eeb2": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5c0e655586f774045612eeb2",
         "Name": "item_equipment_armor_trooper",
         "AllowADS": true,
@@ -386,10 +387,10 @@
         "Comfort": 0.91,
         "speedPenaltyPercent": -1,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -1,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -1
     },
     "5c0e5edb86f77461f55ed1f7": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5c0e5edb86f77461f55ed1f7",
         "Name": "item_equipment_armor_zhuk3",
         "AllowADS": true,
@@ -401,10 +402,10 @@
         "Comfort": 1.07,
         "speedPenaltyPercent": -2.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -2,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -2
     },
     "5c0e625a86f7742d77340f62": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5c0e625a86f7742d77340f62",
         "Name": "item_equipment_armor_zhuk6a",
         "AllowADS": true,
@@ -416,10 +417,10 @@
         "Comfort": 1.06,
         "speedPenaltyPercent": -2,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -2.5,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -2.5
     },
     "59e7635f86f7742cbf2c1095": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "59e7635f86f7742cbf2c1095",
         "Name": "module_3m",
         "AllowADS": true,
@@ -431,10 +432,10 @@
         "Comfort": 1.07,
         "speedPenaltyPercent": -2,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -1.5,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -1.5
     },
     "5648a7494bdc2d9d488b4583": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5648a7494bdc2d9d488b4583",
         "Name": "notHeavy",
         "AllowADS": true,
@@ -446,10 +447,10 @@
         "Comfort": 1.05,
         "speedPenaltyPercent": -1.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -1,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -1
     },
     "63737f448b28897f2802b874": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "63737f448b28897f2802b874",
         "Name": "item_equipment_armor_hexatac",
         "AllowADS": true,
@@ -461,10 +462,10 @@
         "Comfort": 0.93,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "64abd93857958b4249003418": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "64abd93857958b4249003418",
         "Name": "item_equipment_armor_otv_ucp",
         "AllowADS": true,
@@ -476,10 +477,10 @@
         "Comfort": 1.035,
         "speedPenaltyPercent": -1.25,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -1.5,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -1.5
     },
     "64be79e2bf8412471d0d9bcc": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "64be79e2bf8412471d0d9bcc",
         "Name": "item_equipment_armor_kora_kulon",
         "AllowADS": true,
@@ -491,10 +492,10 @@
         "Comfort": 1.065,
         "speedPenaltyPercent": -3.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -2.5,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -2.5
     },
     "64be79c487d1510151095552": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "64be79c487d1510151095552",
         "Name": "item_equipment_armor_kora_kulon_black",
         "AllowADS": true,
@@ -506,7 +507,6 @@
         "Comfort": 1.065,
         "speedPenaltyPercent": -3.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -2.5,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": -2.5
     }
 }

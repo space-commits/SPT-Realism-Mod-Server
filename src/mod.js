@@ -29,8 +29,7 @@ const ContextVariableType_1 = require("C:/snapshot/project/obj/context/ContextVa
 ;
 const LogTextColor_1 = require("C:/snapshot/project/obj/models/spt/logging/LogTextColor");
 const LogBackgroundColor_1 = require("C:/snapshot/project/obj/models/spt/logging/LogBackgroundColor");
-const path = __importStar(require("path"));
-const fs = __importStar(require("fs"));
+const ExitStatis_1 = require("C:/snapshot/project/obj/models/enums/ExitStatis");
 const attatchment_base_1 = require("./weapons/attatchment_base");
 const fleamarket_1 = require("./traders/fleamarket");
 const utils_1 = require("./utils/utils");
@@ -43,8 +42,9 @@ const bot_gen_1 = require("./bots/bot_gen");
 const items_1 = require("./items/items");
 const json_gen_1 = require("./json/json_gen");
 const quests_1 = require("./traders/quests");
+const insurance_1 = require("./traders/insurance");
 const traders_1 = require("./traders/traders");
-const airdrops_1 = require("./misc/airdrops");
+// import { Airdrops } from "./misc/airdrops";
 const spawns_1 = require("./bots/spawns");
 const gear_1 = require("./items/gear");
 const seasonalevents_1 = require("./misc/seasonalevents");
@@ -53,7 +53,8 @@ const description_gen_1 = require("./json/description_gen");
 const json_handler_1 = require("./json/json-handler");
 const ammo_1 = require("./ballistics/ammo");
 const armor_1 = require("./ballistics/armor");
-const insurance_1 = require("./traders/insurance");
+const path = __importStar(require("path"));
+const fs = __importStar(require("fs"));
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");
 const medBuffs = require("../db/items/buffs.json");
@@ -62,6 +63,8 @@ const foodBuffs = require("../db/items/buffs_food.json");
 const stimBuffs = require("../db/items/buffs_stims.json");
 const modConfig = require("../config/config.json");
 const realismInfo = require("../data/info.json");
+const baseMapLoot = require("../db/maps/original_lootModifiers.json");
+const playerMapLoot = require("../data/player_lootModifiers.json");
 let adjustedTradersOnStart = false;
 class Main {
     modLoader;
@@ -95,6 +98,16 @@ class Main {
         const flea = new fleamarket_1.FleaChangesPreDBLoad(logger, fleaConf, modConfig);
         this.checkForMods(preSptModLoader, logger, modConfig);
         flea.loadFleaConfig();
+        //way of checking if QB spawn system is active, and disabling certain aspects of Realism's spawn changes to compenstate
+        dynamicRouter.registerDynamicRouter(`DynamicQuestingBotsSpawnSystemCheck`, [
+            {
+                url: "/QuestingBots/AdjustPMCConversionChances/",
+                action: async (output) => {
+                    utils_1.ModTracker.qtbSpawnsActive = true;
+                    return output;
+                }
+            }
+        ], "QuestingBotsSpawnSystemCheck");
         dynamicRouter.registerDynamicRouter("realismGetConfig", [
             {
                 url: "/RealismMod/GetConfig",
@@ -103,7 +116,22 @@ class Main {
                         return jsonUtil.serialize(modConfig);
                     }
                     catch (e) {
-                        console.error("Failed to read config file", e);
+                        console.error("Realism: Failed to read config file", e);
+                    }
+                }
+            }
+        ], "RealismMod");
+        dynamicRouter.registerDynamicRouter("realismGetDirectory", [
+            {
+                url: "/RealismMod/GetDirectory",
+                action: async (url, info, sessionID, output) => {
+                    try {
+                        let directory = path.join(__dirname, '..');
+                        let dirObj = { "ServerBaseDirectory": directory };
+                        return jsonUtil.serialize(dirObj);
+                    }
+                    catch (e) {
+                        console.error("Realism: Failed to get server mod directory", e);
                     }
                 }
             }
@@ -123,7 +151,7 @@ class Main {
                         return jsonUtil.serialize(realismInfo);
                     }
                     catch (e) {
-                        console.error("Failed to read info file", e);
+                        console.error("Realism: Failed to read info file", e);
                     }
                 }
             }
@@ -144,13 +172,14 @@ class Main {
         ], "RealismMod");
         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
             const botLevelGenerator = container.resolve("BotLevelGenerator");
-            const botDifficultyHelper = container.resolve("BotDifficultyHelper");
             const botInventoryGenerator = container.resolve("BotInventoryGenerator");
             const botHelper = container.resolve("BotHelper");
             const botEquipmentFilterService = container.resolve("BotEquipmentFilterService");
             const seasonalEventService = container.resolve("SeasonalEventService");
+            const botGeneratorHelper = container.resolve("BotGeneratorHelper");
+            const botNameService = container.resolve("BotNameService");
             const itemFilterService = container.resolve("ItemFilterService");
-            const botGen = new bot_gen_1.BotGen(logger, hashUtil, randomUtil, timeUtil, profileHelper, databaseService, botInventoryGenerator, botLevelGenerator, botEquipmentFilterService, weightedRandomHelper, botHelper, botDifficultyHelper, seasonalEventService, localisationService, itemFilterService, configServer, cloner);
+            const botGen = new bot_gen_1.BotGen(logger, hashUtil, randomUtil, timeUtil, profileHelper, databaseService, botInventoryGenerator, botLevelGenerator, botEquipmentFilterService, weightedRandomHelper, botHelper, botGeneratorHelper, seasonalEventService, itemFilterService, botNameService, configServer, cloner);
             container.afterResolution("BotGenerator", (_t, result) => {
                 result.prepareAndGenerateBot = (sessionId, botGenerationDetails) => {
                     return botGen.myPrepareAndGenerateBot(sessionId, botGenerationDetails);
@@ -183,13 +212,13 @@ class Main {
             const eventOutputHolder = container.resolve("HttpResponseUtil");
             const saveServer = container.resolve("SaveServer");
             const itemHelper = container.resolve("ItemHelper");
-            const insruanceService = container.resolve("InsuranceService");
+            const InsuranceService = container.resolve("InsuranceService");
             const mailSendService = container.resolve("MailSendService");
             const ragfairPriceService = container.resolve("RagfairPriceService");
             const localizationService = container.resolve("LocalisationService");
             const dialogueHelper = container.resolve("DialogueHelper");
             const paymentService = container.resolve("PaymentService");
-            const insuranceOverride = new insurance_1.InsuranceOverride(logger, randomUtil, mathUtil, hashUtil, eventOutputHolder, timeUtil, saveServer, databaseService, itemHelper, profileHelper, dialogueHelper, weightedRandomHelper, traderHelper, paymentService, insruanceService, mailSendService, ragfairPriceService, localizationService, configServer, cloner);
+            const insuranceOverride = new insurance_1.InsuranceOverride(logger, randomUtil, mathUtil, hashUtil, eventOutputHolder, timeUtil, saveServer, databaseService, itemHelper, profileHelper, dialogueHelper, weightedRandomHelper, traderHelper, paymentService, InsuranceService, mailSendService, ragfairPriceService, localizationService, configServer, cloner);
             container.afterResolution("InsuranceController", (_t, result) => {
                 result.processReturnByProfile = (sessionID) => {
                     return insuranceOverride.myProcessReturnByProfile(sessionID);
@@ -209,7 +238,7 @@ class Main {
         //         }
         //     }, { frequency: "Always" });
         // }
-        staticRouterModService.registerStaticRouter("CheckProfile", [
+        staticRouterModService.registerStaticRouter("Realism-CheckProfile", [
             {
                 url: "/client/game/version/validate",
                 action: async (url, info, sessionID, output) => {
@@ -220,6 +249,7 @@ class Main {
                     const ragfairServer = container.resolve("RagfairServer");
                     const weatherConfig = container.resolve("ConfigServer").getConfig(ConfigTypes_1.ConfigTypes.WEATHER);
                     const seeasonalEventConfig = container.resolve("ConfigServer").getConfig(ConfigTypes_1.ConfigTypes.SEASONAL_EVENT);
+                    const locationConfig = container.resolve("ConfigServer").getConfig(ConfigTypes_1.ConfigTypes.LOCATION);
                     const seasonalEventsService = container.resolve("SeasonalEventService");
                     const postLoadTables = postLoadDBServer.getTables();
                     const utils = new utils_1.Utils(postLoadTables);
@@ -231,14 +261,16 @@ class Main {
                     const pmcData = profileHelper.getPmcProfile(sessionID);
                     const scavData = profileHelper.getScavProfile(sessionID);
                     const profileData = profileHelper.getFullProfile(sessionID);
-                    this.checkPlayerLevel(sessionID, profileData, pmcData, logger, true);
                     try {
+                        this.checkPlayerLevel(sessionID, profileData, pmcData, logger, true);
                         if (modConfig.backup_profiles == true)
                             this.backupProfile(profileData, logger);
                         if (modConfig.enable_hazard_zones)
                             quests.resetRepeatableQuests(profileData);
                         this.checkForSeasonalEvents(logger, seasonalEventsService, seeasonalEventConfig, weatherConfig);
                         this.tryLockTradersForEvent(pmcData, logger, postLoadTables.globals.config);
+                        if (modConfig.loot_changes)
+                            this.loadMapLoot(locationConfig, sessionID, logger);
                         const healthProp = pmcData?.Health;
                         const hydroProp = pmcData?.Health?.Hydration;
                         if (healthProp !== undefined) {
@@ -274,43 +306,47 @@ class Main {
                             tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, utils_1.ProfileTracker.averagePlayerLevel);
                         }
                         if (modConfig.boss_spawns == true) {
-                            maps.setBossSpawnChance(utils_1.ProfileTracker.averagePlayerLevel);
+                            maps.setBossSpawnChance(utils_1.ProfileTracker.averagePlayerLevel, databaseService, seeasonalEventConfig);
                         }
                         if (modConfig.logEverything == true) {
                             logger.info("Realism Mod: Profile Checked");
                         }
-                        return HttpResponse.nullResponse();
                     }
-                    catch (e) {
-                        logger.error("Realism Mod: Error Checking Player Profile: " + e);
-                        return HttpResponse.nullResponse();
+                    catch (err) {
+                        logger.error("Realism Mod: Error Checking Player Profile: " + err);
                     }
-                }
-            }
-        ], "aki");
-        staticRouterModService.registerStaticRouter("runOnGameLogout", [
-            {
-                url: "/client/game/logout",
-                action: async (url, info, sessionID, output) => {
-                    const profileHelper = container.resolve("ProfileHelper");
-                    const profileData = profileHelper.getFullProfile(sessionID);
-                    let playerCount = 0;
-                    let cumulativePlayerLevel = 0;
-                    delete utils_1.ProfileTracker.playerRecord[profileData.info.id];
-                    Object.values(utils_1.ProfileTracker.playerRecord).forEach(value => {
-                        const playerLevel = Number(value);
-                        if (!isNaN(playerLevel)) {
-                            cumulativePlayerLevel += playerLevel;
-                            playerCount += 1;
-                        }
-                    });
-                    utils_1.ProfileTracker.averagePlayerLevel = playerCount > 0 ? cumulativePlayerLevel / playerCount : 1;
-                    logger.logWithColor(`Realism Mod: Players in server ${playerCount}, average level: ${utils_1.ProfileTracker.averagePlayerLevel}`, LogTextColor_1.LogTextColor.GREEN);
                     return output;
                 }
             }
-        ], "aki");
-        staticRouterModService.registerStaticRouter("runAtProfileCreation", [
+        ], "Realism");
+        staticRouterModService.registerStaticRouter("Realism-RunOnGameLogout", [
+            {
+                url: "/client/game/logout",
+                action: async (url, info, sessionID, output) => {
+                    try {
+                        const profileHelper = container.resolve("ProfileHelper");
+                        const profileData = profileHelper.getFullProfile(sessionID);
+                        let playerCount = 0;
+                        let cumulativePlayerLevel = 0;
+                        delete utils_1.ProfileTracker.playerRecord[profileData.info.id];
+                        Object.values(utils_1.ProfileTracker.playerRecord).forEach(value => {
+                            const playerLevel = Number(value);
+                            if (!isNaN(playerLevel)) {
+                                cumulativePlayerLevel += playerLevel;
+                                playerCount += 1;
+                            }
+                        });
+                        utils_1.ProfileTracker.averagePlayerLevel = playerCount > 0 ? cumulativePlayerLevel / playerCount : 1;
+                        logger.logWithColor(`Realism Mod: Players in server ${playerCount}, average level: ${utils_1.ProfileTracker.averagePlayerLevel}`, LogTextColor_1.LogTextColor.GREEN);
+                    }
+                    catch (err) {
+                        logger.error("Realism Mod: Error At Log Out: " + err);
+                    }
+                    return output;
+                }
+            }
+        ], "Realism");
+        staticRouterModService.registerStaticRouter("Realism-RunAtProfileCreation", [
             {
                 url: "/client/game/profile/create",
                 action: async (url, info, sessionID, output) => {
@@ -328,25 +364,24 @@ class Main {
                             player.correctNewHealth(pmcData, scavData);
                         }
                         logger.info("Realism Mod: New Profile Modified");
-                        return HttpResponse.nullResponse();
                     }
                     catch (e) {
                         logger.error("Realism Mod: Error Editing New Profile: " + e);
-                        return HttpResponse.nullResponse();
                     }
+                    return output;
                 }
             }
-        ], "aki");
-        staticRouterModService.registerStaticRouter("runAtRaidStart", [
+        ], "Realism");
+        staticRouterModService.registerStaticRouter("Realism-RunAtRaidStart", [
             {
-                url: "/client/raid/configuration",
+                url: "/client/match/local/start",
                 action: async (url, info, sessionID, output) => {
                     try {
                         const postLoadDBService = container.resolve("DatabaseService");
                         const postLoadTables = postLoadDBService.getTables();
                         const profileHelper = container.resolve("ProfileHelper");
                         const appContext = container.resolve("ApplicationContext");
-                        const weatherController = container.resolve("WeatherController");
+                        const weatherGenerator = container.resolve("WeatherGenerator");
                         const matchInfo = appContext.getLatestValue(ContextVariableType_1.ContextVariableType.RAID_CONFIGURATION).getValue();
                         const pmcConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.PMC);
                         const arrays = new arrays_1.BotArrays(postLoadTables);
@@ -354,42 +389,23 @@ class Main {
                         const bots = new bots_1.BotLoader(logger, postLoadTables, configServer, modConfig, arrays, utils);
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         const profileData = profileHelper.getFullProfile(sessionID);
+                        utils_1.RaidInfoTracker.generatedBotsCount = 0;
                         //had a concern that bot loot cache isn't being reset properly since I've overriden it with my own implementation, so to be safe...
                         // const myGetLootCache = new MyLootCache(logger, jsonUtil, itemHelper, postLoadDBServer, pmcLootGenerator, localisationService, ragfairPriceService);
                         // myGetLootCache.myClearCache();
-                        const time = weatherController.generate().time; //apparently regenerates weather?
-                        // const time = weatherController.getCurrentInRaidTime; //better way?
-                        // const time = weatherGenerator.calculateGameTime({ acceleration: 0, time: "", date: "" }).time // better way?
+                        const baseTime = weatherGenerator.calculateGameTime({ acceleration: 0, time: "", date: "", weather: undefined, season: 1 }).time; //apparently regenerates weather?
                         utils_1.RaidInfoTracker.mapName = matchInfo.location.toLowerCase();
                         let realTime = "";
                         let mapType = "";
                         //update global player level
                         this.checkPlayerLevel(sessionID, profileData, pmcData, logger);
                         if (matchInfo.timeVariant === "PAST") {
-                            realTime = getTime(time, 12);
+                            realTime = utils.getTime(baseTime, 12);
                         }
                         if (matchInfo.timeVariant === "CURR") {
-                            realTime = time;
+                            realTime = utils.getTime(baseTime, 0);
                         }
-                        function getTime(time, hourDiff) {
-                            let [h, m] = time.split(':');
-                            if (parseInt(h) == 0) {
-                                return `${h}:${m}`;
-                            }
-                            h = Math.abs(parseInt(h) - hourDiff);
-                            return `${h}:${m}`;
-                        }
-                        function getTOD(time) {
-                            let TOD = "";
-                            let [h, m] = time.split(':');
-                            if ((matchInfo.location != "factory4_night" && parseInt(h) >= 5 && parseInt(h) < 21) || (utils_1.RaidInfoTracker.mapName === "factory4_day" || utils_1.RaidInfoTracker.mapName === "laboratory")) {
-                                TOD = "day";
-                            }
-                            else {
-                                TOD = "night";
-                            }
-                            return TOD;
-                        }
+                        utils_1.RaidInfoTracker.isNight = utils.isNight(realTime, matchInfo.location);
                         if (arrays_1.StaticArrays.cqbMaps.includes(utils_1.RaidInfoTracker.mapName)) {
                             mapType = "cqb";
                         }
@@ -399,39 +415,44 @@ class Main {
                         if (arrays_1.StaticArrays.urbanMaps.includes(utils_1.RaidInfoTracker.mapName)) {
                             mapType = "urban";
                         }
-                        utils_1.RaidInfoTracker.TOD = getTOD(realTime);
                         utils_1.RaidInfoTracker.mapType = mapType;
                         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
                             bots.updateBots(pmcData, logger, modConfig, bots, utils);
                         }
-                        if (!utils_1.ModTracker.swagPresent && utils_1.RaidInfoTracker.mapName === "laboratory") { //!ModTracker.qtbPresent && 
-                            pmcConf.convertIntoPmcChance["pmcbot"].min = 0;
-                            pmcConf.convertIntoPmcChance["pmcbot"].max = 0;
-                            pmcConf.convertIntoPmcChance["assault"].min = 100;
-                            pmcConf.convertIntoPmcChance["assault"].max = 100;
+                        if (!utils_1.ModTracker.swagPresent) { //!ModTracker.qtbPresent && 
+                            pmcConf.convertIntoPmcChance.laboratory = {
+                                "assault": {
+                                    "min": 100,
+                                    "max": 100
+                                },
+                                "pmcbot": {
+                                    "min": 0,
+                                    "max": 0
+                                }
+                            };
                         }
                         logger.warning("Avg. Player Level = " + utils_1.ProfileTracker.averagePlayerLevel);
                         logger.warning("Map Name = " + matchInfo.location);
                         logger.warning("Map Type  = " + mapType);
-                        logger.warning("Time " + time);
-                        logger.warning("Time of Day = " + getTOD(realTime));
-                        return HttpResponse.nullResponse();
+                        logger.warning("Base Time: " + baseTime + " Real Time: " + realTime);
+                        logger.warning("Is Night = " + utils_1.RaidInfoTracker.isNight);
                     }
-                    catch (e) {
-                        logger.error("Realism Mod: Failed To Fetch Application Context Data" + e);
-                        return HttpResponse.nullResponse();
+                    catch (err) {
+                        logger.error("Realism Mod: Failed To Fetch Application Context Data" + err);
                     }
+                    return output;
                 }
             }
-        ], "aki");
-        staticRouterModService.registerStaticRouter("runAtRaidEnd", [
+        ], "Realism");
+        staticRouterModService.registerStaticRouter("Realism-RunAtRaidEnd", [
             {
-                url: "/raid/profile/save",
+                url: "/client/match/local/end",
                 action: async (url, info, sessionID, output) => {
                     const postLoadDBService = container.resolve("DatabaseService");
                     const postLoadTables = postLoadDBService.getTables();
                     const profileHelper = container.resolve("ProfileHelper");
                     const ragfairOfferGenerator = container.resolve("RagfairOfferGenerator");
+                    const locationConfig = container.resolve("ConfigServer").getConfig(ConfigTypes_1.ConfigTypes.LOCATION);
                     // const localisationService = container.resolve<LocalisationService>("LocalisationService");
                     // const ragfairPriceService = container.resolve<RagfairPriceService>("RagfairPriceService");
                     // const pmcLootGenerator = container.resolve<PMCLootGenerator>("PMCLootGenerator");
@@ -444,36 +465,39 @@ class Main {
                     const scavData = profileHelper.getScavProfile(sessionID);
                     const profileData = profileHelper.getFullProfile(sessionID);
                     const quests = new quests_1.Quests(logger, postLoadTables, modConfig);
+                    const seeasonalEventConfig = container.resolve("ConfigServer").getConfig(ConfigTypes_1.ConfigTypes.SEASONAL_EVENT);
+                    const maps = new spawns_1.Spawns(logger, postLoadTables, modConfig, postLoadTables.locations, utils);
                     //had a concern that bot loot cache isn't being reset properly since I've overriden it with my own implementation, so to be safe...
                     // const myGetLootCache = new MyLootCache(logger, jsonUtil, itemHelper, postLoadDBServer, pmcLootGenerator, localisationService, ragfairPriceService);
                     // myGetLootCache.myClearCache();
-                    //update global player level
-                    this.checkPlayerLevel(sessionID, profileData, pmcData, logger);
                     try {
-                        if (modConfig.tiered_flea == true) {
+                        utils_1.RaidInfoTracker.generatedBotsCount = 0;
+                        //update global player level
+                        this.checkPlayerLevel(sessionID, profileData, pmcData, logger);
+                        if (modConfig.tiered_flea == true)
                             tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, utils_1.ProfileTracker.averagePlayerLevel);
-                        }
-                        if (modConfig.enable_hazard_zones) {
+                        if (modConfig.enable_hazard_zones)
                             quests.resetRepeatableQuests(profileData);
-                        }
+                        if (modConfig.boss_spawns == true)
+                            maps.setBossSpawnChance(utils_1.ProfileTracker.averagePlayerLevel, databaseService, seeasonalEventConfig);
+                        if (modConfig.loot_changes)
+                            this.modifyMapLoot(locationConfig, utils_1.RaidInfoTracker.mapName, info, pmcData, sessionID, utils, logger);
                         this.checkEventQuests(pmcData);
                         player.correctNegativeHP(pmcData);
-                        if (modConfig.realistic_player_health == true) {
+                        if (modConfig.realistic_player_health == true)
                             player.setNewScavRealisticHealth(scavData);
-                        }
                         this.tryLockTradersForEvent(pmcData, logger, postLoadTables.globals.config);
                         if (modConfig.logEverything == true) {
                             logger.info("Realism Mod: Updated at Raid End");
                         }
-                        return HttpResponse.nullResponse();
                     }
-                    catch (e) {
-                        logger.error("Realism Mod: Error Updating At Raid End: " + e);
-                        return HttpResponse.nullResponse();
+                    catch (err) {
+                        logger.error("Realism Mod: Error Updating At Raid End: " + err);
                     }
+                    return output;
                 }
             }
-        ], "aki");
+        ], "Realism");
     }
     backupProfile(profileData, logger) {
         const profileFileData = JSON.stringify(profileData, null, 4);
@@ -517,14 +541,6 @@ class Main {
             }
         });
     }
-    // public async postSptLoadAsync(container: DependencyContainer): Promise<void> {
-    //     const logger = container.resolve<ILogger>("WinstonLogger");
-    //     const databaseServer = container.resolve<DatabaseServer>("DatabaseServer");
-    //     const tables = databaseServer.getTables();
-    //     const jsonHand = new JsonHandler(tables, logger);
-    //     jsonHand.pushWeaponsToServer();
-    //     jsonHand.pushModsToServer();
-    // }
     postDBLoad(container) {
         const logger = container.resolve("WinstonLogger");
         const databaseService = container.resolve("DatabaseService");
@@ -557,17 +573,18 @@ class Main {
         const fleaChangesPreDB = new fleamarket_1.FleaChangesPreDBLoad(logger, aKIFleaConf, modConfig);
         const quests = new quests_1.Quests(logger, tables, modConfig);
         const traders = new traders_1.Traders(logger, tables, modConfig, traderConf, utils);
-        const airdrop = new airdrops_1.Airdrops(logger, modConfig, airConf);
+        // const airdrop = new Airdrops(logger, modConfig, airConf);
         const maps = new spawns_1.Spawns(logger, tables, modConfig, tables.locations, utils);
         const gear = new gear_1.Gear(tables, logger, modConfig);
         const itemCloning = new item_cloning_1.ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
-        const descGen = new description_gen_1.DescriptionGen(tables, modConfig, logger);
-        const jsonHand = new json_handler_1.ItemStatHandler(tables, logger);
+        const statHandler = new json_handler_1.ItemStatHandler(tables, logger);
+        const descGen = new description_gen_1.DescriptionGen(tables, modConfig, logger, statHandler);
+        //Remember to back up json data before using this, and make sure it isn't overriding existing json objects
         // jsonGen.attTemplatesCodeGen();
         // jsonGen.weapTemplatesCodeGen();
         // jsonGen.gearTemplatesCodeGen();
         // jsonGen.ammoTemplatesCodeGen();
-        // this.dllChecker(logger, modConfig);
+        // jsonGen.genArmorMods();
         this.checkForSeasonalEvents(logger, seasonalEventsService, seeasonalEventConfig, weatherConfig, true);
         if (modConfig.enable_hazard_zones) {
             quests.loadHazardQuests();
@@ -592,7 +609,7 @@ class Main {
             maps.openZonesFix();
         }
         maps.loadSpawnChanges(locationConfig);
-        airdrop.loadAirdropChanges();
+        //airdrop.loadAirdropChanges();
         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
             bots.loadBots();
         }
@@ -600,10 +617,10 @@ class Main {
             logger.warning("Realism Mod: testing enabled, bots will be limited to a cap of 1");
             bots.testBotCap();
         }
-        else if (modConfig.increased_bot_cap == true && utils_1.ModTracker.swagPresent == false) { //&& ModTracker.qtbPresent == false
+        else if (modConfig.increased_bot_cap == true && !utils_1.ModTracker.swagPresent && !utils_1.ModTracker.qtbPresent) {
             bots.increaseBotCap();
         }
-        else if (modConfig.spawn_waves == true && utils_1.ModTracker.swagPresent == false) { //  && ModTracker.qtbPresent == false
+        else if (modConfig.spawn_waves == true && !utils_1.ModTracker.swagPresent && !utils_1.ModTracker.qtbPresent) {
             bots.increasePerformance();
         }
         if (modConfig.bot_names == true) {
@@ -612,9 +629,10 @@ class Main {
         if (modConfig.guarantee_boss_spawn == true) {
             bots.forceBossSpawns();
         }
-        if (modConfig.boss_difficulty == true && !utils_1.ModTracker.sainPresent) {
-            bots.bossDifficulty();
-        }
+        //need to add diffuclity values to experience obj or abandon
+        // if (modConfig.boss_difficulty == true) {
+        //     bots.bossDifficulty();
+        // }
         if (modConfig.med_changes == true) {
             itemCloning.createCustomMedItems();
             // bots.botMeds();
@@ -629,12 +647,10 @@ class Main {
         bots.botHpMulti();
         fleaChangesPostDB.loadFleaGlobal(); //has to run post db load, otherwise item templates are undefined 
         fleaChangesPreDB.loadFleaConfig(); //probably redundant, but just in case
-        if (modConfig.trader_repair_changes == true) {
-            traders.loadTraderRepairs();
-        }
-        if (modConfig.headset_changes) {
-            gear.loadHeadsetTweaks();
-        }
+        traders.loadTraderRepairs();
+        // if (modConfig.headset_changes) {
+        //     gear.loadHeadsetTweaks();
+        // }
         if (modConfig.remove_quest_fir_req == true) {
             quests.removeFIRQuestRequire();
         }
@@ -658,33 +674,34 @@ class Main {
         weaponsGlobals.loadGlobalWeps();
         //have to run this async to ensure correct load order
         (async () => {
-            if (modConfig.recoil_attachment_overhaul) {
-                jsonHand.pushModsToServer();
-                jsonHand.pushWeaponsToServer();
-            }
-            jsonHand.pushGearToServer();
-            await jsonHand.processUserJsonFiles();
-            descGen.descriptionGen();
             if (modConfig.realistic_ballistics == true) {
                 ammo.loadAmmoStats();
                 armor.loadArmorStats();
+                ammo.grenadeTweaks();
             }
+            if (modConfig.recoil_attachment_overhaul) {
+                statHandler.pushModsToServer();
+                statHandler.pushWeaponsToServer();
+            }
+            statHandler.pushGearToServer();
+            await statHandler.processUserJsonFiles();
+            descGen.descriptionGen();
             if (modConfig.malf_changes == true) {
                 weaponsGlobals.loadGlobalMalfChanges();
             }
             if (modConfig.recoil_attachment_overhaul) {
                 ammo.loadAmmoFirerateChanges();
                 quests.fixMechancicQuests();
-                ammo.grenadeTweaks();
             }
             gear.loadGearConflicts();
+            statHandler.modifiedItems = {}; //empty temp template object
         })();
     }
     postSptLoad(container) {
         this.modLoader = container.resolve("PreSptModLoader");
     }
     setModInfo(logger) {
-        realismInfo.IsNightTime = utils_1.RaidInfoTracker.TOD == "night";
+        realismInfo.IsNightTime = utils_1.RaidInfoTracker.isNight;
         realismInfo.IsHalloween = seasonalevents_1.EventTracker.isHalloween;
         realismInfo.isChristmas = seasonalevents_1.EventTracker.isChristmas;
         realismInfo.DoGasEvent = seasonalevents_1.EventTracker.doGasEvent;
@@ -715,6 +732,89 @@ class Main {
             profileData.Health.Hydration.Current = defaultHydration;
             profileData.Health.Energy.Current = defaultEnergy;
         }
+    }
+    loadMapLoot(locationConfig, profileId, logger) {
+        if (!playerMapLoot[profileId]) {
+            playerMapLoot[profileId] =
+                {
+                    looseLootMultiplier: { ...baseMapLoot.looseLootMultiplier },
+                    staticLootMultiplier: { ...baseMapLoot.staticLootMultiplier }
+                };
+        }
+        locationConfig.looseLootMultiplier = playerMapLoot[profileId].looseLootMultiplier;
+        locationConfig.staticLootMultiplier = playerMapLoot[profileId].staticLootMultiplier;
+    }
+    modifyMapLoot(locationConfig, map, raidData, pmcData, profileId, utils, logger) {
+        const exitStatus = raidData.results.result;
+        let lootXp = 0;
+        if (exitStatus !== ExitStatis_1.ExitStatus.KILLED && exitStatus !== ExitStatis_1.ExitStatus.MISSINGINACTION) {
+            const counters = pmcData.Stats.Eft.OverallCounters.Items;
+            for (const i in counters) {
+                const counter = counters[i];
+                if (counter.Key.includes("ExpLooting")) {
+                    lootXp += Math.min(counter.Value, 1000);
+                }
+            }
+        }
+        const looseModifier = lootXp * 0.00004;
+        const staticModifier = lootXp * 0.00002;
+        const minLooseLoot = 0.3;
+        const minstaticLoot = 0.4;
+        const looseLootRegenRate = 0.1;
+        const staticLootRegenRate = 0.05;
+        const baseLooseLoot = baseMapLoot.looseLootMultiplier;
+        const baseStaticLoot = baseMapLoot.staticLootMultiplier;
+        const originalLooseMapModi = baseLooseLoot[map];
+        const originalStaticMapModi = baseStaticLoot[map];
+        const mapAliases = {
+            "factory4_day": ["factory4_day", "factory4_night"],
+            "factory4_night": ["factory4_day", "factory4_night"]
+        };
+        const mapsToUpdate = mapAliases[map] || [map]; //if mapAliases has a key, use the corresponding array, otherwise make an array of our singular map
+        // logger.warning("==============" + map + "==============");
+        // logger.warning("==loose loot modi: " + looseModifier);
+        // logger.warning("==static loot modi: " + staticModifier);
+        if (!playerMapLoot[profileId]) {
+            //logger.warning("no profile found, creating new entry");
+            playerMapLoot[profileId] =
+                {
+                    looseLootMultiplier: { ...baseLooseLoot },
+                    staticLootMultiplier: { ...baseStaticLoot }
+                };
+        }
+        //logger.warning("Found profile entry ");
+        let looseLootModis = playerMapLoot[profileId].looseLootMultiplier;
+        let staticLootModis = playerMapLoot[profileId].staticLootMultiplier;
+        mapsToUpdate.forEach((currentMap) => {
+            // logger.warning("current loose loot modi: " + looseLootModis[currentMap]);
+            // logger.warning("current static loot modi: " + staticLootModis[currentMap]);
+            looseLootModis[map] = utils.clampNumber(looseLootModis[currentMap] - looseModifier, minLooseLoot, originalLooseMapModi);
+            staticLootModis[map] = utils.clampNumber(staticLootModis[currentMap] - staticModifier, minstaticLoot, originalStaticMapModi);
+            // logger.warning("modified loose loot modi: " + looseLootModis[currentMap]);
+            // logger.warning("modified static loot modi: " + staticLootModis[currentMap]);
+        });
+        //logger.warning("==Regenerating other map loot");
+        if (exitStatus !== ExitStatis_1.ExitStatus.RUNNER) {
+            for (const i in playerMapLoot[profileId].staticLootMultiplier) {
+                //logger.warning("==");
+                //logger.warning("map " + i);
+                if (!mapsToUpdate.includes(i)) {
+                    let looseMapLootModi = playerMapLoot[profileId].looseLootMultiplier;
+                    let staticMapLootModi = playerMapLoot[profileId].staticLootMultiplier;
+                    // logger.warning("current loose loot modi: " + looseMapLootModis[i]);
+                    // logger.warning("current static loot modi: " + staticMapLootModis[i]);
+                    looseMapLootModi[i] = utils.clampNumber(looseMapLootModi[i] + looseLootRegenRate, minLooseLoot, baseLooseLoot[i]);
+                    staticMapLootModi[i] = utils.clampNumber(staticMapLootModi[i] + staticLootRegenRate, minstaticLoot, baseStaticLoot[i]);
+                    // logger.warning("modified loose loot modi: " + looseMapLootModis[i]);
+                    // logger.warning("modified static loot modi: " + staticMapLootModis[i]);
+                }
+            }
+        }
+        utils.writeConfigJSON(playerMapLoot, 'data/player_lootModifiers.json');
+        //logger.warning("==Saved to file");
+        locationConfig.looseLootMultiplier = playerMapLoot[profileId].looseLootMultiplier;
+        locationConfig.staticLootMultiplier = playerMapLoot[profileId].staticLootMultiplier;
+        //logger.warning("==Updated SPT configs");
     }
     checkForSeasonalEvents(logger, seasonalEventsService, seasonalConfig, weatherConfig, logGreetings = false) {
         if (modConfig.enable_hazard_zones) {
@@ -749,7 +849,7 @@ class Main {
     tryLockTradersForEvent(pmcData, logger, globalConfig) {
         let completedQuest;
         let didExplosion;
-        let shouldDisableTraders = true;
+        let shouldDisableTraders = false;
         if (pmcData?.Quests === null || pmcData?.Quests === undefined)
             return;
         pmcData.Quests.forEach(q => {
@@ -759,8 +859,8 @@ class Main {
                 didExplosion = q.completedConditions.includes("6702b4c1fda5e39ba46ccf35");
             }
         });
-        if (!seasonalevents_1.EventTracker.isHalloween || completedQuest || !didExplosion) {
-            shouldDisableTraders = false;
+        if (seasonalevents_1.EventTracker.isHalloween && didExplosion && !completedQuest) {
+            shouldDisableTraders = true;
         }
         for (const traderId in pmcData.TradersInfo) {
             const trader = pmcData.TradersInfo[traderId];
@@ -826,14 +926,14 @@ class Main {
                 }
                 //blue flame part 1
                 if (q.qid === "6702b3e4aff397fa3e666fa5") {
-                    if (isCompleted) {
-                        seasonalevents_1.EventTracker.doExtraRaiderSpawns = seasonalevents_1.EventTracker.isHalloween;
-                    }
                 }
                 //blue flame part 2
                 if (q.qid === "6702b4a27d4a4a89fce96fbc") {
                     const didExplosion = q.completedConditions.includes("6702b4c1fda5e39ba46ccf35");
                     seasonalevents_1.EventTracker.isPreExplosion = isStarted;
+                    if (isStarted) {
+                        seasonalevents_1.EventTracker.doExtraRaiderSpawns = seasonalevents_1.EventTracker.isHalloween;
+                    }
                     if (didExplosion || isCompleted) {
                         seasonalevents_1.EventTracker.doExtraRaiderSpawns = false;
                         seasonalevents_1.EventTracker.hasExploded = true;

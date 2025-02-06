@@ -10,6 +10,8 @@
         "bossKnight": 1,
         "bossZryachiy": 1,
         "bossTest": 1,
+        "bossKolontay": 1,
+        "bossPartisan": 1,
         "cursedAssault": 1,
         "followerBully": 1,
         "followerGluharAssault": 1,
@@ -18,10 +20,12 @@
         "followerGluharSnipe": 1,
         "followerKojaniy": 1,
         "followerSanitar": 1,
+        "followerTagilla": 1,
         "followerBirdEye": 1,
         "followerBigPipe": 1,
         "followerZryachiy": 1,
         "followerTest": 1,
+        "followerBoar": 1,
         "marksman": 1,
         "pmcBot": 1,
         "sectantPriest": 1,
@@ -31,24 +35,32 @@
         "exUsec": 1,
         "arenaFighterEvent": 1,
         "arenaFighter": 1,
-        "pmcUSEC": 1,
-        "pmcBEAR": 1,
         "crazyAssaultEvent": 1,
         "bossBoar": 1,
-        "followerBoar": 1,
-        "followerboarclose1": 1,
-        "followerboarclose2": 1,
         "bossBoarSniper": 1,
-        "bosskolontay": 1,
+        "followerBoarClose1": 1,
+        "followerBoarClose2": 1,
         "followerKolontayAssault": 1,
         "followerKolontaySecurity": 1,
         "shooterBTR": 1,
         "peacefullZryachiyEvent": 1,
         "ravangeZryachiyEvent": 1,
-        "sectactPriestEvent": 1
+        "sectactPriestEvent": 1,
+        "pmcUSEC": 1,
+        "pmcBEAR": 1,
+        "peacemaker": 1,
+        "skier": 1,
+        "sectantPredvestnik": 1,
+        "sectantPrizrak": 1,
+        "sectantOni": 1,
+        "infectedAssault": 1,
+        "infectedPmc": 1,
+        "infectedCivil": 1,
+        "infectedLaborant": 1,
+        "infectedTagilla": 1
     },
     "presetBatch": {
-        "assault": 25,
+        "assault": 30,
         "bossBully": 5,
         "bossGluhar": 5,
         "bossKilla": 5,
@@ -58,6 +70,8 @@
         "bossKnight": 5,
         "bossZryachiy": 5,
         "bossTest": 1,
+        "bossKolontay": 5,
+        "bossPartisan": 5,
         "cursedAssault": 10,
         "followerBully": 10,
         "followerGluharAssault": 10,
@@ -65,36 +79,45 @@
         "followerGluharSecurity": 10,
         "followerGluharSnipe": 10,
         "followerKojaniy": 10,
-        "followerSanitar": 5,
-        "followerTagilla": 5,
-        "followerBirdEye": 5,
-        "followerBigPipe": 5,
+        "followerSanitar": 10,
+        "followerTagilla": 10,
+        "followerBirdEye": 10,
+        "followerBigPipe": 10,
         "followerZryachiy": 10,
-        "followerTest": 1,
+        "followerTest": 5,
+        "followerBoar": 10,
         "marksman": 10,
-        "pmcBot": 15,
-        "sectantPriest": 5,
-        "sectantWarrior": 10,
+        "pmcBot": 20,
+        "sectantPriest": 15,
+        "sectantWarrior": 30,
         "gifter": 5,
-        "test": 1,
+        "test": 5,
         "exUsec": 15,
-        "arenaFighterEvent": 10,
-        "arenaFighter": 10,
-        "pmcUSEC": 25,
-        "pmcBEAR": 25,
-        "crazyAssaultEvent": 10,
+        "arenaFighterEvent": 5,
+        "arenaFighter": 5,
+        "crazyAssaultEvent": 5,
         "bossBoar": 5,
-        "followerBoar": 15,
-        "followerboarclose1": 4,
-        "followerboarclose2": 4,
         "bossBoarSniper": 5,
-        "bosskolontay": 5,
+        "followerBoarClose1": 10,
+        "followerBoarClose2": 10,
         "followerKolontayAssault": 10,
         "followerKolontaySecurity": 10,
-        "shooterBTR": 2,
+        "shooterBTR": 1,
         "peacefullZryachiyEvent": 1,
         "ravangeZryachiyEvent": 1,
-        "sectactPriestEvent": 1
+        "sectactPriestEvent": 1,
+        "pmcUSEC": 30,
+        "pmcBEAR": 30,
+        "peacemaker": 1,
+        "skier": 1,
+        "sectantPredvestnik": 5,
+        "sectantPrizrak": 5,
+        "sectantOni": 5,
+        "infectedAssault": 35,
+        "infectedPmc": 35,
+        "infectedCivil": 35,
+        "infectedLaborant": 35,
+        "infectedTagilla": 5
     },
     "cartridgeBlacklist": [],
     "blacklist": [
@@ -128,9 +151,9 @@
         "rezervbase": 12,
         "interchange": 11,
         "laboratory": 14,
-        "tarkovstreets": 10,
-        "sandbox": 10,
-        "sandbox_high": 10,
+        "tarkovstreets": 11,
+        "sandbox": 11,
+        "sandbox_high": 11,
         "default": 12
     },
     "testBotCap": {
@@ -213,7 +236,7 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 75,
+                "lowestMax": 80,
                 "highestMax": 95,
                 "maxDelta": 35,
                 "minDelta": 0,
@@ -227,7 +250,7 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 90,
+                "lowestMax": 95,
                 "highestMax": 100,
                 "maxDelta": 10,
                 "minDelta": 0,
@@ -241,7 +264,7 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 85,
+                "lowestMax": 90,
                 "highestMax": 95,
                 "maxDelta": 20,
                 "minDelta": 0,
@@ -297,7 +320,7 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 85,
+                "lowestMax": 87,
                 "highestMax": 98,
                 "maxDelta": 25,
                 "minDelta": 0,
@@ -311,7 +334,7 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 85,
+                "lowestMax": 87,
                 "highestMax": 98,
                 "maxDelta": 25,
                 "minDelta": 0,
@@ -325,7 +348,7 @@
                 "minLimitPercent": 15
             },
             "weapon": {
-                "lowestMax": 80,
+                "lowestMax": 85,
                 "highestMax": 94,
                 "maxDelta": 25,
                 "minDelta": 5,
@@ -339,7 +362,7 @@
                 "minLimitPercent": 15
             },
             "weapon": {
-                "lowestMax": 80,
+                "lowestMax": 85,
                 "highestMax": 90,
                 "maxDelta": 30,
                 "minDelta": 5,
@@ -385,7 +408,7 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 77,
+                "lowestMax": 82,
                 "highestMax": 98,
                 "maxDelta": 30,
                 "minDelta": 0,
@@ -399,7 +422,7 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 87,
+                "lowestMax": 92,
                 "highestMax": 100,
                 "maxDelta": 15,
                 "minDelta": 0,
@@ -413,7 +436,7 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 82,
+                "lowestMax": 87,
                 "highestMax": 93,
                 "maxDelta": 25,
                 "minDelta": 0,
@@ -469,7 +492,7 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 83,
+                "lowestMax": 85,
                 "highestMax": 95,
                 "maxDelta": 30,
                 "minDelta": 0,
@@ -483,7 +506,7 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 83,
+                "lowestMax": 85,
                 "highestMax": 95,
                 "maxDelta": 30,
                 "minDelta": 0,
@@ -497,7 +520,7 @@
                 "minLimitPercent": 15
             },
             "weapon": {
-                "lowestMax": 78,
+                "lowestMax": 83,
                 "highestMax": 92,
                 "maxDelta": 30,
                 "minDelta": 5,
@@ -511,7 +534,7 @@
                 "minLimitPercent": 15
             },
             "weapon": {
-                "lowestMax": 77,
+                "lowestMax": 83,
                 "highestMax": 88,
                 "maxDelta": 35,
                 "minDelta": 10,
@@ -557,7 +580,7 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 70,
+                "lowestMax": 77,
                 "highestMax": 95,
                 "maxDelta": 36,
                 "minDelta": 0,
@@ -571,7 +594,7 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 84,
+                "lowestMax": 89,
                 "highestMax": 100,
                 "maxDelta": 20,
                 "minDelta": 0,
@@ -585,7 +608,7 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 78,
+                "lowestMax": 83,
                 "highestMax": 90,
                 "maxDelta": 30,
                 "minDelta": 0,
@@ -641,7 +664,7 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 80,
+                "lowestMax": 85,
                 "highestMax": 90,
                 "maxDelta": 34,
                 "minDelta": 0,
@@ -655,7 +678,7 @@
                 "minLimitPercent": 0
             },
             "weapon": {
-                "lowestMax": 81,
+                "lowestMax": 85,
                 "highestMax": 92,
                 "maxDelta": 36,
                 "minDelta": 0,
@@ -669,7 +692,7 @@
                 "minLimitPercent": 15
             },
             "weapon": {
-                "lowestMax": 75,
+                "lowestMax": 80,
                 "highestMax": 90,
                 "maxDelta": 40,
                 "minDelta": 10,
@@ -683,7 +706,7 @@
                 "minLimitPercent": 15
             },
             "weapon": {
-                "lowestMax": 70,
+                "lowestMax": 75,
                 "highestMax": 80,
                 "maxDelta": 45,
                 "minDelta": 15,
@@ -717,39 +740,65 @@
         },
         "isUsec": 49,
         "difficulty": "Hard",
-        "maxBackpackLootTotalRub": 100000,
+        "maxBackpackLootTotalRub": [
+            {
+                "min": 1,
+                "max": 100,
+                "value": 100000
+            }
+        ],
         "maxPocketLootTotalRub": 50000,
         "maxVestLootTotalRub": 50000,
         "looseWeaponInBackpackChancePercent": 0,
         "chanceSameSideIsHostilePercent": 95,
         "convertIntoPmcChance": {
-            "assault": {
-                "min": 20,
-                "max": 40
+            "default": {
+                "assault": {
+                    "min": 30,
+                    "max": 50
+                },
+                "cursedassault": {
+                    "min": 30,
+                    "max": 40
+                },
+                "pmcbot": {
+                    "min": 0,
+                    "max": 0
+                },
+                "exusec": {
+                    "min": 0,
+                    "max": 0
+                },
+                "arenafighter": {
+                    "min": 0,
+                    "max": 0
+                },
+                "arenafighterevent": {
+                    "min": 0,
+                    "max": 0
+                },
+                "crazyassaultevent": {
+                    "min": 5,
+                    "max": 30
+                }
             },
-            "cursedassault": {
-                "min": 30,
-                "max": 40
+            "factory4_day": {
+                "assault": {
+                    "min": 15,
+                    "max": 30
+                }
             },
-            "pmcbot": {
-                "min": 0,
-                "max": 0
+            "laboratory": {
+                "pmcbot": {
+                    "min": 0,
+                    "max": 0
+                }
             },
-            "exusec": {
-                "min": 0,
-                "max": 0
-            },
-            "arenafighter": {
-                "min": 0,
-                "max": 0
-            },
-            "arenafighterevent": {
-                "min": 0,
-                "max": 0
-            },
-            "crazyassaultevent": {
-                "min": 5,
-                "max": 30
+            "rezervbase": {
+                "pmcbot": {
+                    "min": 0,
+                    "max": 0
+                }
             }
         }
     },
@@ -765,39 +814,65 @@
         },
         "isUsec": 49,
         "difficulty": "Hard",
-        "maxBackpackLootTotalRub": 150000,
+        "maxBackpackLootTotalRub": [
+            {
+                "min": 1,
+                "max": 100,
+                "value": 150000
+            }
+        ],
         "maxPocketLootTotalRub": 75000,
         "maxVestLootTotalRub": 75000,
         "looseWeaponInBackpackChancePercent": 0,
         "chanceSameSideIsHostilePercent": 99,
         "convertIntoPmcChance": {
-            "assault": {
-                "min": 25,
-                "max": 35
+            "default": {
+                "assault": {
+                    "min": 35,
+                    "max": 50
+                },
+                "cursedassault": {
+                    "min": 28,
+                    "max": 40
+                },
+                "pmcbot": {
+                    "min": 0,
+                    "max": 0
+                },
+                "exusec": {
+                    "min": 0,
+                    "max": 0
+                },
+                "arenafighter": {
+                    "min": 0,
+                    "max": 0
+                },
+                "arenafighterevent": {
+                    "min": 0,
+                    "max": 0
+                },
+                "crazyassaultevent": {
+                    "min": 5,
+                    "max": 30
+                }
             },
-            "cursedassault": {
-                "min": 28,
-                "max": 40
+            "factory4_day": {
+                "assault": {
+                    "min": 15,
+                    "max": 30
+                }
             },
-            "pmcbot": {
-                "min": 0,
-                "max": 0
+            "laboratory": {
+                "pmcbot": {
+                    "min": 0,
+                    "max": 0
+                }
             },
-            "exusec": {
-                "min": 0,
-                "max": 0
-            },
-            "arenafighter": {
-                "min": 0,
-                "max": 0
-            },
-            "arenafighterevent": {
-                "min": 0,
-                "max": 0
-            },
-            "crazyassaultevent": {
-                "min": 5,
-                "max": 30
+            "rezervbase": {
+                "pmcbot": {
+                    "min": 0,
+                    "max": 0
+                }
             }
         }
     },
@@ -813,103 +888,169 @@
         },
         "isUsec": 49,
         "difficulty": "Impossible",
-        "maxBackpackLootTotalRub": 200000,
+        "maxBackpackLootTotalRub": [
+            {
+                "min": 1,
+                "max": 100,
+                "value": 200000
+            }
+        ],
         "maxPocketLootTotalRub": 85000,
         "maxVestLootTotalRub": 85000,
         "looseWeaponInBackpackChancePercent": 0,
         "chanceSameSideIsHostilePercent": 100,
         "convertIntoPmcChance": {
-            "assault": {
-                "min": 30,
-                "max": 35
+            "default": {
+                "assault": {
+                    "min": 40,
+                    "max": 45
+                },
+                "cursedassault": {
+                    "min": 25,
+                    "max": 40
+                },
+                "pmcbot": {
+                    "min": 0,
+                    "max": 0
+                },
+                "exusec": {
+                    "min": 0,
+                    "max": 0
+                },
+                "arenafighter": {
+                    "min": 0,
+                    "max": 0
+                },
+                "arenafighterevent": {
+                    "min": 0,
+                    "max": 0
+                },
+                "crazyassaultevent": {
+                    "min": 5,
+                    "max": 30
+                }
             },
-            "cursedassault": {
-                "min": 25,
-                "max": 40
+            "factory4_day": {
+                "assault": {
+                    "min": 15,
+                    "max": 30
+                }
             },
-            "pmcbot": {
-                "min": 0,
-                "max": 0
+            "laboratory": {
+                "pmcbot": {
+                    "min": 0,
+                    "max": 0
+                }
             },
-            "exusec": {
-                "min": 0,
-                "max": 0
-            },
-            "arenafighter": {
-                "min": 0,
-                "max": 0
-            },
-            "arenafighterevent": {
-                "min": 0,
-                "max": 0
-            },
-            "crazyassaultevent": {
-                "min": 5,
-                "max": 30
+            "rezervbase": {
+                "pmcbot": {
+                    "min": 0,
+                    "max": 0
+                }
             }
         }
     },
     "pmcTest": {
         "convertIntoPmcChance": {
-            "assault": {
-                "min": 100,
-                "max": 100
+            "default": {
+                "assault": {
+                    "min": 100,
+                    "max": 100
+                },
+                "cursedassault": {
+                    "min": 100,
+                    "max": 100
+                },
+                "pmcbot": {
+                    "min": 100,
+                    "max": 100
+                },
+                "exusec": {
+                    "min": 100,
+                    "max": 100
+                },
+                "arenafighter": {
+                    "min": 100,
+                    "max": 100
+                },
+                "arenafighterevent": {
+                    "min": 100,
+                    "max": 100
+                },
+                "crazyassaultevent": {
+                    "min": 100,
+                    "max": 100
+                }
             },
-            "cursedassault": {
-                "min": 100,
-                "max": 100
+            "factory4_day": {
+                "assault": {
+                    "min": 100,
+                    "max": 100
+                }
             },
-            "pmcbot": {
-                "min": 100,
-                "max": 100
+            "laboratory": {
+                "pmcbot": {
+                    "min": 100,
+                    "max": 100
+                }
             },
-            "exusec": {
-                "min": 100,
-                "max": 100
-            },
-            "arenafighter": {
-                "min": 100,
-                "max": 100
-            },
-            "arenafighterevent": {
-                "min": 100,
-                "max": 100
-            },
-            "crazyassaultevent": {
-                "min": 100,
-                "max": 100
+            "rezervbase": {
+                "pmcbot": {
+                    "min": 100,
+                    "max": 100
+                }
             }
         }
     },
     "scavTest": {
         "convertIntoPmcChance": {
-            "assault": {
-                "min": 0,
-                "max": 0
+            "default": {
+                "assault": {
+                    "min": 0,
+                    "max": 0
+                },
+                "cursedassault": {
+                    "min": 0,
+                    "max": 0
+                },
+                "pmcbot": {
+                    "min": 0,
+                    "max": 0
+                },
+                "exusec": {
+                    "min": 0,
+                    "max": 0
+                },
+                "arenafighter": {
+                    "min": 0,
+                    "max": 0
+                },
+                "arenafighterevent": {
+                    "min": 0,
+                    "max": 0
+                },
+                "crazyassaultevent": {
+                    "min": 0,
+                    "max": 0
+                }
             },
-            "cursedassault": {
-                "min": 0,
-                "max": 0
+            "factory4_day": {
+                "assault": {
+                    "min": 0,
+                    "max": 0
+                }
             },
-            "pmcbot": {
-                "min": 0,
-                "max": 0
+            "laboratory": {
+                "pmcbot": {
+                    "min": 0,
+                    "max": 0
+                }
             },
-            "exusec": {
-                "min": 0,
-                "max": 0
-            },
-            "arenafighter": {
-                "min": 0,
-                "max": 0
-            },
-            "arenafighterevent": {
-                "min": 0,
-                "max": 0
-            },
-            "crazyassaultevent": {
-                "min": 0,
-                "max": 0
+            "rezervbase": {
+                "pmcbot": {
+                    "min": 0,
+                    "max": 0
+                }
             }
         }
     }

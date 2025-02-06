@@ -11,7 +11,7 @@ import { HttpResponseUtil } from "@spt/utils/HttpResponseUtil";
 import { IRagfairConfig } from "@spt/models/spt/config/IRagfairConfig";
 import { ITraderConfig } from "@spt/models/spt/config/ITraderConfig";
 import { IAirdropConfig } from "@spt/models/spt/config/IAirdropConfig";
-import { IPmcData } from "@spt/models/eft/common/IPmcData";
+import { IPmcData, IPostRaidPmcData } from "@spt/models/eft/common/IPmcData";
 import { RandomUtil } from "@spt/utils/RandomUtil";
 import { HashUtil } from "@spt/utils/HashUtil";
 import { WeightedRandomHelper } from "@spt/helpers/WeightedRandomHelper";
@@ -42,7 +42,7 @@ import { RagfairServer } from "@spt/servers/RagfairServer";;
 import { BotHelper } from "@spt/helpers/BotHelper";
 import { IBotBase } from "@spt/models/eft/common/tables/IBotBase";
 import { BotLevelGenerator } from "@spt/generators/BotLevelGenerator";
-import { BotGenerationDetails } from "@spt/models/spt/bots/BotGenerationDetails";
+import { IBotGenerationDetails } from "@spt/models/spt/bots/BotGenerationDetails";
 import { SeasonalEventService } from "@spt/services/SeasonalEventService";
 import { ISearchRequestData } from "@spt/models/eft/ragfair/ISearchRequestData";
 import { RagfairCallbacks } from "@spt/callbacks/RagfairCallbacks";
@@ -60,9 +60,34 @@ import { LogTextColor } from "@spt/models/spt/logging/LogTextColor";
 import { LogBackgroundColor } from "@spt/models/spt/logging/LogBackgroundColor";
 import { IItemConfig } from "@spt/models/spt/config/IItemConfig";
 import { IBotType } from "@spt/models/eft/common/tables/IBotType";
-
-import * as path from 'path';
-import * as fs from 'fs';
+import { ItemHelper } from "@spt/helpers/ItemHelper";
+import { RagfairPriceService } from "@spt/services/RagfairPriceService";
+import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
+import { DatabaseService } from "@spt/services/DatabaseService";
+import { ICloner } from "@spt/utils/cloners/ICloner";
+import { ItemFilterService } from "@spt/services/ItemFilterService";
+import { IInsuranceConfig } from "@spt/models/spt/config/IInsuranceConfig";
+import { InsuranceController } from "@spt/controllers/InsuranceController";
+import { PaymentService } from "@spt/services/PaymentService";
+import { DialogueHelper } from "@spt/helpers/DialogueHelper";
+import { EventOutputHolder } from "@spt/routers/EventOutputHolder";
+import { SaveServer } from "@spt/servers/SaveServer";
+import { MailSendService } from "@spt/services/MailSendService";
+import { InsuranceService } from "@spt/services/InsuranceService";
+import { IWeatherConfig } from "@spt/models/spt/config/IWeatherConfig";
+import { ILocation } from "@spt/models/eft/common/ILocation";
+import { ILooseLoot } from "@spt/models/eft/common/ILooseLoot";
+import { ILootConfig } from "@spt/models/spt/config/ILootConfig";
+import { ILocationConfig, ILootMultiplier } from "@spt/models/spt/config/ILocationConfig";
+import { ISeasonalEventConfig } from "@spt/models/spt/config/ISeasonalEventConfig";
+import { IConfig, IGlobals } from "@spt/models/eft/common/IGlobals";
+//import { ISaveProgressRequestData } from "@spt/models/eft/inRaid/ISaveProgressRequestData";
+import { PlayerRaidEndState } from "@spt/models/enums/PlayerRaidEndState";
+import { WeatherGenerator } from "@spt/generators/WeatherGenerator";
+import { BotGeneratorHelper } from "@spt/helpers/BotGeneratorHelper";
+import { BotNameService } from "@spt/services/BotNameService";
+import { IEndLocalRaidRequestData } from "@spt/models/eft/match/IEndLocalRaidRequestData";
+import { ExitStatus } from "@spt/models/enums/ExitStatis";
 
 import { AttachmentBase } from "./weapons/attatchment_base";
 import { FleaChangesPreDBLoad, TieredFlea, FleaChangesPostDBLoad } from "./traders/fleamarket";
@@ -76,8 +101,9 @@ import { BotGen } from "./bots/bot_gen";
 import { ItemsClass } from "./items/items";
 import { JsonGen } from "./json/json_gen";
 import { Quests } from "./traders/quests";
+import { InsuranceOverride } from "./traders/insurance";
 import { RagCallback, RandomizeTraderAssort, TraderRefresh, Traders } from "./traders/traders";
-import { Airdrops } from "./misc/airdrops";
+// import { Airdrops } from "./misc/airdrops";
 import { Spawns } from "./bots/spawns";
 import { Gear } from "./items/gear";
 import { EventTracker } from "./misc/seasonalevents";
@@ -86,28 +112,12 @@ import { DescriptionGen } from "./json/description_gen";
 import { ItemStatHandler } from "./json/json-handler";
 import { Ammo } from "./ballistics/ammo";
 import { Armor } from "./ballistics/armor";
-import { MyLootCacheService } from "./bots/bot_loot_serv";
-import { PMCLootGenerator } from "@spt/generators/PMCLootGenerator";
-import { ItemHelper } from "@spt/helpers/ItemHelper";
-import { RagfairPriceService } from "@spt/services/RagfairPriceService";
-import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
-import { DatabaseService } from "@spt/services/DatabaseService";
-import { ICloner } from "@spt/utils/cloners/ICloner";
-import { ItemFilterService } from "@spt/services/ItemFilterService";
-import { IInsuranceConfig } from "@spt/models/spt/config/IInsuranceConfig";
-import { InsuranceController } from "@spt/controllers/InsuranceController";
-import { InsuranceOverride } from "./traders/insurance";
-import { PaymentService } from "@spt/services/PaymentService";
-import { DialogueHelper } from "@spt/helpers/DialogueHelper";
-import { EventOutputHolder } from "@spt/routers/EventOutputHolder";
-import { SaveServer } from "@spt/servers/SaveServer";
-import { MailSendService } from "@spt/services/MailSendService";
-import { InsuranceService } from "@spt/services/InsuranceService";
-import { IWeatherConfig } from "@spt/models/spt/config/IWeatherConfig";
+
 import { info } from "console";
-import { ILocationConfig } from "@spt/models/spt/config/ILocationConfig";
-import { ISeasonalEventConfig } from "@spt/models/spt/config/ISeasonalEventConfig";
-import { IConfig, IGlobals } from "@spt/models/eft/common/IGlobals";
+
+import * as path from 'path';
+import * as fs from 'fs';
+import { json } from "stream/consumers";
 
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");
@@ -117,6 +127,8 @@ const foodBuffs = require("../db/items/buffs_food.json");
 const stimBuffs = require("../db/items/buffs_stims.json");
 const modConfig = require("../config/config.json");
 const realismInfo = require("../data/info.json");
+const baseMapLoot = require("../db/maps/original_lootModifiers.json");
+const playerMapLoot = require("../data/player_lootModifiers.json");
 
 let adjustedTradersOnStart = false;
 
@@ -158,6 +170,21 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         this.checkForMods(preSptModLoader, logger, modConfig);
         flea.loadFleaConfig();
 
+        //way of checking if QB spawn system is active, and disabling certain aspects of Realism's spawn changes to compenstate
+        dynamicRouter.registerDynamicRouter(
+            `DynamicQuestingBotsSpawnSystemCheck`,
+            [
+                {
+                    url: "/QuestingBots/AdjustPMCConversionChances/",
+                    action: async (output: string) => {
+                        ModTracker.qtbSpawnsActive = true;
+                        return output;
+                    }
+                }
+            ],
+            "QuestingBotsSpawnSystemCheck"
+        );
+
         dynamicRouter.registerDynamicRouter(
             "realismGetConfig",
             [
@@ -167,7 +194,26 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         try {
                             return jsonUtil.serialize(modConfig);
                         } catch (e) {
-                            console.error("Failed to read config file", e);
+                            console.error("Realism: Failed to read config file", e);
+                        }
+                    }
+                }
+            ],
+            "RealismMod"
+        );
+
+        dynamicRouter.registerDynamicRouter(
+            "realismGetDirectory",
+            [
+                {
+                    url: "/RealismMod/GetDirectory",
+                    action: async (url, info, sessionID, output) => {
+                        try {
+                            let directory = path.join(__dirname, '..');
+                            let dirObj = { "ServerBaseDirectory": directory };
+                            return jsonUtil.serialize(dirObj);
+                        } catch (e) {
+                            console.error("Realism: Failed to get server mod directory", e);
                         }
                     }
                 }
@@ -192,7 +238,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
 
                             return jsonUtil.serialize(realismInfo);
                         } catch (e) {
-                            console.error("Failed to read info file", e);
+                            console.error("Realism: Failed to read info file", e);
                         }
                     }
                 }
@@ -220,20 +266,23 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
 
         if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {
             const botLevelGenerator = container.resolve<BotLevelGenerator>("BotLevelGenerator");
-            const botDifficultyHelper = container.resolve<BotDifficultyHelper>("BotDifficultyHelper");
             const botInventoryGenerator = container.resolve<BotInventoryGenerator>("BotInventoryGenerator");
             const botHelper = container.resolve<BotHelper>("BotHelper");
             const botEquipmentFilterService = container.resolve<BotEquipmentFilterService>("BotEquipmentFilterService");
             const seasonalEventService = container.resolve<SeasonalEventService>("SeasonalEventService");
-            const itemFilterService = container.resolve<ItemFilterService>("ItemFilterService"); const botGen = new BotGen(
+            const botGeneratorHelper = container.resolve<BotGeneratorHelper>("BotGeneratorHelper");
+            const botNameService = container.resolve<BotNameService>("BotNameService");
+            const itemFilterService = container.resolve<ItemFilterService>("ItemFilterService");
+
+            const botGen = new BotGen(
                 logger, hashUtil, randomUtil, timeUtil,
                 profileHelper, databaseService, botInventoryGenerator,
                 botLevelGenerator, botEquipmentFilterService, weightedRandomHelper,
-                botHelper, botDifficultyHelper, seasonalEventService,
-                localisationService, itemFilterService, configServer, cloner);
+                botHelper, botGeneratorHelper, seasonalEventService,
+                itemFilterService, botNameService, configServer, cloner);
 
             container.afterResolution("BotGenerator", (_t, result: BotGenerator) => {
-                result.prepareAndGenerateBot = (sessionId: string, botGenerationDetails: BotGenerationDetails): IBotBase => {
+                result.prepareAndGenerateBot = (sessionId: string, botGenerationDetails: IBotGenerationDetails): IBotBase => {
                     return botGen.myPrepareAndGenerateBot(sessionId, botGenerationDetails);
                 }
             }, { frequency: "Always" });
@@ -269,7 +318,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             const eventOutputHolder = container.resolve<EventOutputHolder>("HttpResponseUtil");
             const saveServer = container.resolve<SaveServer>("SaveServer");
             const itemHelper = container.resolve<ItemHelper>("ItemHelper");
-            const insruanceService = container.resolve<InsuranceService>("InsuranceService");
+            const InsuranceService = container.resolve<InsuranceService>("InsuranceService");
             const mailSendService = container.resolve<MailSendService>("MailSendService");
             const ragfairPriceService = container.resolve<RagfairPriceService>("RagfairPriceService");
             const localizationService = container.resolve<LocalisationService>("LocalisationService");
@@ -278,7 +327,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
 
             const insuranceOverride = new InsuranceOverride(
                 logger, randomUtil, mathUtil, hashUtil, eventOutputHolder, timeUtil, saveServer, databaseService, itemHelper, profileHelper,
-                dialogueHelper, weightedRandomHelper, traderHelper, paymentService, insruanceService, mailSendService, ragfairPriceService, localizationService, configServer, cloner);
+                dialogueHelper, weightedRandomHelper, traderHelper, paymentService, InsuranceService, mailSendService, ragfairPriceService, localizationService, configServer, cloner);
 
             container.afterResolution("InsuranceController", (_t, result: InsuranceController) => {
                 result.processReturnByProfile = (sessionID: string): void => {
@@ -303,7 +352,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         // }
 
         staticRouterModService.registerStaticRouter(
-            "CheckProfile",
+            "Realism-CheckProfile",
             [
                 {
                     url: "/client/game/version/validate",
@@ -316,6 +365,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         const ragfairServer = container.resolve<RagfairServer>("RagfairServer");
                         const weatherConfig = container.resolve<ConfigServer>("ConfigServer").getConfig<IWeatherConfig>(ConfigTypes.WEATHER);
                         const seeasonalEventConfig = container.resolve<ConfigServer>("ConfigServer").getConfig<ISeasonalEventConfig>(ConfigTypes.SEASONAL_EVENT);
+                        const locationConfig = container.resolve<ConfigServer>("ConfigServer").getConfig<ILocationConfig>(ConfigTypes.LOCATION);
                         const seasonalEventsService = container.resolve<SeasonalEventService>("SeasonalEventService");
                         const postLoadTables = postLoadDBServer.getTables();
                         const utils = new Utils(postLoadTables);
@@ -327,14 +377,14 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         const scavData = profileHelper.getScavProfile(sessionID);
                         const profileData = profileHelper.getFullProfile(sessionID);
-                        this.checkPlayerLevel(sessionID, profileData, pmcData, logger, true);
 
                         try {
-
+                            this.checkPlayerLevel(sessionID, profileData, pmcData, logger, true);
                             if (modConfig.backup_profiles == true) this.backupProfile(profileData, logger);
                             if (modConfig.enable_hazard_zones) quests.resetRepeatableQuests(profileData);
                             this.checkForSeasonalEvents(logger, seasonalEventsService, seeasonalEventConfig, weatherConfig);
                             this.tryLockTradersForEvent(pmcData, logger, postLoadTables.globals.config);
+                            if (modConfig.loot_changes) this.loadMapLoot(locationConfig, sessionID, logger);
 
                             const healthProp = pmcData?.Health;
                             const hydroProp = pmcData?.Health?.Hydration;
@@ -379,55 +429,60 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                                 tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, ProfileTracker.averagePlayerLevel);
                             }
                             if (modConfig.boss_spawns == true) {
-                                maps.setBossSpawnChance(ProfileTracker.averagePlayerLevel);
+                                maps.setBossSpawnChance(ProfileTracker.averagePlayerLevel, databaseService, seeasonalEventConfig);
                             }
 
                             if (modConfig.logEverything == true) {
                                 logger.info("Realism Mod: Profile Checked");
                             }
-                            return HttpResponse.nullResponse();
                         }
-                        catch (e) {
-                            logger.error("Realism Mod: Error Checking Player Profile: " + e);
-                            return HttpResponse.nullResponse();
+                        catch (err) {
+                            logger.error("Realism Mod: Error Checking Player Profile: " + err);
                         }
-                    }
-                }
-            ],
-            "aki"
-        );
-
-        staticRouterModService.registerStaticRouter(
-            "runOnGameLogout",
-            [
-                {
-                    url: "/client/game/logout",
-                    action: async (url, info, sessionID, output) => {
-                        const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
-                        const profileData = profileHelper.getFullProfile(sessionID)
-
-                        let playerCount = 0;
-                        let cumulativePlayerLevel = 0;
-                        delete ProfileTracker.playerRecord[profileData.info.id];
-                        Object.values(ProfileTracker.playerRecord).forEach(value => {
-                            const playerLevel = Number(value);
-                            if (!isNaN(playerLevel)) {
-                                cumulativePlayerLevel += playerLevel;
-                                playerCount += 1;
-                            }
-                        });
-
-                        ProfileTracker.averagePlayerLevel = playerCount > 0 ? cumulativePlayerLevel / playerCount : 1;
-                        logger.logWithColor(`Realism Mod: Players in server ${playerCount}, average level: ${ProfileTracker.averagePlayerLevel}`, LogTextColor.GREEN);
                         return output;
                     }
                 }
             ],
-            "aki"
+            "Realism"
         );
 
         staticRouterModService.registerStaticRouter(
-            "runAtProfileCreation",
+            "Realism-RunOnGameLogout",
+            [
+                {
+                    url: "/client/game/logout",
+                    action: async (url, info, sessionID, output) => {
+                        try {
+                            const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
+                            const profileData = profileHelper.getFullProfile(sessionID)
+
+                            let playerCount = 0;
+                            let cumulativePlayerLevel = 0;
+                            delete ProfileTracker.playerRecord[profileData.info.id];
+                            Object.values(ProfileTracker.playerRecord).forEach(value => {
+                                const playerLevel = Number(value);
+                                if (!isNaN(playerLevel)) {
+                                    cumulativePlayerLevel += playerLevel;
+                                    playerCount += 1;
+                                }
+                            });
+
+                            ProfileTracker.averagePlayerLevel = playerCount > 0 ? cumulativePlayerLevel / playerCount : 1;
+                            logger.logWithColor(`Realism Mod: Players in server ${playerCount}, average level: ${ProfileTracker.averagePlayerLevel}`, LogTextColor.GREEN);
+                        }
+                        catch (err) {
+                            logger.error("Realism Mod: Error At Log Out: " + err);
+                        }
+
+                        return output;
+                    }
+                }
+            ],
+            "Realism"
+        );
+
+        staticRouterModService.registerStaticRouter(
+            "Realism-RunAtProfileCreation",
             [
                 {
                     url: "/client/game/profile/create",
@@ -451,23 +506,22 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                                 player.correctNewHealth(pmcData, scavData);
                             }
                             logger.info("Realism Mod: New Profile Modified");
-                            return HttpResponse.nullResponse();
                         }
                         catch (e) {
                             logger.error("Realism Mod: Error Editing New Profile: " + e);
-                            return HttpResponse.nullResponse();
                         }
+                        return output;
                     }
                 }
             ],
-            "aki"
+            "Realism"
         );
 
         staticRouterModService.registerStaticRouter(
-            "runAtRaidStart",
+            "Realism-RunAtRaidStart",
             [
                 {
-                    url: "/client/raid/configuration",
+                    url: "/client/match/local/start",
                     action: async (url, info, sessionID, output) => {
 
                         try {
@@ -475,7 +529,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             const postLoadTables = postLoadDBService.getTables();
                             const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
                             const appContext = container.resolve<ApplicationContext>("ApplicationContext");
-                            const weatherController = container.resolve<WeatherController>("WeatherController");
+                            const weatherGenerator = container.resolve<WeatherGenerator>("WeatherGenerator");
                             const matchInfo = appContext.getLatestValue(ContextVariableType.RAID_CONFIGURATION).getValue<IGetRaidConfigurationRequestData>();
                             const pmcConf = configServer.getConfig<IPmcConfig>(ConfigTypes.PMC);
                             const arrays = new BotArrays(postLoadTables);
@@ -484,13 +538,13 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             const pmcData = profileHelper.getPmcProfile(sessionID);
                             const profileData = profileHelper.getFullProfile(sessionID);
 
+                            RaidInfoTracker.generatedBotsCount = 0;
+                            
                             //had a concern that bot loot cache isn't being reset properly since I've overriden it with my own implementation, so to be safe...
                             // const myGetLootCache = new MyLootCache(logger, jsonUtil, itemHelper, postLoadDBServer, pmcLootGenerator, localisationService, ragfairPriceService);
                             // myGetLootCache.myClearCache();
 
-                            const time = weatherController.generate().time; //apparently regenerates weather?
-                            // const time = weatherController.getCurrentInRaidTime; //better way?
-                            // const time = weatherGenerator.calculateGameTime({ acceleration: 0, time: "", date: "" }).time // better way?
+                            const baseTime = weatherGenerator.calculateGameTime({ acceleration: 0, time: "", date: "", weather: undefined, season: 1 }).time; //apparently regenerates weather?
                             RaidInfoTracker.mapName = matchInfo.location.toLowerCase();
                             let realTime = "";
                             let mapType = "";
@@ -499,32 +553,12 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             this.checkPlayerLevel(sessionID, profileData, pmcData, logger);
 
                             if (matchInfo.timeVariant === "PAST") {
-                                realTime = getTime(time, 12);
+                                realTime = utils.getTime(baseTime, 12);
                             }
                             if (matchInfo.timeVariant === "CURR") {
-                                realTime = time;
+                                realTime = utils.getTime(baseTime, 0);
                             }
-
-                            function getTime(time, hourDiff) {
-                                let [h, m] = time.split(':');
-                                if (parseInt(h) == 0) {
-                                    return `${h}:${m}`
-                                }
-                                h = Math.abs(parseInt(h) - hourDiff);
-                                return `${h}:${m}`
-                            }
-
-                            function getTOD(time) {
-                                let TOD = "";
-                                let [h, m] = time.split(':');
-                                if ((matchInfo.location != "factory4_night" && parseInt(h) >= 5 && parseInt(h) < 21) || (RaidInfoTracker.mapName === "factory4_day" || RaidInfoTracker.mapName === "laboratory")) {
-                                    TOD = "day";
-                                }
-                                else {
-                                    TOD = "night";
-                                }
-                                return TOD;
-                            }
+                            RaidInfoTracker.isNight = utils.isNight(realTime, matchInfo.location);
 
                             if (StaticArrays.cqbMaps.includes(RaidInfoTracker.mapName)) {
                                 mapType = "cqb";
@@ -535,49 +569,55 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             if (StaticArrays.urbanMaps.includes(RaidInfoTracker.mapName)) {
                                 mapType = "urban";
                             }
-
-                            RaidInfoTracker.TOD = getTOD(realTime);
                             RaidInfoTracker.mapType = mapType;
 
                             if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {
                                 bots.updateBots(pmcData, logger, modConfig, bots, utils);
                             }
 
-                            if (!ModTracker.swagPresent && RaidInfoTracker.mapName === "laboratory") { //!ModTracker.qtbPresent && 
-                                pmcConf.convertIntoPmcChance["pmcbot"].min = 0;
-                                pmcConf.convertIntoPmcChance["pmcbot"].max = 0;
-                                pmcConf.convertIntoPmcChance["assault"].min = 100;
-                                pmcConf.convertIntoPmcChance["assault"].max = 100;
+                            if (!ModTracker.swagPresent) { //!ModTracker.qtbPresent && 
+                                pmcConf.convertIntoPmcChance.laboratory = {
+                                    "assault":
+                                    {
+                                        "min": 100,
+                                        "max": 100
+                                    },
+                                    "pmcbot":
+                                    {
+                                        "min": 0,
+                                        "max": 0
+                                    }
+
+                                };
                             }
 
                             logger.warning("Avg. Player Level = " + ProfileTracker.averagePlayerLevel);
                             logger.warning("Map Name = " + matchInfo.location);
                             logger.warning("Map Type  = " + mapType);
-                            logger.warning("Time " + time);
-                            logger.warning("Time of Day = " + getTOD(realTime));
-
-                            return HttpResponse.nullResponse();
+                            logger.warning("Base Time: " + baseTime + " Real Time: " + realTime);
+                            logger.warning("Is Night = " + RaidInfoTracker.isNight);
                         }
-                        catch (e) {
-                            logger.error("Realism Mod: Failed To Fetch Application Context Data" + e);
-                            return HttpResponse.nullResponse();
+                        catch (err) {
+                            logger.error("Realism Mod: Failed To Fetch Application Context Data" + err);
                         }
+                        return output;
                     }
                 }
             ],
-            "aki"
+            "Realism"
         );
 
         staticRouterModService.registerStaticRouter(
-            "runAtRaidEnd",
+            "Realism-RunAtRaidEnd",
             [
                 {
-                    url: "/raid/profile/save",
+                    url: "/client/match/local/end",
                     action: async (url, info, sessionID, output) => {
                         const postLoadDBService = container.resolve<DatabaseService>("DatabaseService");
                         const postLoadTables = postLoadDBService.getTables();
                         const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
                         const ragfairOfferGenerator = container.resolve<RagfairOfferGenerator>("RagfairOfferGenerator");
+                        const locationConfig = container.resolve<ConfigServer>("ConfigServer").getConfig<ILocationConfig>(ConfigTypes.LOCATION);
                         // const localisationService = container.resolve<LocalisationService>("LocalisationService");
                         // const ragfairPriceService = container.resolve<RagfairPriceService>("RagfairPriceService");
                         // const pmcLootGenerator = container.resolve<PMCLootGenerator>("PMCLootGenerator");
@@ -590,46 +630,45 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         const scavData = profileHelper.getScavProfile(sessionID);
                         const profileData = profileHelper.getFullProfile(sessionID)
                         const quests = new Quests(logger, postLoadTables, modConfig);
+                        const seeasonalEventConfig = container.resolve<ConfigServer>("ConfigServer").getConfig<ISeasonalEventConfig>(ConfigTypes.SEASONAL_EVENT);
+                        const maps = new Spawns(logger, postLoadTables, modConfig, postLoadTables.locations, utils);
 
                         //had a concern that bot loot cache isn't being reset properly since I've overriden it with my own implementation, so to be safe...
                         // const myGetLootCache = new MyLootCache(logger, jsonUtil, itemHelper, postLoadDBServer, pmcLootGenerator, localisationService, ragfairPriceService);
                         // myGetLootCache.myClearCache();
 
-                        //update global player level
-                        this.checkPlayerLevel(sessionID, profileData, pmcData, logger);
                         try {
+                            RaidInfoTracker.generatedBotsCount = 0;
+                            //update global player level
+                            this.checkPlayerLevel(sessionID, profileData, pmcData, logger);
 
-                            if (modConfig.tiered_flea == true) {
-                                tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, ProfileTracker.averagePlayerLevel);
-                            }
+                            if (modConfig.tiered_flea == true) tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, ProfileTracker.averagePlayerLevel);
 
-                            if (modConfig.enable_hazard_zones) {
-                                quests.resetRepeatableQuests(profileData);
-                            }
+                            if (modConfig.enable_hazard_zones) quests.resetRepeatableQuests(profileData);
+
+                            if (modConfig.boss_spawns == true) maps.setBossSpawnChance(ProfileTracker.averagePlayerLevel, databaseService, seeasonalEventConfig);
+
+                            if (modConfig.loot_changes) this.modifyMapLoot(locationConfig, RaidInfoTracker.mapName, info, pmcData, sessionID, utils, logger);
 
                             this.checkEventQuests(pmcData);
-
                             player.correctNegativeHP(pmcData);
 
-                            if (modConfig.realistic_player_health == true) {
-                                player.setNewScavRealisticHealth(scavData);
-                            }
+                            if (modConfig.realistic_player_health == true) player.setNewScavRealisticHealth(scavData);
 
                             this.tryLockTradersForEvent(pmcData, logger, postLoadTables.globals.config);
 
                             if (modConfig.logEverything == true) {
                                 logger.info("Realism Mod: Updated at Raid End");
                             }
-                            return HttpResponse.nullResponse();
                         }
-                        catch (e) {
-                            logger.error("Realism Mod: Error Updating At Raid End: " + e);
-                            return HttpResponse.nullResponse();
+                        catch (err) {
+                            logger.error("Realism Mod: Error Updating At Raid End: " + err);
                         }
+                        return output;
                     }
                 }
             ],
-            "aki"
+            "Realism"
         );
     }
 
@@ -684,18 +723,6 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         });
     }
 
-
-
-    // public async postSptLoadAsync(container: DependencyContainer): Promise<void> {
-    //     const logger = container.resolve<ILogger>("WinstonLogger");
-
-    //     const databaseServer = container.resolve<DatabaseServer>("DatabaseServer");
-    //     const tables = databaseServer.getTables();
-    //     const jsonHand = new JsonHandler(tables, logger);
-    //     jsonHand.pushWeaponsToServer();
-    //     jsonHand.pushModsToServer();
-    // }
-
     public postDBLoad(container: DependencyContainer): void {
 
         const logger = container.resolve<ILogger>("WinstonLogger");
@@ -729,18 +756,19 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         const fleaChangesPreDB = new FleaChangesPreDBLoad(logger, aKIFleaConf, modConfig);
         const quests = new Quests(logger, tables, modConfig);
         const traders = new Traders(logger, tables, modConfig, traderConf, utils);
-        const airdrop = new Airdrops(logger, modConfig, airConf);
+        // const airdrop = new Airdrops(logger, modConfig, airConf);
         const maps = new Spawns(logger, tables, modConfig, tables.locations, utils);
         const gear = new Gear(tables, logger, modConfig);
         const itemCloning = new ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
-        const descGen = new DescriptionGen(tables, modConfig, logger);
-        const jsonHand = new ItemStatHandler(tables, logger);
+        const statHandler = new ItemStatHandler(tables, logger);
+        const descGen = new DescriptionGen(tables, modConfig, logger, statHandler);
+        
+        //Remember to back up json data before using this, and make sure it isn't overriding existing json objects
         // jsonGen.attTemplatesCodeGen();
         // jsonGen.weapTemplatesCodeGen();
         // jsonGen.gearTemplatesCodeGen();
         // jsonGen.ammoTemplatesCodeGen();
-
-        // this.dllChecker(logger, modConfig);
+        // jsonGen.genArmorMods();
 
         this.checkForSeasonalEvents(logger, seasonalEventsService, seeasonalEventConfig, weatherConfig, true);
 
@@ -773,7 +801,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
 
         maps.loadSpawnChanges(locationConfig);
 
-        airdrop.loadAirdropChanges();
+        //airdrop.loadAirdropChanges();
 
         if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {
             bots.loadBots();
@@ -783,10 +811,10 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             logger.warning("Realism Mod: testing enabled, bots will be limited to a cap of 1");
             bots.testBotCap();
         }
-        else if (modConfig.increased_bot_cap == true && ModTracker.swagPresent == false) { //&& ModTracker.qtbPresent == false
+        else if (modConfig.increased_bot_cap == true && !ModTracker.swagPresent  && !ModTracker.qtbPresent) {
             bots.increaseBotCap();
         }
-        else if (modConfig.spawn_waves == true && ModTracker.swagPresent == false) { //  && ModTracker.qtbPresent == false
+        else if (modConfig.spawn_waves == true && !ModTracker.swagPresent  && !ModTracker.qtbPresent) { 
             bots.increasePerformance();
         }
 
@@ -798,9 +826,10 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             bots.forceBossSpawns();
         }
 
-        if (modConfig.boss_difficulty == true && !ModTracker.sainPresent) {
-            bots.bossDifficulty();
-        }
+        //need to add diffuclity values to experience obj or abandon
+        // if (modConfig.boss_difficulty == true) {
+        //     bots.bossDifficulty();
+        // }
 
         if (modConfig.med_changes == true) {
             itemCloning.createCustomMedItems();
@@ -821,13 +850,11 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         fleaChangesPostDB.loadFleaGlobal(); //has to run post db load, otherwise item templates are undefined 
         fleaChangesPreDB.loadFleaConfig(); //probably redundant, but just in case
 
-        if (modConfig.trader_repair_changes == true) {
-            traders.loadTraderRepairs();
-        }
+        traders.loadTraderRepairs();
 
-        if (modConfig.headset_changes) {
-            gear.loadHeadsetTweaks();
-        }
+        // if (modConfig.headset_changes) {
+        //     gear.loadHeadsetTweaks();
+        // }
 
         if (modConfig.remove_quest_fir_req == true) {
             quests.removeFIRQuestRequire();
@@ -854,23 +881,23 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         player.loadPlayerStats();
         player.playerProfiles(jsonUtil);
         weaponsGlobals.loadGlobalWeps();
-
         //have to run this async to ensure correct load order
         (async () => {
-            if (modConfig.recoil_attachment_overhaul) {
-                jsonHand.pushModsToServer();
-                jsonHand.pushWeaponsToServer();
-            }
-            jsonHand.pushGearToServer();
-
-            await jsonHand.processUserJsonFiles();
-
-            descGen.descriptionGen();
 
             if (modConfig.realistic_ballistics == true) {
                 ammo.loadAmmoStats();
                 armor.loadArmorStats();
+                ammo.grenadeTweaks();
             }
+
+            if (modConfig.recoil_attachment_overhaul) {
+                statHandler.pushModsToServer();
+                statHandler.pushWeaponsToServer();
+            }
+            statHandler.pushGearToServer();
+
+            await statHandler.processUserJsonFiles();
+            descGen.descriptionGen();
 
             if (modConfig.malf_changes == true) {
                 weaponsGlobals.loadGlobalMalfChanges();
@@ -879,10 +906,11 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             if (modConfig.recoil_attachment_overhaul) {
                 ammo.loadAmmoFirerateChanges();
                 quests.fixMechancicQuests();
-                ammo.grenadeTweaks();
             }
 
             gear.loadGearConflicts();
+
+            statHandler.modifiedItems = {}; //empty temp template object
         })();
     }
 
@@ -891,7 +919,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
     }
 
     private setModInfo(logger: ILogger) {
-        realismInfo.IsNightTime = RaidInfoTracker.TOD == "night";
+        realismInfo.IsNightTime = RaidInfoTracker.isNight;
         realismInfo.IsHalloween = EventTracker.isHalloween;
         realismInfo.isChristmas = EventTracker.isChristmas;
         realismInfo.DoGasEvent = EventTracker.doGasEvent;
@@ -911,7 +939,6 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         }
     }
 
-
     private revertMeds(profileData: IPmcData, utils: Utils) {
         utils.revertMedItems(profileData);
     }
@@ -927,6 +954,96 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             profileData.Health.Hydration.Current = defaultHydration
             profileData.Health.Energy.Current = defaultEnergy;
         }
+    }
+
+    private loadMapLoot(locationConfig: ILocationConfig, profileId: string, logger: ILogger) {
+        if (!playerMapLoot[profileId]) {
+            playerMapLoot[profileId] =
+            {
+                looseLootMultiplier: { ...baseMapLoot.looseLootMultiplier },
+                staticLootMultiplier: { ...baseMapLoot.staticLootMultiplier }
+            }
+        }
+
+        locationConfig.looseLootMultiplier = playerMapLoot[profileId].looseLootMultiplier;
+        locationConfig.staticLootMultiplier = playerMapLoot[profileId].staticLootMultiplier;
+    }
+
+    private modifyMapLoot(locationConfig: ILocationConfig, map: string, raidData: IEndLocalRaidRequestData, pmcData: IPmcData, profileId: string, utils: Utils, logger: ILogger) {
+        const exitStatus = raidData.results.result;
+        let lootXp = 0;
+        if (exitStatus !== ExitStatus.KILLED && exitStatus !== ExitStatus.MISSINGINACTION) {
+            const counters = pmcData.Stats.Eft.OverallCounters.Items;
+            for (const i in counters) {
+                const counter = counters[i];
+                if (counter.Key.includes("ExpLooting")) {
+                    lootXp += Math.min(counter.Value, 1000);
+                }
+            }
+        }
+
+        const looseModifier = lootXp * 0.00004;
+        const staticModifier = lootXp * 0.00002;
+        const minLooseLoot = 0.3;
+        const minstaticLoot = 0.4;
+        const looseLootRegenRate = 0.1;
+        const staticLootRegenRate = 0.05;
+        const baseLooseLoot: ILootMultiplier = baseMapLoot.looseLootMultiplier;
+        const baseStaticLoot: ILootMultiplier = baseMapLoot.staticLootMultiplier;
+        const originalLooseMapModi = baseLooseLoot[map];
+        const originalStaticMapModi = baseStaticLoot[map];
+        const mapAliases: { [key: string]: string[] } = {
+            "factory4_day": ["factory4_day", "factory4_night"],
+            "factory4_night": ["factory4_day", "factory4_night"]
+        };
+        const mapsToUpdate: string[] = mapAliases[map] || [map]; //if mapAliases has a key, use the corresponding array, otherwise make an array of our singular map
+        // logger.warning("==============" + map + "==============");
+        // logger.warning("==loose loot modi: " + looseModifier);
+        // logger.warning("==static loot modi: " + staticModifier);
+        if (!playerMapLoot[profileId]) {
+            //logger.warning("no profile found, creating new entry");
+            playerMapLoot[profileId] =
+            {
+                looseLootMultiplier: { ...baseLooseLoot },
+                staticLootMultiplier: { ...baseStaticLoot }
+            }
+        }
+
+        //logger.warning("Found profile entry ");
+        let looseLootModis = playerMapLoot[profileId].looseLootMultiplier;
+        let staticLootModis = playerMapLoot[profileId].staticLootMultiplier;
+        mapsToUpdate.forEach((currentMap) => {
+            // logger.warning("current loose loot modi: " + looseLootModis[currentMap]);
+            // logger.warning("current static loot modi: " + staticLootModis[currentMap]);
+            looseLootModis[map] = utils.clampNumber(looseLootModis[currentMap] - looseModifier, minLooseLoot, originalLooseMapModi);
+            staticLootModis[map] = utils.clampNumber(staticLootModis[currentMap] - staticModifier, minstaticLoot, originalStaticMapModi);
+            // logger.warning("modified loose loot modi: " + looseLootModis[currentMap]);
+            // logger.warning("modified static loot modi: " + staticLootModis[currentMap]);
+        });
+
+        //logger.warning("==Regenerating other map loot");
+        if (exitStatus !== ExitStatus.RUNNER) {
+            for (const i in playerMapLoot[profileId].staticLootMultiplier) {
+                //logger.warning("==");
+                //logger.warning("map " + i);
+                if (!mapsToUpdate.includes(i)) {
+                    let looseMapLootModi = playerMapLoot[profileId].looseLootMultiplier;
+                    let staticMapLootModi = playerMapLoot[profileId].staticLootMultiplier;
+                    // logger.warning("current loose loot modi: " + looseMapLootModis[i]);
+                    // logger.warning("current static loot modi: " + staticMapLootModis[i]);
+                    looseMapLootModi[i] = utils.clampNumber(looseMapLootModi[i] + looseLootRegenRate, minLooseLoot, baseLooseLoot[i]);
+                    staticMapLootModi[i] = utils.clampNumber(staticMapLootModi[i] + staticLootRegenRate, minstaticLoot, baseStaticLoot[i]);
+                    // logger.warning("modified loose loot modi: " + looseMapLootModis[i]);
+                    // logger.warning("modified static loot modi: " + staticMapLootModis[i]);
+                }
+            }
+        }
+
+        utils.writeConfigJSON(playerMapLoot, 'data/player_lootModifiers.json');
+        //logger.warning("==Saved to file");
+        locationConfig.looseLootMultiplier = playerMapLoot[profileId].looseLootMultiplier;
+        locationConfig.staticLootMultiplier = playerMapLoot[profileId].staticLootMultiplier;
+        //logger.warning("==Updated SPT configs");
     }
 
     private checkForSeasonalEvents(logger: ILogger, seasonalEventsService: SeasonalEventService, seasonalConfig: ISeasonalEventConfig, weatherConfig: IWeatherConfig, logGreetings: boolean = false) {
@@ -968,7 +1085,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
     public tryLockTradersForEvent(pmcData: IPmcData, logger: ILogger, globalConfig: IConfig) {
         let completedQuest;
         let didExplosion;
-        let shouldDisableTraders = true;
+        let shouldDisableTraders = false;
 
         if (pmcData?.Quests === null || pmcData?.Quests === undefined) return;
 
@@ -980,8 +1097,8 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             }
         });
 
-        if (!EventTracker.isHalloween || completedQuest || !didExplosion) {
-            shouldDisableTraders = false;
+        if (EventTracker.isHalloween && didExplosion && !completedQuest) {
+            shouldDisableTraders = true;
         }
 
         for (const traderId in pmcData.TradersInfo) {
@@ -1050,14 +1167,17 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                 }
                 //blue flame part 1
                 if (q.qid === "6702b3e4aff397fa3e666fa5") {
-                    if (isCompleted) {
-                        EventTracker.doExtraRaiderSpawns = EventTracker.isHalloween;
-                    }
                 }
+
                 //blue flame part 2
                 if (q.qid === "6702b4a27d4a4a89fce96fbc") {
                     const didExplosion = q.completedConditions.includes("6702b4c1fda5e39ba46ccf35");
                     EventTracker.isPreExplosion = isStarted;
+
+                    if (isStarted) {
+                        EventTracker.doExtraRaiderSpawns = EventTracker.isHalloween;
+                    }
+
                     if (didExplosion || isCompleted) {
                         EventTracker.doExtraRaiderSpawns = false;
                         EventTracker.hasExploded = true;

@@ -1,5 +1,6 @@
 {
     "6680304edadb7aa61d00cef0": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "6680304edadb7aa61d00cef0",
         "Name": "weapon_iwi_uzi_pro_pistol_9x19",
         "WeapType": "smg_pistol",
@@ -46,6 +47,7 @@
         "RecoilIntensity": 0.2
     },
     "668e71a8dadf42204c032ce1": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "668e71a8dadf42204c032ce1",
         "Name": "weapon_iwi_uzi_pro_smg_9x19",
         "WeapType": "",
@@ -92,6 +94,7 @@
         "RecoilIntensity": 0.2
     },
     "66992b349950f5f4cd06029f": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "66992b349950f5f4cd06029f",
         "Name": "weapon_iwi_uzi_9x19",
         "WeapType": "",
@@ -127,7 +130,7 @@
         "AutoROF": 600,
         "SemiROF": 320,
         "LoyaltyLevel": 1,
-        "BaseReloadSpeedMulti": 1,
+        "BaseReloadSpeedMulti": 0.9,
         "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
         "MaxChamberSpeed": 1.5,
@@ -138,6 +141,7 @@
         "RecoilIntensity": 0.2
     },
     "62e14904c2699c0ec93adc47": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "62e14904c2699c0ec93adc47",
         "Name": "weapon_tochmash_sr2m_veresk_9x21",
         "WeapType": "",
@@ -145,7 +149,7 @@
         "WeapAccuracy": 0,
         "BaseTorque": 0,
         "HasShoulderContact": false,
-        "Ergonomics": 77,
+        "Ergonomics": 70,
         "VerticalRecoil": 43,
         "HorizontalRecoil": 100,
         "Dispersion": 11,
@@ -183,9 +187,10 @@
         "OffsetRotation": 0.01,
         "RecoilIntensity": 0.2185
     },
-    "mechSTM9v1": {
-        "ItemID": "mechSTM9v1",
-        "Name": "weapon_stmarms_stm_9_9x19",
+    "6783ae0d0410dd9ffe6f732c": {
+        "$type": "RealismMod.Gun, RealismMod",
+        "ItemID": "6783ae0d0410dd9ffe6f732c",
+        "Name": "mech_weapon_stmarms_stm_9_9x19",
         "WeapType": "",
         "OperationType": "buffer",
         "WeapAccuracy": 0,
@@ -193,12 +198,12 @@
         "HasShoulderContact": false,
         "Ergonomics": 80,
         "VerticalRecoil": 47,
-        "HorizontalRecoil": 147,
+        "HorizontalRecoil": 130,
         "Dispersion": 9,
-        "CameraRecoil": 0.05,
-        "VisualMulti": 1.5,
+        "CameraRecoil": 0.035,
+        "VisualMulti": 1.4,
         "Convergence": 9,
-        "RecoilAngle": 90,
+        "RecoilAngle": 82,
         "BaseMalfunctionChance": 0.004,
         "HeatFactorGun": 0.35,
         "HeatFactorByShot": 1,
@@ -233,6 +238,7 @@
         "RecoilIntensity": 0.22
     },
     "60339954d62c9b14ed777c06": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "60339954d62c9b14ed777c06",
         "Name": "weapon_stmarms_stm_9_9x19",
         "WeapType": "",
@@ -242,12 +248,12 @@
         "HasShoulderContact": false,
         "Ergonomics": 80,
         "VerticalRecoil": 47,
-        "HorizontalRecoil": 147,
+        "HorizontalRecoil": 130,
         "Dispersion": 9,
-        "CameraRecoil": 0.05,
-        "VisualMulti": 1.5,
+        "CameraRecoil": 0.035,
+        "VisualMulti": 1.4,
         "Convergence": 9,
-        "RecoilAngle": 90,
+        "RecoilAngle": 82,
         "BaseMalfunctionChance": 0.0027,
         "HeatFactorGun": 0.35,
         "HeatFactorByShot": 1,
@@ -279,6 +285,7 @@
         "RecoilIntensity": 0.22
     },
     "59f9cabd86f7743a10721f46": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "59f9cabd86f7743a10721f46",
         "Name": "weapon_izhmash_saiga_9_9x19",
         "WeapType": "",
@@ -325,6 +332,7 @@
         "RecoilIntensity": 0.22
     },
     "59984ab886f7743e98271174": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "59984ab886f7743e98271174",
         "Name": "weapon_izhmash_pp-19-01_9x19",
         "WeapType": "",
@@ -371,6 +379,7 @@
         "RecoilIntensity": 0.21
     },
     "5e00903ae9dc277128008b87": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "5e00903ae9dc277128008b87",
         "Name": "weapon_bt_mp9_9x19",
         "WeapType": "",
@@ -417,6 +426,7 @@
         "RecoilIntensity": 0.2185
     },
     "5de7bd7bfd6b4e6e2276dc25": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "5de7bd7bfd6b4e6e2276dc25",
         "Name": "weapon_bt_mp9n_9x19",
         "WeapType": "",
@@ -463,6 +473,7 @@
         "RecoilIntensity": 0.2185
     },
     "5d2f0d8048f0356c925bc3b0": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "5d2f0d8048f0356c925bc3b0",
         "Name": "weapon_hk_mp5_kurtz_9x19",
         "WeapType": "",
@@ -509,6 +520,7 @@
         "RecoilIntensity": 0.2185
     },
     "5926bb2186f7744b1c6c6e60": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "5926bb2186f7744b1c6c6e60",
         "Name": "weapon_hk_mp5_navy3_9x19",
         "WeapType": "",
@@ -555,6 +567,7 @@
         "RecoilIntensity": 0.21
     },
     "58948c8e86f77409493f7266": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "58948c8e86f77409493f7266",
         "Name": "weapon_sig_mpx_9x19",
         "WeapType": "",
@@ -601,6 +614,7 @@
         "RecoilIntensity": 0.2185
     },
     "5fc3f2d5900b1d5091531e57": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "5fc3f2d5900b1d5091531e57",
         "Name": "weapon_tdi_kriss_vector_gen_2_9x19",
         "WeapType": "",
@@ -647,6 +661,7 @@
         "RecoilIntensity": 0.25
     },
     "5fb64bc92b1b027b1f50bcf2": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "5fb64bc92b1b027b1f50bcf2",
         "Name": "weapon_tdi_kriss_vector_gen_2_1143x23",
         "WeapType": "",
@@ -693,6 +708,7 @@
         "RecoilIntensity": 0.255
     },
     "5fc3e272f8b6a877a729eac5": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "5fc3e272f8b6a877a729eac5",
         "Name": "weapon_hk_ump_1143x23",
         "WeapType": "",
@@ -739,6 +755,7 @@
         "RecoilIntensity": 0.2
     },
     "5cc82d76e24e8d00134b4b83": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "5cc82d76e24e8d00134b4b83",
         "Name": "weapon_fn_p90_57x28",
         "WeapType": "",
@@ -785,6 +802,7 @@
         "RecoilIntensity": 0.2185
     },
     "5ba26383d4351e00334c93d9": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "5ba26383d4351e00334c93d9",
         "Name": "weapon_hk_mp7a1_46x30",
         "WeapType": "",
@@ -831,6 +849,7 @@
         "RecoilIntensity": 0.2185
     },
     "5bd70322209c4d00d7167b8f": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "5bd70322209c4d00d7167b8f",
         "Name": "weapon_hk_mp7a2_46x30",
         "WeapType": "",
@@ -877,6 +896,7 @@
         "RecoilIntensity": 0.218
     },
     "5ea03f7400685063ec28bfa8": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "5ea03f7400685063ec28bfa8",
         "Name": "weapon_zis_ppsh41_762x25",
         "WeapType": "",
@@ -923,6 +943,7 @@
         "RecoilIntensity": 0.2185
     },
     "57f3c6bd24597738e730fa2f": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "57f3c6bd24597738e730fa2f",
         "Name": "weapon_zmz_pp-91-01_9x18pm",
         "WeapType": "",
@@ -969,6 +990,7 @@
         "RecoilIntensity": 0.2185
     },
     "57d14d2524597714373db789": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "57d14d2524597714373db789",
         "Name": "weapon_zmz_pp-91_9x18pm",
         "WeapType": "",
@@ -1015,6 +1037,7 @@
         "RecoilIntensity": 0.219
     },
     "57f4c844245977379d5c14d1": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "57f4c844245977379d5c14d1",
         "Name": "weapon_zmz_pp-9_9x18pmm",
         "WeapType": "",

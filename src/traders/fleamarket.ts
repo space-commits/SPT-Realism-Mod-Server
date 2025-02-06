@@ -47,13 +47,13 @@ export class FleaChangesPreDBLoad {
         else if (this.modConfig.flea_changes == true) {
             this.fleaConf.dynamic.blacklist.enableBsgList = true;
             this.fleaConf.dynamic.blacklist.custom.push(
-                "generic_debuff",
-                "performance_debuff",
-                "weight_debuff",
-                "clotting_debuff",
-                "damage_debuff",
-                "adrenal_debuff",
-                "regen_debuff",
+                "6783adb2a43ec97b902c4080",
+                "6783ad9f56a70af01706bf5f",
+                "6783ad886700d7d90daf548d",
+                "6783ad5fce6705d14a117b15",
+                "6783adc3899d65035b52e21b",
+                "6783ad365524129829f0099d",
+                "6783ad5260cc8e9597065ec5",
                 "66fd521442055447e2304fda",
                 "66fd571a05370c3ee1a1c613",
                 "66fd57171f981640e667fbe2",
@@ -69,7 +69,7 @@ export class FleaChangesPreDBLoad {
             //disabled due to SPT changes
             // this.fleaConf.dynamic.condition = custFleaConfig.condition;
 
-            //need to chec kif globalDB is initialized at this stage
+            //need to check if globalDB is initialized at this stage
             // this.globalDB.ratingDecreaseCount = 0.12;
             // this.globalDB.ratingIncreaseCount = 0.1;
 

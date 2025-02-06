@@ -9,7 +9,8 @@ export class BotArrays {
     public cultistArr: IBotType[];
     public standardBotHPArr: IBotType[];
     public bossFollowerArr: IBotType[];
-    public rogueRaiderList: IBotType[];
+    public rogueRaiderArr: IBotType[];
+    public zombiesArr: IBotType[];
 
     constructor(private tables: IDatabaseTables) {
         let botDB = this.tables.bots.types;
@@ -46,7 +47,7 @@ export class BotArrays {
             botDB["followerkolontayassault"]
         ];
 
-        this.rogueRaiderList = [
+        this.rogueRaiderArr = [
             botDB["pmcbot"],
             botDB["exusec"]
         ];
@@ -56,6 +57,13 @@ export class BotArrays {
             botDB["sectantpriest"]
         ];
 
+        this.zombiesArr = [
+            botDB["infectedassault"],
+            botDB["infectedpmc"],
+            botDB["infectedcivil"],
+            botDB["infectedlaborant"],
+            botDB["infectedtagilla"]
+        ];
 
         this.standardBotHPArr = [
             botDB["usec"],
@@ -146,15 +154,15 @@ export class StaticArrays {
         "laboratory",
         "interchange"
     ]
-    
+
     static blacklistedItems = [
-        "generic_debuff",
-        "performance_debuff",
-        "weight_debuff",
-        "clotting_debuff",
-        "damage_debuff",
-        "adrenal_debuff",
-        "regen_debuff"
+        "6783adb2a43ec97b902c4080",
+        "6783ad9f56a70af01706bf5f",
+        "6783ad886700d7d90daf548d",
+        "6783ad5fce6705d14a117b15",
+        "6783adc3899d65035b52e21b",
+        "6783ad365524129829f0099d",
+        "6783ad5260cc8e9597065ec5"
     ];
 
     static stashMeds = [
@@ -302,11 +310,12 @@ export class StaticArrays {
     ]
 
     static gasMasks = [
-        "CCG_GAS_MASK_GP9",
-        "CCG_GAS_MASK_MCU2P",
-        "CCG_GAS_MASK_SGE400",
+        "672e2e756803734b60f5ac1e",
+        "672e2e7504b1f1d5b0e4209c",
+        "672e2e7517018293d11bbdc1",
         "5b432c305acfc40019478128",
-        "60363c0c92ec1c31037959f5"
+        "60363c0c92ec1c31037959f5",
+        "67a13809c3bc1e2fa47e6eec"
     ];
 
     static gasEventMasksLow: Record<string, number> = {
@@ -324,7 +333,22 @@ export class StaticArrays {
         "5b432c305acfc40019478128": 2,
         "59e7715586f7742ee5789605": 7
     };
-    
+
+    static hazardDetectionDevices = [
+        "590a3efd86f77437d351a25b",
+        "5672cb724bdc2dc2088b456b"
+    ];
+
+    static botLootBlacklist = [
+        "6783adb2a43ec97b902c4080",
+        "6783ad9f56a70af01706bf5f",
+        "6783ad886700d7d90daf548d",
+        "6783ad5fce6705d14a117b15",
+        "6783adc3899d65035b52e21b",
+        "6783ad365524129829f0099d",
+        "6783ad5260cc8e9597065ec5"
+    ];
+
     static traders = [
         "54cb50c76803fa8b248b4571",
         "54cb57776803fa99248b456e",
@@ -340,9 +364,6 @@ export class StaticArrays {
     static confMaskOverlays = [
         "5b432c305acfc40019478128",
         "60363c0c92ec1c31037959f5",
-        "CCG_GAS_MASK_GP9",
-        "CCG_GAS_MASK_MCU2P",
-        "CCG_GAS_MASK_SGE400",
         "6570aead4d84f81fd002a033",
         "657089638db3adca1009f4ca",
         "62a09e08de7ac81993580532",
@@ -398,6 +419,6 @@ export class StaticArrays {
         "5c093ca986f7740a1867ab12",
         "59db794186f77448bc595262",
         "5857a8bc2459772bad15db29"
-    ]
+    ];
 }
 

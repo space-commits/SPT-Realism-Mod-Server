@@ -1,5 +1,6 @@
 {
     "6410733d5dd49d77bd07847e": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "6410733d5dd49d77bd07847e",
         "Name": "weapon_toz_avt_40_762x54r",
         "WeapType": "",
@@ -11,9 +12,9 @@
         "VerticalRecoil": 135,
         "HorizontalRecoil": 320,
         "Dispersion": 20,
-        "CameraRecoil": 0.085,
+        "CameraRecoil": 0.095,
         "VisualMulti": 1.25,
-        "Convergence": 8,
+        "Convergence": 10,
         "RecoilAngle": 78,
         "BaseMalfunctionChance": 0.0028,
         "HeatFactorGun": 0.65,
@@ -51,6 +52,7 @@
         }
     },
     "643ea5b23db6f9f57107d9fd": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "643ea5b23db6f9f57107d9fd",
         "Name": "weapon_toz_svt_40_762x54r",
         "WeapType": "",
@@ -62,9 +64,9 @@
         "VerticalRecoil": 135,
         "HorizontalRecoil": 370,
         "Dispersion": 20,
-        "CameraRecoil": 0.085,
+        "CameraRecoil": 0.095,
         "VisualMulti": 1.25,
-        "Convergence": 8,
+        "Convergence": 10,
         "RecoilAngle": 78,
         "BaseMalfunctionChance": 0.0025,
         "HeatFactorGun": 0.5,
@@ -101,9 +103,10 @@
             "z": 0.03
         }
     },
-    "mechOPSKSv1": {
-        "ItemID": "mechOPSKSv1",
-        "Name": "weapon_molot_op_sks_762x39",
+    "6783adfafb90a12e7033616a": {
+        "$type": "RealismMod.Gun, RealismMod",
+        "ItemID": "6783adfafb90a12e7033616a",
+        "Name": "mech_weapon_molot_op_sks_762x39",
         "WeapType": "",
         "OperationType": "",
         "WeapAccuracy": 50,
@@ -152,9 +155,10 @@
             "z": 0
         }
     },
-    "mechSKSv1": {
-        "ItemID": "mechSKSv1",
-        "Name": "weapon_toz_sks_762x39",
+    "6783ade075bc42ef5d2bfcf9": {
+        "$type": "RealismMod.Gun, RealismMod",
+        "ItemID": "6783ade075bc42ef5d2bfcf9",
+        "Name": "mec_weapon_toz_sks_762x39",
         "WeapType": "",
         "OperationType": "",
         "WeapAccuracy": 25,
@@ -204,6 +208,7 @@
         }
     },
     "587e02ff24597743df3deaeb": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "587e02ff24597743df3deaeb",
         "Name": "weapon_molot_op_sks_762x39",
         "WeapType": "",
@@ -255,6 +260,7 @@
         }
     },
     "574d967124597745970e7c94": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "574d967124597745970e7c94",
         "Name": "weapon_toz_sks_762x39",
         "WeapType": "",
@@ -306,6 +312,7 @@
         }
     },
     "5c501a4d2e221602b412b540": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "5c501a4d2e221602b412b540",
         "Name": "weapon_molot_vepr_hunter_vpo-101_762x51",
         "WeapType": "",
@@ -351,6 +358,7 @@
         "RecoilIntensity": 0.25
     },
     "5c07c60e0db834002330051f": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "5c07c60e0db834002330051f",
         "Name": "weapon_adar_2-15_556x45",
         "WeapType": "DI",
@@ -397,6 +405,7 @@
         "RecoilIntensity": 0.165
     },
     "5d43021ca4b9362eab4b5e25": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "5d43021ca4b9362eab4b5e25",
         "Name": "weapon_lone_star_tx15_designated_marksman_556x45",
         "WeapType": "DI",
@@ -443,6 +452,7 @@
         "RecoilIntensity": 0.165
     },
     "59e6152586f77473dc057aa1": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "59e6152586f77473dc057aa1",
         "Name": "weapon_molot_vepr_km_vpo_136_762x39",
         "WeapType": "",
@@ -454,7 +464,7 @@
         "VerticalRecoil": 100,
         "HorizontalRecoil": 240,
         "Dispersion": 12,
-        "CameraRecoil": 0.035,
+        "CameraRecoil": 0.042,
         "VisualMulti": 1.35,
         "Convergence": 11,
         "RecoilAngle": 85,
@@ -477,7 +487,7 @@
         "DurabilityBurnRatio": 0.22,
         "AutoROF": 600,
         "SemiROF": 380,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 1,
         "BaseReloadSpeedMulti": 1,
         "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
@@ -489,6 +499,7 @@
         "RecoilIntensity": 0.195
     },
     "59e6687d86f77411d949b251": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "59e6687d86f77411d949b251",
         "Name": "weapon_molot_akm_vpo_209_366_TKM",
         "WeapType": "",
@@ -500,7 +511,7 @@
         "VerticalRecoil": 105,
         "HorizontalRecoil": 245,
         "Dispersion": 13,
-        "CameraRecoil": 0.04,
+        "CameraRecoil": 0.044,
         "VisualMulti": 1.4,
         "Convergence": 9,
         "RecoilAngle": 80,
@@ -523,7 +534,7 @@
         "DurabilityBurnRatio": 0.25,
         "AutoROF": 600,
         "SemiROF": 390,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 1,
         "BaseReloadSpeedMulti": 1,
         "BaseChamberSpeedMulti": 1,
         "MinChamberSpeed": 0.7,
@@ -534,8 +545,9 @@
         "OffsetRotation": 0.009,
         "RecoilIntensity": 0.2
     },
-    "Skier209": {
-        "ItemID": "Skier209",
+    "6783ae6a4973f4b13b9418a7": {
+        "$type": "RealismMod.Gun, RealismMod",
+        "ItemID": "6783ae6a4973f4b13b9418a7",
         "Name": "weapon_molot_akm_vpo_209_366_TKM",
         "WeapType": "",
         "OperationType": "",
@@ -546,7 +558,7 @@
         "VerticalRecoil": 105,
         "HorizontalRecoil": 245,
         "Dispersion": 13,
-        "CameraRecoil": 0.05,
+        "CameraRecoil": 0.046,
         "VisualMulti": 1.4,
         "Convergence": 9,
         "RecoilAngle": 80,
@@ -579,8 +591,9 @@
         "BaseFixSpeed": 1.3,
         "OffsetRotation": 0.009,
         "RecoilIntensity": 0.2,
+        "BurstShotsCount": 2,
         "weapFireType": [
-            "fullauto"
+            "fullauto"        
         ]
     }
 }

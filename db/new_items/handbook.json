@@ -1,19 +1,24 @@
 {
     "items": [
         {
-            "Id": "mosin_bayonet",
+            "Id": "6783afddef9d6f5d579c43f1",
             "ParentId": "5b5f724c86f774093f2ecf15",
             "Price": 5000
         },
         {
-            "Id": "m9_bayonet",
+            "Id": "6783b041281387d669fd3722",
             "ParentId": "5b5f724c86f774093f2ecf15",
             "Price": 5000
         },
         {
-            "Id": "6kh4_bayonet",
+            "Id": "6783b079e4585dfb0fec3c73",
             "ParentId": "5b5f724c86f774093f2ecf15",
             "Price": 5000
+        },
+        {
+            "Id": "67a13809c3bc1e2fa47e6eec",
+            "ParentId": "5b47574386f77428ca22b32f",
+            "Price": 20000
         }
     ]
 }

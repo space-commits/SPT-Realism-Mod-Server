@@ -1,4 +1,244 @@
 {
+    "3BigpileDeaglev1": {
+        "Id": "678e499f0100105eb210ed19",
+        "Name": "3BigpileDeaglev1",
+        "Root": "678e49a8445e916b78081c7e",
+        "Items": [
+            {
+                "_id": "678e49a8445e916b78081c7e",
+                "_tpl": "668fe5a998b5ad715703ddd6",
+                "upd": {
+                    "Repairable": {
+                        "MaxDurability": 100,
+                        "Durability": 100
+                    },
+                    "FireMode": {
+                        "FireMode": "single"
+                    }
+                }
+            },
+            {
+                "_id": "678e49a8445e916b78081c7f",
+                "_tpl": "668fe5f62a0f85eea407cc18",
+                "slotId": "mod_barrel",
+                "parentId": "678e49a8445e916b78081c7e"
+            },
+            {
+                "_id": "678e49a8445e916b78081c80",
+                "_tpl": "668fe5d42a0f85eea407cc16",
+                "slotId": "mod_pistolgrip",
+                "parentId": "678e49a8445e916b78081c7e"
+            },
+            {
+                "_id": "678e49a8445e916b78081c81",
+                "_tpl": "668fe60b56984d93550462c6",
+                "slotId": "mod_reciever",
+                "parentId": "678e49a8445e916b78081c7e"
+            },
+            {
+                "_id": "678e49a8445e916b78081c82",
+                "_tpl": "668fe5c5f35310705d02b696",
+                "slotId": "mod_magazine",
+                "parentId": "678e49a8445e916b78081c7e"
+            },
+            {
+                "_id": "678e49a8445e916b78081c83",
+                "_tpl": "668fe5ec4315934ba10c6f96",
+                "slotId": "mod_sight_front",
+                "upd": {
+                    "Sight": {
+                        "ScopesCurrentCalibPointIndexes": [
+                            0
+                        ],
+                        "ScopesSelectedModes": [
+                            0
+                        ],
+                        "SelectedScope": 0,
+                        "ScopeZoomValue": 0
+                    }
+                },
+                "parentId": "678e49a8445e916b78081c7f"
+            },
+            {
+                "_id": "678e49a8445e916b78081c84",
+                "_tpl": "668fe5e1800f0244f9036e46",
+                "slotId": "mod_sight_rear",
+                "upd": {
+                    "Sight": {
+                        "ScopesCurrentCalibPointIndexes": [
+                            0
+                        ],
+                        "ScopesSelectedModes": [
+                            0
+                        ],
+                        "SelectedScope": 0,
+                        "ScopeZoomValue": 0
+                    }
+                },
+                "parentId": "678e49a8445e916b78081c81"
+            }
+        ]
+    },
+    "3BigpileDeaglev2": {
+        "Id": "678e49b40100105eb2c3daae",
+        "Name": "3BigpileDeaglev2",
+        "Root": "678e49b6445e916b78081c85",
+        "Items": [
+            {
+                "_id": "678e49b6445e916b78081c85",
+                "_tpl": "668fe5a998b5ad715703ddd6",
+                "upd": {
+                    "Repairable": {
+                        "MaxDurability": 100,
+                        "Durability": 100
+                    },
+                    "FireMode": {
+                        "FireMode": "single"
+                    }
+                }
+            },
+            {
+                "_id": "678e49b6445e916b78081c86",
+                "_tpl": "669fa47da0bab4e8510d9526",
+                "slotId": "mod_barrel",
+                "parentId": "678e49b6445e916b78081c85"
+            },
+            {
+                "_id": "678e49b6445e916b78081c87",
+                "_tpl": "66a0da76b6f47fcfeb025e96",
+                "slotId": "mod_pistolgrip",
+                "parentId": "678e49b6445e916b78081c85"
+            },
+            {
+                "_id": "678e49b6445e916b78081c88",
+                "_tpl": "668fe60b56984d93550462c6",
+                "slotId": "mod_reciever",
+                "parentId": "678e49b6445e916b78081c85"
+            },
+            {
+                "_id": "678e49b6445e916b78081c89",
+                "_tpl": "668fe5c5f35310705d02b696",
+                "slotId": "mod_magazine",
+                "parentId": "678e49b6445e916b78081c85"
+            },
+            {
+                "_id": "678e49b6445e916b78081c8a",
+                "_tpl": "668fe5ec4315934ba10c6f96",
+                "slotId": "mod_sight_front",
+                "upd": {
+                    "Sight": {
+                        "ScopesCurrentCalibPointIndexes": [
+                            0
+                        ],
+                        "ScopesSelectedModes": [
+                            0
+                        ],
+                        "SelectedScope": 0,
+                        "ScopeZoomValue": 0
+                    }
+                },
+                "parentId": "678e49b6445e916b78081c86"
+            },
+            {
+                "_id": "678e49b6445e916b78081c8b",
+                "_tpl": "668fe5e1800f0244f9036e46",
+                "slotId": "mod_sight_rear",
+                "upd": {
+                    "Sight": {
+                        "ScopesCurrentCalibPointIndexes": [
+                            0
+                        ],
+                        "ScopesSelectedModes": [
+                            0
+                        ],
+                        "SelectedScope": 0,
+                        "ScopeZoomValue": 0
+                    }
+                },
+                "parentId": "678e49b6445e916b78081c88"
+            }
+        ]
+    },
+    "3BigpileDeaglev3": {
+        "Id": "678e49be0100105eb2017e00",
+        "Name": "3BigpileDeaglev3",
+        "Root": "678e49c1445e916b78081c8c",
+        "Items": [
+            {
+                "_id": "678e49c1445e916b78081c8c",
+                "_tpl": "668fe5a998b5ad715703ddd6",
+                "upd": {
+                    "Repairable": {
+                        "MaxDurability": 100,
+                        "Durability": 100
+                    },
+                    "FireMode": {
+                        "FireMode": "single"
+                    }
+                }
+            },
+            {
+                "_id": "678e49c1445e916b78081c8d",
+                "_tpl": "669fa48fa0bab4e8510d952a",
+                "slotId": "mod_barrel",
+                "parentId": "678e49c1445e916b78081c8c"
+            },
+            {
+                "_id": "678e49c1445e916b78081c8e",
+                "_tpl": "668fe5d42a0f85eea407cc16",
+                "slotId": "mod_pistolgrip",
+                "parentId": "678e49c1445e916b78081c8c"
+            },
+            {
+                "_id": "678e49c1445e916b78081c8f",
+                "_tpl": "668fe60b56984d93550462c6",
+                "slotId": "mod_reciever",
+                "parentId": "678e49c1445e916b78081c8c"
+            },
+            {
+                "_id": "678e49c1445e916b78081c90",
+                "_tpl": "668fe5c5f35310705d02b696",
+                "slotId": "mod_magazine",
+                "parentId": "678e49c1445e916b78081c8c"
+            },
+            {
+                "_id": "678e49c1445e916b78081c91",
+                "_tpl": "668fe5ec4315934ba10c6f96",
+                "slotId": "mod_sight_front",
+                "upd": {
+                    "Sight": {
+                        "ScopesCurrentCalibPointIndexes": [
+                            0
+                        ],
+                        "ScopesSelectedModes": [
+                            0
+                        ],
+                        "SelectedScope": 0,
+                        "ScopeZoomValue": 0
+                    }
+                },
+                "parentId": "678e49c1445e916b78081c8d"
+            },
+            {
+                "_id": "678e49c1445e916b78081c92",
+                "_tpl": "668fe5e1800f0244f9036e46",
+                "slotId": "mod_sight_rear",
+                "upd": {
+                    "Sight": {
+                        "ScopesCurrentCalibPointIndexes": [
+                            0
+                        ],
+                        "ScopesSelectedModes": [
+                            0
+                        ],
+                        "SelectedScope": 0,
+                        "ScopeZoomValue": 0
+                    }
+                },
+                "parentId": "678e49c1445e916b78081c8f"
+            }
+        ]
+    },
     "BigpipeFN40": {
         "_id": "a4e6cad98f465b3927f730bd",
         "_name": "BigpipeFN40",

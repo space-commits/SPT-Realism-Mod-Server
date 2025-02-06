@@ -1,5 +1,6 @@
 {
     "660126a98f2b23af220b27e7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "660126a98f2b23af220b27e7",
         "Name": "sight_front_m60_usord_m60e6_front_sight_rail",
         "ModType": "sight",
@@ -10,10 +11,10 @@
         "Weight": 0.078,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 1
     },
     "6601268bc752a02bbe05e686": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6601268bc752a02bbe05e686",
         "Name": "sight_front_m60_usord_m60e4_std",
         "ModType": "sight",
@@ -24,10 +25,10 @@
         "Weight": 0.084,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 1
     },
     "6601265f98a610c1aa0ea637": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6601265f98a610c1aa0ea637",
         "Name": "sight_rear_m60_usord_m60_std",
         "ModType": "sight",
@@ -38,10 +39,10 @@
         "Weight": 0.092,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 1
     },
     "668fe5ec4315934ba10c6f96": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "668fe5ec4315934ba10c6f96",
         "Name": "sight_front_deagle_magnum_research_std",
         "ModType": "sight",
@@ -52,10 +53,10 @@
         "Weight": 0.005,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 1
     },
     "668fe5e1800f0244f9036e46": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "668fe5e1800f0244f9036e46",
         "Name": "sight_rear_deagle_magnum_research_std",
         "ModType": "sight",
@@ -66,10 +67,10 @@
         "Weight": 0.006,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 1
     },
     "6492fb8253acae0af00a29b6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6492fb8253acae0af00a29b6",
         "Name": "sight_rear_pk_zid_pk_std",
         "ModType": "sight",
@@ -80,10 +81,10 @@
         "Weight": 0.025,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 1
     },
     "64119d90dcf48d656f0aa275": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "64119d90dcf48d656f0aa275",
         "Name": "sight_rear_svt40_toz_svt40_std",
         "ModType": "sight",
@@ -94,10 +95,10 @@
         "Weight": 0.025,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 1
     },
     "64119d672c6d6f921a0929fb": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "64119d672c6d6f921a0929fb",
         "Name": "sight_front_svt40_toz_std",
         "ModType": "sight",
@@ -108,10 +109,10 @@
         "Weight": 0.07,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 1
     },
     "5c05295e0db834001a66acbb": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c05295e0db834001a66acbb",
         "Name": "sight_rear_acog_trijicon_acog_backup_rear_sight",
         "ModType": "sight",
@@ -122,10 +123,10 @@
         "Weight": 0.034,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "57c44e7b2459772d28133248": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57c44e7b2459772d28133248",
         "Name": "sight_rear_val_tochmash_val_std",
         "ModType": "sight",
@@ -136,10 +137,10 @@
         "Weight": 0.025,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "56083e1b4bdc2dc8488b4572": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "56083e1b4bdc2dc8488b4572",
         "Name": "sight_rear_sv-98_izhmash_std",
         "ModType": "sight",
@@ -160,10 +161,10 @@
         "Weight": 0.03,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "599860e986f7743bb57573a6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "599860e986f7743bb57573a6",
         "Name": "sight_rear_pp-19-01_izhmash_vityaz_std",
         "ModType": "sight",
@@ -174,10 +175,10 @@
         "Weight": 0.025,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "58272b842459774abc128d50": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "58272b842459774abc128d50",
         "Name": "sight_rear_saiga_css_sight_rail_mount",
         "ModType": "sight",
@@ -192,10 +193,10 @@
         "Weight": 0.03,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "57a9b9ce2459770ee926038d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57a9b9ce2459770ee926038d",
         "Name": "sight_rear_saiga_izhmash_saiga_fixed",
         "ModType": "sight",
@@ -206,10 +207,10 @@
         "Weight": 0.003,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5c503b1c2e221602b21d6e9d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c503b1c2e221602b21d6e9d",
         "Name": "sight_rear_vepr_molot_vpo-101_std",
         "ModType": "sight",
@@ -220,10 +221,10 @@
         "Weight": 0.025,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5c471ba12e221602b3137d76": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c471ba12e221602b3137d76",
         "Name": "sight_front_svd_izhmash_svd_s_std",
         "ModType": "sight",
@@ -234,10 +235,10 @@
         "Weight": 0.08,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5c471b7e2e2216152006e46c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c471b7e2e2216152006e46c",
         "Name": "sight_rear_svd_izhmash_svd_s_std",
         "ModType": "sight",
@@ -248,10 +249,10 @@
         "Weight": 0.15,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "57838e1b2459774a256959b1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57838e1b2459774a256959b1",
         "Name": "sight_rear_vss_tochmash_vss_std",
         "ModType": "sight",
@@ -262,10 +263,10 @@
         "Weight": 0.025,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "649ec2cec93611967b03495e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "649ec2cec93611967b03495e",
         "Name": "sight_rear_ak_izhmash_ak12_rear_sight_std",
         "ModType": "sight",
@@ -276,10 +277,10 @@
         "Weight": 0.03,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "649ec2da59cbb3c813042dca": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "649ec2da59cbb3c813042dca",
         "Name": "sight_rear_all_izhmash_ak12_rear_sight_base",
         "ModType": "sight",
@@ -292,10 +293,10 @@
         "Weight": 0.05,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5beec9450db83400970084fd": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5beec9450db83400970084fd",
         "Name": "sight_rear_all_izhmash_rpk16_std",
         "ModType": "sight",
@@ -308,10 +309,10 @@
         "Weight": 0.05,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "574db213245977459a2f3f5d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "574db213245977459a2f3f5d",
         "Name": "sight_rear_sks_toz_sks_std",
         "ModType": "sight",
@@ -322,10 +323,10 @@
         "Weight": 0.025,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5ae099875acfc4001714e593": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ae099875acfc4001714e593",
         "Name": "sight_front_mosin_izhmash_mosin_std",
         "ModType": "sight",
@@ -336,10 +337,10 @@
         "Weight": 0.08,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5bfd4c980db834001b73449d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bfd4c980db834001b73449d",
         "Name": "sight_rear_mosin_izhmash_mosin_carabine",
         "ModType": "sight",
@@ -372,10 +373,10 @@
         "Weight": 0.15,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5ae099925acfc4001a5fc7b3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ae099925acfc4001a5fc7b3",
         "Name": "sight_rear_mosin_izhmash_mosin_std",
         "ModType": "sight",
@@ -386,10 +387,10 @@
         "Weight": 0.15,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5649d9a14bdc2d79388b4580": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5649d9a14bdc2d79388b4580",
         "Name": "sight_rear_ak_tactica_tula_tt01",
         "ModType": "sight",
@@ -408,10 +409,10 @@
         "Weight": 0.085,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "59d650cf86f7741b846413a4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59d650cf86f7741b846413a4",
         "Name": "sight_rear_ak_izhmash_akm_std",
         "ModType": "sight",
@@ -422,10 +423,10 @@
         "Weight": 0.025,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "59e8977386f77415a553c453": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59e8977386f77415a553c453",
         "Name": "sight_rear_ak_molot_vpo_209",
         "ModType": "sight",
@@ -436,10 +437,10 @@
         "Weight": 0.025,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5bf3f59f0db834001a6fa060": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bf3f59f0db834001a6fa060",
         "Name": "sight_rear_ak_izhmash_rpk16_rear_sight_std",
         "ModType": "sight",
@@ -450,10 +451,10 @@
         "Weight": 0.15,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "628b9471078f94059a4b9bfb": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "628b9471078f94059a4b9bfb",
         "Name": "sight_rear_ak_sag_mk3_chassis_rear_sight",
         "ModType": "sight",
@@ -464,10 +465,10 @@
         "Weight": 0.015,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "628a7b23b0f75035732dd565": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "628a7b23b0f75035732dd565",
         "Name": "sight_rear_ak_rifle_dynamics_enhanced_v2",
         "ModType": "sight",
@@ -478,10 +479,10 @@
         "Weight": 0.026,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "5649b0544bdc2d1b2b8b458a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5649b0544bdc2d1b2b8b458a",
         "Name": "sight_rear_ak_izhmash_ak74_std",
         "ModType": "sight",
@@ -492,10 +493,10 @@
         "Weight": 0.025,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5ac72e475acfc400180ae6fe": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ac72e475acfc400180ae6fe",
         "Name": "sight_rear_ak_izhmash_ak74m_std",
         "ModType": "sight",
@@ -506,10 +507,10 @@
         "Weight": 0.025,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5a0ed824fcdbcb0176308b0d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a0ed824fcdbcb0176308b0d",
         "Name": "sight_rear_ak_izhmash_akmp",
         "ModType": "sight",
@@ -520,10 +521,10 @@
         "Weight": 0.01,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "5a0eb980fcdbcb001a3b00a6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a0eb980fcdbcb001a3b00a6",
         "Name": "sight_rear_ak_izhmash_akmb",
         "ModType": "sight",
@@ -534,10 +535,10 @@
         "Weight": 0.035,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "5ac733a45acfc400192630e2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ac733a45acfc400192630e2",
         "Name": "sight_rear_ak_izhmash_ak105_std",
         "ModType": "sight",
@@ -548,10 +549,10 @@
         "Weight": 0.025,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5a0f096dfcdbcb0176308b15": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a0f096dfcdbcb0176308b15",
         "Name": "sight_front_ak_izhmash_akmp",
         "ModType": "sight",
@@ -562,10 +563,10 @@
         "Weight": 0.01,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "5e87114fe2db31558c75a120": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5e87114fe2db31558c75a120",
         "Name": "sight_rear_590_mossberg_ghost_ring_sight_kit",
         "ModType": "sight",
@@ -576,10 +577,10 @@
         "Weight": 0.022,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5e8708d4ae379e67d22e0102": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5e8708d4ae379e67d22e0102",
         "Name": "sight_front_590_mossberg_ghost_ring_sight_kit",
         "ModType": "sight",
@@ -590,10 +591,10 @@
         "Weight": 0.02,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "625ebcef6f53af4aa66b44dc": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "625ebcef6f53af4aa66b44dc",
         "Name": "sight_rear_m3_benelli_ghost_ring_sight",
         "ModType": "sight",
@@ -604,10 +605,10 @@
         "Weight": 0.035,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5caf1691ae92152ac412efb9": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5caf1691ae92152ac412efb9",
         "Name": "sight_rear_all_ckib_ash12_std",
         "ModType": "sight",
@@ -628,10 +629,10 @@
         "Weight": 0.15,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "5caf16a2ae92152ac412efbc": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5caf16a2ae92152ac412efbc",
         "Name": "sight_front_all_ckib_ash12_std",
         "ModType": "sight",
@@ -642,10 +643,10 @@
         "Weight": 0.07,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "623166e08c43374ca1567195": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "623166e08c43374ca1567195",
         "Name": "sight_front_g36_hk_std",
         "ModType": "sight",
@@ -668,10 +669,10 @@
         "Weight": 0.07,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "6231670f0b8aa5472d060095": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6231670f0b8aa5472d060095",
         "Name": "sight_rear_g36_hk_std",
         "ModType": "sight",
@@ -692,10 +693,10 @@
         "Weight": 0.15,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5abcbb20d8ce87001773e258": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5abcbb20d8ce87001773e258",
         "Name": "sight_rear_m14_springfield_armory_enlarged_military_aperture_135",
         "ModType": "sight",
@@ -706,10 +707,10 @@
         "Weight": 0.03,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5addba3e5acfc4001669f0ab": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5addba3e5acfc4001669f0ab",
         "Name": "sight_front_m1a_springfield_armory_national_match_062_blade",
         "ModType": "sight",
@@ -720,10 +721,10 @@
         "Weight": 0.038,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5aafa49ae5b5b00015042a58": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5aafa49ae5b5b00015042a58",
         "Name": "sight_front_m1a_springfield_armory_xs_post_125_blade",
         "ModType": "sight",
@@ -734,10 +735,10 @@
         "Weight": 0.038,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5b0bc22d5acfc47a8607f085": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b0bc22d5acfc47a8607f085",
         "Name": "sight_rear_sa58_ds_arms_metric_holand_type_rear_sight",
         "ModType": "sight",
@@ -748,10 +749,10 @@
         "Weight": 0.09,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5de8fb539f98ac2bc659513a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5de8fb539f98ac2bc659513a",
         "Name": "sight_rear_mp9_bt_mp9_std",
         "ModType": "sight",
@@ -762,10 +763,10 @@
         "Weight": 0.01,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5926d2be86f774134d668e4e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5926d2be86f774134d668e4e",
         "Name": "sight_rear_mp5_hk_drum",
         "ModType": "sight",
@@ -778,10 +779,10 @@
         "Weight": 0.14,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5ae30bad5acfc400185c2dc4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ae30bad5acfc400185c2dc4",
         "Name": "sight_rear_ar15_colt_carry_hande_std",
         "ModType": "sight",
@@ -846,10 +847,10 @@
         "Weight": 0.2,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "55d5f46a4bdc2d1b198b4567": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "55d5f46a4bdc2d1b198b4567",
         "Name": "sight_rear_ar15_colt_a2",
         "ModType": "sight",
@@ -890,10 +891,10 @@
         "Weight": 0.1,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5ba26b01d4351e0085325a51": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ba26b01d4351e0085325a51",
         "Name": "sight_front_all_hk_mp7_std",
         "ModType": "sight",
@@ -904,10 +905,10 @@
         "Weight": 0.08,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5ba26b17d4351e00367f9bdd": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ba26b17d4351e00367f9bdd",
         "Name": "sight_rear_all_hk_mp7_std",
         "ModType": "sight",
@@ -918,10 +919,10 @@
         "Weight": 0.085,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5c1780312e221602b66cc189": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c1780312e221602b66cc189",
         "Name": "sight_rear_all_kac_folding_sight",
         "ModType": "sight",
@@ -932,10 +933,10 @@
         "Weight": 0.09,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5c17804b2e2216152006c02f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c17804b2e2216152006c02f",
         "Name": "sight_front_all_kac_folding_sight",
         "ModType": "sight",
@@ -946,10 +947,10 @@
         "Weight": 0.085,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "5dfa3d7ac41b2312ea33362a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5dfa3d7ac41b2312ea33362a",
         "Name": "sight_rear_all_kac_folding_micro_sight",
         "ModType": "sight",
@@ -960,10 +961,10 @@
         "Weight": 0.05,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "5dfa3d950dee1b22f862eae0": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5dfa3d950dee1b22f862eae0",
         "Name": "sight_front_all_kac_folding_micro_sight",
         "ModType": "sight",
@@ -974,10 +975,10 @@
         "Weight": 0.045,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "61816fcad92c473c770215cc": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "61816fcad92c473c770215cc",
         "Name": "sight_front_mk16_scar_front_sight_std",
         "ModType": "sight",
@@ -988,10 +989,10 @@
         "Weight": 0.034,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "61817865d3a39d50044c13a4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "61817865d3a39d50044c13a4",
         "Name": "sight_rear_all_fn_scar_rear_sight_std",
         "ModType": "sight",
@@ -1002,10 +1003,10 @@
         "Weight": 0.036,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5fb6564947ce63734e3fa1da": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fb6564947ce63734e3fa1da",
         "Name": "sight_rear_all_kriss_defiance_low_profile_flip_up",
         "ModType": "sight",
@@ -1016,10 +1017,10 @@
         "Weight": 0.02,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5fb6567747ce63734e3fa1dc": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fb6567747ce63734e3fa1dc",
         "Name": "sight_front_all_kriss_defiance_low_profile_flip_up",
         "ModType": "sight",
@@ -1030,10 +1031,10 @@
         "Weight": 0.02,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5bc09a30d4351e00367fb7c8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bc09a30d4351e00367fb7c8",
         "Name": "sight_front_all_magpul_mbus_gen2",
         "ModType": "sight",
@@ -1044,10 +1045,10 @@
         "Weight": 0.034,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "5c18b90d2e2216152142466b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c18b90d2e2216152142466b",
         "Name": "sight_front_all_magpul_mbus_gen2_fde",
         "ModType": "sight",
@@ -1058,10 +1059,10 @@
         "Weight": 0.034,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "5bc09a18d4351e003562b68e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bc09a18d4351e003562b68e",
         "Name": "sight_rear_all_magpul_mbus_gen2",
         "ModType": "sight",
@@ -1072,10 +1073,10 @@
         "Weight": 0.036,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "5c18b9192e2216398b5a8104": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c18b9192e2216398b5a8104",
         "Name": "sight_rear_all_magpul_mbus_gen2_fde",
         "ModType": "sight",
@@ -1086,10 +1087,10 @@
         "Weight": 0.036,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "5fc0fa362770a0045c59c677": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fc0fa362770a0045c59c677",
         "Name": "sight_front_all_sig_flip_up",
         "ModType": "sight",
@@ -1100,10 +1101,10 @@
         "Weight": 0.06,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5fc0fa957283c4046c58147e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fc0fa957283c4046c58147e",
         "Name": "sight_rear_all_sig_flip_up",
         "ModType": "sight",
@@ -1114,10 +1115,10 @@
         "Weight": 0.065,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5894a73486f77426d259076c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5894a73486f77426d259076c",
         "Name": "sight_front_all_sig_mpx_std",
         "ModType": "sight",
@@ -1128,10 +1129,10 @@
         "Weight": 0.07,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5894a81786f77427140b8347": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5894a81786f77427140b8347",
         "Name": "sight_rear_all_sig_mpx_std",
         "ModType": "sight",
@@ -1142,10 +1143,10 @@
         "Weight": 0.075,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5bb20e49d4351e3bac1212de": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bb20e49d4351e3bac1212de",
         "Name": "sight_rear_all_hk_416_flip_up",
         "ModType": "sight",
@@ -1156,10 +1157,10 @@
         "Weight": 0.14,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "55d4af3a4bdc2d972f8b456f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "55d4af3a4bdc2d972f8b456f",
         "Name": "sight_front_ar15_utg_low_gas_block_a2",
         "ModType": "sight",
@@ -1170,13 +1171,13 @@
         "Weight": 0.176,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5cadd954ae921500103bb3c2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cadd954ae921500103bb3c2",
         "Name": "sight_rear_m9_sight_mount_m9",
-        "ModType": "sight",
+        "ModType": "mount",
         "AimSpeed": 0,
         "Accuracy": 0,
         "ConflictingItems": [],
@@ -1184,10 +1185,10 @@
         "Weight": 0.028,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "5cadd940ae9215051e1c2316": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cadd940ae9215051e1c2316",
         "Name": "sight_rear_m9_beretta_m9a3_std",
         "ModType": "sight",
@@ -1198,10 +1199,10 @@
         "Weight": 0.008,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5cadd919ae921500126a77f3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cadd919ae921500126a77f3",
         "Name": "sight_front_m9_beretta_m9a3_std",
         "ModType": "sight",
@@ -1212,10 +1213,10 @@
         "Weight": 0.007,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "61963a852d2c397d660036ad": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "61963a852d2c397d660036ad",
         "Name": "sight_rear_hk_red_dot_mount",
         "ModType": "sight",
@@ -1229,10 +1230,10 @@
         "Weight": 0.028,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "6194f2912d2c397d6600348d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6194f2912d2c397d6600348d",
         "Name": "sight_rear_usp_hk_std_rear_sight",
         "ModType": "sight",
@@ -1243,10 +1244,10 @@
         "Weight": 0.004,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "6194f35c18a3974e5e7421e6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6194f35c18a3974e5e7421e6",
         "Name": "sight_front_usp_hk_usp_std_front_sight",
         "ModType": "sight",
@@ -1257,10 +1258,10 @@
         "Weight": 0.003,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "6194f3286db0f2477964e67d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6194f3286db0f2477964e67d",
         "Name": "sight_front_usp_hk_usp_tactical",
         "ModType": "sight",
@@ -1271,10 +1272,10 @@
         "Weight": 0.005,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "6194f2df645b5d229654ad77": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6194f2df645b5d229654ad77",
         "Name": "sight_rear_usp_hk_usp_tactical",
         "ModType": "sight",
@@ -1285,10 +1286,10 @@
         "Weight": 0.008,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "5aba637ad8ce87001773e17f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5aba637ad8ce87001773e17f",
         "Name": "sight_rear_aps_molot_aps_std",
         "ModType": "sight",
@@ -1299,10 +1300,10 @@
         "Weight": 0.008,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5aba62f8d8ce87001943946b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5aba62f8d8ce87001943946b",
         "Name": "sight_front_aps_molot_aps_std",
         "ModType": "sight",
@@ -1313,10 +1314,10 @@
         "Weight": 0.007,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5aba639ed8ce8700182ece67": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5aba639ed8ce8700182ece67",
         "Name": "sight_rear_aps_molot_apb_std",
         "ModType": "sight",
@@ -1327,10 +1328,10 @@
         "Weight": 0.008,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5a7d9122159bd4001438dbf4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a7d9122159bd4001438dbf4",
         "Name": "sight_rear_glock_dead_ringer_snake_eyes_glock_sights",
         "ModType": "sight",
@@ -1341,10 +1342,10 @@
         "Weight": 0.008,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "5a7d912f159bd400165484f3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a7d912f159bd400165484f3",
         "Name": "sight_rear_glock_truglo_tfx_glock_sight",
         "ModType": "sight",
@@ -1355,10 +1356,10 @@
         "Weight": 0.008,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "5a71e0fb8dc32e00094b97f2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a71e0fb8dc32e00094b97f2",
         "Name": "sight_rear_glock_zev_tech",
         "ModType": "sight",
@@ -1369,10 +1370,10 @@
         "Weight": 0.008,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "5a6f5d528dc32e00094b97d9": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a6f5d528dc32e00094b97d9",
         "Name": "sight_rear_glock_glock_std",
         "ModType": "sight",
@@ -1383,10 +1384,10 @@
         "Weight": 0.008,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5a7d90eb159bd400165484f1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a7d90eb159bd400165484f1",
         "Name": "sight_front_glock_dead_ringer_snake_eyes_glock_sights",
         "ModType": "sight",
@@ -1397,10 +1398,10 @@
         "Weight": 0.007,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "5a6f58f68dc32e000a311390": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a6f58f68dc32e000a311390",
         "Name": "sight_front_glock_glock_std",
         "ModType": "sight",
@@ -1411,10 +1412,10 @@
         "Weight": 0.007,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5a7d9104159bd400134c8c21": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a7d9104159bd400134c8c21",
         "Name": "sight_front_glock_truglo_tfx_glock_sight",
         "ModType": "sight",
@@ -1425,10 +1426,10 @@
         "Weight": 0.007,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "5a71e0048dc32e000c52ecc8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a71e0048dc32e000c52ecc8",
         "Name": "sight_front_glock_zev_tech",
         "ModType": "sight",
@@ -1439,10 +1440,10 @@
         "Weight": 0.007,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "5e81ee213397a21db957f6a6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5e81ee213397a21db957f6a6",
         "Name": "sight_front_m1911_colt_m1911a1_std",
         "ModType": "sight",
@@ -1453,10 +1454,10 @@
         "Weight": 0.003,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5f3e78a7fbf956000b716b8e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5f3e78a7fbf956000b716b8e",
         "Name": "sight_front_m1911_novak_lomount_front_sight",
         "ModType": "sight",
@@ -1467,10 +1468,10 @@
         "Weight": 0.002,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5e81ee4dcb2b95385c177582": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5e81ee4dcb2b95385c177582",
         "Name": "sight_rear_m1911_colt_m1911a1_std",
         "ModType": "sight",
@@ -1481,10 +1482,10 @@
         "Weight": 0.004,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5f3e7897ddc4f03b010e204a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5f3e7897ddc4f03b010e204a",
         "Name": "sight_rear_m1911_novak_lomount_rear_sight",
         "ModType": "sight",
@@ -1495,10 +1496,10 @@
         "Weight": 0.003,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5d3eb536a4b9363b1f22f8e2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d3eb536a4b9363b1f22f8e2",
         "Name": "sight_front_57_fn_five_seven_std",
         "ModType": "sight",
@@ -1509,10 +1510,10 @@
         "Weight": 0.007,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5d3eb4aba4b93650d64e497d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d3eb4aba4b93650d64e497d",
         "Name": "sight_rear_57_fn_five_seven_std",
         "ModType": "sight",
@@ -1523,10 +1524,10 @@
         "Weight": 0.007,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "60228a850ddce744014caf69": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "60228a850ddce744014caf69",
         "Name": "sight_front_pl15_izhmash_pl15_supressor_sight",
         "ModType": "sight",
@@ -1537,10 +1538,10 @@
         "Weight": 0.007,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "60228a76d62c9b14ed777a66": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "60228a76d62c9b14ed777a66",
         "Name": "sight_front_pl15_izhmash_pl15_std",
         "ModType": "sight",
@@ -1551,10 +1552,10 @@
         "Weight": 0.007,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "60229948cacb6b0506369e27": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "60229948cacb6b0506369e27",
         "Name": "sight_rear_pl15_izhmash_pl15_std",
         "ModType": "sight",
@@ -1567,10 +1568,10 @@
         "Weight": 0.007,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "602293f023506e50807090cb": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "602293f023506e50807090cb",
         "Name": "sight_rear_pl15_izhmash_pl15_supressor_sight",
         "ModType": "sight",
@@ -1583,10 +1584,10 @@
         "Weight": 0.007,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "5c07b3850db834002330045b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c07b3850db834002330045b",
         "Name": "sight_rear_p226_meprolight_tru_dot_night_sight",
         "ModType": "sight",
@@ -1597,10 +1598,10 @@
         "Weight": 0.08,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "56ea7293d2720b8d4b8b45ba": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "56ea7293d2720b8d4b8b45ba",
         "Name": "sight_rear_p226_sight_mount_220-239",
         "ModType": "sight",
@@ -1611,10 +1612,10 @@
         "Weight": 0.028,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "56d5a77ed2720b90418b4568": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "56d5a77ed2720b90418b4568",
         "Name": "sight_rear_p226_sig_p226r_std",
         "ModType": "sight",
@@ -1625,10 +1626,10 @@
         "Weight": 0.008,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5c07b36c0db834002a1259e9": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c07b36c0db834002a1259e9",
         "Name": "sight_front_p226_meprolight_tru_dot_night_sight",
         "ModType": "sight",
@@ -1639,10 +1640,10 @@
         "Weight": 0.07,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "56d5a661d2720bd8418b456b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "56d5a661d2720bd8418b456b",
         "Name": "sight_front_p226_sig_p226r_std",
         "ModType": "sight",
@@ -1653,10 +1654,10 @@
         "Weight": 0.007,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "619f4d304c58466fe1228437": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "619f4d304c58466fe1228437",
         "Name": "sight_front_rhino_chiappa_std",
         "ModType": "sight",
@@ -1667,10 +1668,10 @@
         "Weight": 0.003,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "619f4f8c4c58466fe1228439": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "619f4f8c4c58466fe1228439",
         "Name": "sight_rear_rhino_chiappa_night_sight",
         "ModType": "sight",
@@ -1681,10 +1682,10 @@
         "Weight": 0.004,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "619f52454c58466fe122843b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "619f52454c58466fe122843b",
         "Name": "sight_front_rhino_chiappa_night_sight",
         "ModType": "sight",
@@ -1695,10 +1696,10 @@
         "Weight": 0.003,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "619f4cee4c58466fe1228435": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "619f4cee4c58466fe1228435",
         "Name": "sight_rear_rhino_chiappa_std",
         "ModType": "sight",
@@ -1709,10 +1710,10 @@
         "Weight": 0.004,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "630765cb962d0247b029dc45": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "630765cb962d0247b029dc45",
         "Name": "sight_rear_glock_glock_19x",
         "ModType": "sight",
@@ -1721,10 +1722,10 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.008,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "630765777d50ff5e8a1ea718": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "630765777d50ff5e8a1ea718",
         "Name": "sight_front_glock_glock_19x",
         "ModType": "sight",
@@ -1733,10 +1734,10 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.007,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "63c6adcfb4ba094317063742": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "63c6adcfb4ba094317063742",
         "Name": "sight_rear_pm_izhmeh_pm_std",
         "ModType": "sight",
@@ -1746,9 +1747,11 @@
             "60228a850ddce744014caf69"
         ],
         "Ergonomics": 0,
-        "Weight": 0.002
+        "Weight": 0.002,
+        "LoyaltyLevel": 1
     },
     "6513f153e63f29908d0ffaba": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6513f153e63f29908d0ffaba",
         "Name": "sight_rear_rpd_zid_rpd_std",
         "ModType": "sight",
@@ -1756,6 +1759,7 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Ergonomics": 0,
-        "Weight": 0.025
+        "Weight": 0.025,
+        "LoyaltyLevel": 1
     }
 }

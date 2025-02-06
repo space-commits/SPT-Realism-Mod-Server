@@ -1,5 +1,5 @@
 import { IPmcData } from "@spt/models/eft/common/IPmcData";
-import { Item } from "@spt/models/eft/common/tables/IItem";
+import { IItem } from "@spt/models/eft/common/tables/IItem";
 import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
 import { JsonUtil } from "@spt/utils/JsonUtil";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
@@ -262,7 +262,7 @@ export class Player {
 
 
         if (this.modConfig.med_changes == true) {
-            this.globalDB().Health.Effects.Existence.EnergyDamage = 1;
+            this.globalDB().Health.Effects.Existence.EnergyDamage = 1.12;
             this.globalDB().Health.Effects.Exhaustion.Damage = 0.25;
             this.globalDB().Health.Effects.Exhaustion.DefaultDelay = 60;
 
@@ -275,8 +275,8 @@ export class Player {
 
         if (this.modConfig.realistic_ballistics == true) {
 
-            this.globalDB().LegsOverdamage = 3; // 2
-            this.globalDB().HandsOverdamage = 2.4; //0.56
+            this.globalDB().LegsOverdamage = 2.9; // 2
+            this.globalDB().HandsOverdamage = 2; //0.56
             this.globalDB().StomachOverdamage = 3.4; //2.8
         }
 
@@ -336,7 +336,7 @@ export class Player {
         }
     }
 
-    private setArmorDuabaility(invItem: Item) {
+    private setArmorDuabaility(invItem: IItem) {
         for (let i in this.tables.templates.items) {
             let serverItem = this.tables.templates.items[i];
             if (invItem._tpl === this.tables.templates.items[i]._id

@@ -1,5 +1,6 @@
 {
     "66a0da76b6f47fcfeb025e96": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "66a0da76b6f47fcfeb025e96",
         "Name": "pistolgrip_deagle_hogue_rubber_grips_ergo",
         "ModType": "",
@@ -11,9 +12,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.12,
-        "Handling": 15
+        "Handling": 15,
+        "LoyaltyLevel": 3
     },
     "668fe5d42a0f85eea407cc16": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "668fe5d42a0f85eea407cc16",
         "Name": "pistolgrip_deagle_hogue_rubber_grips",
         "ModType": "",
@@ -25,9 +28,11 @@
         "Accuracy": 5,
         "ConflictingItems": [],
         "Weight": 0.11,
-        "AimStability": 15
+        "AimStability": 15,
+        "LoyaltyLevel": 3
     },
     "619f4ab2d25cbd424731fb95": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "619f4ab2d25cbd424731fb95",
         "Name": "pistolgrip_rhino_chiappa_std",
         "ModType": "",
@@ -39,11 +44,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.09,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "AimStability": 10
     },
     "619f4bffd25cbd424731fb97": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "619f4bffd25cbd424731fb97",
         "Name": "pistolgrip_rhino_chiappa_wood",
         "ModType": "",
@@ -55,10 +60,10 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.1,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5cadc431ae921500113bb8d5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cadc431ae921500113bb8d5",
         "Name": "pistolgrip_m9_beretta_m9a3_std",
         "ModType": "",
@@ -70,10 +75,10 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.09,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "648afce7ec6bb25b2608defb": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "648afce7ec6bb25b2608defb",
         "Name": "pistolgrip_pm_fab_defence_pm_g_od",
         "ModType": "",
@@ -85,11 +90,28 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.072,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "AimStability": 15
     },
+    "661f8995c341ea101e0d33e8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
+        "ItemID": "661f8995c341ea101e0d33e8",
+        "Name": "pistolgrip_pm_pm_laser_grip",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": -10,
+        "Dispersion": -5,
+        "AimSpeed": 4,
+        "Ergonomics": 7,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Weight": 0.09,
+        "AimStability": 5,
+        "Handling": 3,
+        "LoyaltyLevel": 1
+    },
     "637784c5f7b3f4ac1a0d1a9a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "637784c5f7b3f4ac1a0d1a9a",
         "Name": "pistolgrip_pm_fab_defence_pm_g",
         "ModType": "",
@@ -101,11 +123,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.072,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "AimStability": 15
     },
     "637b6d610aef6cfc5e02dd14": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "637b6d610aef6cfc5e02dd14",
         "Name": "pistolgrip_pm_gct_pm_tactic_kit",
         "ModType": "",
@@ -117,11 +139,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.114,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "Handling": 15
     },
     "6374a7e7417239a7bf00f042": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6374a7e7417239a7bf00f042",
         "Name": "pistolgrip_pm_izhmeh_pm_std",
         "ModType": "",
@@ -133,10 +155,10 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.102,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "56e05a6ed2720bd0748b4567": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "56e05a6ed2720bd0748b4567",
         "Name": "pistolgrip_pb_tochmash_pb_std",
         "ModType": "",
@@ -148,10 +170,10 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.102,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5a17fc70fcdbcb0176308b3d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a17fc70fcdbcb0176308b3d",
         "Name": "pistolgrip_aps_molot_aps_apb_std",
         "ModType": "",
@@ -163,10 +185,10 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.102,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "576a63cd2459771e796e0e11": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "576a63cd2459771e796e0e11",
         "Name": "pistolgrip_mp443_izmeh_mp443_std",
         "ModType": "",
@@ -178,10 +200,10 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.055,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "571a282c2459771fb2755a69": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "571a282c2459771fb2755a69",
         "Name": "pistolgrip_tt_toz_tt_std",
         "ModType": "",
@@ -193,11 +215,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 10
     },
     "5b3cadf35acfc400194776a0": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b3cadf35acfc400194776a0",
         "Name": "pistolgrip_tt_toz_tt_gold",
         "ModType": "",
@@ -209,10 +231,10 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 4
     },
     "5bffcf7a0db83400232fea79": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bffcf7a0db83400232fea79",
         "Name": "pistolgrip_tt_pm_laser_tt_206",
         "ModType": "",
@@ -224,10 +246,10 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.09,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5c0684e50db834002a12585a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c0684e50db834002a12585a",
         "Name": "pistolgrip_tt_noname_hogue_like",
         "ModType": "",
@@ -239,12 +261,12 @@
         "Accuracy": 10,
         "ConflictingItems": [],
         "Weight": 0.07,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "Handling": 15,
         "AimStability": -15
     },
     "5c079ec50db834001966a706": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c079ec50db834001966a706",
         "Name": "pistolgrip_tt_razor_arms_rubber_grip",
         "ModType": "",
@@ -256,12 +278,12 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.06,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "AimStability": 15,
         "Handling": -15
     },
     "5a7b4960e899ef197b331a2d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a7b4960e899ef197b331a2d",
         "Name": "pistolgrip_glock_pachmayr_tactical_rubber_grip",
         "ModType": "",
@@ -273,12 +295,12 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "AimStability": -12,
         "Handling": 5
     },
     "56d5a2bbd2720bb8418b456a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "56d5a2bbd2720bb8418b456a",
         "Name": "pistolgrip_p226_sig_p226_std",
         "ModType": "",
@@ -290,11 +312,11 @@
         "Accuracy": 5,
         "ConflictingItems": [],
         "Weight": 0.09,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 10
     },
     "57c9a89124597704ee6faec1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57c9a89124597704ee6faec1",
         "Name": "pistolgrip_p226_sig_p226_std_fde",
         "ModType": "",
@@ -306,11 +328,11 @@
         "Accuracy": 5,
         "ConflictingItems": [],
         "Weight": 0.09,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 10
     },
     "5c00076d0db834001d23ee1f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c00076d0db834001d23ee1f",
         "Name": "pistolgrip_p226_sig_stainless_elite",
         "ModType": "",
@@ -322,11 +344,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 4,
         "AimStability": -10
     },
     "5b39ffbd5acfc47a8773fb06": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b39ffbd5acfc47a8773fb06",
         "Name": "pistolgrip_p226_hogue_p226_rubber_w_grooves",
         "ModType": "",
@@ -338,12 +360,12 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "Handling": 15,
         "AimStability": -10
     },
     "5c0006470db834001a6697fe": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c0006470db834001a6697fe",
         "Name": "pistolgrip_p226_sig_emperor_scorpion",
         "ModType": "",
@@ -355,12 +377,12 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.09,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "AimStability": 10,
         "Handling": 5
     },
     "5bffec120db834001c38f5fa": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bffec120db834001c38f5fa",
         "Name": "pistolgrip_p226_axelson_tactical_mk25",
         "ModType": "",
@@ -372,11 +394,11 @@
         "Accuracy": 10,
         "ConflictingItems": [],
         "Weight": 0.09,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "Handling": 17
     },
     "5bffef760db8340019668fe4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bffef760db8340019668fe4",
         "Name": "pistolgrip_p226_hogue_chain_link_g10_g_mascus",
         "ModType": "",
@@ -388,12 +410,12 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.09,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 4,
         "AimStability": 5,
         "Handling": 10
     },
     "5e81c6bf763d9f754677beff": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5e81c6bf763d9f754677beff",
         "Name": "pistolgrip_m1911_colt_m1911a1_std",
         "ModType": "",
@@ -405,11 +427,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.27,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 5
     },
     "626a9cb151cb5849f6002890": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "626a9cb151cb5849f6002890",
         "Name": "pistolgrip_m1911_kiba_geneburn_custom_pad",
         "ModType": "",
@@ -421,10 +443,10 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.12,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "5f3e778efcd9b651187d7201": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5f3e778efcd9b651187d7201",
         "Name": "pistolgrip_m1911_colt_m45a1_std",
         "ModType": "",
@@ -436,11 +458,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.22,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "Handling": 12
     },
     "5ef366938cef260c0642acad": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ef366938cef260c0642acad",
         "Name": "pistolgrip_m1911_pachmayr_american_legend_grip_423",
         "ModType": "",
@@ -452,11 +474,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.2,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "AimStability": 20
     },
     "63f4da90f31d4a33b87bd054": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "63f4da90f31d4a33b87bd054",
         "Name": "pistolgrip_ak_mft_engage_ak47_pistol_grip",
         "ModType": "",
@@ -468,11 +490,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.12,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 4,
         "Handling": 6
     },
     "5f6341043ada5942720e2dc5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5f6341043ada5942720e2dc5",
         "Name": "pistolgrip_ak_aeroknox_scorpius",
         "ModType": "",
@@ -484,10 +506,10 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.14,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "6087e663132d4d12c81fd96b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6087e663132d4d12c81fd96b",
         "Name": "pistolgrip_ak_custom_arms_ags74_pro_stage_2",
         "ModType": "",
@@ -499,11 +521,11 @@
         "Accuracy": 5,
         "ConflictingItems": [],
         "Weight": 0.15,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 4,
         "AimStability": 15
     },
     "623c3be0484b5003161840dc": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "623c3be0484b5003161840dc",
         "Name": "pistolgrip_ak_fab_defence_agr_47",
         "ModType": "",
@@ -515,11 +537,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.12,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "Handling": 4.5
     },
     "5beec8ea0db834001a6f9dbf": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5beec8ea0db834001a6f9dbf",
         "Name": "pistolgrip_ak_izhmash_ak12_std",
         "ModType": "",
@@ -531,11 +553,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.05,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 3
     },
     "646371779f5f0ea59a04c204": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "646371779f5f0ea59a04c204",
         "Name": "pistolgrip_pkm_zid_pk_std",
         "ModType": "",
@@ -547,10 +569,10 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.09,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "64cbad529f7cf7f75c077fd5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "64cbad529f7cf7f75c077fd5",
         "Name": "pistolgrip_pkm_zid_pk_black",
         "ModType": "",
@@ -562,10 +584,10 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.09,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5649ad3f4bdc2df8348b4585": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5649ad3f4bdc2df8348b4585",
         "Name": "pistolgrip_ak_izhmash_ak74_bakelit",
         "ModType": "",
@@ -577,11 +599,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 1
     },
     "5649ade84bdc2d1b2b8b4587": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5649ade84bdc2d1b2b8b4587",
         "Name": "pistolgrip_ak_izhmash_ak74_plastic",
         "ModType": "",
@@ -593,11 +615,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.065,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 1
     },
     "59e62cc886f77440d40b52a1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59e62cc886f77440d40b52a1",
         "Name": "pistolgrip_ak_izhmash_akm_bakelit",
         "ModType": "",
@@ -609,11 +631,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 1
     },
     "5a0071d486f77404e23a12b2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a0071d486f77404e23a12b2",
         "Name": "pistolgrip_ak_izhmash_akm_wood",
         "ModType": "",
@@ -625,10 +647,10 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "57e3dba62459770f0c32322b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57e3dba62459770f0c32322b",
         "Name": "pistolgrip_ak_izhmash_aks74u_std",
         "ModType": "",
@@ -640,11 +662,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 1
     },
     "5cf54404d7f00c108840b2ef": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cf54404d7f00c108840b2ef",
         "Name": "pistolgrip_ak_kgb_mg47",
         "ModType": "",
@@ -656,10 +678,10 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.153,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "5e2192a498a36665e8337386": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5e2192a498a36665e8337386",
         "Name": "pistolgrip_ak_kgb_mg47_red",
         "ModType": "",
@@ -671,10 +693,10 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.153,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 5
     },
     "5b30ac585acfc433000eb79c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b30ac585acfc433000eb79c",
         "Name": "pistolgrip_ak_magpul_moe_ak",
         "ModType": "",
@@ -686,11 +708,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 5,
         "AimStability": 3
     },
     "59e6318286f77444dd62c4cc": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59e6318286f77444dd62c4cc",
         "Name": "pistolgrip_ak_molot_bakelit",
         "ModType": "",
@@ -702,11 +724,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 1
     },
     "5cf50850d7f00c056e24104c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cf50850d7f00c056e24104c",
         "Name": "pistolgrip_ak_strike_indsustries_enhanced_pistol_grip",
         "ModType": "",
@@ -718,11 +740,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.091,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "Handling": 4
     },
     "5cf508bfd7f00c056e24104e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cf508bfd7f00c056e24104e",
         "Name": "pistolgrip_ak_strike_indsustries_enhanced_pistol_grip_fde",
         "ModType": "",
@@ -734,11 +756,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.091,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "Handling": 4
     },
     "628a664bccaab13006640e47": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "628a664bccaab13006640e47",
         "Name": "pistolgrip_ak_tango_down_ak_battle_grip",
         "ModType": "",
@@ -750,11 +772,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.11,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 4,
         "Handling": 3
     },
     "628c9ab845c59e5b80768a81": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "628c9ab845c59e5b80768a81",
         "Name": "pistolgrip_ak_tango_down_ak_battle_grip_fde",
         "ModType": "",
@@ -766,11 +788,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.11,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 4,
         "Handling": 3
     },
     "5947f92f86f77427344a76b1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5947f92f86f77427344a76b1",
         "Name": "pistolgrip_ak_tapco_saw_blk",
         "ModType": "",
@@ -782,11 +804,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.13,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "Handling": 6
     },
     "5947fa2486f77425b47c1a9b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5947fa2486f77425b47c1a9b",
         "Name": "pistolgrip_ak_tapco_saw_fde",
         "ModType": "",
@@ -798,11 +820,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.13,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "Handling": 6
     },
     "5c6bf4aa2e2216001219b0ae": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c6bf4aa2e2216001219b0ae",
         "Name": "pistolgrip_ak_us_palm_ak_palm",
         "ModType": "",
@@ -814,11 +836,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.09,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 4,
         "Handling": 3
     },
     "5649ae4a4bdc2d1b2b8b4588": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5649ae4a4bdc2d1b2b8b4588",
         "Name": "pistolgrip_ak_zenit_rk3",
         "ModType": "",
@@ -830,11 +852,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.19,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 5,
         "AimStability": 3
     },
     "5998517986f7746017232f7e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5998517986f7746017232f7e",
         "Name": "pistolgrip_pp-19-01_izhmash_vityaz_plastic",
         "ModType": "",
@@ -847,10 +869,10 @@
         "ConflictingItems": [],
         "Weight": 0.07,
         "LoyaltyLevel": 0,
-        "Price": 0,
         "AimStability": 2
     },
     "63f5feead259b42f0b4d6d0f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "63f5feead259b42f0b4d6d0f",
         "Name": "pistolgrip_ar15_aeroknox_orion_grip",
         "ModType": "",
@@ -862,11 +884,11 @@
         "Accuracy": 3.5,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "AimStability": 7.5
     },
     "59db3b0886f77429d72fb895": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59db3b0886f77429d72fb895",
         "Name": "pistolgrip_ar15_stark_ar_rifle_grip_fde",
         "ModType": "",
@@ -878,11 +900,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.09,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 5
     },
     "59db3acc86f7742a2c4ab912": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59db3acc86f7742a2c4ab912",
         "Name": "pistolgrip_ar15_stark_ar_rifle_grip_blk",
         "ModType": "",
@@ -894,11 +916,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.09,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 5
     },
     "55d4b9964bdc2d1d4e8b456e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "55d4b9964bdc2d1d4e8b456e",
         "Name": "pistolgrip_ar15_colt_a2",
         "ModType": "",
@@ -910,10 +932,10 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.045,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "571659bb2459771fb2755a12": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "571659bb2459771fb2755a12",
         "Name": "pistolgrip_ar15_damage_industries_ecs_fde",
         "ModType": "",
@@ -925,10 +947,10 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "602e71bd53a60014f9705bfa": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "602e71bd53a60014f9705bfa",
         "Name": "pistolgrip_ar15_dlg_123",
         "ModType": "",
@@ -936,15 +958,15 @@
         "HorizontalRecoil": 0,
         "Dispersion": 0,
         "AimSpeed": 0,
-        "Ergonomics": 3,
+        "Ergonomics": 3.5,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.1,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": 3
     },
     "6113c3586c780c1e710c90bc": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6113c3586c780c1e710c90bc",
         "Name": "pistolgrip_ar15_f1_firearms_st1_skeletonized",
         "ModType": "",
@@ -956,10 +978,10 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "6113cc78d3a39d50044c065a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6113cc78d3a39d50044c065a",
         "Name": "pistolgrip_ar15_f1_firearms_st2_pc_skeletonized",
         "ModType": "",
@@ -971,10 +993,10 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.087,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "6113cce3d92c473c770200c7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6113cce3d92c473c770200c7",
         "Name": "pistolgrip_ar15_f1_firearms_st2_skeletonized",
         "ModType": "",
@@ -986,10 +1008,10 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.085,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "5cc9bcaed7f00c011c04e179": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cc9bcaed7f00c011c04e179",
         "Name": "pistolgrip_ar15_hera_arms_hg15",
         "ModType": "",
@@ -1001,11 +1023,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "AimStability": 4
     },
     "5bb20e18d4351e00320205d5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bb20e18d4351e00320205d5",
         "Name": "pistolgrip_ar15_hk_battle_grip",
         "ModType": "",
@@ -1013,15 +1035,15 @@
         "HorizontalRecoil": 0,
         "Dispersion": 0,
         "AimSpeed": 0,
-        "Ergonomics": 3,
+        "Ergonomics": 3.5,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": 4
     },
     "55802f5d4bdc2dac148b458f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "55802f5d4bdc2dac148b458f",
         "Name": "pistolgrip_ar15_magpul_moe",
         "ModType": "",
@@ -1033,11 +1055,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.05,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 5,
         "AimStability": 2
     },
     "5d15cf3bd7ad1a67e71518b2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d15cf3bd7ad1a67e71518b2",
         "Name": "pistolgrip_ar15_magpul_moe_fde",
         "ModType": "",
@@ -1049,11 +1071,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.05,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 5,
         "AimStability": 2
     },
     "57af48872459771f0b2ebf11": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57af48872459771f0b2ebf11",
         "Name": "pistolgrip_ar15_hogue_overmolded_fde",
         "ModType": "",
@@ -1065,11 +1087,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "Handling": 6
     },
     "57c55f112459772d28133310": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57c55f112459772d28133310",
         "Name": "pistolgrip_ar15_hogue_overmolded_gg",
         "ModType": "",
@@ -1081,11 +1103,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "Handling": 6
     },
     "615d8faecabb9b7ad90f4d5d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "615d8faecabb9b7ad90f4d5d",
         "Name": "pistolgrip_ar15_tactical_dynamics_hexgrip",
         "ModType": "",
@@ -1097,10 +1119,10 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.064,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "5894a51286f77426d13baf02": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5894a51286f77426d13baf02",
         "Name": "pistolgrip_mpx_sig_mpx_std",
         "ModType": "",
@@ -1112,11 +1134,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": 3
     },
     "5a339805c4a2826c6e06d73d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a339805c4a2826c6e06d73d",
         "Name": "pistolgrip_ar15_magpul_miad_gen_1_fde",
         "ModType": "",
@@ -1128,10 +1150,10 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.05,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 4
     },
     "57c55efc2459772d2c6271e7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57c55efc2459772d2c6271e7",
         "Name": "pistolgrip_ar15_hogue_overmolded_blk",
         "ModType": "",
@@ -1143,11 +1165,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "Handling": 6
     },
     "5bb20e0ed4351e3bac1212dc": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bb20e0ed4351e3bac1212dc",
         "Name": "pistolgrip_ar15_hk_battle_grip_beavertail",
         "ModType": "",
@@ -1159,12 +1181,12 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "AimStability": 3,
         "Handling": 1
     },
     "5d025cc1d7ad1a53845279ef": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d025cc1d7ad1a53845279ef",
         "Name": "pistolgrip_ar15_hk_ergo_psg1_style_grip",
         "ModType": "",
@@ -1176,11 +1198,11 @@
         "Accuracy": 5.5,
         "ConflictingItems": [],
         "Weight": 0.11,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 4,
         "AimStability": 15
     },
     "5c6d7b3d2e221600114c9b7d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c6d7b3d2e221600114c9b7d",
         "Name": "pistolgrip_ar15_hk_grip_v2",
         "ModType": "",
@@ -1192,12 +1214,12 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "Handling": 2,
         "AimStability": 2
     },
     "6193dcd0f8ee7e52e4210a28": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6193dcd0f8ee7e52e4210a28",
         "Name": "pistolgrip_ar15_hk_battle_grip_beavertail_ral",
         "ModType": "",
@@ -1205,16 +1227,16 @@
         "HorizontalRecoil": 0,
         "Dispersion": 0,
         "AimSpeed": 0,
-        "Ergonomics": 4,
+        "Ergonomics": 4.5,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "AimStability": 3,
         "Handling": 1
     },
     "5b07db875acfc40dc528a5f6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b07db875acfc40dc528a5f6",
         "Name": "pistolgrip_ar15_tactical_dynamics_skeletonized_anodized",
         "ModType": "",
@@ -1226,10 +1248,10 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.038,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "57c55f172459772d27602381": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57c55f172459772d27602381",
         "Name": "pistolgrip_ar15_hogue_overmolded_od",
         "ModType": "",
@@ -1241,11 +1263,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 6
     },
     "5fbcbd6c187fea44d52eda14": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fbcbd6c187fea44d52eda14",
         "Name": "pistolgrip_ar15_sig_mcx_std",
         "ModType": "",
@@ -1257,12 +1279,12 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": 2,
         "Handling": 2
     },
     "57c55f092459772d291a8463": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57c55f092459772d291a8463",
         "Name": "pistolgrip_ar15_hogue_overmolded_ge",
         "ModType": "",
@@ -1274,11 +1296,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "Handling": 6
     },
     "59db3a1d86f77429e05b4e92": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59db3a1d86f77429e05b4e92",
         "Name": "pistolgrip_ar15_naroh_arms_gral_s",
         "ModType": "",
@@ -1286,16 +1308,16 @@
         "HorizontalRecoil": 0,
         "Dispersion": 0,
         "AimSpeed": 0,
-        "Ergonomics": 5,
+        "Ergonomics": 5.5,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.092,
-        "LoyaltyLevel": 0,
-        "Price": 0,
-        "AimStability": 1.5,
+        "LoyaltyLevel": 4,
+        "AimStability": 2,
         "Handling": 3
     },
     "5b7d679f5acfc4001a5c4024": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b7d679f5acfc4001a5c4024",
         "Name": "pistolgrip_fal_fab_defense_ag_fal",
         "ModType": "",
@@ -1303,15 +1325,15 @@
         "HorizontalRecoil": 0,
         "Dispersion": 0,
         "AimSpeed": 0,
-        "Ergonomics": 5,
+        "Ergonomics": 6,
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.088,
-        "LoyaltyLevel": 0,
-        "Price": 0,
-        "AimStability": 4
+        "LoyaltyLevel": 4,
+        "AimStability": 5
     },
     "5b7d678a5acfc4001a5c4022": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b7d678a5acfc4001a5c4022",
         "Name": "pistolgrip_sa58_ds_arms_metric_std",
         "ModType": "",
@@ -1323,10 +1345,10 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.11,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5b099b965acfc400186331e6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b099b965acfc400186331e6",
         "Name": "pistolgrip_sa58_ds_arms_saw_style",
         "ModType": "",
@@ -1338,11 +1360,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.13,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "Handling": 6
     },
     "5d023784d7ad1a049d4aa7f2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d023784d7ad1a049d4aa7f2",
         "Name": "pistolgrip_vz58_fab_defence_ag_58",
         "ModType": "",
@@ -1354,11 +1376,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.113,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 4.5
     },
     "5bbde41ed4351e003562b038": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bbde41ed4351e003562b038",
         "Name": "pistolgrip_mosin_tacfire_pgmn",
         "ModType": "",
@@ -1370,11 +1392,11 @@
         "Accuracy": 5,
         "ConflictingItems": [],
         "Weight": 0.16,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 6
     },
     "5cdeac5cd7f00c000f261694": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cdeac5cd7f00c000f261694",
         "Name": "pistolgrip_m700_magpul_pro_700_grip",
         "ModType": "",
@@ -1386,11 +1408,11 @@
         "Accuracy": 5,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": 12
     },
     "5addc7db5acfc4001669f279": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5addc7db5acfc4001669f279",
         "Name": "pistolgrip_m14_sage_ebr_m14alcs_grip",
         "ModType": "",
@@ -1402,12 +1424,12 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": 8,
         "Handling": 4
     },
     "57d152ec245977144076ccdf": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57d152ec245977144076ccdf",
         "Name": "pistolgrip_pp-91_zmz_pp_std_plastic",
         "ModType": "",
@@ -1419,10 +1441,10 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.071,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5c471be12e221602b66cd9ac": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c471be12e221602b66cd9ac",
         "Name": "pistolgrip_svd_s_izhmash_svd_s_std",
         "ModType": "",
@@ -1434,11 +1456,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": 3
     },
     "5afd7e445acfc4001637e35a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5afd7e445acfc4001637e35a",
         "Name": "pistolgrip_sks_tapco_saw_style",
         "ModType": "",
@@ -1450,11 +1472,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.09,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 6
     },
     "57c44fa82459772d2d75e415": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57c44fa82459772d2d75e415",
         "Name": "pistolgrip_val_tochmash_val_std",
         "ModType": "",
@@ -1466,11 +1488,27 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.146,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 3
     },
+    "6565b91666492762f5029c0b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
+        "ItemID": "6565b91666492762f5029c0b",
+        "Name": "pistolgrip_val_tochmash_val_std_blk",
+        "ModType": "",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "Dispersion": 0,
+        "AimSpeed": 0,
+        "Ergonomics": 3,
+        "Accuracy": 0,
+        "ConflictingItems": [],
+        "Weight": 0.146,
+        "Handling": 2,
+        "LoyaltyLevel": 1
+    },
     "5dcbd6dddbd3d91b3e5468de": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5dcbd6dddbd3d91b3e5468de",
         "Name": "pistolgrip_mdr_dt_mdr_std_blk",
         "ModType": "",
@@ -1482,11 +1520,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 2
     },
     "5c48a2c22e221602b313fb6c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c48a2c22e221602b313fb6c",
         "Name": "pistolgrip_mdr_dt_mdr_std",
         "ModType": "",
@@ -1498,11 +1536,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.08,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 2
     },
     "5df38a5fb74cd90030650cb6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5df38a5fb74cd90030650cb6",
         "Name": "pistolgrip_t5000_orsis_t5000_std",
         "ModType": "",
@@ -1514,12 +1552,12 @@
         "Accuracy": 3,
         "ConflictingItems": [],
         "Weight": 0.1,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": 10,
         "Handling": 6
     },
     "5a38eecdc4a282329a73b512": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a38eecdc4a282329a73b512",
         "Name": "pistolgrip_toz-106_toz_000_002",
         "ModType": "",
@@ -1531,11 +1569,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 5
     },
     "5bfe86a20db834001d23e8f7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bfe86a20db834001d23e8f7",
         "Name": "pistolgrip_870_fab_defense_agr_870_grip",
         "ModType": "grip_stock_adapter",
@@ -1547,11 +1585,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.13,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "Handling": 6
     },
     "5a69a2ed8dc32e000d46d1f1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a69a2ed8dc32e000d46d1f1",
         "Name": "pistolgrip_val_rotor_43_tube_adapter",
         "ModType": "grip_stock_adapter",
@@ -1566,11 +1604,11 @@
             "57c450252459772d28133253"
         ],
         "Weight": 0.065,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 4,
         "Handling": 2
     },
     "5e848d99865c0f329958c83b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5e848d99865c0f329958c83b",
         "Name": "pistolgrip_ks23_toz_ks23_plastic",
         "ModType": "grip_stock_adapter",
@@ -1582,11 +1620,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.15,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 4
     },
     "6259c3d8012d6678ec38eeb8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6259c3d8012d6678ec38eeb8",
         "Name": "pistolgrip_m3_benelli_telescopic_stock_handle",
         "ModType": "",
@@ -1598,11 +1636,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.135,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 6
     },
     "606eef46232e5a31c233d500": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "606eef46232e5a31c233d500",
         "Name": "pistolgrip_mp155_kalshnikov_ultima_pistol_grip",
         "ModType": "",
@@ -1617,11 +1655,11 @@
             "607d5aa50494a626335e12ed"
         ],
         "Weight": 0.13,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "Handling": 2
     },
     "633ec8e4025b096d320a3b1e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "633ec8e4025b096d320a3b1e",
         "Name": "pistolgrip_rsh12_kbp_rsh12_std",
         "ModType": "",
@@ -1633,11 +1671,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.11,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 6
     },
     "637b9c37b7e3bc41b21ce71a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "637b9c37b7e3bc41b21ce71a",
         "Name": "pistolgrip_sr2m_tochmash_std",
         "ModType": "",
@@ -1649,10 +1687,10 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "637ba29bf7ca6372bf2613db": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "637ba29bf7ca6372bf2613db",
         "Name": "pistolgrip_sr2m_tochmash_std_blk",
         "ModType": "",
@@ -1664,10 +1702,10 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.07,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "6450f21a3d52156624001fcf": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6450f21a3d52156624001fcf",
         "Name": "pistolgrip_9a91_kbp_9a91_std",
         "ModType": "",
@@ -1678,9 +1716,11 @@
         "Ergonomics": 4,
         "Accuracy": 0,
         "ConflictingItems": [],
-        "Weight": 0.146
+        "Weight": 0.146,
+        "LoyaltyLevel": 1
     },
     "648ae3e356c6310a830fc291": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "648ae3e356c6310a830fc291",
         "Name": "pistolgrip_ak_custom_guns_ak_to_ar15_cg101_adapter",
         "ModType": "",
@@ -1691,9 +1731,11 @@
         "Ergonomics": 0,
         "Accuracy": 1.5,
         "ConflictingItems": [],
-        "Weight": 0.045
+        "Weight": 0.045,
+        "LoyaltyLevel": 2
     },
     "6513f13a8cb24472490ee32f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6513f13a8cb24472490ee32f",
         "Name": "pistolgrip_rpd_zid_wood_std",
         "ModType": "",
@@ -1704,9 +1746,11 @@
         "Ergonomics": 2,
         "Accuracy": 0,
         "ConflictingItems": [],
-        "Weight": 0.06
+        "Weight": 0.06,
+        "LoyaltyLevel": 1
     },
     "651580dc71a4f10aec4b6056": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "651580dc71a4f10aec4b6056",
         "Name": "pistolgrip_ak_pufgun_sg_m2",
         "ModType": "",
@@ -1718,9 +1762,11 @@
         "Accuracy": 0,
         "ConflictingItems": [],
         "Weight": 0.132,
-        "Handling": 5
+        "Handling": 5,
+        "LoyaltyLevel": 3
     },
     "6516b129609aaf354b34b3a8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6516b129609aaf354b34b3a8",
         "Name": "pistolgrip_svd_s_lynxarms_svd_s_to_ak_adapter",
         "ModType": "",
@@ -1731,9 +1777,11 @@
         "Ergonomics": 0,
         "Accuracy": 2,
         "ConflictingItems": [],
-        "Weight": 0.033
+        "Weight": 0.033,
+        "LoyaltyLevel": 2
     },
     "652911675ae2ae97b80fdf3c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "652911675ae2ae97b80fdf3c",
         "Name": "pistolgrip_ar15_sig_reduced_angle_pistol_grip_ct",
         "ModType": "",
@@ -1746,9 +1794,11 @@
         "ConflictingItems": [],
         "Weight": 0.08,
         "Handling": 2,
-        "AimStability": 3
+        "AimStability": 3.5,
+        "LoyaltyLevel": 4
     },
     "669946c157df3e2b4e0a0dc5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "669946c157df3e2b4e0a0dc5",
         "Name": "pistolgrip_uzi_iwi_uzi_cover_std",
         "ModType": "",
@@ -1759,9 +1809,11 @@
         "Ergonomics": 2,
         "Accuracy": 0,
         "ConflictingItems": [],
-        "Weight": 0.07
+        "Weight": 0.07,
+        "LoyaltyLevel": 1
     },
     "6601257f1347bc1a5f0f4db6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6601257f1347bc1a5f0f4db6",
         "Name": "pistolgrip_m60_usord_m60e4_trigger_group",
         "ModType": "",
@@ -1772,9 +1824,11 @@
         "Ergonomics": 0,
         "Accuracy": 0,
         "ConflictingItems": [],
-        "Weight": 0.101
+        "Weight": 0.101,
+        "LoyaltyLevel": 1
     },
     "6615208aa031cbb5570e346a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6615208aa031cbb5570e346a",
         "Name": "pistolgrip_m60_usord_m60e6_trigger_group",
         "ModType": "",
@@ -1785,9 +1839,11 @@
         "Ergonomics": 0,
         "Accuracy": 5,
         "ConflictingItems": [],
-        "Weight": 0.098
+        "Weight": 0.098,
+        "LoyaltyLevel": 1
     },
     "66152153a031cbb5570e346f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "66152153a031cbb5570e346f",
         "Name": "pistolgrip_m60_usord_m60e6_trigger_group_fde",
         "ModType": "",
@@ -1798,9 +1854,11 @@
         "Ergonomics": 0,
         "Accuracy": 5,
         "ConflictingItems": [],
-        "Weight": 0.098
+        "Weight": 0.098,
+        "LoyaltyLevel": 1
     },
     "660125bf1d087a96c60a54db": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "660125bf1d087a96c60a54db",
         "Name": "pistolgrip_m60_usord_m60e4_std",
         "ModType": "",
@@ -1812,9 +1870,11 @@
         "Accuracy": 0,
         "AimStability": 3,
         "ConflictingItems": [],
-        "Weight": 0.039
+        "Weight": 0.039,
+        "LoyaltyLevel": 2
     },
     "66152060a031cbb5570e3466": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "66152060a031cbb5570e3466",
         "Name": "pistolgrip_m60_usord_m60e6_std",
         "ModType": "",
@@ -1826,9 +1886,11 @@
         "Accuracy": 0,
         "Handling": 4,
         "ConflictingItems": [],
-        "Weight": 0.042
+        "Weight": 0.042,
+        "LoyaltyLevel": 3
     },
     "6615211ca031cbb5570e346d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6615211ca031cbb5570e346d",
         "Name": "pistolgrip_m60_usord_m60e6_std_fde",
         "ModType": "",
@@ -1840,6 +1902,7 @@
         "Accuracy": 0,
         "Handling": 4,
         "ConflictingItems": [],
-        "Weight": 0.042
+        "Weight": 0.042,
+        "LoyaltyLevel": 3
     }
 }

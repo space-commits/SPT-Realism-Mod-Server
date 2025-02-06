@@ -1,5 +1,6 @@
 {
     "661520fb6f8e1a96340afaa6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "661520fb6f8e1a96340afaa6",
         "Name": "stock_m60_usord_m60e6_std_fde",
         "ModType": "Stock",
@@ -18,11 +19,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.239,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "Handling": 10
     },
     "6615202b96461aa8360271eb": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6615202b96461aa8360271eb",
         "Name": "stock_m60_usord_m60e6_std",
         "ModType": "Stock",
@@ -41,11 +42,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.239,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "Handling": 10
     },
     "660126161347bc1a5f0f4dba": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "660126161347bc1a5f0f4dba",
         "Name": "stock_m60_usord_m60e4_std",
         "ModType": "Stock",
@@ -64,10 +65,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.253,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "66881008f23233ee9a0742e7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "66881008f23233ee9a0742e7",
         "Name": "stock_uzi_pro_iwi_pro_backplate",
         "ModType": "Stock",
@@ -86,10 +87,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.041,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "66867310f3734a938b077f79": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "66867310f3734a938b077f79",
         "Name": "stock_uzi_pro_iwi_pro_buttstock",
         "ModType": "Stock",
@@ -108,10 +109,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.454,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "6686717ffb75ee4a5e02eb19": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6686717ffb75ee4a5e02eb19",
         "Name": "stock_uzi_pro_a3_tactical_modular_folding_brace",
         "ModType": "Stock",
@@ -130,11 +131,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.102,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": -11.25
     },
     "668032ba74b8f2050c0b917d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "668032ba74b8f2050c0b917d",
         "Name": "stock_uzi_pro_sb_tactical_stabilizing_brace",
         "ModType": "Stock",
@@ -153,12 +154,12 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.381,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": -15,
         "Handling": -15
     },
     "6698c9e07356874dfe0a0b88": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6698c9e07356874dfe0a0b88",
         "Name": "stock_uzi_iwi_type_7",
         "ModType": "Stock",
@@ -177,11 +178,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.41,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "AimStability": 5
     },
     "6698c9ed36ba38d291017713": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6698c9ed36ba38d291017713",
         "Name": "stock_uzi_iwi_type_3",
         "ModType": "Stock",
@@ -200,11 +201,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.45,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "AimStability": 5
     },
     "6699249f3c4fda6471005cba": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6699249f3c4fda6471005cba",
         "Name": "stock_uzi_iwi_type_5",
         "ModType": "Stock",
@@ -223,10 +224,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.65,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "669924a69950f5f4cd060295": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "669924a69950f5f4cd060295",
         "Name": "stock_uzi_iwi_type_6",
         "ModType": "Stock",
@@ -245,10 +246,10 @@
         "StockAllowADS": true,
         "ConflictingItems": [],
         "Weight": 0.29,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "669cf78806768ff39504fc1c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "669cf78806768ff39504fc1c",
         "Name": "stock_uzi_pro_csm_rear_rail_adapter",
         "ModType": "stock_adapter",
@@ -269,10 +270,10 @@
         "Weight": 0.04,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "668672b8c99550c6fd0f0b29": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "668672b8c99550c6fd0f0b29",
         "Name": "stock_uzi_pro_a3_tactical_rear_stock_adapter",
         "ModType": "stock_adapter",
@@ -293,10 +294,10 @@
         "Weight": 0.03,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "66992f4db9f31ddda10dd1c8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "66992f4db9f31ddda10dd1c8",
         "Name": "stock_uzi_stormwerkz_ris_adapter",
         "ModType": "stock_adapter",
@@ -317,10 +318,10 @@
         "Weight": 0.062,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "6410745d5dd49d77bd078485": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6410745d5dd49d77bd078485",
         "Name": "stock_avt40_toz_wood_std",
         "ModType": "StockN",
@@ -341,10 +342,10 @@
         "Weight": 1.217,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "6492e3a97df7d749100e29ee": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6492e3a97df7d749100e29ee",
         "Name": "stock_pk_zid_plastic_std",
         "ModType": "StockR",
@@ -365,10 +366,10 @@
         "Weight": 0.5,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "646371a9f2404ab67905c8e6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "646371a9f2404ab67905c8e6",
         "Name": "stock_pk_zid_wood_std",
         "ModType": "StockR",
@@ -389,10 +390,10 @@
         "Weight": 0.6,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "6492d7847363b8a52206bc52": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6492d7847363b8a52206bc52",
         "Name": "stock_pk_zenit_pt2_classic",
         "ModType": "StockR",
@@ -413,11 +414,11 @@
         "Weight": 0.643,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 5,
         "Handling": 18
     },
     "62e292e7b6c0ee2f230cee00": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "62e292e7b6c0ee2f230cee00",
         "Name": "stock_sr2m_tochmash_sr2m_stock",
         "ModType": "StockR",
@@ -436,11 +437,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.21,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": -10
     },
     "62e2969582ebf260c20539c2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "62e2969582ebf260c20539c2",
         "Name": "stock_sr2m_tochmash_sr2mp_stock",
         "ModType": "StockR",
@@ -449,7 +450,7 @@
         "Dispersion": 0,
         "CameraRecoil": 0,
         "AimSpeed": 0,
-        "Ergonomics": 2,
+        "Ergonomics": 0,
         "Accuracy": 0,
         "HasShoulderContact": true,
         "BlocksFolding": false,
@@ -459,11 +460,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.204,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": -5
     },
     "5ef1b9f0c64c5d0dfc0571a1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ef1b9f0c64c5d0dfc0571a1",
         "Name": "stock_590_mesa_leo_stock_adapter_gen1",
         "ModType": "buffer_adapter",
@@ -482,10 +483,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.35,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "5ae35b315acfc4001714e8b0": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ae35b315acfc4001714e8b0",
         "Name": "stock_870_mesa_leo_stock_adapter",
         "ModType": "buffer_adapter",
@@ -504,10 +505,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.4,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "5fb655b748c711690e3a8d5a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fb655b748c711690e3a8d5a",
         "Name": "stock_vector_kriss_non_folding_adapter",
         "ModType": "buffer_adapter",
@@ -526,10 +527,10 @@
         "StockAllowADS": true,
         "ConflictingItems": [],
         "Weight": 0.28,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "5cf518cfd7f00c065b422214": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cf518cfd7f00c065b422214",
         "Name": "stock_ak_caa_akts",
         "ModType": "buffer_adapter",
@@ -548,10 +549,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.24,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 4
     },
     "5649b2314bdc2d79388b4576": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5649b2314bdc2d79388b4576",
         "Name": "stock_ak_utg_sfs_adapter",
         "ModType": "buffer_adapter",
@@ -570,10 +571,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.31,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "5cf50fc5d7f00c056c53f83c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cf50fc5d7f00c056c53f83c",
         "Name": "stock_ak_caa_akts_ak74",
         "ModType": "buffer_adapter",
@@ -592,10 +593,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.25,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 4
     },
     "628b9a40717774443b15e9f2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "628b9a40717774443b15e9f2",
         "Name": "stock_ak_sag_ak_stock_tube",
         "ModType": "buffer_adapter",
@@ -614,10 +615,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.175,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 4
     },
     "628a6678ccaab13006640e49": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "628a6678ccaab13006640e49",
         "Name": "stock_ak_rifle_dynamics_ak_to_m4_stock_adapter_gen_2",
         "ModType": "buffer_adapter",
@@ -636,10 +637,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.23,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 5
     },
     "58ac1bf086f77420ed183f9f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "58ac1bf086f77420ed183f9f",
         "Name": "stock_all_sig_folding_knuckle",
         "ModType": "buffer_adapter",
@@ -658,10 +659,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.2,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 4
     },
     "6197b229af1f5202c57a9bea": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6197b229af1f5202c57a9bea",
         "Name": "stock_svd_s_lynxarms_sch_svd_s",
         "ModType": "buffer_adapter",
@@ -680,10 +681,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.127,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 4
     },
     "649ec87d8007560a9001ab36": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "649ec87d8007560a9001ab36",
         "Name": "stock_ak12_izhmash_ak12_stock_tube_std",
         "ModType": "buffer_adapter",
@@ -702,10 +703,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.12,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "5beec8b20db834001961942a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5beec8b20db834001961942a",
         "Name": "stock_rpk16_izhmash_rpk_stock_tube",
         "ModType": "buffer_adapter",
@@ -724,10 +725,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.142,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "5afd7e095acfc40017541f61": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5afd7e095acfc40017541f61",
         "Name": "stock_sks_tapco_intrafuse_buffer_tube",
         "ModType": "",
@@ -746,10 +747,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.19,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "5b099bf25acfc4001637e683": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b099bf25acfc4001637e683",
         "Name": "stock_sa58_ds_arms_para_folding_buffer_tube_adapter",
         "ModType": "buffer_adapter",
@@ -768,10 +769,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.31,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 4
     },
     "59ecc28286f7746d7a68aa8c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59ecc28286f7746d7a68aa8c",
         "Name": "stock_ak_zenit_pt-3_lock",
         "ModType": "stock_adapter",
@@ -790,10 +791,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.31,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "5b222d335acfc4771e1be099": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b222d335acfc4771e1be099",
         "Name": "stock_ak_zenit_pt_1_lock_fixed",
         "ModType": "stock_adapter",
@@ -812,10 +813,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.31,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "5ac78eaf5acfc4001926317a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ac78eaf5acfc4001926317a",
         "Name": "stock_ak_zenit_pt-3m_lock",
         "ModType": "stock_adapter",
@@ -834,10 +835,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.31,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "5d120a28d7ad1a1c8962e295": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d120a28d7ad1a1c8962e295",
         "Name": "stock_ace_double_star_ace_recoil_pad_05",
         "ModType": "Stock",
@@ -856,11 +857,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.22,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 11
     },
     "5bbde409d4351e003562b036": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bbde409d4351e003562b036",
         "Name": "stock_mosin_aim_sports_buttpad_extended",
         "ModType": "Stock",
@@ -879,11 +880,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.2,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 10
     },
     "611a31ce5b7ffe001b4649d1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "611a31ce5b7ffe001b4649d1",
         "Name": "stock_mr43_izhmeh_mr43_buttpad",
         "ModType": "Stock",
@@ -902,11 +903,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.12,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 8
     },
     "5cc700cae4a949035e43ba72": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cc700cae4a949035e43ba72",
         "Name": "stock_p90_fn_p90_butt_pad_std",
         "ModType": "Stock",
@@ -925,10 +926,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.06,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5cc700d4e4a949000f0f0f28": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cc700d4e4a949000f0f0f28",
         "Name": "stock_p90_damage industries_butt_pad",
         "ModType": "Stock",
@@ -947,35 +948,12 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.09,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 4,
         "Handling": 5,
         "AimStability": 5
     },
-    "618167616ef05c2ce828f1a8": {
-        "ItemID": "618167616ef05c2ce828f1a8",
-        "Name": "stock_mk16_fn_scar_stock_butt_pad",
-        "ModType": "Stock",
-        "VerticalRecoil": 0,
-        "HorizontalRecoil": -2,
-        "Dispersion": -2,
-        "CameraRecoil": -4,
-        "AimSpeed": 0,
-        "Ergonomics": 2,
-        "Accuracy": 0,
-        "HasShoulderContact": true,
-        "BlocksFolding": false,
-        "AutoROF": 0,
-        "SemiROF": 0,
-        "ModMalfunctionChance": 0,
-        "StockAllowADS": false,
-        "ConflictingItems": [],
-        "Weight": 0.1,
-        "LoyaltyLevel": 0,
-        "Price": 0,
-        "Handling": 5
-    },
     "5a0c59791526d8dba737bba7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a0c59791526d8dba737bba7",
         "Name": "stock_ak_izhmash_6g15u_butt_pad",
         "ModType": "Stock",
@@ -994,11 +972,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.155,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "AimStability": -9
     },
     "58d2912286f7744e27117493": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "58d2912286f7744e27117493",
         "Name": "stock_ar15_magpul_rubber_butt_pad",
         "ModType": "Stock",
@@ -1017,11 +995,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.055,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "Handling": 3
     },
     "606ef0812535c57a13424d20": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "606ef0812535c57a13424d20",
         "Name": "stock_mp155_kalshnikov_ultima_stock_buttpad_small",
         "ModType": "Stock",
@@ -1040,11 +1018,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.155,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 3
     },
     "606f262c6d0bd7580617bafa": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "606f262c6d0bd7580617bafa",
         "Name": "stock_mp155_kalshnikov_ultima_stock_buttpad_med",
         "ModType": "Stock",
@@ -1063,11 +1041,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.215,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "Handling": 6
     },
     "606f263a8900dc2d9a55b68d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "606f263a8900dc2d9a55b68d",
         "Name": "stock_mp155_kalshnikov_ultima_stock_buttpad_large",
         "ModType": "Stock",
@@ -1086,11 +1064,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.273,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "Handling": -4
     },
     "617153016c780c1e710c9a2f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "617153016c780c1e710c9a2f",
         "Name": "stock_417_hk_g28_buffer_tube",
         "ModType": "buffer",
@@ -1110,10 +1088,10 @@
         "ConflictingItems": [],
         "Weight": 0.114,
         "DurabilityBurnModificator": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5bb20e58d4351e00320205d7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bb20e58d4351e00320205d7",
         "Name": "stock_ar15_hk_enhanced_stock_tube",
         "ModType": "buffer",
@@ -1133,10 +1111,10 @@
         "ConflictingItems": [],
         "Weight": 0.188,
         "DurabilityBurnModificator": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5a33ca0fc4a282000d72292f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a33ca0fc4a282000d72292f",
         "Name": "stock_ar15_colt_stock_tube_A2",
         "ModType": "buffer",
@@ -1144,33 +1122,33 @@
         "HorizontalRecoil": -15,
         "Dispersion": 0,
         "CameraRecoil": -10,
-        "Convergence": -10,
+        "Convergence": -7,
         "AimSpeed": 0,
         "Ergonomics": 0,
         "Accuracy": 0,
         "HasShoulderContact": false,
         "BlocksFolding": false,
         "AutoROF": -5,
-        "SemiROF": -2.5,
+        "SemiROF": -3,
         "ModMalfunctionChance": -30,
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.109,
         "DurabilityBurnModificator": 0.9,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "638de3603a1a4031d8260b8c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "638de3603a1a4031d8260b8c",
         "Name": "stock_ar15_rtm_atp_buffer_tube",
         "ModType": "buffer",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": 5,
+        "HorizontalRecoil": -5,
         "Dispersion": 0,
-        "CameraRecoil": 15,
+        "CameraRecoil": -5,
         "AutoROF": -3,
-        "SemiROF": -5,
-        "Convergence": -10,
+        "SemiROF": -1.5,
+        "Convergence": 3.5,
         "ModMalfunctionChance": -15,
         "AimSpeed": 0,
         "Ergonomics": 0,
@@ -1181,17 +1159,17 @@
         "ConflictingItems": [],
         "Weight": 0.115,
         "DurabilityBurnModificator": 0.95,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "5c793fc42e221600114ca25d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c793fc42e221600114ca25d",
         "Name": "stock_ar15_strike_industries_advanced_receiver_extension_red",
         "ModType": "buffer",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -20,
+        "HorizontalRecoil": -10,
         "Dispersion": -10,
-        "CameraRecoil": -15,
+        "CameraRecoil": 5,
         "AimSpeed": 0,
         "Ergonomics": 0,
         "Accuracy": 0,
@@ -1205,17 +1183,17 @@
         "Weight": 0.11,
         "DurabilityBurnModificator": 1.08,
         "Convergence": 10,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 5
     },
     "5c793fb92e221644f31bfb64": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c793fb92e221644f31bfb64",
         "Name": "stock_ar15_strike_industries_advanced_receiver_extension",
         "ModType": "buffer",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -20,
+        "HorizontalRecoil": -10,
         "Dispersion": -10,
-        "CameraRecoil": -15,
+        "CameraRecoil": 5,
         "AimSpeed": 0,
         "Ergonomics": 0,
         "Accuracy": 0,
@@ -1229,10 +1207,10 @@
         "Weight": 0.11,
         "DurabilityBurnModificator": 1.08,
         "Convergence": 10,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 4
     },
     "606587e18900dc2d9a55b65f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "606587e18900dc2d9a55b65f",
         "Name": "stock_ar15_cmmg_mil_spec_tube",
         "ModType": "buffer",
@@ -1243,6 +1221,7 @@
         "AimSpeed": 0,
         "Ergonomics": 0,
         "Accuracy": 0,
+        "Convergence": 4,
         "HasShoulderContact": false,
         "BlocksFolding": false,
         "AutoROF": 0,
@@ -1251,34 +1230,34 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.136,
-        "DurabilityBurnModificator": 0.98,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "DurabilityBurnModificator": 0.97,
+        "LoyaltyLevel": 2
     },
     "5c0faeddd174af02a962601f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c0faeddd174af02a962601f",
         "Name": "stock_ar15_colt_stock_tube_com",
         "ModType": "buffer",
         "VerticalRecoil": 0,
-        "HorizontalRecoil": -10,
-        "Dispersion": 0,
-        "CameraRecoil": -5,
+        "HorizontalRecoil": 5,
+        "Dispersion": 5,
+        "CameraRecoil": 5,
         "AimSpeed": 0,
         "Ergonomics": 0,
         "Accuracy": 0,
         "HasShoulderContact": false,
         "BlocksFolding": false,
-        "AutoROF": -1.5,
-        "SemiROF": -4,
+        "AutoROF": -5,
+        "SemiROF": -3,
         "ModMalfunctionChance": 20,
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.086,
-        "DurabilityBurnModificator": 0.9,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "DurabilityBurnModificator": 0.85,
+        "LoyaltyLevel": 1
     },
     "5649be884bdc2d79388b4577": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5649be884bdc2d79388b4577",
         "Name": "stock_ar15_colt_stock_tube_std",
         "ModType": "buffer",
@@ -1298,10 +1277,10 @@
         "ConflictingItems": [],
         "Weight": 0.086,
         "DurabilityBurnModificator": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "602e3f1254072b51b239f713": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "602e3f1254072b51b239f713",
         "Name": "stock_ar15_stm_com_spec_std",
         "ModType": "buffer",
@@ -1314,18 +1293,18 @@
         "Accuracy": 0,
         "HasShoulderContact": false,
         "BlocksFolding": false,
-        "AutoROF": -2.5,
-        "SemiROF": -5,
-        "ModMalfunctionChance": -10,
+        "AutoROF": 2.5,
+        "SemiROF": 5,
+        "ModMalfunctionChance": 10,
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.086,
-        "DurabilityBurnModificator": 0.94,
+        "DurabilityBurnModificator": 1.06,
         "Convergence": 5,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5ef1ba28c64c5d0dfc0571a5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ef1ba28c64c5d0dfc0571a5",
         "Name": "stock_ar15_mesa_crosshair_hydraulic_buffer_tube",
         "ModType": "hydraulic_buffer",
@@ -1345,11 +1324,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.3,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "AimStability": -12
     },
     "5bfe89510db834001808a127": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bfe89510db834001808a127",
         "Name": "stock_870_fab_defense_agr_870_stock_tube",
         "ModType": "",
@@ -1368,10 +1347,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.162,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5c0e2ff6d174af02a1659d4a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c0e2ff6d174af02a1659d4a",
         "Name": "stock_ar15_adar_wood_v1",
         "ModType": "Stock",
@@ -1426,10 +1405,10 @@
             "628a85ee6b1d481ff772e9d5"
         ],
         "Weight": 0.695,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5b39f8db5acfc40016387a1b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b39f8db5acfc40016387a1b",
         "Name": "stock_ar15_vltor_emod",
         "ModType": "Stock",
@@ -1448,11 +1427,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.397,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "AimStability": 6
     },
     "5bb20e70d4351e0035629f8f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bb20e70d4351e0035629f8f",
         "Name": "stock_ar15_hk_slim_line",
         "ModType": "Stock",
@@ -1471,11 +1450,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.198,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "Handling": 7
     },
     "5fbbaa86f9986c4cff3fe5f6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fbbaa86f9986c4cff3fe5f6",
         "Name": "stock_ar15_kriss_defiance_ds150",
         "ModType": "Stock",
@@ -1494,11 +1473,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.4,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "Handling": 5
     },
     "5fce16961f152d4312622bc9": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fce16961f152d4312622bc9",
         "Name": "stock_ar15_kriss_defiance_ds150_fde",
         "ModType": "Stock",
@@ -1517,11 +1496,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.4,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "Handling": 5
     },
     "5fc2369685fd526b824a5713": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fc2369685fd526b824a5713",
         "Name": "stock_ar15_b5_precision",
         "ModType": "Stock",
@@ -1540,11 +1519,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.585,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "AimStability": 20
     },
     "61715e7e67085e45ef140b33": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "61715e7e67085e45ef140b33",
         "Name": "stock_417_hk_417_adjustable_buttstock_cheek",
         "ModType": "",
@@ -1563,11 +1542,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.057,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "AimStability": 10
     },
     "617155ee50224f204c1da3cd": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "617155ee50224f204c1da3cd",
         "Name": "stock_417_hk_417_adjustable_buttstock",
         "ModType": "Stock",
@@ -1586,11 +1565,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.283,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "Handling": 4
     },
     "55d4ae6c4bdc2d8b2f8b456e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "55d4ae6c4bdc2d8b2f8b456e",
         "Name": "stock_ar15_high_standart_m4ss",
         "ModType": "Stock",
@@ -1609,10 +1588,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.181,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5a9eb32da2750c00171b3f9c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a9eb32da2750c00171b3f9c",
         "Name": "stock_ar15_fab_defense_gl_shock",
         "ModType": "Stock",
@@ -1631,12 +1610,12 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.308,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "AimStability": 6,
         "Handling": 4
     },
     "5a33e75ac4a2826c6e06d759": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a33e75ac4a2826c6e06d759",
         "Name": "stock_ar15_hera_arms_cqr",
         "ModType": "Stock",
@@ -1691,11 +1670,11 @@
             "627254cc9c563e6e442c398f"
         ],
         "Weight": 0.499,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 4,
         "AimStability": 10
     },
     "5c793fde2e221601da358614": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c793fde2e221601da358614",
         "Name": "stock_ar15_strike_industries_viper_mod_1",
         "ModType": "Stock",
@@ -1714,10 +1693,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.155,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "627254cc9c563e6e442c398f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "627254cc9c563e6e442c398f",
         "Name": "stock_ar15_strike_industries_viper_pdw_stock",
         "ModType": "buffer_stock",
@@ -1737,11 +1716,11 @@
         "ConflictingItems": [],
         "Weight": 0.573,
         "DurabilityBurnModificator": 1.1,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": -12
     },
     "591af10186f774139d495f0e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "591af10186f774139d495f0e",
         "Name": "stock_ar15_troy_m7a1_pdw_fde",
         "ModType": "buffer_stock",
@@ -1761,11 +1740,11 @@
         "ConflictingItems": [],
         "Weight": 0.4,
         "DurabilityBurnModificator": 1.05,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "AimStability": -15
     },
     "591aef7986f774139d495f03": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "591aef7986f774139d495f03",
         "Name": "stock_ar15_troy_m7a1_pdw_blk",
         "ModType": "buffer_stock",
@@ -1785,11 +1764,11 @@
         "ConflictingItems": [],
         "Weight": 0.4,
         "DurabilityBurnModificator": 1.05,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "AimStability": -15
     },
     "5947eab886f77475961d96c5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5947eab886f77475961d96c5",
         "Name": "stock_ar15_magpul_ubr_gen2_fde",
         "ModType": "Stock",
@@ -1808,11 +1787,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.601,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "Handling": 18
     },
     "5947e98b86f774778f1448bc": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5947e98b86f774778f1448bc",
         "Name": "stock_ar15_magpul_ubr_gen2_blk",
         "ModType": "Stock",
@@ -1831,11 +1810,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.601,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "Handling": 18
     },
     "5b0800175acfc400153aebd4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b0800175acfc400153aebd4",
         "Name": "stock_ar15_ergo_f93_pro_stock",
         "ModType": "Stock",
@@ -1854,11 +1833,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.59,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "Handling": 12
     },
     "602e620f9b513876d4338d9a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "602e620f9b513876d4338d9a",
         "Name": "stock_ar15_fab_defense_gl_core",
         "ModType": "Stock",
@@ -1877,11 +1856,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.271,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "AimStability": 8
     },
     "5d44069ca4b9361ebd26fc37": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d44069ca4b9361ebd26fc37",
         "Name": "stock_ar15_magpul_prs_gen3",
         "ModType": "Stock",
@@ -1900,11 +1879,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.788,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 4,
         "AimStability": 30
     },
     "5d4406a8a4b9361e4f6eb8b7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d4406a8a4b9361e4f6eb8b7",
         "Name": "stock_ar15_magpul_prs_gen3_gry",
         "ModType": "Stock",
@@ -1923,11 +1902,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.788,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 4,
         "AimStability": 30
     },
     "5a33cae9c4a28232980eb086": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a33cae9c4a28232980eb086",
         "Name": "stock_ar15_magpul_prs_gen2_fde",
         "ModType": "Stock",
@@ -1946,11 +1925,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.762,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 4,
         "AimStability": 33
     },
     "628a85ee6b1d481ff772e9d5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "628a85ee6b1d481ff772e9d5",
         "Name": "stock_ar15_sb_tactical_sba3",
         "ModType": "Stock",
@@ -1969,12 +1948,12 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.213,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": -15,
         "Handling": -15
     },
     "57ade1442459771557167e15": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57ade1442459771557167e15",
         "Name": "stock_ar15_armacon_baskak",
         "ModType": "Stock",
@@ -1993,11 +1972,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.27,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": -15
     },
     "606587d11246154cad35d635": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "606587d11246154cad35d635",
         "Name": "stock_ar15_cmmg_ripstock_micro",
         "ModType": "Stock",
@@ -2016,10 +1995,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.28,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "5d120a10d7ad1a4e1026ba85": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d120a10d7ad1a4e1026ba85",
         "Name": "stock_ar15_double_star_ace_socom_gen_4",
         "ModType": "Stock",
@@ -2038,11 +2017,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.47,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": -10
     },
     "5beec8c20db834001d2c465c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5beec8c20db834001d2c465c",
         "Name": "stock_ar15_izhmash_ak12_std",
         "ModType": "Stock",
@@ -2061,11 +2040,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.148,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 8
     },
     "58d2947e86f77447aa070d53": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "58d2947e86f77447aa070d53",
         "Name": "stock_ar15_magpul_moe_carbine_sg",
         "ModType": "Stock",
@@ -2084,12 +2063,12 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.226,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "AimStability": 3,
         "Handling": 1
     },
     "58d2947686f774485c6a1ee5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "58d2947686f774485c6a1ee5",
         "Name": "stock_ar15_magpul_moe_carbine_od",
         "ModType": "Stock",
@@ -2108,12 +2087,12 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.226,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "AimStability": 3,
         "Handling": 1
     },
     "58d2946c86f7744e271174b5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "58d2946c86f7744e271174b5",
         "Name": "stock_ar15_magpul_moe_carbine_fg",
         "ModType": "Stock",
@@ -2132,12 +2111,12 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.226,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "AimStability": 3,
         "Handling": 1
     },
     "56eabf3bd2720b75698b4569": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "56eabf3bd2720b75698b4569",
         "Name": "stock_ar15_magpul_moe_carbine_blk",
         "ModType": "Stock",
@@ -2156,12 +2135,12 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.226,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "AimStability": 3,
         "Handling": 1
     },
     "58d2946386f774496974c37e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "58d2946386f774496974c37e",
         "Name": "stock_ar15_magpul_moe_carbine_fde",
         "ModType": "Stock",
@@ -2180,12 +2159,12 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.226,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 4,
         "AimStability": 3,
         "Handling": 1
     },
     "5d135e83d7ad1a21b83f42d8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d135e83d7ad1a21b83f42d8",
         "Name": "stock_ar15_magpul_ctr_carbine",
         "ModType": "Stock",
@@ -2204,12 +2183,12 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.226,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 4,
         "AimStability": 2,
         "Handling": 4
     },
     "5d135ecbd7ad1a21c176542e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d135ecbd7ad1a21c176542e",
         "Name": "stock_ar15_magpul_ctr_carbine_fde",
         "ModType": "Stock",
@@ -2228,12 +2207,12 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.226,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 4,
         "AimStability": 2,
         "Handling": 4
     },
     "5bfe86df0db834001b734685": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bfe86df0db834001b734685",
         "Name": "stock_ar15_fab_defense_glr_16_s",
         "ModType": "Stock",
@@ -2252,11 +2231,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.276,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "Handling": 9
     },
     "5ae30c9a5acfc408fb139a03": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ae30c9a5acfc408fb139a03",
         "Name": "stock_ar15_lmt_sopmod",
         "ModType": "Stock",
@@ -2275,11 +2254,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.148,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "AimStability": 6
     },
     "5c87a07c2e2216001219d4a2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c87a07c2e2216001219d4a2",
         "Name": "stock_ar15_hk_e1",
         "ModType": "Stock",
@@ -2298,12 +2277,12 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.369,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "Handling": 6,
         "AimStability": 6
     },
     "617154aa1cb55961fa0fdb3b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "617154aa1cb55961fa0fdb3b",
         "Name": "stock_417_hk_417_concave_e2",
         "ModType": "Stock",
@@ -2322,12 +2301,12 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.369,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "Handling": 6,
         "AimStability": 6
     },
     "5947c73886f7747701588af5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5947c73886f7747701588af5",
         "Name": "stock_ar15_mft_bus",
         "ModType": "Stock",
@@ -2346,11 +2325,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.481,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "Handling": 11
     },
     "5ac50c185acfc400163398d4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ac50c185acfc400163398d4",
         "Name": "stock_ak74m_izhmash_ak74m_std",
         "ModType": "Stock",
@@ -2369,11 +2348,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.35,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 6
     },
     "5649b0fc4bdc2d17108b4588": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5649b0fc4bdc2d17108b4588",
         "Name": "stock_ak74_izhmash_ak74_std_plastic",
         "ModType": "Stock",
@@ -2392,11 +2371,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.35,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 6
     },
     "59ff3b6a86f77477562ff5ed": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59ff3b6a86f77477562ff5ed",
         "Name": "stock_akms_izhmash_akms_std",
         "ModType": "Stock",
@@ -2405,7 +2384,7 @@
         "Dispersion": 0,
         "CameraRecoil": 10,
         "AimSpeed": 0,
-        "Ergonomics": 0,
+        "Ergonomics": 3,
         "Accuracy": 9,
         "HasShoulderContact": true,
         "BlocksFolding": false,
@@ -2415,11 +2394,11 @@
         "StockAllowADS": true,
         "ConflictingItems": [],
         "Weight": 0.65,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": -10
     },
     "5abcd472d8ce8700166032ae": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5abcd472d8ce8700166032ae",
         "Name": "stock_akms_izhmash_akmsn_std",
         "ModType": "Stock",
@@ -2428,7 +2407,7 @@
         "Dispersion": 0,
         "CameraRecoil": 10,
         "AimSpeed": 0,
-        "Ergonomics": 0,
+        "Ergonomics": 3,
         "Accuracy": 0,
         "HasShoulderContact": true,
         "BlocksFolding": false,
@@ -2438,11 +2417,11 @@
         "StockAllowADS": true,
         "ConflictingItems": [],
         "Weight": 0.645,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": -10
     },
     "57616ca52459773c69055192": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57616ca52459773c69055192",
         "Name": "stock_saiga12_izhmash_saiga12_fold_ak_type",
         "ModType": "Stock",
@@ -2461,11 +2440,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.35,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 5
     },
     "599851db86f77467372f0a18": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "599851db86f77467372f0a18",
         "Name": "stock_pp-19-01_izhmash_vityaz_std",
         "ModType": "Stock",
@@ -2473,8 +2452,8 @@
         "HorizontalRecoil": 0,
         "Dispersion": 0,
         "CameraRecoil": 6,
-        "AimSpeed": 5,
-        "Ergonomics": 0,
+        "AimSpeed": 2,
+        "Ergonomics": 3,
         "Accuracy": 0,
         "HasShoulderContact": true,
         "BlocksFolding": false,
@@ -2484,10 +2463,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.218,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "619b69037b9de8162902673e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "619b69037b9de8162902673e",
         "Name": "stock_ak_hera_arms_cqr47",
         "ModType": "Stock",
@@ -2530,11 +2509,11 @@
             "628a6678ccaab13006640e49"
         ],
         "Weight": 0.525,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 4,
         "AimStability": 10
     },
     "5b222d405acfc400153af4fe": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b222d405acfc400153af4fe",
         "Name": "stock_ak_zenit_pt_1",
         "ModType": "Stock",
@@ -2553,11 +2532,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.449,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 4,
         "Handling": 13
     },
     "59ecc3dd86f7746dc827481c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59ecc3dd86f7746dc827481c",
         "Name": "stock_ak_zenit_pt-3",
         "ModType": "Stock",
@@ -2576,12 +2555,12 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.519,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 4,
         "AimStability": 8,
         "Handling": 4
     },
     "5b04473a5acfc40018632f70": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b04473a5acfc40018632f70",
         "Name": "stock_ak_fab_defense_uas_ak_p",
         "ModType": "Stock",
@@ -2600,11 +2579,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.45,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "Handling": 9
     },
     "5e217ba4c1434648c13568cd": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5e217ba4c1434648c13568cd",
         "Name": "stock_ak_hexagon_kocherga_red",
         "ModType": "Stock",
@@ -2623,11 +2602,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.18,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 5,
         "AimStability": -10
     },
     "5cbdb1b0ae9215000d50e105": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cbdb1b0ae9215000d50e105",
         "Name": "stock_ak74_izhmash_ak74_std_plum",
         "ModType": "Stock",
@@ -2646,11 +2625,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.35,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "Handling": 6
     },
     "66ac9d9740e27931602042d4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "66ac9d9740e27931602042d4",
         "Name": "stock_ak_kiba_framestock_tourniquet",
         "ModType": "Stock",
@@ -2669,11 +2648,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.264,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": 2
     },
     "5ab626e4d8ce87272e4c6e43": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ab626e4d8ce87272e4c6e43",
         "Name": "stock_aks74_izhmash_aks74_std",
         "ModType": "Stock",
@@ -2681,8 +2660,8 @@
         "HorizontalRecoil": 0,
         "Dispersion": 0,
         "CameraRecoil": 6,
-        "AimSpeed": 5,
-        "Ergonomics": 1.5,
+        "AimSpeed": 2,
+        "Ergonomics": 3,
         "Accuracy": 0,
         "HasShoulderContact": true,
         "BlocksFolding": false,
@@ -2692,10 +2671,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.264,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "6386300124a1dc425c00577a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6386300124a1dc425c00577a",
         "Name": "stock_ak_izhmash_ak100_triangle_stock",
         "ModType": "Stock",
@@ -2706,18 +2685,18 @@
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
         "CameraRecoil": 6,
-        "AimSpeed": 5,
-        "Ergonomics": 1.5,
+        "AimSpeed": 2,
+        "Ergonomics": 3,
         "Accuracy": 0,
         "HasShoulderContact": true,
         "BlocksFolding": false,
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.264,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "57dc347d245977596754e7a1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57dc347d245977596754e7a1",
         "Name": "stock_aks74u_izhmash_aks74u_std",
         "ModType": "Stock",
@@ -2725,8 +2704,8 @@
         "HorizontalRecoil": -1,
         "Dispersion": 0,
         "CameraRecoil": 5,
-        "AimSpeed": 4,
-        "Ergonomics": 1.5,
+        "AimSpeed": 2,
+        "Ergonomics": 3,
         "Accuracy": 0,
         "HasShoulderContact": true,
         "BlocksFolding": false,
@@ -2736,10 +2715,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.218,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5649b1c04bdc2d16268b457c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5649b1c04bdc2d16268b457c",
         "Name": "stock_ak74_izhmash_ak74_std_wood",
         "ModType": "Stock",
@@ -2758,11 +2737,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.45,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 5
     },
     "59e6227d86f77440d64f5dc2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59e6227d86f77440d64f5dc2",
         "Name": "stock_ak_molot_vepr_km_vpo_136",
         "ModType": "Stock",
@@ -2781,11 +2760,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.45,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 4
     },
     "59d6514b86f774171a068a08": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59d6514b86f774171a068a08",
         "Name": "stock_ak_izhmash_akm_std_wood",
         "ModType": "Stock",
@@ -2804,11 +2783,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.45,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 5
     },
     "59e89d0986f77427600d226e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59e89d0986f77427600d226e",
         "Name": "stock_ak_molot_vpo_209",
         "ModType": "Stock",
@@ -2827,11 +2806,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.45,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 4
     },
     "5b0e794b5acfc47a877359b2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b0e794b5acfc47a877359b2",
         "Name": "stock_ak_magpul_zhukov_s",
         "ModType": "Stock",
@@ -2850,12 +2829,12 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.425,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 4,
         "AimStability": 10,
         "Handling": 2
     },
     "6087e2a5232e5a31c233d552": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6087e2a5232e5a31c233d552",
         "Name": "stock_ak_promag_archangel_opfor_aa47",
         "ModType": "Stock",
@@ -2874,11 +2853,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.39,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 4,
         "AimStability": 19
     },
     "578395e82459774a0e553c7b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "578395e82459774a0e553c7b",
         "Name": "stock_vss_tochmash_vss_std_wood",
         "ModType": "Stock",
@@ -2897,11 +2876,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.7,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": 23
     },
     "57c450252459772d28133253": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57c450252459772d28133253",
         "Name": "stock_val_tochmash_val_std",
         "ModType": "Stock",
@@ -2920,10 +2899,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.5,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5c471b5d2e221602b21d4e14": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c471b5d2e221602b21d4e14",
         "Name": "stock_svd_s_izhmash_svd_s_std",
         "ModType": "Stock",
@@ -2942,11 +2921,138 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.55,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": 6
     },
+    "66ffbfb1a73a7bce3d0b45a8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
+        "ItemID": "66ffbfb1a73a7bce3d0b45a8",
+        "Name": "stock_mk16_vltor_stock_adapter",
+        "ModType": "stock_adapter",
+        "VerticalRecoil": -10,
+        "HorizontalRecoil": 10,
+        "Dispersion": 0,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "CameraRecoil": 0,
+        "AimSpeed": 0,
+        "Ergonomics": 0,
+        "Accuracy": 0,
+        "HasShoulderContact": true,
+        "BlocksFolding": true,
+        "StockAllowADS": false,
+        "ConflictingItems": [],
+        "Weight": 0.29,
+        "LoyaltyLevel": 4
+    },
+    "66ffc20ba73a7bce3d0b45ab": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
+        "ItemID": "66ffc20ba73a7bce3d0b45ab",
+        "Name": "stock_mk16_vltor_stock_adapter_fde",
+        "ModType": "stock_adapter",
+        "VerticalRecoil": -10,
+        "HorizontalRecoil": 10,
+        "Dispersion": 0,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "CameraRecoil": 0,
+        "AimSpeed": 0,
+        "Ergonomics": 0,
+        "Accuracy": 0,
+        "HasShoulderContact": true,
+        "BlocksFolding": true,
+        "StockAllowADS": false,
+        "ConflictingItems": [],
+        "Weight": 0.29,
+        "LoyaltyLevel": 4
+    },
+    "66ffc246a81a4f85e70d4d06": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
+        "ItemID": "66ffc246a81a4f85e70d4d06",
+        "Name": "stock_mk16_jmac_rsa_1913_adapter",
+        "ModType": "stock_adapter",
+        "VerticalRecoil": -2,
+        "HorizontalRecoil": 2,
+        "Dispersion": 0,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "CameraRecoil": 0,
+        "AimSpeed": 0,
+        "Ergonomics": 0,
+        "Accuracy": 0,
+        "HasShoulderContact": false,
+        "BlocksFolding": true,
+        "StockAllowADS": false,
+        "ConflictingItems": [],
+        "Weight": 0.076,
+        "LoyaltyLevel": 4
+    },
+    "66ffc2bd132225f0fe0611d8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
+        "ItemID": "66ffc2bd132225f0fe0611d8",
+        "Name": "stock_mk16_vltor_vss_11",
+        "ModType": "Stock",
+        "VerticalRecoil": -6,
+        "HorizontalRecoil": -5,
+        "Dispersion": -5,
+        "CameraRecoil": -8,
+        "AimSpeed": 0,
+        "Ergonomics": 12,
+        "HasShoulderContact": true,
+        "BlocksFolding": false,
+        "StockAllowADS": false,
+        "ConflictingItems": [],
+        "Weight": 0.22,
+        "AimStability": 6,
+        "LoyaltyLevel": 2
+    },
+    "66ffc2ecfe9b3825960652f7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
+        "ItemID": "66ffc2ecfe9b3825960652f7",
+        "Name": "stock_mk16_vltor_vss_11_fde",
+        "ModType": "Stock",
+        "VerticalRecoil": -6,
+        "HorizontalRecoil": -5,
+        "Dispersion": -5,
+        "CameraRecoil": -8,
+        "AimSpeed": 0,
+        "Ergonomics": 12,
+        "HasShoulderContact": true,
+        "BlocksFolding": false,
+        "StockAllowADS": false,
+        "ConflictingItems": [],
+        "Weight": 0.22,
+        "AimStability": 6,
+        "LoyaltyLevel": 2
+    },
+    "618167616ef05c2ce828f1a8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
+        "ItemID": "618167616ef05c2ce828f1a8",
+        "Name": "stock_mk16_fn_scar_stock_butt_pad",
+        "ModType": "Stock",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": -2,
+        "Dispersion": -2,
+        "CameraRecoil": -4,
+        "AimSpeed": 0,
+        "Ergonomics": 2,
+        "Accuracy": 0,
+        "HasShoulderContact": true,
+        "BlocksFolding": false,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "StockAllowADS": false,
+        "ConflictingItems": [],
+        "Weight": 0.1,
+        "LoyaltyLevel": 0,
+        "Handling": 5
+    },
     "61825d136ef05c2ce828f1cc": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "61825d136ef05c2ce828f1cc",
         "Name": "stock_mk16_fn_scar_folding_stock_extension_fde",
         "ModType": "Stock",
@@ -2965,10 +3071,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.3,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "618167528004cc50514c34f9": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "618167528004cc50514c34f9",
         "Name": "stock_mk16_fn_scar_folding_stock_extension",
         "ModType": "",
@@ -2987,10 +3093,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.3,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "618167441cb55961fa0fdc71": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "618167441cb55961fa0fdc71",
         "Name": "stock_mk16_fn_scar_folding_stock_cheek",
         "ModType": "",
@@ -3009,11 +3115,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.06,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": 7.5
     },
     "61825d24d3a39d50044c13af": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "61825d24d3a39d50044c13af",
         "Name": "stock_mk16_fn_scar_folding_stock_cheek_fde",
         "ModType": "",
@@ -3032,11 +3138,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.06,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": 7.5
     },
     "61825d06d92c473c770215de": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "61825d06d92c473c770215de",
         "Name": "stock_mk16_fn_scar_folding_stock_fde",
         "ModType": "",
@@ -3055,11 +3161,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.35,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 6
     },
     "61816734d8e3106d9806c1f3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "61816734d8e3106d9806c1f3",
         "Name": "stock_mk16_fn_scar_folding_stock",
         "ModType": "",
@@ -3078,11 +3184,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.35,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 6
     },
     "5b7d63b75acfc400170e2f8a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b7d63b75acfc400170e2f8a",
         "Name": "stock_fal_magpul_prs_2",
         "ModType": "Stock",
@@ -3101,11 +3207,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.86,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 4,
         "AimStability": 30
     },
     "5b7d63cf5acfc4001876c8df": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b7d63cf5acfc4001876c8df",
         "Name": "stock_sa58_ds_arms_para_folding_stock",
         "ModType": "Stock",
@@ -3124,11 +3230,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.8,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": -8
     },
     "5b7d63de5acfc400170e2f8d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b7d63de5acfc400170e2f8d",
         "Name": "stock_sa58_ds_arms_para_spr_stock",
         "ModType": "Stock",
@@ -3147,11 +3253,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.95,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "Handling": 21
     },
     "5b7d64555acfc4001876c8e2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b7d64555acfc4001876c8e2",
         "Name": "stock_sa58_ds_arms_para_brs",
         "ModType": "Stock",
@@ -3170,12 +3276,12 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.81,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 4,
         "AimStability": 15,
         "Handling": 5
     },
     "5b7d645e5acfc400170e2f90": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b7d645e5acfc400170e2f90",
         "Name": "stock_sa58_ds_arms_humpback_stock",
         "ModType": "Stock",
@@ -3194,11 +3300,34 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.8,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 10
     },
+    "6706a159c67236b2f703bb95": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
+        "ItemID": "6706a159c67236b2f703bb95",
+        "Name": "stock_g36_tommy_built_ar15_stock_adapter",
+        "ModType": "stock_adapter",
+        "VerticalRecoil": -15,
+        "HorizontalRecoil": 10,
+        "Dispersion": 5,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "CameraRecoil": 10,
+        "AimSpeed": 0,
+        "Ergonomics": -1.5,
+        "Accuracy": 0,
+        "HasShoulderContact": true,
+        "BlocksFolding": false,
+        "StockAllowADS": false,
+        "ConflictingItems": [],
+        "Weight": 0.14,
+        "AimStability": -5,
+        "LoyaltyLevel": 4
+    },
     "622f14e899892a7f9e08f6c5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "622f14e899892a7f9e08f6c5",
         "Name": "stock_g36_hk_kv_3_adjustable",
         "ModType": "Stock",
@@ -3217,11 +3346,81 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.453,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 4,
         "AimStability": 12
     },
+    "67110d06723c2733410161e8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
+        "ItemID": "67110d06723c2733410161e8",
+        "Name": "stock_g36_hk_idz",
+        "ModType": "Stock",
+        "VerticalRecoil": -10,
+        "HorizontalRecoil": 0,
+        "Dispersion": -5,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "CameraRecoil": 0,
+        "AimSpeed": 0,
+        "Ergonomics": 10,
+        "Accuracy": 6,
+        "HasShoulderContact": true,
+        "BlocksFolding": false,
+        "StockAllowADS": false,
+        "ConflictingItems": [],
+        "Weight": 0.41,
+        "AimStability": 10,
+        "LoyaltyLevel": 3
+    },
+    "67110d5ed1758189fc0bd221": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
+        "ItemID": "67110d5ed1758189fc0bd221",
+        "Name": "stock_g36_hk_idz_convex_buttpad",
+        "ModType": "Stock",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": -5,
+        "Dispersion": 0,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "CameraRecoil": -10,
+        "AimSpeed": 0,
+        "Ergonomics": 1,
+        "Accuracy": 0,
+        "HasShoulderContact": false,
+        "BlocksFolding": false,
+        "StockAllowADS": false,
+        "ConflictingItems": [],
+        "Weight": 0.06,
+        "AimStability": -5,
+        "Handling": 5,
+        "LoyaltyLevel": 3
+    },
+    "67110d6fa71d1f123d021cd3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
+        "ItemID": "67110d6fa71d1f123d021cd3",
+        "Name": "stock_g36_hk_idz_concave_buttpad",
+        "ModType": "Stock",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": -1,
+        "Dispersion": -2,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "CameraRecoil": 0,
+        "AimSpeed": 0,
+        "Ergonomics": 3,
+        "Accuracy": 0,
+        "HasShoulderContact": false,
+        "BlocksFolding": false,
+        "StockAllowADS": false,
+        "ConflictingItems": [],
+        "Weight": 0.06,
+        "AimStability": 4,
+        "LoyaltyLevel": 3
+    },
     "622f140da5958f63c67f1735": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "622f140da5958f63c67f1735",
         "Name": "stock_g36_hk_buttstock_std",
         "ModType": "Stock",
@@ -3240,11 +3439,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.354,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 3
     },
     "5c5db6ee2e221600113fba54": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c5db6ee2e221600113fba54",
         "Name": "stock_mpx_maxim_defence_cqb_stock",
         "ModType": "Stock",
@@ -3263,11 +3462,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.501,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": -5
     },
     "5c5db6f82e2216003a0fe914": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c5db6f82e2216003a0fe914",
         "Name": "stock_mpx_pmm_ulss",
         "ModType": "Stock",
@@ -3286,11 +3485,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.462,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "Handling": 5
     },
     "5894a13e86f7742405482982": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5894a13e86f7742405482982",
         "Name": "stock_all_sig_mpx_mcx_early_type",
         "ModType": "Stock",
@@ -3309,11 +3508,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.396,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "AimStability": -10
     },
     "5fbcc437d724d907e2077d5c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fbcc437d724d907e2077d5c",
         "Name": "stock_all_sig_thin_folding_stock",
         "ModType": "Stock",
@@ -3332,11 +3531,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.27,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "Handling": 8
     },
     "5fbcc429900b1d5091531dd7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fbcc429900b1d5091531dd7",
         "Name": "stock_all_sig_telescoping_stock",
         "ModType": "Stock",
@@ -3355,12 +3554,12 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.336,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 5,
         "Handling": 5,
         "AimStability": 8
     },
     "5c07c9660db834001a66b588": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c07c9660db834001a66b588",
         "Name": "stock_mp5_hk_pistol_end_cap",
         "ModType": "Stock",
@@ -3379,10 +3578,10 @@
         "StockAllowADS": true,
         "ConflictingItems": [],
         "Weight": 0.18,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5d2f25bc48f03502573e5d85": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d2f25bc48f03502573e5d85",
         "Name": "stock_mp5k_hk_kurtz_end_cap",
         "ModType": "Stock",
@@ -3401,10 +3600,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.13,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5926d40686f7740f152b6b7e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5926d40686f7740f152b6b7e",
         "Name": "stock_mp5_hk_a3_std",
         "ModType": "Stock",
@@ -3423,11 +3622,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.653,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": -12
     },
     "5926d3c686f77410de68ebc8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5926d3c686f77410de68ebc8",
         "Name": "stock_mp5_hk_a2_std",
         "ModType": "Stock",
@@ -3446,12 +3645,12 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.454,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 7,
         "AimStability": 5
     },
     "5fc3e4ee7283c4046c5814af": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fc3e4ee7283c4046c5814af",
         "Name": "stock_ump_hk_ump_std",
         "ModType": "Stock",
@@ -3470,11 +3669,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.255,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 5
     },
     "5fb6558ad6f0b2136f2d7eb7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fb6558ad6f0b2136f2d7eb7",
         "Name": "stock_vector_kriss_gen_2_folding_stock",
         "ModType": "Stock",
@@ -3493,11 +3692,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.3,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 6
     },
     "5fb655a72b1b027b1f50bd06": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fb655a72b1b027b1f50bd06",
         "Name": "stock_vector_kriss_pistol_sling_adapter",
         "ModType": "Stock",
@@ -3516,10 +3715,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.25,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5bcf0213d4351e0085327c17": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bcf0213d4351e0085327c17",
         "Name": "stock_mp7_hk_a1_std",
         "ModType": "Stock",
@@ -3538,10 +3737,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.2,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5bd704e7209c4d00d7167c31": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bd704e7209c4d00d7167c31",
         "Name": "stock_mp7_hk_a2_std",
         "ModType": "Stock",
@@ -3560,10 +3759,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.2,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5de910da8b6c4240ba2651b5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5de910da8b6c4240ba2651b5",
         "Name": "stock_mp9_bt_mp9_folding_stock_std",
         "ModType": "Stock",
@@ -3582,11 +3781,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.15,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": -11
     },
     "5a17fb9dfcdbcbcae6687291": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a17fb9dfcdbcbcae6687291",
         "Name": "stock_aps_toz_apb_wire",
         "ModType": "Stock",
@@ -3606,10 +3805,10 @@
         "StockAllowADS": true,
         "ConflictingItems": [],
         "Weight": 0.15,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5d1c702ad7ad1a632267f429": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d1c702ad7ad1a632267f429",
         "Name": "stock_glock_fab_defence_glr_17",
         "ModType": "Stock",
@@ -3629,11 +3828,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.39,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "AimStability": 20
     },
     "61f7b234ea4ab34f2f59c3ec": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "61f7b234ea4ab34f2f59c3ec",
         "Name": "stock_mp18_izhmash_wood",
         "ModType": "Stock",
@@ -3652,11 +3851,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.56,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 10
     },
     "61f803b8ced75b2e852e35f8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "61f803b8ced75b2e852e35f8",
         "Name": "stock_mp18_izhmash_plastic",
         "ModType": "Stock",
@@ -3675,11 +3874,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.47,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": 10
     },
     "6259c3387d6aab70bc23a18d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6259c3387d6aab70bc23a18d",
         "Name": "stock_m3_benelli_5_position_telescoping_stock",
         "ModType": "Stock",
@@ -3698,10 +3897,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.772,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "625eb0faa6e3a82193267ad9": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "625eb0faa6e3a82193267ad9",
         "Name": "stock_m3_benelli_pistol_grip_synthetic_stock",
         "ModType": "Stock",
@@ -3720,12 +3919,12 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 1.043,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "Handling": 10,
         "AimStability": 10
     },
     "5a7880d0c5856700142fdd9d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a7880d0c5856700142fdd9d",
         "Name": "stock_870_remington_sps_12g",
         "ModType": "Stock",
@@ -3744,11 +3943,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.64,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 9
     },
     "5a788169c5856700142fdd9e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a788169c5856700142fdd9e",
         "Name": "stock_870_shockwave_technologies_raptor_grip",
         "ModType": "Stock",
@@ -3767,11 +3966,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.4,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": -20
     },
     "5eea217fc64c5d0dfc05712a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5eea217fc64c5d0dfc05712a",
         "Name": "stock_590_magpul_sga",
         "ModType": "Stock",
@@ -3790,12 +3989,12 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.68,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "AimStability": 12,
         "Handling": 6
     },
     "5a78813bc5856700186c4abe": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a78813bc5856700186c4abe",
         "Name": "stock_870_magpul_sga",
         "ModType": "Stock",
@@ -3814,12 +4013,12 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.68,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "AimStability": 12,
         "Handling": 6
     },
     "5e848dc4e4dbc5266a4ec63d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5e848dc4e4dbc5266a4ec63d",
         "Name": "stock_ks23_toz_ks23_std_metal",
         "ModType": "Stock",
@@ -3838,11 +4037,11 @@
         "StockAllowADS": true,
         "ConflictingItems": [],
         "Weight": 0.26,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": -12
     },
     "5e848db4681bea2ada00daa9": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5e848db4681bea2ada00daa9",
         "Name": "stock_ks23_toz_ks23_std_wood",
         "ModType": "Stock",
@@ -3861,11 +4060,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.44,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": 5
     },
     "612781056f3d944a17348d60": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "612781056f3d944a17348d60",
         "Name": "stock_mc255_ckib_255_std_wood",
         "ModType": "Stock",
@@ -3884,11 +4083,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.45,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": 11
     },
     "606eef756d0bd7580617baf8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "606eef756d0bd7580617baf8",
         "Name": "stock_mp155_kalshnikov_ultima_stock",
         "ModType": "Stock",
@@ -3907,12 +4106,12 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.51,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "Handling": 6,
         "AimStability": 10
     },
     "607d5a891246154cad35d6aa": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "607d5a891246154cad35d6aa",
         "Name": "stock_mp155_izhmeh_monte_carlo_walnut",
         "ModType": "Stock",
@@ -3931,11 +4130,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.64,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": 9
     },
     "56083be64bdc2d20478b456f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "56083be64bdc2d20478b456f",
         "Name": "stock_mr133_plastic_long",
         "ModType": "Stock",
@@ -3954,11 +4153,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.46,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": 7
     },
     "56083cba4bdc2de22e8b456f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "56083cba4bdc2de22e8b456f",
         "Name": "stock_mr133_std_long",
         "ModType": "Stock",
@@ -3977,11 +4176,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.64,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 7
     },
     "56083a334bdc2dc8488b4571": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "56083a334bdc2dc8488b4571",
         "Name": "stock_mr133_pistol_plastic",
         "ModType": "Stock",
@@ -4000,11 +4199,11 @@
         "StockAllowADS": true,
         "ConflictingItems": [],
         "Weight": 0.1,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "AimStability": -10
     },
     "5e87116b81c4ed43e83cefdd": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5e87116b81c4ed43e83cefdd",
         "Name": "stock_590_mossberg_590a1_std",
         "ModType": "Stock",
@@ -4023,11 +4222,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.64,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 10
     },
     "5cc700b9e4a949000f0f0f25": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cc700b9e4a949000f0f0f25",
         "Name": "stock_p90_fn_p90_std",
         "ModType": "Stock",
@@ -4048,10 +4247,10 @@
         "Weight": 0.4,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5cebec10d7f00c065703d185": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cebec10d7f00c065703d185",
         "Name": "stock_p90_fn_ps90_std",
         "ModType": "Stock",
@@ -4072,10 +4271,10 @@
         "Weight": 0.4,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5ea03e9400685063ec28bfa4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ea03e9400685063ec28bfa4",
         "Name": "stock_ppsh_zis_ppsh41_std_wood",
         "ModType": "Stock",
@@ -4096,10 +4295,10 @@
             "5b3f7bf05acfc433000ecf6b"
         ],
         "Weight": 1.05,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5addbf175acfc408fb13965b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5addbf175acfc408fb13965b",
         "Name": "stock_m1a_promag_archangel_prs",
         "ModType": "StockR",
@@ -4122,11 +4321,11 @@
         "Weight": 1.905,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "AimStability": 30
     },
     "5ab372a310e891001717f0d8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ab372a310e891001717f0d8",
         "Name": "stock_m14_troy_sass_chassis",
         "ModType": "StockN",
@@ -4149,11 +4348,11 @@
         "Weight": 2.659,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 4,
         "Handling": 15
     },
     "5aaf8e43e5b5b00015693246": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5aaf8e43e5b5b00015693246",
         "Name": "stock_m1a_springfield_armory_socom_16",
         "ModType": "StockR",
@@ -4174,11 +4373,11 @@
         "Weight": 1.004,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 5
     },
     "5addc7005acfc4001669f275": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5addc7005acfc4001669f275",
         "Name": "stock_m14_sage_ebr_m14alcs",
         "ModType": "StockN",
@@ -4199,11 +4398,11 @@
         "Weight": 1.9,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 4,
         "Handling": 10
     },
     "5addc7ac5acfc400194dbd90": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5addc7ac5acfc400194dbd90",
         "Name": "stock_m14_sage_ebr_m14alcs_buttstock",
         "ModType": "StockR",
@@ -4222,11 +4421,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 1.004,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "AimStability": 20
     },
     "5c503af12e221602b177ca02": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c503af12e221602b177ca02",
         "Name": "stock_vepr_molot_vpo-101_std_wood",
         "ModType": "StockN",
@@ -4247,11 +4446,11 @@
         "Weight": 1.25,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 8
     },
     "5f63405df5750b524b45f114": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5f63405df5750b524b45f114",
         "Name": "stock_vepr_pflevsha_svd_type_walnut",
         "ModType": "StockN",
@@ -4272,11 +4471,11 @@
         "Weight": 1.07,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "AimStability": 24
     },
     "5de655be4a9f347bc92edb88": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5de655be4a9f347bc92edb88",
         "Name": "stock_vpo215_molot_vpo_215_std_wood",
         "ModType": "StockR",
@@ -4297,10 +4496,10 @@
         "Weight": 1.25,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "62811e2510e26c1f344e6554": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "62811e2510e26c1f344e6554",
         "Name": "pistolgrip_ax_accuracy_international_ax_pistol_grip_pb",
         "ModType": "",
@@ -4319,11 +4518,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.22,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "Handling": 9.5
     },
     "62811e335631d45211793c95": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "62811e335631d45211793c95",
         "Name": "pistolgrip_ax_gtac_ax_pistol_grip_adapter_pb",
         "ModType": "",
@@ -4342,10 +4541,10 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.15,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "62811f828193841aca4a45c3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "62811f828193841aca4a45c3",
         "Name": "stock_ax_accuracy_international_ax_butt_stock_pb",
         "ModType": "Stock",
@@ -4364,11 +4563,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.52,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "AimStability": 36.5
     },
     "624c29ce09cd027dff2f8cd7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "624c29ce09cd027dff2f8cd7",
         "Name": "stock_cnc_cnc_guns_m12b",
         "ModType": "StockR",
@@ -4387,11 +4586,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.44,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "AimStability": 38
     },
     "623b2e9d11c3296b440d1638": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "623b2e9d11c3296b440d1638",
         "Name": "stock_sv-98_cnc_guns_ov_sv98",
         "ModType": "StockN",
@@ -4412,11 +4611,11 @@
         "Weight": 1.15,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 4,
         "Handling": 8
     },
     "61faa91878830f069b6b7967": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "61faa91878830f069b6b7967",
         "Name": "stock_sv-98_izhmash_wood",
         "ModType": "StockR",
@@ -4437,11 +4636,11 @@
         "Weight": 2.513,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": 14
     },
     "58889d0c2459775bc215d981": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "58889d0c2459775bc215d981",
         "Name": "stock_dvl-10_lobaev_dvl-10_std",
         "ModType": "Stock",
@@ -4462,11 +4661,11 @@
         "Weight": 0.467,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "AimStability": 33
     },
     "5df35e59c41b2312ea3334d5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5df35e59c41b2312ea3334d5",
         "Name": "stock_t5000_orsis_t5000_se_chassis",
         "ModType": "StockN",
@@ -4492,10 +4691,10 @@
         "Weight": 0.62,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "5df35ddddfc58d14537c2036": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5df35ddddfc58d14537c2036",
         "Name": "stock_t5000_orsis_t5000_se_folding_stock_std",
         "ModType": "StockR",
@@ -4516,12 +4715,12 @@
         "Weight": 0.51,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "AimStability": 37,
         "Handling": 4
     },
     "5d25d0ac8abbc3054f3e61f7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d25d0ac8abbc3054f3e61f7",
         "Name": "stock_m700_ai_at_aics_chasiss",
         "ModType": "StockN",
@@ -4547,12 +4746,12 @@
         "Weight": 1.8,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "AimStability": 36,
         "Handling": 10
     },
     "5cdeac22d7f00c000f26168f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cdeac22d7f00c000f26168f",
         "Name": "stock_m700_magpul_pro_700_chasiss",
         "ModType": "StockF",
@@ -4577,11 +4776,11 @@
         "Weight": 1.1,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "Handling": 15
     },
     "5cdeac42d7f00c000d36ba73": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cdeac42d7f00c000d36ba73",
         "Name": "stock_m700_magpul_pro_700_folding_stock",
         "ModType": "StockR",
@@ -4602,11 +4801,11 @@
         "Weight": 1.02,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "AimStability": 32
     },
     "5cde739cd7f00c0010373bd3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cde739cd7f00c0010373bd3",
         "Name": "stock_m700_abarms_mrs_mod_x_gen_3",
         "ModType": "StockN",
@@ -4632,10 +4831,10 @@
         "Weight": 0.9,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 4
     },
     "5cde77a9d7f00c000f261009": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cde77a9d7f00c000f261009",
         "Name": "stock_m700_abarms_mod_x_side_folder",
         "ModType": "",
@@ -4656,10 +4855,10 @@
         "Weight": 0.12,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "5cf13123d7f00c1085616a50": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cf13123d7f00c1085616a50",
         "Name": "stock_m700_promag_archangel_precision_stock",
         "ModType": "StockR",
@@ -4668,7 +4867,7 @@
         "Dispersion": -7.5,
         "CameraRecoil": -10,
         "AimSpeed": -5,
-        "Ergonomics": 24,
+        "Ergonomics": 22,
         "Accuracy": 8,
         "HasShoulderContact": true,
         "BlocksFolding": false,
@@ -4688,12 +4887,12 @@
         "Weight": 2.2,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0,
-        "AimStability": 27,
-        "Handling": 15
+        "LoyaltyLevel": 2,
+        "AimStability": 26,
+        "Handling": 14
     },
     "5bfeb32b0db834001a6694d9": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bfeb32b0db834001a6694d9",
         "Name": "stock_m700_hogue_overmolded_ghillie_green_pillar_bedded_stock",
         "ModType": "StockR",
@@ -4722,11 +4921,11 @@
         "Weight": 1.8,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 8
     },
     "587e0531245977466077a0f7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "587e0531245977466077a0f7",
         "Name": "stock_sks_molot_op_sks_std",
         "ModType": "StockN",
@@ -4747,11 +4946,11 @@
         "Weight": 0.740,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 4
     },
     "574dad8024597745964bf05c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "574dad8024597745964bf05c",
         "Name": "stock_sks_toz_sks_std_wood",
         "ModType": "StockN",
@@ -4772,11 +4971,11 @@
         "Weight": 0.703,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "Handling": 4
     },
     "5d0236dad7ad1a0940739d29": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d0236dad7ad1a0940739d29",
         "Name": "stock_sks_fab_defence_uas_sks",
         "ModType": "StockN",
@@ -4797,11 +4996,11 @@
         "Weight": 1.034,
         "HeatFactor": 1.05,
         "CoolFactor": 0.9,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "Handling": 5
     },
     "5afd7ded5acfc40017541f5e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5afd7ded5acfc40017541f5e",
         "Name": "stock_sks_tapco_intrafuse_sks_railed",
         "ModType": "StockN",
@@ -4822,11 +5021,11 @@
         "Weight": 0.75,
         "HeatFactor": 1.1,
         "CoolFactor": 0.95,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "Handling": 7
     },
     "5bfd37c80db834001d23e842": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bfd37c80db834001d23e842",
         "Name": "stock_mosin_izhmash_mosin_carabine_sniper_cut_wood",
         "ModType": "StockR",
@@ -4847,11 +5046,11 @@
         "Weight": 1.55,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "Handling": 10
     },
     "5bfd384c0db834001a6691d3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bfd384c0db834001a6691d3",
         "Name": "stock_mosin_izhmash_mosin_carabine_wood",
         "ModType": "StockR",
@@ -4874,10 +5073,10 @@
         "Weight": 1.6,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "5bfd35380db83400232fe5cc": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bfd35380db83400232fe5cc",
         "Name": "stock_mosin_izhmash_mosin_infantry_wood",
         "ModType": "StockR",
@@ -4903,10 +5102,10 @@
         "Weight": 1.8,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5ae096d95acfc400185c2c81": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ae096d95acfc400185c2c81",
         "Name": "stock_mosin_izhmash_mosin_std_wood",
         "ModType": "StockR",
@@ -4931,10 +5130,10 @@
         "Weight": 1.75,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5bfd36290db834001966869a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bfd36290db834001966869a",
         "Name": "stock_mosin_izhmash_mosin_sniper_sawn_off_wood",
         "ModType": "StockF",
@@ -4955,11 +5154,11 @@
         "Weight": 0.85,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": -10
     },
     "5bfd36ad0db834001c38ef66": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bfd36ad0db834001c38ef66",
         "Name": "stock_mosin_izhmash_mosin_carabine_sawn_off_wood",
         "ModType": "StockF",
@@ -4982,11 +5181,11 @@
         "Weight": 0.8,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": -10
     },
     "5bbdb870d4351e00367fb67d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bbdb870d4351e00367fb67d",
         "Name": "stock_mosin_ati_monte_carlo",
         "ModType": "StockR",
@@ -5007,11 +5206,11 @@
         "Weight": 1.2,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "Handling": 16
     },
     "5bae13bad4351e00320204af": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bae13bad4351e00320204af",
         "Name": "stock_mosin_promag_archangel_opfor_prs",
         "ModType": "StockR",
@@ -5032,11 +5231,11 @@
         "Weight": 2,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 3,
         "AimStability": 30
     },
     "626a8ae89e664a2e2a75f409": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "626a8ae89e664a2e2a75f409",
         "Name": "stock_toz-106_fab_defense_gpcp_custom_stock_cheek",
         "ModType": "",
@@ -5055,11 +5254,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.155,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": 15
     },
     "5c99f3592e221644fc633070": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c99f3592e221644fc633070",
         "Name": "stock_toz-106_pafnuch_mosin_custom",
         "ModType": "Stock",
@@ -5080,12 +5279,12 @@
         "Weight": 1.29,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 2,
         "AimStability": 10,
         "Handling": 5
     },
     "5adf23995acfc400185c2aeb": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5adf23995acfc400185c2aeb",
         "Name": "stock_toz-106_toz_full_std",
         "ModType": "Stock",
@@ -5106,12 +5305,12 @@
         "Weight": 1.25,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": 5,
         "Handling": 10
     },
     "5a38ef1fc4a282000b1521f6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a38ef1fc4a282000b1521f6",
         "Name": "stock_toz-106_toz_short_std_wood",
         "ModType": "Stock",
@@ -5132,11 +5331,11 @@
         "Weight": 1.25,
         "HeatFactor": 1,
         "CoolFactor": 1,
-        "LoyaltyLevel": 0,
-        "Price": 0,
+        "LoyaltyLevel": 1,
         "AimStability": -10
     },
     "6451167ad4928d46d30be3fd": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6451167ad4928d46d30be3fd",
         "Name": "stock_9a91_kbp_9a91_stock",
         "ModType": "Stock",
@@ -5155,9 +5354,11 @@
         "StockAllowADS": true,
         "ConflictingItems": [],
         "Weight": 0.5,
-        "AimStability": -15
+        "AimStability": -15,
+        "LoyaltyLevel": 1
     },
     "6452519e3d52156624001fd5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6452519e3d52156624001fd5",
         "Name": "stock_vsk94_kbp_vsk94_std",
         "ModType": "Stock",
@@ -5176,9 +5377,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.7,
-        "Handling": 10
+        "Handling": 10,
+        "LoyaltyLevel": 1
     },
     "6494094948796d891603e59f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6494094948796d891603e59f",
         "Name": "stock_ak_custom_arms_st_ef74_butt_extension",
         "ModType": "Stock",
@@ -5198,9 +5401,11 @@
         "ConflictingItems": [],
         "Weight": 0.055,
         "AimStability": -7,
-        "Handling": 8
+        "Handling": 8,
+        "LoyaltyLevel": 4
     },
     "6513f1798cb24472490ee331": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6513f1798cb24472490ee331",
         "Name": "stock_rpd_zid_rpd_wood_std",
         "ModType": "Stock",
@@ -5218,9 +5423,11 @@
         "BlocksFolding": false,
         "StockAllowADS": false,
         "ConflictingItems": [],
-        "Weight": 1.12
+        "Weight": 1.12,
+        "LoyaltyLevel": 1
     },
     "6516e91f609aaf354b34b3e2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6516e91f609aaf354b34b3e2",
         "Name": "stock_ar15_dd_enhanced_collapsible_buttstock",
         "ModType": "Stock",
@@ -5243,9 +5450,11 @@
         ],
         "Weight": 0.227,
         "AimStability": 6,
-        "Handling": 4
+        "Handling": 4,
+        "LoyaltyLevel": 3
     },
     "6516e971a3d4c6497930b450": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6516e971a3d4c6497930b450",
         "Name": "stock_ar15_dd_enhanced_collapsible_buttstock_fde",
         "ModType": "Stock",
@@ -5268,9 +5477,11 @@
         ],
         "Weight": 0.227,
         "AimStability": 6,
-        "Handling": 4
+        "Handling": 4,
+        "LoyaltyLevel": 4
     },
     "6516e9bc5901745209404287": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6516e9bc5901745209404287",
         "Name": "stock_base_dd_thicker_convex_shape_buttpad_12mm",
         "ModType": "Stock",
@@ -5289,9 +5500,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.055,
-        "Handling": 2
+        "Handling": 2,
+        "LoyaltyLevel": 2
     },
     "6516e9d7e239bd0c487e3766": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6516e9d7e239bd0c487e3766",
         "Name": "stock_base_dd_thicker_convex_shape_buttpad_20mm",
         "ModType": "Stock",
@@ -5311,9 +5524,11 @@
         "ConflictingItems": [],
         "Weight": 0.063,
         "Handling": 3,
-        "AimStability": -5
+        "AimStability": -5,
+        "LoyaltyLevel": 3
     },
     "6529348224cbe3c74a05e5c4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6529348224cbe3c74a05e5c4",
         "Name": "stock_all_sig_stock_locking_hinge_assembly",
         "ModType": "buffer_adapter",
@@ -5331,9 +5546,11 @@
         "BlocksFolding": false,
         "StockAllowADS": false,
         "ConflictingItems": [],
-        "Weight": 0.2
+        "Weight": 0.2,
+        "LoyaltyLevel": 4
     },
     "6529366450dc782999054ba0": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6529366450dc782999054ba0",
         "Name": "stock_base_sig_low_profile_tube_ct",
         "ModType": "",
@@ -5351,9 +5568,11 @@
         "BlocksFolding": false,
         "StockAllowADS": false,
         "ConflictingItems": [],
-        "Weight": 0.162
+        "Weight": 0.162,
+        "LoyaltyLevel": 4
     },
     "6529370c405a5f51dd023db8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6529370c405a5f51dd023db8",
         "Name": "stock_ar15_magpul_moe_sl_k_carbine_ct",
         "ModType": "Stock",
@@ -5373,9 +5592,11 @@
         "ConflictingItems": [],
         "Weight": 0.226,
         "AimStability": 4,
-        "Handling": 2
+        "Handling": 2.5,
+        "LoyaltyLevel": 4
     },
     "653ecef836fae5a82f02b869": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "653ecef836fae5a82f02b869",
         "Name": "stock_sks_ati_monte_carlo",
         "ModType": "StockN",
@@ -5394,9 +5615,11 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 1.1,
-        "Handling": 18
+        "Handling": 18,
+        "LoyaltyLevel": 2
     },
     "653ed132896b99b40a0292e6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "653ed132896b99b40a0292e6",
         "Name": "stock_fab_fab_defence_uas_folding_stock",
         "ModType": "Stock",
@@ -5415,6 +5638,70 @@
         "StockAllowADS": false,
         "ConflictingItems": [],
         "Weight": 0.45,
-        "Handling": 10
+        "Handling": 10,
+        "LoyaltyLevel": 2
+    },
+    "66ffac9e316b08f6840a73e6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
+        "ItemID": "66ffac9e316b08f6840a73e6",
+        "Name": "stock_aa12_mps_aa12_stock_std",
+        "ModType": "StockN",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": -10,
+        "Dispersion": -10,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "CameraRecoil": -5,
+        "AimSpeed": 0,
+        "Ergonomics": 25,
+        "Accuracy": 10,
+        "HasShoulderContact": true,
+        "BlocksFolding": false,
+        "StockAllowADS": false,
+        "ConflictingItems": [],
+        "Weight": 0.9
+    },
+    "6719023b612cc94b9008e78c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
+        "ItemID": "6719023b612cc94b9008e78c",
+        "Name": "stock_aa12_mps_aa12_stock_std_labs",
+        "ModType": "StockN",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": -10,
+        "Dispersion": -10,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "CameraRecoil": -5,
+        "AimSpeed": 10,
+        "Ergonomics": 25,
+        "Accuracy": 0,
+        "HasShoulderContact": true,
+        "BlocksFolding": false,
+        "StockAllowADS": false,
+        "ConflictingItems": [],
+        "Weight": 0.9
+    },
+    "670fd23798663bc4b10e911a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
+        "ItemID": "670fd23798663bc4b10e911a",
+        "Name": "stock_aa12_mps_aa12_stock_std_fde",
+        "ModType": "StockN",
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": -10,
+        "Dispersion": -10,
+        "AutoROF": 0,
+        "SemiROF": 0,
+        "ModMalfunctionChance": 0,
+        "CameraRecoil": -5,
+        "AimSpeed": 10,
+        "Ergonomics": 25,
+        "Accuracy": 0,
+        "HasShoulderContact": true,
+        "BlocksFolding": false,
+        "StockAllowADS": false,
+        "ConflictingItems": [],
+        "Weight": 0.9
     }
 }

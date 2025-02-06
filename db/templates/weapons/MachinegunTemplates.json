@@ -1,5 +1,6 @@
 {
     "661cec09b2c6356b4d0c7a36": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "661cec09b2c6356b4d0c7a36",
         "Name": "weapon_usord_m60e6_762x51_fde",
         "WeapType": "",
@@ -46,6 +47,7 @@
         "RecoilIntensity": 0.28
     },
     "661ceb1b9311543c7104149b": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "661ceb1b9311543c7104149b",
         "Name": "weapon_usord_m60e6_762x51",
         "WeapType": "",
@@ -92,6 +94,7 @@
         "RecoilIntensity": 0.28
     },
     "65fb023261d5829b2d090755": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "65fb023261d5829b2d090755",
         "Name": "weapon_usord_m60e4_762x51",
         "WeapType": "",
@@ -138,6 +141,7 @@
         "RecoilIntensity": 0.3
     },
     "64637076203536ad5600c990": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "64637076203536ad5600c990",
         "Name": "weapon_zid_pkm_762x54r",
         "WeapType": "",
@@ -184,6 +188,7 @@
         "RecoilIntensity": 0.22
     },
     "64ca3d3954fc657e230529cc": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "64ca3d3954fc657e230529cc",
         "Name": "weapon_zid_pkp_762x54r",
         "WeapType": "",
@@ -230,6 +235,7 @@
         "RecoilIntensity": 0.25
     },
     "5cdeb229d7f00c000e7ce174": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "5cdeb229d7f00c000e7ce174",
         "Name": "weapon_ckib_nsv_utes_127x108",
         "WeapType": "",
@@ -276,6 +282,7 @@
         "RecoilIntensity": 0.2
     },
     "5beed0f50db834001c062b12": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "5beed0f50db834001c062b12",
         "Name": "weapon_izhmash_rpk16_545x39",
         "WeapType": "",
@@ -322,6 +329,7 @@
         "RecoilIntensity": 0.151
     },
     "6513ef33e06849f06c0957ca": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "6513ef33e06849f06c0957ca",
         "Name": "weapon_zid_rpd_762x39",
         "WeapType": "",
@@ -367,6 +375,7 @@
         "BaseFixSpeed": 1
     },
     "65268d8ecb944ff1e90ea385": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "65268d8ecb944ff1e90ea385",
         "Name": "weapon_zid_rpdn_762x39",
         "WeapType": "",
@@ -412,6 +421,7 @@
         "BaseFixSpeed": 1
     },
     "657857faeff4c850222dff1b": {
+        "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "657857faeff4c850222dff1b",
         "Name": "weapon_zid_pktm_762x54r",
         "WeapType": "",

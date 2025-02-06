@@ -1,7 +1,7 @@
 import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
 import { Utils } from "../utils/utils";
 import { ILogger } from "../../types/models/spt/utils/ILogger";
-import { ITemplateItem, Slot } from "@spt/models/eft/common/tables/ITemplateItem";
+import { ITemplateItem, ISlot } from "@spt/models/eft/common/tables/ITemplateItem";
 
 export class AttachmentBase {
 
@@ -156,9 +156,9 @@ export class AttachmentBase {
             }
         }
 
-        let bufferSlots: Slot[] = [];
+        let bufferSlots: ISlot[] = [];
         for (let slot in slots) {
-            let newSlot: Slot = {
+            let newSlot: ISlot = {
                 _name: slots[slot],
                 _id: this.utils.genId(),
                 _parent: "",
@@ -229,9 +229,9 @@ export class AttachmentBase {
             }
         }
 
-        this.itemDB()["mechMDR_406"]._props.Slots[0]._props.filters[0].Filter = this.itemDB()["5dcbe9431e1f4616d354987e"]._props.Slots[0]._props.filters[0].Filter;
-        this.itemDB()["mechAUG_417"]._props.Slots[0]._props.filters[0].Filter = ["mechRatWorx"];
-        this.itemDB()["mechRatWorx"]._props.Slots[0]._props.filters[0].Filter = this.itemDB()["5dcbe9431e1f4616d354987e"]._props.Slots[0]._props.filters[0].Filter;
+        this.itemDB()["6783af21bc7d60d8f050eddb"]._props.Slots[0]._props.filters[0].Filter = this.itemDB()["5dcbe9431e1f4616d354987e"]._props.Slots[0]._props.filters[0].Filter;
+        this.itemDB()["6783af2816da8f04134317a5"]._props.Slots[0]._props.filters[0].Filter = ["6783af1a6a4c63d3f0b0c2e0"];
+        this.itemDB()["6783af1a6a4c63d3f0b0c2e0"]._props.Slots[0]._props.filters[0].Filter = this.itemDB()["5dcbe9431e1f4616d354987e"]._props.Slots[0]._props.filters[0].Filter;
 
 
         //weapons that should not accept canted mount in rear sight slot

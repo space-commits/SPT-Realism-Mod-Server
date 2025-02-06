@@ -1,5 +1,6 @@
 {
     "669fa5271bd4416eaa09b3ce": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "669fa5271bd4416eaa09b3ce",
         "Name": "reciever_deagle_magnum_research_l6_tiger",
         "ModType": "",
@@ -14,10 +15,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 3
     },
     "669fa5127a09bc295603b499": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "669fa5127a09bc295603b499",
         "Name": "reciever_deagle_magnum_research_l5_std_9x33r",
         "ModType": "",
@@ -32,10 +33,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 3
     },
     "669fa5019aa2a422600442f6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "669fa5019aa2a422600442f6",
         "Name": "reciever_deagle_magnum_research_l5_std_127x33",
         "ModType": "",
@@ -50,10 +51,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 3
     },
     "669fa4d97a09bc295603b496": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "669fa4d97a09bc295603b496",
         "Name": "reciever_deagle_magnum_research_l6_std",
         "ModType": "",
@@ -68,10 +69,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 3
     },
     "668fe60b56984d93550462c6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "668fe60b56984d93550462c6",
         "Name": "reciever_deagle_magnum_research_mk19_std",
         "ModType": "",
@@ -86,10 +87,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 3
     },
     "64119cdbdcf48d656f0aa272": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "64119cdbdcf48d656f0aa272",
         "Name": "reciever_svt40_toz_svt40_std",
         "ModType": "",
@@ -104,10 +105,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "Price": 0,
-        "LoyaltyLevel": 0
+        "LoyaltyLevel": 1
     },
     "5d3eb44aa4b93650d64e4979": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d3eb44aa4b93650d64e4979",
         "Name": "reciever_57_fn_five_seven_cover_std",
         "ModType": "",
@@ -122,10 +123,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 5,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "60228924961b8d75ee233c32": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "60228924961b8d75ee233c32",
         "Name": "reciever_pl15_izhmash_pl15_std",
         "ModType": "",
@@ -140,10 +141,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 34,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "56d5a407d2720bb3418b456b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "56d5a407d2720bb3418b456b",
         "Name": "reciever_p226_sig_p226r_std",
         "ModType": "",
@@ -158,10 +159,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 16,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5c0125fc0db834001a669aa3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c0125fc0db834001a669aa3",
         "Name": "reciever_p226_sig_legion_full_size",
         "ModType": "",
@@ -176,10 +177,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 25,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "5c010a700db834001d23ef5d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c010a700db834001d23ef5d",
         "Name": "reciever_p226_sig_emperor_scorpion",
         "ModType": "",
@@ -194,10 +195,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 28,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 4
     },
     "5c0009510db834001966907f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c0009510db834001966907f",
         "Name": "reciever_p226_sig_stainless_elite",
         "ModType": "",
@@ -212,10 +213,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 26,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "5bffe7c50db834001d23ece1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bffe7c50db834001d23ece1",
         "Name": "reciever_p226_axelson_tactical_mk25",
         "ModType": "",
@@ -230,10 +231,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 34,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 4
     },
     "5cadc55cae921500103bb3be": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cadc55cae921500103bb3be",
         "Name": "reciever_m9_beretta_m9a3_std",
         "ModType": "",
@@ -248,10 +249,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 24,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "6194f5722d2c397d6600348f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6194f5722d2c397d6600348f",
         "Name": "reciever_usp_hk_expert",
         "ModType": "",
@@ -270,10 +271,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 22,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "6193d382ed0429009f543e65": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6193d382ed0429009f543e65",
         "Name": "reciever_usp_hk_usp_std",
         "ModType": "",
@@ -288,10 +289,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 24,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "6194f41f9fb0c665d5490e75": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6194f41f9fb0c665d5490e75",
         "Name": "reciever_usp_hk_tactical",
         "ModType": "",
@@ -306,10 +307,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 25,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "6194f5d418a3974e5e7421ef": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6194f5d418a3974e5e7421ef",
         "Name": "reciever_usp_hk_elite",
         "ModType": "",
@@ -330,10 +331,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 18,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "6194f5a318a3974e5e7421eb": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6194f5a318a3974e5e7421eb",
         "Name": "reciever_usp_hk_match",
         "ModType": "",
@@ -348,10 +349,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 24,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "5e81edc13397a21db957f6a1": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5e81edc13397a21db957f6a1",
         "Name": "reciever_m1911_colt_m1911a1_std",
         "ModType": "",
@@ -366,10 +367,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 14,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5f3e7823ddc4f03b010e2045": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5f3e7823ddc4f03b010e2045",
         "Name": "reciever_m1911_colt_m45a1_std",
         "ModType": "",
@@ -384,10 +385,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 30,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "5a7033908dc32e000a311392": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a7033908dc32e000a311392",
         "Name": "reciever_glock_lone_wolf_alphawolf_custom_pat_5",
         "ModType": "",
@@ -402,10 +403,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 26,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "5a71e22f8dc32e00094b97f4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a71e22f8dc32e00094b97f4",
         "Name": "reciever_glock_zev_tech_hex_rmr_cut_gen_3",
         "ModType": "",
@@ -420,10 +421,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 24,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 4
     },
     "5a71e4f48dc32e001207fb26": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a71e4f48dc32e001207fb26",
         "Name": "reciever_glock_zev_tech_spartan_rmr_cut_gen_3",
         "ModType": "",
@@ -438,10 +439,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 36,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 5
     },
     "5a9685b1a2750c0032157104": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a9685b1a2750c0032157104",
         "Name": "reciever_glock_gspc_moto_slide_cut",
         "ModType": "",
@@ -456,10 +457,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 29,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "5a6f5f078dc32e00094b97dd": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a6f5f078dc32e00094b97dd",
         "Name": "reciever_glock_gspc_viper_slide_cut",
         "ModType": "",
@@ -474,10 +475,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 14,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "5a702d198dc32e000b452fc3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a702d198dc32e000b452fc3",
         "Name": "reciever_glock_lone_wolf_alphawolf",
         "ModType": "",
@@ -492,10 +493,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 27,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "615d8dbd290d254f5e6b2ed6": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "615d8dbd290d254f5e6b2ed6",
         "Name": "reciever_glock_glock_17_mos_slide",
         "ModType": "",
@@ -510,10 +511,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 24,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 4
     },
     "63075cc5962d0247b029dc2a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "63075cc5962d0247b029dc2a",
         "Name": "reciever_glock_glock_19x_std",
         "ModType": "",
@@ -528,10 +529,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 20,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5a6f5e048dc32e00094b97da": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a6f5e048dc32e00094b97da",
         "Name": "reciever_glock_glock_17_std",
         "ModType": "",
@@ -546,10 +547,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 16,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5b1faa0f5acfc40dc528aeb5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b1faa0f5acfc40dc528aeb5",
         "Name": "reciever_glock_glock_18c_std",
         "ModType": "",
@@ -564,10 +565,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 18,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5a7afa25e899ef00135e31b0": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5a7afa25e899ef00135e31b0",
         "Name": "reciever_glock_polymer80_ps9",
         "ModType": "",
@@ -582,10 +583,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 30,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "602e63fb6335467b0c5ac94d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "602e63fb6335467b0c5ac94d",
         "Name": "reciever_stm9_stmarms_stm9_machined_std_9x19",
         "ModType": "",
@@ -600,10 +601,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5df8e4080b92095fd441e594": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5df8e4080b92095fd441e594",
         "Name": "reciever_ar10_kac_sr25_upper_std",
         "ModType": "",
@@ -618,10 +619,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5fc278107283c4046c581489": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fc278107283c4046c581489",
         "Name": "reciever_mk18_sword_mjolnir_std",
         "ModType": "",
@@ -636,10 +637,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "606587a88900dc2d9a55b659": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "606587a88900dc2d9a55b659",
         "Name": "reciever_mk47_cmmg_mk47_std",
         "ModType": "",
@@ -654,10 +655,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "5bb20d53d4351e4502010a69": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5bb20d53d4351e4502010a69",
         "Name": "reciever_ar15_hk_hk416a5_std",
         "ModType": "",
@@ -672,10 +673,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "61713a8fd92c473c770214a4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "61713a8fd92c473c770214a4",
         "Name": "reciever_g28_hk_g28_std",
         "ModType": "",
@@ -690,10 +691,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "59bfe68886f7746004266202": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59bfe68886f7746004266202",
         "Name": "reciever_ar15_vltor_mur-1s",
         "ModType": "",
@@ -708,10 +709,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 4
     },
     "5d4405aaa4b9361e6a4e6bd3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d4405aaa4b9361e6a4e6bd3",
         "Name": "reciever_ar15_lone_star_tx15_lightweight",
         "ModType": "",
@@ -726,10 +727,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 4
     },
     "63f5ed14534b2c3d5479a677": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "63f5ed14534b2c3d5479a677",
         "Name": "reciever_ar15_aeroknox_ax15_upper",
         "ModType": "",
@@ -744,10 +745,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "5c07a8770db8340023300450": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c07a8770db8340023300450",
         "Name": "reciever_ar15_noveske_gen3",
         "ModType": "",
@@ -762,10 +763,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "5c0e2f26d174af02a9625114": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c0e2f26d174af02a9625114",
         "Name": "reciever_ar15_adar_2-15_std",
         "ModType": "",
@@ -780,10 +781,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "55d355e64bdc2d962f8b4569": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "55d355e64bdc2d962f8b4569",
         "Name": "reciever_ar15_colt_m4a1_std",
         "ModType": "",
@@ -798,10 +799,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "649ec2f3961514b22506b111": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "649ec2f3961514b22506b111",
         "Name": "reciever_ak12_izhmash_ak12_std",
         "ModType": "mount",
@@ -816,10 +817,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "5beec91a0db834001961942d": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5beec91a0db834001961942d",
         "Name": "reciever_rpk16_izhmash_rpk16_std",
         "ModType": "mount",
@@ -834,10 +835,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "628a665a86cbd9750d2ff5e5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "628a665a86cbd9750d2ff5e5",
         "Name": "reciever_ak_rifle_dynamics_rd_704_std",
         "ModType": "",
@@ -852,10 +853,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "628b9be6cff66b70c002b14c": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "628b9be6cff66b70c002b14c",
         "Name": "reciever_ak_sag_ak545_std",
         "ModType": "mount",
@@ -870,10 +871,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5c471bd12e221602b4129c3a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c471bd12e221602b4129c3a",
         "Name": "reciever_svd_izhmash_svd_s_std",
         "ModType": "",
@@ -888,10 +889,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5dfce88fe9dc277128008b2e": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5dfce88fe9dc277128008b2e",
         "Name": "reciever_svd_izhmash_svd_s_cut_off",
         "ModType": "",
@@ -908,10 +909,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "59985a6c86f77414ec448d17": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59985a6c86f77414ec448d17",
         "Name": "reciever_pp-19-01_izhmash_vityaz_sn",
         "ModType": "mount",
@@ -937,10 +938,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "5c503d0a2e221602b542b7ef": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5c503d0a2e221602b542b7ef",
         "Name": "reciever_vepr_molot_vpo-101_std",
         "ModType": "",
@@ -955,10 +956,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "57c44f4f2459772d2c627113": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57c44f4f2459772d2c627113",
         "Name": "reciever_val_tochmash_val_std",
         "ModType": "",
@@ -973,10 +974,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "59985a8086f77414ec448d1a": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59985a8086f77414ec448d1a",
         "Name": "reciever_pp-19-01_izhmash_vityaz_std",
         "ModType": "",
@@ -991,10 +992,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "578395402459774a256959b5": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "578395402459774a256959b5",
         "Name": "reciever_vss_tochmash_vss_std",
         "ModType": "",
@@ -1009,10 +1010,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "57616c112459773cce774d66": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57616c112459773cce774d66",
         "Name": "reciever_saiga12_izhmash_saiga12k_10_std",
         "ModType": "",
@@ -1027,10 +1028,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "57dc334d245977597164366f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "57dc334d245977597164366f",
         "Name": "reciever_aks74u_izhmash_aks74u_std",
         "ModType": "",
@@ -1052,10 +1053,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5839a7742459773cf9693481": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5839a7742459773cf9693481",
         "Name": "reciever_aks74u_izhmash_aks74ub_std",
         "ModType": "",
@@ -1077,10 +1078,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "59d6507c86f7741b846413a2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59d6507c86f7741b846413a2",
         "Name": "reciever_ak_izhmash_akm_std",
         "ModType": "",
@@ -1095,10 +1096,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "59e6449086f7746c9f75e822": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "59e6449086f7746c9f75e822",
         "Name": "reciever_ak_molot_akm_type",
         "ModType": "",
@@ -1113,10 +1114,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5ac50da15acfc4001718d287": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ac50da15acfc4001718d287",
         "Name": "reciever_ak74_izhmash_ak74m_std",
         "ModType": "",
@@ -1131,10 +1132,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5649af094bdc2df8348b4586": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5649af094bdc2df8348b4586",
         "Name": "reciever_ak74_izhmash_ak74_std",
         "ModType": "",
@@ -1149,10 +1150,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5649af884bdc2d1b2b8b4589": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5649af884bdc2d1b2b8b4589",
         "Name": "reciever_ak_zenit_b33",
         "ModType": "mount",
@@ -1212,10 +1213,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 4
     },
     "5d2c76ed48f03532f2136169": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d2c76ed48f03532f2136169",
         "Name": "reciever_ak_akademia_bastion",
         "ModType": "mount",
@@ -1251,10 +1252,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "5d2c772c48f0355d95672c25": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d2c772c48f0355d95672c25",
         "Name": "reciever_ak_texas_weapon_systems_dog_leg_rail_gen_3",
         "ModType": "mount",
@@ -1290,10 +1291,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "5d2c770c48f0354b4a07c100": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d2c770c48f0354b4a07c100",
         "Name": "reciever_ak_fab_defence_pdc",
         "ModType": "mount",
@@ -1322,10 +1323,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "5cf7acfcd7f00c1084477cf2": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cf7acfcd7f00c1084477cf2",
         "Name": "reciever_p90_fn_ps90_std",
         "ModType": "",
@@ -1340,10 +1341,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5cc70102e4a949035e43ba74": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cc70102e4a949035e43ba74",
         "Name": "reciever_p90_fn_p90_std",
         "ModType": "",
@@ -1358,10 +1359,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5926c0df86f77462f647f764": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5926c0df86f77462f647f764",
         "Name": "reciever_mp5_hk_std",
         "ModType": "",
@@ -1376,10 +1377,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5926f2e086f7745aae644231": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5926f2e086f7745aae644231",
         "Name": "reciever_mp5_hk_sd",
         "ModType": "",
@@ -1395,10 +1396,10 @@
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
         "Velocity": -21,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "5d2f261548f03576f500e7b7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5d2f261548f03576f500e7b7",
         "Name": "reciever_mp5k_hk_kurtz_std",
         "ModType": "",
@@ -1413,10 +1414,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5de8e67c4a9f347bc92edbd7": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5de8e67c4a9f347bc92edbd7",
         "Name": "reciever_mp9_bt_mp9_upper_std",
         "ModType": "",
@@ -1431,10 +1432,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5e0090f7e9dc277128008b93": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5e0090f7e9dc277128008b93",
         "Name": "reciever_mp9_bt_mp9_upper_std_fde",
         "ModType": "",
@@ -1449,10 +1450,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5cc700ede4a949033c734315": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5cc700ede4a949033c734315",
         "Name": "reciever_p90_fn_effen_90",
         "ModType": "",
@@ -1467,10 +1468,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 4
     },
     "5ea03e5009aa976f2e7a514b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5ea03e5009aa976f2e7a514b",
         "Name": "reciever_ppsh_zis_ppsh41_std",
         "ModType": "",
@@ -1485,10 +1486,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5894a5b586f77426d2590767": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5894a5b586f77426d2590767",
         "Name": "reciever_mpx_sig_mpx_gen1",
         "ModType": "",
@@ -1503,10 +1504,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5fbcc3e4d6fa9c00c571bb58": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5fbcc3e4d6fa9c00c571bb58",
         "Name": "reciever_mcx_sig_mcx_gen1",
         "ModType": "",
@@ -1521,10 +1522,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "6165aeedfaa1272e431521e3": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6165aeedfaa1272e431521e3",
         "Name": "reciever_mk17_fn_scar_h_std_fde",
         "ModType": "",
@@ -1539,10 +1540,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "6165adcdd3a39d50044c120f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6165adcdd3a39d50044c120f",
         "Name": "reciever_mk17_fn_scar_h_std",
         "ModType": "",
@@ -1557,10 +1558,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "618405198004cc50514c3594": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "618405198004cc50514c3594",
         "Name": "reciever_mk16_fn_scar_l_std",
         "ModType": "",
@@ -1575,10 +1576,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "618426d96c780c1e710c9b9f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "618426d96c780c1e710c9b9f",
         "Name": "reciever_mk16_fn_scar_l_std_fde",
         "ModType": "",
@@ -1593,10 +1594,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5b7d6c105acfc40015109a5f": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b7d6c105acfc40015109a5f",
         "Name": "reciever_fal_fn_fal_dust_cover_std",
         "ModType": "",
@@ -1611,10 +1612,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "5b099bb25acfc400186331e8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "5b099bb25acfc400186331e8",
         "Name": "reciever_sa58_ds_arms_extreme_duty_scope_mount_extended",
         "ModType": "mount",
@@ -1629,10 +1630,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 3
     },
     "62811fbf09427b40ab14e767": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "62811fbf09427b40ab14e767",
         "Name": "reciever_ax_accuracy_international_axmc_upper_pb",
         "ModType": "",
@@ -1647,10 +1648,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 4
     },
     "628120415631d45211793c99": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "628120415631d45211793c99",
         "Name": "reciever_ax_accuracy_international_axmc_std_762x51_pb",
         "ModType": "",
@@ -1664,9 +1665,11 @@
         "Weight": 0.27,
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
-        "ChamberSpeed": 0
+        "ChamberSpeed": 0,
+        "LoyaltyLevel": 4
     },
     "6281204f308cb521f87a8f9b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6281204f308cb521f87a8f9b",
         "Name": "reciever_ax_accuracy_international_axmc_std_86x70_pb",
         "ModType": "",
@@ -1681,10 +1684,10 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": 0,
         "ChamberSpeed": 0,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 4
     },
     "62e7c72df68e7a0676050c77": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "62e7c72df68e7a0676050c77",
         "Name": "reciever_aug_steyr_aug_a3",
         "ModType": "",
@@ -1696,10 +1699,10 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.794,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 2
     },
     "62e27a7865f0b1592a49e17b": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "62e27a7865f0b1592a49e17b",
         "Name": "reciever_sr2m_tochmash_sr2_std",
         "ModType": "",
@@ -1711,10 +1714,10 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.168,
-        "LoyaltyLevel": 0,
-        "Price": 0
+        "LoyaltyLevel": 1
     },
     "634f05ca517ccc8a960fc748": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "634f05ca517ccc8a960fc748",
         "Name": "reciever_sks_toz_sks_std",
         "ModType": "",
@@ -1725,9 +1728,11 @@
         "DurabilityBurnModificator": 0.95,
         "ConflictingItems": [],
         "Ergonomics": 0,
-        "Weight": 0.09
+        "Weight": 0.09,
+        "LoyaltyLevel": 1
     },
     "634f06262e5def262d0b30ca": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "634f06262e5def262d0b30ca",
         "Name": "reciever_sks_molot_sks_std",
         "ModType": "",
@@ -1738,9 +1743,11 @@
         "DurabilityBurnModificator": 0.95,
         "ConflictingItems": [],
         "Ergonomics": 0,
-        "Weight": 0.09
+        "Weight": 0.09,
+        "LoyaltyLevel": 1
     },
     "6374a822e629013b9c0645c8": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6374a822e629013b9c0645c8",
         "Name": "reciever_pm_izhmeh_pm_std",
         "ModType": "",
@@ -1751,9 +1758,11 @@
         "DurabilityBurnModificator": 1,
         "ConflictingItems": [],
         "Ergonomics": 0,
-        "Weight": 0.19
+        "Weight": 0.19,
+        "LoyaltyLevel": 1
     },
     "6415c694da439c6a97048b56": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6415c694da439c6a97048b56",
         "Name": "reciever_sks_utg_mtu017",
         "ModType": "mount",
@@ -1790,9 +1799,11 @@
             "6415d33eda439c6a97048b5b"
         ],
         "Ergonomics": 0,
-        "Weight": 0.215
+        "Weight": 0.215,
+        "LoyaltyLevel": 2
     },
     "6529119424cbe3c74a05e5bb": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "6529119424cbe3c74a05e5bb",
         "Name": "reciever_mcx_sig_spear_upper",
         "ModType": "",
@@ -1803,9 +1814,11 @@
         "DurabilityBurnModificator": 1,
         "ConflictingItems": [],
         "Ergonomics": 0,
-        "Weight": 0.27
+        "Weight": 0.27,
+        "LoyaltyLevel": 1
     },
     "655cb6b5d680a544f30607fa": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "655cb6b5d680a544f30607fa",
         "Name": "reciever_aks74u_legal_arsenal_pilgrim_dust_cover",
         "ModType": "mount",
@@ -1836,6 +1849,39 @@
             "5a957c3fa2750c00137fa5f7"
         ],
         "Ergonomics": 0,
-        "Weight": 0.12
+        "Weight": 0.12,
+        "LoyaltyLevel": 4
+    },
+    "6680326874b8f2050c0b9178": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
+        "ItemID": "6680326874b8f2050c0b9178",
+        "Name": "reciever_uzi_pro_iwi_upper_std",
+        "ModType": "",
+        "ModMalfunctionChance": 0,
+        "Accuracy": 0,
+        "HeatFactor": 1.042,
+        "CoolFactor": 0.963,
+        "DurabilityBurnModificator": 1,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.27,
+        "MalfChance": 0,
+        "LoyaltyLevel": 2
+    },
+    "67110d8d388bded67304ceb4": {
+        "$type": "RealismMod.WeaponMod, RealismMod",
+        "ItemID": "67110d8d388bded67304ceb4",
+        "Name": "reciever_aug_vltor_aug_a3",
+        "ModType": "",
+        "ModMalfunctionChance": -5,
+        "Accuracy": 15,
+        "HeatFactor": 1,
+        "CoolFactor": 1,
+        "DurabilityBurnModificator": 1,
+        "ConflictingItems": [],
+        "Ergonomics": 0,
+        "Weight": 0.7,
+        "MalfChance": 0,
+        "LoyaltyLevel": 3
     }
 }

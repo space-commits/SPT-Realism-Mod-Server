@@ -1,36 +1,38 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Airdrops = void 0;
-const seasonalevents_1 = require("./seasonalevents");
-class Airdrops {
-    logger;
-    modConfig;
-    airConf;
-    constructor(logger, modConfig, airConf) {
-        this.logger = logger;
-        this.modConfig = modConfig;
-        this.airConf = airConf;
-    }
-    loadAirdropChanges() {
-        //fucks up the story
-        if (seasonalevents_1.EventTracker.isHalloween && this.modConfig.enable_hazard_zones) {
-            this.airConf.airdropChancePercent.bigmap = 0;
-            this.airConf.airdropChancePercent.woods = 0;
-            this.airConf.airdropChancePercent.lighthouse = 0;
-            this.airConf.airdropChancePercent.shoreline = 0;
-            this.airConf.airdropChancePercent.interchange = 0;
-            this.airConf.airdropChancePercent.reserve = 0;
-            this.airConf.airdropChancePercent.sandbox = 0;
-        }
-        this.airConf.planeVolume = 0.2;
-        this.airConf.airdropMinStartTimeSeconds = 300;
-        this.airConf.airdropMaxStartTimeSeconds = 2400;
-        if (this.modConfig.logEverything == true) {
-            this.logger.info("Airdrops Loaded");
-        }
-    }
-}
-exports.Airdrops = Airdrops;
+// import { IAirdropChancePercent, IAirdropConfig } from "C:/snapshot/project/obj/models/spt/config/IAirdropConfig";
+// import { ILogger } from "../../types/models/spt/utils/ILogger";
+// import { EventTracker } from "./seasonalevents";
+// import { ITemplateItem } from "C:/snapshot/project/obj/models/eft/common/tables/ITemplateItem";
+// import { ILootItem } from "C:/snapshot/project/obj/models/spt/services/LootItem";
+// import { MinMax } from "C:/snapshot/project/obj/models/common/MinMax";
+// import { ParentClasses } from "../utils/enums";
+// import { IPreset } from "C:/snapshot/project/obj/models/eft/common/IGlobals";
+// import { LocationController } from "C:/snapshot/project/obj/controllers/LocationController";
+// import { Utils, RaidInfoTracker } from "../utils/utils";
+// import { IAirdropLootResult } from "C:/snapshot/project/obj/models/eft/location/IAirdropLootResult";
+// import { AirdropTypeEnum } from "C:/snapshot/project/obj/models/enums/AirdropType";
+// import { RandomUtil } from "C:/snapshot/project/obj/utils/RandomUtil";
+// import { container } from "C:/snapshot/project/node_modules/tsyringe";
+// export class Airdrops {
+//     constructor(private logger: ILogger, private modConfig, private airConf: IAirdropConfig) { }
+//     public loadAirdropChanges() {
+//         //fucks up the story
+//         if (EventTracker.isHalloween && this.modConfig.enable_hazard_zones) {
+//             this.airConf.airdropChancePercent.bigmap = 0;
+//             this.airConf.airdropChancePercent.woods = 0;
+//             this.airConf.airdropChancePercent.lighthouse = 0;
+//             this.airConf.airdropChancePercent.shoreline = 0;
+//             this.airConf.airdropChancePercent.interchange = 0;
+//             this.airConf.airdropChancePercent.reserve = 0;
+//             this.airConf.airdropChancePercent.sandbox = 0;
+//         }
+//         this.airConf.planeVolume = 0.2;
+//         this.airConf.airdropMinStartTimeSeconds = 300;
+//         this.airConf.airdropMaxStartTimeSeconds = 2400;
+//         if (this.modConfig.logEverything == true) {
+//             this.logger.info("Airdrops Loaded");
+//         }
+//     }
+// }
 // export class AirdropLootgen extends LocationController {
 //     public myGetAirdropLoot(): IAirdropLootResult {
 //         const randomUtil = container.resolve<RandomUtil>("RandomUtil");
@@ -39,10 +41,10 @@ exports.Airdrops = Airdrops;
 //         const arrays = new Arrays(tables);
 //         const utils = new Utils(tables, arrays);
 //         let weights = [];
-//         if (RaidInfoTracker.TOD === "day") {
+//         if (!RaidInfoTracker.isNight) {
 //             weights = [65, 65, 40, 40, 40, 20, 15, 15, 1];
 //         }
-//         if (RaidInfoTracker.TOD === "night") {
+//         if (RaidInfoTracker.isNight) {
 //             weights = [10, 10, 15, 15, 20, 85, 75, 70, 1];
 //         }
 //         const airdropLoot = this.updateAirdropsLootPools(modConfig, utils, weights);

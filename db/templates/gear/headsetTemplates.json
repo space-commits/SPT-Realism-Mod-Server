@@ -1,5 +1,6 @@
 {
     "5645bcc04bdc2d363b8b4572": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5645bcc04bdc2d363b8b4572",
         "Name": "headphones",
         "AllowADS": true,
@@ -7,10 +8,10 @@
         "dB": "20",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "66b5f68de98be930d701c00e": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "66b5f68de98be930d701c00e",
         "Name": "item_equipment_headset_liberator",
         "AllowADS": true,
@@ -18,10 +19,10 @@
         "dB": "26",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5aa2ba71e5b5b000137b758f": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5aa2ba71e5b5b000137b758f",
         "Name": "headphones_MSA",
         "AllowADS": true,
@@ -29,10 +30,10 @@
         "dB": "19",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5a16b9fffcdbcb0176308b34": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5a16b9fffcdbcb0176308b34",
         "Name": "helmet_ops_core_rac_headset",
         "AllowADS": true,
@@ -40,11 +41,11 @@
         "dB": "22",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     
     "66b5f69ea7f72d197e70bcdb": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "66b5f69ea7f72d197e70bcdb",
         "Name": "helmet_team_wendy_comtac_v_headset",
         "AllowADS": true,
@@ -52,10 +53,10 @@
         "dB": "23",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "66b5f693acff495a294927e3": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "66b5f693acff495a294927e3",
         "Name": "item_equipment_headset_comtac_v",
         "AllowADS": true,
@@ -63,10 +64,10 @@
         "dB": "23",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "66b5f6985891c84aab75ca76": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "66b5f6985891c84aab75ca76",
         "Name": "item_equipment_headset_comtac_vi",
         "AllowADS": true,
@@ -74,10 +75,10 @@
         "dB": "23",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "66b5f6a28ca68c6461709ed8": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "66b5f6a28ca68c6461709ed8",
         "Name": "helmet_team_wendy_comtac_vi_headset",
         "AllowADS": true,
@@ -85,10 +86,10 @@
         "dB": "23",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "628e4e576d783146b124c64d": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "628e4e576d783146b124c64d",
         "Name": "item_equipment_headset_comtacIV",
         "AllowADS": true,
@@ -96,10 +97,10 @@
         "dB": "21",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5b432b965acfc47a8774094e": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5b432b965acfc47a8774094e",
         "Name": "item_equipment_headset_gsh01",
         "AllowADS": true,
@@ -107,10 +108,10 @@
         "dB": "20",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "6033fa48ffd42c541047f728": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6033fa48ffd42c541047f728",
         "Name": "item_equipment_headset_m32",
         "AllowADS": true,
@@ -118,10 +119,10 @@
         "dB": "22",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5c165d832e2216398b5a7e36": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5c165d832e2216398b5a7e36",
         "Name": "item_equipment_headset_tactical_sport",
         "AllowADS": true,
@@ -129,10 +130,10 @@
         "dB": "20",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5e4d34ca86f774264f758330": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5e4d34ca86f774264f758330",
         "Name": "item_equipment_headset_walkers_razor",
         "AllowADS": true,
@@ -140,10 +141,10 @@
         "dB": "23",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     },
     "5f60cd6cf2bcbb675b00dac6": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5f60cd6cf2bcbb675b00dac6",
         "Name": "item_equipment_headset_xcel",
         "AllowADS": true,
@@ -151,7 +152,6 @@
         "dB": "26",
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "weaponErgonomicPenalty": 0
     }
 }

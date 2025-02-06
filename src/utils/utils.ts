@@ -1,13 +1,16 @@
 import { IPmcData } from "@spt/models/eft/common/IPmcData";
-import { Item } from "@spt/models/eft/common/tables/IItem";
+import { IItem } from "@spt/models/eft/common/tables/IItem";
 import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
 import * as path from 'path';
 import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
 import crypto from "node:crypto";
+import { IMods } from "@spt/models/eft/common/tables/IBotType";
+import { StaticArrays } from "./arrays";
 
 const fs = require('fs');
 const modConfig = require("../../config/config.json");
+const armorTemplate = require("../../db/bots/loadouts/templates/armorMods.json");
 
 export class Utils {
 
@@ -58,7 +61,7 @@ export class Utils {
         }
     }
 
-    private correctProvisionRes(profileItem: Item, playerXP: number, logger: ILogger) {
+    private correctProvisionRes(profileItem: IItem, playerXP: number, logger: ILogger) {
         let templateItem = this.itemDB()[profileItem._tpl];
         if (templateItem !== null && templateItem !== undefined && (profileItem.upd.FoodDrink.HpPercent > templateItem._props.MaxResource || playerXP == 0)) {
             profileItem.upd.FoodDrink.HpPercent = templateItem._props.MaxResource;
@@ -66,19 +69,47 @@ export class Utils {
     }
 
 
-    private correctMedicalRes(profileItem: Item, playerXP: number, logger: ILogger) {
+    private correctMedicalRes(profileItem: IItem, playerXP: number, logger: ILogger) {
         let templateItem = this.itemDB()[profileItem._tpl];
         if (templateItem !== null && templateItem !== undefined && (profileItem.upd.MedKit.HpResource > templateItem._props.MaxHpResource || playerXP == 0)) {
             profileItem.upd.MedKit.HpResource = templateItem._props.MaxHpResource;
         }
     }
 
-    private correctDuraHelper(profileItem: Item, playerXP: number) {
+    private correctDuraHelper(profileItem: IItem, playerXP: number) {
         let templateItem = this.itemDB()[profileItem._tpl]
         if (templateItem !== null && templateItem !== undefined && (profileItem.upd.Repairable.Durability > templateItem._props.MaxDurability || playerXP == 0)) {
             profileItem.upd.Repairable.Durability = templateItem._props.Durability;
             profileItem.upd.Repairable.MaxDurability = templateItem._props.MaxDurability;
         }
+    }
+
+    public addGasMaskFilters(mods: IMods) {
+        StaticArrays.gasMasks.forEach(g => {
+            mods[g] = {
+                "mod_equipment": [
+                    "590c595c86f7747884343ad7"
+                ]
+            }
+        });
+    }
+
+    public addArmorInserts(mods: IMods) {
+        Object.keys(armorTemplate).forEach(outerKey => {
+            // If the outer key exists in mods, compare inner keys
+            if (mods[outerKey]) {
+                Object.keys(armorTemplate[outerKey]).forEach(innerKey => {
+                    // If the inner key doesn't exist in mods, insert it
+                    if (!mods[outerKey][innerKey]) {
+                        mods[outerKey][innerKey] = armorTemplate[outerKey][innerKey];
+                    }
+                });
+            }
+            //if mods doesnt have the outer key, insert it
+            else {
+                mods[outerKey] = armorTemplate[outerKey];
+            }
+        });
     }
 
     public probabilityWeighter(items: any, weights: number[]): any {
@@ -124,14 +155,39 @@ export class Utils {
         shasum.update(time.toString());
         return shasum.digest("hex").substring(0, 24);
     }
+
+    public getTime(time, hourDiff): string {
+        const [h, m] = time.split(":");
+        if (hourDiff == 12 && parseInt(h) >= 12) {
+            return `${Math.abs(parseInt(h) - hourDiff)}:${m}`
+        }
+        if (hourDiff == 12 && parseInt(h) < 12) {
+            return `${Math.abs(parseInt(h) + hourDiff)}:${m}`
+        }
+        return `${h}:${m}`
+    }
+
+    public isNight(time: string, map: string): boolean {
+        const [hours, minutes] = time.split(":");
+        const isNightByHours = parseInt(hours) < 5 || parseInt(hours) >= 21;
+        const isNightByMap = map == "factory4_night";
+        const isDayByMap = map == "factory4_day" || map == "laboratory";
+
+        if (!isDayByMap && (isNightByHours || isNightByMap)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 }
 
 export class ModTracker {
-    static batteryModPresent: boolean = false;
     static sainPresent: boolean = false;
     static swagPresent: boolean = false;
     static tgcPresent: boolean = false;
     static qtbPresent: boolean = false;
+    static qtbSpawnsActive: boolean = false;
     static alpPresent: boolean = false;
 }
 
@@ -146,9 +202,10 @@ export class ConfigChecker {
 }
 
 export class RaidInfoTracker {
-    static TOD: string = "";
+    static isNight: boolean = false;
     static mapType: string = "";
     static mapName: string = "";
+    static generatedBotsCount: number = 0;
     // static activeRaids: RaidInfo[] = [];
 }
 

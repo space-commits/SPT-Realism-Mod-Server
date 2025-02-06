@@ -1,18 +1,16 @@
 {
     "62a09e08de7ac81993580532": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "62a09e08de7ac81993580532",
         "Name": "item_equipment_facecover_glorious",
         "AllowADS": true,
         "LoyaltyLevel": 4,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "MaskToUse": "atomic",
-        "TemplateType": "gear"
+        "MaskToUse": "atomic"
     },
     "6570aead4d84f81fd002a033": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "6570aead4d84f81fd002a033",
         "Name": "item_equipment_death_mask",
         "AllowADS": true,
@@ -22,13 +20,10 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "MaskToUse": "atomic",
-        "TemplateType": "gear"
+        "MaskToUse": "atomic"
     },
     "657089638db3adca1009f4ca": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "657089638db3adca1009f4ca",
         "Name": "item_equipment_atomic",
         "AllowADS": true,
@@ -38,13 +33,10 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "MaskToUse": "atomic",
-        "TemplateType": "gear"
+        "MaskToUse": "atomic"
     },
     "5b432b2f5acfc4771e1c6622": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5b432b2f5acfc4771e1c6622",
         "Name": "item_equipment_facecover_shatteredmask",
         "AllowADS": true,
@@ -54,13 +46,10 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "BlocksMouth": true,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "MaskToUse": "atomic",
-        "TemplateType": "gear"
+        "MaskToUse": "atomic"
     },
     "603409c80ca681766b6a0fb2": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "603409c80ca681766b6a0fb2",
         "Name": "item_equipment_glasses_npp",
         "AllowADS": true,
@@ -68,14 +57,10 @@
         "ArmorClass": "Anti-Shatter Resistance V50 ≥ 230 m/s",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "Price": 0,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "ReloadSpeedMulti": 1
     },
     "5b432be65acfc433000ed01f": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5b432be65acfc433000ed01f",
         "Name": "tactical_glass",
         "AllowADS": true,
@@ -83,14 +68,10 @@
         "ArmorClass": "Anti-Shatter Resistance V50 ≥ 350 m/s",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "Price": 0,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "ReloadSpeedMulti": 1
     },
     "59e770b986f7742cbd762754": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "59e770b986f7742cbd762754",
         "Name": "item_equipment_glasses_6B34",
         "AllowADS": true,
@@ -98,14 +79,10 @@
         "ArmorClass": "Unclassified",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "Price": 0,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "ReloadSpeedMulti": 1
     },
     "5c1a1cc52e221602b3136e3d": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5c1a1cc52e221602b3136e3d",
         "Name": "item_equipment_glasses_m_frame",
         "AllowADS": true,
@@ -113,14 +90,10 @@
         "ArmorClass": "MIL-PRF 31013",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "Price": 0,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "ReloadSpeedMulti": 1
     },
     "62a61c988ec41a51b34758d5": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "62a61c988ec41a51b34758d5",
         "Name": "Item_equipment_glasses_oakley",
         "AllowADS": true,
@@ -128,14 +101,10 @@
         "ArmorClass": "Unclassified",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "Price": 0,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "ReloadSpeedMulti": 1
     },
     "5c0d32fcd174af02a1659c75": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5c0d32fcd174af02a1659c75",
         "Name": "item_equipment_glasses_proximity",
         "AllowADS": true,
@@ -143,14 +112,10 @@
         "ArmorClass": "ANSI/ISEA Z87.1+",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "Price": 0,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "ReloadSpeedMulti": 1
     },
     "5d5fca1ea4b93635fd598c07": {
+        "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5d5fca1ea4b93635fd598c07",
         "Name": "item_equipment_glasses_ess",
         "AllowADS": true,
@@ -158,11 +123,6 @@
         "ArmorClass": "ANSI Z87.1-2015",
         "CanSpall": false,
         "SpallReduction": 1,
-        "ReloadSpeedMulti": 1,
-        "Price": 0,
-        "speedPenaltyPercent": 0,
-        "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0,
-        "TemplateType": "gear"
+        "ReloadSpeedMulti": 1
     }
 }

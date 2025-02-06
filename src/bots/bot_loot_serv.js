@@ -99,7 +99,7 @@ class BotLootGen extends BotLootGenerator_1.BotLootGenerator {
         }
         if (containersBotHasAvailable.includes(EquipmentSlots_1.EquipmentSlots.BACKPACK)) {
             // Backpack Loot
-            this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.BACKPACK, botJsonTemplate), [EquipmentSlots_1.EquipmentSlots.BACKPACK], backpackLootCount, botInventory, botRole, botItemLimits, this.pmcConfig.maxBackpackLootTotalRub, isPmc, containersIdFull);
+            this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.BACKPACK, botJsonTemplate), [EquipmentSlots_1.EquipmentSlots.BACKPACK], backpackLootCount, botInventory, botRole, botItemLimits, this.pmcConfig.maxBackpackLootTotalRub[0].value, isPmc, containersIdFull);
             //Bag Meds
             this.addLootFromPool(myGetLootCache.getLootCache(botRole, isPmc, MyLootCacheType.BAG_HEALING_ITEMS, botJsonTemplate), [EquipmentSlots_1.EquipmentSlots.BACKPACK], healingItemCountBag, botInventory, botRole, botItemLimits, 0, isPmc, containersIdFull);
             //Bag Drugs

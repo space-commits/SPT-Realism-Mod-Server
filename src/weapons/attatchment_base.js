@@ -199,9 +199,9 @@ class AttachmentBase {
                 serverItem._props.Slots[0]._props.filters[0].Filter.push("5a32a064c4a28200741e22de");
             }
         }
-        this.itemDB()["mechMDR_406"]._props.Slots[0]._props.filters[0].Filter = this.itemDB()["5dcbe9431e1f4616d354987e"]._props.Slots[0]._props.filters[0].Filter;
-        this.itemDB()["mechAUG_417"]._props.Slots[0]._props.filters[0].Filter = ["mechRatWorx"];
-        this.itemDB()["mechRatWorx"]._props.Slots[0]._props.filters[0].Filter = this.itemDB()["5dcbe9431e1f4616d354987e"]._props.Slots[0]._props.filters[0].Filter;
+        this.itemDB()["6783af21bc7d60d8f050eddb"]._props.Slots[0]._props.filters[0].Filter = this.itemDB()["5dcbe9431e1f4616d354987e"]._props.Slots[0]._props.filters[0].Filter;
+        this.itemDB()["6783af2816da8f04134317a5"]._props.Slots[0]._props.filters[0].Filter = ["6783af1a6a4c63d3f0b0c2e0"];
+        this.itemDB()["6783af1a6a4c63d3f0b0c2e0"]._props.Slots[0]._props.filters[0].Filter = this.itemDB()["5dcbe9431e1f4616d354987e"]._props.Slots[0]._props.filters[0].Filter;
         //weapons that should not accept canted mount in rear sight slot
         for (let item of cantedMountConfWeaps) {
             this.itemDB()[item]._props.ConflictingItems.push("5649a2464bdc2d91118b45a8");

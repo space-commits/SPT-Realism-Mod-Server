@@ -2,7 +2,7 @@ import { BaseClasses } from "@spt/models/enums/BaseClasses";
 import { IBotType } from "@spt/models/eft/common/tables/IBotType";
 import { BotLootCacheService } from "@spt/services/BotLootCacheService";
 import { BotLootGenerator } from "@spt/generators/BotLootGenerator";
-import { Inventory as PmcInventory } from "@spt/models/eft/common/tables/IBotBase";
+import { IInventory as PmcInventory } from "@spt/models/eft/common/tables/IBotBase";
 import { JsonUtil } from "@spt/utils/JsonUtil";
 import { PMCLootGenerator } from "@spt/generators/PMCLootGenerator";
 import { RagfairPriceService } from "@spt/services/RagfairPriceService";
@@ -140,7 +140,7 @@ export class BotLootGen extends BotLootGenerator {
                 botInventory,
                 botRole,
                 botItemLimits,
-                this.pmcConfig.maxBackpackLootTotalRub,
+                this.pmcConfig.maxBackpackLootTotalRub[0].value,
                 isPmc,
                 containersIdFull,
             );

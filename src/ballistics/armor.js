@@ -28,6 +28,17 @@ class Armor {
         return this.globalDB().ArmorMaterials;
     }
     loadArmorStats() {
+        if (this.modConf.trader_repair_changes) {
+            for (const key in this.armMat()) {
+                const mat = this.armMat()[key];
+                mat.MinRepairDegradation = 0.5;
+                mat.MaxRepairDegradation = 1;
+                mat.MinRepairKitDegradation = 0.05;
+                mat.MaxRepairKitDegradation = 0.15;
+            }
+            this.armMat().Glass.MinRepairKitDegradation = 0.99;
+            this.armMat().Glass.MaxRepairKitDegradation = 1;
+        }
         //Armor Destructibility values
         this.armMat().Glass.Destructibility = 0.45;
         this.armMat().Aramid.Destructibility = 0.33;
@@ -37,6 +48,7 @@ class Armor {
         this.armMat().Aluminium.Destructibility = 0.2;
         this.armMat().Titan.Destructibility = 0.15;
         this.armMat().ArmoredSteel.Destructibility = 0.375; //steel no longer becomes more likely to pen with dura loss, so represents loss of anti-spall coating
+        //need to get rid of this redundant and wasteful loop
         for (let i in this.itemDB()) {
             let serverItem = this.itemDB()[i];
             this.loadBodyArmor(serverItem);
@@ -189,29 +201,28 @@ class Armor {
             "5d5d87f786f77427997cfaef",
             "5ab8dced86f774646209ec87",
             "5c0e722886f7740458316a57",
-            "628b9c7d45122232a872358f",
             "5e4ac41886f77406a511c9a8",
             "5b44cad286f77402a54ae7e5",
-            "66b6295178bbc0200425f995"
+            "66b6295178bbc0200425f995",
+            "628b9784bcf6e2659e09b8a2",
+            "609e860ebd219504d8507525",
         ];
         let carriersSlim = [
             "64a5366719bab53bd203bf33",
             "628cd624459354321c4b7fa2",
             "66b6295a8ca68c6461709efa",
-            "628b9784bcf6e2659e09b8a2",
             "64a536392d2c4e6e970f4121",
             "61bc85697113f767765c7fe7",
             "639343fce101f4caa40a4ef3",
-            "609e860ebd219504d8507525",
             "5e4abb5086f77406975c9342",
             "6038b4b292ec1c3103795a0b",
             "5fd4c474dd870108a754b241"
         ];
         if (carriersSlim.includes(serverItem._id)) {
-            this.modifyAramid(serverItem, 3, 50, 0.25);
+            this.modifyAramid(serverItem, 2, 50, 0.2);
         }
         if (carriers.includes(serverItem._id)) {
-            this.modifyAramid(serverItem, 3, 70, 0.2);
+            this.modifyAramid(serverItem, 3, 60, 0.2);
         }
         //Module
         if (serverItem._id === "59e7635f86f7742cbf2c1095") {
@@ -231,31 +242,35 @@ class Armor {
         }
         //Stich Profi Plate Carrier V2 Black
         if (serverItem._id === "66b6296d7994640992013b17") {
-            this.modifyAramid(serverItem, 4, 100, 0.33);
+            this.modifyAramid(serverItem, 3, 100, 0.33);
+        }
+        //Knight
+        if (serverItem._id === "628b9c7d45122232a872358f") {
+            this.modifyAramid(serverItem, 4, 45, 0.3);
         }
         //Strandhogg
         if (serverItem._id === "61bcc89aef0f505f0c6cd0fc") {
-            this.modifyAramid(serverItem, 4, 95, 0.3);
+            this.modifyAramid(serverItem, 3, 90, 0.2);
         }
         //AVS
         if (serverItem._id === "544a5caa4bdc2d1a388b4568") {
-            this.modifyAramid(serverItem, 4, 105, 0.28);
+            this.modifyAramid(serverItem, 4, 100, 0.28);
         }
         //Kirasa
         if (serverItem._id === "5b44d22286f774172b0c9de8") {
-            this.modifyAramid(serverItem, 5, 100, 0.4);
+            this.modifyAramid(serverItem, 4, 100, 0.4);
         }
         //Thor concealable
         if (serverItem._id === "609e8540d5c319764c2bc2e9") {
-            this.modifyAramid(serverItem, 5, 100, 0.35);
+            this.modifyAramid(serverItem, 4, 100, 0.35);
         }
         //Trooper 
         if (serverItem._id === "5c0e655586f774045612eeb2") {
-            this.modifyAramid(serverItem, 5, 90, 0.35);
+            this.modifyAramid(serverItem, 4, 90, 0.35);
         }
         //Hexatec
         if (serverItem._id === "63737f448b28897f2802b874") {
-            this.modifyAramid(serverItem, 5, 75, 0.3);
+            this.modifyAramid(serverItem, 4, 75, 0.3);
         }
         //Ghzel + Zhuk 6A
         if (serverItem._id === "5ab8e79e86f7742d8b372e78" || serverItem._id === "5c0e625a86f7742d77340f62") {
@@ -284,9 +299,9 @@ class Armor {
         //IOTV
         if (serverItem._id === "5b44cf1486f77431723e3d05" || serverItem._id === "5b44d0de86f774503d30cba8" || serverItem._id === "5b44cd8b86f774503d30cba2") {
             this.modifyAramid(serverItem, 5, 110, 0.28);
-            this.changeDefaultPlate(serverItem, "5b44cf1486f77431723e3d05", "xsapi_chest");
-            this.changeDefaultPlate(serverItem, "5b44d0de86f774503d30cba8", "xsapi_chest");
-            this.changeDefaultPlate(serverItem, "5b44cd8b86f774503d30cba2", "xsapi_chest");
+            this.changeDefaultPlate(serverItem, "5b44cf1486f77431723e3d05", "6783ae9ee00fdb2053bf6848");
+            this.changeDefaultPlate(serverItem, "5b44d0de86f774503d30cba8", "6783ae9ee00fdb2053bf6848");
+            this.changeDefaultPlate(serverItem, "5b44cd8b86f774503d30cba2", "6783ae9ee00fdb2053bf6848");
         }
         //OTV
         if (serverItem._id === "64abd93857958b4249003418") {
@@ -296,12 +311,12 @@ class Armor {
         //Osprey
         if (serverItem._id === "60a3c70cde5f453f634816a3" || serverItem._id === "60a3c68c37ea821725773ef5") {
             this.modifyAramid(serverItem, 5, 90, 0.25);
-            this.changeDefaultPlate(serverItem, "60a3c70cde5f453f634816a3", "mk4a_plate");
-            this.changeDefaultPlate(serverItem, "60a3c68c37ea821725773ef5", "mk4a_plate");
+            this.changeDefaultPlate(serverItem, "60a3c70cde5f453f634816a3", "6783aec223d48324c0b278f5");
+            this.changeDefaultPlate(serverItem, "60a3c68c37ea821725773ef5", "6783aec223d48324c0b278f5");
         }
         //RBAV
         if (serverItem._id === "628dc750b910320f4c27a732") {
-            this.modifyAramid(serverItem, 5, 100, 0.3);
+            this.modifyAramid(serverItem, 4, 100, 0.3);
         }
         //Bagariy
         if (serverItem._id === "628d0618d1ba6e4fa07ce5a4") {
@@ -474,7 +489,7 @@ class Armor {
             serverItem._props.Durability = 135;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 8;
-            serverItem._props.BluntThroughput = 0.16;
+            serverItem._props.BluntThroughput = 0.2;
             serverItem._props.ArmorMaterial = 'UHMWPE';
             serverItem._props.speedPenaltyPercent = -2.25;
             serverItem._props.mousePenalty = 0;
@@ -605,7 +620,7 @@ class Armor {
             serverItem._props.weaponErgonomicPenalty = 0;
         }
         //XSAPI
-        if (serverItem._id === "xsapi_chest") {
+        if (serverItem._id === "6783ae9ee00fdb2053bf6848") {
             serverItem._props.Durability = 160;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 10;
@@ -616,7 +631,7 @@ class Armor {
             serverItem._props.weaponErgonomicPenalty = -4;
         }
         //Osprey MK4A Plate
-        if (serverItem._id === "mk4a_plate") {
+        if (serverItem._id === "6783aec223d48324c0b278f5") {
             serverItem._props.Durability = 100;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 9;
@@ -1705,19 +1720,19 @@ class Armor {
             serverItem._props.Weight = 1.6;
             this.modifySubArmor(serverItem, tables, validHelmetSlots, 80 * duraModifier, 5 + classModifier, serverItem._props.BluntThroughput, 'Aramid');
         }
-        //Ronin
+        //Ronin Respirator
         if (serverItem._id === "5b4329f05acfc47a86086aa1") {
             serverItem._props.Durability = 0;
             serverItem._props.MaxDurability = serverItem._props.Durability;
             serverItem._props.armorClass = 0;
-            serverItem._props.speedPenaltyPercent = -8.6;
+            serverItem._props.speedPenaltyPercent = -9.5;
             serverItem._props.mousePenalty = 0;
-            serverItem._props.weaponErgonomicPenalty = -9;
-            serverItem._props.BluntThroughput = 0.24 * bluntModifier;
+            serverItem._props.weaponErgonomicPenalty = -11;
+            serverItem._props.BluntThroughput = 0.2 * bluntModifier;
             serverItem._props.DeafStrength = "High";
             serverItem._props.ArmorMaterial = 'Aramid';
-            serverItem._props.Weight = 1.6;
-            this.modifySubArmor(serverItem, tables, validHelmetSlots, 80 * duraModifier, 5 + classModifier, serverItem._props.BluntThroughput, 'Aramid');
+            serverItem._props.Weight = 1.9;
+            this.modifySubArmor(serverItem, tables, validHelmetSlots, 82 * duraModifier, 5 + classModifier, serverItem._props.BluntThroughput, 'Aramid');
         }
         //BNTI LSHZ-2DTM
         if (serverItem._id === "5d6d3716a4b9361bc8618872") {
