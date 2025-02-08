@@ -733,6 +733,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         const locationConfig = container.resolve<ConfigServer>("ConfigServer").getConfig<ILocationConfig>(ConfigTypes.LOCATION);
         const seeasonalEventConfig = container.resolve<ConfigServer>("ConfigServer").getConfig<ISeasonalEventConfig>(ConfigTypes.SEASONAL_EVENT);
         const seasonalEventsService = container.resolve<SeasonalEventService>("SeasonalEventService");
+        const hashUtil = container.resolve<HashUtil>("HashUtil");
         const tables = databaseService.getTables();
         const aKIFleaConf = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
         const inventoryConf = configServer.getConfig<IInventoryConfig>(ConfigTypes.INVENTORY);
@@ -760,7 +761,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         const maps = new Spawns(logger, tables, modConfig, tables.locations, utils);
         const gear = new Gear(tables, logger, modConfig);
         const itemCloning = new ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
-        const statHandler = new ItemStatHandler(tables, logger);
+        const statHandler = new ItemStatHandler(tables, logger, hashUtil);
         const descGen = new DescriptionGen(tables, modConfig, logger, statHandler);
         
         //Remember to back up json data before using this, and make sure it isn't overriding existing json objects

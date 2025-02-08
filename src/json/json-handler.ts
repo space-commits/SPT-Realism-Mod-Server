@@ -2,6 +2,7 @@ import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { ParentClasses } from "../utils/enums";
+import { HashUtil } from "@spt/utils/HashUtil";
 
 const fs = require('fs');
 const path = require('path');
@@ -52,7 +53,7 @@ const SpecialWeaponTemplates = require("../../db/templates/weapons/SpecialWeapon
 const GrenadeLauncherTemplates = require("../../db/templates/weapons/GrenadeLauncherTemplates.json");
 
 export class ItemStatHandler {
-    constructor(private tables: IDatabaseTables, private logger: ILogger) {
+    constructor(private tables: IDatabaseTables, private logger: ILogger, private hashUtils: HashUtil) {
         this.gearPusherHelper = this.gearPusherHelper.bind(this);
         this.ammoPusherHelper = this.ammoPusherHelper.bind(this);
         this.modPusherHelper = this.modPusherHelper.bind(this);
@@ -120,10 +121,11 @@ export class ItemStatHandler {
     }
 
     private addGasFilterSlot(item: ITemplateItem) {
+        const id = this.hashUtils.generate();
         item._props.Slots.push(
             {
                 "_name": "mod_equipment",
-                "_id": "6679dbe64276cec33ee8ff85",
+                "_id": id,
                 "_parent": item._id,
                 "_props": {
                     "filters": [

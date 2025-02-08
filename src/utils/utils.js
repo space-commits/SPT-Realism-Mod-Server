@@ -98,11 +98,12 @@ class Utils {
     }
     addGasMaskFilters(mods) {
         arrays_1.StaticArrays.gasMasks.forEach(g => {
-            mods[g] = {
-                "mod_equipment": [
-                    "590c595c86f7747884343ad7"
-                ]
-            };
+            if (this.itemDB()[g])
+                mods[g] = {
+                    "mod_equipment": [
+                        "590c595c86f7747884343ad7"
+                    ]
+                };
         });
     }
     addArmorInserts(mods) {

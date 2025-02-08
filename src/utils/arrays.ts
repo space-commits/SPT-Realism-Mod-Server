@@ -315,7 +315,11 @@ export class StaticArrays {
         "672e2e7517018293d11bbdc1",
         "5b432c305acfc40019478128",
         "60363c0c92ec1c31037959f5",
-        "67a13809c3bc1e2fa47e6eec"
+        "67a13809c3bc1e2fa47e6eec",
+        "66326bfd46817c660d01514e",
+        "6770852638b652c9b4e588a9",
+        "66326bfd46817c660d015130",
+        "66326bfd46817c660d01514f"
     ];
 
     static gasEventMasksLow: Record<string, number> = {

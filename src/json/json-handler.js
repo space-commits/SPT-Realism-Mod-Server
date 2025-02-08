@@ -48,9 +48,11 @@ const GrenadeLauncherTemplates = require("../../db/templates/weapons/GrenadeLaun
 class ItemStatHandler {
     tables;
     logger;
-    constructor(tables, logger) {
+    hashUtils;
+    constructor(tables, logger, hashUtils) {
         this.tables = tables;
         this.logger = logger;
+        this.hashUtils = hashUtils;
         this.gearPusherHelper = this.gearPusherHelper.bind(this);
         this.ammoPusherHelper = this.ammoPusherHelper.bind(this);
         this.modPusherHelper = this.modPusherHelper.bind(this);
@@ -111,9 +113,10 @@ class ItemStatHandler {
         }
     }
     addGasFilterSlot(item) {
+        const id = this.hashUtils.generate();
         item._props.Slots.push({
             "_name": "mod_equipment",
-            "_id": "6679dbe64276cec33ee8ff85",
+            "_id": id,
             "_parent": item._id,
             "_props": {
                 "filters": [

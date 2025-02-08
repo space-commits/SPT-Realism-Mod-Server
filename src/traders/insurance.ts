@@ -82,7 +82,7 @@ export class InsuranceOverride extends InsuranceController {
         //replace therapist insurance return with cash
         if (insurance.traderId == theraId) {
             let itemsToDelete: IItem[] = [];
-            let totalInsurancePayout = 0;
+            let totalInsurancePayout = 100;
             let id = "";
             let parentId = "";
 
@@ -96,7 +96,6 @@ export class InsuranceOverride extends InsuranceController {
             });
 
             insurance.items = insurance.items.filter(item => !itemsToDelete.includes(item));
-
             let item: IItem = {
                 "_tpl": "5449016a4bdc2d6f028b456f",
                 "_id": id,

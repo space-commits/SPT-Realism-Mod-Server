@@ -550,6 +550,7 @@ class Main {
         const locationConfig = container.resolve("ConfigServer").getConfig(ConfigTypes_1.ConfigTypes.LOCATION);
         const seeasonalEventConfig = container.resolve("ConfigServer").getConfig(ConfigTypes_1.ConfigTypes.SEASONAL_EVENT);
         const seasonalEventsService = container.resolve("SeasonalEventService");
+        const hashUtil = container.resolve("HashUtil");
         const tables = databaseService.getTables();
         const aKIFleaConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.RAGFAIR);
         const inventoryConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.INVENTORY);
@@ -577,7 +578,7 @@ class Main {
         const maps = new spawns_1.Spawns(logger, tables, modConfig, tables.locations, utils);
         const gear = new gear_1.Gear(tables, logger, modConfig);
         const itemCloning = new item_cloning_1.ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
-        const statHandler = new json_handler_1.ItemStatHandler(tables, logger);
+        const statHandler = new json_handler_1.ItemStatHandler(tables, logger, hashUtil);
         const descGen = new description_gen_1.DescriptionGen(tables, modConfig, logger, statHandler);
         //Remember to back up json data before using this, and make sure it isn't overriding existing json objects
         // jsonGen.attTemplatesCodeGen();

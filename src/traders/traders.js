@@ -103,7 +103,7 @@ class Traders {
             insurance.chanceNoAttachmentsTakenPercent = 25;
             insurance.runIntervalSeconds = 300;
             this.tables.traders[prapId].base.insurance.min_return_hour = 0;
-            this.tables.traders[prapId].base.insurance.max_return_hour = 0;
+            this.tables.traders[prapId].base.insurance.max_return_hour = 1;
             this.tables.traders[theraId].base.insurance.min_return_hour = 0;
             this.tables.traders[theraId].base.insurance.max_return_hour = 0;
             this.tables.traders[prapId].base.loyaltyLevels.forEach(ll => {

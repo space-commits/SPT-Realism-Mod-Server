@@ -86,11 +86,12 @@ export class Utils {
 
     public addGasMaskFilters(mods: IMods) {
         StaticArrays.gasMasks.forEach(g => {
-            mods[g] = {
-                "mod_equipment": [
-                    "590c595c86f7747884343ad7"
-                ]
-            }
+            if (this.itemDB()[g]) 
+                mods[g] = {
+                    "mod_equipment": [
+                        "590c595c86f7747884343ad7"
+                    ]
+                }
         });
     }
 
