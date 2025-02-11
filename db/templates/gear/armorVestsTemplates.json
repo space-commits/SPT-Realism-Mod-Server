@@ -12,7 +12,9 @@
         "Comfort": 1.05,
         "speedPenaltyPercent": -2.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -2
+        "weaponErgonomicPenalty": -2,
+        "TemplateType": "gear",
+		"Price": 18000
     },
     "5ab8e4ed86f7742d8e50c7fa": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -27,7 +29,9 @@
         "Comfort": 1.05,
         "speedPenaltyPercent": -2.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -1.5
+        "weaponErgonomicPenalty": -1.5,
+        "TemplateType": "gear",
+		"Price": 33000
     },
     "545cdb794bdc2d3a198b456a": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -42,7 +46,9 @@
         "Comfort": 1.08,
         "speedPenaltyPercent": -6,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -7
+        "weaponErgonomicPenalty": -7,
+        "TemplateType": "gear",
+		"Price": 30000
     },
     "5c0e53c886f7747fa54205c7": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -57,7 +63,9 @@
         "Comfort": 1.12,
         "speedPenaltyPercent": -5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -6
+        "weaponErgonomicPenalty": -6,
+        "TemplateType": "gear",
+		"Price": 23000
     },
     "5c0e51be86f774598e797894": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -72,7 +80,9 @@
         "Comfort": 1.12,
         "speedPenaltyPercent": -5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -6
+        "weaponErgonomicPenalty": -6,
+        "TemplateType": "gear",
+		"Price": 23000
     },
     "5c0e541586f7747fa54205c9": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -87,7 +97,9 @@
         "Comfort": 1.05,
         "speedPenaltyPercent": -5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -6
+        "weaponErgonomicPenalty": -6,
+        "TemplateType": "gear",
+		"Price": 26000
     },
     "5df8a2ca86f7740bfe6df777": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -102,7 +114,9 @@
         "Comfort": 1.1,
         "speedPenaltyPercent": -3,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -3
+        "weaponErgonomicPenalty": -3,
+        "TemplateType": "gear",
+		"Price": 27000
     },
     "5c0e5bab86f77461f55ed1f3": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -117,7 +131,9 @@
         "Comfort": 1.1,
         "speedPenaltyPercent": -6,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -6
+        "weaponErgonomicPenalty": -6,
+        "TemplateType": "gear",
+		"Price": 22000
     },
     "5c0e57ba86f7747fa141986d": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -132,7 +148,9 @@
         "Comfort": 1.1,
         "speedPenaltyPercent": -6,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -6
+        "weaponErgonomicPenalty": -6,
+        "TemplateType": "gear",
+		"Price": 22000
     },
     "5fd4c474dd870108a754b241": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -147,7 +165,9 @@
         "Comfort": 0.85,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear",
+		"Price": 7000
     },
     "609e8540d5c319764c2bc2e9": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -162,7 +182,9 @@
         "Comfort": 0.95,
         "speedPenaltyPercent": -1.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -1
+        "weaponErgonomicPenalty": -1,
+        "TemplateType": "gear",
+		"Price": 20000
     },
     "60a283193cb70855c43a381d": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -177,7 +199,9 @@
         "Comfort": 1.05,
         "speedPenaltyPercent": -4.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -3.5
+        "weaponErgonomicPenalty": -3.5,
+        "TemplateType": "gear",
+		"Price": 33000
     },
     "5e9dacf986f774054d6b89f4": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -192,7 +216,9 @@
         "Comfort": 1.045,
         "speedPenaltyPercent": -4.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -2.5
+        "weaponErgonomicPenalty": -2.5,
+        "TemplateType": "gear",
+		"Price": 26000
     },
     "62a09d79de7ac81993580530": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -207,7 +233,9 @@
         "Comfort": 1,
         "speedPenaltyPercent": -3,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -8
+        "weaponErgonomicPenalty": -8,
+        "TemplateType": "gear",
+		"Price": 165415
     },
     "5b44cd8b86f774503d30cba2": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -222,7 +250,9 @@
         "Comfort": 1.05,
         "speedPenaltyPercent": -5.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -3.5
+        "weaponErgonomicPenalty": -3.5,
+        "TemplateType": "gear",
+		"Price": 22000
     },
     "5b44cf1486f77431723e3d05": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -237,7 +267,9 @@
         "Comfort": 1.025,
         "speedPenaltyPercent": -3.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -3.5
+        "weaponErgonomicPenalty": -3.5,
+        "TemplateType": "gear",
+		"Price": 26000
     },
     "5b44d0de86f774503d30cba8": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -252,7 +284,9 @@
         "Comfort": 1.035,
         "speedPenaltyPercent": -4.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -1.5
+        "weaponErgonomicPenalty": -1.5,
+        "TemplateType": "gear",
+		"Price": 28000
     },
     "5b44d22286f774172b0c9de8": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -267,7 +301,9 @@
         "Comfort": 1.07,
         "speedPenaltyPercent": -3,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -3
+        "weaponErgonomicPenalty": -3,
+        "TemplateType": "gear",
+		"Price": 16000
     },
     "5f5f41476bdad616ad46d631": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -282,7 +318,9 @@
         "Comfort": 1.07,
         "speedPenaltyPercent": -5.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -5.5
+        "weaponErgonomicPenalty": -5.5,
+        "TemplateType": "gear",
+		"Price": 24000
     },
     "607f20859ee58b18e41ecd90": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -297,7 +335,9 @@
         "Comfort": 1.05,
         "speedPenaltyPercent": -1.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -1
+        "weaponErgonomicPenalty": -1,
+        "TemplateType": "gear",
+		"Price": 1000
     },
     "5ca2151486f774244a3b8d30": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -312,7 +352,9 @@
         "Comfort": 1.05,
         "speedPenaltyPercent": -5.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -2.5
+        "weaponErgonomicPenalty": -2.5,
+        "TemplateType": "gear",
+		"Price": 24000
     },
     "5ca21c6986f77479963115a7": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -327,7 +369,9 @@
         "Comfort": 1.065,
         "speedPenaltyPercent": -6.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -4.5
+        "weaponErgonomicPenalty": -4.5,
+        "TemplateType": "gear",
+		"Price": 32000
     },
     "5e4abb5086f77406975c9342": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -342,7 +386,9 @@
         "Comfort": 0.88,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear",
+		"Price": 7000
     },
     "6038b4ca92ec1c3103795a0d": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -357,7 +403,9 @@
         "Comfort": 0.88,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear",
+		"Price": 7000
     },
     "6038b4b292ec1c3103795a0b": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -372,7 +420,9 @@
         "Comfort": 0.88,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear",
+		"Price": 7000
     },
     "5c0e655586f774045612eeb2": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -387,7 +437,9 @@
         "Comfort": 0.91,
         "speedPenaltyPercent": -1,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -1
+        "weaponErgonomicPenalty": -1,
+        "TemplateType": "gear",
+		"Price": 12000
     },
     "5c0e5edb86f77461f55ed1f7": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -402,7 +454,9 @@
         "Comfort": 1.07,
         "speedPenaltyPercent": -2.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -2
+        "weaponErgonomicPenalty": -2,
+        "TemplateType": "gear",
+		"Price": 17000
     },
     "5c0e625a86f7742d77340f62": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -417,7 +471,9 @@
         "Comfort": 1.06,
         "speedPenaltyPercent": -2,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -2.5
+        "weaponErgonomicPenalty": -2.5,
+        "TemplateType": "gear",
+		"Price": 20000
     },
     "59e7635f86f7742cbf2c1095": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -432,7 +488,9 @@
         "Comfort": 1.07,
         "speedPenaltyPercent": -2,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -1.5
+        "weaponErgonomicPenalty": -1.5,
+        "TemplateType": "gear",
+		"Price": 19000
     },
     "5648a7494bdc2d9d488b4583": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -447,7 +505,9 @@
         "Comfort": 1.05,
         "speedPenaltyPercent": -1.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -1
+        "weaponErgonomicPenalty": -1,
+        "TemplateType": "gear",
+		"Price": 22000
     },
     "63737f448b28897f2802b874": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -462,7 +522,9 @@
         "Comfort": 0.93,
         "speedPenaltyPercent": 0,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": 0
+        "weaponErgonomicPenalty": 0,
+        "TemplateType": "gear",
+		"Price": 4000
     },
     "64abd93857958b4249003418": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -477,7 +539,9 @@
         "Comfort": 1.035,
         "speedPenaltyPercent": -1.25,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -1.5
+        "weaponErgonomicPenalty": -1.5,
+        "TemplateType": "gear",
+		"Price": 18000
     },
     "64be79e2bf8412471d0d9bcc": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -492,7 +556,9 @@
         "Comfort": 1.065,
         "speedPenaltyPercent": -3.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -2.5
+        "weaponErgonomicPenalty": -2.5,
+        "TemplateType": "gear",
+		"Price": 36000
     },
     "64be79c487d1510151095552": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -507,6 +573,8 @@
         "Comfort": 1.065,
         "speedPenaltyPercent": -3.5,
         "mousePenalty": 0,
-        "weaponErgonomicPenalty": -2.5
+        "weaponErgonomicPenalty": -2.5,
+        "TemplateType": "gear",
+		"Price": 36000
     }
 }

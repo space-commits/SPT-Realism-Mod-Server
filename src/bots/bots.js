@@ -216,6 +216,8 @@ class BotLoader {
     //stops bots from bleeding out too often with medical changes enabled
     setBotHealth() {
         for (let bot in this.arrays.botArr) {
+            if (bot.includes("assault"))
+                continue;
             let botType = this.arrays.botArr[bot];
             if (botType.skills?.Common !== undefined) {
                 if (botType.skills.Common["Vitality"] !== undefined) {

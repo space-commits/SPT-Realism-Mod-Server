@@ -575,7 +575,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                                 bots.updateBots(pmcData, logger, modConfig, bots, utils);
                             }
 
-                            if (!ModTracker.swagPresent) { //!ModTracker.qtbPresent && 
+                            if (!ModTracker.swagPresent && !ModTracker.qtbSpawnsActive) {
                                 pmcConf.convertIntoPmcChance.laboratory = {
                                     "assault":
                                     {
@@ -786,10 +786,11 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         if (modConfig.recoil_attachment_overhaul == true) {
             itemCloning.createCustomWeapons();
             itemCloning.createCustomAttachments();
-            itemsClass.addCustomItems();
             attachBase.loadAttCompat();
             attachBase.loadCaliberConversions();
         }
+
+        itemsClass.addCustomItems();
 
         if (modConfig.realistic_ballistics) {
             itemCloning.createCustomPlates();

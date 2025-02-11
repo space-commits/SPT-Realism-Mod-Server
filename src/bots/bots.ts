@@ -230,6 +230,7 @@ export class BotLoader {
     //stops bots from bleeding out too often with medical changes enabled
     public setBotHealth() {
         for (let bot in this.arrays.botArr) {
+            if (bot.includes("assault")) continue;
             let botType = this.arrays.botArr[bot];
             if (botType.skills?.Common !== undefined) {
                 if (botType.skills.Common["Vitality"] !== undefined) {
@@ -1704,7 +1705,7 @@ export class BotLoader {
         }
     }
 
-    private addOptionalGasMasks(botJsonTemplate: IBotType){
+    private addOptionalGasMasks(botJsonTemplate: IBotType) {
         if (ModTracker.tgcPresent) {
             botJsonTemplate.inventory.equipment.FaceCover["672e2e756803734b60f5ac1e"] = 1;
             botJsonTemplate.inventory.equipment.FaceCover["672e2e7517018293d11bbdc1"] = 1;

@@ -419,7 +419,7 @@ class Main {
                         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
                             bots.updateBots(pmcData, logger, modConfig, bots, utils);
                         }
-                        if (!utils_1.ModTracker.swagPresent) { //!ModTracker.qtbPresent && 
+                        if (!utils_1.ModTracker.swagPresent && !utils_1.ModTracker.qtbSpawnsActive) {
                             pmcConf.convertIntoPmcChance.laboratory = {
                                 "assault": {
                                     "min": 100,
@@ -598,10 +598,10 @@ class Main {
         if (modConfig.recoil_attachment_overhaul == true) {
             itemCloning.createCustomWeapons();
             itemCloning.createCustomAttachments();
-            itemsClass.addCustomItems();
             attachBase.loadAttCompat();
             attachBase.loadCaliberConversions();
         }
+        itemsClass.addCustomItems();
         if (modConfig.realistic_ballistics) {
             itemCloning.createCustomPlates();
             bots.setBotHealth();

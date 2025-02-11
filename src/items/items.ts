@@ -69,7 +69,7 @@ export class ItemsClass {
                     this.locales()[localeID][`${itemId} ${key}`] = value;
                 }
             }
-        }
+        }    
 
         //mosin bayonet to mosin barrels
         this.itemDB()["5ae09bff5acfc4001562219d"]._props.Slots[2]._props.filters[0].Filter.push("6783afddef9d6f5d579c43f1");

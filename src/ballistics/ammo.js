@@ -597,7 +597,7 @@ class Ammo {
             if (serverItem._id === "5e85a9a6eacf8c039e4e2ac1") {
                 serverItem._props.PenetrationPower = 22;
                 serverItem._props.ArmorDamage = 1;
-                serverItem._props.ProjectileCount = 12; //12
+                serverItem._props.ProjectileCount = 8; //12
                 serverItem._props.Damage = 264 / serverItem._props.ProjectileCount;
                 serverItem._props.InitialSpeed = 270;
                 serverItem._props.RicochetChance = 0.35;

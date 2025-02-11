@@ -76,7 +76,7 @@ export class Spawns {
         //this.mapDB.bigmap.base.BossLocationSpawn = [];
         //this.mapDB.bigmap.base.waves = [];       
         const mapKeys = Object.keys(botsToAddPerMap) ?? [];
-        const locations =  this.mapDB;
+        const locations = this.mapDB;
         for (const mapKey of mapKeys) {
             const bossesToAdd = botsToAddPerMap[mapKey];
             for (const boss of bossesToAdd) {
@@ -98,14 +98,14 @@ export class Spawns {
 
         //SPT does its own custom PMC waves, this couble be doubling up or interfering in some way
         if (this.modConf.spawn_waves == true && !ModTracker.swagPresent && !ModTracker.qtbSpawnsActive) {
-            locationConfig.customWaves.normal = {}; //get rid of the extra waves of scavs SPT adds for no good reason
-            locationConfig.customWaves.boss = {}; //get rid of extra PMC spawns
-            locationConfig.addCustomBotWavesToMaps = false;
-            locationConfig.splitWaveIntoSingleSpawnsSettings.enabled = false;
+            // locationConfig.customWaves.normal = {}; //get rid of the extra waves of scavs SPT adds for no good reason
+            // locationConfig.customWaves.boss = {}; //get rid of extra PMC spawns
+            locationConfig.addCustomBotWavesToMaps = true;
+            //locationConfig.splitWaveIntoSingleSpawnsSettings.enabled = false;
             // this.mapDB.bigmap.base.waves = spawnWaves.CustomsWaves;
             // this.mapDB.lighthouse.base.waves = spawnWaves.LighthouseWaves;
-            //this.mapDB.factory4_day.base.waves = spawnWaves.FactoryWaves;
-            //this.mapDB.factory4_night.base.waves = spawnWaves.FactoryWaves;
+            this.mapDB.factory4_day.base.waves = spawnWaves.FactoryWaves;
+            this.mapDB.factory4_night.base.waves = spawnWaves.FactoryWaves;
             // this.mapDB.interchange.base.waves = spawnWaves.InterchangeWaves;
             // this.mapDB.shoreline.base.waves = spawnWaves.ShorelineWaves;
             // this.mapDB.rezervbase.base.waves = spawnWaves.ReserveWaves;
@@ -116,7 +116,7 @@ export class Spawns {
             // this.mapDB.sandbox_high.base.waves = spawnWaves.GroundZeroWaves;
             for (const i in this.mapDB) {
                 const map = this.mapDB[i]?.base;
-                if (map !== undefined && map?.BossLocationSpawn !== undefined) {  
+                if (map !== undefined && map?.BossLocationSpawn !== undefined) {
                     if (map.NonWaveGroupScenario) map.NonWaveGroupScenario.Enabled = false;
                     map.BotStart = 0;
                     map["BotStartPlayer"] = 0;
@@ -129,7 +129,7 @@ export class Spawns {
                     map.BotSpawnCountStep = 10000000;
                     // map.NewSpawn = false;
                     // map.OldSpawn = true;
-                   map["NewSpawnForPlayers"] = false;
+                    map["NewSpawnForPlayers"] = false;
                 }
             }
         }
