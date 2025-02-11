@@ -112,11 +112,11 @@ class TieredFlea {
         }
     }
     updateFlea(logger, ragfairOfferGen, container, level) {
-        if (level === undefined || (seasonalevents_1.EventTracker.hasExploded && !seasonalevents_1.EventTracker.endExplosionEvent)) {
+        if (level == null || (seasonalevents_1.EventTracker.hasExploded && !seasonalevents_1.EventTracker.endExplosionEvent)) {
             this.fleaHelper(this.flea0.bind(this), ragfairOfferGen, container);
             logger.info("Realism Mod: Fleamarket Tier Set To Default (tier 0)");
         }
-        if (level !== undefined) {
+        if (level != null) {
             if (level < 5) {
                 this.fleaHelper(this.flea0.bind(this), ragfairOfferGen, container);
                 logger.info("Realism mod: Fleamarket Locked At Tier 0");

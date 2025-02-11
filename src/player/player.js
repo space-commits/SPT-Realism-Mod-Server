@@ -251,11 +251,11 @@ class Player {
         }
     }
     debuffMul(buff, mult) {
-        if (buff?.Threshold !== undefined) {
+        if (buff?.Threshold != null) {
             buff.Threshold /= mult;
             buff.K *= mult;
         }
-        else if (buff?.Threshold == undefined) {
+        else if (buff?.Threshold == null) {
             buff *= mult;
         }
     }
@@ -276,7 +276,7 @@ class Player {
         for (let i in this.tables.templates.items) {
             let serverItem = this.tables.templates.items[i];
             if (invItem._tpl === this.tables.templates.items[i]._id
-                && invItem?.upd?.Repairable !== undefined
+                && invItem?.upd?.Repairable != null
                 && (serverItem._parent === enums_1.ParentClasses.ARMORVEST
                     || serverItem._parent === enums_1.ParentClasses.ARMOREDEQUIPMENT
                     || serverItem._parent === enums_1.ParentClasses.HEADWEAR

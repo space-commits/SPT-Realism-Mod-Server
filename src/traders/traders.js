@@ -243,7 +243,7 @@ class Traders {
     setBaseOfferValues() {
         for (let i in this.tables.traders) {
             let trader = this.tables.traders[i];
-            if (trader?.assort?.items === undefined || trader.base.nickname === "БТР" || trader.base.nickname === "Arena" || trader.base.nickname.toLowerCase() === "fence")
+            if (trader?.assort?.items == null || trader.base.nickname === "БТР" || trader.base.nickname === "Arena" || trader.base.nickname.toLowerCase() === "fence")
                 continue;
             if (modConfig.change_trader_ll == true) {
                 this.setLoyaltyLevels(trader);
@@ -252,25 +252,88 @@ class Traders {
         }
     }
     setBasePrices(trader) {
-        if (modConfig.realistic_ballistics == true)
-            this.setBasePrice(AmmoTemplates, trader);
+        if (modConfig.realistic_ballistics == true) {
+            this.setBasePrice([AmmoTemplates], trader);
+            this.setBasePrice([ArmorChestrigTemplates, ArmorComponentsTemplates, ArmorMasksTemplates, ArmorPlateTemplates, ArmorVestsTemplates, ArmorChestrigTemplates, HelmetTemplates], trader, true);
+        }
+        this.adjustPriceByCategory(trader);
     }
-    setBasePrice(templates, trader) {
-        for (let item in trader.assort.items) { //loop offers
-            if (trader.assort.items[item].parentId !== "hideout")
-                continue;
-            let offer = trader.assort.items[item];
-            let offerId = offer._id;
-            let offerTpl = offer._tpl;
-            if (templates[offerTpl]) {
-                let barter = trader?.assort?.barter_scheme[offerId][0][0];
-                if (this.itemDB()[barter?._tpl]?._parent !== enums_1.ParentClasses.MONEY)
+    getChildren(items, parent) {
+        return items.filter(item => item.parentId === parent._id);
+    }
+    setBasePrice(templates, trader, isNestedArmor = false) {
+        for (const t in templates) {
+            const template = templates[t];
+            for (const ti in template) {
+                const templateItem = template[ti];
+                const offer = trader.assort.items.find(item => item._tpl === templateItem.ItemID);
+                if (offer == null)
                     continue;
-                let templateItem = templates[offerTpl];
-                let priceModifier = templateItem?.BasePriceModifier !== undefined ? templateItem?.BasePriceModifier : 1;
-                barter.count *= priceModifier;
+                const offerId = offer._id;
+                if (offer._id == null)
+                    continue;
+                const barterItem = trader?.assort?.barter_scheme?.[offerId]?.[0]?.[0];
+                if (barterItem == null || this.itemDB()[barterItem?._tpl]?._parent !== enums_1.ParentClasses.MONEY)
+                    continue;
+                if (!isNestedArmor) {
+                    const priceModifier = templateItem?.BasePriceModifier != null ? templateItem?.BasePriceModifier : 1;
+                    barterItem.count *= priceModifier;
+                }
+                else {
+                    if (templateItem?.Price == null || templateItem.Price == 0)
+                        continue;
+                    let totalPrice = templateItem.Price;
+                    const children = this.getChildren(trader.assort.items, offer);
+                    for (const child of children) {
+                        const childTemplate = ArmorPlateTemplates[child._tpl];
+                        if (childTemplate == null || childTemplate?.Price == null || childTemplate.Price == 0)
+                            continue;
+                        totalPrice += childTemplate.Price;
+                    }
+                    barterItem.count = totalPrice;
+                }
             }
         }
+    }
+    adjustPriceByCategory(trader) {
+        if (modConfig.adjust_trader_prices == true)
+            for (const i in trader.assort.items) {
+                const offer = trader.assort.items[i];
+                const offerId = offer?._id;
+                if (offerId == null)
+                    continue;
+                const offerTpl = offer._tpl;
+                const barter = trader?.assort?.barter_scheme?.[offerId];
+                if (barter == null)
+                    continue;
+                const barterItem = barter?.[0]?.[0];
+                if (barterItem == null || this.itemDB()[barterItem?._tpl]?._parent !== enums_1.ParentClasses.MONEY)
+                    continue;
+                const itemTemplate = this.itemDB()[offerTpl];
+                if (itemTemplate == null)
+                    return;
+                const itemParent = this.itemDB()[offerTpl]?._parent;
+                if (itemParent == null)
+                    return;
+                if (itemParent === enums_1.ParentClasses.AMMO)
+                    barterItem.count *= 1.5;
+                if (itemParent === enums_1.ParentClasses.AMMO_BOX)
+                    barterItem.count *= 1.5;
+                if (itemParent === enums_1.ParentClasses.DRUGS)
+                    barterItem.count *= 2;
+                if (itemParent === enums_1.ParentClasses.MEDKIT)
+                    barterItem.count *= 2;
+                if (itemParent === enums_1.ParentClasses.MEDS)
+                    barterItem.count *= 2;
+                if (itemParent === enums_1.ParentClasses.STIMULATOR)
+                    barterItem.count *= 2.5;
+                if (itemParent === enums_1.ParentClasses.MEDICAL_SUPPLIES)
+                    barterItem.count *= 2;
+                if (itemParent === enums_1.ParentClasses.FOOD)
+                    barterItem.count *= 2;
+                if (itemParent === enums_1.ParentClasses.DRINK)
+                    barterItem.count *= 2;
+            }
     }
     setLoyaltyLevels(trader) {
         if (modConfig.realistic_ballistics == true) {
@@ -298,7 +361,7 @@ class Traders {
             if (template[offerTpl]) {
                 const barter = trader?.assort?.barter_scheme[offerId][0][0];
                 const templateItem = template[offerTpl];
-                const loyaltyLvl = templateItem?.LoyaltyLevel !== undefined ? templateItem?.LoyaltyLevel : 2;
+                const loyaltyLvl = templateItem?.LoyaltyLevel != null ? templateItem?.LoyaltyLevel : 2;
                 if (this.itemDB()[barter?._tpl]?._parent !== enums_1.ParentClasses.MONEY) {
                     trader.assort.loyal_level_items[offerId] = this.utils.clampNumber(loyaltyLvl - 1, 1, 4);
                 }
@@ -444,7 +507,7 @@ class Traders {
             });
             parent = id;
         }
-        if (secondaryChildItems !== undefined) {
+        if (secondaryChildItems != null) {
             for (let key in secondaryChildItems) {
                 let id = this.utils.genId();
                 assort.items.push({
@@ -549,9 +612,9 @@ class RandomizeTraderAssort {
         if (pmcData) {
             pmcData.forEach(element => {
                 playerCount++;
-                if (element?.TradersInfo != null && element?.TradersInfo != undefined) {
+                if (element?.TradersInfo != null) {
                     let ll = element?.TradersInfo[traderId]?.loyaltyLevel;
-                    totalLL += ll !== null && ll !== undefined ? ll : 1;
+                    totalLL += ll != null ? ll : 1;
                 }
             });
         }
@@ -565,13 +628,13 @@ class RandomizeTraderAssort {
         }
         return avgLL;
     }
-    adjustTraderStockAtServerStart(pmcData) {
+    adjustTraderStockAtGameStart(pmcData) {
         if (seasonalevents_1.EventTracker.isChristmas == true) {
             this.logger.warning("====== Christmas Sale, Everything 15% Off! ======");
         }
         for (let i in this.tables.traders) {
             let trader = this.tables.traders[i];
-            if (trader.assort?.items !== undefined && trader.base.nickname !== "БТР" && trader.base.nickname !== "Arena" && trader.base.nickname.toLocaleLowerCase() !== "fence") {
+            if (trader.assort?.items != null && trader.base.nickname !== "БТР" && trader.base.nickname !== "Arena" && trader.base.nickname.toLocaleLowerCase() !== "fence") {
                 let assortItems = trader.assort.items;
                 let ll = this.getAverageLL(pmcData, i);
                 for (let item in assortItems) {
@@ -579,25 +642,25 @@ class RandomizeTraderAssort {
                     let itemId = assortItem._id;
                     let itemTemplId = assortItem._tpl;
                     if (modConfig.randomize_trader_stock == true) {
-                        if (assortItem.upd?.StackObjectsCount !== undefined) {
+                        if (assortItem.upd?.StackObjectsCount != null) {
                             this.randomizeStock(assortItem, ll);
                         }
-                        if (assortItem.upd?.UnlimitedCount !== undefined) {
+                        if (assortItem.upd?.UnlimitedCount != null) {
                             assortItem.upd.UnlimitedCount = false;
                         }
                     }
-                    if (modConfig.randomize_trader_prices == true || modConfig.adjust_trader_prices) {
+                    if (modConfig.randomize_trader_prices == true) {
                         if (trader?.assort?.barter_scheme) {
                             let barter = trader.assort.barter_scheme[itemId];
-                            if (barter !== undefined) {
-                                this.setAndRandomizeCost(this.utils, itemTemplId, barter, true);
+                            if (barter != null) {
+                                this.setAndRandomizeCost(this.utils, barter);
                             }
                         }
                     }
                 }
             }
             if (modConfig.randomize_trader_ll == true) {
-                if (trader.assort?.loyal_level_items !== undefined) {
+                if (trader.assort?.loyal_level_items != null) {
                     let ll = trader.assort.loyal_level_items;
                     for (let lvl in ll) {
                         this.randomizeLL(ll, lvl);
@@ -822,14 +885,11 @@ class RandomizeTraderAssort {
             return stockCount;
         }
     }
-    setAndRandomizeCost(utils, itemTemplId, barter, setBasePrice) {
-        let barterItem = barter[0][0];
+    setAndRandomizeCost(utils, barter) {
+        const barterItem = barter[0][0];
         if (this.itemDB[barterItem._tpl]._parent === enums_1.ParentClasses.MONEY) {
-            let randNum = utils.pickRandNumOneInTen();
-            let cost = barterItem.count;
-            if (setBasePrice == true && modConfig.adjust_trader_prices == true) {
-                this.adjustPriceByCategory(barterItem, itemTemplId, cost);
-            }
+            const randNum = utils.pickRandNumOneInTen();
+            const cost = barterItem.count;
             if (modConfig.randomize_trader_prices == true) {
                 if (randNum >= 8) {
                     barterItem.count = cost * modConfig.rand_cost_increase;
@@ -842,34 +902,6 @@ class RandomizeTraderAssort {
                 barterItem.count = barterItem.count * 0.85;
             }
         }
-    }
-    adjustPriceByCategory(barter, itemTemplId, cost) {
-        const item = this.itemDB[itemTemplId];
-        if (item === undefined)
-            return;
-        const itemParent = this.itemDB[itemTemplId]?._parent;
-        if (itemParent === undefined)
-            return;
-        if (itemParent === enums_1.ParentClasses.AMMO)
-            barter.count = cost * 3;
-        if (itemParent === enums_1.ParentClasses.AMMO_BOX)
-            barter.count = cost * 3;
-        if (itemParent === enums_1.ParentClasses.DRUGS)
-            barter.count = cost * 2;
-        if (itemParent === enums_1.ParentClasses.MEDKIT)
-            barter.count = cost * 2;
-        if (itemParent === enums_1.ParentClasses.MEDS)
-            barter.count = cost * 2;
-        if (itemParent === enums_1.ParentClasses.STIMULATOR)
-            barter.count = cost * 2.5;
-        if (itemParent === enums_1.ParentClasses.MEDICAL_SUPPLIES)
-            barter.count = cost * 2;
-        if (itemParent === enums_1.ParentClasses.FOOD)
-            barter.count = cost * 2;
-        if (itemParent === enums_1.ParentClasses.DRINK)
-            barter.count = cost * 2;
-        if (itemParent === enums_1.ParentClasses.HEADWEAR)
-            barter.count = cost * 0.55;
     }
     randomizeLL(ll, i) {
         let level = ll[i];
@@ -927,19 +959,19 @@ class TraderRefresh extends TraderAssortHelper_1.TraderAssortHelper {
             let itemId = assortItems[i]._id;
             let itemTemplId = assortItems[i]._tpl;
             if (modConfig.randomize_trader_stock == true) {
-                if (item.upd?.StackObjectsCount !== undefined) {
+                if (item.upd?.StackObjectsCount != null) {
                     randomTraderAss.randomizeStock(item, averageLL);
                 }
-                if (item.upd?.UnlimitedCount !== undefined) {
+                if (item.upd?.UnlimitedCount != null) {
                     item.upd.UnlimitedCount = false;
                 }
-                if (item.upd?.BuyRestrictionCurrent !== undefined) {
+                if (item.upd?.BuyRestrictionCurrent != null) {
                     item.upd.BuyRestrictionCurrent = 0;
                 }
             }
             if (modConfig.randomize_trader_prices == true) {
                 let barter = assortBarters[itemId];
-                if (barter !== undefined) {
+                if (barter != null) {
                     this.randomizePricesAtRefresh(randomTraderAss, utils, itemTemplId, barter);
                 }
             }
@@ -947,7 +979,7 @@ class TraderRefresh extends TraderAssortHelper_1.TraderAssortHelper {
         return assortItems;
     }
     randomizePricesAtRefresh(randomTraderAss, utils, itemTemplId, barter) {
-        randomTraderAss.setAndRandomizeCost(utils, itemTemplId, barter, true);
+        randomTraderAss.setAndRandomizeCost(utils, barter);
     }
 }
 exports.TraderRefresh = TraderRefresh;

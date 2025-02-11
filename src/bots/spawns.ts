@@ -32,12 +32,12 @@ export class Spawns {
 
         for (let i in this.mapDB) {
             let mapBase = this.mapDB[i]?.base;
-            if (mapBase !== undefined && mapBase?.BossLocationSpawn !== undefined) {
+            if (mapBase != null && mapBase?.BossLocationSpawn != null) {
                 for (let k in mapBase.BossLocationSpawn) {
                     let bossSpawnLocation = mapBase.BossLocationSpawn[k];
                     let chance = 0;
                     if (i !== "lighthouse" && i !== "laboratory") {
-                        if (bossSpawnLocation?.TriggerId !== undefined && bossSpawnLocation?.TriggerId !== "") {
+                        if (bossSpawnLocation?.TriggerId != null && bossSpawnLocation?.TriggerId !== "") {
                             chance = bossSpawnLocation.BossChance * chanceMulti * 2;
                         } else {
                             chance = bossSpawnLocation.BossChance * chanceMulti;
@@ -116,7 +116,7 @@ export class Spawns {
             // this.mapDB.sandbox_high.base.waves = spawnWaves.GroundZeroWaves;
             for (const i in this.mapDB) {
                 const map = this.mapDB[i]?.base;
-                if (map !== undefined && map?.BossLocationSpawn !== undefined) {
+                if (map != null && map?.BossLocationSpawn != null) {
                     if (map.NonWaveGroupScenario) map.NonWaveGroupScenario.Enabled = false;
                     map.BotStart = 0;
                     map["BotStartPlayer"] = 0;

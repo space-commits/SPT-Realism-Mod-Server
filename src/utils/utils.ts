@@ -32,11 +32,11 @@ export class Utils {
     }
 
     public revertMedItems(playerData: IPmcData) {
-        if (playerData?.Inventory !== undefined) {
+        if (playerData?.Inventory != null) {
             for (let i in playerData.Inventory.items) {
-                if (playerData.Inventory.items[i]?.upd?.MedKit?.HpResource !== undefined) {
+                if (playerData.Inventory.items[i]?.upd?.MedKit?.HpResource != null) {
                     let templateItem = this.itemDB()[playerData.Inventory.items[i]._tpl];
-                    if (templateItem !== null && templateItem !== undefined) {
+                    if (templateItem != null) {
                         playerData.Inventory.items[i].upd.MedKit.HpResource = templateItem._props.MaxHpResource;
                     }
                 }
@@ -45,16 +45,16 @@ export class Utils {
     }
 
     public correctItemResources(playerData: IPmcData, playerXP: number, logger: ILogger) {
-        if (playerData?.Inventory !== undefined) {
+        if (playerData?.Inventory != null) {
             for (let i in playerData.Inventory.items) {
                 let profileItem = playerData.Inventory.items[i];
-                if (profileItem?.upd?.Repairable?.Durability !== undefined) {
+                if (profileItem?.upd?.Repairable?.Durability != null) {
                     this.correctDuraHelper(profileItem, playerXP);
                 }
-                if (modConfig.med_changes == true && profileItem?.upd?.MedKit?.HpResource !== undefined) {
+                if (modConfig.med_changes == true && profileItem?.upd?.MedKit?.HpResource != null) {
                     this.correctMedicalRes(profileItem, playerXP, logger);
                 }
-                if (modConfig.food_changes == true && profileItem?.upd?.FoodDrink?.HpPercent !== undefined) {
+                if (modConfig.food_changes == true && profileItem?.upd?.FoodDrink?.HpPercent != null) {
                     this.correctProvisionRes(profileItem, playerXP, logger);
                 }
             }
@@ -63,7 +63,7 @@ export class Utils {
 
     private correctProvisionRes(profileItem: IItem, playerXP: number, logger: ILogger) {
         let templateItem = this.itemDB()[profileItem._tpl];
-        if (templateItem !== null && templateItem !== undefined && (profileItem.upd.FoodDrink.HpPercent > templateItem._props.MaxResource || playerXP == 0)) {
+        if (templateItem != null && (profileItem.upd.FoodDrink.HpPercent > templateItem._props.MaxResource || playerXP == 0)) {
             profileItem.upd.FoodDrink.HpPercent = templateItem._props.MaxResource;
         }
     }
@@ -71,14 +71,14 @@ export class Utils {
 
     private correctMedicalRes(profileItem: IItem, playerXP: number, logger: ILogger) {
         let templateItem = this.itemDB()[profileItem._tpl];
-        if (templateItem !== null && templateItem !== undefined && (profileItem.upd.MedKit.HpResource > templateItem._props.MaxHpResource || playerXP == 0)) {
+        if (templateItem != null && (profileItem.upd.MedKit.HpResource > templateItem._props.MaxHpResource || playerXP == 0)) {
             profileItem.upd.MedKit.HpResource = templateItem._props.MaxHpResource;
         }
     }
 
     private correctDuraHelper(profileItem: IItem, playerXP: number) {
         let templateItem = this.itemDB()[profileItem._tpl]
-        if (templateItem !== null && templateItem !== undefined && (profileItem.upd.Repairable.Durability > templateItem._props.MaxDurability || playerXP == 0)) {
+        if (templateItem != null && (profileItem.upd.Repairable.Durability > templateItem._props.MaxDurability || playerXP == 0)) {
             profileItem.upd.Repairable.Durability = templateItem._props.Durability;
             profileItem.upd.Repairable.MaxDurability = templateItem._props.MaxDurability;
         }

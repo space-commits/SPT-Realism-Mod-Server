@@ -397,10 +397,10 @@ class BotInvGen extends BotInventoryGenerator_1.BotInventoryGenerator {
     tryGetPMCSecondary(botInventory, itemDb, templateInventory, equipmentChances, sessionId, botRole, isPmc, pmcTier, botLevel, itemGenerationLimitsMinMax) {
         try {
             let shouldGetSecondary = false;
-            if (botInventory.items !== undefined && botInventory.items !== null) {
+            if (botInventory.items != null) {
                 for (let i in botInventory.items) {
                     let item = itemDb[botInventory.items[i]._tpl];
-                    if (item !== undefined && item !== null && item?._parent !== undefined && item?._parent === BaseClasses_1.BaseClasses.SNIPER_RIFLE) {
+                    if (item != null && item?._parent != null && item?._parent === BaseClasses_1.BaseClasses.SNIPER_RIFLE) {
                         shouldGetSecondary = true;
                     }
                 }
@@ -769,7 +769,7 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
     //preset format has changed serveral times and I'm tired of updating them.
     reformatPreset(presetFile, presetObj) {
         if (presetFile[presetObj].hasOwnProperty("root") || presetFile[presetObj].hasOwnProperty("Root")) {
-            const isUpperCase = presetFile[presetObj].Root !== undefined ? true : false;
+            const isUpperCase = presetFile[presetObj].Root != null ? true : false;
             const parent = isUpperCase ? presetFile[presetObj].Root : presetFile[presetObj].root;
             const id = isUpperCase ? presetFile[presetObj].Id : presetFile[presetObj].id;
             const items = isUpperCase ? presetFile[presetObj].Items : presetFile[presetObj].items;
@@ -793,7 +793,7 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
         for (let item in preset._items) {
             let itemTemplate = tables.templates.items[preset._items[item]._tpl];
             if (itemTemplate._parent === BaseClasses_1.BaseClasses.FLASHLIGHT || itemTemplate._parent === BaseClasses_1.BaseClasses.TACTICAL_COMBO || itemTemplate._parent === BaseClasses_1.BaseClasses.LIGHT_LASER_DESIGNATOR) {
-                if (preset._items[item].upd?.Light?.IsActive !== undefined) {
+                if (preset._items[item].upd?.Light?.IsActive != null) {
                     preset._items[item].upd.Light.IsActive = isActive;
                 }
                 else {

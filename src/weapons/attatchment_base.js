@@ -74,7 +74,7 @@ class AttachmentBase {
         }
         for (let i in this.itemDB()) {
             let serverItem = this.itemDB()[i];
-            if (serverItem?._props?.RecoilReturnSpeedHandRotation !== null && serverItem?._props?.RecoilReturnSpeedHandRotation !== undefined) {
+            if (serverItem?._props?.RecoilReturnSpeedHandRotation != null) {
                 if (serverItem._props.ammoCaliber === "Caliber366TKM") {
                     serverItem._props.Chambers[0]._props.filters[0].Filter.push(..._762x39Ammo);
                 }

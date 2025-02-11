@@ -171,7 +171,7 @@ export class BotLoader {
     public forceBossSpawns() {
         for (let i in this.mapDB()) {
             let mapBase = this.mapDB()[i]?.base;
-            if (mapBase != undefined && mapBase?.BossLocationSpawn !== undefined) {
+            if (mapBase != null && mapBase?.BossLocationSpawn != null) {
                 let bossSpawn = mapBase.BossLocationSpawn;
                 for (let k in bossSpawn) {
                     bossSpawn[k].BossChance = 100;
@@ -201,7 +201,7 @@ export class BotLoader {
     public bossDifficulty() {
         for (let i in this.mapDB()) {
             let mapBase = this.mapDB()[i]?.base;
-            if (mapBase !== undefined && mapBase?.BossLocationSpawn !== undefined) {
+            if (mapBase != null && mapBase?.BossLocationSpawn != null) {
                 let bossLocationSpawn = mapBase.BossLocationSpawn;
                 for (let k in bossLocationSpawn) {
                     let boss = bossLocationSpawn[k];
@@ -232,8 +232,8 @@ export class BotLoader {
         for (let bot in this.arrays.botArr) {
             if (bot.includes("assault")) continue;
             let botType = this.arrays.botArr[bot];
-            if (botType.skills?.Common !== undefined) {
-                if (botType.skills.Common["Vitality"] !== undefined) {
+            if (botType.skills?.Common != null) {
+                if (botType.skills.Common["Vitality"] != null) {
                     botType.skills.Common["Vitality"].max = 5100;
                     botType.skills.Common["Vitality"].min = 5100;
                 }
@@ -539,7 +539,7 @@ export class BotLoader {
 
     public updateBots(pmcData: IPmcData, logger: ILogger, config: any, bots: BotLoader, utils: Utils) {
         let property = pmcData?.Info?.Level;
-        if (property === undefined) {
+        if (property == null) {
             bots.botConfig1();
             bots.scavLoad1();
             bots.rogueLoad1();
@@ -555,7 +555,7 @@ export class BotLoader {
                 logger.info("Realism Mod: Bots Have Been Reconfigured");
             }
         }
-        if (property !== undefined) {
+        if (property != null) {
             if (config.bot_testing == true) {
                 bots.botTest(config.bot_test_tier);
                 logger.warning("Realism Mod: Bots Are In Test Mode");

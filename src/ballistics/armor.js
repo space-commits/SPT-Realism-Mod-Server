@@ -82,7 +82,7 @@ class Armor {
                     if (!filter.armorPlateColliders || filter.armorPlateColliders.length === 0 || filter.Filter.length !== 1 || this.itemDB()[filter.Filter[0]]._props.ArmorMaterial !== "Aramid")
                         continue;
                     for (const col of filter.armorPlateColliders) {
-                        if (filter.armorColliders != undefined) {
+                        if (filter.armorColliders != null) {
                             let plateCollidor = col.toLowerCase();
                             if (plateCollidor === "plate_granit_sapi_chest") {
                                 filter.armorColliders.push("RibcageUp");

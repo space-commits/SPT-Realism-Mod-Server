@@ -389,13 +389,10 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             const healthProp = pmcData?.Health;
                             const hydroProp = pmcData?.Health?.Hydration;
 
-                            if (healthProp !== undefined) {
-
+                            if (healthProp != null) {
                                 player.correctNegativeHP(pmcData);
-
                                 player.setPlayerHealth(pmcData, scavData);
-
-                                if (hydroProp !== undefined) {
+                                if (hydroProp != null) {
                                     if (modConfig.revert_med_changes == true && modConfig.med_changes == false) {
                                         this.revertMeds(pmcData, utils);
                                         this.revertMeds(scavData, utils);
@@ -416,7 +413,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                                 ProfileTracker.profileIds.forEach(element => {
                                     pmcData.push(profileHelper.getPmcProfile(element));
                                 });
-                                randomizeTraderAssort.adjustTraderStockAtServerStart(pmcData);
+                                randomizeTraderAssort.adjustTraderStockAtGameStart(pmcData);
                             }
                             adjustedTradersOnStart = true;
 
@@ -1089,7 +1086,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         let didExplosion;
         let shouldDisableTraders = false;
 
-        if (pmcData?.Quests === null || pmcData?.Quests === undefined) return;
+        if (pmcData?.Quests == null) return;
 
         pmcData.Quests.forEach(q => {
             //blue flame part 2
@@ -1123,7 +1120,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         EventTracker.endExplosionEvent = false;
 
         let baseGasChance = EventTracker.isHalloween ? 20 : 5;
-        if (pmcData?.Quests !== null && pmcData?.Quests !== undefined) {
+        if (pmcData?.Quests != null) {
             pmcData.Quests.forEach(q => {
                 const isStarted = q.status === 2 || q.status === 3;
                 const isCompleted = q.status === 4;
@@ -1205,7 +1202,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
 
     private checkPlayerLevel(sessionID: string, profileData: ISptProfile, pmcData: IPmcData, logger: ILogger, shouldLog: boolean = false) {
         let level = 1;
-        if (pmcData?.Info?.Level !== undefined) {
+        if (pmcData?.Info?.Level != null) {
             level = pmcData.Info.Level;
         }
         let playerCount = 0;

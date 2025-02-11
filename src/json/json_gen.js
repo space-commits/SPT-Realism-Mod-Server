@@ -86,7 +86,7 @@ class JsonGen {
     gearTemplatesCodeGen() {
         for (let i in this.itemDB()) {
             let serverItem = this.itemDB()[i];
-            if (serverItem?._props?.armorClass != undefined) {
+            if (serverItem?._props?.armorClass != null) {
                 let armorLevl = typeof serverItem._props.armorClass === 'number' ? serverItem._props.armorClass : parseInt(serverItem._props.armorClass);
                 if (serverItem._parent === enums_1.ParentClasses.CHESTRIG && armorLevl > 0) {
                     this.itemWriteToFile(armorChestrigTemplates, "armorChestrigTemplates", i, serverItem, "gear", this.assignJSONToGear, null);
@@ -391,7 +391,7 @@ class JsonGen {
         //new items properties can be added, and  property values can be replaced, by delcaring them in this if statement
         if (fileItem) {
             // fileItem.HeatFactor = serverItem._props.HeatFactor; You need to give it a value. If you set it to the server item's propety value, the new property will only appear if the server mod has that property
-            //    if(serverItem._props?.Recoil !== undefined){
+            //    if(serverItem._props?.Recoil != null){
             //     fileItem.VerticalRecoil = serverItem._props.Recoil;
             //     fileItem.HorizontalRecoil = serverItem._props.Recoil;
             //    }

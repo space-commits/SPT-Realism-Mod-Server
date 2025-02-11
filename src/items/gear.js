@@ -49,7 +49,7 @@ class Gear {
                 if (serverItem._parent === enums_1.ParentClasses.HEADWEAR) {
                     for (let c in serverItem._props.ConflictingItems) {
                         let confItem = serverItem._props.ConflictingItems[c];
-                        if (this.itemDB()[confItem] !== undefined && this.itemDB()[confItem]._parent === enums_1.ParentClasses.HEADSET) {
+                        if (this.itemDB()[confItem] != null && this.itemDB()[confItem]._parent === enums_1.ParentClasses.HEADSET) {
                             serverItem._props.ConflictingItems[c] = "6783e75078238c95771864ea"; //needs to be a valid mongoid, so use random placeholder id
                         }
                     }

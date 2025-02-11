@@ -215,7 +215,7 @@ export class ItemsClass {
             this.globalDB().RestrictionsInRaid = [];
             this.globalDB().DiscardLimitsEnabled = false;
             // for (let item in this.itemDB()) {
-            //     if (this.itemDB()[item]?._props?.DiscardLimit !== undefined) {
+            //     if (this.itemDB()[item]?._props?.DiscardLimit != null) {
             //         this.itemDB()[item]._props.DiscardLimit = -1;
             //     }
             // }
