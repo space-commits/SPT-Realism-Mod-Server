@@ -544,7 +544,7 @@ class BotLoader {
                 logger.info("Realism Mod: Bots Have Been Reconfigured");
             }
         }
-        if (property == null) {
+        if (property != null) {
             if (config.bot_testing == true) {
                 bots.botTest(config.bot_test_tier);
                 logger.warning("Realism Mod: Bots Are In Test Mode");

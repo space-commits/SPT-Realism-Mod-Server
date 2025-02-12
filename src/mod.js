@@ -179,7 +179,13 @@ class Main {
             const botGeneratorHelper = container.resolve("BotGeneratorHelper");
             const botNameService = container.resolve("BotNameService");
             const itemFilterService = container.resolve("ItemFilterService");
+            const durabilityLimitsHelper = container.resolve("DurabilityLimitsHelper");
+            const appContext = container.resolve("ApplicationContext");
+            const itemHelper = container.resolve("ItemHelper");
+            const inventoryHelper = container.resolve("InventoryHelper");
+            const containerHelper = container.resolve("ContainerHelper");
             const botGen = new bot_gen_1.BotGen(logger, hashUtil, randomUtil, timeUtil, profileHelper, databaseService, botInventoryGenerator, botLevelGenerator, botEquipmentFilterService, weightedRandomHelper, botHelper, botGeneratorHelper, seasonalEventService, itemFilterService, botNameService, configServer, cloner);
+            const myBotGenHelper = new bot_gen_1.BotGenHelper(logger, randomUtil, databaseService, durabilityLimitsHelper, itemHelper, inventoryHelper, containerHelper, appContext, localisationService, configServer);
             container.afterResolution("BotGenerator", (_t, result) => {
                 result.prepareAndGenerateBot = (sessionId, botGenerationDetails) => {
                     return botGen.myPrepareAndGenerateBot(sessionId, botGenerationDetails);
@@ -190,6 +196,11 @@ class Main {
                     return botGen.myGeneratePlayerScav(sessionId, role, difficulty, botTemplate);
                 };
             }, { frequency: "Always" });
+            // container.afterResolution("BotGeneratorHelper", (_t, result: BotGeneratorHelper) => {
+            //     result.generateExtraPropertiesForItem = (itemTemplate: ITemplateItem, botRole: string = null): { upd?: IUpd } => {
+            //         return myBotGenHelper.myGenerateExtraPropertiesForItem(itemTemplate, botRole);
+            //     }
+            // }, { frequency: "Always" });
         }
         container.afterResolution("TraderAssortHelper", (_t, result) => {
             result.resetExpiredTrader = (trader) => {

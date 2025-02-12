@@ -1189,7 +1189,6 @@ export class CheckRequired {
 export class BotGenHelper extends BotGeneratorHelper {
 
     public getLightOnChance(botRole: string): number {
-
         return this.getBotEquipmentSettingFromConfig(botRole, "lightIsActiveDayChancePercent", 25);
     }
 

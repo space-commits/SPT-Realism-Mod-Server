@@ -8,6 +8,7 @@ import { DatabaseService } from "@spt/services/DatabaseService";
 import { ISeasonalEventConfig } from "@spt/models/spt/config/ISeasonalEventConfig";
 import { IBossLocationSpawn, ILocationBase } from "@spt/models/eft/common/ILocationBase";
 import { IGlobals } from "@spt/models/eft/common/IGlobals";
+import { ILocation } from "@spt/models/eft/common/ILocation";
 
 
 const botZones = require("../../db/maps/spawnZones.json");
@@ -19,7 +20,7 @@ export class Spawns {
 
     public setBossSpawnChance(level: number, databaseService: DatabaseService, seasonalEventConfig: ISeasonalEventConfig) {
         level = level <= 5 ? 0 : level;
-        let levelFactor = (level * 2) / 100;
+        const levelFactor = level * 0.02;
         let spawnModifier = Math.pow(levelFactor, 1.85);
         spawnModifier = this.utils.clampNumber(spawnModifier, 0, 1);
         this.bossSpawnHelper(spawnModifier, databaseService, seasonalEventConfig);
@@ -30,21 +31,19 @@ export class Spawns {
         this.loadBossSpawnChanges();
         //if (this.modConf.realistic_zombies) this.configureZombies(databaseService, seasonalEventConfig);
 
-        for (let i in this.mapDB) {
-            let mapBase = this.mapDB[i]?.base;
-            if (mapBase != null && mapBase?.BossLocationSpawn != null) {
-                for (let k in mapBase.BossLocationSpawn) {
-                    let bossSpawnLocation = mapBase.BossLocationSpawn[k];
-                    let chance = 0;
-                    if (i !== "lighthouse" && i !== "laboratory") {
-                        if (bossSpawnLocation?.TriggerId != null && bossSpawnLocation?.TriggerId !== "") {
-                            chance = bossSpawnLocation.BossChance * chanceMulti * 2;
-                        } else {
-                            chance = bossSpawnLocation.BossChance * chanceMulti;
-                        }
-                        bossSpawnLocation.BossChance = Math.round(this.utils.clampNumber(chance, 0, 100));
-                    }
+        for (const i in this.mapDB) {
+            const mapBase: ILocationBase = this.mapDB[i]?.base;
+            if (mapBase == null || mapBase?.BossLocationSpawn == null) continue;
+            for (const k in mapBase.BossLocationSpawn) {
+                const bossSpawnLocation = mapBase.BossLocationSpawn[k];
+                let chance = 0;
+                if (i === "lighthouse" || i === "laboratory") continue;
+                if (bossSpawnLocation?.TriggerId != null && bossSpawnLocation?.TriggerId !== "") {
+                    chance = bossSpawnLocation.BossChance * chanceMulti * 2;
+                } else {
+                    chance = bossSpawnLocation.BossChance * chanceMulti;
                 }
+                bossSpawnLocation.BossChance = Math.round(this.utils.clampNumber(chance, 0, 100));
             }
         }
     }
@@ -66,12 +65,13 @@ export class Spawns {
 
 
     protected configureZombies(databaseService: DatabaseService, seasonalEventConfig: ISeasonalEventConfig) {
-        const infectionLevel = 100;
-        const chance = 5;
+        const infectionLevel = 25;
+        const chance = 18;
         const globals: IGlobals = databaseService.getGlobals();
         const infectionHalloween = globals.config.SeasonActivity.InfectionHalloween;
         const botsToAddPerMap = seasonalEventConfig.eventBossSpawns["halloweenzombies"];
-        infectionHalloween.Enabled = true;
+        //infectionHalloween.Enabled = true;
+        
         //infectionHalloween.DisplayUIEnabled = true;
         //this.mapDB.bigmap.base.BossLocationSpawn = [];
         //this.mapDB.bigmap.base.waves = [];       
@@ -81,12 +81,12 @@ export class Spawns {
             const bossesToAdd = botsToAddPerMap[mapKey];
             for (const boss of bossesToAdd) {
                 const map = locations[mapKey].base;
-                const mapBosses: IBossLocationSpawn[] = map.BossLocationSpawn;
+                const bossLocationSpawns: IBossLocationSpawn[] = map.BossLocationSpawn;
                 map.Events.Halloween2024.InfectionPercentage = infectionLevel;
                 globals.LocationInfection[mapKey] = infectionLevel;
                 let rnd = this.utils.pickRandNumInRange(1, 100);
-                if (rnd < chance && !mapBosses.some((bossSpawn) => bossSpawn.BossName === boss.BossName)) {
-                    map.BossLocationSpawn.push(...bossesToAdd);
+                if (rnd < chance && !bossLocationSpawns.some((bossSpawn) => bossSpawn.BossName === boss.BossName)) {
+                    map.BossLocationSpawn.push(boss);
                 }
             }
         }
@@ -98,14 +98,16 @@ export class Spawns {
 
         //SPT does its own custom PMC waves, this couble be doubling up or interfering in some way
         if (this.modConf.spawn_waves == true && !ModTracker.swagPresent && !ModTracker.qtbSpawnsActive) {
-            // locationConfig.customWaves.normal = {}; //get rid of the extra waves of scavs SPT adds for no good reason
+            // locationConfig.customWaves.normal = {}; //get rid of the extra waves of scavs SPT adds
             // locationConfig.customWaves.boss = {}; //get rid of extra PMC spawns
-            locationConfig.addCustomBotWavesToMaps = true;
-            //locationConfig.splitWaveIntoSingleSpawnsSettings.enabled = false;
+            //locationConfig.addCustomBotWavesToMaps = true;
+            locationConfig.splitWaveIntoSingleSpawnsSettings.enabled = false;
             // this.mapDB.bigmap.base.waves = spawnWaves.CustomsWaves;
             // this.mapDB.lighthouse.base.waves = spawnWaves.LighthouseWaves;
             this.mapDB.factory4_day.base.waves = spawnWaves.FactoryWaves;
             this.mapDB.factory4_night.base.waves = spawnWaves.FactoryWaves;
+            this.mapDB.shoreline.base.waves = [];
+            this.mapDB.tarkovstreets.base.waves = [];
             // this.mapDB.interchange.base.waves = spawnWaves.InterchangeWaves;
             // this.mapDB.shoreline.base.waves = spawnWaves.ShorelineWaves;
             // this.mapDB.rezervbase.base.waves = spawnWaves.ReserveWaves;
@@ -120,8 +122,8 @@ export class Spawns {
                     if (map.NonWaveGroupScenario) map.NonWaveGroupScenario.Enabled = false;
                     map.BotStart = 0;
                     map["BotStartPlayer"] = 0;
-                    map.BotStop = 30;
-                    map.BotSpawnPeriodCheck = 10000000;
+                    map.BotStop = 40;
+                    map.BotSpawnPeriodCheck = 100000;
                     map.BotSpawnTimeOnMin = 1000000;
                     map.BotSpawnTimeOnMax = 10000000;
                     map.BotSpawnTimeOffMin = 1000000;

@@ -97,7 +97,7 @@ import { Consumables } from "./items/meds";
 import { Player } from "./player/player"
 import { WeaponsGlobals } from "./weapons/weapons_globals"
 import { BotLoader } from "./bots/bots";
-import { BotGen } from "./bots/bot_gen";
+import { BotGen, BotGenHelper } from "./bots/bot_gen";
 import { ItemsClass } from "./items/items";
 import { JsonGen } from "./json/json_gen";
 import { Quests } from "./traders/quests";
@@ -118,6 +118,11 @@ import { info } from "console";
 import * as path from 'path';
 import * as fs from 'fs';
 import { json } from "stream/consumers";
+import { ContainerHelper } from "@spt/helpers/ContainerHelper";
+import { DurabilityLimitsHelper } from "@spt/helpers/DurabilityLimitsHelper";
+import { InventoryHelper } from "@spt/helpers/InventoryHelper";
+import { IUpd } from "@spt/models/eft/common/tables/IItem";
+import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");
@@ -273,6 +278,11 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             const botGeneratorHelper = container.resolve<BotGeneratorHelper>("BotGeneratorHelper");
             const botNameService = container.resolve<BotNameService>("BotNameService");
             const itemFilterService = container.resolve<ItemFilterService>("ItemFilterService");
+            const durabilityLimitsHelper = container.resolve<DurabilityLimitsHelper>("DurabilityLimitsHelper");
+            const appContext = container.resolve<ApplicationContext>("ApplicationContext");
+            const itemHelper = container.resolve<ItemHelper>("ItemHelper");
+            const inventoryHelper = container.resolve<InventoryHelper>("InventoryHelper");
+            const containerHelper = container.resolve<ContainerHelper>("ContainerHelper");
 
             const botGen = new BotGen(
                 logger, hashUtil, randomUtil, timeUtil,
@@ -280,6 +290,13 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                 botLevelGenerator, botEquipmentFilterService, weightedRandomHelper,
                 botHelper, botGeneratorHelper, seasonalEventService,
                 itemFilterService, botNameService, configServer, cloner);
+
+            const myBotGenHelper = new BotGenHelper(
+                logger, randomUtil, databaseService,
+                durabilityLimitsHelper, itemHelper,
+                inventoryHelper, containerHelper,
+                appContext, localisationService, configServer);
+
 
             container.afterResolution("BotGenerator", (_t, result: BotGenerator) => {
                 result.prepareAndGenerateBot = (sessionId: string, botGenerationDetails: IBotGenerationDetails): IBotBase => {
@@ -292,6 +309,12 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                     return botGen.myGeneratePlayerScav(sessionId, role, difficulty, botTemplate);
                 }
             }, { frequency: "Always" });
+
+            // container.afterResolution("BotGeneratorHelper", (_t, result: BotGeneratorHelper) => {
+            //     result.generateExtraPropertiesForItem = (itemTemplate: ITemplateItem, botRole: string = null): { upd?: IUpd } => {
+            //         return myBotGenHelper.myGenerateExtraPropertiesForItem(itemTemplate, botRole);
+            //     }
+            // }, { frequency: "Always" });
         }
 
         container.afterResolution("TraderAssortHelper", (_t, result: TraderAssortHelper) => {
@@ -536,7 +559,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             const profileData = profileHelper.getFullProfile(sessionID);
 
                             RaidInfoTracker.generatedBotsCount = 0;
-                            
+
                             //had a concern that bot loot cache isn't being reset properly since I've overriden it with my own implementation, so to be safe...
                             // const myGetLootCache = new MyLootCache(logger, jsonUtil, itemHelper, postLoadDBServer, pmcLootGenerator, localisationService, ragfairPriceService);
                             // myGetLootCache.myClearCache();
@@ -760,7 +783,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         const itemCloning = new ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const statHandler = new ItemStatHandler(tables, logger, hashUtil);
         const descGen = new DescriptionGen(tables, modConfig, logger, statHandler);
-        
+
         //Remember to back up json data before using this, and make sure it isn't overriding existing json objects
         // jsonGen.attTemplatesCodeGen();
         // jsonGen.weapTemplatesCodeGen();
@@ -810,10 +833,10 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             logger.warning("Realism Mod: testing enabled, bots will be limited to a cap of 1");
             bots.testBotCap();
         }
-        else if (modConfig.increased_bot_cap == true && !ModTracker.swagPresent  && !ModTracker.qtbPresent) {
+        else if (modConfig.increased_bot_cap == true && !ModTracker.swagPresent && !ModTracker.qtbPresent) {
             bots.increaseBotCap();
         }
-        else if (modConfig.spawn_waves == true && !ModTracker.swagPresent  && !ModTracker.qtbPresent) { 
+        else if (modConfig.spawn_waves == true && !ModTracker.swagPresent && !ModTracker.qtbPresent) {
             bots.increasePerformance();
         }
 
