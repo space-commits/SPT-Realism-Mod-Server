@@ -335,8 +335,6 @@ class StaticArrays {
         "6617beeaa9cfa777ca915b7c"
     ];
     static confMaskOverlays = [
-        "5b432c305acfc40019478128",
-        "60363c0c92ec1c31037959f5",
         "6570aead4d84f81fd002a033",
         "657089638db3adca1009f4ca",
         "62a09e08de7ac81993580532",

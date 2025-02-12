@@ -21,7 +21,7 @@ class Gear {
         this.itemDB()["590c595c86f7747884343ad7"]._props.Resource = 100;
     }
     loadSpecialSlotChanges() {
-        let itemsToAdd = [...arrays_1.StaticArrays.hazardDetectionDevices, ...arrays_1.StaticArrays.gasMasks];
+        let itemsToAdd = [...arrays_1.StaticArrays.hazardDetectionDevices, ...arrays_1.StaticArrays.gasMasks, "59e7715586f7742ee5789605"];
         this.itemDB()["627a4e6b255f7527fb05a0f6"]._props.Slots.forEach(slot => {
             slot._props.filters[0].Filter.push(...itemsToAdd);
         });
@@ -37,6 +37,7 @@ class Gear {
     }
     loadGearConflicts() {
         let faceShieldArray = [];
+        const faceCoversWithOverlay = [...arrays_1.StaticArrays.gasMasks, ...arrays_1.StaticArrays.confMaskOverlays];
         //remove certain helmets from GP7 conflicts
         this.itemDB()["60363c0c92ec1c31037959f5"]._props.ConflictingItems = this.itemDB()["60363c0c92ec1c31037959f5"]._props.ConflictingItems.filter(i => i !== "5e4bfc1586f774264f7582d3");
         for (let item in this.itemDB()) {
@@ -62,10 +63,12 @@ class Gear {
         }
         //custom mask overlays will bug out if using actual faceshield at the same time
         if ((this.modConfig.realistic_ballistics == true || this.modConfig.enable_hazard_zones == true)) {
-            arrays_1.StaticArrays.confMaskOverlays.forEach(element => {
-                const item = this.itemDB()[element];
+            for (const i of faceCoversWithOverlay) {
+                const item = this.itemDB()[i];
+                if (item == null)
+                    continue;
                 item._props.ConflictingItems = item._props.ConflictingItems.concat(faceShieldArray);
-            });
+            }
         }
         //make sure NVGs and FS conflict
         arrays_1.StaticArrays.conflNVGomponents.forEach(element => {
