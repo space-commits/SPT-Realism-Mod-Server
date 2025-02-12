@@ -1,10 +1,10 @@
 node_modules/
 types/
 ProfileBackups/
-*.py
 *.zip
 *.bundle
 *.map
 *.js
 RealismModConfig.exe
 db/templates/user_templates/
+/Build
