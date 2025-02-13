@@ -21,7 +21,7 @@ class Gear {
         this.itemDB()["590c595c86f7747884343ad7"]._props.Resource = 100;
     }
     loadSpecialSlotChanges() {
-        let itemsToAdd = [...arrays_1.StaticArrays.hazardDetectionDevices, ...arrays_1.StaticArrays.gasMasks, "59e7715586f7742ee5789605"];
+        let itemsToAdd = [...arrays_1.StaticArrays.hazardDetectionDevices, ...arrays_1.StaticArrays.gasMasks, "59e7715586f7742ee5789605"]; //respirator
         this.itemDB()["627a4e6b255f7527fb05a0f6"]._props.Slots.forEach(slot => {
             slot._props.filters[0].Filter.push(...itemsToAdd);
         });

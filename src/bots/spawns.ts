@@ -113,7 +113,7 @@ export class Spawns {
             // this.mapDB.rezervbase.base.waves = spawnWaves.ReserveWaves;
             // this.mapDB.tarkovstreets.base.waves = spawnWaves.StreetsWaves;
             // this.mapDB.woods.base.waves = spawnWaves.WoodsWaves;
-            // this.mapDB.laboratory.base.waves = spawnWaves.LabsWaves;
+            this.mapDB.laboratory.base.waves = spawnWaves.LabsWaves;
             // this.mapDB.sandbox.base.waves = spawnWaves.GroundZeroWaves;
             // this.mapDB.sandbox_high.base.waves = spawnWaves.GroundZeroWaves;
             for (const i in this.mapDB) {

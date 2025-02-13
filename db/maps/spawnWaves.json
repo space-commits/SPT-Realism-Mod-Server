@@ -1891,10 +1891,10 @@
             "WildSpawnType": "assault",
             "isPlayers": true,
             "number": 4,
-            "slots_max": 2,
+            "slots_max": 1,
             "slots_min": 0,
             "time_max": 900,
-            "time_min": 300
+            "time_min": 600
         },
         {
             "BotPreset": "hard",
@@ -1907,10 +1907,10 @@
             "WildSpawnType": "assault",
             "isPlayers": true,
             "number": 5,
-            "slots_max": 2,
+            "slots_max": 1,
             "slots_min": 0,
             "time_max": 900,
-            "time_min": 300
+            "time_min": 600
         },
         {
             "BotPreset": "hard",
@@ -1923,58 +1923,10 @@
             "WildSpawnType": "assault",
             "isPlayers": true,
             "number": 6,
-            "slots_max": 2,
+            "slots_max": 1,
             "slots_min": 0,
             "time_max": 900,
-            "time_min": 300
-        },
-        {
-            "BotPreset": "hard",
-            "BotSide": "Savage",
-            "SpawnMode": [
-                "regular",
-                "pve"
-            ],
-            "SpawnPoints": "BotZoneBasement",
-            "WildSpawnType": "assault",
-            "isPlayers": true,
-            "number": 8,
-            "slots_max": 2,
-            "slots_min": 0,
-            "time_max": 1200,
-            "time_min": 910
-        },
-        {
-            "BotPreset": "hard",
-            "BotSide": "Savage",
-            "SpawnMode": [
-                "regular",
-                "pve"
-            ],
-            "SpawnPoints": "BotZoneFloor1",
-            "WildSpawnType": "assault",
-            "isPlayers": true,
-            "number": 9,
-            "slots_max": 2,
-            "slots_min": 0,
-            "time_max": 1200,
-            "time_min": 910
-        },
-        {
-            "BotPreset": "hard",
-            "BotSide": "Savage",
-            "SpawnMode": [
-                "regular",
-                "pve"
-            ],
-            "SpawnPoints": "BotZoneFloor2",
-            "WildSpawnType": "assault",
-            "isPlayers": true,
-            "number": 10,
-            "slots_max": 2,
-            "slots_min": 0,
-            "time_max": 1200,
-            "time_min": 910
+            "time_min": 600
         }
     ],
     "FactoryWaves": [

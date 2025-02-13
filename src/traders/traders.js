@@ -643,7 +643,7 @@ class RandomizeTraderAssort {
                     let itemTemplId = assortItem._tpl;
                     if (modConfig.randomize_trader_stock == true) {
                         if (assortItem.upd?.StackObjectsCount != null) {
-                            this.randomizeStock(assortItem, ll);
+                            this.randomizeStock(assortItem, ll, pmcData.length);
                         }
                         if (assortItem.upd?.UnlimitedCount != null) {
                             assortItem.upd.UnlimitedCount = false;
@@ -711,7 +711,7 @@ class RandomizeTraderAssort {
             }
         }
     }
-    randomizeStock(item, averageLL) {
+    randomizeStock(item, averageLL, playerCount) {
         let itemParent = this.itemDB[item._tpl]?._parent;
         if (!itemParent) {
             if (modConfig.logEverything)
@@ -720,69 +720,82 @@ class RandomizeTraderAssort {
         }
         if (seasonalevents_1.EventTracker.isHalloween && this.assortsToIgnore.includes(item._id))
             return;
+        const playerCountFactor = Math.max(1, playerCount);
         const llStockFactor = Math.max(averageLL - 1, 1);
-        const llStackableFactor = this.getLLStackableBonus(averageLL);
+        const ammoStockFactor = this.getLLStackableBonus(averageLL) * playerCountFactor;
         const llOutOfStockFactor = this.getLLOutOfStockBonus(averageLL);
+        const regularMaxStock = (1 + modConfig.rand_stock_modifier) * playerCountFactor;
+        const specialItemMaxStock = (3 + modConfig.rand_stock_modifier) * playerCountFactor;
+        const regularMagMaxStock = (3 + modConfig.rand_stock_modifier) * playerCountFactor;
+        const midCapMagMaxStock = (2 + modConfig.rand_stock_modifier) * playerCountFactor;
+        const highCapMagMaxStock = (1 + modConfig.rand_stock_modifier) * playerCountFactor;
+        const ammoBoxMaxStock = (2 + modConfig.rand_stock_modifier * playerCountFactor);
+        const isRouble = item._tpl == "5449016a4bdc2d6f028b456f";
+        const moneyMinStock = isRouble ? 30000 : 350;
+        const moneyMaxStockBase = isRouble ? 300000 : 9000;
+        const moneyMaxStock = moneyMaxStockBase * playerCountFactor;
+        if (modConfig.logEverything)
+            this.logger.warning(`Randomze Stock. Average Lvl ${averageLL}, player count ${playerCount}`);
         //ammo
-        this.randomizeAmmoStock(itemParent, item, llStackableFactor, llOutOfStockFactor);
-        this.randomizeStockHelper(itemParent, enums_1.ParentClasses.AMMO_BOX, item, 0 + modConfig.rand_stock_modifier_min, 2 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+        this.randomizeAmmoStock(itemParent, item, ammoStockFactor, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, enums_1.ParentClasses.AMMO_BOX, item, 0 + modConfig.rand_stock_modifier_min, ammoBoxMaxStock + llStockFactor, llOutOfStockFactor);
         //weapons
         for (let id in arrays_1.StaticArrays.weaponParentIDs) {
-            this.randomizeStockHelper(itemParent, arrays_1.StaticArrays.weaponParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+            this.randomizeStockHelper(itemParent, arrays_1.StaticArrays.weaponParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock, llOutOfStockFactor);
         }
         //weapon mods
         for (let id in arrays_1.StaticArrays.modParentIDs) {
-            this.randomizeStockHelper(itemParent, arrays_1.StaticArrays.modParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+            this.randomizeStockHelper(itemParent, arrays_1.StaticArrays.modParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock, llOutOfStockFactor);
         }
         //gear
         for (let id in arrays_1.StaticArrays.gearParentIDs) {
-            this.randomizeStockHelper(itemParent, arrays_1.StaticArrays.gearParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+            this.randomizeStockHelper(itemParent, arrays_1.StaticArrays.gearParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock, llOutOfStockFactor);
         }
         //barter items
         for (let id in arrays_1.StaticArrays.barterParentIDs) {
-            this.randomizeStockHelper(itemParent, arrays_1.StaticArrays.barterParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+            this.randomizeStockHelper(itemParent, arrays_1.StaticArrays.barterParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock + llStockFactor, llOutOfStockFactor);
         }
         //keys 
         for (let id in arrays_1.StaticArrays.keyParentIDs) {
-            this.randomizeStockHelper(itemParent, arrays_1.StaticArrays.keyParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+            this.randomizeStockHelper(itemParent, arrays_1.StaticArrays.keyParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock, llOutOfStockFactor);
         }
         //maps
-        this.randomizeStockHelper(itemParent, enums_1.ParentClasses.MAP, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, enums_1.ParentClasses.MAP, item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock + llStockFactor, llOutOfStockFactor);
         //nvg + thermals:
-        this.randomizeStockHelper(itemParent, enums_1.ParentClasses.NIGHTVISION, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
-        this.randomizeStockHelper(itemParent, enums_1.ParentClasses.SPECIAL_SCOPE, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
-        this.randomizeStockHelper(itemParent, enums_1.ParentClasses.THEMALVISION, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, enums_1.ParentClasses.NIGHTVISION, item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, enums_1.ParentClasses.SPECIAL_SCOPE, item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, enums_1.ParentClasses.THEMALVISION, item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock, llOutOfStockFactor);
         //magazine
         if (itemParent === enums_1.ParentClasses.MAGAZINE) {
             let magCap = this.itemDB[item._tpl]?._props?.Cartridges[0]._max_count;
             if (magCap <= 35) {
-                this.randomizeStockHelper(itemParent, enums_1.ParentClasses.MAGAZINE, item, 0 + modConfig.rand_stock_modifier_min, 3 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
+                this.randomizeStockHelper(itemParent, enums_1.ParentClasses.MAGAZINE, item, 0 + modConfig.rand_stock_modifier_min, regularMagMaxStock + llStockFactor, llOutOfStockFactor);
             }
             else if (magCap > 35 && magCap <= 45) {
-                this.randomizeStockHelper(itemParent, enums_1.ParentClasses.MAGAZINE, item, 0 + modConfig.rand_stock_modifier_min, 2 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
+                this.randomizeStockHelper(itemParent, enums_1.ParentClasses.MAGAZINE, item, 0 + modConfig.rand_stock_modifier_min, midCapMagMaxStock + llStockFactor, llOutOfStockFactor);
             }
             else {
-                this.randomizeStockHelper(itemParent, enums_1.ParentClasses.MAGAZINE, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
+                this.randomizeStockHelper(itemParent, enums_1.ParentClasses.MAGAZINE, item, 0 + modConfig.rand_stock_modifier_min, highCapMagMaxStock + llStockFactor, llOutOfStockFactor);
             }
         }
         //medical
-        this.randomizeStockHelper(itemParent, enums_1.ParentClasses.STIMULATOR, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
-        this.randomizeStockHelper(itemParent, enums_1.ParentClasses.DRUGS, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
-        this.randomizeStockHelper(itemParent, enums_1.ParentClasses.MEDICAL, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, enums_1.ParentClasses.STIMULATOR, item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock + llStockFactor, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, enums_1.ParentClasses.DRUGS, item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock + llStockFactor, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, enums_1.ParentClasses.MEDICAL, item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock + llStockFactor, llOutOfStockFactor);
         //special items
-        this.randomizeStockHelper(itemParent, enums_1.ParentClasses.SPEC_ITEM, item, 3 + modConfig.rand_stock_modifier_min, 3 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
-        this.randomizeStockHelper(itemParent, enums_1.ParentClasses.PORTABLE_RANGE_FINDER, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
-        this.randomizeStockHelper(itemParent, enums_1.ParentClasses.COMPASS, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, enums_1.ParentClasses.SPEC_ITEM, item, 3 + modConfig.rand_stock_modifier_min, specialItemMaxStock + llStockFactor, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, enums_1.ParentClasses.PORTABLE_RANGE_FINDER, item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, enums_1.ParentClasses.COMPASS, item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock, llOutOfStockFactor);
         //grenades
-        this.randomizeStockHelper(itemParent, enums_1.ParentClasses.THROW_WEAPON, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, enums_1.ParentClasses.THROW_WEAPON, item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock + llStockFactor, llOutOfStockFactor);
         //money
-        this.randomizeStockHelper(itemParent, enums_1.ParentClasses.MONEY, item, 350 * modConfig.rand_stock_modifier_min, 10000 * modConfig.rand_stackable_modifier, llOutOfStockFactor, false);
+        this.randomizeStockHelper(itemParent, enums_1.ParentClasses.MONEY, item, moneyMinStock, moneyMaxStock, llOutOfStockFactor, false);
         //container
-        this.randomizeStockHelper(itemParent, enums_1.ParentClasses.SIMPLE_CONTAINER, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
-        this.randomizeStockHelper(itemParent, enums_1.ParentClasses.LOCKABLE_CONTAINER, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, enums_1.ParentClasses.SIMPLE_CONTAINER, item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, enums_1.ParentClasses.LOCKABLE_CONTAINER, item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock, llOutOfStockFactor);
         //provisions
-        this.randomizeStockHelper(itemParent, enums_1.ParentClasses.FOOD, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
-        this.randomizeStockHelper(itemParent, enums_1.ParentClasses.DRINK, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, enums_1.ParentClasses.FOOD, item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock + llStockFactor, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, enums_1.ParentClasses.DRINK, item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock + llStockFactor, llOutOfStockFactor);
     }
     randomizeAmmoStock(assortItemParent, item, llStackableFactor, llStockFactor) {
         if (assortItemParent === enums_1.ParentClasses.AMMO && item.slotId !== "cartridges") {
@@ -960,7 +973,7 @@ class TraderRefresh extends TraderAssortHelper_1.TraderAssortHelper {
             let itemTemplId = assortItems[i]._tpl;
             if (modConfig.randomize_trader_stock == true) {
                 if (item.upd?.StackObjectsCount != null) {
-                    randomTraderAss.randomizeStock(item, averageLL);
+                    randomTraderAss.randomizeStock(item, averageLL, pmcData.length);
                 }
                 if (item.upd?.UnlimitedCount != null) {
                     item.upd.UnlimitedCount = false;
