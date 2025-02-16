@@ -1528,7 +1528,7 @@
         "Ergonomics": 0,
         "Weight": 0.064,
         "Loudness": 4,
-        "Convergence": 0,
+        "Convergence": 2.5,
         "LoyaltyLevel": 1,
         "Flash": -45
     },
@@ -1609,7 +1609,7 @@
         "Ergonomics": 0,
         "Weight": 0.059,
         "Loudness": 4,
-        "Convergence": 0,
+        "Convergence": 2.5,
         "LoyaltyLevel": 1,
         "Flash": -45
     },
@@ -1617,7 +1617,7 @@
         "$type": "RealismMod.WeaponMod, RealismMod",
         "ItemID": "56ea8180d2720bf2698b456a",
         "Name": "muzzle_ar15_kac_qd_compensator_556x45",
-        "ModType": "",
+        "ModType": "muzzle_supp_adapter",
         "VerticalRecoil": 0,
         "HorizontalRecoil": -4,
         "Dispersion": -4,
@@ -2315,9 +2315,9 @@
         "Ergonomics": 0,
         "Weight": 0.064,
         "Loudness": 18,
-        "Convergence": 9,
+        "Convergence": 10,
         "LoyaltyLevel": 4,
-        "Flash": -50
+        "Flash": -40
     },
     "5c7fb51d2e2216001219ce11": {
         "$type": "RealismMod.WeaponMod, RealismMod",
@@ -2707,7 +2707,7 @@
         "VerticalRecoil": 0,
         "HorizontalRecoil": -16,
         "Dispersion": -20,
-        "CameraRecoil": 0,
+        "CameraRecoil": -10,
         "AutoROF": 0,
         "SemiROF": 0,
         "ModMalfunctionChance": 0,
@@ -2721,10 +2721,10 @@
         "ConflictingItems": [],
         "Ergonomics": 0,
         "Weight": 0.145,
-        "Loudness": 24,
-        "Convergence": 0,
+        "Loudness": 35,
+        "Convergence": 10,
         "LoyaltyLevel": 2,
-        "Flash": -40
+        "Flash": 35
     },
     "5f633f791b231926f2329f13": {
         "$type": "RealismMod.WeaponMod, RealismMod",

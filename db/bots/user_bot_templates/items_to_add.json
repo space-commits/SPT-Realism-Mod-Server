@@ -42,7 +42,7 @@
             },
             "SecondPrimaryWeapon": {},
             "Holster": {
-                "663cf1da2496a8e7b0b71759": 1
+                "6661012d16fbd2fb75408f87": 1
             },
             "Scabbard": {},
             "ArmBand": {},
@@ -115,7 +115,9 @@
             "Eyewear": {},
             "TacticalVest": {},
             "FaceCover": {},
-            "Headwear": {},
+            "Headwear": {
+                "672e2e754e6844af8e197b00": 1
+            },
             "ArmorVest": {}
         },
         "tier4": {
@@ -140,7 +142,13 @@
             "Eyewear": {},
             "TacticalVest": {},
             "FaceCover": {},
-            "Headwear": {},
+            "Headwear": {
+                "672e2e754e6844af8e197b00": 1,
+                "672e2e75b79213c8f2101b8c": 1,
+                "672e2e75b14ae1b5c91474b4": 1,
+                "672e2e75b5b680c7ee6aa408": 1,
+                "672e2e7523db0e477dcf377f": 1
+            },
             "ArmorVest": {}
         }
     },
@@ -232,7 +240,6 @@
             "672e2e75b79213c8f2101b8c": 1,
             "672e2e75b14ae1b5c91474b4": 1,
             "672e2e75b5b680c7ee6aa408": 1,
-            "672e2e754e6844af8e197b00": 1,
             "672e2e7523db0e477dcf377f": 1
         },
         "ArmorVest": {}

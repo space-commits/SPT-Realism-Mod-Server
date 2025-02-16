@@ -722,7 +722,7 @@ class RandomizeTraderAssort {
         if (seasonalevents_1.EventTracker.isHalloween && this.assortsToIgnore.includes(item._id))
             return;
         const playerCountFactor = Math.max(1, playerCount);
-        const llStockFactor = Math.max(averageLL - 1, 0);
+        const llStockFactor = Math.max(averageLL - 2, 0);
         const ammoStockFactor = this.getLLStackableBonus(averageLL) * playerCountFactor;
         const llOutOfStockFactor = this.getLLOutOfStockBonus(averageLL);
         const regularMaxStock = (1 + modConfig.rand_stock_modifier) * playerCountFactor;

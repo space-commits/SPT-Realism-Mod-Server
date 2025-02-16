@@ -2669,7 +2669,7 @@ export class BotLoader {
                 this.bigpipeBase.chances.equipmentMods.mod_equipment_000 = 100;
                 this.botConf().equipment["followerbigpipe"].lightIsActiveDayChancePercent = 100;
 
-                this.birdeyeBase.chances.equipment.Headwear = 50;
+                this.birdeyeBase.chances.equipment.Headwear = 65;
                 this.birdeyeBase.chances.equipmentMods.mod_equipment_000 = 50;
                 this.birdeyeBase.inventory.equipment.Headwear["5a16bb52fcdbcb001a3b00dc"] = 0;
                 this.birdeyeBase.inventory.equipment.Headwear["61bca7cda0eae612383adf57"] = 1;
