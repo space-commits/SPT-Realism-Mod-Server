@@ -1,6 +1,6 @@
 import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
 import { Utils } from "../utils/utils";
-import { ILogger } from "../../types/models/spt/utils/ILogger";
+import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { ITemplateItem, ISlot } from "@spt/models/eft/common/tables/ITemplateItem";
 
 export class AttachmentBase {

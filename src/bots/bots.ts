@@ -1,5 +1,5 @@
 import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
-import { ILogger } from "../../types/models/spt/utils/ILogger";
+import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { ConfigServer } from "@spt/servers/ConfigServer";
 import { ConfigTypes } from "@spt/models/enums/ConfigTypes";
 import { EquipmentFilters, IBotConfig } from "@spt/models/spt/config/IBotConfig";
@@ -309,7 +309,7 @@ export class BotLoader {
         }
     }
 
-    private mergeEquipmentItems(botTier, userTier) {
+    private mergeEquipmentItems(botTier: IBotType, userTier) {
         this.mergeHelper(botTier.inventory.equipment.FirstPrimaryWeapon, userTier.FirstPrimaryWeapon);
         this.mergeHelper(botTier.inventory.equipment.SecondPrimaryWeapon, userTier.SecondPrimaryWeapon);
         this.mergeHelper(botTier.inventory.equipment.Holster, userTier.Holster);
@@ -1005,6 +1005,8 @@ export class BotLoader {
             this.scavBase.generation.items.food.weights = lootOdds.dynamic_scav.items.drink.weights;
         }
 
+        this.mergeEquipmentItems(this.scavBase, userWeapons.scav.tier1);
+
         BotTierTracker.scavTier = 1;
         if (this.modConfig.logEverything == true) {
             this.logger.info("scavLoad1 loaded");
@@ -1046,6 +1048,8 @@ export class BotLoader {
             this.scavBase.generation.items.drink.weights = lootOdds.dynamic_scav.items.food.weights;
             this.scavBase.generation.items.food.weights = lootOdds.dynamic_scav.items.drink.weights;
         }
+
+        this.mergeEquipmentItems(this.scavBase, userWeapons.scav.tier2);
 
         BotTierTracker.scavTier = 2;
         if (this.modConfig.logEverything == true) {
@@ -1089,6 +1093,8 @@ export class BotLoader {
             this.scavBase.generation.items.food.weights = lootOdds.dynamic_scav.items.drink.weights;
         }
 
+        this.mergeEquipmentItems(this.scavBase, userWeapons.scav.tier3);
+        
         BotTierTracker.scavTier = 3;
         if (this.modConfig.logEverything == true) {
             this.logger.info("scavLoad3 loaded");

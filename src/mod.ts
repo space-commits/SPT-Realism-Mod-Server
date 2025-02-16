@@ -212,12 +212,12 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             "realismGetDirectory",
             [
                 {
-                    url: "/RealismMod/GetDirectory",
+                    url: "/RealismMod/GetTemplateData",
                     action: async (url, info, sessionID, output) => {
                         try {
-                            let directory = path.join(__dirname, '..');
-                            let dirObj = { "ServerBaseDirectory": directory };
-                            return jsonUtil.serialize(dirObj);
+                            const statHandler: ItemStatHandler = ItemStatHandler.getInstance();
+                            const data: { [key: string]: any } = await statHandler.processTemplateJson(true, path.join(__dirname, '..', 'db', 'templates'))
+                            return jsonUtil.serialize(data);
                         } catch (e) {
                             console.error("Realism: Failed to get server mod directory", e);
                         }
@@ -781,7 +781,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         const maps = new Spawns(logger, tables, modConfig, tables.locations, utils);
         const gear = new Gear(tables, logger, modConfig);
         const itemCloning = new ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
-        const statHandler = new ItemStatHandler(tables, logger, hashUtil);
+        const statHandler = ItemStatHandler.getInstance(tables, logger, hashUtil);
         const descGen = new DescriptionGen(tables, modConfig, logger, statHandler);
 
         //Remember to back up json data before using this, and make sure it isn't overriding existing json objects
@@ -923,7 +923,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             }
             statHandler.pushGearToServer();
 
-            await statHandler.processUserJsonFiles();
+            await statHandler.processTemplateJson(false);
             descGen.descriptionGen();
 
             if (modConfig.malf_changes == true) {

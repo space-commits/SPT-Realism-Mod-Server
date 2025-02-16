@@ -204,7 +204,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1.13,
-        "Comfort": 0.9,
+        "Comfort": 0.8,
         "speedPenaltyPercent": -0.5,
         "mousePenalty": 0,
         "weaponErgonomicPenalty": 0

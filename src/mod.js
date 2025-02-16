@@ -123,12 +123,12 @@ class Main {
         ], "RealismMod");
         dynamicRouter.registerDynamicRouter("realismGetDirectory", [
             {
-                url: "/RealismMod/GetDirectory",
+                url: "/RealismMod/GetTemplateData",
                 action: async (url, info, sessionID, output) => {
                     try {
-                        let directory = path.join(__dirname, '..');
-                        let dirObj = { "ServerBaseDirectory": directory };
-                        return jsonUtil.serialize(dirObj);
+                        const statHandler = json_handler_1.ItemStatHandler.getInstance();
+                        const data = await statHandler.processTemplateJson(true, path.join(__dirname, '..', 'db', 'templates'));
+                        return jsonUtil.serialize(data);
                     }
                     catch (e) {
                         console.error("Realism: Failed to get server mod directory", e);
@@ -588,7 +588,7 @@ class Main {
         const maps = new spawns_1.Spawns(logger, tables, modConfig, tables.locations, utils);
         const gear = new gear_1.Gear(tables, logger, modConfig);
         const itemCloning = new item_cloning_1.ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
-        const statHandler = new json_handler_1.ItemStatHandler(tables, logger, hashUtil);
+        const statHandler = json_handler_1.ItemStatHandler.getInstance(tables, logger, hashUtil);
         const descGen = new description_gen_1.DescriptionGen(tables, modConfig, logger, statHandler);
         //Remember to back up json data before using this, and make sure it isn't overriding existing json objects
         // jsonGen.attTemplatesCodeGen();
@@ -699,7 +699,7 @@ class Main {
                 statHandler.pushWeaponsToServer();
             }
             statHandler.pushGearToServer();
-            await statHandler.processUserJsonFiles();
+            await statHandler.processTemplateJson(false);
             descGen.descriptionGen();
             if (modConfig.malf_changes == true) {
                 weaponsGlobals.loadGlobalMalfChanges();

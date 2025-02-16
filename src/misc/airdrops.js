@@ -1,5 +1,5 @@
 // import { IAirdropChancePercent, IAirdropConfig } from "C:/snapshot/project/obj/models/spt/config/IAirdropConfig";
-// import { ILogger } from "../../types/models/spt/utils/ILogger";
+// import { ILogger } from "C:/snapshot/project/obj/models/spt/utils/ILogger";
 // import { EventTracker } from "./seasonalevents";
 // import { ITemplateItem } from "C:/snapshot/project/obj/models/eft/common/tables/ITemplateItem";
 // import { ILootItem } from "C:/snapshot/project/obj/models/spt/services/LootItem";

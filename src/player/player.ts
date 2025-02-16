@@ -2,7 +2,7 @@ import { IPmcData } from "@spt/models/eft/common/IPmcData";
 import { IItem } from "@spt/models/eft/common/tables/IItem";
 import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
 import { JsonUtil } from "@spt/utils/JsonUtil";
-import { ILogger } from "../../types/models/spt/utils/ILogger";
+import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { ParentClasses } from "../utils/enums";
 import { Utils } from "../utils/utils";
 import { IConfig } from "@spt/models/eft/common/IGlobals";

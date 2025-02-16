@@ -1,6 +1,6 @@
 import { IQuest } from "@spt/models/eft/common/tables/IQuest";
 import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
-import { ILogger } from "../../types/models/spt/utils/ILogger";
+import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { ISptProfile } from "@spt/models/eft/profile/ISptProfile";
 import { EventTracker } from "../misc/seasonalevents";
 

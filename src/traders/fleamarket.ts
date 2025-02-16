@@ -1,5 +1,5 @@
 import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
-import { ILogger } from "../../types/models/spt/utils/ILogger";
+import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { IRagfairConfig } from "@spt/models/spt/config/IRagfairConfig";
 import { ParentClasses } from "../utils/enums";
 import { RagfairOfferGenerator } from "@spt/generators/RagfairOfferGenerator";

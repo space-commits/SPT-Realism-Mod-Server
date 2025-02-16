@@ -1,5 +1,5 @@
 import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
-import { ILogger } from "../../types/models/spt/utils/ILogger";
+import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { ITraderConfig } from "@spt/models/spt/config/ITraderConfig";
 import { IBarterScheme, ITrader, ITraderAssort } from "@spt/models/eft/common/tables/ITrader";
 import { container } from "tsyringe";
@@ -128,7 +128,7 @@ export class Traders {
                 ll.insurance_price_coef = Math.round(ll.insurance_price_coef * 1.25);
             });
 
-            insurance.returnChancePercent[prapId] = 35;
+            insurance.returnChancePercent[prapId] = 40;
             insurance.returnChancePercent[theraId] = 90;
 
             this.tables.globals.config.Insurance.MaxStorageTimeInHour = 168;
@@ -324,7 +324,8 @@ export class Traders {
                         if (childTemplate == null || childTemplate?.Price == null || childTemplate.Price == 0) continue;
                         totalPrice += childTemplate.Price;
                     }
-                    barterItem.count = totalPrice;
+                    const conversionRate = barterItem._tpl == "5696686a4bdc2da3298b456a" ? 108 :  barterItem._tpl == "5696686a4bdc2da3298b456a"  ? 117 : 1;
+                    barterItem.count = Math.round(totalPrice / conversionRate);
                 }
             }
         }

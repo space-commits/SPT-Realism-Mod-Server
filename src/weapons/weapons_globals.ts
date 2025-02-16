@@ -1,6 +1,6 @@
 import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
 import { IRepairConfig } from "@spt/models/spt/config/IRepairConfig";
-import { ILogger } from "../../types/models/spt/utils/ILogger";
+import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { ParentClasses } from "../utils/enums";
 import { ConfigChecker } from "../utils/utils";
 import { IConfig } from "@spt/models/eft/common/IGlobals";

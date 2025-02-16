@@ -58,6 +58,12 @@ class ItemStatHandler {
         this.modPusherHelper = this.modPusherHelper.bind(this);
         this.weapPusherHelper = this.weapPusherHelper.bind(this);
     }
+    static instance;
+    static getInstance(tables, logger, hashUtils) {
+        if (!ItemStatHandler.instance)
+            ItemStatHandler.instance = new ItemStatHandler(tables, logger, hashUtils);
+        return ItemStatHandler.instance;
+    }
     itemDB() {
         return this.tables.templates.items;
     }
@@ -313,34 +319,40 @@ class ItemStatHandler {
             }
         }
     }
-    async processUserJsonFiles(folderPath = path.join(__dirname, '..', '..', 'db', 'templates', 'user_templates')) {
+    async processTemplateJson(isForClientDataRequest, folderPath = path.join(__dirname, '..', '..', 'db', 'templates', 'user_templates'), rawTemplateData = {}) {
         try {
             const files = await readdir(folderPath);
             for (const file of files) {
                 const filePath = path.join(folderPath, file);
                 const stats = await stat(filePath);
                 if (stats.isDirectory()) {
-                    await this.processUserJsonFiles(filePath); // Recursively call self for subfolders
+                    await this.processTemplateJson(isForClientDataRequest, filePath, rawTemplateData);
                 }
                 else if (file.endsWith('.json')) {
                     const data = await readFile(filePath, 'utf8');
                     const jsonData = JSON.parse(data);
                     for (let i in jsonData) {
-                        if ((modConfig.recoil_attachment_overhaul || modConfig.realistic_ballistics) && jsonData[i].$type.includes("Gun")) {
-                            this.weapPusherHelper(jsonData[i], this.itemDB());
+                        const template = jsonData[i];
+                        if (isForClientDataRequest) {
+                            rawTemplateData[i] = template;
+                            continue;
                         }
-                        if (modConfig.recoil_attachment_overhaul && jsonData[i].$type.includes("WeaponMod")) {
-                            this.modPusherHelper(jsonData[i], this.itemDB());
+                        if ((modConfig.recoil_attachment_overhaul || modConfig.realistic_ballistics) && template.$type.includes("Gun")) {
+                            this.weapPusherHelper(template, this.itemDB());
                         }
-                        if (jsonData[i].$type.includes("Gear")) {
-                            this.gearPusherHelper(jsonData[i], this.itemDB());
+                        if (modConfig.recoil_attachment_overhaul && template.$type.includes("WeaponMod")) {
+                            this.modPusherHelper(template, this.itemDB());
                         }
-                        if (modConfig.realistic_ballistics && jsonData[i].$type.includes("Ammo")) {
-                            this.ammoPusherHelper(jsonData[i], this.itemDB());
+                        if (template.$type.includes("Gear")) {
+                            this.gearPusherHelper(template, this.itemDB());
+                        }
+                        if (modConfig.realistic_ballistics && template.$type.includes("Ammo")) {
+                            this.ammoPusherHelper(template, this.itemDB());
                         }
                     }
                 }
             }
+            return rawTemplateData;
         }
         catch (err) {
             this.logger.error(`Error processing files in directory ${folderPath}: ${err}`);

@@ -60,11 +60,17 @@ export class ItemStatHandler {
         this.weapPusherHelper = this.weapPusherHelper.bind(this);
     }
 
+    private static instance: ItemStatHandler;
+    public static getInstance(tables?: IDatabaseTables, logger?: ILogger, hashUtils?: HashUtil): ItemStatHandler {
+        if (!ItemStatHandler.instance) ItemStatHandler.instance = new ItemStatHandler(tables, logger, hashUtils);
+        return ItemStatHandler.instance;
+    }
+
     itemDB(): Record<string, ITemplateItem> {
         return this.tables.templates.items;
     }
 
-    modifiedItems: { [key: string]: any } = {};
+    public modifiedItems: { [key: string]: any } = {};
 
     public pushModsToServer() {
         this.callHelper(MuzzleDeviceTemplates, this.itemDB(), this.modPusherHelper);
@@ -264,10 +270,10 @@ export class ItemStatHandler {
             serverItem._props.Weight = fileItem.Weight != null ? fileItem.Weight : 0;
             serverItem._props.ShotgunDispersion = fileItem.ShotgunDispersion != null ? fileItem.ShotgunDispersion : 1;
             serverItem._props.Loudness = fileItem.Loudness != null ? fileItem.Loudness : 0;
-            
-            let confFileItems: string[] =  fileItem.ConflictingItems ?? [];
+
+            let confFileItems: string[] = fileItem.ConflictingItems ?? [];
             serverItem._props.ConflictingItems = [...new Set([...serverItem._props.ConflictingItems, ...confFileItems])];;
-            
+
             let isScope = serverItem._id === ParentClasses.COLLIMATOR || serverItem._id === ParentClasses.COMPACT_COLLIMATOR || serverItem._parent === ParentClasses.ASSAULT_SCOPE || serverItem._parent === ParentClasses.SPECIAL_SCOPE || serverItem._parent === ParentClasses.OPTIC_SCOPE || serverItem._parent === ParentClasses.THEMALVISION || serverItem._parent === ParentClasses.NIGHTVISION;;
             if (isScope != true) {
                 serverItem._props.HasShoulderContact = fileItem.HasShoulderContact;
@@ -287,7 +293,7 @@ export class ItemStatHandler {
         if (fileItem.ItemID in serverTemplates) {
             let serverItem = serverTemplates[fileItem.ItemID]; //this will be the reskin item's stats, which I want to reset
             let baseItem = serverItem; //temp set it to server template
-            
+
             if (fileItem.TemplateID != null) {
                 baseItem = serverTemplates[fileItem.TemplateID]; //if it's a reskin, need the server stats of the item the skin is based on
                 fileItem = this.modifiedItems[fileItem.TemplateID]; //if it's a reskin, need the realism specific stats of the item the skin is based on
@@ -354,7 +360,11 @@ export class ItemStatHandler {
         }
     }
 
-    public async processUserJsonFiles(folderPath = path.join(__dirname, '..', '..', 'db', 'templates', 'user_templates')) {
+    public async processTemplateJson(
+        isForClientDataRequest: boolean,
+        folderPath = path.join(__dirname, '..', '..', 'db', 'templates', 'user_templates'),
+        rawTemplateData: { [key: string]: any } = {}
+    ): Promise<{ [key: string]: any }> {
         try {
             const files = await readdir(folderPath);
             for (const file of files) {
@@ -362,27 +372,33 @@ export class ItemStatHandler {
                 const stats = await stat(filePath);
 
                 if (stats.isDirectory()) {
-                    await this.processUserJsonFiles(filePath); // Recursively call self for subfolders
+                    await this.processTemplateJson(isForClientDataRequest, filePath, rawTemplateData);
                 } else if (file.endsWith('.json')) {
                     const data = await readFile(filePath, 'utf8');
                     const jsonData = JSON.parse(data);
 
                     for (let i in jsonData) {
-                        if ((modConfig.recoil_attachment_overhaul || modConfig.realistic_ballistics) && jsonData[i].$type.includes("Gun")) {
-                            this.weapPusherHelper(jsonData[i], this.itemDB());
+                        const template = jsonData[i];
+                        if (isForClientDataRequest) {
+                            rawTemplateData[i] = template;
+                            continue;
                         }
-                        if (modConfig.recoil_attachment_overhaul && jsonData[i].$type.includes("WeaponMod")) {
-                            this.modPusherHelper(jsonData[i], this.itemDB());
+                        if ((modConfig.recoil_attachment_overhaul || modConfig.realistic_ballistics) && template.$type.includes("Gun")) {
+                            this.weapPusherHelper(template, this.itemDB());
                         }
-                        if (jsonData[i].$type.includes("Gear")) {
-                            this.gearPusherHelper(jsonData[i], this.itemDB());
+                        if (modConfig.recoil_attachment_overhaul && template.$type.includes("WeaponMod")) {
+                            this.modPusherHelper(template, this.itemDB());
                         }
-                        if (modConfig.realistic_ballistics && jsonData[i].$type.includes("Ammo")) {
-                            this.ammoPusherHelper(jsonData[i], this.itemDB());
+                        if (template.$type.includes("Gear")) {
+                            this.gearPusherHelper(template, this.itemDB());
+                        }
+                        if (modConfig.realistic_ballistics && template.$type.includes("Ammo")) {
+                            this.ammoPusherHelper(template, this.itemDB());
                         }
                     }
                 }
             }
+            return rawTemplateData;
         } catch (err) {
             this.logger.error(`Error processing files in directory ${folderPath}: ${err}`);
         }

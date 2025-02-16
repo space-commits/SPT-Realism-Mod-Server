@@ -1,6 +1,6 @@
 
 // import { IAirdropChancePercent, IAirdropConfig } from "@spt/models/spt/config/IAirdropConfig";
-// import { ILogger } from "../../types/models/spt/utils/ILogger";
+// import { ILogger } from "@spt/models/spt/utils/ILogger";
 // import { EventTracker } from "./seasonalevents";
 // import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 // import { ILootItem } from "@spt/models/spt/services/LootItem";

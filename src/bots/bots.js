@@ -947,6 +947,7 @@ class BotLoader {
             this.scavBase.generation.items.drink.weights = lootOdds.dynamic_scav.items.food.weights;
             this.scavBase.generation.items.food.weights = lootOdds.dynamic_scav.items.drink.weights;
         }
+        this.mergeEquipmentItems(this.scavBase, userWeapons.scav.tier1);
         utils_1.BotTierTracker.scavTier = 1;
         if (this.modConfig.logEverything == true) {
             this.logger.info("scavLoad1 loaded");
@@ -982,6 +983,7 @@ class BotLoader {
             this.scavBase.generation.items.drink.weights = lootOdds.dynamic_scav.items.food.weights;
             this.scavBase.generation.items.food.weights = lootOdds.dynamic_scav.items.drink.weights;
         }
+        this.mergeEquipmentItems(this.scavBase, userWeapons.scav.tier2);
         utils_1.BotTierTracker.scavTier = 2;
         if (this.modConfig.logEverything == true) {
             this.logger.info("scavLoad2 loaded");
@@ -1017,6 +1019,7 @@ class BotLoader {
             this.scavBase.generation.items.drink.weights = lootOdds.dynamic_scav.items.food.weights;
             this.scavBase.generation.items.food.weights = lootOdds.dynamic_scav.items.drink.weights;
         }
+        this.mergeEquipmentItems(this.scavBase, userWeapons.scav.tier3);
         utils_1.BotTierTracker.scavTier = 3;
         if (this.modConfig.logEverything == true) {
             this.logger.info("scavLoad3 loaded");
