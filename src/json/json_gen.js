@@ -4,7 +4,6 @@ exports.JsonGen = void 0;
 const enums_1 = require("../utils/enums");
 const arrays_1 = require("../utils/arrays");
 const modConfig = require("../../config/config.json");
-const armorTemplate = require("../../db/bots/loadouts/templates/armorMods.json");
 const armorPlateTemplates = require("../../db/templates/gear/armorPlateTemplates.json");
 const armorComponentsTemplates = require("../../db/templates/gear/armorComponentsTemplates.json");
 const armorChestrigTemplates = require("../../db/templates/gear/armorChestrigTemplates.json");
@@ -717,35 +716,6 @@ class JsonGen {
                 MalfChance
             };
             return item;
-        }
-    }
-    genArmorMods() {
-        for (let i in this.itemDB()) {
-            let serverItem = this.itemDB()[i];
-            if (serverItem._parent === enums_1.ParentClasses.ARMORVEST || serverItem._parent === enums_1.ParentClasses.CHESTRIG || serverItem._parent === enums_1.ParentClasses.HEADWEAR || serverItem._parent === enums_1.ParentClasses.FACECOVER) {
-                this.armorModsWriteToFile(i, serverItem);
-            }
-        }
-    }
-    armorModsWriteToFile(index, serverItem) {
-        armorTemplate[index] = this.writeArmorToFile(serverItem);
-        this.utils.writeConfigJSON(armorTemplate, `db/bots/loadouts/templates/armorMods.json`);
-    }
-    writeArmorToFile(serverItem) {
-        let armor = {};
-        if (Array.isArray(serverItem._props.Slots)) {
-            for (const slot of serverItem._props.Slots) {
-                if (allValidArmorSlots.includes(slot._name.toLowerCase())) {
-                    let slotItems = [];
-                    for (const filter of slot._props.filters) {
-                        for (const item of filter.Filter) {
-                            slotItems.push(item);
-                        }
-                    }
-                    armor[slot._name] = slotItems;
-                }
-            }
-            return armor;
         }
     }
 }

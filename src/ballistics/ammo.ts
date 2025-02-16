@@ -3727,7 +3727,7 @@ export class Ammo {
             }
             // M855
             if (serverItem._id === "54527a984bdc2d4e668b4567") {
-                serverItem._props.PenetrationPower = 68;
+                serverItem._props.PenetrationPower = 69;
                 serverItem._props.ArmorDamage = 1;
                 serverItem._props.Damage = 63;
                 serverItem._props.InitialSpeed = 902;

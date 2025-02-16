@@ -42,7 +42,7 @@
             "sptbear": {
                 "factory4_day": {
                     "bossSanitar": 10,
-                    "bossTagilla": 2,
+                    "bossTagilla": 1,
                     "bossBully": 10,
                     "gifter": 1,
                     "assault": 20,
@@ -57,7 +57,7 @@
                 },
                 "factory4_night": {
                     "bossSanitar": 10,
-                    "bossTagilla": 5,
+                    "bossTagilla": 1,
                     "bossBully": 10,
                     "gifter": 1,
                     "assault": 20,
@@ -248,7 +248,7 @@
                 },
                 "factory4_night": {
                     "bossSanitar": 10,
-                    "bossTagilla": 2,
+                    "bossTagilla": 1,
                     "bossBully": 10,
                     "gifter": 1,
                     "assault": 20,
@@ -263,7 +263,7 @@
                 },
                 "bigmap": {
                     "bossSanitar": 10,
-                    "bossTagilla": 2,
+                    "bossTagilla": 1,
                     "bossBully": 10,
                     "gifter": 1,
                     "followerKojaniy": 5,
@@ -326,7 +326,7 @@
                 },
                 "woods": {
                     "bossSanitar": 10,
-                    "bossTagilla": 2,
+                    "bossTagilla": 1,
                     "bossBully": 10,
                     "gifter": 1,
                     "followerKojaniy": 7,
@@ -342,7 +342,7 @@
                 },
                 "interchange": {
                     "bossSanitar": 10,
-                    "bossTagilla": 2,
+                    "bossTagilla": 1,
                     "bossBully": 10,
                     "gifter": 1,
                     "followerKojaniy": 2,
@@ -358,7 +358,7 @@
                 },
                 "lighthouse": {
                     "bossSanitar": 10,
-                    "bossTagilla": 2,
+                    "bossTagilla": 1,
                     "bossBully": 10,
                     "gifter": 1,
                     "followerKojaniy": 7,
@@ -374,7 +374,7 @@
                 },
                 "rezervbase": {
                     "bossSanitar": 10,
-                    "bossTagilla": 2,
+                    "bossTagilla": 1,
                     "bossBully": 10,
                     "gifter": 1,
                     "followerKojaniy": 2,
@@ -390,7 +390,7 @@
                 },
                 "shoreline": {
                     "bossSanitar": 10,
-                    "bossTagilla": 2,
+                    "bossTagilla": 1,
                     "bossBully": 10,
                     "gifter": 1,
                     "followerKojaniy": 7,
@@ -406,7 +406,7 @@
                 },
                 "tarkovstreets": {
                     "bossSanitar": 10,
-                    "bossTagilla": 2,
+                    "bossTagilla": 1,
                     "bossBully": 10,
                     "gifter": 1,
                     "followerKojaniy": 2,
@@ -426,7 +426,7 @@
             "sptbear": {
                 "factory4_day": {
                     "bossSanitar": 10,
-                    "bossTagilla": 2,
+                    "bossTagilla": 1,
                     "bossBully": 10,
                     "gifter": 1,
                     "assault": 20,
@@ -441,7 +441,7 @@
                 },
                 "factory4_night": {
                     "bossSanitar": 10,
-                    "bossTagilla": 5,
+                    "bossTagilla": 1,
                     "bossBully": 10,
                     "gifter": 1,
                     "assault": 20,
@@ -617,7 +617,7 @@
             "sptusec": {
                 "factory4_day": {
                     "bossSanitar": 10,
-                    "bossTagilla": 2,
+                    "bossTagilla": 1,
                     "bossBully": 10,
                     "gifter": 1,
                     "assault": 20,
@@ -632,7 +632,7 @@
                 },
                 "factory4_night": {
                     "bossSanitar": 10,
-                    "bossTagilla": 5,
+                    "bossTagilla": 1,
                     "bossBully": 10,
                     "gifter": 1,
                     "assault": 20,
@@ -647,7 +647,7 @@
                 },
                 "bigmap": {
                     "bossSanitar": 15,
-                    "bossTagilla": 2,
+                    "bossTagilla": 1,
                     "bossBully": 15,
                     "gifter": 1,
                     "followerKojaniy": 10,
@@ -695,7 +695,7 @@
                 },
                 "laboratory": {
                     "bossSanitar": 10,
-                    "bossTagilla": 2,
+                    "bossTagilla": 1,
                     "bossBully": 10,
                     "gifter": 1,
                     "assault": 20,
@@ -710,7 +710,7 @@
                 },
                 "woods": {
                     "bossSanitar": 15,
-                    "bossTagilla": 2,
+                    "bossTagilla": 1,
                     "bossBully": 15,
                     "gifter": 1,
                     "followerKojaniy": 10,
@@ -726,7 +726,7 @@
                 },
                 "interchange": {
                     "bossSanitar": 15,
-                    "bossTagilla": 2,
+                    "bossTagilla": 1,
                     "bossBully": 15,
                     "gifter": 1,
                     "followerKojaniy": 10,
@@ -742,7 +742,7 @@
                 },
                 "lighthouse": {
                     "bossSanitar": 15,
-                    "bossTagilla": 2,
+                    "bossTagilla": 1,
                     "bossBully": 15,
                     "gifter": 1,
                     "followerKojaniy": 10,
@@ -758,7 +758,7 @@
                 },
                 "rezervbase": {
                     "bossSanitar": 15,
-                    "bossTagilla": 2,
+                    "bossTagilla": 1,
                     "bossBully": 15,
                     "gifter": 1,
                     "followerKojaniy": 10,
@@ -774,7 +774,7 @@
                 },
                 "shoreline": {
                     "bossSanitar": 15,
-                    "bossTagilla": 2,
+                    "bossTagilla": 1,
                     "bossBully": 15,
                     "gifter": 1,
                     "followerKojaniy": 10,
@@ -790,7 +790,7 @@
                 },
                 "tarkovstreets": {
                     "bossSanitar": 15,
-                    "bossTagilla": 2,
+                    "bossTagilla": 1,
                     "bossBully": 15,
                     "gifter": 1,
                     "followerKojaniy": 5,
@@ -830,7 +830,7 @@
                 "factory4_night": {
                     "bossKilla": 7,
                     "bossSanitar": 15,
-                    "bossTagilla": 2,
+                    "bossTagilla": 1,
                     "pmcBot": 7,
                     "assault": 30,
                     "exUsec": 5,
@@ -1029,7 +1029,7 @@
                 "factory4_night": {
                     "bossKilla": 5,
                     "bossSanitar": 5,
-                    "bossTagilla": 2,
+                    "bossTagilla": 1,
                     "pmcBot": 15,
                     "assault": 30,
                     "exUsec": 15,
@@ -1227,7 +1227,7 @@
                 "factory4_night": {
                     "bossKilla": 5,
                     "bossSanitar": 5,
-                    "bossTagilla": 2,
+                    "bossTagilla": 1,
                     "pmcBot": 15,
                     "assault": 30,
                     "exUsec": 15,
@@ -1436,7 +1436,7 @@
                 "factory4_night": {
                     "bossKilla": 5,
                     "bossSanitar": 10,
-                    "bossTagilla": 2,
+                    "bossTagilla": 1,
                     "pmcBot": 15,
                     "assault": 30,
                     "exUsec": 15,
@@ -1649,7 +1649,7 @@
                 "factory4_night": {
                     "bossKilla": 15,
                     "bossSanitar": 15,
-                    "bossTagilla": 2,
+                    "bossTagilla": 1,
                     "pmcBot": 15,
                     "assault": 15,
                     "exUsec": 5,
@@ -2250,7 +2250,7 @@
                 "factory4_night": {
                     "bossKilla": 10,
                     "bossSanitar": 10,
-                    "bossTagilla": 2,
+                    "bossTagilla": 1,
                     "pmcBot": 15,
                     "assault": 15,
                     "exUsec": 15,

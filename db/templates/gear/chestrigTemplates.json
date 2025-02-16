@@ -99,7 +99,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 0.9,
-        "Comfort": 0.77,
+        "Comfort": 0.7,
         "speedPenaltyPercent": -0.5,
         "mousePenalty": 0,
         "weaponErgonomicPenalty": 0
@@ -264,7 +264,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1.13,
-        "Comfort": 0.74,
+        "Comfort": 0.76,
         "speedPenaltyPercent": -0.1,
         "mousePenalty": 0,
         "weaponErgonomicPenalty": 0
@@ -294,7 +294,7 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 0.86,
-        "Comfort": 0.78,
+        "Comfort": 0.7,
         "speedPenaltyPercent": -0.5,
         "mousePenalty": 0,
         "weaponErgonomicPenalty": 0

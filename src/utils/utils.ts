@@ -10,11 +10,16 @@ import { StaticArrays } from "./arrays";
 
 const fs = require('fs');
 const modConfig = require("../../config/config.json");
-const armorTemplate = require("../../db/bots/loadouts/templates/armorMods.json");
 
 export class Utils {
 
-    constructor(private tables: IDatabaseTables) { }
+    private constructor(private tables: IDatabaseTables) { }
+
+    private static instance: Utils;
+    public static getInstance(tables?: IDatabaseTables): Utils {
+        if (!Utils.instance) Utils.instance = new Utils(tables);
+        return Utils.instance;
+    }
 
 
     itemDB(): Record<string, ITemplateItem> {
@@ -82,35 +87,6 @@ export class Utils {
             profileItem.upd.Repairable.Durability = templateItem._props.Durability;
             profileItem.upd.Repairable.MaxDurability = templateItem._props.MaxDurability;
         }
-    }
-
-    public addGasMaskFilters(mods: IMods) {
-        StaticArrays.gasMasks.forEach(g => {
-            if (this.itemDB()[g]) 
-                mods[g] = {
-                    "mod_equipment": [
-                        "590c595c86f7747884343ad7"
-                    ]
-                }
-        });
-    }
-
-    public addArmorInserts(mods: IMods) {
-        Object.keys(armorTemplate).forEach(outerKey => {
-            // If the outer key exists in mods, compare inner keys
-            if (mods[outerKey]) {
-                Object.keys(armorTemplate[outerKey]).forEach(innerKey => {
-                    // If the inner key doesn't exist in mods, insert it
-                    if (!mods[outerKey][innerKey]) {
-                        mods[outerKey][innerKey] = armorTemplate[outerKey][innerKey];
-                    }
-                });
-            }
-            //if mods doesnt have the outer key, insert it
-            else {
-                mods[outerKey] = armorTemplate[outerKey];
-            }
-        });
     }
 
     public probabilityWeighter(items: any, weights: number[]): any {

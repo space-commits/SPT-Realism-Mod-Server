@@ -679,7 +679,7 @@ export class RandomizeTraderAssort {
     private logger = container.resolve<ILogger>("WinstonLogger");
     private tables = this.databaseServer.getTables();
     private itemDB = this.tables.templates.items;
-    private utils = new Utils(this.tables);
+    private utils = Utils.getInstance();
     private assortsToIgnore = [
         "670ae835f28231d36adcf7fa",
         "67082dc8dc5160ef041094dc",
@@ -792,7 +792,7 @@ export class RandomizeTraderAssort {
     private randomizeStockHelper(assortItemParent: string, targetParent: string, item: IItem, min: number, max: number, llFactor: number, canBeOutOfStock: boolean = true) {
         if (assortItemParent === targetParent) {
             //items aren't out of stock often enough, this artifically increases the chance of being out of stock
-            if (canBeOutOfStock && this.utils.pickRandNumInRange(0, 100) < (20 - (llFactor * 4))) {
+            if (canBeOutOfStock && this.utils.pickRandNumInRange(0, 100) < (30 - (llFactor * 4))) {
                 item.upd.StackObjectsCount = 0 + min;
             }
             else {
@@ -820,22 +820,22 @@ export class RandomizeTraderAssort {
         if (EventTracker.isHalloween && this.assortsToIgnore.includes(item._id)) return;
 
         const playerCountFactor = Math.max(1, playerCount)
-        const llStockFactor = Math.max(averageLL - 1, 1);
+        const llStockFactor = Math.max(averageLL - 1, 0);
         const ammoStockFactor = this.getLLStackableBonus(averageLL) * playerCountFactor;
         const llOutOfStockFactor = this.getLLOutOfStockBonus(averageLL);
         const regularMaxStock = (1 + modConfig.rand_stock_modifier) * playerCountFactor;
-        const specialItemMaxStock = (3 + modConfig.rand_stock_modifier) * playerCountFactor;
-        const regularMagMaxStock = (3 + modConfig.rand_stock_modifier) * playerCountFactor;
-        const midCapMagMaxStock = (2 + modConfig.rand_stock_modifier) * playerCountFactor;
+        const medMaxStock = (2 + modConfig.rand_stock_modifier) * playerCountFactor;
+        const specialItemMaxStock = (4 + modConfig.rand_stock_modifier) * playerCountFactor;
+        const regularMagMaxStock = (4 + modConfig.rand_stock_modifier) * playerCountFactor;
+        const midCapMagMaxStock = (3 + modConfig.rand_stock_modifier) * playerCountFactor;
         const highCapMagMaxStock = (1 + modConfig.rand_stock_modifier) * playerCountFactor;
         const ammoBoxMaxStock = (2 + modConfig.rand_stock_modifier * playerCountFactor);
+        const foodMaxStock = (2 + modConfig.rand_stock_modifier * playerCountFactor);
 
         const isRouble = item._tpl == "5449016a4bdc2d6f028b456f"
         const moneyMinStock = isRouble ? 30000 : 350;
         const moneyMaxStockBase = isRouble ? 300000 : 9000;
         const moneyMaxStock = moneyMaxStockBase * playerCountFactor;
-
-        if (modConfig.logEverything) this.logger.warning(`Randomize Stock. Average Lvl ${averageLL}, player count ${playerCount}`);
 
         //ammo
         this.randomizeAmmoStock(itemParent, item, ammoStockFactor, llOutOfStockFactor);
@@ -889,8 +889,8 @@ export class RandomizeTraderAssort {
 
         //medical
         this.randomizeStockHelper(itemParent, ParentClasses.STIMULATOR, item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock + llStockFactor, llOutOfStockFactor);
-        this.randomizeStockHelper(itemParent, ParentClasses.DRUGS, item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock + llStockFactor, llOutOfStockFactor);
-        this.randomizeStockHelper(itemParent, ParentClasses.MEDICAL, item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock + llStockFactor, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, ParentClasses.DRUGS, item, 0 + modConfig.rand_stock_modifier_min, medMaxStock + llStockFactor, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, ParentClasses.MEDICAL, item, 0 + modConfig.rand_stock_modifier_min, medMaxStock + llStockFactor, llOutOfStockFactor);
 
         //special items
         this.randomizeStockHelper(itemParent, ParentClasses.SPEC_ITEM, item, 3 + modConfig.rand_stock_modifier_min, specialItemMaxStock + llStockFactor, llOutOfStockFactor);
@@ -908,8 +908,8 @@ export class RandomizeTraderAssort {
         this.randomizeStockHelper(itemParent, ParentClasses.LOCKABLE_CONTAINER, item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock, llOutOfStockFactor);
 
         //provisions
-        this.randomizeStockHelper(itemParent, ParentClasses.FOOD, item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock + llStockFactor, llOutOfStockFactor);
-        this.randomizeStockHelper(itemParent, ParentClasses.DRINK, item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock + llStockFactor, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, ParentClasses.FOOD, item, 0 + modConfig.rand_stock_modifier_min, foodMaxStock + llStockFactor, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, ParentClasses.DRINK, item, 0 + modConfig.rand_stock_modifier_min, foodMaxStock + llStockFactor, llOutOfStockFactor);
     }
 
     private randomizeAmmoStock(assortItemParent: string, item: IItem, llStackableFactor: number, llStockFactor: number) {
@@ -1066,7 +1066,7 @@ export class TraderRefresh extends TraderAssortHelper {
     private modifyTraderAssorts(trader: ITrader, logger: ILogger, pmcData: IPmcData[]): IItem[] {
         const tables = this.databaseService.getTables();
         const randomTraderAss = new RandomizeTraderAssort();
-        const utils = new Utils(tables);
+        const utils = Utils.getInstance();
 
         let assortItems = trader.assort.items;
         let assortBarters = trader.assort.barter_scheme;

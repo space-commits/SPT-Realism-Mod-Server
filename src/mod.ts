@@ -123,6 +123,7 @@ import { DurabilityLimitsHelper } from "@spt/helpers/DurabilityLimitsHelper";
 import { InventoryHelper } from "@spt/helpers/InventoryHelper";
 import { IUpd } from "@spt/models/eft/common/tables/IItem";
 import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
+import { spawn } from "child_process";
 
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");
@@ -235,8 +236,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         try {
                             const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
                             const postLoadDBServer = container.resolve<DatabaseService>("DatabaseService");
-                            const postLoadTables = postLoadDBServer.getTables();
-                            const utils = new Utils(postLoadTables);
+                            const utils = Utils.getInstance();
                             const pmcData = profileHelper.getPmcProfile(sessionID);
                             this.getEventData(pmcData, logger, utils);
                             this.setModInfo(logger);
@@ -391,7 +391,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         const locationConfig = container.resolve<ConfigServer>("ConfigServer").getConfig<ILocationConfig>(ConfigTypes.LOCATION);
                         const seasonalEventsService = container.resolve<SeasonalEventService>("SeasonalEventService");
                         const postLoadTables = postLoadDBServer.getTables();
-                        const utils = new Utils(postLoadTables);
+                        const utils = Utils.getInstance();
                         const tieredFlea = new TieredFlea(postLoadTables, aKIFleaConf);
                         const player = new Player(logger, postLoadTables, modConfig, medItems, utils);
                         const maps = new Spawns(logger, postLoadTables, modConfig, postLoadTables.locations, utils);
@@ -511,7 +511,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
                         const postLoadDBService = container.resolve<DatabaseService>("DatabaseService");
                         const postLoadtables = postLoadDBService.getTables();
-                        const utils = new Utils(postLoadtables);
+                        const utils = Utils.getInstance();
                         const player = new Player(logger, postLoadtables, modConfig, medItems, utils);
 
                         const pmcData = profileHelper.getPmcProfile(sessionID);
@@ -553,8 +553,8 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             const matchInfo = appContext.getLatestValue(ContextVariableType.RAID_CONFIGURATION).getValue<IGetRaidConfigurationRequestData>();
                             const pmcConf = configServer.getConfig<IPmcConfig>(ConfigTypes.PMC);
                             const arrays = new BotArrays(postLoadTables);
-                            const utils = new Utils(postLoadTables);
-                            const bots = new BotLoader(logger, postLoadTables, configServer, modConfig, arrays, utils);
+                            const utils = Utils.getInstance();
+                            const botLoader = BotLoader.getInstance();
                             const pmcData = profileHelper.getPmcProfile(sessionID);
                             const profileData = profileHelper.getFullProfile(sessionID);
 
@@ -592,7 +592,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             RaidInfoTracker.mapType = mapType;
 
                             if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {
-                                bots.updateBots(pmcData, logger, modConfig, bots, utils);
+                                botLoader.updateBots(pmcData, logger, modConfig, botLoader, utils);
                             }
 
                             if (!ModTracker.swagPresent && !ModTracker.qtbSpawnsActive) {
@@ -644,7 +644,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         // const itemHelper = container.resolve<ItemHelper>("ItemHelper");
                         const aKIFleaConf = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
                         const tieredFlea = new TieredFlea(postLoadTables, aKIFleaConf);
-                        const utils = new Utils(postLoadTables);
+                        const utils = Utils.getInstance();
                         const player = new Player(logger, postLoadTables, modConfig, medItems, utils);
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         const scavData = profileHelper.getScavProfile(sessionID);
@@ -763,11 +763,11 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         const traderConf = configServer.getConfig<ITraderConfig>(ConfigTypes.TRADER);
         const insConf = configServer.getConfig<IInsuranceConfig>(ConfigTypes.INSURANCE);
         const arrays = new BotArrays(tables);
-        const utils = new Utils(tables);
+        const utils = Utils.getInstance(tables);
         const ammo = new Ammo(logger, tables, modConfig);
         const armor = new Armor(logger, tables, modConfig);
         const attachBase = new AttachmentBase(logger, tables, modConfig, utils);
-        const bots = new BotLoader(logger, tables, configServer, modConfig, arrays, utils);
+        const botLoader = BotLoader.getInstance(logger, tables, configServer, modConfig, arrays, utils);
         const itemsClass = new ItemsClass(logger, tables, modConfig, inventoryConf, raidConf, aKIFleaConf, itemConf);
         const consumables = new Consumables(logger, tables, modConfig, medItems, foodItems, medBuffs, foodBuffs, stimBuffs);
         const player = new Player(logger, tables, modConfig, medItems, utils);
@@ -814,7 +814,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
 
         if (modConfig.realistic_ballistics) {
             itemCloning.createCustomPlates();
-            bots.setBotHealth();
+            botLoader.setBotHealth();
         }
 
         if (modConfig.open_zones_fix == true && !ModTracker.swagPresent) {
@@ -826,26 +826,31 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         //airdrop.loadAirdropChanges();
 
         if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {
-            bots.loadBots();
+            botLoader.loadBots();
         }
+
+        //spt bug: items can have zero uses
+        // if(modConfig.bot_loot_changes){
+        //     bots.loadBotLootChanges();
+        // }
 
         if (modConfig.bot_testing == true && modConfig.bot_test_weps_enabled == true && modConfig.all_scavs == true && modConfig.bot_test_tier == 4) {
             logger.warning("Realism Mod: testing enabled, bots will be limited to a cap of 1");
-            bots.testBotCap();
+            botLoader.testBotCap();
         }
         else if (modConfig.increased_bot_cap == true && !ModTracker.swagPresent && !ModTracker.qtbPresent) {
-            bots.increaseBotCap();
+            botLoader.increaseBotCap();
         }
         else if (modConfig.spawn_waves == true && !ModTracker.swagPresent && !ModTracker.qtbPresent) {
-            bots.increasePerformance();
+            botLoader.increasePerformance();
         }
 
         if (modConfig.bot_names == true) {
-            bots.botNames();
+            botLoader.botNames();
         }
 
         if (modConfig.guarantee_boss_spawn == true) {
-            bots.forceBossSpawns();
+            maps.forceBossSpawns();
         }
 
         //need to add diffuclity values to experience obj or abandon
@@ -867,7 +872,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             consumables.loadStims();
         }
 
-        bots.botHpMulti();
+        botLoader.botHpMulti();
 
         fleaChangesPostDB.loadFleaGlobal(); //has to run post db load, otherwise item templates are undefined 
         fleaChangesPreDB.loadFleaConfig(); //probably redundant, but just in case

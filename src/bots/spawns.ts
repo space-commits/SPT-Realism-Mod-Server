@@ -64,7 +64,7 @@ export class Spawns {
     }
 
 
-    protected configureZombies(databaseService: DatabaseService, seasonalEventConfig: ISeasonalEventConfig) {
+    private configureZombies(databaseService: DatabaseService, seasonalEventConfig: ISeasonalEventConfig) {
         const infectionLevel = 25;
         const chance = 18;
         const globals: IGlobals = databaseService.getGlobals();
@@ -91,6 +91,19 @@ export class Spawns {
             }
         }
     }
+
+    public forceBossSpawns() {
+        for (let i in this.mapDB) {
+            let mapBase = this.mapDB[i]?.base;
+            if (mapBase != null && mapBase?.BossLocationSpawn != null) {
+                let bossSpawn = mapBase.BossLocationSpawn;
+                for (let k in bossSpawn) {
+                    bossSpawn[k].BossChance = 100;
+                }
+            }
+        }
+    }
+
 
     public loadSpawnChanges(locationConfig: ILocationConfig) {
         //&& ModTracker.swagPresent == false

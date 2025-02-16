@@ -152,8 +152,8 @@
         "interchange": 11,
         "laboratory": 12,
         "tarkovstreets": 9,
-        "sandbox": 11,
-        "sandbox_high": 11,
+        "sandbox": 9,
+        "sandbox_high": 9,
         "default": 12
     },
     "testBotCap": {

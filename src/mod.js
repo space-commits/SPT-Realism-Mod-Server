@@ -143,8 +143,7 @@ class Main {
                     try {
                         const profileHelper = container.resolve("ProfileHelper");
                         const postLoadDBServer = container.resolve("DatabaseService");
-                        const postLoadTables = postLoadDBServer.getTables();
-                        const utils = new utils_1.Utils(postLoadTables);
+                        const utils = utils_1.Utils.getInstance();
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         this.getEventData(pmcData, logger, utils);
                         this.setModInfo(logger);
@@ -263,7 +262,7 @@ class Main {
                     const locationConfig = container.resolve("ConfigServer").getConfig(ConfigTypes_1.ConfigTypes.LOCATION);
                     const seasonalEventsService = container.resolve("SeasonalEventService");
                     const postLoadTables = postLoadDBServer.getTables();
-                    const utils = new utils_1.Utils(postLoadTables);
+                    const utils = utils_1.Utils.getInstance();
                     const tieredFlea = new fleamarket_1.TieredFlea(postLoadTables, aKIFleaConf);
                     const player = new player_1.Player(logger, postLoadTables, modConfig, medItems, utils);
                     const maps = new spawns_1.Spawns(logger, postLoadTables, modConfig, postLoadTables.locations, utils);
@@ -364,7 +363,7 @@ class Main {
                     const profileHelper = container.resolve("ProfileHelper");
                     const postLoadDBService = container.resolve("DatabaseService");
                     const postLoadtables = postLoadDBService.getTables();
-                    const utils = new utils_1.Utils(postLoadtables);
+                    const utils = utils_1.Utils.getInstance();
                     const player = new player_1.Player(logger, postLoadtables, modConfig, medItems, utils);
                     const pmcData = profileHelper.getPmcProfile(sessionID);
                     const scavData = profileHelper.getScavProfile(sessionID);
@@ -396,8 +395,8 @@ class Main {
                         const matchInfo = appContext.getLatestValue(ContextVariableType_1.ContextVariableType.RAID_CONFIGURATION).getValue();
                         const pmcConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.PMC);
                         const arrays = new arrays_1.BotArrays(postLoadTables);
-                        const utils = new utils_1.Utils(postLoadTables);
-                        const bots = new bots_1.BotLoader(logger, postLoadTables, configServer, modConfig, arrays, utils);
+                        const utils = utils_1.Utils.getInstance();
+                        const botLoader = bots_1.BotLoader.getInstance();
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         const profileData = profileHelper.getFullProfile(sessionID);
                         utils_1.RaidInfoTracker.generatedBotsCount = 0;
@@ -428,7 +427,7 @@ class Main {
                         }
                         utils_1.RaidInfoTracker.mapType = mapType;
                         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
-                            bots.updateBots(pmcData, logger, modConfig, bots, utils);
+                            botLoader.updateBots(pmcData, logger, modConfig, botLoader, utils);
                         }
                         if (!utils_1.ModTracker.swagPresent && !utils_1.ModTracker.qtbSpawnsActive) {
                             pmcConf.convertIntoPmcChance.laboratory = {
@@ -470,7 +469,7 @@ class Main {
                     // const itemHelper = container.resolve<ItemHelper>("ItemHelper");
                     const aKIFleaConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.RAGFAIR);
                     const tieredFlea = new fleamarket_1.TieredFlea(postLoadTables, aKIFleaConf);
-                    const utils = new utils_1.Utils(postLoadTables);
+                    const utils = utils_1.Utils.getInstance();
                     const player = new player_1.Player(logger, postLoadTables, modConfig, medItems, utils);
                     const pmcData = profileHelper.getPmcProfile(sessionID);
                     const scavData = profileHelper.getScavProfile(sessionID);
@@ -571,11 +570,11 @@ class Main {
         const traderConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.TRADER);
         const insConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.INSURANCE);
         const arrays = new arrays_1.BotArrays(tables);
-        const utils = new utils_1.Utils(tables);
+        const utils = utils_1.Utils.getInstance(tables);
         const ammo = new ammo_1.Ammo(logger, tables, modConfig);
         const armor = new armor_1.Armor(logger, tables, modConfig);
         const attachBase = new attatchment_base_1.AttachmentBase(logger, tables, modConfig, utils);
-        const bots = new bots_1.BotLoader(logger, tables, configServer, modConfig, arrays, utils);
+        const botLoader = bots_1.BotLoader.getInstance(logger, tables, configServer, modConfig, arrays, utils);
         const itemsClass = new items_1.ItemsClass(logger, tables, modConfig, inventoryConf, raidConf, aKIFleaConf, itemConf);
         const consumables = new meds_1.Consumables(logger, tables, modConfig, medItems, foodItems, medBuffs, foodBuffs, stimBuffs);
         const player = new player_1.Player(logger, tables, modConfig, medItems, utils);
@@ -615,7 +614,7 @@ class Main {
         itemsClass.addCustomItems();
         if (modConfig.realistic_ballistics) {
             itemCloning.createCustomPlates();
-            bots.setBotHealth();
+            botLoader.setBotHealth();
         }
         if (modConfig.open_zones_fix == true && !utils_1.ModTracker.swagPresent) {
             maps.openZonesFix();
@@ -623,23 +622,27 @@ class Main {
         maps.loadSpawnChanges(locationConfig);
         //airdrop.loadAirdropChanges();
         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
-            bots.loadBots();
+            botLoader.loadBots();
         }
+        //spt bug: items can have zero uses
+        // if(modConfig.bot_loot_changes){
+        //     bots.loadBotLootChanges();
+        // }
         if (modConfig.bot_testing == true && modConfig.bot_test_weps_enabled == true && modConfig.all_scavs == true && modConfig.bot_test_tier == 4) {
             logger.warning("Realism Mod: testing enabled, bots will be limited to a cap of 1");
-            bots.testBotCap();
+            botLoader.testBotCap();
         }
         else if (modConfig.increased_bot_cap == true && !utils_1.ModTracker.swagPresent && !utils_1.ModTracker.qtbPresent) {
-            bots.increaseBotCap();
+            botLoader.increaseBotCap();
         }
         else if (modConfig.spawn_waves == true && !utils_1.ModTracker.swagPresent && !utils_1.ModTracker.qtbPresent) {
-            bots.increasePerformance();
+            botLoader.increasePerformance();
         }
         if (modConfig.bot_names == true) {
-            bots.botNames();
+            botLoader.botNames();
         }
         if (modConfig.guarantee_boss_spawn == true) {
-            bots.forceBossSpawns();
+            maps.forceBossSpawns();
         }
         //need to add diffuclity values to experience obj or abandon
         // if (modConfig.boss_difficulty == true) {
@@ -656,7 +659,7 @@ class Main {
         if (modConfig.stim_changes == true) {
             consumables.loadStims();
         }
-        bots.botHpMulti();
+        botLoader.botHpMulti();
         fleaChangesPostDB.loadFleaGlobal(); //has to run post db load, otherwise item templates are undefined 
         fleaChangesPreDB.loadFleaConfig(); //probably redundant, but just in case
         traders.loadTraderRepairs();

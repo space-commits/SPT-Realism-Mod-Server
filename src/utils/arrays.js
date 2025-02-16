@@ -27,7 +27,8 @@ class BotArrays {
             botDB["sectantpriest"],
             botDB["bosszryachiy"],
             botDB["bossboar"],
-            botDB["bosskolontay"]
+            botDB["bosskolontay"],
+            botDB["bosspartisan"],
         ];
         this.bossFollowerArr = [
             botDB["followerbully"],
