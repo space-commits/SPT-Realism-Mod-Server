@@ -5,6 +5,7 @@ const ConfigTypes_1 = require("C:/snapshot/project/obj/models/enums/ConfigTypes"
 const utils_1 = require("../utils/utils");
 const seasonalevents_1 = require("../misc/seasonalevents");
 const arrays_1 = require("../utils/arrays");
+const enums_1 = require("../utils/enums");
 const scavLO = require("../../db/bots/loadouts/scavs/scavLO.json");
 const bearLO = require("../../db/bots/loadouts/PMCs/bearLO.json");
 const usecLO = require("../../db/bots/loadouts/PMCs/usecLO.json");
@@ -20,9 +21,9 @@ const tagillaLO = require("../../db/bots/loadouts/bosses/tagillaLO.json");
 const saniLO = require("../../db/bots/loadouts/bosses/sanitar/sanitarLO.json");
 const saniFollowerLO = require("../../db/bots/loadouts/bosses/sanitar/sanitarfollowerLO.json");
 const reshLO = require("../../db/bots/loadouts/bosses/reshalla/reshallaLO.json");
+const reshFollowerLO = require("../../db/bots/loadouts/bosses/reshalla/reshallafollowerLO.json");
 const cultistLO = require("../../db/bots/loadouts/special/cultistLO.json");
 const priestLO = require("../../db/bots/loadouts/special/priestLO.json");
-const reshFollowerLO = require("../../db/bots/loadouts/bosses/reshalla/reshallafollowerLO.json");
 const botHealth = require("../../db/bots/botHealth.json");
 const rmBotConfig = require("../../db/bots/botconfig.json");
 const USECNames = require("../../db/bots/names/USECNames.json");
@@ -33,6 +34,7 @@ const realismAmmo = require("../../db/bots/loadouts/templates/pmc_ammo_realism.j
 const vanillaAmmo = require("../../db/bots/loadouts/templates/pmc_ammo_vanilla.json");
 const lootOdds = require("../../db/bots/loadouts/templates/lootOdds.json");
 const pmcLootLimits = require("../../db/bots/loadouts/PMCs/PMCLootLimitCat.json");
+const userWeapons = require("../../db/bots/user_bot_templates/items_to_add.json");
 class BotLoader {
     logger;
     tables;
@@ -56,6 +58,39 @@ class BotLoader {
     reshFollowerBase;
     priestBase;
     cultBase;
+    mapDB() {
+        return this.tables.locations;
+    }
+    botConf() {
+        return this.configServ.getConfig(ConfigTypes_1.ConfigTypes.BOT);
+    }
+    botConfPMC() {
+        return this.configServ.getConfig(ConfigTypes_1.ConfigTypes.PMC);
+    }
+    itemDB() {
+        return this.tables.templates.items;
+    }
+    armorModsData = {};
+    allValidArmorSlots = [
+        "front_plate",
+        "back_plate",
+        "left_side_plate",
+        "right_side_plate",
+        "soft_armor_front",
+        "soft_armor_back",
+        "soft_armor_left",
+        "soft_armor_right",
+        "collar",
+        "shoulder_l",
+        "shoulder_r",
+        "groin",
+        "groin_back",
+        "helmet_top",
+        "helmet_back",
+        "helmet_ears",
+        "helmet_eyes",
+        "helmet_jaw"
+    ];
     constructor(logger, tables, configServ, modConfig, arrays, utils) {
         this.logger = logger;
         this.tables = tables;
@@ -63,7 +98,16 @@ class BotLoader {
         this.modConfig = modConfig;
         this.arrays = arrays;
         this.utils = utils;
-        let botDB = this.tables.bots.types;
+        this.intitailizeBotDbRefs();
+    }
+    static instance;
+    static getInstance(logger, tables, configServ, modConfig, arrays, utils) {
+        if (!BotLoader.instance)
+            BotLoader.instance = new BotLoader(logger, tables, configServ, modConfig, arrays, utils);
+        return BotLoader.instance;
+    }
+    intitailizeBotDbRefs() {
+        const botDB = this.tables.bots.types;
         this.scavBase = botDB["assault"];
         this.usecBase = botDB["usec"];
         this.bearBase = botDB["bear"];
@@ -81,20 +125,32 @@ class BotLoader {
         this.priestBase = botDB["sectantpriest"];
         this.cultBase = botDB["sectantwarrior"];
     }
-    mapDB() {
-        return this.tables.locations;
-    }
-    botConf() {
-        return this.configServ.getConfig(ConfigTypes_1.ConfigTypes.BOT);
-    }
-    botConfPMC() {
-        return this.configServ.getConfig(ConfigTypes_1.ConfigTypes.PMC);
-    }
     loadBots() {
-        if (this.modConfig.dynamic_loot_pmcs === true) {
+        if (this.modConfig.dynamic_loot_pmcs === true)
             this.botConfPMC().looseWeaponInBackpackChancePercent = 0;
+        this.genArmorMods();
+        this.setBotSkills();
+        this.adjustBotLootWeights();
+        this.adjustEquipmentTemplates();
+        this.pushGearMods();
+        this.adjustPlayerScavs();
+        if (this.modConfig.logEverything == true) {
+            this.logger.info("Bots Loaded");
         }
-        const botEquipmentTempalte = {
+    }
+    adjustBotLootWeights() {
+        this.botConfPMC().vestLoot.whitelist = [];
+        this.botConfPMC().vestLoot.blacklist = [];
+        this.botConfPMC().pocketLoot.whitelist = [];
+        this.botConfPMC().pocketLoot.blacklist = [];
+        this.botConfPMC().backpackLoot.whitelist = [];
+        this.botConfPMC().backpackLoot.blacklist = [];
+        this.botConfPMC().vestLoot.blacklist.push(...arrays_1.StaticArrays.botLootBlacklist);
+        this.botConfPMC().pocketLoot.blacklist.push(...arrays_1.StaticArrays.botLootBlacklist);
+        this.botConfPMC().backpackLoot.blacklist.push(...arrays_1.StaticArrays.botLootBlacklist);
+    }
+    adjustEquipmentTemplates() {
+        const botEquipmentTemplate = {
             "weaponModLimits": {
                 "scopeLimit": 2,
                 "lightLaserLimit": 2
@@ -116,19 +172,19 @@ class BotLoader {
             "weaponSlotIdsToMakeRequired": [],
             "forceOnlyArmoredRigWhenNoArmor": false,
         };
-        this.botConf().equipment["assault"] = botEquipmentTempalte;
-        this.botConf().equipment["pmcbot"] = botEquipmentTempalte;
-        this.botConf().equipment["exusec"] = botEquipmentTempalte;
-        this.botConf().equipment["bossknight"] = botEquipmentTempalte;
-        this.botConf().equipment["followerbigpipe"] = botEquipmentTempalte;
-        this.botConf().equipment["followerbirdeye"] = botEquipmentTempalte;
-        this.botConf().equipment["bosskilla"] = botEquipmentTempalte;
-        this.botConf().equipment["bosstagilla"] = botEquipmentTempalte;
-        this.botConf().equipment["bosssanitar"] = botEquipmentTempalte;
-        this.botConf().equipment["followersanitar"] = botEquipmentTempalte;
-        this.botConf().equipment["bossbully"] = botEquipmentTempalte;
-        this.botConf().equipment["followerbossbully"] = botEquipmentTempalte;
-        this.botConf().equipment["pmc"] = botEquipmentTempalte;
+        this.botConf().equipment["assault"] = botEquipmentTemplate;
+        this.botConf().equipment["pmcbot"] = botEquipmentTemplate;
+        this.botConf().equipment["exusec"] = botEquipmentTemplate;
+        this.botConf().equipment["bossknight"] = botEquipmentTemplate;
+        this.botConf().equipment["followerbigpipe"] = botEquipmentTemplate;
+        this.botConf().equipment["followerbirdeye"] = botEquipmentTemplate;
+        this.botConf().equipment["bosskilla"] = botEquipmentTemplate;
+        this.botConf().equipment["bosstagilla"] = botEquipmentTemplate;
+        this.botConf().equipment["bosssanitar"] = botEquipmentTemplate;
+        this.botConf().equipment["followersanitar"] = botEquipmentTemplate;
+        this.botConf().equipment["bossbully"] = botEquipmentTemplate;
+        this.botConf().equipment["followerbossbully"] = botEquipmentTemplate;
+        this.botConf().equipment["pmc"] = botEquipmentTemplate;
         this.botConf().equipment["pmc"].weaponModLimits.scopeLimit = 100;
         this.botConf().equipment["pmc"].weaponModLimits.lightLaserLimit = 2;
         this.botConf().equipment["pmc"].randomisation = [];
@@ -138,39 +194,134 @@ class BotLoader {
         this.botConf().equipment["pmc"].weightingAdjustmentsByPlayerLevel = [];
         this.botConf().equipment["pmc"].faceShieldIsActiveChancePercent = 100;
         this.botConf().equipment["pmc"].filterPlatesByLevel = true;
-        this.botConfPMC().vestLoot.whitelist = [];
-        this.botConfPMC().vestLoot.blacklist = [];
-        this.botConfPMC().pocketLoot.whitelist = [];
-        this.botConfPMC().pocketLoot.blacklist = [];
-        this.botConfPMC().backpackLoot.whitelist = [];
-        this.botConfPMC().backpackLoot.blacklist = [];
+    }
+    adjustPlayerScavs() {
         this.botConf().playerScavBrainType = pmcTypes.playerScavBrainType;
         this.botConf().chanceAssaultScavHasPlayerScavName = 0;
-        this.botConfPMC().vestLoot.blacklist.push(...arrays_1.StaticArrays.botLootBlacklist);
-        this.botConfPMC().pocketLoot.blacklist.push(...arrays_1.StaticArrays.botLootBlacklist);
-        this.botConfPMC().backpackLoot.blacklist.push(...arrays_1.StaticArrays.botLootBlacklist);
-        //I hate this as much as you do
-        const botLOs = [bearLO.bearLO1, bearLO.bearLO2, bearLO.bearLO3,
-            bearLO.bearLO4, usecLO.usecLO1, usecLO.usecLO2, usecLO.usecLO3,
-            usecLO.usecLO4, tier5LO.tier5LO, rogueLO.rogueLO1, rogueLO.rogueLO2,
-            rogueLO.rogueLO3, raiderLO.raiderLO1, raiderLO.raiderLO2, raiderLO.raiderLO3];
-        for (let i in botLOs) {
-            this.utils.addArmorInserts(botLOs[i].inventory.mods);
-            this.utils.addGasMaskFilters(botLOs[i].inventory.mods);
-        }
-        if (this.modConfig.logEverything == true) {
-            this.logger.info("Bots Loaded");
+    }
+    addGasMaskFilters(mods) {
+        arrays_1.StaticArrays.gasMasks.forEach(g => {
+            mods[g] = {
+                "mod_equipment": [
+                    "590c595c86f7747884343ad7"
+                ]
+            };
+        });
+    }
+    addArmorInserts(mods) {
+        if (mods == null)
+            return;
+        Object.keys(this.armorModsData).forEach(outerKey => {
+            // If the outer key exists in mods, compare inner keys
+            if (mods[outerKey]) {
+                Object.keys(this.armorModsData[outerKey]).forEach(innerKey => {
+                    // If the inner key doesn't exist in mods, insert it
+                    if (!mods[outerKey][innerKey]) {
+                        mods[outerKey][innerKey] = JSON.parse(JSON.stringify(this.armorModsData[outerKey][innerKey]));
+                    }
+                });
+            }
+            //if mods doesnt have the outer key, insert it
+            else {
+                mods[outerKey] = JSON.parse(JSON.stringify(this.armorModsData[outerKey]));
+            }
+        });
+    }
+    //thse bots have their .mods obj overwritten, so I can't assign like I do for the other bots
+    pushGearModsHelper(botLO) {
+        for (const tier in botLO) {
+            const mods = botLO[tier]?.inventory?.mods;
+            if (mods) {
+                this.addArmorInserts(mods);
+                this.addGasMaskFilters(mods);
+            }
         }
     }
-    forceBossSpawns() {
-        for (let i in this.mapDB()) {
-            let mapBase = this.mapDB()[i]?.base;
-            if (mapBase != undefined && mapBase?.BossLocationSpawn !== undefined) {
-                let bossSpawn = mapBase.BossLocationSpawn;
-                for (let k in bossSpawn) {
-                    bossSpawn[k].BossChance = 100;
-                }
+    pushGearMods() {
+        //I don't like it, but it is what it is
+        this.pushGearModsHelper(scavLO);
+        this.pushGearModsHelper(bearLO);
+        this.pushGearModsHelper(usecLO);
+        this.pushGearModsHelper(tier5LO);
+        this.pushGearModsHelper(raiderLO);
+        this.pushGearModsHelper(rogueLO);
+        this.pushGearModsHelper(knightLO);
+        this.pushGearModsHelper(bigpipeLO);
+        this.pushGearModsHelper(killaLO);
+        this.pushGearModsHelper(tagillaLO);
+        this.pushGearModsHelper(saniLO);
+        this.pushGearModsHelper(saniFollowerLO);
+        this.pushGearModsHelper(reshLO);
+        this.pushGearModsHelper(reshFollowerLO);
+    }
+    genArmorMods() {
+        for (let i in this.itemDB()) {
+            let serverItem = this.itemDB()[i];
+            if ((serverItem._parent === enums_1.ParentClasses.ARMORVEST ||
+                serverItem._parent === enums_1.ParentClasses.CHESTRIG ||
+                serverItem._parent === enums_1.ParentClasses.HEADWEAR ||
+                serverItem._parent === enums_1.ParentClasses.FACECOVER)) {
+                this.storeArmorMods(i, serverItem);
             }
+        }
+    }
+    storeArmorMods(index, serverItem) {
+        let armorObj = this.extractArmorData(serverItem);
+        if (armorObj != null)
+            this.armorModsData[index] = this.extractArmorData(serverItem);
+    }
+    extractArmorData(serverItem) {
+        let armor = {};
+        if (!Array.isArray(serverItem._props.Slots) || serverItem._props.Slots.length == 0) {
+            return null;
+        }
+        for (const slot of serverItem._props.Slots) {
+            if (this.allValidArmorSlots.includes(slot._name.toLowerCase())) {
+                let slotItems = [];
+                for (const filter of slot._props.filters) {
+                    for (const item of filter.Filter) {
+                        slotItems.push(item);
+                    }
+                }
+                armor[slot._name] = slotItems;
+            }
+        }
+        return armor;
+    }
+    mergeHelper(loadOutItems, newItems) {
+        for (let key in newItems) {
+            if (!loadOutItems.hasOwnProperty(key) && this.itemDB()[key]) {
+                loadOutItems[key] = JSON.parse(JSON.stringify(newItems[key]));
+            }
+        }
+    }
+    mergeEquipmentItems(botTier, userTier) {
+        this.mergeHelper(botTier.inventory.equipment.FirstPrimaryWeapon, userTier.FirstPrimaryWeapon);
+        this.mergeHelper(botTier.inventory.equipment.SecondPrimaryWeapon, userTier.SecondPrimaryWeapon);
+        this.mergeHelper(botTier.inventory.equipment.Holster, userTier.Holster);
+        this.mergeHelper(botTier.inventory.equipment.Scabbard, userTier.Scabbard);
+        this.mergeHelper(botTier.inventory.equipment.ArmBand, userTier.ArmBand);
+        this.mergeHelper(botTier.inventory.equipment.Backpack, userTier.Backpack);
+        this.mergeHelper(botTier.inventory.equipment.Earpiece, userTier.Earpiece);
+        this.mergeHelper(botTier.inventory.equipment.Eyewear, userTier.Eyewear);
+        this.mergeHelper(botTier.inventory.equipment.FaceCover, userTier.FaceCover);
+        this.mergeHelper(botTier.inventory.equipment.TacticalVest, userTier.TacticalVest);
+        this.mergeHelper(botTier.inventory.equipment.Headwear, userTier.Headwear);
+        this.mergeHelper(botTier.inventory.equipment.ArmorVest, userTier.ArmorVest);
+    }
+    loadBotLootChanges() {
+        for (const i in this.tables.bots.types) {
+            this.botConf().lootItemResourceRandomization[i] =
+                {
+                    "food": {
+                        "chanceMaxResourcePercent": 30,
+                        "resourcePercent": 40
+                    },
+                    "meds": {
+                        "chanceMaxResourcePercent": 50,
+                        "resourcePercent": 40
+                    }
+                };
         }
     }
     botNames() {
@@ -191,7 +342,7 @@ class BotLoader {
     bossDifficulty() {
         for (let i in this.mapDB()) {
             let mapBase = this.mapDB()[i]?.base;
-            if (mapBase !== undefined && mapBase?.BossLocationSpawn !== undefined) {
+            if (mapBase != null && mapBase?.BossLocationSpawn != null) {
                 let bossLocationSpawn = mapBase.BossLocationSpawn;
                 for (let k in bossLocationSpawn) {
                     let boss = bossLocationSpawn[k];
@@ -213,28 +364,36 @@ class BotLoader {
         this.botConf().maxBotCap = rmBotConfig.maxBotCapLow;
         this.botConf().presetBatch = rmBotConfig.presetBatch;
     }
-    //stops bots from bleeding out too often with medical changes enabled
-    setBotHealth() {
+    setBotSkills() {
+        const highSkill = {
+            "min": 5100,
+            "max": 5000
+        };
+        const midSkill = {
+            "min": 1000,
+            "max": 2000
+        };
+        const lowSkill = {
+            "min": 100,
+            "max": 1000
+        };
         for (let bot in this.arrays.botArr) {
             let botType = this.arrays.botArr[bot];
-            if (botType.skills?.Common !== undefined) {
-                if (botType.skills.Common["Vitality"] !== undefined) {
-                    botType.skills.Common["Vitality"].max = 5100;
-                    botType.skills.Common["Vitality"].min = 5100;
-                }
-                else {
-                    botType.skills.Common["Vitality"] = {};
-                    botType.skills.Common["Vitality"].max = 5100;
-                    botType.skills.Common["Vitality"].min = 5100;
-                }
-            }
-            else {
+            if (botType.skills?.Common == null) {
                 botType.skills.Common = [];
-                botType.skills.Common["Vitality"] = {};
-                botType.skills.Common["Vitality"].max = 5100;
-                botType.skills.Common["Vitality"].min = 5100;
             }
+            if (!bot.includes("assault"))
+                botType.skills.Common["Vitality"] = highSkill; //prevent bleedouts
+            botType.skills.Common["BotReload"] = lowSkill;
+            botType.skills.Common["BotSound"] = midSkill;
+            botType.skills.Common["Strength"] = midSkill;
+            botType.skills.Common["Endurance"] = midSkill;
+            botType.skills.Common["Immunity"] = midSkill;
+            botType.skills.Common["Health"] = midSkill;
         }
+    }
+    //stops bots from bleeding out too often with medical changes enabled
+    setBotHealth() {
         this.setBotHPHelper(this.arrays.standardBotHPArr);
         if (this.modConfig.realistic_boss_health == true) {
             this.setBotHPHelper(this.arrays.bossBotArr);
@@ -415,7 +574,9 @@ class BotLoader {
     setBotTierHelper(pmcData, type, bots) {
         let tier = 1;
         let tierArray = [1, 2, 3];
-        if (pmcData.Info.Level <= 5) {
+        if (pmcData?.Info?.Level == null)
+            tier = 1;
+        else if (pmcData.Info.Level <= 5) {
             tier = this.utils.probabilityWeighter(tierArray, [100, 0, 0]);
         }
         if (pmcData.Info.Level <= 10) {
@@ -525,51 +686,33 @@ class BotLoader {
         }
     }
     updateBots(pmcData, logger, config, bots, utils) {
-        let property = pmcData?.Info?.Level;
-        if (property === undefined) {
-            bots.botConfig1();
-            bots.scavLoad1();
-            bots.rogueLoad1();
-            bots.raiderLoad1();
-            bots.goonsLoad1();
-            bots.killaLoad1();
-            bots.tagillaLoad1();
-            if (this.modConfig.force_boss_items == true) {
-                bots.forceBossItems();
+        if (config.bot_testing == true) {
+            bots.botTest(config.bot_test_tier);
+            logger.warning("Realism Mod: Bots Are In Test Mode");
+        }
+        if (config.bot_testing == false) {
+            if (pmcData.Info.Level <= 16) {
+                bots.botConfig1();
             }
-            logger.info("Realism Mod: Bots Have Been Set To Default (Tier 1)");
+            if (pmcData.Info.Level <= 35) {
+                bots.botConfig2();
+            }
+            if (pmcData.Info.Level > 35) {
+                bots.botConfig3();
+            }
+            this.setBotTiers(pmcData, bots);
             if (config.logEverything == true) {
-                logger.info("Realism Mod: Bots Have Been Reconfigured");
+                logger.info("Realism Mod: Bot Tiers Have Been Set");
             }
         }
-        if (property !== undefined) {
-            if (config.bot_testing == true) {
-                bots.botTest(config.bot_test_tier);
-                logger.warning("Realism Mod: Bots Are In Test Mode");
-            }
-            if (config.bot_testing == false) {
-                if (pmcData.Info.Level <= 16) {
-                    bots.botConfig1();
-                }
-                if (pmcData.Info.Level <= 35) {
-                    bots.botConfig2();
-                }
-                if (pmcData.Info.Level > 35) {
-                    bots.botConfig3();
-                }
-                this.setBotTiers(pmcData, bots);
-                if (config.logEverything == true) {
-                    logger.info("Realism Mod: Bot Tiers Have Been Set");
-                }
-            }
-            if (this.modConfig.force_boss_items == true) {
-                bots.forceBossItems();
-            }
+        if (this.modConfig.force_boss_items == true) {
+            bots.forceBossItems();
         }
+        //there are bots I do not modify yet, so I need to make sure they have all armor inserts and gas mask filters
         for (const i in this.tables.bots.types) {
             let bot = this.tables.bots.types[i];
-            utils.addArmorInserts(bot.inventory.mods);
-            utils.addGasMaskFilters(bot.inventory.mods);
+            this.addArmorInserts(bot.inventory.mods);
+            this.addGasMaskFilters(bot.inventory.mods);
         }
     }
     botConfig1() {
@@ -804,6 +947,7 @@ class BotLoader {
             this.scavBase.generation.items.drink.weights = lootOdds.dynamic_scav.items.food.weights;
             this.scavBase.generation.items.food.weights = lootOdds.dynamic_scav.items.drink.weights;
         }
+        this.mergeEquipmentItems(this.scavBase, userWeapons.scav.tier1);
         utils_1.BotTierTracker.scavTier = 1;
         if (this.modConfig.logEverything == true) {
             this.logger.info("scavLoad1 loaded");
@@ -839,6 +983,7 @@ class BotLoader {
             this.scavBase.generation.items.drink.weights = lootOdds.dynamic_scav.items.food.weights;
             this.scavBase.generation.items.food.weights = lootOdds.dynamic_scav.items.drink.weights;
         }
+        this.mergeEquipmentItems(this.scavBase, userWeapons.scav.tier2);
         utils_1.BotTierTracker.scavTier = 2;
         if (this.modConfig.logEverything == true) {
             this.logger.info("scavLoad2 loaded");
@@ -874,6 +1019,7 @@ class BotLoader {
             this.scavBase.generation.items.drink.weights = lootOdds.dynamic_scav.items.food.weights;
             this.scavBase.generation.items.food.weights = lootOdds.dynamic_scav.items.drink.weights;
         }
+        this.mergeEquipmentItems(this.scavBase, userWeapons.scav.tier3);
         utils_1.BotTierTracker.scavTier = 3;
         if (this.modConfig.logEverything == true) {
             this.logger.info("scavLoad3 loaded");
@@ -945,6 +1091,7 @@ class BotLoader {
         if (utils_1.RaidInfoTracker.mapName === "reservebase" || utils_1.RaidInfoTracker.mapName === "rezervbase") {
             botJsonTemplate.inventory.equipment.FaceCover["59e7715586f7742ee5789605"] = 10; //resp
         }
+        this.mergeEquipmentItems(botJsonTemplate, userWeapons.usec.tier1);
         if (this.modConfig.logEverything == true) {
             this.logger.info("usecLoad1 loaded");
         }
@@ -1023,6 +1170,7 @@ class BotLoader {
             botJsonTemplate.inventory.equipment.FaceCover["5b432c305acfc40019478128"] = 5; //gp5
             botJsonTemplate.inventory.equipment.FaceCover["59e7715586f7742ee5789605"] = 10; //resp
         }
+        this.mergeEquipmentItems(botJsonTemplate, userWeapons.usec.tier2);
         if (this.modConfig.logEverything == true) {
             this.logger.info("usecLoad2 loaded");
         }
@@ -1112,6 +1260,7 @@ class BotLoader {
             botJsonTemplate.inventory.equipment.FaceCover["5b432c305acfc40019478128"] = 15; //gp5
             botJsonTemplate.inventory.equipment.FaceCover["59e7715586f7742ee5789605"] = 5; //resp
         }
+        this.mergeEquipmentItems(botJsonTemplate, userWeapons.usec.tier3);
         if (this.modConfig.logEverything == true) {
             this.logger.info("usecLoad3 loaded");
         }
@@ -1192,6 +1341,7 @@ class BotLoader {
         if (utils_1.RaidInfoTracker.mapName === "reservebase" || utils_1.RaidInfoTracker.mapName === "rezervbase") {
             botJsonTemplate.inventory.equipment.FaceCover["60363c0c92ec1c31037959f5"] = 20; //gp7
         }
+        this.mergeEquipmentItems(botJsonTemplate, userWeapons.usec.tier4);
         if (this.modConfig.logEverything == true) {
             this.logger.info("usecLoad4 loaded");
         }
@@ -1287,6 +1437,7 @@ class BotLoader {
         if (utils_1.RaidInfoTracker.mapName === "reservebase" || utils_1.RaidInfoTracker.mapName === "rezervbase") {
             botJsonTemplate.inventory.equipment.FaceCover["59e7715586f7742ee5789605"] = 10; //resp
         }
+        this.mergeEquipmentItems(botJsonTemplate, userWeapons.bear.tier1);
         if (this.modConfig.logEverything == true) {
             this.logger.info("bearLoad1 loaded");
         }
@@ -1363,6 +1514,7 @@ class BotLoader {
             botJsonTemplate.inventory.equipment.FaceCover["5b432c305acfc40019478128"] = 5; //gp5
             botJsonTemplate.inventory.equipment.FaceCover["59e7715586f7742ee5789605"] = 10; //resp
         }
+        this.mergeEquipmentItems(botJsonTemplate, userWeapons.bear.tier2);
         if (this.modConfig.logEverything == true) {
             this.logger.info("bearLoad2 loaded");
         }
@@ -1444,6 +1596,7 @@ class BotLoader {
             botJsonTemplate.inventory.equipment.FaceCover["5b432c305acfc40019478128"] = 15; //gp5
             botJsonTemplate.inventory.equipment.FaceCover["59e7715586f7742ee5789605"] = 5; //resp
         }
+        this.mergeEquipmentItems(botJsonTemplate, userWeapons.bear.tier3);
         if (this.modConfig.logEverything == true) {
             this.logger.info("bearLoad3 loaded");
         }
@@ -1522,6 +1675,7 @@ class BotLoader {
         if (utils_1.RaidInfoTracker.mapName === "reservebase" || utils_1.RaidInfoTracker.mapName === "rezervbase") {
             botJsonTemplate.inventory.equipment.FaceCover["60363c0c92ec1c31037959f5"] = 20; //gp7
         }
+        this.mergeEquipmentItems(botJsonTemplate, userWeapons.bear.tier4);
         if (this.modConfig.logEverything == true) {
             this.logger.info("bearLoad4 loaded");
         }
@@ -1611,6 +1765,7 @@ class BotLoader {
             botJsonTemplate.chances.equipment.FaceCover = 100;
             this.addOptionalGasMasks(botJsonTemplate);
         }
+        this.mergeEquipmentItems(botJsonTemplate, userWeapons.tier5);
         if (utils_1.RaidInfoTracker.mapName === "reservebase" || utils_1.RaidInfoTracker.mapName === "rezervbase") {
             botJsonTemplate.inventory.equipment.FaceCover["60363c0c92ec1c31037959f5"] = 20; //gp7
         }
@@ -2241,7 +2396,7 @@ class BotLoader {
                 this.botConf().equipment["bossknight"].lightIsActiveDayChancePercent = 100;
                 this.bigpipeBase.chances.equipmentMods.mod_equipment_000 = 100;
                 this.botConf().equipment["followerbigpipe"].lightIsActiveDayChancePercent = 100;
-                this.birdeyeBase.chances.equipment.Headwear = 50;
+                this.birdeyeBase.chances.equipment.Headwear = 65;
                 this.birdeyeBase.chances.equipmentMods.mod_equipment_000 = 50;
                 this.birdeyeBase.inventory.equipment.Headwear["5a16bb52fcdbcb001a3b00dc"] = 0;
                 this.birdeyeBase.inventory.equipment.Headwear["61bca7cda0eae612383adf57"] = 1;

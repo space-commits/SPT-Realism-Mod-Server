@@ -97,7 +97,7 @@ import { Consumables } from "./items/meds";
 import { Player } from "./player/player"
 import { WeaponsGlobals } from "./weapons/weapons_globals"
 import { BotLoader } from "./bots/bots";
-import { BotGen } from "./bots/bot_gen";
+import { BotGen, BotGenHelper } from "./bots/bot_gen";
 import { ItemsClass } from "./items/items";
 import { JsonGen } from "./json/json_gen";
 import { Quests } from "./traders/quests";
@@ -118,6 +118,12 @@ import { info } from "console";
 import * as path from 'path';
 import * as fs from 'fs';
 import { json } from "stream/consumers";
+import { ContainerHelper } from "@spt/helpers/ContainerHelper";
+import { DurabilityLimitsHelper } from "@spt/helpers/DurabilityLimitsHelper";
+import { InventoryHelper } from "@spt/helpers/InventoryHelper";
+import { IUpd } from "@spt/models/eft/common/tables/IItem";
+import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
+import { spawn } from "child_process";
 
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");
@@ -203,17 +209,17 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         );
 
         dynamicRouter.registerDynamicRouter(
-            "realismGetDirectory",
+            "realismGetTemplateData",
             [
                 {
-                    url: "/RealismMod/GetDirectory",
+                    url: "/RealismMod/GetTemplateData",
                     action: async (url, info, sessionID, output) => {
                         try {
-                            let directory = path.join(__dirname, '..');
-                            let dirObj = { "ServerBaseDirectory": directory };
-                            return jsonUtil.serialize(dirObj);
+                            const statHandler: ItemStatHandler = ItemStatHandler.getInstance();
+                            const data: { [key: string]: any } = await statHandler.processTemplateJson(true, path.join(__dirname, '..', 'db', 'templates'))
+                            return jsonUtil.serialize(data);
                         } catch (e) {
-                            console.error("Realism: Failed to get server mod directory", e);
+                            console.error("Realism: Failed to get server template data", e);
                         }
                     }
                 }
@@ -230,8 +236,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         try {
                             const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
                             const postLoadDBServer = container.resolve<DatabaseService>("DatabaseService");
-                            const postLoadTables = postLoadDBServer.getTables();
-                            const utils = new Utils(postLoadTables);
+                            const utils = Utils.getInstance();
                             const pmcData = profileHelper.getPmcProfile(sessionID);
                             this.getEventData(pmcData, logger, utils);
                             this.setModInfo(logger);
@@ -273,6 +278,11 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             const botGeneratorHelper = container.resolve<BotGeneratorHelper>("BotGeneratorHelper");
             const botNameService = container.resolve<BotNameService>("BotNameService");
             const itemFilterService = container.resolve<ItemFilterService>("ItemFilterService");
+            const durabilityLimitsHelper = container.resolve<DurabilityLimitsHelper>("DurabilityLimitsHelper");
+            const appContext = container.resolve<ApplicationContext>("ApplicationContext");
+            const itemHelper = container.resolve<ItemHelper>("ItemHelper");
+            const inventoryHelper = container.resolve<InventoryHelper>("InventoryHelper");
+            const containerHelper = container.resolve<ContainerHelper>("ContainerHelper");
 
             const botGen = new BotGen(
                 logger, hashUtil, randomUtil, timeUtil,
@@ -280,6 +290,13 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                 botLevelGenerator, botEquipmentFilterService, weightedRandomHelper,
                 botHelper, botGeneratorHelper, seasonalEventService,
                 itemFilterService, botNameService, configServer, cloner);
+
+            const myBotGenHelper = new BotGenHelper(
+                logger, randomUtil, databaseService,
+                durabilityLimitsHelper, itemHelper,
+                inventoryHelper, containerHelper,
+                appContext, localisationService, configServer);
+
 
             container.afterResolution("BotGenerator", (_t, result: BotGenerator) => {
                 result.prepareAndGenerateBot = (sessionId: string, botGenerationDetails: IBotGenerationDetails): IBotBase => {
@@ -292,6 +309,12 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                     return botGen.myGeneratePlayerScav(sessionId, role, difficulty, botTemplate);
                 }
             }, { frequency: "Always" });
+
+            // container.afterResolution("BotGeneratorHelper", (_t, result: BotGeneratorHelper) => {
+            //     result.generateExtraPropertiesForItem = (itemTemplate: ITemplateItem, botRole: string = null): { upd?: IUpd } => {
+            //         return myBotGenHelper.myGenerateExtraPropertiesForItem(itemTemplate, botRole);
+            //     }
+            // }, { frequency: "Always" });
         }
 
         container.afterResolution("TraderAssortHelper", (_t, result: TraderAssortHelper) => {
@@ -368,7 +391,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         const locationConfig = container.resolve<ConfigServer>("ConfigServer").getConfig<ILocationConfig>(ConfigTypes.LOCATION);
                         const seasonalEventsService = container.resolve<SeasonalEventService>("SeasonalEventService");
                         const postLoadTables = postLoadDBServer.getTables();
-                        const utils = new Utils(postLoadTables);
+                        const utils = Utils.getInstance();
                         const tieredFlea = new TieredFlea(postLoadTables, aKIFleaConf);
                         const player = new Player(logger, postLoadTables, modConfig, medItems, utils);
                         const maps = new Spawns(logger, postLoadTables, modConfig, postLoadTables.locations, utils);
@@ -389,13 +412,10 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             const healthProp = pmcData?.Health;
                             const hydroProp = pmcData?.Health?.Hydration;
 
-                            if (healthProp !== undefined) {
-
+                            if (healthProp != null) {
                                 player.correctNegativeHP(pmcData);
-
                                 player.setPlayerHealth(pmcData, scavData);
-
-                                if (hydroProp !== undefined) {
+                                if (hydroProp != null) {
                                     if (modConfig.revert_med_changes == true && modConfig.med_changes == false) {
                                         this.revertMeds(pmcData, utils);
                                         this.revertMeds(scavData, utils);
@@ -416,7 +436,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                                 ProfileTracker.profileIds.forEach(element => {
                                     pmcData.push(profileHelper.getPmcProfile(element));
                                 });
-                                randomizeTraderAssort.adjustTraderStockAtServerStart(pmcData);
+                                randomizeTraderAssort.adjustTraderStockAtGameStart(pmcData);
                             }
                             adjustedTradersOnStart = true;
 
@@ -491,7 +511,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
                         const postLoadDBService = container.resolve<DatabaseService>("DatabaseService");
                         const postLoadtables = postLoadDBService.getTables();
-                        const utils = new Utils(postLoadtables);
+                        const utils = Utils.getInstance();
                         const player = new Player(logger, postLoadtables, modConfig, medItems, utils);
 
                         const pmcData = profileHelper.getPmcProfile(sessionID);
@@ -533,13 +553,13 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             const matchInfo = appContext.getLatestValue(ContextVariableType.RAID_CONFIGURATION).getValue<IGetRaidConfigurationRequestData>();
                             const pmcConf = configServer.getConfig<IPmcConfig>(ConfigTypes.PMC);
                             const arrays = new BotArrays(postLoadTables);
-                            const utils = new Utils(postLoadTables);
-                            const bots = new BotLoader(logger, postLoadTables, configServer, modConfig, arrays, utils);
+                            const utils = Utils.getInstance();
+                            const botLoader = BotLoader.getInstance();
                             const pmcData = profileHelper.getPmcProfile(sessionID);
                             const profileData = profileHelper.getFullProfile(sessionID);
 
                             RaidInfoTracker.generatedBotsCount = 0;
-                            
+
                             //had a concern that bot loot cache isn't being reset properly since I've overriden it with my own implementation, so to be safe...
                             // const myGetLootCache = new MyLootCache(logger, jsonUtil, itemHelper, postLoadDBServer, pmcLootGenerator, localisationService, ragfairPriceService);
                             // myGetLootCache.myClearCache();
@@ -572,10 +592,10 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             RaidInfoTracker.mapType = mapType;
 
                             if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {
-                                bots.updateBots(pmcData, logger, modConfig, bots, utils);
+                                botLoader.updateBots(pmcData, logger, modConfig, botLoader, utils);
                             }
 
-                            if (!ModTracker.swagPresent) { //!ModTracker.qtbPresent && 
+                            if (!ModTracker.swagPresent && !ModTracker.qtbSpawnsActive) {
                                 pmcConf.convertIntoPmcChance.laboratory = {
                                     "assault":
                                     {
@@ -624,7 +644,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         // const itemHelper = container.resolve<ItemHelper>("ItemHelper");
                         const aKIFleaConf = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
                         const tieredFlea = new TieredFlea(postLoadTables, aKIFleaConf);
-                        const utils = new Utils(postLoadTables);
+                        const utils = Utils.getInstance();
                         const player = new Player(logger, postLoadTables, modConfig, medItems, utils);
                         const pmcData = profileHelper.getPmcProfile(sessionID);
                         const scavData = profileHelper.getScavProfile(sessionID);
@@ -733,6 +753,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         const locationConfig = container.resolve<ConfigServer>("ConfigServer").getConfig<ILocationConfig>(ConfigTypes.LOCATION);
         const seeasonalEventConfig = container.resolve<ConfigServer>("ConfigServer").getConfig<ISeasonalEventConfig>(ConfigTypes.SEASONAL_EVENT);
         const seasonalEventsService = container.resolve<SeasonalEventService>("SeasonalEventService");
+        const hashUtil = container.resolve<HashUtil>("HashUtil");
         const tables = databaseService.getTables();
         const aKIFleaConf = configServer.getConfig<IRagfairConfig>(ConfigTypes.RAGFAIR);
         const inventoryConf = configServer.getConfig<IInventoryConfig>(ConfigTypes.INVENTORY);
@@ -742,11 +763,11 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         const traderConf = configServer.getConfig<ITraderConfig>(ConfigTypes.TRADER);
         const insConf = configServer.getConfig<IInsuranceConfig>(ConfigTypes.INSURANCE);
         const arrays = new BotArrays(tables);
-        const utils = new Utils(tables);
+        const utils = Utils.getInstance(tables);
         const ammo = new Ammo(logger, tables, modConfig);
         const armor = new Armor(logger, tables, modConfig);
         const attachBase = new AttachmentBase(logger, tables, modConfig, utils);
-        const bots = new BotLoader(logger, tables, configServer, modConfig, arrays, utils);
+        const botLoader = BotLoader.getInstance(logger, tables, configServer, modConfig, arrays, utils);
         const itemsClass = new ItemsClass(logger, tables, modConfig, inventoryConf, raidConf, aKIFleaConf, itemConf);
         const consumables = new Consumables(logger, tables, modConfig, medItems, foodItems, medBuffs, foodBuffs, stimBuffs);
         const player = new Player(logger, tables, modConfig, medItems, utils);
@@ -760,9 +781,9 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         const maps = new Spawns(logger, tables, modConfig, tables.locations, utils);
         const gear = new Gear(tables, logger, modConfig);
         const itemCloning = new ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
-        const statHandler = new ItemStatHandler(tables, logger);
+        const statHandler = ItemStatHandler.getInstance(tables, logger, hashUtil);
         const descGen = new DescriptionGen(tables, modConfig, logger, statHandler);
-        
+
         //Remember to back up json data before using this, and make sure it isn't overriding existing json objects
         // jsonGen.attTemplatesCodeGen();
         // jsonGen.weapTemplatesCodeGen();
@@ -785,14 +806,15 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         if (modConfig.recoil_attachment_overhaul == true) {
             itemCloning.createCustomWeapons();
             itemCloning.createCustomAttachments();
-            itemsClass.addCustomItems();
             attachBase.loadAttCompat();
             attachBase.loadCaliberConversions();
         }
 
+        itemsClass.addCustomItems();
+
         if (modConfig.realistic_ballistics) {
             itemCloning.createCustomPlates();
-            bots.setBotHealth();
+            botLoader.setBotHealth();
         }
 
         if (modConfig.open_zones_fix == true && !ModTracker.swagPresent) {
@@ -804,26 +826,31 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         //airdrop.loadAirdropChanges();
 
         if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {
-            bots.loadBots();
+            botLoader.loadBots();
         }
+
+        //spt bug: items can have zero uses
+        // if(modConfig.bot_loot_changes){
+        //     bots.loadBotLootChanges();
+        // }
 
         if (modConfig.bot_testing == true && modConfig.bot_test_weps_enabled == true && modConfig.all_scavs == true && modConfig.bot_test_tier == 4) {
             logger.warning("Realism Mod: testing enabled, bots will be limited to a cap of 1");
-            bots.testBotCap();
+            botLoader.testBotCap();
         }
-        else if (modConfig.increased_bot_cap == true && !ModTracker.swagPresent  && !ModTracker.qtbPresent) {
-            bots.increaseBotCap();
+        else if (modConfig.increased_bot_cap == true && !ModTracker.swagPresent && !ModTracker.qtbPresent) {
+            botLoader.increaseBotCap();
         }
-        else if (modConfig.spawn_waves == true && !ModTracker.swagPresent  && !ModTracker.qtbPresent) { 
-            bots.increasePerformance();
+        else if (modConfig.spawn_waves == true && !ModTracker.swagPresent && !ModTracker.qtbPresent) {
+            botLoader.increasePerformance();
         }
 
         if (modConfig.bot_names == true) {
-            bots.botNames();
+            botLoader.botNames();
         }
 
         if (modConfig.guarantee_boss_spawn == true) {
-            bots.forceBossSpawns();
+            maps.forceBossSpawns();
         }
 
         //need to add diffuclity values to experience obj or abandon
@@ -845,7 +872,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             consumables.loadStims();
         }
 
-        bots.botHpMulti();
+        botLoader.botHpMulti();
 
         fleaChangesPostDB.loadFleaGlobal(); //has to run post db load, otherwise item templates are undefined 
         fleaChangesPreDB.loadFleaConfig(); //probably redundant, but just in case
@@ -896,7 +923,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             }
             statHandler.pushGearToServer();
 
-            await statHandler.processUserJsonFiles();
+            await statHandler.processTemplateJson(false);
             descGen.descriptionGen();
 
             if (modConfig.malf_changes == true) {
@@ -1087,7 +1114,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         let didExplosion;
         let shouldDisableTraders = false;
 
-        if (pmcData?.Quests === null || pmcData?.Quests === undefined) return;
+        if (pmcData?.Quests == null) return;
 
         pmcData.Quests.forEach(q => {
             //blue flame part 2
@@ -1121,7 +1148,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         EventTracker.endExplosionEvent = false;
 
         let baseGasChance = EventTracker.isHalloween ? 20 : 5;
-        if (pmcData?.Quests !== null && pmcData?.Quests !== undefined) {
+        if (pmcData?.Quests != null) {
             pmcData.Quests.forEach(q => {
                 const isStarted = q.status === 2 || q.status === 3;
                 const isCompleted = q.status === 4;
@@ -1203,7 +1230,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
 
     private checkPlayerLevel(sessionID: string, profileData: ISptProfile, pmcData: IPmcData, logger: ILogger, shouldLog: boolean = false) {
         let level = 1;
-        if (pmcData?.Info?.Level !== undefined) {
+        if (pmcData?.Info?.Level != null) {
             level = pmcData.Info.Level;
         }
         let playerCount = 0;

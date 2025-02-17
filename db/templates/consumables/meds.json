@@ -50,7 +50,7 @@
     "544fb3f34bdc2d03748b456a": {
         "$type": "RealismMod.Consumable, RealismMod",
         "ItemID": "544fb3f34bdc2d03748b456a",
-        "Name": "ai2",
+        "Name": "morphine",
         "TemplateType": "consumable",
         "LoyaltyLevel": 1,
         "BasePriceModifier": 1,

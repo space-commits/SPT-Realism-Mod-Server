@@ -29,14 +29,18 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.BotTierTracker = exports.RaidInfoTracker = exports.ConfigChecker = exports.ProfileTracker = exports.ModTracker = exports.Utils = void 0;
 const path = __importStar(require("path"));
 const node_crypto_1 = __importDefault(require("node:crypto"));
-const arrays_1 = require("./arrays");
 const fs = require('fs');
 const modConfig = require("../../config/config.json");
-const armorTemplate = require("../../db/bots/loadouts/templates/armorMods.json");
 class Utils {
     tables;
     constructor(tables) {
         this.tables = tables;
+    }
+    static instance;
+    static getInstance(tables) {
+        if (!Utils.instance)
+            Utils.instance = new Utils(tables);
+        return Utils.instance;
     }
     itemDB() {
         return this.tables.templates.items;
@@ -50,11 +54,11 @@ class Utils {
         return arr[this.getInt(0, arr.length - 1)];
     }
     revertMedItems(playerData) {
-        if (playerData?.Inventory !== undefined) {
+        if (playerData?.Inventory != null) {
             for (let i in playerData.Inventory.items) {
-                if (playerData.Inventory.items[i]?.upd?.MedKit?.HpResource !== undefined) {
+                if (playerData.Inventory.items[i]?.upd?.MedKit?.HpResource != null) {
                     let templateItem = this.itemDB()[playerData.Inventory.items[i]._tpl];
-                    if (templateItem !== null && templateItem !== undefined) {
+                    if (templateItem != null) {
                         playerData.Inventory.items[i].upd.MedKit.HpResource = templateItem._props.MaxHpResource;
                     }
                 }
@@ -62,16 +66,16 @@ class Utils {
         }
     }
     correctItemResources(playerData, playerXP, logger) {
-        if (playerData?.Inventory !== undefined) {
+        if (playerData?.Inventory != null) {
             for (let i in playerData.Inventory.items) {
                 let profileItem = playerData.Inventory.items[i];
-                if (profileItem?.upd?.Repairable?.Durability !== undefined) {
+                if (profileItem?.upd?.Repairable?.Durability != null) {
                     this.correctDuraHelper(profileItem, playerXP);
                 }
-                if (modConfig.med_changes == true && profileItem?.upd?.MedKit?.HpResource !== undefined) {
+                if (modConfig.med_changes == true && profileItem?.upd?.MedKit?.HpResource != null) {
                     this.correctMedicalRes(profileItem, playerXP, logger);
                 }
-                if (modConfig.food_changes == true && profileItem?.upd?.FoodDrink?.HpPercent !== undefined) {
+                if (modConfig.food_changes == true && profileItem?.upd?.FoodDrink?.HpPercent != null) {
                     this.correctProvisionRes(profileItem, playerXP, logger);
                 }
             }
@@ -79,48 +83,22 @@ class Utils {
     }
     correctProvisionRes(profileItem, playerXP, logger) {
         let templateItem = this.itemDB()[profileItem._tpl];
-        if (templateItem !== null && templateItem !== undefined && (profileItem.upd.FoodDrink.HpPercent > templateItem._props.MaxResource || playerXP == 0)) {
+        if (templateItem != null && (profileItem.upd.FoodDrink.HpPercent > templateItem._props.MaxResource || playerXP == 0)) {
             profileItem.upd.FoodDrink.HpPercent = templateItem._props.MaxResource;
         }
     }
     correctMedicalRes(profileItem, playerXP, logger) {
         let templateItem = this.itemDB()[profileItem._tpl];
-        if (templateItem !== null && templateItem !== undefined && (profileItem.upd.MedKit.HpResource > templateItem._props.MaxHpResource || playerXP == 0)) {
+        if (templateItem != null && (profileItem.upd.MedKit.HpResource > templateItem._props.MaxHpResource || playerXP == 0)) {
             profileItem.upd.MedKit.HpResource = templateItem._props.MaxHpResource;
         }
     }
     correctDuraHelper(profileItem, playerXP) {
         let templateItem = this.itemDB()[profileItem._tpl];
-        if (templateItem !== null && templateItem !== undefined && (profileItem.upd.Repairable.Durability > templateItem._props.MaxDurability || playerXP == 0)) {
+        if (templateItem != null && (profileItem.upd.Repairable.Durability > templateItem._props.MaxDurability || playerXP == 0)) {
             profileItem.upd.Repairable.Durability = templateItem._props.Durability;
             profileItem.upd.Repairable.MaxDurability = templateItem._props.MaxDurability;
         }
-    }
-    addGasMaskFilters(mods) {
-        arrays_1.StaticArrays.gasMasks.forEach(g => {
-            mods[g] = {
-                "mod_equipment": [
-                    "590c595c86f7747884343ad7"
-                ]
-            };
-        });
-    }
-    addArmorInserts(mods) {
-        Object.keys(armorTemplate).forEach(outerKey => {
-            // If the outer key exists in mods, compare inner keys
-            if (mods[outerKey]) {
-                Object.keys(armorTemplate[outerKey]).forEach(innerKey => {
-                    // If the inner key doesn't exist in mods, insert it
-                    if (!mods[outerKey][innerKey]) {
-                        mods[outerKey][innerKey] = armorTemplate[outerKey][innerKey];
-                    }
-                });
-            }
-            //if mods doesnt have the outer key, insert it
-            else {
-                mods[outerKey] = armorTemplate[outerKey];
-            }
-        });
     }
     probabilityWeighter(items, weights) {
         function add(a, b) { return a + b; }

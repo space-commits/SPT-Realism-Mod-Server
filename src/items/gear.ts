@@ -19,7 +19,7 @@ export class Gear {
 
     public loadSpecialSlotChanges() {
 
-        let itemsToAdd: string[] = [...StaticArrays.hazardDetectionDevices, ...StaticArrays.gasMasks];
+        let itemsToAdd: string[] = [...StaticArrays.hazardDetectionDevices, ...StaticArrays.gasMasks, "59e7715586f7742ee5789605"]; //respirator
 
         this.itemDB()["627a4e6b255f7527fb05a0f6"]._props.Slots.forEach(slot => {
             slot._props.filters[0].Filter.push(...itemsToAdd);
@@ -38,6 +38,7 @@ export class Gear {
     public loadGearConflicts() {
 
         let faceShieldArray = [];
+        const faceCoversWithOverlay = [...StaticArrays.gasMasks, ...StaticArrays.confMaskOverlays]
 
         //remove certain helmets from GP7 conflicts
         this.itemDB()["60363c0c92ec1c31037959f5"]._props.ConflictingItems = this.itemDB()["60363c0c92ec1c31037959f5"]._props.ConflictingItems.filter(i => i !== "5e4bfc1586f774264f7582d3");
@@ -54,7 +55,7 @@ export class Gear {
                 if (serverItem._parent === ParentClasses.HEADWEAR) {
                     for (let c in serverItem._props.ConflictingItems) {
                         let confItem = serverItem._props.ConflictingItems[c];
-                        if (this.itemDB()[confItem] !== undefined && this.itemDB()[confItem]._parent === ParentClasses.HEADSET) {
+                        if (this.itemDB()[confItem] != null && this.itemDB()[confItem]._parent === ParentClasses.HEADSET) {
                             serverItem._props.ConflictingItems[c] = "6783e75078238c95771864ea"; //needs to be a valid mongoid, so use random placeholder id
                         }
                     }
@@ -69,10 +70,11 @@ export class Gear {
 
         //custom mask overlays will bug out if using actual faceshield at the same time
         if ((this.modConfig.realistic_ballistics == true || this.modConfig.enable_hazard_zones == true)) {
-            StaticArrays.confMaskOverlays.forEach(element => {
-                const item = this.itemDB()[element];
+            for(const i of faceCoversWithOverlay){
+                const item = this.itemDB()[i];
+                if(item == null) continue;
                 item._props.ConflictingItems = item._props.ConflictingItems.concat(faceShieldArray)
-            });
+            }
         }
 
         //make sure NVGs and FS conflict

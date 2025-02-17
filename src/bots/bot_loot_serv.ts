@@ -9,6 +9,9 @@ import { RagfairPriceService } from "@spt/services/RagfairPriceService";
 import { container, inject } from "tsyringe";
 import { EquipmentSlots } from "@spt/models/enums/EquipmentSlots";
 import { DatabaseServer } from "@spt/servers/DatabaseServer";
+import { IItemSpawnLimitSettings } from "@spt/models/spt/bots/IItemSpawnLimitSettings";
+import { IItem } from "@spt/models/eft/common/tables/IItem";
+import { ItemAddedResult } from "@spt/models/enums/ItemAddedResult";
 
 export class MyBotLootCache {
     combinedPoolLoot: Record<string, number>;

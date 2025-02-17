@@ -1,6 +1,6 @@
 
 import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
-import { ILogger } from "../../types/models/spt/utils/ILogger";
+import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { JsonUtil } from "@spt/utils/JsonUtil";
 import { IQuest } from "@spt/models/eft/common/tables/IQuest";
 import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
@@ -430,11 +430,11 @@ export class ItemCloning {
     private pushItemToSlots(orignalId: string, newID: string) {
         for (let item in this.itemDB()) {
             for (let slot in this.itemDB()[item]._props.Slots) {
-                if (this.itemDB()[item]._props.Slots[slot]._props?.filters !== undefined && this.itemDB()[item]._props.Slots[slot]._props.filters[0].Filter.includes(orignalId)) {
+                if (this.itemDB()[item]._props.Slots[slot]._props?.filters != null && this.itemDB()[item]._props.Slots[slot]._props.filters[0].Filter.includes(orignalId)) {
                     this.itemDB()[item]._props.Slots[slot]._props.filters[0].Filter.push(newID);
                 }
             }
-            if (this.itemDB()[item]._props?.ConflictingItems !== undefined && this.itemDB()[item]._props.ConflictingItems.includes(orignalId)) {
+            if (this.itemDB()[item]._props?.ConflictingItems != null && this.itemDB()[item]._props.ConflictingItems.includes(orignalId)) {
                 this.itemDB()[item]._props.ConflictingItems.push(newID);
             }
         }

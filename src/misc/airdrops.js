@@ -1,5 +1,5 @@
 // import { IAirdropChancePercent, IAirdropConfig } from "C:/snapshot/project/obj/models/spt/config/IAirdropConfig";
-// import { ILogger } from "../../types/models/spt/utils/ILogger";
+// import { ILogger } from "C:/snapshot/project/obj/models/spt/utils/ILogger";
 // import { EventTracker } from "./seasonalevents";
 // import { ITemplateItem } from "C:/snapshot/project/obj/models/eft/common/tables/ITemplateItem";
 // import { ILootItem } from "C:/snapshot/project/obj/models/spt/services/LootItem";
@@ -107,7 +107,7 @@
 //                 index--;
 //             }
 //         }
-//         const globalDefaultPresets = Object.entries(tables.globals.ItemPresets).filter(x => x[1]._encyclopedia !== undefined);
+//         const globalDefaultPresets = Object.entries(tables.globals.ItemPresets).filter(x => x[1]._encyclopedia != null);
 //         const randomisedPresetCount = utils.getInt(options.presetCount.min, options.presetCount.max);
 //         for (let index = 0; index < randomisedPresetCount; index++) {
 //             if (!this.findAndAddRandomWeaponPresetToAirdropLoot(globalDefaultPresets, itemTypeCounts, options.itemWhitelist, result, utils)) {
@@ -136,7 +136,7 @@
 //     private findAndAddRandomItemToAirdropLoot(items: [string, ITemplateItem][], itemTypeCounts: Record<string, { current: number; max: number; }>, options: AirdropLootRequest, result: LootItem[], utils: Utils): boolean {
 //         const randomItem = utils.getArrayValue(items)[1];
 //         const itemLimitCount = itemTypeCounts[randomItem._parent];
-//         if (itemLimitCount === undefined || itemLimitCount === null || itemLimitCount.current === undefined || itemLimitCount.current === null || itemLimitCount.max === undefined || itemLimitCount.max === null) {
+//         if (itemLimitCount == null || itemLimitCount === null || itemLimitCount.current == null || itemLimitCount.current === null || itemLimitCount.max == null || itemLimitCount.max === null) {
 //             this.logger.warning("No Item Limit Found For Item: " + randomItem._id + " Of Category " + randomItem._parent);
 //             return false;
 //         }

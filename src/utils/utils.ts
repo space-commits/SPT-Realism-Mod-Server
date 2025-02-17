@@ -10,11 +10,16 @@ import { StaticArrays } from "./arrays";
 
 const fs = require('fs');
 const modConfig = require("../../config/config.json");
-const armorTemplate = require("../../db/bots/loadouts/templates/armorMods.json");
 
 export class Utils {
 
-    constructor(private tables: IDatabaseTables) { }
+    private constructor(private tables: IDatabaseTables) { }
+
+    private static instance: Utils;
+    public static getInstance(tables?: IDatabaseTables): Utils {
+        if (!Utils.instance) Utils.instance = new Utils(tables);
+        return Utils.instance;
+    }
 
 
     itemDB(): Record<string, ITemplateItem> {
@@ -32,11 +37,11 @@ export class Utils {
     }
 
     public revertMedItems(playerData: IPmcData) {
-        if (playerData?.Inventory !== undefined) {
+        if (playerData?.Inventory != null) {
             for (let i in playerData.Inventory.items) {
-                if (playerData.Inventory.items[i]?.upd?.MedKit?.HpResource !== undefined) {
+                if (playerData.Inventory.items[i]?.upd?.MedKit?.HpResource != null) {
                     let templateItem = this.itemDB()[playerData.Inventory.items[i]._tpl];
-                    if (templateItem !== null && templateItem !== undefined) {
+                    if (templateItem != null) {
                         playerData.Inventory.items[i].upd.MedKit.HpResource = templateItem._props.MaxHpResource;
                     }
                 }
@@ -45,16 +50,16 @@ export class Utils {
     }
 
     public correctItemResources(playerData: IPmcData, playerXP: number, logger: ILogger) {
-        if (playerData?.Inventory !== undefined) {
+        if (playerData?.Inventory != null) {
             for (let i in playerData.Inventory.items) {
                 let profileItem = playerData.Inventory.items[i];
-                if (profileItem?.upd?.Repairable?.Durability !== undefined) {
+                if (profileItem?.upd?.Repairable?.Durability != null) {
                     this.correctDuraHelper(profileItem, playerXP);
                 }
-                if (modConfig.med_changes == true && profileItem?.upd?.MedKit?.HpResource !== undefined) {
+                if (modConfig.med_changes == true && profileItem?.upd?.MedKit?.HpResource != null) {
                     this.correctMedicalRes(profileItem, playerXP, logger);
                 }
-                if (modConfig.food_changes == true && profileItem?.upd?.FoodDrink?.HpPercent !== undefined) {
+                if (modConfig.food_changes == true && profileItem?.upd?.FoodDrink?.HpPercent != null) {
                     this.correctProvisionRes(profileItem, playerXP, logger);
                 }
             }
@@ -63,7 +68,7 @@ export class Utils {
 
     private correctProvisionRes(profileItem: IItem, playerXP: number, logger: ILogger) {
         let templateItem = this.itemDB()[profileItem._tpl];
-        if (templateItem !== null && templateItem !== undefined && (profileItem.upd.FoodDrink.HpPercent > templateItem._props.MaxResource || playerXP == 0)) {
+        if (templateItem != null && (profileItem.upd.FoodDrink.HpPercent > templateItem._props.MaxResource || playerXP == 0)) {
             profileItem.upd.FoodDrink.HpPercent = templateItem._props.MaxResource;
         }
     }
@@ -71,45 +76,17 @@ export class Utils {
 
     private correctMedicalRes(profileItem: IItem, playerXP: number, logger: ILogger) {
         let templateItem = this.itemDB()[profileItem._tpl];
-        if (templateItem !== null && templateItem !== undefined && (profileItem.upd.MedKit.HpResource > templateItem._props.MaxHpResource || playerXP == 0)) {
+        if (templateItem != null && (profileItem.upd.MedKit.HpResource > templateItem._props.MaxHpResource || playerXP == 0)) {
             profileItem.upd.MedKit.HpResource = templateItem._props.MaxHpResource;
         }
     }
 
     private correctDuraHelper(profileItem: IItem, playerXP: number) {
         let templateItem = this.itemDB()[profileItem._tpl]
-        if (templateItem !== null && templateItem !== undefined && (profileItem.upd.Repairable.Durability > templateItem._props.MaxDurability || playerXP == 0)) {
+        if (templateItem != null && (profileItem.upd.Repairable.Durability > templateItem._props.MaxDurability || playerXP == 0)) {
             profileItem.upd.Repairable.Durability = templateItem._props.Durability;
             profileItem.upd.Repairable.MaxDurability = templateItem._props.MaxDurability;
         }
-    }
-
-    public addGasMaskFilters(mods: IMods) {
-        StaticArrays.gasMasks.forEach(g => {
-            mods[g] = {
-                "mod_equipment": [
-                    "590c595c86f7747884343ad7"
-                ]
-            }
-        });
-    }
-
-    public addArmorInserts(mods: IMods) {
-        Object.keys(armorTemplate).forEach(outerKey => {
-            // If the outer key exists in mods, compare inner keys
-            if (mods[outerKey]) {
-                Object.keys(armorTemplate[outerKey]).forEach(innerKey => {
-                    // If the inner key doesn't exist in mods, insert it
-                    if (!mods[outerKey][innerKey]) {
-                        mods[outerKey][innerKey] = armorTemplate[outerKey][innerKey];
-                    }
-                });
-            }
-            //if mods doesnt have the outer key, insert it
-            else {
-                mods[outerKey] = armorTemplate[outerKey];
-            }
-        });
     }
 
     public probabilityWeighter(items: any, weights: number[]): any {

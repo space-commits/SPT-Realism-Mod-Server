@@ -102,7 +102,7 @@
         "ItemID": "5cadf6eeae921500134b2799",
         "Name": "patron_127x55_ps12b",
         "LoyaltyLevel": 4,
-        "BasePriceModifier": 1
+        "BasePriceModifier": 0.8
     },
     "560d5e524bdc2d25448b4571": {
         "$type": "RealismMod.Ammo, RealismMod",
@@ -2013,7 +2013,7 @@
         "ItemID": "65702420bfc87b3a34093219",
         "Name": "item_ammo_box_127x55_10_ps12a",
         "LoyaltyLevel": 2,
-        "BasePriceModifier": 1.25
+        "BasePriceModifier": 1.3
     },
     "65702426cfc010a0f50069f8": {
         "$type": "RealismMod.Ammo, RealismMod",

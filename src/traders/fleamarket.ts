@@ -1,5 +1,5 @@
 import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
-import { ILogger } from "../../types/models/spt/utils/ILogger";
+import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { IRagfairConfig } from "@spt/models/spt/config/IRagfairConfig";
 import { ParentClasses } from "../utils/enums";
 import { RagfairOfferGenerator } from "@spt/generators/RagfairOfferGenerator";
@@ -137,11 +137,11 @@ export class TieredFlea {
     }
 
     public updateFlea(logger: ILogger, ragfairOfferGen: RagfairOfferGenerator, container: DependencyContainer, level: number) {
-        if (level === undefined || (EventTracker.hasExploded && !EventTracker.endExplosionEvent)) {
+        if (level == null || (EventTracker.hasExploded && !EventTracker.endExplosionEvent)) {
             this.fleaHelper(this.flea0.bind(this), ragfairOfferGen, container);
             logger.info("Realism Mod: Fleamarket Tier Set To Default (tier 0)");
         }
-        if (level !== undefined) {
+        if (level != null) {
             if (level < 5) {
                 this.fleaHelper(this.flea0.bind(this), ragfairOfferGen, container);
                 logger.info("Realism mod: Fleamarket Locked At Tier 0");

@@ -4,12 +4,14 @@
         "ItemID": "5b432d215acfc4771e1c6624",
         "Name": "item_equipment_helmet_LSHZ",
         "AllowADS": true,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 3,
         "ArmorClass": "GOST 1",
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.95
+        "Comfort": 0.95,
+        "TemplateType": "gear",
+        "Price": 13000
     },
     "5d5e7d28a4b936645d161203": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -21,7 +23,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.9
+        "Comfort": 0.9,
+        "TemplateType": "gear",
+        "Price": 22000
     },
     "5e4bfc1586f774264f7582d3": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -33,7 +37,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.9
+        "Comfort": 0.9,
+        "TemplateType": "gear",
+        "Price": 34000
     },
     "5f60c74e3b85f6263c145586": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -45,7 +51,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 1.1
+        "Comfort": 1.1,
+        "TemplateType": "gear",
+        "Price": 29000
     },
     "60bf74184a63fc79b60c57f6": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -57,7 +65,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.8
+        "Comfort": 0.8,
+        "TemplateType": "gear",
+        "Price": 3000
     },
     "61bca7cda0eae612383adf57": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -69,7 +79,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.85
+        "Comfort": 0.85,
+        "TemplateType": "gear",
+        "Price": 17000
     },
     "59ef13ca86f77445fd0e2483": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -81,7 +93,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 1.2
+        "Comfort": 1.2,
+        "TemplateType": "gear",
+        "Price": 666
     },
     "5d6d3716a4b9361bc8618872": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -93,7 +107,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 1.06
+        "Comfort": 1.06,
+        "TemplateType": "gear",
+        "Price": 29000
     },
     "5aa7d193e5b5b000171d063f": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -105,7 +121,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 1.15
+        "Comfort": 1.15,
+        "TemplateType": "gear",
+        "Price": 11000
     },
     "5d5e9c74a4b9364855191c40": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -117,7 +135,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.92
+        "Comfort": 0.92,
+        "TemplateType": "gear",
+        "Price": 23000
     },
     "5df8a58286f77412631087ed": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -129,7 +149,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 1.05
+        "Comfort": 1.05,
+        "TemplateType": "gear",
+        "Price": 6500
     },
     "5a154d5cfcdbcb001a3b00da": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -141,7 +163,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.88
+        "Comfort": 0.88,
+        "TemplateType": "gear",
+        "Price": 28000
     },
     "5aa7e276e5b5b000171d0647": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -153,7 +177,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 1.12
+        "Comfort": 1.12,
+        "TemplateType": "gear",
+        "Price": 27000
     },
     "5aa7e4a4e5b5b000137b76f2": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -165,7 +191,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 1.09
+        "Comfort": 1.09,
+        "TemplateType": "gear",
+        "Price": 27000
     },
     "5aa7cfc0e5b5b00015693143": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -177,7 +205,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 1.02
+        "Comfort": 1.02,
+        "TemplateType": "gear",
+        "Price": 15050
     },
     "66bdc28a0b603c26902b2011": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -190,7 +220,9 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "Comfort": 1.07,
-        "MaskToUse": "ronin"
+        "MaskToUse": "ronin",
+        "TemplateType": "gear",
+        "Price": 30000
     },
     "5b4329f05acfc47a86086aa1": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -203,7 +235,9 @@
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
         "Comfort": 1.07,
-        "MaskToUse": "ronin"
+        "MaskToUse": "ronin",
+        "TemplateType": "gear",
+        "Price": 34000
     },
     "5ac8d6885acfc400180ae7b0": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -215,7 +249,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.88
+        "Comfort": 0.88,
+        "TemplateType": "gear",
+        "Price": 28000
     },
     "5a7c4850e899ef00150be885": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -227,7 +263,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 1.025
+        "Comfort": 1.025,
+        "TemplateType": "gear",
+        "Price": 15000
     },
     "5c06c6a80db834001b735491": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -239,7 +277,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 1.05
+        "Comfort": 1.05,
+        "TemplateType": "gear",
+        "Price": 13000
     },
     "5645bc214bdc2d363b8b4571": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -251,7 +291,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 1.095
+        "Comfort": 1.095,
+        "TemplateType": "gear",
+        "Price": 12000
     },
     "5aa7d03ae5b5b00016327db5": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -263,7 +305,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 1.035
+        "Comfort": 1.035,
+        "TemplateType": "gear",
+        "Price": 13000
     },
     "5aa7e454e5b5b0214e506fa2": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -275,7 +319,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 1.1
+        "Comfort": 1.1,
+        "TemplateType": "gear",
+        "Price": 27000
     },
     "5c091a4e0db834001d5addc8": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -287,7 +333,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 1.12
+        "Comfort": 1.12,
+        "TemplateType": "gear",
+        "Price": 19000
     },
     "59e7711e86f7746cae05fbe1": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -299,7 +347,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 1.12
+        "Comfort": 1.12,
+        "TemplateType": "gear",
+        "Price": 6000
     },
     "5ca20ee186f774799474abc2": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -311,7 +361,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 1.13
+        "Comfort": 1.13,
+        "TemplateType": "gear",
+        "Price": 40000
     },
     "5b40e3f35acfc40016388218": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -323,7 +375,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.92
+        "Comfort": 0.92,
+        "TemplateType": "gear",
+        "Price": 30000
     },
     "5b40e4035acfc47a87740943": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -335,7 +389,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.92
+        "Comfort": 0.92,
+        "TemplateType": "gear",
+        "Price": 30000
     },
     "5b40e1525acfc4771e1c6611": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -347,7 +403,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.95
+        "Comfort": 0.95,
+        "TemplateType": "gear",
+        "Price": 33000
     },
     "5b40e2bc5acfc40016388216": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -359,7 +417,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.95
+        "Comfort": 0.95,
+        "TemplateType": "gear",
+        "Price": 33000
     },
     "5c17a7ed2e2216152142459c": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -371,7 +431,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.87
+        "Comfort": 0.87,
+        "TemplateType": "gear",
+        "Price": 28000
     },
     "66b5f65ca7f72d197e70bcd6": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -383,7 +445,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.85
+        "Comfort": 0.85,
+        "TemplateType": "gear",
+        "Price": 35000
     },
     "66b5f661af44ca0014063c05": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -395,7 +459,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.84
+        "Comfort": 0.84,
+        "TemplateType": "gear",
+        "Price": 35000
     },
     "66b5f666cad6f002ab7214c2": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -407,7 +473,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.84
+        "Comfort": 0.84,
+        "TemplateType": "gear",
+        "Price": 35000
     },
     "5ea17ca01412a1425304d1c0": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -419,7 +487,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.89
+        "Comfort": 0.89,
+        "TemplateType": "gear",
+        "Price": 33000
     },
     "5f60b34a41e30a4ab12a6947": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -431,7 +501,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.86
+        "Comfort": 0.86,
+        "TemplateType": "gear",
+        "Price": 28000
     },
     "5ea05cf85ad9772e6624305d": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -443,7 +515,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 1.055
+        "Comfort": 1.055,
+        "TemplateType": "gear",
+        "Price": 8000
     },
     "5c0e874186f7745dc7616606": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -455,7 +529,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 1.11
+        "Comfort": 1.11,
+        "TemplateType": "gear",
+        "Price": 19000
     },
     "5e00c1ad86f774747333222c": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -467,7 +543,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.85
+        "Comfort": 0.85,
+        "TemplateType": "gear",
+        "Price": 34000
     },
     "5e01ef6886f77445f643baa4": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -479,7 +557,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 0.85
+        "Comfort": 0.85,
+        "TemplateType": "gear",
+        "Price": 34000
     },
     "5c08f87c0db8340019124324": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -491,7 +571,9 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 1.15
+        "Comfort": 1.15,
+        "TemplateType": "gear",
+        "Price": 6000
     },
     "5c0d2727d174af02a012cf58": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -503,16 +585,20 @@
         "CanSpall": false,
         "SpallReduction": 1,
         "ReloadSpeedMulti": 1,
-        "Comfort": 1.13
+        "Comfort": 1.13,
+        "TemplateType": "gear",
+        "Price": 6000
     },
     "65709d2d21b9f815e208ff95": {
         "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "65709d2d21b9f815e208ff95",
         "Name": "item_equipment_helmet_neosteel",
         "AllowADS": true,
-        "LoyaltyLevel": 2,
+        "LoyaltyLevel": 3,
         "ArmorClass": "PM 3",
-        "Comfort": 1.02
+        "Comfort": 1.02,
+        "TemplateType": "gear",
+        "Price": 34000
     },
     "65719f0775149d62ce0a670b": {
         "$type": "RealismMod.Gear, RealismMod",
@@ -522,6 +608,8 @@
         "LoyaltyLevel": 3,
         "ArmorClass": "GOST 2A",
         "Comfort": 1,
-        "ReloadSpeedMulti": 1
+        "ReloadSpeedMulti": 1,
+        "TemplateType": "gear",
+        "Price": 33000
     }
 }

@@ -297,12 +297,9 @@ export class BotGen extends BotGenerator {
                 return this.checkIfShouldReturnCahcedBot(this.placeHolderBotCache);
             }
         }
-
-        const postLoadDBServer = container.resolve<DatabaseServer>("DatabaseServer");
-        const tables = postLoadDBServer.getTables();
-        const arrays = new BotArrays(tables);
-        const utils = new Utils(tables);
-        const botLoader = new BotLoader(this.logger, tables, this.configServer, modConfig, arrays, utils);
+        
+        const utils = Utils.getInstance();
+        const botLoader = BotLoader.getInstance();
 
         const preparedBotBase = this.getPreparedBotBase(
             botGenerationDetails.eventRole ?? botGenerationDetails.role, // Use eventRole if provided,
@@ -495,10 +492,10 @@ export class BotInvGen extends BotInventoryGenerator {
         try {
 
             let shouldGetSecondary = false;
-            if (botInventory.items !== undefined && botInventory.items !== null) {
+            if (botInventory.items != null) {
                 for (let i in botInventory.items) {
                     let item = itemDb[botInventory.items[i]._tpl];
-                    if (item !== undefined && item !== null && item?._parent !== undefined && item?._parent === BaseClasses.SNIPER_RIFLE) {
+                    if (item != null && item?._parent != null && item?._parent === BaseClasses.SNIPER_RIFLE) {
                         shouldGetSecondary = true;
                     }
                 }
@@ -986,27 +983,6 @@ export class BotWepGen extends BotWeaponGenerator {
         return true;
     }
 
-    //preset format has changed serveral times and I'm tired of updating them.
-    private reformatPreset(presetFile, presetObj) {
-        if (presetFile[presetObj].hasOwnProperty("root") || presetFile[presetObj].hasOwnProperty("Root")) {
-            const isUpperCase = presetFile[presetObj].Root !== undefined ? true : false;
-            const parent = isUpperCase ? presetFile[presetObj].Root : presetFile[presetObj].root
-            const id = isUpperCase ? presetFile[presetObj].Id : presetFile[presetObj].id
-            const items = isUpperCase ? presetFile[presetObj].Items : presetFile[presetObj].items
-            const name = isUpperCase ? presetFile[presetObj].Name : presetFile[presetObj].name
-
-            presetFile[presetObj] =
-            {
-                "_id": id,
-                "_type": "Preset",
-                "_changeWeaponName": false,
-                "_name": name,
-                "_parent": parent,
-                "_items": items
-            }
-        }
-    }
-
     //if the weapon is a holstered and it has a light, set it to off. This prevents cases of holstered weapons giving away bots
     private genExtraPropsForPreset(equipmentSlot: string, weaponTpl: string, preset: IPreset, botRole: string, tables: IDatabaseTables, myBotGenHelper: BotGenHelper) {
         const isHolsteredWeapon: boolean = (equipmentSlot.toLowerCase() === "holster" && tables.templates.items[weaponTpl]._parent === BaseClasses.PISTOL) || equipmentSlot.toLowerCase() === "secondprimaryweapon";
@@ -1016,7 +992,7 @@ export class BotWepGen extends BotWeaponGenerator {
         for (let item in preset._items) {
             let itemTemplate = tables.templates.items[preset._items[item]._tpl];
             if (itemTemplate._parent === BaseClasses.FLASHLIGHT || itemTemplate._parent === BaseClasses.TACTICAL_COMBO || itemTemplate._parent === BaseClasses.LIGHT_LASER_DESIGNATOR) {
-                if (preset._items[item].upd?.Light?.IsActive !== undefined) {
+                if (preset._items[item].upd?.Light?.IsActive != null) {
                     preset._items[item].upd.Light.IsActive = isActive;
                 }
                 else {
@@ -1045,6 +1021,178 @@ export class BotWepGen extends BotWeaponGenerator {
         else return "pmcbear";
     }
 
+    //preset format has changed serveral times and I'm tired of updating them.
+    private reformatPreset(preset): any {
+        if (preset.hasOwnProperty("root") || preset.hasOwnProperty("Root")) {
+            const isUpperCase = preset.Root != null ? true : false;
+            const parent = isUpperCase ? preset.Root : preset.root
+            const id = isUpperCase ? preset.Id : preset.id
+            const items = isUpperCase ? preset.Items : preset.items
+            const name = isUpperCase ? preset.Name : preset.name
+
+            return {
+                "_id": id,
+                "_type": "Preset",
+                "_changeWeaponName": false,
+                "_name": name,
+                "_parent": parent,
+                "_items": items
+            }
+        }
+        return preset;
+    }
+
+    private getCustomPresetHelper(presetFile: any, weaponTpl: string, tier: number, isUserPreset: boolean = false): any[] {
+        const iterable = isUserPreset ? presetFile.userPresets : presetFile;
+        let weaponPresets = [];
+
+        if (iterable == null) {
+            this.logger.warning(`Realism Mod: no presets found in file ${presetFile}`);
+            return weaponPresets;
+        }
+
+        weaponPresets = this.processPresets(iterable, weaponTpl, tier, false);
+
+        //failed to get a preset within the same tier as PMC, so we loop again and ignore the tier requirement.
+        if (weaponPresets.length == 0) {
+            weaponPresets = this.processPresets(iterable, weaponTpl, tier, true);
+        }
+        return weaponPresets;
+    }
+
+    private processPresets(iterable, weaponTpl: string, tier: number, ignoreTier: boolean = false): any[] {
+        let weaponPresets = [];
+        //user prests are in the form of an array, with non-nested obejcts. Other presets are nested objects with no array.
+        if (Array.isArray(iterable)) {
+            for (const preset of iterable) {
+                const returnedPreset = this.presetProcessHelper(preset, weaponTpl, tier, ignoreTier);
+                if (returnedPreset != null) {
+                    const reformatedPreset = { [returnedPreset._name]: returnedPreset }; //server requires nested object
+                    weaponPresets.push(returnedPreset);
+                }
+            }
+        } else {
+            for (const key in iterable) {
+                const returnedPreset = this.presetProcessHelper(iterable[key], weaponTpl, tier, ignoreTier);
+                if (returnedPreset != null) weaponPresets.push(returnedPreset);
+            }
+        }
+        return weaponPresets;
+    }
+
+    private presetProcessHelper(preset, weaponTpl: string, tier: number, ignoreTier: boolean = false): any {
+        preset = this.reformatPreset(preset);
+        if (preset._items[0]._tpl === weaponTpl) {
+            if (ignoreTier) {
+                if (modConfig.logEverything === true) this.logger.warning(`Found a preset outside of tier`);
+                return preset;
+            }
+            else {
+                let presetTier = preset._name ? preset._name.slice(0, 1) : "0";
+                let pTierNum = Number(presetTier);
+                if (pTierNum > tier - 2) {
+                    if (modConfig.logEverything === true) this.logger.warning("Found A Preset Within Tier");
+                    return preset;
+                }
+            }
+        }
+        return null;
+    }
+
+    private getCustomWeaponPreset(
+        weaponTpl: string,
+        equipmentSlot: string,
+        weaponParentId: string,
+        itemTemplate: ITemplateItem,
+        botRole: string,
+        tier: number,
+        myBotGenHelper: BotGenHelper,
+        tables: IDatabaseTables
+    ): IItem[] {
+
+        const botName = tier === 5 ? "tier5pmc" : botRole.includes("sectant") ? this.getCultistPresets(botRole) : botRole;
+        let presetFile = require(`../../db/bots/loadouts/weaponPresets/${botName}Presets.json`);
+
+        let weaponPresets = this.getCustomPresetHelper(presetFile, weaponTpl, tier, false);
+
+        //if we've still failed to find a preset, it might be a user preset
+        if (weaponPresets.length == 0) {
+            if (modConfig.logEverything == true) this.logger.warning("Failed to find regular preset. Looking for user preset");
+            let presetFile = require(`../../db/bots/user_bot_templates/presets/${botName}_User_Presets.json`);
+            weaponPresets = this.getCustomPresetHelper(presetFile, weaponTpl, tier, true);
+        }
+
+        if (modConfig.logEverything == true) {
+            this.logger.warning("Choices:");
+            for (let i in weaponPresets) {
+                this.logger.warning(weaponPresets[i]._name);
+            }
+        }
+
+        const randomPreset = weaponPresets[Math.floor(Math.random() * weaponPresets.length)];
+
+        if (modConfig.logEverything == true) {
+            this.logger.warning("Chose:");
+            this.logger.warning(randomPreset._name);
+        }
+
+        const preset: IPreset = this.cloner.clone(randomPreset);
+        if (!preset) return [];
+
+        preset._items[0] = {
+            ...preset._items[0],
+            parentId: weaponParentId,
+            slotId: equipmentSlot,
+            ...myBotGenHelper.myGenerateExtraPropertiesForItem(itemTemplate, botRole)
+        };
+
+        this.genExtraPropsForPreset(equipmentSlot, weaponTpl, preset, botRole, tables, myBotGenHelper);
+
+        if (modConfig.logEverything == true) {
+            this.logger.info(`Realism Mod: Preset was Fetched. Working as intended, do not report as issue.`);
+        }
+        return preset._items;
+    }
+
+    private getDefaultWeaponPreset(
+        weaponTpl: string,
+        equipmentSlot: string,
+        weaponParentId: string,
+        itemTemplate: ITemplateItem,
+        botRole: string,
+        myBotGenHelper: BotGenHelper,
+        tables: IDatabaseTables
+    ): IItem[] {
+
+        this.logger.warning(`Realism Mod: Failed To Find Custom Preset For Bot ${botRole}. Using default.`);
+        this.logger.warning(this.localisationService.getText("bot-weapon_generated_incorrect_using_default", weaponTpl));
+
+        let preset: IPreset;
+        for (const presetObj of Object.values(tables.globals.ItemPresets)) {
+            if (presetObj._items[0]._tpl === weaponTpl) {
+                preset = this.cloner.clone(presetObj);
+                break;
+            }
+        }
+
+        if (!preset) {
+            throw new Error(this.localisationService.getText("bot-missing_weapon_preset", weaponTpl));
+        }
+
+        preset._items[0] = {
+            ...preset._items[0],
+            parentId: weaponParentId,
+            slotId: equipmentSlot,
+            ...myBotGenHelper.myGenerateExtraPropertiesForItem(
+                itemTemplate,
+                botRole,
+                tables.templates.items[weaponTpl]._parent
+            )
+        };
+
+        return preset._items;
+    }
+
     private myGetPresetWeaponMods(weaponTpl: string, equipmentSlot: string, weaponParentId: string, itemTemplate: ITemplateItem, botRole: string, pmcTier: number): IItem[] {
         const logger = container.resolve<ILogger>("WinstonLogger");
         const durabilityLimitsHelper = container.resolve<DurabilityLimitsHelper>("DurabilityLimitsHelper");
@@ -1068,106 +1216,11 @@ export class BotWepGen extends BotWeaponGenerator {
         }
 
         let weaponMods = [];
-        let weaponPresets = [];
         try {
-            let preset: IPreset;
-            let botName = tier === 5 ? "tier5pmc" : botRole.includes("sectant") ? this.getCultistPresets(botRole) : botRole;
-            let presetFile = require(`../../db/bots/loadouts/weaponPresets/${botName}Presets.json`);
-
-            for (let presetObj in presetFile) {
-
-                this.reformatPreset(presetFile, presetObj);
-
-                if (presetFile[presetObj]._items[0]._tpl === weaponTpl) {
-                    let presetTier = presetFile[presetObj]._name.slice(0, 1);
-                    let pTierNum = Number(presetTier);
-                    if (pTierNum > tier - 2) {
-                        weaponPresets.push(presetFile[presetObj]);
-                        if (modConfig.logEverything == true) {
-                            this.logger.warning(`Found A Preset Within Tier`);
-                        }
-                    }
-                }
-            }
-
-            //failed to get a preset within the same tier as PMC, so we loop again and ignore the tier requirement.
-            if (weaponPresets.length == 0) {
-                for (let presetObj in presetFile) {
-
-                    this.reformatPreset(presetFile, presetObj);
-
-                    if (presetFile[presetObj]._items[0]._tpl === weaponTpl) {
-                        weaponPresets.push(presetFile[presetObj]);
-                        if (modConfig.logEverything == true) {
-                            this.logger.warning(`Found a preset outside of tier`);
-                        }
-                    }
-                }
-            }
-
-            if (modConfig.logEverything == true) {
-                this.logger.warning("Choices:");
-                for (let i in weaponPresets) {
-                    this.logger.warning(weaponPresets[i]._name);
-                }
-            }
-
-            let randomPreset = weaponPresets[Math.floor(Math.random() * weaponPresets.length)];
-
-            if (modConfig.logEverything == true) {
-                this.logger.warning("Chose:");
-                this.logger.warning(randomPreset._name);
-            }
-
-            preset = this.cloner.clone(randomPreset);
-            if (preset) {
-                const parentItem: IItem = preset._items[0];
-                preset._items[0] = {
-                    ...parentItem, ...{
-                        "parentId": weaponParentId,
-                        "slotId": equipmentSlot,
-                        ...myBotGenHelper.myGenerateExtraPropertiesForItem(itemTemplate, botRole)
-                    }
-                };
-
-                //presets aren't subject to config's % chance for light/laser to be off or on
-                this.genExtraPropsForPreset(equipmentSlot, weaponTpl, preset, botRole, tables, myBotGenHelper);
-
-                weaponMods.push(...preset._items);
-            }
-            if (modConfig.logEverything == true) {
-                this.logger.info(`Realism Mod: Preset was Fetched. Working as intended, do not report as issue.`);
-            }
+            weaponMods = this.getCustomWeaponPreset(weaponTpl, equipmentSlot, weaponParentId, itemTemplate, botRole, tier, myBotGenHelper, tables);
         }
         catch {
-            if (modConfig.logEverything == true) {
-                this.logger.warning(`Realism Mod: Failed To Find Custom Preset For Bot ${botRole} At Tier ${tier}. Do not panic, read the warning, do not report this.`);
-                this.logger.warning(this.localisationService.getText("bot-weapon_generated_incorrect_using_default", weaponTpl))
-            };
-
-            let preset: IPreset;
-            for (const presetObj of Object.values(tables.globals.ItemPresets)) {
-                if (presetObj._items[0]._tpl === weaponTpl) {
-                    preset = this.cloner.clone(presetObj);
-                    break;
-                }
-            }
-            if (preset) {
-                const parentItem: IItem = preset._items[0];
-                preset._items[0] = {
-                    ...parentItem,
-                    ...{
-                        "parentId": weaponParentId,
-                        "slotId": equipmentSlot,
-                        ...myBotGenHelper.myGenerateExtraPropertiesForItem(itemTemplate, botRole, this.databaseService.getTables().templates.items[weaponTpl]._parent)
-                    }
-                };
-                weaponMods.push(...preset._items);
-            }
-            else {
-                throw new Error(this.localisationService.getText("bot-missing_weapon_preset", weaponTpl));
-            }
-
+            weaponMods = this.getDefaultWeaponPreset(weaponTpl, equipmentSlot, weaponParentId, itemTemplate, botRole, myBotGenHelper, tables);
         }
         return weaponMods;
     }
@@ -1189,7 +1242,6 @@ export class CheckRequired {
 export class BotGenHelper extends BotGeneratorHelper {
 
     public getLightOnChance(botRole: string): number {
-
         return this.getBotEquipmentSettingFromConfig(botRole, "lightIsActiveDayChancePercent", 25);
     }
 
@@ -1229,14 +1281,13 @@ export class BotGenHelper extends BotGeneratorHelper {
         }
 
         if (itemTemplate._props.MaxHpResource) {
-            const medRandomization: IRandomisedResourceValues = { "resourcePercent": 30, "chanceMaxResourcePercent": 20 };
+            const medRandomization: IRandomisedResourceValues = this.botConfig.lootItemResourceRandomization[botRole]?.meds;
             const resource = Math.max(1, this.getRandomizedResourceValue(itemTemplate._props.MaxResource, medRandomization));
             itemProperties.MedKit = { HpResource: resource };
         }
 
         if (itemTemplate._props.MaxResource && itemTemplate._props.foodUseTime) {
-            //this.botConfig.lootItemResourceRandomization[botRole]?.food
-            const foodRandomization: IRandomisedResourceValues = { "resourcePercent": 40, "chanceMaxResourcePercent": 30 };
+            const foodRandomization: IRandomisedResourceValues = this.botConfig.lootItemResourceRandomization[botRole]?.food;
             const resource = Math.max(1, this.getRandomizedResourceValue(itemTemplate._props.MaxResource, foodRandomization));
             itemProperties.FoodDrink = { HpPercent: resource };
         }

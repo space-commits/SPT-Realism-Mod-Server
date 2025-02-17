@@ -48,13 +48,21 @@ const GrenadeLauncherTemplates = require("../../db/templates/weapons/GrenadeLaun
 class ItemStatHandler {
     tables;
     logger;
-    constructor(tables, logger) {
+    hashUtils;
+    constructor(tables, logger, hashUtils) {
         this.tables = tables;
         this.logger = logger;
+        this.hashUtils = hashUtils;
         this.gearPusherHelper = this.gearPusherHelper.bind(this);
         this.ammoPusherHelper = this.ammoPusherHelper.bind(this);
         this.modPusherHelper = this.modPusherHelper.bind(this);
         this.weapPusherHelper = this.weapPusherHelper.bind(this);
+    }
+    static instance;
+    static getInstance(tables, logger, hashUtils) {
+        if (!ItemStatHandler.instance)
+            ItemStatHandler.instance = new ItemStatHandler(tables, logger, hashUtils);
+        return ItemStatHandler.instance;
     }
     itemDB() {
         return this.tables.templates.items;
@@ -111,9 +119,10 @@ class ItemStatHandler {
         }
     }
     addGasFilterSlot(item) {
+        const id = this.hashUtils.generate();
         item._props.Slots.push({
             "_name": "mod_equipment",
-            "_id": "6679dbe64276cec33ee8ff85",
+            "_id": id,
             "_parent": item._id,
             "_props": {
                 "filters": [
@@ -131,7 +140,7 @@ class ItemStatHandler {
         });
     }
     handleMasks(fileItem, serverItem) {
-        if (fileItem?.IsGasMask != undefined && fileItem?.IsGasMask === true && fileItem?.MaskToUse !== undefined) {
+        if (fileItem?.IsGasMask != null && fileItem?.IsGasMask === true && fileItem?.MaskToUse != null) {
             serverItem._props.FaceShieldComponent = true;
             serverItem._props.FaceShieldMask = "NoMask";
             serverItem._props.armorClass = 1;
@@ -143,7 +152,7 @@ class ItemStatHandler {
                 this.addGasFilterSlot(serverItem);
             }
         }
-        else if (fileItem?.MaskToUse !== undefined) {
+        else if (fileItem?.MaskToUse != null) {
             if (fileItem.MaskToUse == "ronin") {
                 serverItem._props.FaceShieldMask = "NoMask";
             }
@@ -157,31 +166,31 @@ class ItemStatHandler {
         if (fileItem.ItemID in serverTemplates) {
             let serverItem = serverTemplates[fileItem.ItemID]; //this will be the reskin item's stats, which I want to reset
             let baseItem = serverItem; //temp set it to server template
-            if (fileItem.TemplateID != undefined) {
+            if (fileItem.TemplateID != null) {
                 baseItem = serverTemplates[fileItem.TemplateID]; //if it's a reskin, need the server stats of the item the skin is based on
                 fileItem = this.modifiedItems[fileItem.TemplateID]; //if it's a reskin, need the realism specific stats of the item the skin is based on
             }
             this.modifiedItems[fileItem.ItemID] = fileItem; //store the item in an object to be used later for reskins
-            serverItem._props.speedPenaltyPercent = fileItem.speedPenaltyPercent != undefined ? fileItem.speedPenaltyPercent : baseItem._props.speedPenaltyPercent;
-            serverItem._props.mousePenalty = fileItem.mousePenalty != undefined ? fileItem.mousePenalty : baseItem._props.mousePenalty;
-            serverItem._props.weaponErgonomicPenalty = fileItem.weaponErgonomicPenalty != undefined ? fileItem.weaponErgonomicPenalty : baseItem._props.weaponErgonomicPenalty;
-            if (serverItem._props?.armorClass != undefined) {
-                serverItem._props.armorClass = fileItem.ArmorLevel != undefined ? fileItem.ArmorLevel : serverItem._props.armorClass;
+            serverItem._props.speedPenaltyPercent = fileItem.speedPenaltyPercent != null ? fileItem.speedPenaltyPercent : baseItem._props.speedPenaltyPercent;
+            serverItem._props.mousePenalty = fileItem.mousePenalty != null ? fileItem.mousePenalty : baseItem._props.mousePenalty;
+            serverItem._props.weaponErgonomicPenalty = fileItem.weaponErgonomicPenalty != null ? fileItem.weaponErgonomicPenalty : baseItem._props.weaponErgonomicPenalty;
+            if (serverItem._props?.armorClass != null) {
+                serverItem._props.armorClass = fileItem.ArmorLevel != null ? fileItem.ArmorLevel : serverItem._props.armorClass;
             }
-            if (serverItem._props?.Durability != undefined) {
-                serverItem._props.Durability = fileItem.Durability != undefined ? fileItem.Durability : serverItem._props.Durability;
+            if (serverItem._props?.Durability != null) {
+                serverItem._props.Durability = fileItem.Durability != null ? fileItem.Durability : serverItem._props.Durability;
             }
-            if (serverItem._props?.MaxDurability != undefined) {
-                serverItem._props.MaxDurability = fileItem.Durability != undefined ? fileItem.Durability : serverItem._props.MaxDurability;
+            if (serverItem._props?.MaxDurability != null) {
+                serverItem._props.MaxDurability = fileItem.Durability != null ? fileItem.Durability : serverItem._props.MaxDurability;
             }
-            if (serverItem._props?.BluntThroughput != undefined) {
-                serverItem._props.BluntThroughput = fileItem.BluntThroughput != undefined ? fileItem.BluntThroughput : serverItem._props.BluntThroughput;
+            if (serverItem._props?.BluntThroughput != null) {
+                serverItem._props.BluntThroughput = fileItem.BluntThroughput != null ? fileItem.BluntThroughput : serverItem._props.BluntThroughput;
             }
-            if (serverItem._props?.ArmorMaterial != undefined) {
-                serverItem._props.ArmorMaterial = fileItem.ArmorMaterial != undefined ? fileItem.ArmorMaterial : serverItem._props.ArmorMaterial;
+            if (serverItem._props?.ArmorMaterial != null) {
+                serverItem._props.ArmorMaterial = fileItem.ArmorMaterial != null ? fileItem.ArmorMaterial : serverItem._props.ArmorMaterial;
             }
-            if (serverItem._props?.Weight != undefined) {
-                serverItem._props.Weight = fileItem.Weight != undefined ? fileItem.Weight : serverItem._props.Weight;
+            if (serverItem._props?.Weight != null) {
+                serverItem._props.Weight = fileItem.Weight != null ? fileItem.Weight : serverItem._props.Weight;
             }
             if (modConfig.enable_hazard_zones || modConfig.realistic_ballistics) {
                 this.handleMasks(fileItem, serverItem);
@@ -192,20 +201,20 @@ class ItemStatHandler {
         if (fileItem.ItemID in serverTemplates) {
             let serverItem = serverTemplates[fileItem.ItemID]; //this will be the reskin item's stats, which I want to reset
             let baseItem = serverItem; //temp set it to server template
-            if (fileItem.TemplateID != undefined) {
+            if (fileItem.TemplateID != null) {
                 baseItem = serverTemplates[fileItem.TemplateID]; //if it's a reskin, need the server stats of the item the skin is based on
                 fileItem = this.modifiedItems[fileItem.TemplateID]; //if it's a reskin, need the realism specific stats of the item the skin is based on
             }
             this.modifiedItems[fileItem.ItemID] = fileItem; //store the item in an object to be used later for reskins
-            serverItem._props.PenetrationPower = fileItem.PenetrationPower != undefined ? fileItem.PenetrationPower : serverItem._props.PenetrationPower;
-            serverItem._props.Weight = fileItem.Weight != undefined ? fileItem.Weight : serverItem._props.Weight;
-            serverItem._props.InitialSpeed = fileItem.InitialSpeed != undefined ? fileItem.InitialSpeed : serverItem._props.InitialSpeed;
-            serverItem._props.BulletMassGram = fileItem.BulletMassGram != undefined ? fileItem.BulletMassGram : serverItem._props.BulletMassGram;
-            serverItem._props.BulletDiameterMilimeters = fileItem.BulletDiameterMilimeters != undefined ? fileItem.BulletDiameterMilimeters : serverItem._props.BulletDiameterMilimeters;
-            serverItem._props.ammoAccr = fileItem.ammoAccr != undefined ? fileItem.ammoAccr : serverItem._props.ammoAccr;
-            serverItem._props.DurabilityBurnModificator = fileItem.DurabilityBurnModificator != undefined ? fileItem.DurabilityBurnModificator : serverItem._props.DurabilityBurnModificator;
-            serverItem._props.HeatFactor = fileItem.HeatFactor != undefined ? fileItem.HeatFactor : serverItem._props.HeatFactor;
-            serverItem._props.Damage = fileItem.Damage != undefined ? fileItem.Damage : serverItem._props.Damage;
+            serverItem._props.PenetrationPower = fileItem.PenetrationPower != null ? fileItem.PenetrationPower : serverItem._props.PenetrationPower;
+            serverItem._props.Weight = fileItem.Weight != null ? fileItem.Weight : serverItem._props.Weight;
+            serverItem._props.InitialSpeed = fileItem.InitialSpeed != null ? fileItem.InitialSpeed : serverItem._props.InitialSpeed;
+            serverItem._props.BulletMassGram = fileItem.BulletMassGram != null ? fileItem.BulletMassGram : serverItem._props.BulletMassGram;
+            serverItem._props.BulletDiameterMilimeters = fileItem.BulletDiameterMilimeters != null ? fileItem.BulletDiameterMilimeters : serverItem._props.BulletDiameterMilimeters;
+            serverItem._props.ammoAccr = fileItem.ammoAccr != null ? fileItem.ammoAccr : serverItem._props.ammoAccr;
+            serverItem._props.DurabilityBurnModificator = fileItem.DurabilityBurnModificator != null ? fileItem.DurabilityBurnModificator : serverItem._props.DurabilityBurnModificator;
+            serverItem._props.HeatFactor = fileItem.HeatFactor != null ? fileItem.HeatFactor : serverItem._props.HeatFactor;
+            serverItem._props.Damage = fileItem.Damage != null ? fileItem.Damage : serverItem._props.Damage;
             serverItem._props.ArmorDamage = 1;
             serverItem._props.casingMass = 1;
         }
@@ -214,23 +223,23 @@ class ItemStatHandler {
         if (fileItem.ItemID in serverTemplates) {
             let serverItem = serverTemplates[fileItem.ItemID]; //this will be the reskin item's stats, which I want to reset
             let baseItem = serverItem; //temp set it to server template
-            if (fileItem.TemplateID != undefined) {
+            if (fileItem.TemplateID != null) {
                 baseItem = serverTemplates[fileItem.TemplateID]; //if it's a reskin, need the server stats of the item the skin is based on
                 fileItem = this.modifiedItems[fileItem.TemplateID]; //if it's a reskin, need the realism specific stats of the item the skin is based on
             }
             this.modifiedItems[fileItem.ItemID] = fileItem; //store the item in an object to be used later for reskins
-            serverItem._props.Ergonomics = fileItem.Ergonomics != undefined ? fileItem.Ergonomics : 0;
-            serverItem._props.Accuracy = fileItem.Accuracy != undefined ? fileItem.Accuracy : 0;
-            serverItem._props.CenterOfImpact = fileItem.CenterOfImpact != undefined ? fileItem.CenterOfImpact : 0.05;
-            serverItem._props.HeatFactor = fileItem.HeatFactor != undefined ? fileItem.HeatFactor : 1;
-            serverItem._props.CoolFactor = fileItem.CoolFactor != undefined ? fileItem.CoolFactor : 1;
-            serverItem._props.MalfunctionChance = fileItem.MalfunctionChance != undefined ? fileItem.MalfunctionChance : 0;
+            serverItem._props.Ergonomics = fileItem.Ergonomics != null ? fileItem.Ergonomics : 0;
+            serverItem._props.Accuracy = fileItem.Accuracy != null ? fileItem.Accuracy : 0;
+            serverItem._props.CenterOfImpact = fileItem.CenterOfImpact != null ? fileItem.CenterOfImpact : 0.05;
+            serverItem._props.HeatFactor = fileItem.HeatFactor != null ? fileItem.HeatFactor : 1;
+            serverItem._props.CoolFactor = fileItem.CoolFactor != null ? fileItem.CoolFactor : 1;
+            serverItem._props.MalfunctionChance = fileItem.MalfunctionChance != null ? fileItem.MalfunctionChance : 0;
             // serverItem._props.CheckTimeModifier = fileItem.CheckTimeModifier;
-            serverItem._props.DurabilityBurnModificator = fileItem.DurabilityBurnModificator != undefined ? fileItem.DurabilityBurnModificator : 1;
-            serverItem._props.BlocksFolding = fileItem.BlocksFolding != undefined ? fileItem.BlocksFolding : false;
-            serverItem._props.Weight = fileItem.Weight != undefined ? fileItem.Weight : 0;
-            serverItem._props.ShotgunDispersion = fileItem.ShotgunDispersion != undefined ? fileItem.ShotgunDispersion : 1;
-            serverItem._props.Loudness = fileItem.Loudness != undefined ? fileItem.Loudness : 0;
+            serverItem._props.DurabilityBurnModificator = fileItem.DurabilityBurnModificator != null ? fileItem.DurabilityBurnModificator : 1;
+            serverItem._props.BlocksFolding = fileItem.BlocksFolding != null ? fileItem.BlocksFolding : false;
+            serverItem._props.Weight = fileItem.Weight != null ? fileItem.Weight : 0;
+            serverItem._props.ShotgunDispersion = fileItem.ShotgunDispersion != null ? fileItem.ShotgunDispersion : 1;
+            serverItem._props.Loudness = fileItem.Loudness != null ? fileItem.Loudness : 0;
             let confFileItems = fileItem.ConflictingItems ?? [];
             serverItem._props.ConflictingItems = [...new Set([...serverItem._props.ConflictingItems, ...confFileItems])];
             ;
@@ -251,7 +260,7 @@ class ItemStatHandler {
         if (fileItem.ItemID in serverTemplates) {
             let serverItem = serverTemplates[fileItem.ItemID]; //this will be the reskin item's stats, which I want to reset
             let baseItem = serverItem; //temp set it to server template
-            if (fileItem.TemplateID != undefined) {
+            if (fileItem.TemplateID != null) {
                 baseItem = serverTemplates[fileItem.TemplateID]; //if it's a reskin, need the server stats of the item the skin is based on
                 fileItem = this.modifiedItems[fileItem.TemplateID]; //if it's a reskin, need the realism specific stats of the item the skin is based on
             }
@@ -293,51 +302,57 @@ class ItemStatHandler {
                 serverItem._props.RecoilCategoryMultiplierHandRotation = fileItem.RecoilIntensity;
                 serverItem._props.CameraSnap = 1;
                 serverItem._props.RecoilPosZMult = 1.5;
-                serverItem._props.RecoilCenter = fileItem.RecoilCenter != null && fileItem.RecoilCenter != undefined ? fileItem.RecoilCenter : serverItem._props.RecoilCenter;
+                serverItem._props.RecoilCenter = fileItem.RecoilCenter != null && fileItem.RecoilCenter != null ? fileItem.RecoilCenter : serverItem._props.RecoilCenter;
                 serverItem._props.CanQueueSecondShot = fileItem.CanQueueSecondShot != null ? fileItem.CanQueueSecondShot : serverItem._props.CanQueueSecondShot;
-                if (fileItem?.BurstShotsCount !== undefined) {
+                if (fileItem?.BurstShotsCount != null) {
                     serverItem._props.BurstShotsCount = fileItem.BurstShotsCount;
                 }
-                if (fileItem?.weapFireType !== undefined) {
+                if (fileItem?.weapFireType != null) {
                     serverItem._props.weapFireType = fileItem.weapFireType;
                 }
-                if (fileItem?.WeapType !== undefined && (fileItem.IsManuallyOperated == false || fileItem.OperationType === "tubefed-m")) {
+                if (fileItem?.WeapType != null && (fileItem.IsManuallyOperated == false || fileItem.OperationType === "tubefed-m")) {
                     serverItem._props.CanQueueSecondShot = true;
                 }
-                if (fileItem.MasteryCategory != undefined && modConfig.mastery_changes == true) {
+                if (fileItem.MasteryCategory != null && modConfig.mastery_changes == true) {
                     this.tables.globals.config.Mastering.find(m => m.Name === fileItem.MasteryCategory).Templates.push(fileItem.ItemID);
                 }
             }
         }
     }
-    async processUserJsonFiles(folderPath = path.join(__dirname, '..', '..', 'db', 'templates', 'user_templates')) {
+    async processTemplateJson(isForClientDataRequest, folderPath = path.join(__dirname, '..', '..', 'db', 'templates', 'user_templates'), rawTemplateData = {}) {
         try {
             const files = await readdir(folderPath);
             for (const file of files) {
                 const filePath = path.join(folderPath, file);
                 const stats = await stat(filePath);
                 if (stats.isDirectory()) {
-                    await this.processUserJsonFiles(filePath); // Recursively call self for subfolders
+                    await this.processTemplateJson(isForClientDataRequest, filePath, rawTemplateData);
                 }
                 else if (file.endsWith('.json')) {
                     const data = await readFile(filePath, 'utf8');
                     const jsonData = JSON.parse(data);
                     for (let i in jsonData) {
-                        if ((modConfig.recoil_attachment_overhaul || modConfig.realistic_ballistics) && jsonData[i].$type.includes("Gun")) {
-                            this.weapPusherHelper(jsonData[i], this.itemDB());
+                        const template = jsonData[i];
+                        if (isForClientDataRequest) {
+                            rawTemplateData[i] = template;
+                            continue;
                         }
-                        if (modConfig.recoil_attachment_overhaul && jsonData[i].$type.includes("WeaponMod")) {
-                            this.modPusherHelper(jsonData[i], this.itemDB());
+                        if ((modConfig.recoil_attachment_overhaul || modConfig.realistic_ballistics) && template.$type.includes("Gun")) {
+                            this.weapPusherHelper(template, this.itemDB());
                         }
-                        if (jsonData[i].$type.includes("Gear")) {
-                            this.gearPusherHelper(jsonData[i], this.itemDB());
+                        if (modConfig.recoil_attachment_overhaul && template.$type.includes("WeaponMod")) {
+                            this.modPusherHelper(template, this.itemDB());
                         }
-                        if (modConfig.realistic_ballistics && jsonData[i].$type.includes("Ammo")) {
-                            this.ammoPusherHelper(jsonData[i], this.itemDB());
+                        if (template.$type.includes("Gear")) {
+                            this.gearPusherHelper(template, this.itemDB());
+                        }
+                        if (modConfig.realistic_ballistics && template.$type.includes("Ammo")) {
+                            this.ammoPusherHelper(template, this.itemDB());
                         }
                     }
                 }
             }
+            return rawTemplateData;
         }
         catch (err) {
             this.logger.error(`Error processing files in directory ${folderPath}: ${err}`);

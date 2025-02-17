@@ -1,0 +1,247 @@
+{
+    "scav": {
+        "tier1": {
+            "FirstPrimaryWeapon": {
+                "669fca7f9ed4916116c76d5e": 1
+            },
+            "SecondPrimaryWeapon": {},
+            "Holster": {
+                "6661012d16fbd2fb75408f87": 1
+            },
+            "Scabbard": {},
+            "ArmBand": {},
+            "Backpack": {},
+            "Earpiece": {},
+            "Eyewear": {},
+            "TacticalVest": {},
+            "FaceCover": {},
+            "Headwear": {},
+            "ArmorVest": {}
+        },
+        "tier2": {
+            "FirstPrimaryWeapon": {
+                "669fca7f9ed4916116c76d5e": 1
+            },
+            "SecondPrimaryWeapon": {},
+            "Holster": {
+                "6661012d16fbd2fb75408f87": 1
+            },
+            "Scabbard": {},
+            "ArmBand": {},
+            "Backpack": {},
+            "Earpiece": {},
+            "Eyewear": {},
+            "TacticalVest": {},
+            "FaceCover": {},
+            "Headwear": {},
+            "ArmorVest": {}
+        },
+        "tier3": {
+            "FirstPrimaryWeapon": {
+                "669fca7f9ed4916116c76d5e": 1
+            },
+            "SecondPrimaryWeapon": {},
+            "Holster": {
+                "6661012d16fbd2fb75408f87": 1
+            },
+            "Scabbard": {},
+            "ArmBand": {},
+            "Backpack": {},
+            "Earpiece": {},
+            "Eyewear": {},
+            "TacticalVest": {},
+            "FaceCover": {},
+            "Headwear": {},
+            "ArmorVest": {}
+        }
+    },
+    "usec": {
+        "tier1": {
+            "FirstPrimaryWeapon": {
+                "669fca7f9ed4916116c76d5e": 1
+            },
+            "SecondPrimaryWeapon": {},
+            "Holster": {
+                "6661012d16fbd2fb75408f87": 1
+            },
+            "Scabbard": {},
+            "ArmBand": {},
+            "Backpack": {},
+            "Earpiece": {},
+            "Eyewear": {},
+            "TacticalVest": {},
+            "FaceCover": {},
+            "Headwear": {},
+            "ArmorVest": {}
+        },
+        "tier2": {
+            "FirstPrimaryWeapon": {
+                "669fca7f9ed4916116c76d5e": 1,
+                "66c549879f8f2447575393cc": 1,
+                "66ea1ab604d256f0019d67f8": 1
+            },
+            "SecondPrimaryWeapon": {},
+            "Holster": {
+                "6661012d16fbd2fb75408f87": 1
+            },
+            "Scabbard": {},
+            "ArmBand": {},
+            "Backpack": {},
+            "Earpiece": {},
+            "Eyewear": {},
+            "TacticalVest": {},
+            "FaceCover": {},
+            "Headwear": {},
+            "ArmorVest": {}
+        },
+        "tier3": {
+            "FirstPrimaryWeapon": {
+                "6671ebcdd32bd95eb398e920": 1,
+                "66c549879f8f2447575393cc": 1,
+                "66ea1ab604d256f0019d67f8": 1,
+                "66ea17bd79825bad27d7e043": 1,
+                "664274a4d2e5fe0439d545a6": 1,
+                "66ba26a6925f9921573224c9": 1,
+                "66e718dc498d978477e0ba75": 1
+            },
+            "SecondPrimaryWeapon": {},
+            "Holster": {
+                "663cf1da2496a8e7b0b71759": 1
+            },
+            "Scabbard": {},
+            "ArmBand": {},
+            "Backpack": {},
+            "Earpiece": {},
+            "Eyewear": {},
+            "TacticalVest": {},
+            "FaceCover": {},
+            "Headwear": {
+                "672e2e754e6844af8e197b00": 1
+            },
+            "ArmorVest": {}
+        },
+        "tier4": {
+            "FirstPrimaryWeapon": {
+                "66e718dc498d978477e0ba75": 1,
+                "664a5b945636ce820472f225": 1,
+                "6671ebcdd32bd95eb398e920": 1,
+                "66ea17bd79825bad27d7e043": 1,
+                "664274a4d2e5fe0439d545a6": 1,
+                "67a01e79a2b82626b73d10dc": 1,
+                "66ba26a6925f9921573224c9": 1
+            },
+            "SecondPrimaryWeapon": {},
+            "Holster": {
+                "663cf1da2496a8e7b0b71759": 1,
+                "675ceb83e25d80bc676e15a6": 1
+            },
+            "Scabbard": {},
+            "ArmBand": {},
+            "Backpack": {},
+            "Earpiece": {},
+            "Eyewear": {},
+            "TacticalVest": {},
+            "FaceCover": {},
+            "Headwear": {
+                "672e2e754e6844af8e197b00": 1,
+                "672e2e75b79213c8f2101b8c": 1,
+                "672e2e75b14ae1b5c91474b4": 1,
+                "672e2e75b5b680c7ee6aa408": 1,
+                "672e2e7523db0e477dcf377f": 1
+            },
+            "ArmorVest": {}
+        }
+    },
+    "bear": {
+        "tier1": {
+            "FirstPrimaryWeapon": {},
+            "SecondPrimaryWeapon": {},
+            "Holster": {
+                "6661012d16fbd2fb75408f87": 1
+            }
+        },
+        "tier2": {
+            "FirstPrimaryWeapon": {},
+            "SecondPrimaryWeapon": {},
+            "Holster": {
+                "6661012d16fbd2fb75408f87": 1
+            }
+        },
+        "tier3": {
+            "FirstPrimaryWeapon": {
+                "6657bc8faeddd6b0a9b40224": 1,
+                "66ea0f455cb5474538b4e801": 1
+            },
+            "SecondPrimaryWeapon": {},
+            "Holster": {}
+        },
+        "tier4": {
+            "FirstPrimaryWeapon": {
+                "678fe4a4906c7bd23722c71f": 1,
+                "66ea0f455cb5474538b4e801": 1
+            },
+            "SecondPrimaryWeapon": {},
+            "Holster": {}
+        },
+        "Scabbard": {},
+        "ArmBand": {},
+        "Backpack": {},
+        "Earpiece": {},
+        "Eyewear": {},
+        "TacticalVest": {},
+        "FaceCover": {},
+        "Headwear": {},
+        "ArmorVest": {}
+    },
+    "tier5": {
+        "FirstPrimaryWeapon": {
+            "678fe4a4906c7bd23722c71f": 1,
+            "66e718dc498d978477e0ba75": 1,
+            "664a5b945636ce820472f225": 1,
+            "66ea0f455cb5474538b4e801": 1,
+            "66ea17bd79825bad27d7e043": 1,
+            "67a01e79a2b82626b73d10dc": 1,
+            "66ba26a6925f9921573224c9": 1
+        },
+        "SecondPrimaryWeapon": {},
+        "Holster": {
+            "663cf1da2496a8e7b0b71759": 1,
+            "675ceb83e25d80bc676e15a6": 1
+        },
+        "Scabbard": {},
+        "ArmBand": {
+            "672e2e75a16c1d2034c384cf": 1,
+            "672e2e750ea81b3b93b943ac": 1,
+            "672e2e75a26efb53bc703d45": 1,
+            "672e2e751ff683e9432cb5af": 1
+        },
+        "Backpack": {
+            "672e2e7563b1a22a3c7b3895": 1,
+            "672e2e754544ab54214fd56c": 1,
+            "672e2e75c076d2093b05c764": 1,
+            "672e2e75b9082dbf88dd1dbd": 1,
+            "672e2e75d276dfa8dd76770c": 1,
+            "672e2e75592eb3c91e248717": 1
+        },
+        "Earpiece": {},
+        "Eyewear": {},
+        "TacticalVest": {
+            "672e2e75c5ba9aeedbced57d": 1,
+            "672e2e75be2ea9998a388b8b": 1,
+            "672e2e75dbf780f902fd6d68": 1,
+            "672e2e758c2bcbf1b2421359": 1,
+            "672e2e75afb25b57bd1d1455": 1,
+            "672e2e7531ffa75ea676c3ea": 1,
+            "672e2e75fa61ef193bdbd7e6": 1,
+            "672e2e755afaba52a4af5e45": 1
+        },
+        "FaceCover": {},
+        "Headwear": {
+            "672e2e75b79213c8f2101b8c": 1,
+            "672e2e75b14ae1b5c91474b4": 1,
+            "672e2e75b5b680c7ee6aa408": 1,
+            "672e2e7523db0e477dcf377f": 1
+        },
+        "ArmorVest": {}
+    }
+}

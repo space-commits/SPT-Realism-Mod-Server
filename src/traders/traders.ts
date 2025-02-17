@@ -1,5 +1,5 @@
 import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
-import { ILogger } from "../../types/models/spt/utils/ILogger";
+import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { ITraderConfig } from "@spt/models/spt/config/ITraderConfig";
 import { IBarterScheme, ITrader, ITraderAssort } from "@spt/models/eft/common/tables/ITrader";
 import { container } from "tsyringe";
@@ -128,7 +128,7 @@ export class Traders {
                 ll.insurance_price_coef = Math.round(ll.insurance_price_coef * 1.25);
             });
 
-            insurance.returnChancePercent[prapId] = 35;
+            insurance.returnChancePercent[prapId] = 40;
             insurance.returnChancePercent[theraId] = 90;
 
             this.tables.globals.config.Insurance.MaxStorageTimeInHour = 168;
@@ -194,8 +194,6 @@ export class Traders {
             this.traderConf.fence.itemTypeLimits = fenceLimits.itemTypeLimits;
             this.traderConf.fence.blacklist = fenceLimits.blacklist;
 
-
-
             if (modConfig.realistic_ballistics == true) {
                 this.traderConf.fence.ammoMaxPenLimit = 60;
                 this.traderConf.fence.chancePlateExistsInArmorPercent =
@@ -251,7 +249,7 @@ export class Traders {
     }
 
     public loadTraderRepairs() {
-        
+
         this.tables.traders[fenceId].base.repair = {
             "availability": true,
             "quality": 1,
@@ -266,7 +264,6 @@ export class Traders {
             this.tables.traders[prapId].base.repair = traderRepairs.PraporRepair;
             this.tables.traders[skierId].base.repair = traderRepairs.SkierRepair;
             this.tables.traders[mechId].base.repair = traderRepairs.MechanicRepair;
-
             // for (let ll in this.tables.traders[prapId].base.loyaltyLevels) {
             //     this.tables.traders[prapId].base.loyaltyLevels[ll].repair_price_coef *= 0.5
             // }
@@ -277,14 +274,12 @@ export class Traders {
                 this.tables.traders[mechId].base.loyaltyLevels[ll].repair_price_coef *= 1
             }
         }
-
-
     }
 
     public setBaseOfferValues() {
         for (let i in this.tables.traders) {
             let trader = this.tables.traders[i];
-            if (trader?.assort?.items === undefined || trader.base.nickname === "БТР" || trader.base.nickname === "Arena" || trader.base.nickname.toLowerCase() === "fence") continue;
+            if (trader?.assort?.items == null || trader.base.nickname === "БТР" || trader.base.nickname === "Arena" || trader.base.nickname.toLowerCase() === "fence") continue;
             if (modConfig.change_trader_ll == true) {
                 this.setLoyaltyLevels(trader);
             }
@@ -293,24 +288,77 @@ export class Traders {
     }
 
     public setBasePrices(trader: ITrader) {
-        if (modConfig.realistic_ballistics == true) this.setBasePrice(AmmoTemplates, trader);
+        if (modConfig.realistic_ballistics == true) {
+            this.setBasePrice([AmmoTemplates], trader);
+            this.setBasePrice([ArmorChestrigTemplates, ArmorComponentsTemplates, ArmorMasksTemplates, ArmorPlateTemplates, ArmorVestsTemplates, ArmorChestrigTemplates, HelmetTemplates], trader, true);
+        }
+        this.adjustPriceByCategory(trader);
     }
 
-    public setBasePrice(templates: any[], trader: ITrader) {
-        for (let item in trader.assort.items) { //loop offers
-            if (trader.assort.items[item].parentId !== "hideout") continue;
-            let offer = trader.assort.items[item];
-            let offerId = offer._id;
-            let offerTpl = offer._tpl;
-            if (templates[offerTpl]) {
-                let barter = trader?.assort?.barter_scheme[offerId][0][0];
-                if (this.itemDB()[barter?._tpl]?._parent !== ParentClasses.MONEY) continue;
-                let templateItem = templates[offerTpl];
-                let priceModifier = templateItem?.BasePriceModifier !== undefined ? templateItem?.BasePriceModifier : 1;
-                barter.count *= priceModifier;
+
+    private getChildren(items: IItem[], parent: IItem): IItem[] {
+        return items.filter(item => item.parentId === parent._id);
+    }
+
+    public setBasePrice(templates: any[], trader: ITrader, isNestedArmor: boolean = false) {
+        for (const t in templates) {
+            const template = templates[t];
+            for (const ti in template) {
+                const templateItem = template[ti];
+                const offer = trader.assort.items.find(item => item._tpl === templateItem.ItemID);
+                if (offer == null) continue;
+                const offerId = offer._id;
+                if (offer._id == null) continue;
+                const barterItem = trader?.assort?.barter_scheme?.[offerId]?.[0]?.[0];
+                if (barterItem == null || this.itemDB()[barterItem?._tpl]?._parent !== ParentClasses.MONEY) continue;
+                if (!isNestedArmor) {
+                    const priceModifier = templateItem?.BasePriceModifier != null ? templateItem?.BasePriceModifier : 1;
+                    barterItem.count *= priceModifier;
+                }
+                else {
+                    if (templateItem?.Price == null || templateItem.Price == 0) continue;
+                    let totalPrice = templateItem.Price;
+                    const children = this.getChildren(trader.assort.items, offer);
+                    for (const child of children) {
+                        const childTemplate = ArmorPlateTemplates[child._tpl];
+                        if (childTemplate == null || childTemplate?.Price == null || childTemplate.Price == 0) continue;
+                        totalPrice += childTemplate.Price;
+                    }
+                    const conversionRate = barterItem._tpl == "5696686a4bdc2da3298b456a" ? 108 :  barterItem._tpl == "5696686a4bdc2da3298b456a"  ? 117 : 1;
+                    barterItem.count = Math.round(totalPrice / conversionRate);
+                }
             }
         }
     }
+
+
+    private adjustPriceByCategory(trader: ITrader) {
+        if (modConfig.adjust_trader_prices == true)
+            for (const i in trader.assort.items) {
+                const offer = trader.assort.items[i];
+                const offerId = offer?._id;
+                if (offerId == null) continue;
+                const offerTpl = offer._tpl;
+                const barter = trader?.assort?.barter_scheme?.[offerId];
+                if (barter == null) continue;
+                const barterItem = barter?.[0]?.[0];
+                if (barterItem == null || this.itemDB()[barterItem?._tpl]?._parent !== ParentClasses.MONEY) continue;
+                const itemTemplate = this.itemDB()[offerTpl];
+                if (itemTemplate == null) return;
+                const itemParent = this.itemDB()[offerTpl]?._parent;
+                if (itemParent == null) return;
+                if (itemParent === ParentClasses.AMMO) barterItem.count *= 1.5;
+                if (itemParent === ParentClasses.AMMO_BOX) barterItem.count *= 1.5;
+                if (itemParent === ParentClasses.DRUGS) barterItem.count *= 2;
+                if (itemParent === ParentClasses.MEDKIT) barterItem.count *= 2;
+                if (itemParent === ParentClasses.MEDS) barterItem.count *= 2;
+                if (itemParent === ParentClasses.STIMULATOR) barterItem.count *= 2.5;
+                if (itemParent === ParentClasses.MEDICAL_SUPPLIES) barterItem.count *= 2;
+                if (itemParent === ParentClasses.FOOD) barterItem.count *= 2;
+                if (itemParent === ParentClasses.DRINK) barterItem.count *= 2;
+            }
+    }
+
 
     public setLoyaltyLevels(trader: ITrader) {
         if (modConfig.realistic_ballistics == true) {
@@ -339,7 +387,7 @@ export class Traders {
             if (template[offerTpl]) {
                 const barter = trader?.assort?.barter_scheme[offerId][0][0];
                 const templateItem = template[offerTpl];
-                const loyaltyLvl = templateItem?.LoyaltyLevel !== undefined ? templateItem?.LoyaltyLevel : 2;
+                const loyaltyLvl = templateItem?.LoyaltyLevel != null ? templateItem?.LoyaltyLevel : 2;
                 if (this.itemDB()[barter?._tpl]?._parent !== ParentClasses.MONEY) {
                     trader.assort.loyal_level_items[offerId] = this.utils.clampNumber(loyaltyLvl - 1, 1, 4);
                 } else {
@@ -516,7 +564,7 @@ export class Traders {
             parent = id;
         }
 
-        if (secondaryChildItems !== undefined) {
+        if (secondaryChildItems != null) {
             for (let key in secondaryChildItems) {
                 let id = this.utils.genId();
                 assort.items.push(
@@ -632,7 +680,7 @@ export class RandomizeTraderAssort {
     private logger = container.resolve<ILogger>("WinstonLogger");
     private tables = this.databaseServer.getTables();
     private itemDB = this.tables.templates.items;
-    private utils = new Utils(this.tables);
+    private utils = Utils.getInstance();
     private assortsToIgnore = [
         "670ae835f28231d36adcf7fa",
         "67082dc8dc5160ef041094dc",
@@ -646,16 +694,15 @@ export class RandomizeTraderAssort {
     ];
 
     public getAverageLL(pmcData: IPmcData[], traderId: string): number {
-
         let totalLL = 0;
         let playerCount = 0;
 
         if (pmcData) {
             pmcData.forEach(element => {
                 playerCount++;
-                if (element?.TradersInfo != null && element?.TradersInfo != undefined) {
+                if (element?.TradersInfo != null) {
                     let ll = element?.TradersInfo[traderId]?.loyaltyLevel;
-                    totalLL += ll !== null && ll !== undefined ? ll : 1;
+                    totalLL += ll != null ? ll : 1;
                 }
             });
         }
@@ -673,13 +720,13 @@ export class RandomizeTraderAssort {
     }
 
 
-    public adjustTraderStockAtServerStart(pmcData: IPmcData[]) {
+    public adjustTraderStockAtGameStart(pmcData: IPmcData[]) {
         if (EventTracker.isChristmas == true) {
             this.logger.warning("====== Christmas Sale, Everything 15% Off! ======");
         }
         for (let i in this.tables.traders) {
             let trader = this.tables.traders[i];
-            if (trader.assort?.items !== undefined && trader.base.nickname !== "БТР" && trader.base.nickname !== "Arena" && trader.base.nickname.toLocaleLowerCase() !== "fence") {
+            if (trader.assort?.items != null && trader.base.nickname !== "БТР" && trader.base.nickname !== "Arena" && trader.base.nickname.toLocaleLowerCase() !== "fence") {
                 let assortItems = trader.assort.items;
                 let ll = this.getAverageLL(pmcData, i);
                 for (let item in assortItems) {
@@ -687,25 +734,25 @@ export class RandomizeTraderAssort {
                     let itemId = assortItem._id;
                     let itemTemplId = assortItem._tpl;
                     if (modConfig.randomize_trader_stock == true) {
-                        if (assortItem.upd?.StackObjectsCount !== undefined) {
-                            this.randomizeStock(assortItem, ll);
+                        if (assortItem.upd?.StackObjectsCount != null) {
+                            this.randomizeStock(assortItem, ll, pmcData.length);
                         }
-                        if (assortItem.upd?.UnlimitedCount !== undefined) {
+                        if (assortItem.upd?.UnlimitedCount != null) {
                             assortItem.upd.UnlimitedCount = false;
                         }
                     }
-                    if (modConfig.randomize_trader_prices == true || modConfig.adjust_trader_prices) {
+                    if (modConfig.randomize_trader_prices == true) {
                         if (trader?.assort?.barter_scheme) {
                             let barter = trader.assort.barter_scheme[itemId];
-                            if (barter !== undefined) {
-                                this.setAndRandomizeCost(this.utils, itemTemplId, barter, true);
+                            if (barter != null) {
+                                this.setAndRandomizeCost(this.utils, barter);
                             }
                         }
                     }
                 }
             }
             if (modConfig.randomize_trader_ll == true) {
-                if (trader.assort?.loyal_level_items !== undefined) {
+                if (trader.assort?.loyal_level_items != null) {
                     let ll = trader.assort.loyal_level_items;
                     for (let lvl in ll) {
                         this.randomizeLL(ll, lvl);
@@ -746,7 +793,7 @@ export class RandomizeTraderAssort {
     private randomizeStockHelper(assortItemParent: string, targetParent: string, item: IItem, min: number, max: number, llFactor: number, canBeOutOfStock: boolean = true) {
         if (assortItemParent === targetParent) {
             //items aren't out of stock often enough, this artifically increases the chance of being out of stock
-            if (canBeOutOfStock && this.utils.pickRandNumInRange(0, 100) < (20 - (llFactor * 4))) {
+            if (canBeOutOfStock && this.utils.pickRandNumInRange(0, 100) < (30 - (llFactor * 4))) {
                 item.upd.StackObjectsCount = 0 + min;
             }
             else {
@@ -763,7 +810,7 @@ export class RandomizeTraderAssort {
 
     }
 
-    public randomizeStock(item: IItem, averageLL: number) {
+    public randomizeStock(item: IItem, averageLL: number, playerCount: number) {
         let itemParent = this.itemDB[item._tpl]?._parent;
 
         if (!itemParent) {
@@ -773,83 +820,97 @@ export class RandomizeTraderAssort {
 
         if (EventTracker.isHalloween && this.assortsToIgnore.includes(item._id)) return;
 
-        const llStockFactor = Math.max(averageLL - 1, 1);
-        const llStackableFactor = this.getLLStackableBonus(averageLL);
+        const playerCountFactor = Math.max(1, playerCount)
+        const llStockFactor = Math.max(averageLL - 2, 0);
+        const ammoStockFactor = this.getLLStackableBonus(averageLL) * playerCountFactor;
         const llOutOfStockFactor = this.getLLOutOfStockBonus(averageLL);
+        const regularMaxStock = (1 + modConfig.rand_stock_modifier) * playerCountFactor;
+        const medMaxStock = (2 + modConfig.rand_stock_modifier) * playerCountFactor;
+        const specialItemMaxStock = (4 + modConfig.rand_stock_modifier) * playerCountFactor;
+        const regularMagMaxStock = (4 + modConfig.rand_stock_modifier) * playerCountFactor;
+        const midCapMagMaxStock = (3 + modConfig.rand_stock_modifier) * playerCountFactor;
+        const highCapMagMaxStock = (1 + modConfig.rand_stock_modifier) * playerCountFactor;
+        const ammoBoxMaxStock = (2 + modConfig.rand_stock_modifier * playerCountFactor);
+        const foodMaxStock = (2 + modConfig.rand_stock_modifier * playerCountFactor);
+
+        const isRouble = item._tpl == "5449016a4bdc2d6f028b456f"
+        const moneyMinStock = isRouble ? 30000 : 350;
+        const moneyMaxStockBase = isRouble ? 300000 : 9000;
+        const moneyMaxStock = moneyMaxStockBase * playerCountFactor;
 
         //ammo
-        this.randomizeAmmoStock(itemParent, item, llStackableFactor, llOutOfStockFactor);
-        this.randomizeStockHelper(itemParent, ParentClasses.AMMO_BOX, item, 0 + modConfig.rand_stock_modifier_min, 2 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+        this.randomizeAmmoStock(itemParent, item, ammoStockFactor, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, ParentClasses.AMMO_BOX, item, 0 + modConfig.rand_stock_modifier_min, ammoBoxMaxStock + llStockFactor, llOutOfStockFactor);
 
         //weapons
         for (let id in StaticArrays.weaponParentIDs) {
-            this.randomizeStockHelper(itemParent, StaticArrays.weaponParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+            this.randomizeStockHelper(itemParent, StaticArrays.weaponParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock, llOutOfStockFactor);
         }
 
         //weapon mods
         for (let id in StaticArrays.modParentIDs) {
-            this.randomizeStockHelper(itemParent, StaticArrays.modParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+            this.randomizeStockHelper(itemParent, StaticArrays.modParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock, llOutOfStockFactor);
         }
 
         //gear
         for (let id in StaticArrays.gearParentIDs) {
-            this.randomizeStockHelper(itemParent, StaticArrays.gearParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+            this.randomizeStockHelper(itemParent, StaticArrays.gearParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock, llOutOfStockFactor);
         }
 
         //barter items
         for (let id in StaticArrays.barterParentIDs) {
-            this.randomizeStockHelper(itemParent, StaticArrays.barterParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+            this.randomizeStockHelper(itemParent, StaticArrays.barterParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock + llStockFactor, llOutOfStockFactor);
         }
 
         //keys 
         for (let id in StaticArrays.keyParentIDs) {
-            this.randomizeStockHelper(itemParent, StaticArrays.keyParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+            this.randomizeStockHelper(itemParent, StaticArrays.keyParentIDs[id], item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock, llOutOfStockFactor);
         }
 
         //maps
-        this.randomizeStockHelper(itemParent, ParentClasses.MAP, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, ParentClasses.MAP, item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock + llStockFactor, llOutOfStockFactor);
 
         //nvg + thermals:
-        this.randomizeStockHelper(itemParent, ParentClasses.NIGHTVISION, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
-        this.randomizeStockHelper(itemParent, ParentClasses.SPECIAL_SCOPE, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
-        this.randomizeStockHelper(itemParent, ParentClasses.THEMALVISION, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, ParentClasses.NIGHTVISION, item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, ParentClasses.SPECIAL_SCOPE, item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, ParentClasses.THEMALVISION, item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock, llOutOfStockFactor);
 
         //magazine
         if (itemParent === ParentClasses.MAGAZINE) {
             let magCap = this.itemDB[item._tpl]?._props?.Cartridges[0]._max_count;
             if (magCap <= 35) {
-                this.randomizeStockHelper(itemParent, ParentClasses.MAGAZINE, item, 0 + modConfig.rand_stock_modifier_min, 3 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
+                this.randomizeStockHelper(itemParent, ParentClasses.MAGAZINE, item, 0 + modConfig.rand_stock_modifier_min, regularMagMaxStock + llStockFactor, llOutOfStockFactor);
             } else if (magCap > 35 && magCap <= 45) {
-                this.randomizeStockHelper(itemParent, ParentClasses.MAGAZINE, item, 0 + modConfig.rand_stock_modifier_min, 2 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
+                this.randomizeStockHelper(itemParent, ParentClasses.MAGAZINE, item, 0 + modConfig.rand_stock_modifier_min, midCapMagMaxStock + llStockFactor, llOutOfStockFactor);
             }
             else {
-                this.randomizeStockHelper(itemParent, ParentClasses.MAGAZINE, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
+                this.randomizeStockHelper(itemParent, ParentClasses.MAGAZINE, item, 0 + modConfig.rand_stock_modifier_min, highCapMagMaxStock + llStockFactor, llOutOfStockFactor);
             }
         }
 
         //medical
-        this.randomizeStockHelper(itemParent, ParentClasses.STIMULATOR, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
-        this.randomizeStockHelper(itemParent, ParentClasses.DRUGS, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
-        this.randomizeStockHelper(itemParent, ParentClasses.MEDICAL, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, ParentClasses.STIMULATOR, item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock + llStockFactor, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, ParentClasses.DRUGS, item, 0 + modConfig.rand_stock_modifier_min, medMaxStock + llStockFactor, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, ParentClasses.MEDICAL, item, 0 + modConfig.rand_stock_modifier_min, medMaxStock + llStockFactor, llOutOfStockFactor);
 
         //special items
-        this.randomizeStockHelper(itemParent, ParentClasses.SPEC_ITEM, item, 3 + modConfig.rand_stock_modifier_min, 3 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
-        this.randomizeStockHelper(itemParent, ParentClasses.PORTABLE_RANGE_FINDER, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
-        this.randomizeStockHelper(itemParent, ParentClasses.COMPASS, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, ParentClasses.SPEC_ITEM, item, 3 + modConfig.rand_stock_modifier_min, specialItemMaxStock + llStockFactor, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, ParentClasses.PORTABLE_RANGE_FINDER, item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, ParentClasses.COMPASS, item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock, llOutOfStockFactor);
 
         //grenades
-        this.randomizeStockHelper(itemParent, ParentClasses.THROW_WEAPON, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, ParentClasses.THROW_WEAPON, item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock + llStockFactor, llOutOfStockFactor);
 
         //money
-        this.randomizeStockHelper(itemParent, ParentClasses.MONEY, item, 350 * modConfig.rand_stock_modifier_min, 10000 * modConfig.rand_stackable_modifier, llOutOfStockFactor, false);
+        this.randomizeStockHelper(itemParent, ParentClasses.MONEY, item, moneyMinStock, moneyMaxStock, llOutOfStockFactor, false);
 
         //container
-        this.randomizeStockHelper(itemParent, ParentClasses.SIMPLE_CONTAINER, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
-        this.randomizeStockHelper(itemParent, ParentClasses.LOCKABLE_CONTAINER, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, ParentClasses.SIMPLE_CONTAINER, item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, ParentClasses.LOCKABLE_CONTAINER, item, 0 + modConfig.rand_stock_modifier_min, regularMaxStock, llOutOfStockFactor);
 
         //provisions
-        this.randomizeStockHelper(itemParent, ParentClasses.FOOD, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
-        this.randomizeStockHelper(itemParent, ParentClasses.DRINK, item, 0 + modConfig.rand_stock_modifier_min, 1 + modConfig.rand_stock_modifier + llStockFactor, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, ParentClasses.FOOD, item, 0 + modConfig.rand_stock_modifier_min, foodMaxStock + llStockFactor, llOutOfStockFactor);
+        this.randomizeStockHelper(itemParent, ParentClasses.DRINK, item, 0 + modConfig.rand_stock_modifier_min, foodMaxStock + llStockFactor, llOutOfStockFactor);
     }
 
     private randomizeAmmoStock(assortItemParent: string, item: IItem, llStackableFactor: number, llStockFactor: number) {
@@ -933,15 +994,11 @@ export class RandomizeTraderAssort {
         }
     }
 
-    public setAndRandomizeCost(utils: Utils, itemTemplId: string, barter: IBarterScheme[][], setBasePrice: boolean) {
-
-        let barterItem = barter[0][0];
+    public setAndRandomizeCost(utils: Utils, barter: IBarterScheme[][]) {
+        const barterItem = barter[0][0];
         if (this.itemDB[barterItem._tpl]._parent === ParentClasses.MONEY) {
-            let randNum = utils.pickRandNumOneInTen();
-            let cost = barterItem.count;
-            if (setBasePrice == true && modConfig.adjust_trader_prices == true) {
-                this.adjustPriceByCategory(barterItem, itemTemplId, cost);
-            }
+            const randNum = utils.pickRandNumOneInTen();
+            const cost = barterItem.count;
             if (modConfig.randomize_trader_prices == true) {
                 if (randNum >= 8) {
                     barterItem.count = cost * modConfig.rand_cost_increase;
@@ -954,23 +1011,6 @@ export class RandomizeTraderAssort {
                 barterItem.count = barterItem.count * 0.85;
             }
         }
-    }
-
-    private adjustPriceByCategory(barter: IBarterScheme, itemTemplId: string, cost: number) {
-        const item = this.itemDB[itemTemplId];
-        if (item === undefined) return;
-        const itemParent = this.itemDB[itemTemplId]?._parent;
-        if (itemParent === undefined) return;
-        if (itemParent === ParentClasses.AMMO) barter.count = cost * 3;
-        if (itemParent === ParentClasses.AMMO_BOX) barter.count = cost * 3;
-        if (itemParent === ParentClasses.DRUGS) barter.count = cost * 2;
-        if (itemParent === ParentClasses.MEDKIT) barter.count = cost * 2;
-        if (itemParent === ParentClasses.MEDS) barter.count = cost * 2;
-        if (itemParent === ParentClasses.STIMULATOR) barter.count = cost * 2.5;
-        if (itemParent === ParentClasses.MEDICAL_SUPPLIES) barter.count = cost * 2;
-        if (itemParent === ParentClasses.FOOD) barter.count = cost * 2;
-        if (itemParent === ParentClasses.DRINK) barter.count = cost * 2;
-        if (itemParent === ParentClasses.HEADWEAR) barter.count = cost * 0.55;
     }
 
     public randomizeLL(ll: Record<string, number>, i: string) {
@@ -1027,7 +1067,7 @@ export class TraderRefresh extends TraderAssortHelper {
     private modifyTraderAssorts(trader: ITrader, logger: ILogger, pmcData: IPmcData[]): IItem[] {
         const tables = this.databaseService.getTables();
         const randomTraderAss = new RandomizeTraderAssort();
-        const utils = new Utils(tables);
+        const utils = Utils.getInstance();
 
         let assortItems = trader.assort.items;
         let assortBarters = trader.assort.barter_scheme;
@@ -1044,19 +1084,19 @@ export class TraderRefresh extends TraderAssortHelper {
             let itemId = assortItems[i]._id;
             let itemTemplId = assortItems[i]._tpl;
             if (modConfig.randomize_trader_stock == true) {
-                if (item.upd?.StackObjectsCount !== undefined) {
-                    randomTraderAss.randomizeStock(item, averageLL);
+                if (item.upd?.StackObjectsCount != null) {
+                    randomTraderAss.randomizeStock(item, averageLL, pmcData.length);
                 }
-                if (item.upd?.UnlimitedCount !== undefined) {
+                if (item.upd?.UnlimitedCount != null) {
                     item.upd.UnlimitedCount = false;
                 }
-                if (item.upd?.BuyRestrictionCurrent !== undefined) {
+                if (item.upd?.BuyRestrictionCurrent != null) {
                     item.upd.BuyRestrictionCurrent = 0;
                 }
             }
             if (modConfig.randomize_trader_prices == true) {
                 let barter = assortBarters[itemId];
-                if (barter !== undefined) {
+                if (barter != null) {
                     this.randomizePricesAtRefresh(randomTraderAss, utils, itemTemplId, barter);
                 }
             }
@@ -1065,6 +1105,6 @@ export class TraderRefresh extends TraderAssortHelper {
     }
 
     private randomizePricesAtRefresh(randomTraderAss: RandomizeTraderAssort, utils: Utils, itemTemplId: string, barter: IBarterScheme[][]): void {
-        randomTraderAss.setAndRandomizeCost(utils, itemTemplId, barter, true);
+        randomTraderAss.setAndRandomizeCost(utils, barter);
     }
 }

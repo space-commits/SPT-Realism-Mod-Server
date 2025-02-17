@@ -9,5 +9,11 @@
             "dbaeumer.vscode-eslint",
             "refringe.spt-id-highlighter"
         ]
+    },
+    "settings": {
+        "files.exclude": {
+            "**/Build": true,
+            "**/ProfileBackups": true
+        }
     }
 }

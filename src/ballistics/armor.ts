@@ -1,5 +1,5 @@
 import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
-import { ILogger } from "../../types/models/spt/utils/ILogger";
+import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { ParentClasses } from "../utils/enums";
 import { IArmorMaterials, IArmorType, IConfig } from "@spt/models/eft/common/IGlobals";
 import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
@@ -85,7 +85,7 @@ export class Armor {
                 for (const filter of slot._props.filters) {
                     if (!filter.armorPlateColliders || filter.armorPlateColliders.length === 0 || filter.Filter.length !== 1 || this.itemDB()[filter.Filter[0]]._props.ArmorMaterial !== "Aramid") continue;
                     for (const col of filter.armorPlateColliders) {
-                        if (filter.armorColliders != undefined) {
+                        if (filter.armorColliders != null) {
                             let plateCollidor = col.toLowerCase();
                             if (plateCollidor === "plate_granit_sapi_chest") {
                                 filter.armorColliders.push("RibcageUp");

@@ -1,7 +1,7 @@
 
 
 import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
-import { ILogger } from "../../types/models/spt/utils/ILogger";
+import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { IInventoryConfig } from "@spt/models/spt/config/IInventoryConfig";
 import { IInRaidConfig } from "@spt/models/spt/config/IInRaidConfig";
 import { IConfig } from "@spt/models/eft/common/IGlobals";
@@ -69,7 +69,7 @@ export class ItemsClass {
                     this.locales()[localeID][`${itemId} ${key}`] = value;
                 }
             }
-        }
+        }    
 
         //mosin bayonet to mosin barrels
         this.itemDB()["5ae09bff5acfc4001562219d"]._props.Slots[2]._props.filters[0].Filter.push("6783afddef9d6f5d579c43f1");
@@ -215,7 +215,7 @@ export class ItemsClass {
             this.globalDB().RestrictionsInRaid = [];
             this.globalDB().DiscardLimitsEnabled = false;
             // for (let item in this.itemDB()) {
-            //     if (this.itemDB()[item]?._props?.DiscardLimit !== undefined) {
+            //     if (this.itemDB()[item]?._props?.DiscardLimit != null) {
             //         this.itemDB()[item]._props.DiscardLimit = -1;
             //     }
             // }

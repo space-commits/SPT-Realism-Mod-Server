@@ -1,5 +1,5 @@
 import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
-import { ILogger } from "../../types/models/spt/utils/ILogger";
+import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { IInsuranceConfig } from "@spt/models/spt/config/IInsuranceConfig";
 import { InsuranceController } from "@spt/controllers/InsuranceController";
 import { IInsurance } from "@spt/models/eft/profile/ISptProfile";
@@ -82,7 +82,7 @@ export class InsuranceOverride extends InsuranceController {
         //replace therapist insurance return with cash
         if (insurance.traderId == theraId) {
             let itemsToDelete: IItem[] = [];
-            let totalInsurancePayout = 0;
+            let totalInsurancePayout = 100;
             let id = "";
             let parentId = "";
 
@@ -96,7 +96,6 @@ export class InsuranceOverride extends InsuranceController {
             });
 
             insurance.items = insurance.items.filter(item => !itemsToDelete.includes(item));
-
             let item: IItem = {
                 "_tpl": "5449016a4bdc2d6f028b456f",
                 "_id": id,

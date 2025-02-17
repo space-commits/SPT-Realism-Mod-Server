@@ -1,6 +1,6 @@
 import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
 import { IRepairConfig } from "@spt/models/spt/config/IRepairConfig";
-import { ILogger } from "../../types/models/spt/utils/ILogger";
+import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { ParentClasses } from "../utils/enums";
 import { ConfigChecker } from "../utils/utils";
 import { IConfig } from "@spt/models/eft/common/IGlobals";
@@ -33,7 +33,7 @@ export class WeaponsGlobals {
         this.globalDB().Overheat.MaxWearOnOverheat = 0.2;
         this.globalDB().Overheat.AutoshotChance = 0.5;
         this.globalDB().Overheat.AutoshotPossibilityDuration = 4;
-        this.globalDB().UncheckOnShot = false;
+        //this.globalDB().UncheckOnShot = false; this causes ammo count to always be known, don't remember why I changed it...
 
         for (let i in this.itemDB()) {
             let serverItem = this.itemDB()[i];
@@ -53,7 +53,7 @@ export class WeaponsGlobals {
                     serverItem._props.MinRepairDegradation = 0;
                     serverItem._props.MaxRepairDegradation = 0.04;
                     serverItem._props.MinRepairKitDegradation = 0;
-                    serverItem._props.MaxRepairKitDegradation = 0.01;
+                    serverItem._props.MaxRepairKitDegradation = 0.005;
                     if (serverItem._props.HeatFactorGun) serverItem._props.HeatFactorGun *= 1.125;
                     if (serverItem._props.CoolFactorGun) serverItem._props.CoolFactorGun *= 2;
                 }
