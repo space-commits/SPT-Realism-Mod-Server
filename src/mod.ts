@@ -209,7 +209,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         );
 
         dynamicRouter.registerDynamicRouter(
-            "realismGetDirectory",
+            "realismGetTemplateData",
             [
                 {
                     url: "/RealismMod/GetTemplateData",
@@ -219,7 +219,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             const data: { [key: string]: any } = await statHandler.processTemplateJson(true, path.join(__dirname, '..', 'db', 'templates'))
                             return jsonUtil.serialize(data);
                         } catch (e) {
-                            console.error("Realism: Failed to get server mod directory", e);
+                            console.error("Realism: Failed to get server template data", e);
                         }
                     }
                 }

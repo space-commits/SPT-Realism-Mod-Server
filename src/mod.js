@@ -121,7 +121,7 @@ class Main {
                 }
             }
         ], "RealismMod");
-        dynamicRouter.registerDynamicRouter("realismGetDirectory", [
+        dynamicRouter.registerDynamicRouter("realismTemplateData", [
             {
                 url: "/RealismMod/GetTemplateData",
                 action: async (url, info, sessionID, output) => {
@@ -131,7 +131,7 @@ class Main {
                         return jsonUtil.serialize(data);
                     }
                     catch (e) {
-                        console.error("Realism: Failed to get server mod directory", e);
+                        console.error("Realism: Failed to get server template data", e);
                     }
                 }
             }
