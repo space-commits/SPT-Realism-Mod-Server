@@ -395,8 +395,8 @@ class BotInvGen extends BotInventoryGenerator_1.BotInventoryGenerator {
         try {
             let shouldGetSecondary = false;
             if (botInventory.items != null) {
-                for (let i in botInventory.items) {
-                    let item = itemDb[botInventory.items[i]._tpl];
+                for (let inventoryItem of botInventory.items) {
+                    let item = itemDb[inventoryItem._tpl];
                     if (item != null && item?._parent != null && item?._parent === BaseClasses_1.BaseClasses.SNIPER_RIFLE) {
                         shouldGetSecondary = true;
                     }
@@ -768,14 +768,14 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
         const isHolsteredWeapon = (equipmentSlot.toLowerCase() === "holster" && tables.templates.items[weaponTpl]._parent === BaseClasses_1.BaseClasses.PISTOL) || equipmentSlot.toLowerCase() === "secondprimaryweapon";
         const lightLaserActiveChance = myBotGenHelper.getLightOnChance(botRole);
         const isActive = isHolsteredWeapon ? false : (this.randomUtil.getChance100(lightLaserActiveChance));
-        for (let item in preset._items) {
-            let itemTemplate = tables.templates.items[preset._items[item]._tpl];
+        for (let presetItem of preset._items) {
+            let itemTemplate = tables.templates.items[presetItem._tpl];
             if (itemTemplate._parent === BaseClasses_1.BaseClasses.FLASHLIGHT || itemTemplate._parent === BaseClasses_1.BaseClasses.TACTICAL_COMBO || itemTemplate._parent === BaseClasses_1.BaseClasses.LIGHT_LASER_DESIGNATOR) {
-                if (preset._items[item].upd?.Light?.IsActive != null) {
-                    preset._items[item].upd.Light.IsActive = isActive;
+                if (presetItem.upd?.Light?.IsActive != null) {
+                    presetItem.upd.Light.IsActive = isActive;
                 }
                 else {
-                    preset._items[item].upd = {
+                    presetItem.upd = {
                         "Light": {
                             "IsActive": isActive,
                             "SelectedMode": 0

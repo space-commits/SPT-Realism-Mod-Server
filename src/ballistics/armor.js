@@ -2,6 +2,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Armor = void 0;
 const enums_1 = require("../utils/enums");
+const ArmorPlateTemplates = require("../../db/templates/gear/armorPlateTemplates.json");
+const ArmorComponentsTemplates = require("../../db/templates/gear/armorComponentsTemplates.json");
+const ArmorChestrigTemplates = require("../../db/templates/gear/armorChestrigTemplates.json");
+const HelmetTemplates = require("../../db/templates/gear/helmetTemplates.json");
+const ArmorVestsTemplates = require("../../db/templates/gear/armorVestsTemplates.json");
+const ArmorMasksTemplates = require("../../db/templates/gear/armorMasksTemplates.json");
 const validHelmetSlots = [
     "helmet_top",
     "helmet_back",
@@ -186,9 +192,9 @@ class Armor {
         for (let presetId in this.tables.globals.ItemPresets) {
             let preset = this.tables.globals.ItemPresets[presetId];
             if (preset._items.length > 0 && preset._items[0]._tpl === carrierId) {
-                for (let slot in preset._items) {
-                    if (preset._items[slot]?.slotId && (preset._items[slot].slotId.toLowerCase().includes("front_plate") || preset._items[slot].slotId.toLowerCase().includes("back_plate"))) {
-                        preset._items[slot]._tpl = newPlateId;
+                for (let slot of preset._items) {
+                    if (slot?.slotId && (slot.slotId.toLowerCase().includes("front_plate") || slot.slotId.toLowerCase().includes("back_plate"))) {
+                        slot._tpl = newPlateId;
                     }
                 }
             }

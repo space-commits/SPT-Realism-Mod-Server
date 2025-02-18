@@ -423,9 +423,8 @@ class BotLoader {
         }
     }
     setBotHPHelper(botArr) {
-        for (let bot in botArr) {
-            for (let hpSet in botArr[bot].health.BodyParts) {
-                let botPartSet = botArr[bot].health.BodyParts[hpSet];
+        for (let bot of botArr) {
+            for (let botPartSet of bot.health.BodyParts) {
                 for (let part in botPartSet) {
                     for (let tempPart in botHealth.health.BodyParts[0]) {
                         if (part === tempPart) {
@@ -435,7 +434,7 @@ class BotLoader {
                     }
                 }
             }
-            botArr[bot].health.Temperature = botHealth.health.Temperature;
+            bot.health.Temperature = botHealth.health.Temperature;
         }
     }
     setBotHPFromArr(botArr, healthObj) {
@@ -469,9 +468,8 @@ class BotLoader {
     }
     //the devil himself
     botHPMultiHelper(botArr, multi) {
-        for (let bot in botArr) {
-            for (let hpSet in botArr[bot].health.BodyParts) {
-                let botPartSet = botArr[bot].health.BodyParts[hpSet];
+        for (let bot of botArr) {
+            for (let botPartSet of bot.health.BodyParts) {
                 for (let part in botPartSet) {
                     botPartSet[part].min = Math.round(botPartSet[part].min * multi);
                     botPartSet[part].max = Math.round(botPartSet[part].max * multi);

@@ -121,7 +121,7 @@ class Main {
                 }
             }
         ], "RealismMod");
-        dynamicRouter.registerDynamicRouter("realismTemplateData", [
+        dynamicRouter.registerDynamicRouter("realismGetTemplateData", [
             {
                 url: "/RealismMod/GetTemplateData",
                 action: async (url, info, sessionID, output) => {
@@ -309,8 +309,8 @@ class Main {
                         }
                         adjustedTradersOnStart = true;
                         const traders = ragfairServer.getUpdateableTraders();
-                        for (let traderID in traders) {
-                            ragfairOfferGenerator.generateFleaOffersForTrader(traders[traderID]);
+                        for (let traderID of traders) {
+                            ragfairOfferGenerator.generateFleaOffersForTrader(traderID);
                         }
                         if (modConfig.tiered_flea == true) {
                             tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, utils_1.ProfileTracker.averagePlayerLevel);
@@ -590,6 +590,7 @@ class Main {
         const itemCloning = new item_cloning_1.ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const statHandler = json_handler_1.ItemStatHandler.getInstance(tables, logger, hashUtil);
         const descGen = new description_gen_1.DescriptionGen(tables, modConfig, logger, statHandler);
+        const handbookHelper = container.resolve("HandbookHelper");
         //Remember to back up json data before using this, and make sure it isn't overriding existing json objects
         // jsonGen.attTemplatesCodeGen();
         // jsonGen.weapTemplatesCodeGen();
@@ -662,7 +663,6 @@ class Main {
         botLoader.botHpMulti();
         fleaChangesPostDB.loadFleaGlobal(); //has to run post db load, otherwise item templates are undefined 
         fleaChangesPreDB.loadFleaConfig(); //probably redundant, but just in case
-        traders.loadTraderRepairs();
         // if (modConfig.headset_changes) {
         //     gear.loadHeadsetTweaks();
         // }
@@ -680,13 +680,16 @@ class Main {
             attachBase.loadAttRequirements();
         }
         if (modConfig.trader_refresh_time > 0) {
-            traders.loadTraderRefreshTimes();
+            traders.setTraderRefreshTimes();
         }
         itemsClass.loadItemBlacklists();
         itemsClass.loadItemsRestrictions();
         player.loadPlayerStats();
         player.playerProfiles(jsonUtil);
         weaponsGlobals.loadGlobalWeps();
+        traders.loadTraderRepairs();
+        if (modConfig.realistic_ballistics)
+            traders.adjustArmorHandbookPrices();
         //have to run this async to ensure correct load order
         (async () => {
             if (modConfig.realistic_ballistics == true) {
@@ -764,8 +767,7 @@ class Main {
         let lootXp = 0;
         if (exitStatus !== ExitStatis_1.ExitStatus.KILLED && exitStatus !== ExitStatis_1.ExitStatus.MISSINGINACTION) {
             const counters = pmcData.Stats.Eft.OverallCounters.Items;
-            for (const i in counters) {
-                const counter = counters[i];
+            for (const counter of counters) {
                 if (counter.Key.includes("ExpLooting")) {
                     lootXp += Math.min(counter.Value, 1000);
                 }

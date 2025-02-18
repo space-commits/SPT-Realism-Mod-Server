@@ -146,7 +146,7 @@ class ItemStatHandler {
             serverItem._props.armorClass = 1;
             serverItem._props.armorColliders = ["Eyes", "HeadCommon", "ParietalHead", "Jaw"];
             serverItem._props.MaxDurability = 25;
-            serverItem._props.RepairCost = 200;
+            serverItem._props.RepairCost = 269;
             serverItem._props.Durability = serverItem._props.MaxDurability;
             if (modConfig.enable_hazard_zones) {
                 this.addGasFilterSlot(serverItem);

@@ -136,7 +136,12 @@
                 "675ceb83e25d80bc676e15a6": 1
             },
             "Scabbard": {},
-            "ArmBand": {},
+            "ArmBand": {
+                "672e2e75a16c1d2034c384cf": 1,
+                "672e2e750ea81b3b93b943ac": 1,
+                "672e2e75a26efb53bc703d45": 1,
+                "672e2e751ff683e9432cb5af": 1
+            },
             "Backpack": {},
             "Earpiece": {},
             "Eyewear": {},
@@ -184,7 +189,12 @@
             "Holster": {}
         },
         "Scabbard": {},
-        "ArmBand": {},
+        "ArmBand": {
+            "672e2e75a16c1d2034c384cf": 1,
+            "672e2e750ea81b3b93b943ac": 1,
+            "672e2e75a26efb53bc703d45": 1,
+            "672e2e751ff683e9432cb5af": 1
+        },
         "Backpack": {},
         "Earpiece": {},
         "Eyewear": {},

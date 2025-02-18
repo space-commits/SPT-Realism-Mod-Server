@@ -34,8 +34,7 @@ export class Spawns {
         for (const i in this.mapDB) {
             const mapBase: ILocationBase = this.mapDB[i]?.base;
             if (mapBase == null || mapBase?.BossLocationSpawn == null) continue;
-            for (const k in mapBase.BossLocationSpawn) {
-                const bossSpawnLocation = mapBase.BossLocationSpawn[k];
+            for (const bossSpawnLocation of mapBase.BossLocationSpawn) {
                 let chance = 0;
                 if (i === "lighthouse" || i === "laboratory") continue;
                 if (bossSpawnLocation?.TriggerId != null && bossSpawnLocation?.TriggerId !== "") {

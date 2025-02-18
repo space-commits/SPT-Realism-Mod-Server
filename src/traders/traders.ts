@@ -18,6 +18,9 @@ import { IPmcData } from "@spt/models/eft/common/IPmcData";
 import { LogTextColor } from "@spt/models/spt/logging/LogTextColor";
 import { IInsuranceConfig } from "@spt/models/spt/config/IInsuranceConfig";
 import { StaticArrays } from "../utils/arrays";
+import { HandbookHelper } from "@spt/helpers/HandbookHelper";
+import { IItemConfig } from "@spt/models/spt/config/IItemConfig";
+import { IHandbookItem } from "@spt/models/eft/common/tables/IHandbookBase";
 
 const modConfig = require("../../config/config.json");
 
@@ -241,10 +244,52 @@ export class Traders {
         }
     }
 
-    public loadTraderRefreshTimes() {
+    public setTraderRefreshTimes() {
         for (let trader in this.traderConf.updateTime) {
             this.traderConf.updateTime[trader].seconds.min = modConfig.trader_refresh_time;
             this.traderConf.updateTime[trader].seconds.max = modConfig.trader_refresh_time * 1.5;
+        }
+    }
+
+    public adjustArmorHandbookPrices() {
+        const templateFiles = [
+            ArmorComponentsTemplates,
+            ArmorMasksTemplates,
+            ArmorPlateTemplates,
+            ArmorVestsTemplates,
+            ArmorChestrigTemplates,
+            HelmetTemplates
+        ];
+
+        const handbookMap = new Map(this.tables.templates.handbook.Items.map(obj => [obj.Id, obj]));
+
+        for (const templateFile of templateFiles) {
+            for (const i in templateFile) {
+                const templateItem = templateFile[i];
+                this.updateHandbookPrice(templateItem, handbookMap);
+            }
+        }
+    }
+
+    private updateHandbookPrice(templateItem: any,  handbookMap: Map<string, IHandbookItem>){
+        if (!templateItem?.Price || templateItem.Price <= 0) return;
+        const handbookItem = handbookMap.get(templateItem.ItemID);
+        if (handbookItem) {
+            handbookItem.Price = Math.round(templateItem.Price * 0.7);
+            this.adjustBuiltInArmorPrices(templateItem.ItemID, handbookMap);
+        }
+    }
+
+    //we need to set the price of imbeded armor items to 1 (0 means it can't be sold)
+    private adjustBuiltInArmorPrices(tempalteId: string, handbookMap: Map<string, IHandbookItem>) {
+        const serverItem = this.itemDB()[tempalteId];
+        for (const slot of serverItem._props.Slots) {
+            const filter = slot._props.filters[0];
+            for (const filterItem of filter.Filter) {
+                if (this.itemDB()[filterItem]._parent == ParentClasses.BUILT_IN_ARMOR) {
+                    handbookMap.get(filterItem).Price = 1;
+                }
+            }
         }
     }
 
@@ -324,7 +369,7 @@ export class Traders {
                         if (childTemplate == null || childTemplate?.Price == null || childTemplate.Price == 0) continue;
                         totalPrice += childTemplate.Price;
                     }
-                    const conversionRate = barterItem._tpl == "5696686a4bdc2da3298b456a" ? 108 :  barterItem._tpl == "5696686a4bdc2da3298b456a"  ? 117 : 1;
+                    const conversionRate = barterItem._tpl == "5696686a4bdc2da3298b456a" ? 108 : barterItem._tpl == "5696686a4bdc2da3298b456a" ? 117 : 1;
                     barterItem.count = Math.round(totalPrice / conversionRate);
                 }
             }
@@ -629,7 +674,6 @@ export class Traders {
         }
 
         this.assortPusherHelper(assort, assortId, price, saleCurrency, loyalLvl, itemId, buyRestriction, priceMulti);
-
     }
 
     private handBookPriceLookup(itemId: string): number {

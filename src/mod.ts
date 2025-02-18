@@ -124,6 +124,7 @@ import { InventoryHelper } from "@spt/helpers/InventoryHelper";
 import { IUpd } from "@spt/models/eft/common/tables/IItem";
 import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 import { spawn } from "child_process";
+import { HandbookHelper } from "@spt/helpers/HandbookHelper";
 
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");
@@ -441,8 +442,8 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             adjustedTradersOnStart = true;
 
                             const traders: string[] = (ragfairServer as any).getUpdateableTraders();
-                            for (let traderID in traders) {
-                                ragfairOfferGenerator.generateFleaOffersForTrader(traders[traderID]);
+                            for (let traderID of traders) {
+                                ragfairOfferGenerator.generateFleaOffersForTrader(traderID);
                             }
 
                             if (modConfig.tiered_flea == true) {
@@ -783,7 +784,8 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         const itemCloning = new ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const statHandler = ItemStatHandler.getInstance(tables, logger, hashUtil);
         const descGen = new DescriptionGen(tables, modConfig, logger, statHandler);
-
+        const handbookHelper = container.resolve<HandbookHelper>("HandbookHelper");
+        
         //Remember to back up json data before using this, and make sure it isn't overriding existing json objects
         // jsonGen.attTemplatesCodeGen();
         // jsonGen.weapTemplatesCodeGen();
@@ -877,8 +879,6 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         fleaChangesPostDB.loadFleaGlobal(); //has to run post db load, otherwise item templates are undefined 
         fleaChangesPreDB.loadFleaConfig(); //probably redundant, but just in case
 
-        traders.loadTraderRepairs();
-
         // if (modConfig.headset_changes) {
         //     gear.loadHeadsetTweaks();
         // }
@@ -900,7 +900,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         }
 
         if (modConfig.trader_refresh_time > 0) {
-            traders.loadTraderRefreshTimes();
+            traders.setTraderRefreshTimes();
         }
 
         itemsClass.loadItemBlacklists();
@@ -908,6 +908,11 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         player.loadPlayerStats();
         player.playerProfiles(jsonUtil);
         weaponsGlobals.loadGlobalWeps();
+
+
+        traders.loadTraderRepairs();
+        if(modConfig.realistic_ballistics) traders.adjustArmorHandbookPrices();
+
         //have to run this async to ensure correct load order
         (async () => {
 
@@ -936,7 +941,6 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             }
 
             gear.loadGearConflicts();
-
             statHandler.modifiedItems = {}; //empty temp template object
         })();
     }
@@ -1001,8 +1005,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         let lootXp = 0;
         if (exitStatus !== ExitStatus.KILLED && exitStatus !== ExitStatus.MISSINGINACTION) {
             const counters = pmcData.Stats.Eft.OverallCounters.Items;
-            for (const i in counters) {
-                const counter = counters[i];
+            for (const counter of counters) {
                 if (counter.Key.includes("ExpLooting")) {
                     lootXp += Math.min(counter.Value, 1000);
                 }

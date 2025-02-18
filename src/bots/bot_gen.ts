@@ -493,8 +493,8 @@ export class BotInvGen extends BotInventoryGenerator {
 
             let shouldGetSecondary = false;
             if (botInventory.items != null) {
-                for (let i in botInventory.items) {
-                    let item = itemDb[botInventory.items[i]._tpl];
+                for (let inventoryItem of botInventory.items) {
+                    let item = itemDb[inventoryItem._tpl];
                     if (item != null && item?._parent != null && item?._parent === BaseClasses.SNIPER_RIFLE) {
                         shouldGetSecondary = true;
                     }
@@ -989,14 +989,14 @@ export class BotWepGen extends BotWeaponGenerator {
         const lightLaserActiveChance = myBotGenHelper.getLightOnChance(botRole);
         const isActive: boolean = isHolsteredWeapon ? false : (this.randomUtil.getChance100(lightLaserActiveChance));
 
-        for (let item in preset._items) {
-            let itemTemplate = tables.templates.items[preset._items[item]._tpl];
+        for (let presetItem of preset._items) {
+            let itemTemplate = tables.templates.items[presetItem._tpl];
             if (itemTemplate._parent === BaseClasses.FLASHLIGHT || itemTemplate._parent === BaseClasses.TACTICAL_COMBO || itemTemplate._parent === BaseClasses.LIGHT_LASER_DESIGNATOR) {
-                if (preset._items[item].upd?.Light?.IsActive != null) {
-                    preset._items[item].upd.Light.IsActive = isActive;
+                if (presetItem.upd?.Light?.IsActive != null) {
+                    presetItem.upd.Light.IsActive = isActive;
                 }
                 else {
-                    preset._items[item].upd = {
+                    presetItem.upd = {
                         "Light": {
                             "IsActive": isActive,
                             "SelectedMode": 0
