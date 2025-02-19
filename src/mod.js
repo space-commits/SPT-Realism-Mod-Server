@@ -406,7 +406,7 @@ class Main {
                         const baseTime = weatherGenerator.calculateGameTime({ acceleration: 0, time: "", date: "", weather: undefined, season: 1 }).time; //apparently regenerates weather?
                         utils_1.RaidInfoTracker.mapName = matchInfo.location.toLowerCase();
                         let realTime = "";
-                        let mapType = "";
+                        let mapType;
                         //update global player level
                         this.checkPlayerLevel(sessionID, profileData, pmcData, logger);
                         if (matchInfo.timeVariant === "PAST") {
@@ -417,13 +417,13 @@ class Main {
                         }
                         utils_1.RaidInfoTracker.isNight = utils.isNight(realTime, matchInfo.location);
                         if (arrays_1.StaticArrays.cqbMaps.includes(utils_1.RaidInfoTracker.mapName)) {
-                            mapType = "cqb";
+                            mapType = utils_1.MapType.CQB;
                         }
                         if (arrays_1.StaticArrays.outdoorMaps.includes(utils_1.RaidInfoTracker.mapName)) {
-                            mapType = "outdoor";
+                            mapType = utils_1.MapType.Outdoor;
                         }
                         if (arrays_1.StaticArrays.urbanMaps.includes(utils_1.RaidInfoTracker.mapName)) {
-                            mapType = "urban";
+                            mapType = utils_1.MapType.Urban;
                         }
                         utils_1.RaidInfoTracker.mapType = mapType;
                         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
@@ -904,13 +904,13 @@ class Main {
                 //bad omens part 1
                 if (q.qid === "6702afe9504c9aca4ed75d9a") {
                     if (isStarted || isCompleted) {
-                        baseGasChance += 100;
+                        baseGasChance += 50;
                     }
                 }
                 //bad omens part 2
                 if (q.qid === "6702b0a1b9fb4619debd0697") {
                     if (isStarted || isCompleted) {
-                        baseGasChance += 100;
+                        baseGasChance += 50;
                     }
                 }
                 //bad omens part 3
@@ -922,13 +922,13 @@ class Main {
                 //former patients
                 if (q.qid === "6702b8b3c0f2f525d988e428") {
                     if (isStarted || isCompleted) {
-                        baseGasChance += 200;
+                        baseGasChance += 250;
                     }
                 }
                 //critical mass
                 if (q.qid === "670ae811bd43cbf026768126") {
                     if (isStarted || isCompleted) {
-                        baseGasChance += 100;
+                        baseGasChance += 150;
                     }
                 }
                 //do no harm

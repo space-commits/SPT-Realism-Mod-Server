@@ -26,7 +26,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.BotTierTracker = exports.RaidInfoTracker = exports.ConfigChecker = exports.ProfileTracker = exports.ModTracker = exports.Utils = void 0;
+exports.BotTierTracker = exports.RaidInfoTracker = exports.MapType = exports.ConfigChecker = exports.ProfileTracker = exports.ModTracker = exports.Utils = void 0;
 const path = __importStar(require("path"));
 const node_crypto_1 = __importDefault(require("node:crypto"));
 const fs = require('fs');
@@ -180,9 +180,15 @@ class ConfigChecker {
     static dllIsPresent = false;
 }
 exports.ConfigChecker = ConfigChecker;
+var MapType;
+(function (MapType) {
+    MapType["Urban"] = "urban";
+    MapType["Outdoor"] = "uutdoor";
+    MapType["CQB"] = "cqb";
+})(MapType || (exports.MapType = MapType = {}));
 class RaidInfoTracker {
     static isNight = false;
-    static mapType = "";
+    static mapType = MapType.Urban;
     static mapName = "";
     static generatedBotsCount = 0;
 }

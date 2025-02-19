@@ -178,9 +178,15 @@ export class ConfigChecker {
     static dllIsPresent: boolean = false;
 }
 
+export enum MapType {
+    Urban = "urban",
+    Outdoor = "uutdoor",
+    CQB = "cqb",
+}
+
 export class RaidInfoTracker {
     static isNight: boolean = false;
-    static mapType: string = "";
+    static mapType: MapType = MapType.Urban;
     static mapName: string = "";
     static generatedBotsCount: number = 0;
     // static activeRaids: RaidInfo[] = [];

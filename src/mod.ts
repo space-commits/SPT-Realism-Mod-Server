@@ -91,7 +91,7 @@ import { ExitStatus } from "@spt/models/enums/ExitStatis";
 
 import { AttachmentBase } from "./weapons/attatchment_base";
 import { FleaChangesPreDBLoad, TieredFlea, FleaChangesPostDBLoad } from "./traders/fleamarket";
-import { ConfigChecker, Utils, ProfileTracker, RaidInfoTracker, ModTracker } from "./utils/utils"
+import { ConfigChecker, Utils, ProfileTracker, RaidInfoTracker, ModTracker, MapType } from "./utils/utils"
 import { BotArrays, StaticArrays } from "./utils/arrays"
 import { Consumables } from "./items/meds";
 import { Player } from "./player/player"
@@ -568,7 +568,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             const baseTime = weatherGenerator.calculateGameTime({ acceleration: 0, time: "", date: "", weather: undefined, season: 1 }).time; //apparently regenerates weather?
                             RaidInfoTracker.mapName = matchInfo.location.toLowerCase();
                             let realTime = "";
-                            let mapType = "";
+                            let mapType: MapType;
 
                             //update global player level
                             this.checkPlayerLevel(sessionID, profileData, pmcData, logger);
@@ -582,13 +582,13 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             RaidInfoTracker.isNight = utils.isNight(realTime, matchInfo.location);
 
                             if (StaticArrays.cqbMaps.includes(RaidInfoTracker.mapName)) {
-                                mapType = "cqb";
+                                mapType = MapType.CQB;
                             }
                             if (StaticArrays.outdoorMaps.includes(RaidInfoTracker.mapName)) {
-                                mapType = "outdoor";
+                                mapType =  MapType.Outdoor;
                             }
                             if (StaticArrays.urbanMaps.includes(RaidInfoTracker.mapName)) {
-                                mapType = "urban";
+                                mapType = MapType.Urban;
                             }
                             RaidInfoTracker.mapType = mapType;
 
@@ -1158,13 +1158,13 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                 //bad omens part 1
                 if (q.qid === "6702afe9504c9aca4ed75d9a") {
                     if (isStarted || isCompleted) {
-                        baseGasChance += 100;
+                        baseGasChance += 50;
                     }
                 }
                 //bad omens part 2
                 if (q.qid === "6702b0a1b9fb4619debd0697") {
                     if (isStarted || isCompleted) {
-                        baseGasChance += 100;
+                        baseGasChance += 50;
                     }
                 }
                 //bad omens part 3
@@ -1176,13 +1176,13 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                 //former patients
                 if (q.qid === "6702b8b3c0f2f525d988e428") {
                     if (isStarted || isCompleted) {
-                        baseGasChance += 200;
+                        baseGasChance += 250;
                     }
                 }
                 //critical mass
                 if (q.qid === "670ae811bd43cbf026768126") {
                     if (isStarted || isCompleted) {
-                        baseGasChance += 100;
+                        baseGasChance += 150;
                     }
                 }
                 //do no harm
