@@ -144,33 +144,38 @@ export class Player {
 
 
     public loadPlayerStats() {
-        if (this.modConfig.enable_stances == true || this.modConfig.movement_changes == true || this.modConfig.recoil_attachment_overhaul) {
-            this.globalDB().Stamina.OxygenCapacity = 525;
-            this.globalDB().Stamina.OxygenRestoration = 8.4;
+        const stamina = this.globalDB().Stamina;
+        const inertia = this.globalDB().Inertia;
+        const health = this.globalDB().Health;
+        const effects = health.Effects;
 
-            this.globalDB().Stamina.HandsRestoration = 3;
-            this.globalDB().Stamina.AimDrainRate = 0.3;
-            this.globalDB().Stamina.AimConsumptionByPose["x"] = 0.05;
-            this.globalDB().Stamina.AimConsumptionByPose["y"] = 0.35;
-            this.globalDB().Stamina.AimConsumptionByPose["z"] = 1; //standing
+        if (this.modConfig.enable_stances == true || this.modConfig.movement_changes == true || this.modConfig.recoil_attachment_overhaul) {
+            stamina.WeaponFastSwitchConsumption = 0.5;
+            stamina.OxygenCapacity = 525;
+            stamina.OxygenRestoration = 8.4;
+            stamina.HandsRestoration = 3;
+            stamina.AimDrainRate = 0.3;
+            stamina.AimConsumptionByPose["x"] = 0.05;
+            stamina.AimConsumptionByPose["y"] = 0.35;
+            stamina.AimConsumptionByPose["z"] = 1; //standing
 
             this.globalDB().AimPunchMagnitude = 11;
         }
 
         if (this.modConfig.weight_limits_changes == true) {
-            this.globalDB().Stamina.WalkOverweightLimits["x"] = 54;
-            this.globalDB().Stamina.WalkOverweightLimits["y"] = 75;
-            this.globalDB().Stamina.WalkSpeedOverweightLimits["x"] = 32;
-            this.globalDB().Stamina.WalkSpeedOverweightLimits["y"] = 79;
-            this.globalDB().Stamina.BaseOverweightLimits["x"] = 24;
-            this.globalDB().Stamina.BaseOverweightLimits["y"] = 65;
-            this.globalDB().Stamina.SprintOverweightLimits["x"] = 16;
-            this.globalDB().Stamina.SprintOverweightLimits["y"] = 30;
+            stamina.WalkOverweightLimits["x"] = 54;
+            stamina.WalkOverweightLimits["y"] = 75;
+            stamina.WalkSpeedOverweightLimits["x"] = 32;
+            stamina.WalkSpeedOverweightLimits["y"] = 79;
+            stamina.BaseOverweightLimits["x"] = 24;
+            stamina.BaseOverweightLimits["y"] = 65;
+            stamina.SprintOverweightLimits["x"] = 16;
+            stamina.SprintOverweightLimits["y"] = 30;
         }
 
         if (this.modConfig.enable_stances == true) {
-            this.globalDB().Stamina.Capacity = 100;
-            this.globalDB().Stamina.BaseRestorationRate = 7;
+            stamina.Capacity = 100;
+            stamina.BaseRestorationRate = 7;
         }
 
         if (this.modConfig.movement_changes == true) {
@@ -180,67 +185,67 @@ export class Player {
             this.globalDB().SprintSpeed["x"] = 0.05;
             this.globalDB().SprintSpeed["y"] = 0.49;
 
-            this.globalDB().Stamina.SprintDrainRate = 4.65;
+            stamina.SprintDrainRate = 4.65;
 
-            this.globalDB().Stamina.PoseLevelIncreaseSpeed["x"] = 1.37; //up lightweight
-            this.globalDB().Stamina.PoseLevelDecreaseSpeed["x"] = 2.6; // down lightweight
+            stamina.PoseLevelIncreaseSpeed["x"] = 1.37; //up lightweight
+            stamina.PoseLevelDecreaseSpeed["x"] = 2.6; // down lightweight
 
-            this.globalDB().Stamina.PoseLevelIncreaseSpeed["y"] = 0.4; // up heavyweight
-            this.globalDB().Stamina.PoseLevelDecreaseSpeed["y"] = 1.3;  //down heavyweight
+            stamina.PoseLevelIncreaseSpeed["y"] = 0.4; // up heavyweight
+            stamina.PoseLevelDecreaseSpeed["y"] = 1.3;  //down heavyweight
 
-            this.globalDB().Stamina.CrouchConsumption["x"] = 3.5;
-            this.globalDB().Stamina.CrouchConsumption["y"] = 5;
+            stamina.CrouchConsumption["x"] = 3.5;
+            stamina.CrouchConsumption["y"] = 5;
 
-            this.globalDB().Stamina.SprintAccelerationLowerLimit = 0.2;
-            this.globalDB().Stamina.SprintSpeedLowerLimit = 0.02;
+            stamina.SprintAccelerationLowerLimit = 0.2;
+            stamina.SprintSpeedLowerLimit = 0.02;
 
-            this.globalDB().Inertia.SpeedLimitAfterFallMin["x"] = 0.135;
-            this.globalDB().Inertia.SpeedLimitAfterFallMin["y"] = 0.45;
+            inertia.SpeedLimitAfterFallMin["x"] = 0.135;
+            inertia.SpeedLimitAfterFallMin["y"] = 0.45;
 
-            this.globalDB().Inertia.SpeedLimitAfterFallMax["x"] = 1.8;
+            inertia.SpeedLimitAfterFallMax["x"] = 1.8;
 
-            this.globalDB().Inertia.SpeedLimitDurationMin["x"] = 0.49;
-            this.globalDB().Inertia.SpeedLimitDurationMin["y"] = 0.82;
+            inertia.SpeedLimitDurationMin["x"] = 0.49;
+            inertia.SpeedLimitDurationMin["y"] = 0.82;
 
-            this.globalDB().Inertia.SpeedLimitDurationMax["x"] = 4;
-            this.globalDB().Inertia.SpeedLimitDurationMax["y"] = 2.4;
+            inertia.SpeedLimitDurationMax["x"] = 4;
+            inertia.SpeedLimitDurationMax["y"] = 2.4;
 
-            this.globalDB().Inertia.SpeedInertiaAfterJump["x"] = 0.98;
-            this.globalDB().Inertia.SpeedInertiaAfterJump["y"] = 1.47;
+            inertia.SpeedInertiaAfterJump["x"] = 0.98;
+            inertia.SpeedInertiaAfterJump["y"] = 1.47;
 
-            this.globalDB().Inertia.BaseJumpPenalty = 0.55;
-            this.globalDB().Inertia.BaseJumpPenaltyDuration = 0.75;
+            inertia.BaseJumpPenalty = 0.55;
+            inertia.BaseJumpPenaltyDuration = 0.75;
 
-            this.globalDB().Inertia.SprintBrakeInertia["y"] = 110;
+            inertia.SprintBrakeInertia["y"] = 110;
 
-            this.globalDB().Inertia.SprintTransitionMotionPreservation["x"] = 0.84;
-            this.globalDB().Inertia.SprintTransitionMotionPreservation["y"] = 1.09;
+            inertia.SprintTransitionMotionPreservation["x"] = 0.84;
+            inertia.SprintTransitionMotionPreservation["y"] = 1.09;
 
-            this.globalDB().Inertia.PreSprintAccelerationLimits["x"] = 2.52;
-            this.globalDB().Inertia.PreSprintAccelerationLimits["y"] = 1.43;
+            inertia.PreSprintAccelerationLimits["x"] = 2.52;
+            inertia.PreSprintAccelerationLimits["y"] = 1.43;
 
-            this.globalDB().Inertia.SprintAccelerationLimits["x"] = 0.38;
+            inertia.SprintAccelerationLimits["x"] = 0.38;
 
-            this.globalDB().Inertia.SideTime["x"] = 1.14;
-            this.globalDB().Inertia.SideTime["y"] = 0.57;
-            this.globalDB().Inertia.MinDirectionBlendTime = 0.19;
-            this.globalDB().Inertia.WalkInertia["x"] = 0.04;
-            this.globalDB().Inertia.WalkInertia["y"] = 0.39;
+            inertia.SideTime["x"] = 1.14;
+            inertia.SideTime["y"] = 0.57;
+            inertia.MinDirectionBlendTime = 0.19;
+            inertia.WalkInertia["x"] = 0.04;
+            inertia.WalkInertia["y"] = 0.39;
 
-            this.globalDB().Inertia.TiltInertiaMaxSpeed["x"] = 1.08;
-            this.globalDB().Inertia.TiltInertiaMaxSpeed["y"] = 0.9;
-            this.globalDB().Inertia.TiltMaxSideBackSpeed["x"] = 2.16;
-            this.globalDB().Inertia.TiltMaxSideBackSpeed["y"] = 1.44;
-            this.globalDB().Inertia.TiltStartSideBackSpeed["x"] = 1.44;
-            this.globalDB().Inertia.TiltStartSideBackSpeed["y"] = 0.9;
-            this.globalDB().Inertia.InertiaTiltCurveMin["y"] = 0.396;
-            this.globalDB().Inertia.InertiaTiltCurveMax["y"] = 0.09;
+            inertia.TiltInertiaMaxSpeed["x"] = 1.08;
+            inertia.TiltInertiaMaxSpeed["y"] = 0.9;
+            inertia.TiltMaxSideBackSpeed["x"] = 2.16;
+            inertia.TiltMaxSideBackSpeed["y"] = 1.44;
+            inertia.TiltStartSideBackSpeed["x"] = 1.44;
+            inertia.TiltStartSideBackSpeed["y"] = 0.9;
+            inertia.InertiaTiltCurveMin["y"] = 0.396;
+            inertia.InertiaTiltCurveMax["y"] = 0.09;
 
-            this.globalDB().Inertia.InertiaBackwardCoef["x"] = 0.8;
-            this.globalDB().Inertia.InertiaBackwardCoef["y"] = 0.6;
+            inertia.InertiaBackwardCoef["x"] = 0.8;
+            inertia.InertiaBackwardCoef["y"] = 0.6;
 
-            this.globalDB().Inertia.InertiaLimits["y"] = 70;
-            this.globalDB().Inertia.InertiaLimits["z"] = 0.49; // set this lower to allow max weight to reach a higher max speed and have acceleration
+            inertia.InertiaLimits["y"] = 70;
+            inertia.InertiaLimits["z"] = 0.49; // set this lower to allow max weight to reach a higher max speed and have acceleration
 
             if (this.modConfig.logEverything == true) {
                 this.logger.info("Movement Changes Enabled");
@@ -248,28 +253,28 @@ export class Player {
         }
 
         if (this.modConfig.fall_damage_changes == true) {
-            this.globalDB().Health.Falling.DamagePerMeter = 10;
-            this.globalDB().Health.Falling.SafeHeight = 2.2;
-            this.globalDB().Stamina.SafeHeightOverweight = 2;
+            health.Falling.DamagePerMeter = 10;
+            health.Falling.SafeHeight = 2.2;
+            stamina.SafeHeightOverweight = 2;
         }
 
 
         if (this.modConfig.no_fall_damage == true) {
-            this.globalDB().Health.Falling.DamagePerMeter = 0;
-            this.globalDB().Health.Falling.SafeHeight = 1000;
-            this.globalDB().Stamina.SafeHeightOverweight = 10000;
+            health.Falling.DamagePerMeter = 0;
+            health.Falling.SafeHeight = 1000;
+            stamina.SafeHeightOverweight = 10000;
         }
 
 
         if (this.modConfig.med_changes == true) {
-            this.globalDB().Health.Effects.Existence.EnergyDamage = 1.12;
-            this.globalDB().Health.Effects.Exhaustion.Damage = 0.25;
-            this.globalDB().Health.Effects.Exhaustion.DefaultDelay = 60;
+            health.Effects.Existence.EnergyDamage = 1.12;
+            health.Effects.Exhaustion.Damage = 0.25;
+            health.Effects.Exhaustion.DefaultDelay = 60;
 
-            this.globalDB().Health.Effects.Existence.HydrationDamage = 1.5;
-            this.globalDB().Health.Effects.Dehydration.BleedingHealth = 0.2;
-            this.globalDB().Health.Effects.Dehydration.DamageOnStrongDehydration = 0.25;
-            this.globalDB().Health.Effects.Dehydration.DefaultDelay = 60;
+            health.Effects.Existence.HydrationDamage = 1.5;
+            health.Effects.Dehydration.BleedingHealth = 0.2;
+            health.Effects.Dehydration.DamageOnStrongDehydration = 0.25;
+            health.Effects.Dehydration.DefaultDelay = 60;
         }
 
 
@@ -281,30 +286,28 @@ export class Player {
         }
 
         if (this.modConfig.realistic_player_health == true) {
-
-            const health = this.globalDB().Health.Effects
             const mult = 1.136
 
-            health.Wound.WorkingTime = 3600;
-            this.debuffMul(health.Wound.ThresholdMin, mult);
-            this.debuffMul(health.Wound.ThresholdMax, mult);
+            effects.Wound.WorkingTime = 3600;
+            this.debuffMul(effects.Wound.ThresholdMin, mult);
+            this.debuffMul(effects.Wound.ThresholdMax, mult);
 
-            health.LightBleeding.HealthLoopTime = 8;
-            health.LightBleeding.DamageHealth = 0.65;
-            health.LightBleeding.DamageEnergy = 0.85;
+            effects.LightBleeding.HealthLoopTime = 8;
+            effects.LightBleeding.DamageHealth = 0.65;
+            effects.LightBleeding.DamageEnergy = 0.85;
 
-            health.HeavyBleeding.DamageHealth = 0.95;
-            health.HeavyBleeding.DamageEnergy = 2.25;
+            effects.HeavyBleeding.DamageHealth = 0.95;
+            effects.HeavyBleeding.DamageEnergy = 2.25;
 
-            this.globalDB().Health.Effects.Fracture.BulletHitProbability.Threshold /= mult
-            this.globalDB().Health.Effects.Fracture.BulletHitProbability.K *= Math.sqrt(mult)
+            effects.Fracture.BulletHitProbability.Threshold /= mult
+            effects.Fracture.BulletHitProbability.K *= Math.sqrt(mult)
 
-            this.debuffMul(health.Fracture.FallingProbability, 0.85);
-            this.debuffMul(health.HeavyBleeding.Probability, 1.55);
-            this.debuffMul(health.LightBleeding.Probability, 2.1);
-            this.debuffMul(health.Wound.ThresholdMax, mult);
-            this.debuffMul(health.Wound.ThresholdMin, mult);
-            this.debuffMul(health.LowEdgeHealth.StartCommonHealth, 1.2);
+            this.debuffMul(effects.Fracture.FallingProbability, 0.85);
+            this.debuffMul(effects.HeavyBleeding.Probability, 1.55);
+            this.debuffMul(effects.LightBleeding.Probability, 2.1);
+            this.debuffMul(effects.Wound.ThresholdMax, mult);
+            this.debuffMul(effects.Wound.ThresholdMin, mult);
+            this.debuffMul(effects.LowEdgeHealth.StartCommonHealth, 1.2);
         }
 
         if (this.modConfig.logEverything == true) {

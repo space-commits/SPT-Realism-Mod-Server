@@ -55,6 +55,7 @@ const ammo_1 = require("./ballistics/ammo");
 const armor_1 = require("./ballistics/armor");
 const path = __importStar(require("path"));
 const fs = __importStar(require("fs"));
+const instance_manager_1 = require("./instance_manager");
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");
 const medBuffs = require("../db/items/buffs.json");
@@ -96,6 +97,7 @@ class Main {
         const preSptModLoader = container.resolve("PreSptModLoader");
         const traderRefersh = new traders_1.TraderRefresh(logger, mathUtil, timeUtil, databaseService, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator, traderAssortService, localisationService, traderPurchasePefrsisterService, traderHelper, fenceService, configServer, cloner);
         const flea = new fleamarket_1.FleaChangesPreDBLoad(logger, fleaConf, modConfig);
+        const instanceManager = instance_manager_1.InstanceManager.getInstance();
         this.checkForMods(preSptModLoader, logger, modConfig);
         flea.loadFleaConfig();
         //way of checking if QB spawn system is active, and disabling certain aspects of Realism's spawn changes to compenstate
@@ -248,7 +250,7 @@ class Main {
         //         }
         //     }, { frequency: "Always" });
         // }
-        staticRouterModService.registerStaticRouter("Realism-CheckProfile", [
+        staticRouterModService.registerStaticRouter("Realism-OnValidate", [
             {
                 url: "/client/game/version/validate",
                 action: async (url, info, sessionID, output) => {
@@ -272,7 +274,7 @@ class Main {
                     const scavData = profileHelper.getScavProfile(sessionID);
                     const profileData = profileHelper.getFullProfile(sessionID);
                     try {
-                        this.checkPlayerLevel(sessionID, profileData, pmcData, logger, true);
+                        utils_1.ProfileTracker.checkLoggedInProfiles(pmcData, profileData, false);
                         if (modConfig.backup_profiles == true)
                             this.backupProfile(profileData, logger);
                         if (modConfig.enable_hazard_zones)
@@ -301,11 +303,8 @@ class Main {
                             }
                         }
                         if (adjustedTradersOnStart == false) {
-                            let pmcData = [];
-                            utils_1.ProfileTracker.profileIds.forEach(element => {
-                                pmcData.push(profileHelper.getPmcProfile(element));
-                            });
-                            randomizeTraderAssort.adjustTraderStockAtGameStart(pmcData);
+                            const profilesData = utils_1.ProfileTracker.getPmcProfileData(profileHelper);
+                            randomizeTraderAssort.adjustTraderStockAtGameStart(profilesData);
                         }
                         adjustedTradersOnStart = true;
                         const traders = ragfairServer.getUpdateableTraders();
@@ -334,20 +333,9 @@ class Main {
                 url: "/client/game/logout",
                 action: async (url, info, sessionID, output) => {
                     try {
-                        const profileHelper = container.resolve("ProfileHelper");
+                        const pmcData = profileHelper.getPmcProfile(sessionID);
                         const profileData = profileHelper.getFullProfile(sessionID);
-                        let playerCount = 0;
-                        let cumulativePlayerLevel = 0;
-                        delete utils_1.ProfileTracker.playerRecord[profileData.info.id];
-                        Object.values(utils_1.ProfileTracker.playerRecord).forEach(value => {
-                            const playerLevel = Number(value);
-                            if (!isNaN(playerLevel)) {
-                                cumulativePlayerLevel += playerLevel;
-                                playerCount += 1;
-                            }
-                        });
-                        utils_1.ProfileTracker.averagePlayerLevel = playerCount > 0 ? cumulativePlayerLevel / playerCount : 1;
-                        logger.logWithColor(`Realism Mod: Players in server ${playerCount}, average level: ${utils_1.ProfileTracker.averagePlayerLevel}`, LogTextColor_1.LogTextColor.GREEN);
+                        utils_1.ProfileTracker.checkLoggedInProfiles(pmcData, profileData, true);
                     }
                     catch (err) {
                         logger.error("Realism Mod: Error At Log Out: " + err);
@@ -408,7 +396,7 @@ class Main {
                         let realTime = "";
                         let mapType;
                         //update global player level
-                        this.checkPlayerLevel(sessionID, profileData, pmcData, logger);
+                        utils_1.ProfileTracker.checkLoggedInProfiles(pmcData, profileData, false);
                         if (matchInfo.timeVariant === "PAST") {
                             realTime = utils.getTime(baseTime, 12);
                         }
@@ -483,7 +471,7 @@ class Main {
                     try {
                         utils_1.RaidInfoTracker.generatedBotsCount = 0;
                         //update global player level
-                        this.checkPlayerLevel(sessionID, profileData, pmcData, logger);
+                        utils_1.ProfileTracker.checkLoggedInProfiles(pmcData, profileData, false);
                         if (modConfig.tiered_flea == true)
                             tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, utils_1.ProfileTracker.averagePlayerLevel);
                         if (modConfig.enable_hazard_zones)
@@ -896,7 +884,7 @@ class Main {
         seasonalevents_1.EventTracker.doExtraRaiderSpawns = false;
         seasonalevents_1.EventTracker.isPreExplosion = false;
         seasonalevents_1.EventTracker.endExplosionEvent = false;
-        let baseGasChance = seasonalevents_1.EventTracker.isHalloween ? 20 : 5;
+        let baseGasChance = seasonalevents_1.EventTracker.isHalloween ? 20 : 0;
         if (pmcData?.Quests != null) {
             pmcData.Quests.forEach(q => {
                 const isStarted = q.status === 2 || q.status === 3;
@@ -971,24 +959,6 @@ class Main {
         seasonalevents_1.EventTracker.doGasEvent = gasChance > utils.pickRandNumInRange(0, 1000);
         if (modConfig.logEverything)
             logger.warning("gas chance " + gasChance);
-    }
-    checkPlayerLevel(sessionID, profileData, pmcData, logger, shouldLog = false) {
-        let level = 1;
-        if (pmcData?.Info?.Level != null) {
-            level = pmcData.Info.Level;
-        }
-        let playerCount = 0;
-        let cumulativePlayerLevel = 0;
-        utils_1.ProfileTracker.playerRecord[profileData.info.id] = level;
-        Object.values(utils_1.ProfileTracker.playerRecord).forEach(value => {
-            cumulativePlayerLevel += value;
-            playerCount += 1;
-        });
-        utils_1.ProfileTracker.averagePlayerLevel = cumulativePlayerLevel / playerCount;
-        utils_1.ProfileTracker.profileIds.push(sessionID);
-        if (shouldLog) {
-            logger.logWithColor(`Realism Mod: Players in server ${playerCount}, average level: ${utils_1.ProfileTracker.averagePlayerLevel}`, LogTextColor_1.LogTextColor.GREEN);
-        }
     }
     checkProfile(pmcData, pmcEXP, utils, player, logger) {
         utils.correctItemResources(pmcData, pmcEXP, logger);

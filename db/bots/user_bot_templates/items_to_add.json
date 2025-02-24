@@ -7,15 +7,15 @@
             },
             "FirstPrimaryWeapon": {},
             "FirstPrimaryWeapon_urban": {
-                "669fca7f9ed4916116c76d5e": 1
+                "669fca7f9ed4916116c76d5e": 2
             },
             "FirstPrimaryWeapon_cqb": {
-                "669fca7f9ed4916116c76d5e": 1
+                "669fca7f9ed4916116c76d5e": 3
             },
             "FirstPrimaryWeapon_outdoor": {},
             "SecondPrimaryWeapon": {},
             "Holster": {
-                "6661012d16fbd2fb75408f87": 1
+                "6661012d16fbd2fb75408f87": 2
             },
             "Scabbard": {},
             "ArmBand": {},
@@ -42,15 +42,15 @@
             },
             "FirstPrimaryWeapon": {},
             "FirstPrimaryWeapon_urban": {
-                "669fca7f9ed4916116c76d5e": 1
+                "669fca7f9ed4916116c76d5e": 2
             },
             "FirstPrimaryWeapon_cqb": {
-                "669fca7f9ed4916116c76d5e": 1
+                "669fca7f9ed4916116c76d5e": 3
             },
             "FirstPrimaryWeapon_outdoor": {},
             "SecondPrimaryWeapon": {},
             "Holster": {
-                "6661012d16fbd2fb75408f87": 1
+                "6661012d16fbd2fb75408f87": 2
             },
             "Scabbard": {},
             "ArmBand": {},
@@ -77,15 +77,15 @@
             },
             "FirstPrimaryWeapon": {},
             "FirstPrimaryWeapon_urban": {
-                "669fca7f9ed4916116c76d5e": 1
+                "669fca7f9ed4916116c76d5e": 2
             },
             "FirstPrimaryWeapon_cqb": {
-                "669fca7f9ed4916116c76d5e": 1
+                "669fca7f9ed4916116c76d5e": 3
             },
             "FirstPrimaryWeapon_outdoor": {},
             "SecondPrimaryWeapon": {},
             "Holster": {
-                "6661012d16fbd2fb75408f87": 1
+                "6661012d16fbd2fb75408f87": 2
             },
             "Scabbard": {},
             "ArmBand": {},
@@ -114,15 +114,15 @@
             },
             "FirstPrimaryWeapon": {},
             "FirstPrimaryWeapon_urban": {
-                "669fca7f9ed4916116c76d5e": 1
+                "669fca7f9ed4916116c76d5e": 2
             },
             "FirstPrimaryWeapon_cqb": {
-                "669fca7f9ed4916116c76d5e": 1
+                "669fca7f9ed4916116c76d5e": 3
             },
             "FirstPrimaryWeapon_outdoor": {},
             "SecondPrimaryWeapon": {},
             "Holster": {
-                "6661012d16fbd2fb75408f87": 1
+                "6661012d16fbd2fb75408f87": 2
             },
             "Scabbard": {},
             "ArmBand": {},
@@ -131,7 +131,9 @@
             "Eyewear": {},
             "TacticalVest": {},
             "FaceCover": {},
-            "Headwear": {},
+            "Headwear": {
+                "672e37d1d3f0502bda8317dd": 1
+            },
             "Headwear_night": {},
             "ArmorVest": {},
             "loot": {
@@ -149,10 +151,10 @@
             },
             "FirstPrimaryWeapon": {},
             "FirstPrimaryWeapon_urban": {
-                "669fca7f9ed4916116c76d5e": 1
+                "669fca7f9ed4916116c76d5e": 2
             },
             "FirstPrimaryWeapon_cqb": {
-                "669fca7f9ed4916116c76d5e": 1
+                "669fca7f9ed4916116c76d5e": 3
             },
             "FirstPrimaryWeapon_outdoor": {
                 "66c549879f8f2447575393cc": 1,
@@ -160,7 +162,7 @@
             },
             "SecondPrimaryWeapon": {},
             "Holster": {
-                "6661012d16fbd2fb75408f87": 1
+                "6661012d16fbd2fb75408f87": 2
             },
             "Scabbard": {},
             "ArmBand": {},
@@ -169,7 +171,9 @@
             "Eyewear": {},
             "TacticalVest": {},
             "FaceCover": {},
-            "Headwear": {},
+            "Headwear": {
+                "672e37d1d3f0502bda8317dd": 1
+            },
             "Headwear_night": {},
             "ArmorVest": {},
             "loot": {
@@ -187,29 +191,29 @@
             },
             "FirstPrimaryWeapon": {},
             "FirstPrimaryWeapon_urban": {
-                "66ea1ab604d256f0019d67f8": 1,
-                "66c549879f8f2447575393cc": 1,
-                "6671ebcdd32bd95eb398e920": 1,
-                "66ba26a6925f9921573224c9": 1,
+                "66ea1ab604d256f0019d67f8": 3,
+                "66c549879f8f2447575393cc": 3,
+                "6671ebcdd32bd95eb398e920": 2,
+                "66ba26a6925f9921573224c9": 2,
                 "66e718dc498d978477e0ba75": 1
             },
             "FirstPrimaryWeapon_cqb": {
                 "66ea17bd79825bad27d7e043": 1,
                 "66ea1ab604d256f0019d67f8": 1,
                 "66c549879f8f2447575393cc": 1,
-                "6671ebcdd32bd95eb398e920": 1,
+                "6671ebcdd32bd95eb398e920": 2,
                 "66ba26a6925f9921573224c9": 1
             },
             "FirstPrimaryWeapon_outdoor": {
                 "66e718dc498d978477e0ba75": 1,
-                "664274a4d2e5fe0439d545a6": 1,
-                "66ea1ab604d256f0019d67f8": 1,
-                "66c549879f8f2447575393cc": 1,
-                "6671ebcdd32bd95eb398e920": 1
+                "664274a4d2e5fe0439d545a6": 3,
+                "66ea1ab604d256f0019d67f8": 2,
+                "66c549879f8f2447575393cc": 2,
+                "6671ebcdd32bd95eb398e920": 2
             },
             "SecondPrimaryWeapon": {},
             "Holster": {
-                "663cf1da2496a8e7b0b71759": 1
+                "663cf1da2496a8e7b0b71759": 2
             },
             "Scabbard": {},
             "ArmBand": {},
@@ -238,28 +242,28 @@
             },
             "FirstPrimaryWeapon": {},
             "FirstPrimaryWeapon_urban": {
-                "66ba26a6925f9921573224c9": 1,
-                "664274a4d2e5fe0439d545a6": 1,
-                "6671ebcdd32bd95eb398e920": 1,
-                "66e718dc498d978477e0ba75": 1,
+                "66ba26a6925f9921573224c9": 2,
+                "664274a4d2e5fe0439d545a6": 2,
+                "6671ebcdd32bd95eb398e920": 3,
+                "66e718dc498d978477e0ba75": 2,
                 "664a5b945636ce820472f225": 1
             },
             "FirstPrimaryWeapon_cqb": {
-                "66ba26a6925f9921573224c9": 1,
+                "66ba26a6925f9921573224c9": 2,
                 "67a01e79a2b82626b73d10dc": 1,
-                "66ea17bd79825bad27d7e043": 1,
-                "6671ebcdd32bd95eb398e920": 1
+                "66ea17bd79825bad27d7e043": 2,
+                "6671ebcdd32bd95eb398e920": 2
             },
             "FirstPrimaryWeapon_outdoor": {
-                "664274a4d2e5fe0439d545a6": 1,
-                "6671ebcdd32bd95eb398e920": 1,
+                "664274a4d2e5fe0439d545a6": 3,
+                "6671ebcdd32bd95eb398e920": 2,
                 "664a5b945636ce820472f225": 1,
                 "66e718dc498d978477e0ba75": 1
             },
             "SecondPrimaryWeapon": {},
             "Holster": {
-                "663cf1da2496a8e7b0b71759": 1,
-                "675ceb83e25d80bc676e15a6": 1
+                "663cf1da2496a8e7b0b71759": 2,
+                "675ceb83e25d80bc676e15a6": 2
             },
             "Scabbard": {},
             "ArmBand": {
@@ -271,21 +275,43 @@
             "Backpack": {},
             "Earpiece": {},
             "Eyewear": {},
-            "TacticalVest": {},
-            "FaceCover": {},
+            "TacticalVest": {
+                "6673b1ac5cae0610f1079d7a": 1,
+                "6673b1ac5cae0610f1079d7b": 1,
+                "6673b1ac5cae0610f1079d7c": 1,
+                "66326bfd46817c660d015137": 1,
+                "66326bfd46817c660d015138": 1,
+                "66326bfd46817c660d015139": 1,
+                "66326bfd46817c660d015145": 1,
+                "66326bfd46817c660d015149": 1,
+                "66bf757f27d0b097db0ace22": 1,
+                "66bf757f27d0b097db0ace23": 1,
+                "66bf757f27d0b097db0ace36": 1,
+                "6673b1ac5cae0610f1079d6f": 1,
+                "66bf757f27d0b097db0ace38": 1,
+                "66326bfd46817c660d015135": 1,
+                "672e2e75dbf780f902fd6d68": 1,
+                "672e2e758c2bcbf1b2421359": 1,
+                "672e37d18d4d0ec5f16f5cc9": 1,
+                "672e37d1d3f0502bda8317dd": 1
+            },
+            "FaceCover": {
+                "66bf757f27d0b097db0ace7a": 1,
+                "66bf757f27d0b097db0ace7b": 1,
+                "66bf757f27d0b097db0ace80": 1,
+                "66bf757f27d0b097db0ace7c": 1,
+                "66bf757f27d0b097db0ace63": 1
+            },
             "Headwear": {
                 "672e2e754e6844af8e197b00": 1,
                 "672e2e75b79213c8f2101b8c": 1,
                 "672e2e75b14ae1b5c91474b4": 1,
                 "672e2e75b5b680c7ee6aa408": 1,
-                "672e2e7523db0e477dcf377f": 1
+                "672e2e7523db0e477dcf377f": 1,
+                "66326bfd46817c660d01512a": 1,
+                "66326bfd46817c660d015126": 1
             },
-            "Headwear_night": {
-                "672e2e75b79213c8f2101b8c": 1,
-                "672e2e75b14ae1b5c91474b4": 1,
-                "672e2e75b5b680c7ee6aa408": 1,
-                "672e2e7523db0e477dcf377f": 1
-            },
+            "Headwear_night": {},
             "ArmorVest": {},
             "loot": {
                 "TacticalVest": {},
@@ -308,7 +334,7 @@
             "FirstPrimaryWeapon_outdoor": {},
             "SecondPrimaryWeapon": {},
             "Holster": {
-                "6661012d16fbd2fb75408f87": 1
+                "6661012d16fbd2fb75408f87": 2
             },
             "Scabbard": {},
             "ArmBand": {},
@@ -337,11 +363,11 @@
             "FirstPrimaryWeapon_urban": {},
             "FirstPrimaryWeapon_cqb": {},
             "FirstPrimaryWeapon_outdoor": {
-                "6657bc8faeddd6b0a9b40224": 1
+                "6657bc8faeddd6b0a9b40224": 2
             },
             "SecondPrimaryWeapon": {},
             "Holster": {
-                "6661012d16fbd2fb75408f87": 1
+                "6661012d16fbd2fb75408f87": 2
             },
             "Scabbard": {},
             "ArmBand": {},
@@ -371,10 +397,10 @@
                 "66ea0f455cb5474538b4e801": 1
             },
             "FirstPrimaryWeapon_cqb": {
-                "66ea0f455cb5474538b4e801": 1
+                "66ea0f455cb5474538b4e801": 2
             },
             "FirstPrimaryWeapon_outdoor": {
-                "6657bc8faeddd6b0a9b40224": 1
+                "6657bc8faeddd6b0a9b40224": 3
             },
             "SecondPrimaryWeapon": {},
             "Holster": {},
@@ -403,15 +429,15 @@
             },
             "FirstPrimaryWeapon": {},
             "FirstPrimaryWeapon_urban": {
-                "66ea0f455cb5474538b4e801": 1,
+                "66ea0f455cb5474538b4e801": 2,
                 "678fe4a4906c7bd23722c71f": 1
             },
             "FirstPrimaryWeapon_cqb": {
-                "66ea0f455cb5474538b4e801": 1,
+                "66ea0f455cb5474538b4e801": 3,
                 "678fe4a4906c7bd23722c71f": 1
             },
             "FirstPrimaryWeapon_outdoor": {
-                "6657bc8faeddd6b0a9b40224": 1,
+                "6657bc8faeddd6b0a9b40224": 2,
                 "678fe4a4906c7bd23722c71f": 1
             },
             "SecondPrimaryWeapon": {},
@@ -426,8 +452,23 @@
             "Backpack": {},
             "Earpiece": {},
             "Eyewear": {},
-            "TacticalVest": {},
-            "FaceCover": {},
+            "TacticalVest": {
+                "6673b1ac5cae0610f1079d78": 1,
+                "6673b1ac5cae0610f1079d79": 1,
+                "66326bfd46817c660d01513b": 1,
+                "66326bfd46817c660d015151": 1,
+                "66326bfd46817c660d015152": 1,
+                "66b94b886af54725ea0a4b93": 1,
+                "672e37d1431d27aff3b27f4d": 1,
+                "672e37d1528e2a1d81bbe1bb": 1
+            },
+            "FaceCover": {
+                "66bf757f27d0b097db0ace7a": 1,
+                "66bf757f27d0b097db0ace7b": 1,
+                "66bf757f27d0b097db0ace80": 1,
+                "66bf757f27d0b097db0ace7c": 1,
+                "66bf757f27d0b097db0ace63": 1
+            },
             "Headwear": {},
             "Headwear_night": {},
             "ArmorVest": {},
@@ -447,29 +488,29 @@
         },
         "FirstPrimaryWeapon": {},
         "FirstPrimaryWeapon_urban": {
-            "66ba26a6925f9921573224c9": 1,
-            "664a5b945636ce820472f225": 1,
-            "66e718dc498d978477e0ba75": 1,
-            "66ea0f455cb5474538b4e801": 1,
-            "678fe4a4906c7bd23722c71f": 1
+            "66ba26a6925f9921573224c9": 2,
+            "664a5b945636ce820472f225": 2,
+            "66e718dc498d978477e0ba75": 2,
+            "66ea0f455cb5474538b4e801": 2,
+            "678fe4a4906c7bd23722c71f": 2
         },
         "FirstPrimaryWeapon_cqb": {
-            "66ba26a6925f9921573224c9": 1,
-            "67a01e79a2b82626b73d10dc": 1,
-            "66ea17bd79825bad27d7e043": 1,
-            "66e718dc498d978477e0ba75": 1,
-            "66ea0f455cb5474538b4e801": 1,
-            "678fe4a4906c7bd23722c71f": 1
+            "66ba26a6925f9921573224c9": 2,
+            "67a01e79a2b82626b73d10dc": 2,
+            "66ea17bd79825bad27d7e043": 2,
+            "66e718dc498d978477e0ba75": 2,
+            "66ea0f455cb5474538b4e801": 2,
+            "678fe4a4906c7bd23722c71f": 2
         },
         "FirstPrimaryWeapon_outdoor": {
-            "664a5b945636ce820472f225": 1,
-            "66e718dc498d978477e0ba75": 1,
-            "678fe4a4906c7bd23722c71f": 1
+            "664a5b945636ce820472f225": 2,
+            "66e718dc498d978477e0ba75": 2,
+            "678fe4a4906c7bd23722c71f": 2
         },
         "SecondPrimaryWeapon": {},
         "Holster": {
-            "663cf1da2496a8e7b0b71759": 1,
-            "675ceb83e25d80bc676e15a6": 1
+            "663cf1da2496a8e7b0b71759": 2,
+            "675ceb83e25d80bc676e15a6": 2
         },
         "Scabbard": {},
         "ArmBand": {
@@ -491,26 +532,55 @@
         "TacticalVest": {
             "672e2e75c5ba9aeedbced57d": 1,
             "672e2e75be2ea9998a388b8b": 1,
-            "672e2e75dbf780f902fd6d68": 1,
-            "672e2e758c2bcbf1b2421359": 1,
+            "672e37d18d4d0ec5f16f5cc9": 1,
+            "672e37d1d3f0502bda8317dd": 1,
+            "672e37d1431d27aff3b27f4d": 1,
+            "672e37d1528e2a1d81bbe1bb": 1,
             "672e2e75afb25b57bd1d1455": 1,
             "672e2e7531ffa75ea676c3ea": 1,
             "672e2e75fa61ef193bdbd7e6": 1,
-            "672e2e755afaba52a4af5e45": 1
+            "672e2e755afaba52a4af5e45": 1,
+            "6673b1ac5cae0610f1079d78": 1,
+            "6673b1ac5cae0610f1079d79": 1,
+            "66326bfd46817c660d01513b": 1,
+            "66326bfd46817c660d015151": 1,
+            "66326bfd46817c660d015152": 1,
+            "66b94b886af54725ea0a4b93": 1,
+            "6673b1ac5cae0610f1079d7a": 1,
+            "6673b1ac5cae0610f1079d7b": 1,
+            "6673b1ac5cae0610f1079d7c": 1,
+            "66326bfd46817c660d015139": 1,
+            "66326bfd46817c660d015145": 1,
+            "66bf757f27d0b097db0ace22": 1,
+            "66bf757f27d0b097db0ace23": 1,
+            "66bf757f27d0b097db0ace36": 1,
+            "6673b1ac5cae0610f1079d6f": 1,
+            "66bf757f27d0b097db0ace38": 1
         },
-        "FaceCover": {},
+        "FaceCover": {
+            "66bf757f27d0b097db0ace7a": 1,
+            "66bf757f27d0b097db0ace7b": 1,
+            "66bf757f27d0b097db0ace80": 1,
+            "66bf757f27d0b097db0ace7c": 1,
+            "66bf757f27d0b097db0ace63": 1
+        },
         "Headwear": {
             "672e2e75b79213c8f2101b8c": 1,
             "672e2e75b14ae1b5c91474b4": 1,
             "672e2e75b5b680c7ee6aa408": 1,
-            "672e2e7523db0e477dcf377f": 1
+            "672e2e7523db0e477dcf377f": 1,
+            "66326bfd46817c660d015125": 1,
+            "66326bfd46817c660d015128": 1,
+            "66326bfd46817c660d015129": 1,
+            "66326bfd46817c660d01512c": 1,
+            "66326bfd46817c660d01512d": 1,
+            "66bf757f27d0b097db0ace44": 1,
+            "66bf757f27d0b097db0ace58": 1,
+            "66bf757f27d0b097db0ace61": 1,
+            "676a1476242dea0ba69ebbd8": 1,
+            "668bc5cd834c88e06b08b6aa": 1
         },
-        "Headwear_night": {
-            "672e2e75b79213c8f2101b8c": 1,
-            "672e2e75b14ae1b5c91474b4": 1,
-            "672e2e75b5b680c7ee6aa408": 1,
-            "672e2e7523db0e477dcf377f": 1
-        },
+        "Headwear_night": {},
         "ArmorVest": {},
         "loot": {
             "TacticalVest": {},

@@ -29,6 +29,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.BotTierTracker = exports.RaidInfoTracker = exports.MapType = exports.ConfigChecker = exports.ProfileTracker = exports.ModTracker = exports.Utils = void 0;
 const path = __importStar(require("path"));
 const node_crypto_1 = __importDefault(require("node:crypto"));
+const instance_manager_1 = require("../instance_manager");
+const LogTextColor_1 = require("C:/snapshot/project/obj/models/spt/logging/LogTextColor");
 const fs = require('fs');
 const modConfig = require("../../config/config.json");
 class Utils {
@@ -171,9 +173,33 @@ class ModTracker {
 }
 exports.ModTracker = ModTracker;
 class ProfileTracker {
-    static profileIds = [];
     static averagePlayerLevel = 1;
     static playerRecord = {};
+    static checkLoggedInProfiles(pmcData, profileData, removeProfile) {
+        const level = pmcData?.Info?.Level ?? 1;
+        if (removeProfile)
+            delete ProfileTracker.playerRecord[profileData.info.id];
+        else
+            ProfileTracker.playerRecord[profileData.info.id] = level;
+        let playerCount = 0;
+        let cumulativePlayerLevel = 0;
+        for (const key in ProfileTracker.playerRecord) {
+            const playerLevel = ProfileTracker.playerRecord[key];
+            if (!isNaN(playerLevel)) {
+                cumulativePlayerLevel += playerLevel;
+                playerCount += 1;
+            }
+        }
+        ProfileTracker.averagePlayerLevel = playerCount > 0 ? cumulativePlayerLevel / playerCount : 1;
+        instance_manager_1.InstanceManager.getLoggerInstance().logWithColor(`Realism Mod: Players in server ${playerCount}, average level: ${ProfileTracker.averagePlayerLevel}`, LogTextColor_1.LogTextColor.GREEN);
+    }
+    static getPmcProfileData(profileHelper) {
+        let profiles = [];
+        for (const key in ProfileTracker.playerRecord) {
+            profiles.push(profileHelper.getPmcProfile(key));
+        }
+        return profiles;
+    }
 }
 exports.ProfileTracker = ProfileTracker;
 class ConfigChecker {

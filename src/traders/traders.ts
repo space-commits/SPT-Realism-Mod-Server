@@ -763,8 +763,8 @@ export class RandomizeTraderAssort {
         return avgLL;
     }
 
-
     public adjustTraderStockAtGameStart(pmcData: IPmcData[]) {
+
         if (EventTracker.isChristmas == true) {
             this.logger.warning("====== Christmas Sale, Everything 15% Off! ======");
         }
@@ -832,6 +832,17 @@ export class RandomizeTraderAssort {
                 return 2;
         }
         return 0;
+    }
+
+    //re-roll based on ll level
+    private getStockCount(allowedAttemps: number, attempt: number, min: number, max: number): number {
+        let stockCount = this.utils.pickRandNumInRange(min, max);
+        if (stockCount == 0 && attempt < allowedAttemps) {
+            return this.getStockCount(allowedAttemps, attempt + 1, min, max);
+        }
+        else {
+            return stockCount;
+        }
     }
 
     private randomizeStockHelper(assortItemParent: string, targetParent: string, item: IItem, min: number, max: number, llFactor: number, canBeOutOfStock: boolean = true) {
@@ -958,7 +969,6 @@ export class RandomizeTraderAssort {
     }
 
     private randomizeAmmoStock(assortItemParent: string, item: IItem, llStackableFactor: number, llStockFactor: number) {
-
         if (assortItemParent === ParentClasses.AMMO && item.slotId !== "cartridges") {
             let llOutOfStockFactor = llStockFactor * 10;
             if (this.randomizeAmmoStockHelper(item, Calibers._9x18mm, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 110 * modConfig.rand_stackable_modifier * llStackableFactor, 15 - llOutOfStockFactor, 20)) return;
@@ -1027,17 +1037,6 @@ export class RandomizeTraderAssort {
         return false;
     }
 
-    //re-roll based on ll level
-    private getStockCount(allowedAttemps: number, attempt: number, min: number, max: number): number {
-        let stockCount = this.utils.pickRandNumInRange(min, max);
-        if (stockCount == 0 && attempt < allowedAttemps) {
-            return this.getStockCount(allowedAttemps, attempt + 1, min, max);
-        }
-        else {
-            return stockCount;
-        }
-    }
-
     public setAndRandomizeCost(utils: Utils, barter: IBarterScheme[][]) {
         const barterItem = barter[0][0];
         if (this.itemDB[barterItem._tpl]._parent === ParentClasses.MONEY) {
@@ -1089,14 +1088,10 @@ export class TraderRefresh extends TraderAssortHelper {
         const traderId = trader.base._id;
         trader.assort = this.cloner.clone(this.traderAssortService.getPristineTraderAssort(traderId));
 
-        let pmcData: IPmcData[] = [];
-
-        ProfileTracker.profileIds.forEach(element => {
-            pmcData.push(this.profileHelper.getPmcProfile(element));
-        });
+        const profilesData: IPmcData[] = ProfileTracker.getPmcProfileData(this.profileHelper);
 
         if (modConfig.randomize_trader_prices == true || modConfig.randomize_trader_stock == true || modConfig.randomize_trader_ll == true) {
-            trader.assort.items = this.modifyTraderAssorts(trader, this.logger, pmcData);
+            trader.assort.items = this.modifyTraderAssorts(trader, profilesData);
         }
 
         trader.base.nextResupply = this.traderHelper.getNextUpdateTimestamp(trader.base._id);
@@ -1108,14 +1103,14 @@ export class TraderRefresh extends TraderAssortHelper {
 
     }
 
-    private modifyTraderAssorts(trader: ITrader, logger: ILogger, pmcData: IPmcData[]): IItem[] {
+    private modifyTraderAssorts(trader: ITrader, profilesData: IPmcData[]): IItem[] {
         const tables = this.databaseService.getTables();
         const randomTraderAss = new RandomizeTraderAssort();
         const utils = Utils.getInstance();
 
         let assortItems = trader.assort.items;
         let assortBarters = trader.assort.barter_scheme;
-        let averageLL = randomTraderAss.getAverageLL(pmcData, trader.base._id);
+        let averageLL = randomTraderAss.getAverageLL(profilesData, trader.base._id);
 
         if (modConfig.randomize_trader_ll == true) {
             let ll = trader.assort.loyal_level_items;
@@ -1123,13 +1118,14 @@ export class TraderRefresh extends TraderAssortHelper {
                 randomTraderAss.randomizeLL(ll, lvl);
             }
         }
+
         for (let i in assortItems) {
             let item = assortItems[i];
             let itemId = assortItems[i]._id;
             let itemTemplId = assortItems[i]._tpl;
             if (modConfig.randomize_trader_stock == true) {
                 if (item.upd?.StackObjectsCount != null) {
-                    randomTraderAss.randomizeStock(item, averageLL, pmcData.length);
+                    randomTraderAss.randomizeStock(item, averageLL, profilesData.length);
                 }
                 if (item.upd?.UnlimitedCount != null) {
                     item.upd.UnlimitedCount = false;

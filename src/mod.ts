@@ -125,6 +125,7 @@ import { IUpd } from "@spt/models/eft/common/tables/IItem";
 import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 import { spawn } from "child_process";
 import { HandbookHelper } from "@spt/helpers/HandbookHelper";
+import { InstanceManager } from "./instance_manager";
 
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");
@@ -173,6 +174,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         const traderRefersh = new TraderRefresh(logger, mathUtil, timeUtil, databaseService, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator,
             traderAssortService, localisationService, traderPurchasePefrsisterService, traderHelper, fenceService, configServer, cloner);
         const flea = new FleaChangesPreDBLoad(logger, fleaConf, modConfig);
+        const instanceManager = InstanceManager.getInstance();
 
         this.checkForMods(preSptModLoader, logger, modConfig);
         flea.loadFleaConfig();
@@ -376,7 +378,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         // }
 
         staticRouterModService.registerStaticRouter(
-            "Realism-CheckProfile",
+            "Realism-OnValidate",
             [
                 {
                     url: "/client/game/version/validate",
@@ -403,7 +405,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         const profileData = profileHelper.getFullProfile(sessionID);
 
                         try {
-                            this.checkPlayerLevel(sessionID, profileData, pmcData, logger, true);
+                            ProfileTracker.checkLoggedInProfiles(pmcData, profileData, false);
                             if (modConfig.backup_profiles == true) this.backupProfile(profileData, logger);
                             if (modConfig.enable_hazard_zones) quests.resetRepeatableQuests(profileData);
                             this.checkForSeasonalEvents(logger, seasonalEventsService, seeasonalEventConfig, weatherConfig);
@@ -433,11 +435,8 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             }
 
                             if (adjustedTradersOnStart == false) {
-                                let pmcData: IPmcData[] = [];
-                                ProfileTracker.profileIds.forEach(element => {
-                                    pmcData.push(profileHelper.getPmcProfile(element));
-                                });
-                                randomizeTraderAssort.adjustTraderStockAtGameStart(pmcData);
+                                const profilesData: IPmcData[] = ProfileTracker.getPmcProfileData(profileHelper);
+                                randomizeTraderAssort.adjustTraderStockAtGameStart(profilesData);
                             }
                             adjustedTradersOnStart = true;
 
@@ -474,22 +473,9 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                     url: "/client/game/logout",
                     action: async (url, info, sessionID, output) => {
                         try {
-                            const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
+                            const pmcData = profileHelper.getPmcProfile(sessionID);
                             const profileData = profileHelper.getFullProfile(sessionID)
-
-                            let playerCount = 0;
-                            let cumulativePlayerLevel = 0;
-                            delete ProfileTracker.playerRecord[profileData.info.id];
-                            Object.values(ProfileTracker.playerRecord).forEach(value => {
-                                const playerLevel = Number(value);
-                                if (!isNaN(playerLevel)) {
-                                    cumulativePlayerLevel += playerLevel;
-                                    playerCount += 1;
-                                }
-                            });
-
-                            ProfileTracker.averagePlayerLevel = playerCount > 0 ? cumulativePlayerLevel / playerCount : 1;
-                            logger.logWithColor(`Realism Mod: Players in server ${playerCount}, average level: ${ProfileTracker.averagePlayerLevel}`, LogTextColor.GREEN);
+                            ProfileTracker.checkLoggedInProfiles(pmcData, profileData, true);
                         }
                         catch (err) {
                             logger.error("Realism Mod: Error At Log Out: " + err);
@@ -571,7 +557,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             let mapType: MapType;
 
                             //update global player level
-                            this.checkPlayerLevel(sessionID, profileData, pmcData, logger);
+                            ProfileTracker.checkLoggedInProfiles(pmcData, profileData, false);
 
                             if (matchInfo.timeVariant === "PAST") {
                                 realTime = utils.getTime(baseTime, 12);
@@ -585,7 +571,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                                 mapType = MapType.CQB;
                             }
                             if (StaticArrays.outdoorMaps.includes(RaidInfoTracker.mapName)) {
-                                mapType =  MapType.Outdoor;
+                                mapType = MapType.Outdoor;
                             }
                             if (StaticArrays.urbanMaps.includes(RaidInfoTracker.mapName)) {
                                 mapType = MapType.Urban;
@@ -661,7 +647,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         try {
                             RaidInfoTracker.generatedBotsCount = 0;
                             //update global player level
-                            this.checkPlayerLevel(sessionID, profileData, pmcData, logger);
+                            ProfileTracker.checkLoggedInProfiles(pmcData, profileData, false);
 
                             if (modConfig.tiered_flea == true) tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, ProfileTracker.averagePlayerLevel);
 
@@ -785,7 +771,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         const statHandler = ItemStatHandler.getInstance(tables, logger, hashUtil);
         const descGen = new DescriptionGen(tables, modConfig, logger, statHandler);
         const handbookHelper = container.resolve<HandbookHelper>("HandbookHelper");
-        
+
         //Remember to back up json data before using this, and make sure it isn't overriding existing json objects
         // jsonGen.attTemplatesCodeGen();
         // jsonGen.weapTemplatesCodeGen();
@@ -911,7 +897,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
 
 
         traders.loadTraderRepairs();
-        if(modConfig.realistic_ballistics) traders.adjustArmorHandbookPrices();
+        if (modConfig.realistic_ballistics) traders.adjustArmorHandbookPrices();
 
         //have to run this async to ensure correct load order
         (async () => {
@@ -1150,7 +1136,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         EventTracker.isPreExplosion = false;
         EventTracker.endExplosionEvent = false;
 
-        let baseGasChance = EventTracker.isHalloween ? 20 : 5;
+        let baseGasChance = EventTracker.isHalloween ? 20 : 0;
         if (pmcData?.Quests != null) {
             pmcData.Quests.forEach(q => {
                 const isStarted = q.status === 2 || q.status === 3;
@@ -1229,26 +1215,6 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         const gasChance = this.checkEventQuests(pmcData);
         EventTracker.doGasEvent = gasChance > utils.pickRandNumInRange(0, 1000);
         if (modConfig.logEverything) logger.warning("gas chance " + gasChance);
-    }
-
-    private checkPlayerLevel(sessionID: string, profileData: ISptProfile, pmcData: IPmcData, logger: ILogger, shouldLog: boolean = false) {
-        let level = 1;
-        if (pmcData?.Info?.Level != null) {
-            level = pmcData.Info.Level;
-        }
-        let playerCount = 0;
-        let cumulativePlayerLevel = 0;
-        ProfileTracker.playerRecord[profileData.info.id] = level;
-        Object.values(ProfileTracker.playerRecord).forEach(value => {
-            cumulativePlayerLevel += value;
-            playerCount += 1;
-        });
-        ProfileTracker.averagePlayerLevel = cumulativePlayerLevel / playerCount;
-        ProfileTracker.profileIds.push(sessionID);
-
-        if (shouldLog) {
-            logger.logWithColor(`Realism Mod: Players in server ${playerCount}, average level: ${ProfileTracker.averagePlayerLevel}`, LogTextColor.GREEN);
-        }
     }
 
     private checkProfile(pmcData: IPmcData, pmcEXP: number, utils: Utils, player: Player, logger: ILogger) {

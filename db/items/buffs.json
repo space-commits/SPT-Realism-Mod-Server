@@ -975,26 +975,7 @@
             "SkillName": ""
         }
     ],
-    "Buffs_vaseline": [
-        {
-            "BuffType": "MaxStamina",
-            "Chance": 1,
-            "Delay": 1,
-            "Duration": 60,
-            "Value": 1,
-            "AbsoluteValue": true,
-            "SkillName": ""
-        },
-        {
-            "BuffType": "StaminaRate",
-            "Chance": 1,
-            "Delay": 1,
-            "Duration": 60,
-            "Value": 0.01,
-            "AbsoluteValue": true,
-            "SkillName": ""
-        }
-    ],
+    "Buffs_vaseline": [],
     "Buffs_golden": [
         {
             "BuffType": "MaxStamina",

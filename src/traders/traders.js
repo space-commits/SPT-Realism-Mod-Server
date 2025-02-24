@@ -733,6 +733,16 @@ class RandomizeTraderAssort {
         }
         return 0;
     }
+    //re-roll based on ll level
+    getStockCount(allowedAttemps, attempt, min, max) {
+        let stockCount = this.utils.pickRandNumInRange(min, max);
+        if (stockCount == 0 && attempt < allowedAttemps) {
+            return this.getStockCount(allowedAttemps, attempt + 1, min, max);
+        }
+        else {
+            return stockCount;
+        }
+    }
     randomizeStockHelper(assortItemParent, targetParent, item, min, max, llFactor, canBeOutOfStock = true) {
         if (assortItemParent === targetParent) {
             //items aren't out of stock often enough, this artifically increases the chance of being out of stock
@@ -927,16 +937,6 @@ class RandomizeTraderAssort {
         }
         return false;
     }
-    //re-roll based on ll level
-    getStockCount(allowedAttemps, attempt, min, max) {
-        let stockCount = this.utils.pickRandNumInRange(min, max);
-        if (stockCount == 0 && attempt < allowedAttemps) {
-            return this.getStockCount(allowedAttemps, attempt + 1, min, max);
-        }
-        else {
-            return stockCount;
-        }
-    }
     setAndRandomizeCost(utils, barter) {
         const barterItem = barter[0][0];
         if (this.itemDB[barterItem._tpl]._parent === enums_1.ParentClasses.MONEY) {
@@ -981,25 +981,22 @@ class TraderRefresh extends TraderAssortHelper_1.TraderAssortHelper {
             return;
         const traderId = trader.base._id;
         trader.assort = this.cloner.clone(this.traderAssortService.getPristineTraderAssort(traderId));
-        let pmcData = [];
-        utils_1.ProfileTracker.profileIds.forEach(element => {
-            pmcData.push(this.profileHelper.getPmcProfile(element));
-        });
+        const profilesData = utils_1.ProfileTracker.getPmcProfileData(this.profileHelper);
         if (modConfig.randomize_trader_prices == true || modConfig.randomize_trader_stock == true || modConfig.randomize_trader_ll == true) {
-            trader.assort.items = this.modifyTraderAssorts(trader, this.logger, pmcData);
+            trader.assort.items = this.modifyTraderAssorts(trader, profilesData);
         }
         trader.base.nextResupply = this.traderHelper.getNextUpdateTimestamp(trader.base._id);
         trader.base.refreshTraderRagfairOffers = true;
         //seems like manually refreshing ragfair is necessary. 
         this.ragfairOfferGenerator.generateFleaOffersForTrader(trader.base._id);
     }
-    modifyTraderAssorts(trader, logger, pmcData) {
+    modifyTraderAssorts(trader, profilesData) {
         const tables = this.databaseService.getTables();
         const randomTraderAss = new RandomizeTraderAssort();
         const utils = utils_1.Utils.getInstance();
         let assortItems = trader.assort.items;
         let assortBarters = trader.assort.barter_scheme;
-        let averageLL = randomTraderAss.getAverageLL(pmcData, trader.base._id);
+        let averageLL = randomTraderAss.getAverageLL(profilesData, trader.base._id);
         if (modConfig.randomize_trader_ll == true) {
             let ll = trader.assort.loyal_level_items;
             for (let lvl in ll) {
@@ -1012,7 +1009,7 @@ class TraderRefresh extends TraderAssortHelper_1.TraderAssortHelper {
             let itemTemplId = assortItems[i]._tpl;
             if (modConfig.randomize_trader_stock == true) {
                 if (item.upd?.StackObjectsCount != null) {
-                    randomTraderAss.randomizeStock(item, averageLL, pmcData.length);
+                    randomTraderAss.randomizeStock(item, averageLL, profilesData.length);
                 }
                 if (item.upd?.UnlimitedCount != null) {
                     item.upd.UnlimitedCount = false;

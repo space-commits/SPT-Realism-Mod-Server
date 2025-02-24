@@ -318,11 +318,13 @@ class BotLoader {
         };
         return weaponMap[mapType];
     }
-    getProperties(path) {
+    getPropertyNames(path) {
         return path.split('.');
     }
-    getDataByPath(file, path) {
-        const properties = this.getProperties(path);
+    //split the string path to get the property string names
+    //use that property name string as the key to retrieve the actual json object
+    getJsonObj(file, path) {
+        const properties = this.getPropertyNames(path);
         let result = file;
         for (const key of properties) {
             result = result?.[key];
@@ -330,8 +332,8 @@ class BotLoader {
         return result;
     }
     mergeWithUserEquipmentItems(botTier, dataPath) {
-        const userTier = this.getDataByPath(userItems, dataPath);
-        const ammoTier = this.getDataByPath(userAmmo, dataPath);
+        const userTier = this.getJsonObj(userItems, dataPath);
+        const ammoTier = this.getJsonObj(userAmmo, dataPath);
         let primaryWeapon = this.getWeaponRecord(userTier, utils_1.RaidInfoTracker.mapType) ?? userTier.FirstPrimaryWeapon;
         if (Object.keys(primaryWeapon).length === 0)
             primaryWeapon = userTier.FirstPrimaryWeapon;

@@ -343,6 +343,11 @@ export class ItemStatHandler {
                 serverItem._props.RecoilCenter = fileItem.RecoilCenter != null && fileItem.RecoilCenter != null ? fileItem.RecoilCenter : serverItem._props.RecoilCenter;
                 serverItem._props.CanQueueSecondShot = fileItem.CanQueueSecondShot != null ? fileItem.CanQueueSecondShot : serverItem._props.CanQueueSecondShot;
 
+                if (serverItem._props.weapClass != "pistol") {
+                    serverItem._props.RecoilStableIndexShot = 1;
+                    serverItem._props.ShotsGroupSettings[0].StartShotIndex = 1;
+                }
+
                 if (fileItem?.BurstShotsCount != null) {
                     serverItem._props.BurstShotsCount = fileItem.BurstShotsCount;
                 }

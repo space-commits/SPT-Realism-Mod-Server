@@ -242,11 +242,32 @@ class ItemCloning {
         container._props.Width = 2;
         container._props.CanSellOnRagfair = false;
         container._props.Weight = 10.2;
-        const grid = container._props.Grids[0];
-        grid._props.cellsH = 5;
-        grid._props.cellsV = 2;
-        grid._props.filters[0].Filter = [];
-        grid._props.filters[0].Filter.push(radSampleId, gasSampleId);
+        //some mods remove the filters of the cloned container, this ensures compatibility.
+        container._props.Grids = [
+            {
+                "_id": "67b85ebd5cd57c2f33728a76",
+                "_name": "main",
+                "_parent": "66fd588d397ed74159826cf0",
+                "_props": {
+                    "cellsH": 5,
+                    "cellsV": 2,
+                    "filters": [
+                        {
+                            "ExcludedFilter": [],
+                            "Filter": [
+                                radSampleId,
+                                gasSampleId
+                            ]
+                        }
+                    ],
+                    "isSortingTable": false,
+                    "maxCount": 0,
+                    "maxWeight": 0,
+                    "minCount": 0
+                },
+                "_proto": "55d329c24bdc2d892f8b4567"
+            }
+        ];
         //Makeshift Transmitter
         const transmitterId = "6703082a766cb6d11310094e";
         this.cloneGenericItem("63a0b2eabea67a6d93009e52", transmitterId, "green", "assets/content/items/quest/item_quest_radio_repeater/item_quest_radio_repeater.bundle");

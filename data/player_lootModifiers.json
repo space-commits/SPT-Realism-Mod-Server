@@ -127,7 +127,7 @@
     },
     "678ea1a7000564dedcf4b176": {
         "looseLootMultiplier": {
-            "bigmap": 2,
+            "bigmap": 1.96,
             "develop": 1,
             "factory4_day": 2.5,
             "factory4_night": 3,
@@ -147,7 +147,7 @@
             "town": 0.3
         },
         "staticLootMultiplier": {
-            "bigmap": 1,
+            "bigmap": 0.98,
             "develop": 1,
             "factory4_day": 1,
             "factory4_night": 1,
