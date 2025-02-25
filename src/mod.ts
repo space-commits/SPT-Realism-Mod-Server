@@ -998,10 +998,10 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             }
         }
 
-        const looseModifier = lootXp * 0.00004;
-        const staticModifier = lootXp * 0.00002;
-        const minLooseLoot = 0.3;
-        const minstaticLoot = 0.4;
+        const looseModifier = utils.clampNumber(lootXp * 0.00004, 0, 0.06);
+        const staticModifier = utils.clampNumber(lootXp * 0.00002, 0, 0.03);
+        const minLooseLoot = 0.37;
+        const minstaticLoot = 0.5;
         const looseLootRegenRate = 0.1;
         const staticLootRegenRate = 0.05;
         const baseLooseLoot: ILootMultiplier = baseMapLoot.looseLootMultiplier;
