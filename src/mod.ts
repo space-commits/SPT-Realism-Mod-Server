@@ -10,8 +10,7 @@ import { ProfileHelper } from "@spt/helpers/ProfileHelper";
 import { HttpResponseUtil } from "@spt/utils/HttpResponseUtil";
 import { IRagfairConfig } from "@spt/models/spt/config/IRagfairConfig";
 import { ITraderConfig } from "@spt/models/spt/config/ITraderConfig";
-import { IAirdropConfig } from "@spt/models/spt/config/IAirdropConfig";
-import { IPmcData, IPostRaidPmcData } from "@spt/models/eft/common/IPmcData";
+import { IPmcData } from "@spt/models/eft/common/IPmcData";
 import { RandomUtil } from "@spt/utils/RandomUtil";
 import { HashUtil } from "@spt/utils/HashUtil";
 import { WeightedRandomHelper } from "@spt/helpers/WeightedRandomHelper";
@@ -103,7 +102,6 @@ import { JsonGen } from "./json/json_gen";
 import { Quests } from "./traders/quests";
 import { InsuranceOverride } from "./traders/insurance";
 import { RagCallback, RandomizeTraderAssort, TraderRefresh, Traders } from "./traders/traders";
-// import { Airdrops } from "./misc/airdrops";
 import { Spawns } from "./bots/spawns";
 import { Gear } from "./items/gear";
 import { EventTracker } from "./misc/seasonalevents";
@@ -126,6 +124,9 @@ import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 import { spawn } from "child_process";
 import { HandbookHelper } from "@spt/helpers/HandbookHelper";
 import { InstanceManager } from "./instance_manager";
+import { ExternalInventoryMagGen } from "@spt/generators/weapongen/implementations/ExternalInventoryMagGen";
+import { InventoryMagGen } from "@spt/generators/weapongen/InventoryMagGen";
+import { BotWeaponGeneratorHelper } from "@spt/helpers/BotWeaponGeneratorHelper";
 
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");
@@ -203,7 +204,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         try {
                             return jsonUtil.serialize(modConfig);
                         } catch (e) {
-                            console.error("Realism: Failed to read config file", e);
+                            logger.error("Realism: Failed to read config file" + e);
                         }
                     }
                 }
@@ -222,7 +223,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             const data: { [key: string]: any } = await statHandler.processTemplateJson(true, path.join(__dirname, '..', 'db', 'templates'))
                             return jsonUtil.serialize(data);
                         } catch (e) {
-                            console.error("Realism: Failed to get server template data", e);
+                            logger.error("Realism: Failed to get server template data" + e);
                         }
                     }
                 }
@@ -246,7 +247,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
 
                             return jsonUtil.serialize(realismInfo);
                         } catch (e) {
-                            console.error("Realism: Failed to read info file", e);
+                            logger.error("Realism: Failed to read info file"+ e);
                         }
                     }
                 }
@@ -264,7 +265,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             this.setModInfo(logger);
                             return jsonUtil.serialize(realismInfo);
                         } catch (e) {
-                            console.error("Failed to read info file", e);
+                            logger.error("Failed to read info file" + e);
                         }
                     }
                 }
@@ -281,11 +282,6 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             const botGeneratorHelper = container.resolve<BotGeneratorHelper>("BotGeneratorHelper");
             const botNameService = container.resolve<BotNameService>("BotNameService");
             const itemFilterService = container.resolve<ItemFilterService>("ItemFilterService");
-            const durabilityLimitsHelper = container.resolve<DurabilityLimitsHelper>("DurabilityLimitsHelper");
-            const appContext = container.resolve<ApplicationContext>("ApplicationContext");
-            const itemHelper = container.resolve<ItemHelper>("ItemHelper");
-            const inventoryHelper = container.resolve<InventoryHelper>("InventoryHelper");
-            const containerHelper = container.resolve<ContainerHelper>("ContainerHelper");
 
             const botGen = new BotGen(
                 logger, hashUtil, randomUtil, timeUtil,
@@ -293,12 +289,6 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                 botLevelGenerator, botEquipmentFilterService, weightedRandomHelper,
                 botHelper, botGeneratorHelper, seasonalEventService,
                 itemFilterService, botNameService, configServer, cloner);
-
-            const myBotGenHelper = new BotGenHelper(
-                logger, randomUtil, databaseService,
-                durabilityLimitsHelper, itemHelper,
-                inventoryHelper, containerHelper,
-                appContext, localisationService, configServer);
 
 
             container.afterResolution("BotGenerator", (_t, result: BotGenerator) => {
@@ -312,12 +302,6 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                     return botGen.myGeneratePlayerScav(sessionId, role, difficulty, botTemplate);
                 }
             }, { frequency: "Always" });
-
-            // container.afterResolution("BotGeneratorHelper", (_t, result: BotGeneratorHelper) => {
-            //     result.generateExtraPropertiesForItem = (itemTemplate: ITemplateItem, botRole: string = null): { upd?: IUpd } => {
-            //         return myBotGenHelper.myGenerateExtraPropertiesForItem(itemTemplate, botRole);
-            //     }
-            // }, { frequency: "Always" });
         }
 
         container.afterResolution("TraderAssortHelper", (_t, result: TraderAssortHelper) => {
@@ -362,20 +346,6 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             }, { frequency: "Always" });
         }
 
-        // if (modConfig.airdrop_changes == true) {
-        //     const locationGenerator = container.resolve<LocationGenerator>("LocationGenerator");
-        //     const lootGenerator = container.resolve<LootGenerator>("LootGenerator");
-        //     const raidTimeAdjustmentService = container.resolve<RaidTimeAdjustmentService>("RaidTimeAdjustmentService");
-        //     const appContext = container.resolve<ApplicationContext>("ApplicationContext");
-        //     const itemFilterService = container.resolve<ItemFilterService>("ItemFilterService");
-        //     const airdropController = new AirdropLootgen(jsonUtil, hashUtil, randomUtil, weightedRandomHelper, logger, locationGenerator, localisationService, raidTimeAdjustmentService, itemFilterService, lootGenerator, databaseServer, timeUtil, configServer, appContext)
-
-        //     container.afterResolution("LocationController", (_t, result: LocationController) => {
-        //         result.getAirdropLoot = (): IAirdropLootResult => {
-        //             return airdropController.myGetAirdropLoot();
-        //         }
-        //     }, { frequency: "Always" });
-        // }
 
         staticRouterModService.registerStaticRouter(
             "Realism-OnValidate",
@@ -696,7 +666,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
 
                 fs.mkdir(path.join(profileFolderPath, profileData.info.id), (err) => {
                     if (err) {
-                        return console.error("Realism Mod: Error Backing Up Profile; " + err);
+                        return logger.error("Realism Mod: Error Backing Up Profile; " + err);
                     }
                     logger.log("Realism Mod: Backup path does not exist, creating folder....", "magenta");
 
@@ -723,7 +693,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             mode: 0o666
         }, (err) => {
             if (err)
-                console.log("Realism Mod: Error Backing Up Profile; " + err);
+                logger.error("Realism Mod: Error Backing Up Profile; " + err);
             else {
                 logger.log(`Realism Mod: Profile backup executed successfully: ${combinedTime}`, "green");
             }
@@ -746,7 +716,6 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         const inventoryConf = configServer.getConfig<IInventoryConfig>(ConfigTypes.INVENTORY);
         const raidConf = configServer.getConfig<IInRaidConfig>(ConfigTypes.IN_RAID);
         const itemConf = configServer.getConfig<IItemConfig>(ConfigTypes.ITEM);
-        const airConf = configServer.getConfig<IAirdropConfig>(ConfigTypes.AIRDROP);
         const traderConf = configServer.getConfig<ITraderConfig>(ConfigTypes.TRADER);
         const insConf = configServer.getConfig<IInsuranceConfig>(ConfigTypes.INSURANCE);
         const arrays = new BotArrays(tables);
@@ -764,13 +733,11 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         const fleaChangesPreDB = new FleaChangesPreDBLoad(logger, aKIFleaConf, modConfig);
         const quests = new Quests(logger, tables, modConfig);
         const traders = new Traders(logger, tables, modConfig, traderConf, utils);
-        // const airdrop = new Airdrops(logger, modConfig, airConf);
         const maps = new Spawns(logger, tables, modConfig, tables.locations, utils);
         const gear = new Gear(tables, logger, modConfig);
         const itemCloning = new ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const statHandler = ItemStatHandler.getInstance(tables, logger, hashUtil);
         const descGen = new DescriptionGen(tables, modConfig, logger, statHandler);
-        const handbookHelper = container.resolve<HandbookHelper>("HandbookHelper");
 
         //Remember to back up json data before using this, and make sure it isn't overriding existing json objects
         // jsonGen.attTemplatesCodeGen();
@@ -810,8 +777,6 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         }
 
         maps.loadSpawnChanges(locationConfig);
-
-        //airdrop.loadAirdropChanges();
 
         if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {
             botLoader.loadBots();
@@ -993,21 +958,21 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             const counters = pmcData.Stats.Eft.OverallCounters.Items;
             for (const counter of counters) {
                 if (counter.Key.includes("ExpLooting")) {
-                    lootXp += Math.min(counter.Value, 1000);
+                    lootXp = Math.min(lootXp + counter.Value, 1000);
                 }
             }
         }
 
-        const looseModifier = utils.clampNumber(lootXp * 0.00004, 0, 0.06);
+        const looseModifier = utils.clampNumber(lootXp * 0.000035, 0, 0.04);
         const staticModifier = utils.clampNumber(lootXp * 0.00002, 0, 0.03);
-        const minLooseLoot = 0.37;
-        const minstaticLoot = 0.5;
-        const looseLootRegenRate = 0.1;
-        const staticLootRegenRate = 0.05;
+        const looseLootRegenRate = 0.04;
+        const staticLootRegenRate = 0.03;
         const baseLooseLoot: ILootMultiplier = baseMapLoot.looseLootMultiplier;
         const baseStaticLoot: ILootMultiplier = baseMapLoot.staticLootMultiplier;
         const originalLooseMapModi = baseLooseLoot[map];
         const originalStaticMapModi = baseStaticLoot[map];
+        const minLooseLoot = originalLooseMapModi * 0.75;
+        const minstaticLoot = originalLooseMapModi * 0.4;
         const mapAliases: { [key: string]: string[] } = {
             "factory4_day": ["factory4_day", "factory4_night"],
             "factory4_night": ["factory4_day", "factory4_night"]

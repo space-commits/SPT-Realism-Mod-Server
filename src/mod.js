@@ -44,7 +44,6 @@ const json_gen_1 = require("./json/json_gen");
 const quests_1 = require("./traders/quests");
 const insurance_1 = require("./traders/insurance");
 const traders_1 = require("./traders/traders");
-// import { Airdrops } from "./misc/airdrops";
 const spawns_1 = require("./bots/spawns");
 const gear_1 = require("./items/gear");
 const seasonalevents_1 = require("./misc/seasonalevents");
@@ -118,7 +117,7 @@ class Main {
                         return jsonUtil.serialize(modConfig);
                     }
                     catch (e) {
-                        console.error("Realism: Failed to read config file", e);
+                        logger.error("Realism: Failed to read config file" + e);
                     }
                 }
             }
@@ -133,7 +132,7 @@ class Main {
                         return jsonUtil.serialize(data);
                     }
                     catch (e) {
-                        console.error("Realism: Failed to get server template data", e);
+                        logger.error("Realism: Failed to get server template data" + e);
                     }
                 }
             }
@@ -152,7 +151,7 @@ class Main {
                         return jsonUtil.serialize(realismInfo);
                     }
                     catch (e) {
-                        console.error("Realism: Failed to read info file", e);
+                        logger.error("Realism: Failed to read info file" + e);
                     }
                 }
             }
@@ -166,7 +165,7 @@ class Main {
                         return jsonUtil.serialize(realismInfo);
                     }
                     catch (e) {
-                        console.error("Failed to read info file", e);
+                        logger.error("Failed to read info file" + e);
                     }
                 }
             }
@@ -180,13 +179,7 @@ class Main {
             const botGeneratorHelper = container.resolve("BotGeneratorHelper");
             const botNameService = container.resolve("BotNameService");
             const itemFilterService = container.resolve("ItemFilterService");
-            const durabilityLimitsHelper = container.resolve("DurabilityLimitsHelper");
-            const appContext = container.resolve("ApplicationContext");
-            const itemHelper = container.resolve("ItemHelper");
-            const inventoryHelper = container.resolve("InventoryHelper");
-            const containerHelper = container.resolve("ContainerHelper");
             const botGen = new bot_gen_1.BotGen(logger, hashUtil, randomUtil, timeUtil, profileHelper, databaseService, botInventoryGenerator, botLevelGenerator, botEquipmentFilterService, weightedRandomHelper, botHelper, botGeneratorHelper, seasonalEventService, itemFilterService, botNameService, configServer, cloner);
-            const myBotGenHelper = new bot_gen_1.BotGenHelper(logger, randomUtil, databaseService, durabilityLimitsHelper, itemHelper, inventoryHelper, containerHelper, appContext, localisationService, configServer);
             container.afterResolution("BotGenerator", (_t, result) => {
                 result.prepareAndGenerateBot = (sessionId, botGenerationDetails) => {
                     return botGen.myPrepareAndGenerateBot(sessionId, botGenerationDetails);
@@ -197,11 +190,6 @@ class Main {
                     return botGen.myGeneratePlayerScav(sessionId, role, difficulty, botTemplate);
                 };
             }, { frequency: "Always" });
-            // container.afterResolution("BotGeneratorHelper", (_t, result: BotGeneratorHelper) => {
-            //     result.generateExtraPropertiesForItem = (itemTemplate: ITemplateItem, botRole: string = null): { upd?: IUpd } => {
-            //         return myBotGenHelper.myGenerateExtraPropertiesForItem(itemTemplate, botRole);
-            //     }
-            // }, { frequency: "Always" });
         }
         container.afterResolution("TraderAssortHelper", (_t, result) => {
             result.resetExpiredTrader = (trader) => {
@@ -237,19 +225,6 @@ class Main {
                 };
             }, { frequency: "Always" });
         }
-        // if (modConfig.airdrop_changes == true) {
-        //     const locationGenerator = container.resolve<LocationGenerator>("LocationGenerator");
-        //     const lootGenerator = container.resolve<LootGenerator>("LootGenerator");
-        //     const raidTimeAdjustmentService = container.resolve<RaidTimeAdjustmentService>("RaidTimeAdjustmentService");
-        //     const appContext = container.resolve<ApplicationContext>("ApplicationContext");
-        //     const itemFilterService = container.resolve<ItemFilterService>("ItemFilterService");
-        //     const airdropController = new AirdropLootgen(jsonUtil, hashUtil, randomUtil, weightedRandomHelper, logger, locationGenerator, localisationService, raidTimeAdjustmentService, itemFilterService, lootGenerator, databaseServer, timeUtil, configServer, appContext)
-        //     container.afterResolution("LocationController", (_t, result: LocationController) => {
-        //         result.getAirdropLoot = (): IAirdropLootResult => {
-        //             return airdropController.myGetAirdropLoot();
-        //         }
-        //     }, { frequency: "Always" });
-        // }
         staticRouterModService.registerStaticRouter("Realism-OnValidate", [
             {
                 url: "/client/game/version/validate",
@@ -511,7 +486,7 @@ class Main {
             else {
                 fs.mkdir(path.join(profileFolderPath, profileData.info.id), (err) => {
                     if (err) {
-                        return console.error("Realism Mod: Error Backing Up Profile; " + err);
+                        return logger.error("Realism Mod: Error Backing Up Profile; " + err);
                     }
                     logger.log("Realism Mod: Backup path does not exist, creating folder....", "magenta");
                 });
@@ -533,7 +508,7 @@ class Main {
             mode: 0o666
         }, (err) => {
             if (err)
-                console.log("Realism Mod: Error Backing Up Profile; " + err);
+                logger.error("Realism Mod: Error Backing Up Profile; " + err);
             else {
                 logger.log(`Realism Mod: Profile backup executed successfully: ${combinedTime}`, "green");
             }
@@ -554,7 +529,6 @@ class Main {
         const inventoryConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.INVENTORY);
         const raidConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.IN_RAID);
         const itemConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.ITEM);
-        const airConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.AIRDROP);
         const traderConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.TRADER);
         const insConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.INSURANCE);
         const arrays = new arrays_1.BotArrays(tables);
@@ -572,13 +546,11 @@ class Main {
         const fleaChangesPreDB = new fleamarket_1.FleaChangesPreDBLoad(logger, aKIFleaConf, modConfig);
         const quests = new quests_1.Quests(logger, tables, modConfig);
         const traders = new traders_1.Traders(logger, tables, modConfig, traderConf, utils);
-        // const airdrop = new Airdrops(logger, modConfig, airConf);
         const maps = new spawns_1.Spawns(logger, tables, modConfig, tables.locations, utils);
         const gear = new gear_1.Gear(tables, logger, modConfig);
         const itemCloning = new item_cloning_1.ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
         const statHandler = json_handler_1.ItemStatHandler.getInstance(tables, logger, hashUtil);
         const descGen = new description_gen_1.DescriptionGen(tables, modConfig, logger, statHandler);
-        const handbookHelper = container.resolve("HandbookHelper");
         //Remember to back up json data before using this, and make sure it isn't overriding existing json objects
         // jsonGen.attTemplatesCodeGen();
         // jsonGen.weapTemplatesCodeGen();
@@ -609,7 +581,6 @@ class Main {
             maps.openZonesFix();
         }
         maps.loadSpawnChanges(locationConfig);
-        //airdrop.loadAirdropChanges();
         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
             botLoader.loadBots();
         }
@@ -757,20 +728,20 @@ class Main {
             const counters = pmcData.Stats.Eft.OverallCounters.Items;
             for (const counter of counters) {
                 if (counter.Key.includes("ExpLooting")) {
-                    lootXp += Math.min(counter.Value, 1000);
+                    lootXp = Math.min(lootXp + counter.Value, 1000);
                 }
             }
         }
-        const looseModifier = utils.clampNumber(lootXp * 0.00004, 0, 0.06);
+        const looseModifier = utils.clampNumber(lootXp * 0.00003, 0, 0.04);
         const staticModifier = utils.clampNumber(lootXp * 0.00002, 0, 0.03);
-        const minLooseLoot = 0.37;
-        const minstaticLoot = 0.5;
         const looseLootRegenRate = 0.1;
         const staticLootRegenRate = 0.05;
         const baseLooseLoot = baseMapLoot.looseLootMultiplier;
         const baseStaticLoot = baseMapLoot.staticLootMultiplier;
         const originalLooseMapModi = baseLooseLoot[map];
         const originalStaticMapModi = baseStaticLoot[map];
+        const minLooseLoot = originalLooseMapModi * 0.7;
+        const minstaticLoot = originalLooseMapModi * 0.4;
         const mapAliases = {
             "factory4_day": ["factory4_day", "factory4_night"],
             "factory4_night": ["factory4_day", "factory4_night"]

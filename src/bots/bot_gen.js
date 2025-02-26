@@ -21,6 +21,8 @@ const GameEditions_1 = require("C:/snapshot/project/obj/models/enums/GameEdition
 const ItemTpl_1 = require("C:/snapshot/project/obj/models/enums/ItemTpl");
 const MemberCategory_1 = require("C:/snapshot/project/obj/models/enums/MemberCategory");
 const seasonalevents_1 = require("../misc/seasonalevents");
+const InventoryMagGen_1 = require("C:/snapshot/project/obj/generators/weapongen/InventoryMagGen");
+const ItemAddedResult_1 = require("C:/snapshot/project/obj/models/enums/ItemAddedResult");
 const armorPlateWeights = require("../../db/bots/loadouts/templates/armorPlateWeights.json");
 const modConfig = require("../../config/config.json");
 class GenBotLvl extends BotLevelGenerator_1.BotLevelGenerator {
@@ -425,6 +427,7 @@ class BotInvGen extends BotInventoryGenerator_1.BotInventoryGenerator {
         // Generate base inventory with no items
         const botInventory = this.generateInventoryBase();
         this.myGenerateAndAddEquipmentToBot(sessionId, templateInventory, equipmentChances, botRole, botInventory, botLevel, pmcTier, chosenGameVersion);
+        ;
         // Roll weapon spawns and generate a weapon for each roll that passed
         this.myGenerateAndAddWeaponsToBot(templateInventory, equipmentChances, sessionId, botInventory, botRole, isPmc, itemGenerationLimitsMinMax, botLevel, pmcTier, false);
         //if PMC has a bolt action rifle, ensure they get a proper secondary
@@ -467,7 +470,7 @@ class BotInvGen extends BotInventoryGenerator_1.BotInventoryGenerator {
         const botWepGen = new BotWepGen(this.logger, this.hashUtil, this.databaseService, itemHelper, this.weightedRandomHelper, this.botGeneratorHelper, this.randomUtil, this.configServer, botWeaponGeneratorHelper, botWeaponModLimitService, this.botEquipmentModGenerator, this.localisationService, repairService, inventoryMagGenComponents, cloner);
         const generatedWeapon = botWepGen.myGenerateRandomWeapon(sessionId, weaponSlot.slot, templateInventory, botInventory.equipment, equipmentChances.weaponMods, botRole, isPmc, botLevel, pmcTier, getSecondary);
         botInventory.items.push(...generatedWeapon.weapon);
-        this.botWeaponGenerator.addExtraMagazinesToInventory(generatedWeapon, itemGenerationWeights.items.magazines, botInventory, botRole);
+        botWepGen.myAddExtraMagazinesToInventory(generatedWeapon, itemGenerationWeights.items.magazines, botInventory, botRole);
     }
     myGenerateAndAddEquipmentToBot(sessionId, templateInventory, equipmentChances, botRole, botInventory, botLevel, pmcTier, chosenGameVersion) {
         // These will be handled later
@@ -639,6 +642,146 @@ class BotInvGen extends BotInventoryGenerator_1.BotInventoryGenerator {
 }
 exports.BotInvGen = BotInvGen;
 class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
+    myAddExtraMagazinesToInventory(generatedWeaponResult, magWeights, inventory, botRole) {
+        const weaponAndMods = generatedWeaponResult.weapon;
+        const weaponTemplate = generatedWeaponResult.weaponTemplate;
+        const magazineTpl = this.getMagazineTplFromWeaponTemplate(weaponAndMods, weaponTemplate, botRole);
+        const magTemplate = this.itemHelper.getItem(magazineTpl)[1];
+        if (!magTemplate) {
+            this.logger.error(this.localisationService.getText("bot-unable_to_find_magazine_item", magazineTpl));
+            return;
+        }
+        const ammoTemplate = this.itemHelper.getItem(generatedWeaponResult.chosenAmmoTpl)[1];
+        if (!ammoTemplate) {
+            this.logger.error(this.localisationService.getText("bot-unable_to_find_ammo_item", generatedWeaponResult.chosenAmmoTpl));
+            return;
+        }
+        // Has an UBGL
+        if (generatedWeaponResult.chosenUbglAmmoTpl) {
+            this.addUbglGrenadesToBotInventory(weaponAndMods, generatedWeaponResult, inventory);
+        }
+        const inventoryMagGenModel = new InventoryMagGen_1.InventoryMagGen(magWeights, magTemplate, weaponTemplate, ammoTemplate, inventory);
+        const isExternalMag = weaponTemplate._parent != BaseClasses_1.BaseClasses.UBGL &&
+            weaponTemplate._props.ReloadMode !== "OnlyBarrel" &&
+            magTemplate._props.ReloadMagType !== "InternalMagazine";
+        if (isExternalMag) {
+            this.myProcess(inventoryMagGenModel);
+        }
+        else {
+            this.inventoryMagGenComponents
+                .find((v) => v.canHandleInventoryMagGen(inventoryMagGenModel))
+                .process(inventoryMagGenModel);
+        }
+        // Add x stacks of bullets to SecuredContainer (bots use a magic mag packing skill to reload instantly)
+        this.addAmmoToSecureContainer(this.botConfig.secureContainerAmmoStackCount, generatedWeaponResult.chosenAmmoTpl, ammoTemplate._props.StackMaxSize, inventory);
+    }
+    myProcess(inventoryMagGen) {
+        // Cout of attempts to fit a magazine into bot inventory
+        let fitAttempts = 0;
+        let magCount = 0;
+        let ammoCount = 0;
+        // Magazine Db template
+        let magTemplate = inventoryMagGen.getMagazineTemplate();
+        let magazineTpl = magTemplate._id;
+        const weapon = inventoryMagGen.getWeaponTemplate();
+        const attemptedMagBlacklist = [];
+        let defaultMagazineTpl = this.botWeaponGeneratorHelper.getWeaponsDefaultMagazineTpl(weapon);
+        const randomizedMagazineCount = Number(this.botWeaponGeneratorHelper.getRandomizedMagazineCount(inventoryMagGen.getMagCount()));
+        //If G36 is using STANAG adapter + mags that can't be fit inside rig, then this makes sure it uses STANAG mag as default instad of G36 mag
+        const isG36 = weapon._id == "623063e994fc3f7b302a9696";
+        if (isG36) {
+            const isUsingAdapter = magazineTpl != "62307b7b10d2321fa8741921";
+            if (isUsingAdapter)
+                defaultMagazineTpl = "5c6d450c2e221600114c997d"; //HK PM gen 2
+        }
+        const isPistol = weapon?._props?.weapClass == "pistol";
+        const isSMG = weapon?._props?.weapClass == "smg";
+        const isShotgun = weapon?._props?.weapClass == "shotgun";
+        const magRoundCount = magTemplate?._props?.Cartridges[0]._max_count;
+        const roundLimit = isPistol ? 25 : isSMG ? 45 : isShotgun ? 8 : 45;
+        const hiCapMagLimit = isPistol ? 1 : isSMG ? 2 : isShotgun ? 2 : 1;
+        const isUsingHiCapMag = magRoundCount > roundLimit;
+        const isUltraHiCapMag = magRoundCount > 70;
+        const ammoLimit = isPistol ? 30 : isSMG ? 150 : isShotgun ? 50 : 140;
+        for (let i = 0; i < randomizedMagazineCount; i++) {
+            //reduce the number of 60 rounders on bots
+            if (isUltraHiCapMag || (isUsingHiCapMag && magCount >= hiCapMagLimit)) {
+                magazineTpl = defaultMagazineTpl;
+                magTemplate = this.itemHelper.getItem(magazineTpl)[1];
+            }
+            const magazineWithAmmo = this.botWeaponGeneratorHelper.createMagazineWithAmmo(magazineTpl, inventoryMagGen.getAmmoTemplate()._id, magTemplate);
+            const fitsIntoInventory = this.botGeneratorHelper.addItemWithChildrenToEquipmentSlot([EquipmentSlots_1.EquipmentSlots.TACTICAL_VEST, EquipmentSlots_1.EquipmentSlots.POCKETS], magazineWithAmmo[0]._id, magazineTpl, magazineWithAmmo, inventoryMagGen.getPmcInventory());
+            if (fitsIntoInventory === ItemAddedResult_1.ItemAddedResult.NO_CONTAINERS) {
+                // No containers to fit magazines, stop trying
+                break;
+            }
+            // No space for magazine and we haven't reached desired magazine count
+            if (fitsIntoInventory === ItemAddedResult_1.ItemAddedResult.NO_SPACE && i < randomizedMagazineCount) {
+                // Prevent infinite loop by only allowing 5 attempts at fitting a magazine into inventory
+                if (fitAttempts > 5) {
+                    this.logger.debug(`Failed ${fitAttempts} times to add magazine ${magazineTpl} to bot inventory, stopping`);
+                    break;
+                }
+                /* We were unable to fit at least the minimum amount of magazines,
+                 * so we fallback to default magazine and try again.
+                 * Temporary workaround to Killa spawning with no extra mags if he spawns with a drum mag */
+                if (magazineTpl === defaultMagazineTpl) {
+                    // We were already on default - stop here to prevent infinite looping
+                    break;
+                }
+                // Add failed magazine tpl to blacklist
+                attemptedMagBlacklist.push(magazineTpl);
+                // Set chosen magazine tpl to the weapons default magazine tpl and try to fit into inventory next loop
+                magazineTpl = defaultMagazineTpl;
+                magTemplate = this.itemHelper.getItem(magazineTpl)[1];
+                if (!magTemplate) {
+                    this.logger.error(this.localisationService.getText("bot-unable_to_find_default_magazine_item", magazineTpl));
+                    break;
+                }
+                // Edge case - some weapons (SKS) have an internal magazine as default, choose random non-internal magazine to add to bot instead
+                if (magTemplate._props.ReloadMagType === "InternalMagazine") {
+                    const result = this.getRandomExternalMagazineForInternalMagazineGun(inventoryMagGen.getWeaponTemplate()._id, attemptedMagBlacklist);
+                    if (!result?._id) {
+                        this.logger.debug(`Unable to add additional magazine into bot inventory for weapon: ${weapon._name}, attempted: ${fitAttempts} times`);
+                        break;
+                    }
+                    magazineTpl = result._id;
+                    magTemplate = result;
+                    fitAttempts++;
+                }
+                // Reduce loop counter by 1 to ensure we get full cout of desired magazines
+                i--;
+            }
+            if (fitsIntoInventory === ItemAddedResult_1.ItemAddedResult.SUCCESS) {
+                // Reset fit counter now it succeeded
+                fitAttempts = 0;
+                magCount++;
+                ammoCount += this.itemHelper.getItem(magazineTpl)[1]?._props?.Cartridges[0]._max_count;
+                if (ammoCount >= ammoLimit) {
+                    break;
+                }
+            }
+        }
+    }
+    getRandomExternalMagazineForInternalMagazineGun(weaponTpl, magazineBlacklist) {
+        // The mag Slot data for the weapon
+        const magSlot = this.itemHelper.getItem(weaponTpl)[1]._props.Slots.find((x) => x._name === "mod_magazine");
+        if (!magSlot) {
+            return undefined;
+        }
+        // All possible mags that fit into the weapon excluding blacklisted
+        const magazinePool = magSlot._props.filters[0].Filter.filter((x) => !magazineBlacklist.includes(x)).map((x) => this.itemHelper.getItem(x)[1]);
+        if (!magazinePool) {
+            return undefined;
+        }
+        // Non-internal magazines that fit into the weapon
+        const externalMagazineOnlyPool = magazinePool.filter((x) => x._props.ReloadMagType !== "InternalMagazine");
+        if (!externalMagazineOnlyPool || externalMagazineOnlyPool?.length === 0) {
+            return undefined;
+        }
+        // Randomly chosen external magazine
+        return this.randomUtil.getArrayValue(externalMagazineOnlyPool);
+    }
     myGenerateRandomWeapon(sessionId, equipmentSlot, botTemplateInventory, weaponParentId, modChances, botRole, isPmc, botLevel, pmcTier, getSecondary = false) {
         let weaponTpl = "";
         if (getSecondary) {
@@ -647,6 +790,7 @@ class BotWepGen extends BotWeaponGenerator_1.BotWeaponGenerator {
         else {
             weaponTpl = this.pickWeightedWeaponTplFromPool(equipmentSlot, botTemplateInventory);
         }
+        1;
         if (weaponTpl === "") {
             this.logger.error("Realism Mod: Failed To Generate Weapon Tpl");
             return;

@@ -272,12 +272,13 @@
                 "672e2e75a26efb53bc703d45": 1,
                 "672e2e751ff683e9432cb5af": 1
             },
-            "Backpack": {},
+            "Backpack": {
+                "6673b1ac5cae0610f1079d6f": 1
+            },
             "Earpiece": {},
             "Eyewear": {},
             "TacticalVest": {
                 "6673b1ac5cae0610f1079d7a": 1,
-                "6673b1ac5cae0610f1079d7b": 1,
                 "6673b1ac5cae0610f1079d7c": 1,
                 "66326bfd46817c660d015137": 1,
                 "66326bfd46817c660d015138": 1,
@@ -287,7 +288,6 @@
                 "66bf757f27d0b097db0ace22": 1,
                 "66bf757f27d0b097db0ace23": 1,
                 "66bf757f27d0b097db0ace36": 1,
-                "6673b1ac5cae0610f1079d6f": 1,
                 "66bf757f27d0b097db0ace38": 1,
                 "66326bfd46817c660d015135": 1,
                 "672e2e75dbf780f902fd6d68": 1,
@@ -453,6 +453,7 @@
             "Earpiece": {},
             "Eyewear": {},
             "TacticalVest": {
+                "6673b1ac5cae0610f1079d7b": 1,
                 "6673b1ac5cae0610f1079d78": 1,
                 "6673b1ac5cae0610f1079d79": 1,
                 "66326bfd46817c660d01513b": 1,
@@ -525,7 +526,8 @@
             "672e2e75c076d2093b05c764": 1,
             "672e2e75b9082dbf88dd1dbd": 1,
             "672e2e75d276dfa8dd76770c": 1,
-            "672e2e75592eb3c91e248717": 1
+            "672e2e75592eb3c91e248717": 1,
+            "6673b1ac5cae0610f1079d6f": 1
         },
         "Earpiece": {},
         "Eyewear": {},
@@ -547,14 +549,12 @@
             "66326bfd46817c660d015152": 1,
             "66b94b886af54725ea0a4b93": 1,
             "6673b1ac5cae0610f1079d7a": 1,
-            "6673b1ac5cae0610f1079d7b": 1,
             "6673b1ac5cae0610f1079d7c": 1,
             "66326bfd46817c660d015139": 1,
             "66326bfd46817c660d015145": 1,
             "66bf757f27d0b097db0ace22": 1,
             "66bf757f27d0b097db0ace23": 1,
             "66bf757f27d0b097db0ace36": 1,
-            "6673b1ac5cae0610f1079d6f": 1,
             "66bf757f27d0b097db0ace38": 1
         },
         "FaceCover": {
@@ -577,7 +577,6 @@
             "66bf757f27d0b097db0ace44": 1,
             "66bf757f27d0b097db0ace58": 1,
             "66bf757f27d0b097db0ace61": 1,
-            "676a1476242dea0ba69ebbd8": 1,
             "668bc5cd834c88e06b08b6aa": 1
         },
         "Headwear_night": {},

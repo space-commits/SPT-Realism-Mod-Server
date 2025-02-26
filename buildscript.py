@@ -6,7 +6,7 @@ import zipfile
 SOURCE_DIR = "F:/SP EFT/SPT-310/user/mods/zSPT-Realism-Mod-Dev"  # Change to your dev folder
 BUILD_DIR = "F:/SP EFT/SPT-310/user/mods/zSPT-Realism-Mod-Dev/Build"   # Change to your build folder
 PLUGINS_DIR = "F:/SP EFT/SPT-310/BepInEx/plugins"  # Additional source directory
-ZIP_NAME = "Realism-Mod-1.5.2-SPT-3.10.5.zip"  # Name of the final package
+ZIP_NAME = "Realism-Mod-1.5.3-SPT-3.10.5.zip"  # Name of the final package
 MOD_SUBFOLDER = "user/mods/SPT-Realism"
 
 # Rules
