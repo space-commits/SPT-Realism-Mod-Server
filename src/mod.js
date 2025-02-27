@@ -732,15 +732,15 @@ class Main {
                 }
             }
         }
-        const looseModifier = utils.clampNumber(lootXp * 0.00003, 0, 0.04);
+        const looseModifier = utils.clampNumber(lootXp * 0.000035, 0, 0.04);
         const staticModifier = utils.clampNumber(lootXp * 0.00002, 0, 0.03);
-        const looseLootRegenRate = 0.1;
-        const staticLootRegenRate = 0.05;
+        const looseLootRegenRate = 0.04;
+        const staticLootRegenRate = 0.03;
         const baseLooseLoot = baseMapLoot.looseLootMultiplier;
         const baseStaticLoot = baseMapLoot.staticLootMultiplier;
         const originalLooseMapModi = baseLooseLoot[map];
         const originalStaticMapModi = baseStaticLoot[map];
-        const minLooseLoot = originalLooseMapModi * 0.7;
+        const minLooseLoot = originalLooseMapModi * 0.75;
         const minstaticLoot = originalLooseMapModi * 0.4;
         const mapAliases = {
             "factory4_day": ["factory4_day", "factory4_night"],

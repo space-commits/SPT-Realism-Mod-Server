@@ -276,6 +276,8 @@ class ItemCloning {
         const transmitter = this.itemDB()[transmitterId];
         transmitter._props.CanSellOnRagfair = false;
         arrays_1.StaticArrays.secureContainers.forEach(s => {
+            if (!this.itemDB()[s]._props.Grids[0]._props.filters[0])
+                return; //if SVM or another mod changed secure container filters
             this.itemDB()[s]._props.Grids[0]._props.filters[0].Filter.push(containerId);
             this.itemDB()[s]._props.Grids[0]._props.filters[0].ExcludedFilter.push(ramuId, gamuId, ramuDataId, gamuDataId);
         });

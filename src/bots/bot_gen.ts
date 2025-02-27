@@ -583,7 +583,7 @@ export class BotInvGen extends BotInventoryGenerator {
         const generatedWeapon = botWepGen.myGenerateRandomWeapon(sessionId, weaponSlot.slot, templateInventory, botInventory.equipment, equipmentChances.weaponMods, botRole, isPmc, botLevel, pmcTier, getSecondary);
 
         botInventory.items.push(...generatedWeapon.weapon);
-        botWepGen.myAddExtraMagazinesToInventory(generatedWeapon, itemGenerationWeights.items.magazines, botInventory, botRole);
+        botWepGen.myAddExtraMagazinesToInventory(generatedWeapon, itemGenerationWeights.items.magazines, botInventory, botRole, templateInventory);
     }
 
     private myGenerateAndAddEquipmentToBot(sessionId: string, templateInventory: IInventory, equipmentChances: IChances, botRole: string, botInventory: PmcInventory, botLevel: number, pmcTier: number, chosenGameVersion: string,): void {
@@ -815,6 +815,7 @@ export class BotWepGen extends BotWeaponGenerator {
         magWeights: IGenerationData,
         inventory: PmcInventory,
         botRole: string,
+        botTemplateInventory: IInventory
     ): void {
 
         const weaponAndMods = generatedWeaponResult.weapon;
@@ -856,7 +857,7 @@ export class BotWepGen extends BotWeaponGenerator {
             magTemplate._props.ReloadMagType !== "InternalMagazine";
 
         if (isExternalMag) {
-            this.myProcess(inventoryMagGenModel);
+            this.myProcess(inventoryMagGenModel, botTemplateInventory);
         }
         else {
             this.inventoryMagGenComponents
@@ -873,7 +874,7 @@ export class BotWepGen extends BotWeaponGenerator {
         );
     }
 
-    private myProcess(inventoryMagGen: InventoryMagGen): void {
+    private myProcess(inventoryMagGen: InventoryMagGen, botTemplateInventory: IInventory): void {
         // Cout of attempts to fit a magazine into bot inventory
         let fitAttempts = 0;
         let magCount = 0;
@@ -905,18 +906,25 @@ export class BotWepGen extends BotWeaponGenerator {
         const isUsingHiCapMag = magRoundCount > roundLimit;
         const isUltraHiCapMag = magRoundCount > 70;
         const ammoLimit = isPistol ? 30 : isSMG ? 150 : isShotgun ? 50 : 140;
+        let ammo = inventoryMagGen.getAmmoTemplate()._id;
 
+        let hasReplacedHighCap = false;
         for (let i = 0; i < randomizedMagazineCount; i++) {
 
+            const rndNum = Utils.getInstance().pickRandNumInRange(0, 100);
+            if (rndNum >= 70) ammo = this.getWeightedCompatibleAmmo(botTemplateInventory.Ammo, inventoryMagGen.getWeaponTemplate());
+
             //reduce the number of 60 rounders on bots
-            if (isUltraHiCapMag || (isUsingHiCapMag && magCount >= hiCapMagLimit)) {
+            if (!hasReplacedHighCap && (isUltraHiCapMag || (isUsingHiCapMag && magCount >= hiCapMagLimit))) {
                 magazineTpl = defaultMagazineTpl;
                 magTemplate = this.itemHelper.getItem(magazineTpl)[1];
+                ammo = this.getWeightedCompatibleAmmo(botTemplateInventory.Ammo, inventoryMagGen.getWeaponTemplate());
+                hasReplacedHighCap = true;
             }
 
             const magazineWithAmmo = this.botWeaponGeneratorHelper.createMagazineWithAmmo(
                 magazineTpl,
-                inventoryMagGen.getAmmoTemplate()._id,
+                ammo,
                 magTemplate,
             );
 

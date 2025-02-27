@@ -506,7 +506,7 @@ class Ammo {
             }
             //Star slug
             if (serverItem._id === "5d6e6a05a4b93618084f58d0") {
-                serverItem._props.PenetrationPower = 14;
+                serverItem._props.PenetrationPower = 20;
                 serverItem._props.ArmorDamage = 1;
                 serverItem._props.Damage = 176;
                 serverItem._props.InitialSpeed = 415;
@@ -528,7 +528,7 @@ class Ammo {
             }
             //Devestator HP slug
             if (serverItem._id === "5d6e6a5fa4b93614ec501745") {
-                serverItem._props.PenetrationPower = 18;
+                serverItem._props.PenetrationPower = 14;
                 serverItem._props.ArmorDamage = 1;
                 serverItem._props.Damage = 190;
                 serverItem._props.InitialSpeed = 405;
@@ -550,7 +550,7 @@ class Ammo {
             }
             //Poleva 3 HP slug
             if (serverItem._id === "5d6e6a53a4b9361bd473feec") {
-                serverItem._props.PenetrationPower = 24;
+                serverItem._props.PenetrationPower = 26;
                 serverItem._props.ArmorDamage = 1;
                 serverItem._props.Damage = 170;
                 serverItem._props.InitialSpeed = 425;
@@ -572,7 +572,7 @@ class Ammo {
             }
             //Poleva 6u FMJ slug
             if (serverItem._id === "5d6e6a42a4b9364f07165f52") {
-                serverItem._props.PenetrationPower = 50;
+                serverItem._props.PenetrationPower = 37;
                 serverItem._props.ArmorDamage = 1;
                 serverItem._props.Damage = 148;
                 serverItem._props.InitialSpeed = 445;
