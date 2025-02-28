@@ -912,7 +912,7 @@ export class BotWepGen extends BotWeaponGenerator {
         for (let i = 0; i < randomizedMagazineCount; i++) {
 
             const rndNum = Utils.getInstance().pickRandNumInRange(0, 100);
-            if (rndNum >= 70) ammo = this.getWeightedCompatibleAmmo(botTemplateInventory.Ammo, inventoryMagGen.getWeaponTemplate());
+            if (rndNum >= 65) ammo = this.getWeightedCompatibleAmmo(botTemplateInventory.Ammo, inventoryMagGen.getWeaponTemplate());
 
             //reduce the number of 60 rounders on bots
             if (!hasReplacedHighCap && (isUltraHiCapMag || (isUsingHiCapMag && magCount >= hiCapMagLimit))) {

@@ -51,6 +51,12 @@
             "z": -0.01
         }
     },
+    "6718817435e3cfd9550d2c27": {
+        "$type": "RealismMod.Gun, RealismMod",
+        "ItemID": "6718817435e3cfd9550d2c27",
+        "Name": "weapon_steyr_aug_a3_m1_556x45(black)",
+        "TemplateID": "63171672192e68c5460cebc5"
+    },
     "62e7c4fba689e8c9c50dfc38": {
         "$type": "RealismMod.Gun, RealismMod",
         "ItemID": "62e7c4fba689e8c9c50dfc38",
@@ -1674,10 +1680,10 @@
         "BaseTorque": 1,
         "HasShoulderContact": false,
         "Ergonomics": 80,
-        "VerticalRecoil": 82,
-        "HorizontalRecoil": 130,
-        "Dispersion": 11,
-        "CameraRecoil": 0.036,
+        "VerticalRecoil": 81,
+        "HorizontalRecoil": 128,
+        "Dispersion": 10,
+        "CameraRecoil": 0.032,
         "VisualMulti": 1.13,
         "Convergence": 17,
         "RecoilAngle": 90,
