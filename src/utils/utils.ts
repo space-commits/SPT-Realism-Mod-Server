@@ -7,6 +7,10 @@ import { ILogger } from "@spt/models/spt/utils/ILogger";
 import crypto from "node:crypto";
 import { IMods } from "@spt/models/eft/common/tables/IBotType";
 import { StaticArrays } from "./arrays";
+import { ISptProfile } from "@spt/models/eft/profile/ISptProfile";
+import { InstanceManager } from "../instance_manager";
+import { LogTextColor } from "@spt/models/spt/logging/LogTextColor";
+import { ProfileHelper } from "@spt/helpers/ProfileHelper";
 
 const fs = require('fs');
 const modConfig = require("../../config/config.json");
@@ -20,7 +24,6 @@ export class Utils {
         if (!Utils.instance) Utils.instance = new Utils(tables);
         return Utils.instance;
     }
-
 
     itemDB(): Record<string, ITemplateItem> {
         return this.tables.templates.items;
@@ -72,7 +75,6 @@ export class Utils {
             profileItem.upd.FoodDrink.HpPercent = templateItem._props.MaxResource;
         }
     }
-
 
     private correctMedicalRes(profileItem: IItem, playerXP: number, logger: ILogger) {
         let templateItem = this.itemDB()[profileItem._tpl];
@@ -169,18 +171,53 @@ export class ModTracker {
 }
 
 export class ProfileTracker {
-    static profileIds: string[] = [];
     static averagePlayerLevel: number = 1;
     static playerRecord: Record<string, number> = {};
+
+    public static checkLoggedInProfiles(pmcData: IPmcData, profileData: ISptProfile, removeProfile: boolean) {
+       
+        const level = pmcData?.Info?.Level ?? 1;
+
+        if (removeProfile) delete ProfileTracker.playerRecord[profileData.info.id];
+        else ProfileTracker.playerRecord[profileData.info.id] = level;
+
+        let playerCount = 0;
+        let cumulativePlayerLevel = 0;
+
+        for (const key in ProfileTracker.playerRecord) {
+            const playerLevel = ProfileTracker.playerRecord[key];
+            if (!isNaN(playerLevel)) {
+                cumulativePlayerLevel += playerLevel;
+                playerCount += 1;
+            }
+        }
+
+        ProfileTracker.averagePlayerLevel = playerCount > 0 ? cumulativePlayerLevel / playerCount : 1;
+        InstanceManager.getLoggerInstance().logWithColor(`Realism Mod: Players in server ${playerCount}, average level: ${ProfileTracker.averagePlayerLevel}`, LogTextColor.GREEN);
+    }
+
+    public static getPmcProfileData(profileHelper: ProfileHelper): IPmcData[] {
+        let profiles: IPmcData[] = [];
+        for (const key in ProfileTracker.playerRecord) {
+            profiles.push(profileHelper.getPmcProfile(key));
+        }
+        return profiles;
+    }
 }
 
 export class ConfigChecker {
     static dllIsPresent: boolean = false;
 }
 
+export enum MapType {
+    Urban = "urban",
+    Outdoor = "uutdoor",
+    CQB = "cqb",
+}
+
 export class RaidInfoTracker {
     static isNight: boolean = false;
-    static mapType: string = "";
+    static mapType: MapType = MapType.Urban;
     static mapName: string = "";
     static generatedBotsCount: number = 0;
     // static activeRaids: RaidInfo[] = [];

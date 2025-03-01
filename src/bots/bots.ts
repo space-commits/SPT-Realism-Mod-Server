@@ -3,7 +3,7 @@ import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { ConfigServer } from "@spt/servers/ConfigServer";
 import { ConfigTypes } from "@spt/models/enums/ConfigTypes";
 import { EquipmentFilters, IBotConfig } from "@spt/models/spt/config/IBotConfig";
-import { BotTierTracker, Utils, RaidInfoTracker, ModTracker } from "../utils/utils";
+import { BotTierTracker, Utils, RaidInfoTracker, ModTracker, MapType } from "../utils/utils";
 import { IBotType, IHealth, IMods } from "@spt/models/eft/common/tables/IBotType";
 import { IPmcConfig } from "@spt/models/spt/config/IPmcConfig";
 import { ILocations } from "@spt/models/spt/server/ILocations";
@@ -41,7 +41,8 @@ const realismAmmo = require("../../db/bots/loadouts/templates/pmc_ammo_realism.j
 const vanillaAmmo = require("../../db/bots/loadouts/templates/pmc_ammo_vanilla.json");
 const lootOdds = require("../../db/bots/loadouts/templates/lootOdds.json");
 const pmcLootLimits = require("../../db/bots/loadouts/PMCs/PMCLootLimitCat.json");
-const userWeapons = require("../../db/bots/user_bot_templates/items_to_add.json");
+const userItems = require("../../db/bots/user_bot_templates/items_to_add.json");
+const userAmmo = require("../../db/bots/user_bot_templates/ammo_to_add.json");
 
 export class BotLoader {
     private scavBase: IBotType;
@@ -301,7 +302,7 @@ export class BotLoader {
         return armor;
     }
 
-    private mergeHelper(loadOutItems, newItems) {
+    private mergeHelper(loadOutItems: Record<string, number>, newItems: Record<string, number>) {
         for (let key in newItems) {
             if (!loadOutItems.hasOwnProperty(key) && this.itemDB()[key]) {
                 loadOutItems[key] = JSON.parse(JSON.stringify(newItems[key]));
@@ -309,8 +310,55 @@ export class BotLoader {
         }
     }
 
-    private mergeEquipmentItems(botTier: IBotType, userTier) {
-        this.mergeHelper(botTier.inventory.equipment.FirstPrimaryWeapon, userTier.FirstPrimaryWeapon);
+    private mergeLoot(botTier: IBotType, userTier: any) {
+        this.mergeHelper(botTier.inventory.items.TacticalVest, userTier.loot.TacticalVest);
+        this.mergeHelper(botTier.inventory.items.Pockets, userTier.loot.Pockets);
+        this.mergeHelper(botTier.inventory.items.Backpack, userTier.loot.Backpack);
+        this.mergeHelper(botTier.inventory.items.SecuredContainer, userTier.loot.SecuredContainer);
+        this.mergeHelper(botTier.inventory.items.SpecialLoot, userTier.loot.SpecialLoot);
+    }
+
+    private mergeAmmo(botTier: IBotType, ammoTier: any) {
+        for (const c in botTier.inventory.Ammo) {
+            const originlCaliber = botTier.inventory.Ammo[c];
+            const userCaliber = ammoTier[c];
+            this.mergeHelper(originlCaliber, userCaliber);
+        }
+    }
+
+    private getWeaponRecord(userTier: any, mapType) {
+        const weaponMap = {
+            [MapType.Urban]: userTier.FirstPrimaryWeapon_urban,
+            [MapType.Outdoor]: userTier.FirstPrimaryWeapon_outdoor,
+            [MapType.CQB]: userTier.FirstPrimaryWeapon_cqb,
+        };
+        return weaponMap[mapType];
+    }
+
+    private getPropertyNames(path: string): string[] {
+        return path.split('.');
+    }
+
+    //split the string path to get the property string names
+    //use that property name string as the key to retrieve the actual json object
+    private getJsonObj(file: any, path: string) {
+        const properties = this.getPropertyNames(path);
+        let result = file;
+        for (const key of properties) {
+            result = result?.[key];
+        }
+        return result;
+    }
+
+    private mergeWithUserEquipmentItems(botTier: IBotType, dataPath: string) {
+        const userTier = this.getJsonObj(userItems, dataPath);
+        const ammoTier = this.getJsonObj(userAmmo, dataPath);
+
+        let primaryWeapon = this.getWeaponRecord(userTier, RaidInfoTracker.mapType) ?? userTier.FirstPrimaryWeapon;
+        if (Object.keys(primaryWeapon).length === 0) primaryWeapon = userTier.FirstPrimaryWeapon;
+        const helmets = RaidInfoTracker.isNight && userTier.Headwear_night != null ? userTier.Headwear_night : userTier.Headwear
+
+        this.mergeHelper(botTier.inventory.equipment.FirstPrimaryWeapon, primaryWeapon);
         this.mergeHelper(botTier.inventory.equipment.SecondPrimaryWeapon, userTier.SecondPrimaryWeapon);
         this.mergeHelper(botTier.inventory.equipment.Holster, userTier.Holster);
         this.mergeHelper(botTier.inventory.equipment.Scabbard, userTier.Scabbard);
@@ -320,8 +368,12 @@ export class BotLoader {
         this.mergeHelper(botTier.inventory.equipment.Eyewear, userTier.Eyewear);
         this.mergeHelper(botTier.inventory.equipment.FaceCover, userTier.FaceCover);
         this.mergeHelper(botTier.inventory.equipment.TacticalVest, userTier.TacticalVest);
-        this.mergeHelper(botTier.inventory.equipment.Headwear, userTier.Headwear);
+        this.mergeHelper(botTier.inventory.equipment.Headwear, helmets);
         this.mergeHelper(botTier.inventory.equipment.ArmorVest, userTier.ArmorVest);
+        this.mergeHelper(botTier.appearance.body, userTier.appearance.body);
+        this.mergeHelper(botTier.appearance.feet, userTier.appearance.feet);
+        this.mergeLoot(botTier, userTier);
+        this.mergeAmmo(botTier, ammoTier);
     }
 
     public loadBotLootChanges() {
@@ -455,9 +507,8 @@ export class BotLoader {
     }
 
     private setBotHPHelper(botArr: IBotType[]) {
-        for (let bot in botArr) {
-            for (let hpSet in botArr[bot].health.BodyParts) {
-                let botPartSet = botArr[bot].health.BodyParts[hpSet];
+        for (let bot of botArr) {
+            for (let botPartSet of bot.health.BodyParts) {
                 for (let part in botPartSet) {
                     for (let tempPart in botHealth.health.BodyParts[0]) {
                         if (part === tempPart) {
@@ -467,7 +518,7 @@ export class BotLoader {
                     }
                 }
             }
-            botArr[bot].health.Temperature = botHealth.health.Temperature;
+            bot.health.Temperature = botHealth.health.Temperature;
         }
     }
 
@@ -506,9 +557,8 @@ export class BotLoader {
 
     //the devil himself
     private botHPMultiHelper(botArr: IBotType[], multi) {
-        for (let bot in botArr) {
-            for (let hpSet in botArr[bot].health.BodyParts) {
-                let botPartSet = botArr[bot].health.BodyParts[hpSet];
+        for (let bot of botArr) {
+            for (let botPartSet of bot.health.BodyParts) {
                 for (let part in botPartSet) {
                     botPartSet[part].min = Math.round(botPartSet[part].min * multi);
                     botPartSet[part].max = Math.round(botPartSet[part].max * multi);
@@ -784,15 +834,15 @@ export class BotLoader {
             this.botConf().equipment["pmc"].nvgIsActiveChanceDayPercent = 0;
             this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 0;
             this.botConf().equipment["pmc"].laserIsActiveChancePercent = 0;
-            if (RaidInfoTracker.mapType === "urban") {
+            if (RaidInfoTracker.mapType == MapType.Urban) {
                 this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 0;
                 this.botConf().equipment["pmc"].laserIsActiveChancePercent = 55;
             }
-            if (RaidInfoTracker.mapType === "cqb") {
+            if (RaidInfoTracker.mapType == MapType.CQB) {
                 this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 80;
                 this.botConf().equipment["pmc"].laserIsActiveChancePercent = 80;
             }
-            if (RaidInfoTracker.mapType === "outdoor") {
+            if (RaidInfoTracker.mapType == MapType.Outdoor) {
                 this.botConf().equipment["pmc"].faceShieldIsActiveChancePercent = 50;
                 this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 0;
                 this.botConf().equipment["pmc"].laserIsActiveChancePercent = 0;
@@ -861,15 +911,15 @@ export class BotLoader {
             this.botConf().equipment["pmc"].nvgIsActiveChanceDayPercent = 0;
             this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 0;
             this.botConf().equipment["pmc"].laserIsActiveChancePercent = 0;
-            if (RaidInfoTracker.mapType === "urban") {
+            if (RaidInfoTracker.mapType == MapType.Urban) {
                 this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 0;
                 this.botConf().equipment["pmc"].laserIsActiveChancePercent = 35;
             }
-            if (RaidInfoTracker.mapType === "cqb") {
+            if (RaidInfoTracker.mapType == MapType.CQB) {
                 this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 100;
                 this.botConf().equipment["pmc"].laserIsActiveChancePercent = 100;
             }
-            if (RaidInfoTracker.mapType === "outdoor") {
+            if (RaidInfoTracker.mapType == MapType.Outdoor) {
                 this.botConf().equipment["pmc"].faceShieldIsActiveChancePercent = 50;
                 this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 0;
                 this.botConf().equipment["pmc"].laserIsActiveChancePercent = 0;
@@ -937,15 +987,15 @@ export class BotLoader {
             this.botConf().equipment["pmc"].nvgIsActiveChanceDayPercent = 0;
             this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 0;
             this.botConf().equipment["pmc"].laserIsActiveChancePercent = 0;
-            if (RaidInfoTracker.mapType === "urban") {
+            if (RaidInfoTracker.mapType == MapType.Urban) {
                 this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 0;
                 this.botConf().equipment["pmc"].laserIsActiveChancePercent = 15;
             }
-            if (RaidInfoTracker.mapType === "cqb") {
+            if (RaidInfoTracker.mapType == MapType.CQB) {
                 this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 100;
                 this.botConf().equipment["pmc"].laserIsActiveChancePercent = 100;
             }
-            if (RaidInfoTracker.mapType === "outdoor") {
+            if (RaidInfoTracker.mapType == MapType.Outdoor) {
                 this.botConf().equipment["pmc"].faceShieldIsActiveChancePercent = 75;
                 this.botConf().equipment["pmc"].lightIsActiveDayChancePercent = 0;
                 this.botConf().equipment["pmc"].laserIsActiveChancePercent = 0;
@@ -990,7 +1040,7 @@ export class BotLoader {
         else {
             this.botConf().equipment["assault"].lightIsActiveDayChancePercent = 10;
             this.botConf().equipment["assault"].laserIsActiveChancePercent = 10;
-            if (RaidInfoTracker.mapType === "cqb") {
+            if (RaidInfoTracker.mapType == MapType.CQB) {
                 this.botConf().equipment["assault"].lightIsActiveDayChancePercent = 70;
                 this.botConf().equipment["assault"].laserIsActiveChancePercent = 70;
             }
@@ -1005,7 +1055,7 @@ export class BotLoader {
             this.scavBase.generation.items.food.weights = lootOdds.dynamic_scav.items.drink.weights;
         }
 
-        this.mergeEquipmentItems(this.scavBase, userWeapons.scav.tier1);
+        this.mergeWithUserEquipmentItems(this.scavBase, "scav.tier1");
 
         BotTierTracker.scavTier = 1;
         if (this.modConfig.logEverything == true) {
@@ -1035,7 +1085,7 @@ export class BotLoader {
         else {
             this.botConf().equipment["assault"].lightIsActiveDayChancePercent = 10;
             this.botConf().equipment["assault"].laserIsActiveChancePercent = 10;
-            if (RaidInfoTracker.mapType === "cqb") {
+            if (RaidInfoTracker.mapType == MapType.CQB) {
                 this.botConf().equipment["assault"].lightIsActiveDayChancePercent = 80;
                 this.botConf().equipment["assault"].laserIsActiveChancePercent = 80;
             }
@@ -1049,7 +1099,7 @@ export class BotLoader {
             this.scavBase.generation.items.food.weights = lootOdds.dynamic_scav.items.drink.weights;
         }
 
-        this.mergeEquipmentItems(this.scavBase, userWeapons.scav.tier2);
+        this.mergeWithUserEquipmentItems(this.scavBase, "scav.tier2");
 
         BotTierTracker.scavTier = 2;
         if (this.modConfig.logEverything == true) {
@@ -1079,7 +1129,7 @@ export class BotLoader {
         else {
             this.botConf().equipment["assault"].lightIsActiveDayChancePercent = 10;
             this.botConf().equipment["assault"].laserIsActiveChancePercent = 10;
-            if (RaidInfoTracker.mapType === "cqb") {
+            if (RaidInfoTracker.mapType == MapType.CQB) {
                 this.botConf().equipment["assault"].lightIsActiveDayChancePercent = 90;
                 this.botConf().equipment["assault"].laserIsActiveChancePercent = 90;
             }
@@ -1093,8 +1143,8 @@ export class BotLoader {
             this.scavBase.generation.items.food.weights = lootOdds.dynamic_scav.items.drink.weights;
         }
 
-        this.mergeEquipmentItems(this.scavBase, userWeapons.scav.tier3);
-        
+        this.mergeWithUserEquipmentItems(this.scavBase, "scav.tier3");
+
         BotTierTracker.scavTier = 3;
         if (this.modConfig.logEverything == true) {
             this.logger.info("scavLoad3 loaded");
@@ -1134,17 +1184,17 @@ export class BotLoader {
             botJsonTemplate.chances.equipmentMods.mod_equipment = 10;
         } else {
             botJsonTemplate.chances.equipmentMods.mod_nvg = 0;
-            if (RaidInfoTracker.mapType === "urban") {
+            if (RaidInfoTracker.mapType == MapType.Urban) {
                 botJsonTemplate.chances.weaponMods.mod_flashlight = 30;
                 botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 15;
                 botJsonTemplate.chances.equipmentMods.mod_equipment = 15;
             }
-            if (RaidInfoTracker.mapType === "cqb") {
+            if (RaidInfoTracker.mapType == MapType.CQB) {
                 botJsonTemplate.chances.weaponMods.mod_flashlight = 40;
                 botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 20;
                 botJsonTemplate.chances.equipmentMods.mod_equipment = 20;
             }
-            if (RaidInfoTracker.mapType === "outdoor") {
+            if (RaidInfoTracker.mapType == MapType.Outdoor) {
                 botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 10;
                 botJsonTemplate.chances.equipmentMods.mod_equipment = 10;
             }
@@ -1173,7 +1223,7 @@ export class BotLoader {
             botJsonTemplate.inventory.equipment.FaceCover["59e7715586f7742ee5789605"] = 10; //resp
         }
 
-        this.mergeEquipmentItems(botJsonTemplate, userWeapons.usec.tier1);
+        this.mergeWithUserEquipmentItems(botJsonTemplate, "usec.tier1");
 
         if (this.modConfig.logEverything == true) {
             this.logger.info("usecLoad1 loaded");
@@ -1212,29 +1262,29 @@ export class BotLoader {
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
         } else {
             botJsonTemplate.chances.equipmentMods.mod_nvg = 0;
-            if (RaidInfoTracker.mapType === "urban") {
+            if (RaidInfoTracker.mapType == MapType.Urban) {
                 botJsonTemplate.chances.weaponMods.mod_flashlight = 40;
                 botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 20;
                 botJsonTemplate.chances.equipmentMods.mod_equipment = 20;
             }
-            if (RaidInfoTracker.mapType === "cqb") {
+            if (RaidInfoTracker.mapType == MapType.CQB) {
                 botJsonTemplate.chances.weaponMods.mod_flashlight = 60;
                 botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 50;
                 botJsonTemplate.chances.equipmentMods.mod_equipment = 50;
             }
-            if (RaidInfoTracker.mapType === "outdoor") {
+            if (RaidInfoTracker.mapType == MapType.Outdoor) {
                 botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
                 botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
             }
         }
 
-        if (RaidInfoTracker.mapType === "urban") {
+        if (RaidInfoTracker.mapType == MapType.Urban) {
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier2Json.inventory.FirstPrimaryWeapon_urban;
         }
-        if (RaidInfoTracker.mapType === "cqb") {
+        if (RaidInfoTracker.mapType == MapType.CQB) {
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier2Json.inventory.FirstPrimaryWeapon_cqb;
         }
-        if (RaidInfoTracker.mapType === "outdoor") {
+        if (RaidInfoTracker.mapType == MapType.Outdoor) {
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier2Json.inventory.FirstPrimaryWeapon_outdoor;
         }
 
@@ -1262,7 +1312,7 @@ export class BotLoader {
             botJsonTemplate.inventory.equipment.FaceCover["59e7715586f7742ee5789605"] = 10; //resp
         }
 
-        this.mergeEquipmentItems(botJsonTemplate, userWeapons.usec.tier2);
+        this.mergeWithUserEquipmentItems(botJsonTemplate, "usec.tier2");
 
         if (this.modConfig.logEverything == true) {
             this.logger.info("usecLoad2 loaded");
@@ -1309,30 +1359,30 @@ export class BotLoader {
             botJsonTemplate.chances.weaponMods.mod_tactical = 100;
         } else {
             botJsonTemplate.chances.equipmentMods.mod_nvg = 0;
-            if (RaidInfoTracker.mapType === "urban") {
+            if (RaidInfoTracker.mapType == MapType.Urban) {
                 botJsonTemplate.chances.weaponMods.mod_flashlight = 80;
                 botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 50;
                 botJsonTemplate.chances.equipmentMods.mod_equipment = 50;
             }
-            if (RaidInfoTracker.mapType === "cqb") {
+            if (RaidInfoTracker.mapType == MapType.CQB) {
                 botJsonTemplate.chances.weaponMods.mod_flashlight = 100;
                 botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 85;
                 botJsonTemplate.chances.equipmentMods.mod_equipment = 85;
             }
-            if (RaidInfoTracker.mapType === "outdoor") {
+            if (RaidInfoTracker.mapType == MapType.Outdoor) {
                 botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 0;
                 botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
             }
         }
 
-        if (RaidInfoTracker.mapType === "urban") {
+        if (RaidInfoTracker.mapType == MapType.Urban) {
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier3Json.inventory.FirstPrimaryWeapon_urban;
         }
-        if (RaidInfoTracker.mapType === "cqb") {
+        if (RaidInfoTracker.mapType == MapType.CQB) {
             botJsonTemplate.inventory.equipment.Headwear = tier3Json.inventory.Headwear_cqb;
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier3Json.inventory.FirstPrimaryWeapon_cqb;
         }
-        if (RaidInfoTracker.mapType === "outdoor") {
+        if (RaidInfoTracker.mapType == MapType.Outdoor) {
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier3Json.inventory.FirstPrimaryWeapon_outdoor;
         }
 
@@ -1361,7 +1411,7 @@ export class BotLoader {
             botJsonTemplate.inventory.equipment.FaceCover["59e7715586f7742ee5789605"] = 5; //resp
         }
 
-        this.mergeEquipmentItems(botJsonTemplate, userWeapons.usec.tier3);
+        this.mergeWithUserEquipmentItems(botJsonTemplate, "usec.tier3");
 
         if (this.modConfig.logEverything == true) {
             this.logger.info("usecLoad3 loaded");
@@ -1402,30 +1452,30 @@ export class BotLoader {
             botJsonTemplate.inventory.equipment.Headwear = tier4Json.inventory.Headwear_night;
         } else {
             botJsonTemplate.chances.equipmentMods.mod_nvg = 0;
-            if (RaidInfoTracker.mapType === "urban") {
+            if (RaidInfoTracker.mapType == MapType.Urban) {
                 botJsonTemplate.chances.weaponMods.mod_flashlight = 100;
                 botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 60;
                 botJsonTemplate.chances.equipmentMods.mod_equipment = 60;
             }
-            if (RaidInfoTracker.mapType === "cqb") {
+            if (RaidInfoTracker.mapType == MapType.CQB) {
                 botJsonTemplate.chances.weaponMods.mod_flashlight = 100;
                 botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 80;
                 botJsonTemplate.chances.equipmentMods.mod_equipment = 80;
             }
-            if (RaidInfoTracker.mapType === "outdoor") {
+            if (RaidInfoTracker.mapType == MapType.Outdoor) {
                 botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 25;
                 botJsonTemplate.chances.equipmentMods.mod_equipment = 25;
             }
         }
 
-        if (RaidInfoTracker.mapType === "urban") {
+        if (RaidInfoTracker.mapType == MapType.Urban) {
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier4Json.inventory.FirstPrimaryWeapon_urban;
         }
-        if (RaidInfoTracker.mapType === "cqb") {
+        if (RaidInfoTracker.mapType == MapType.CQB) {
             botJsonTemplate.inventory.equipment.Headwear = tier4Json.inventory.Headwear_cqb;
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier4Json.inventory.FirstPrimaryWeapon_cqb;
         }
-        if (RaidInfoTracker.mapType === "outdoor") {
+        if (RaidInfoTracker.mapType == MapType.Outdoor) {
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier4Json.inventory.FirstPrimaryWeapon_outdoor;
         }
 
@@ -1453,7 +1503,7 @@ export class BotLoader {
             botJsonTemplate.inventory.equipment.FaceCover["60363c0c92ec1c31037959f5"] = 20; //gp7
         }
 
-        this.mergeEquipmentItems(botJsonTemplate, userWeapons.usec.tier4);
+        this.mergeWithUserEquipmentItems(botJsonTemplate, "usec.tier4");
 
         if (this.modConfig.logEverything == true) {
             this.logger.info("usecLoad4 loaded");
@@ -1530,15 +1580,15 @@ export class BotLoader {
 
         } else {
             botJsonTemplate.chances.equipmentMods.mod_nvg = 0;
-            if (RaidInfoTracker.mapType === "urban") {
+            if (RaidInfoTracker.mapType == MapType.Urban) {
                 botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 35;
                 botJsonTemplate.chances.equipmentMods.mod_equipment = 35;
             }
-            if (RaidInfoTracker.mapType === "cqb") {
+            if (RaidInfoTracker.mapType == MapType.CQB) {
                 botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 50;
                 botJsonTemplate.chances.equipmentMods.mod_equipment = 50;
             }
-            if (RaidInfoTracker.mapType === "outdoor") {
+            if (RaidInfoTracker.mapType == MapType.Outdoor) {
                 botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 20;
                 botJsonTemplate.chances.equipmentMods.mod_equipment = 20;
             }
@@ -1567,7 +1617,7 @@ export class BotLoader {
             botJsonTemplate.inventory.equipment.FaceCover["59e7715586f7742ee5789605"] = 10; //resp
         }
 
-        this.mergeEquipmentItems(botJsonTemplate, userWeapons.bear.tier1);
+        this.mergeWithUserEquipmentItems(botJsonTemplate, "bear.tier1");
 
         if (this.modConfig.logEverything == true) {
             this.logger.info("bearLoad1 loaded");
@@ -1607,27 +1657,27 @@ export class BotLoader {
             botJsonTemplate.chances.equipmentMods.mod_equipment = 0;
         } else {
             botJsonTemplate.chances.equipmentMods.mod_nvg = 0;
-            if (RaidInfoTracker.mapType === "urban") {
+            if (RaidInfoTracker.mapType == MapType.Urban) {
                 botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 45;
                 botJsonTemplate.chances.equipmentMods.mod_equipment = 45;
             }
-            if (RaidInfoTracker.mapType === "cqb") {
+            if (RaidInfoTracker.mapType == MapType.CQB) {
                 botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 70;
                 botJsonTemplate.chances.equipmentMods.mod_equipment = 70;
             }
-            if (RaidInfoTracker.mapType === "outdoor") {
+            if (RaidInfoTracker.mapType == MapType.Outdoor) {
                 botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 20;
                 botJsonTemplate.chances.equipmentMods.mod_equipment = 20;
             }
         }
 
-        if (RaidInfoTracker.mapType === "urban") {
+        if (RaidInfoTracker.mapType == MapType.Urban) {
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier2Json.inventory.FirstPrimaryWeapon_urban;
         }
-        if (RaidInfoTracker.mapType === "cqb") {
+        if (RaidInfoTracker.mapType == MapType.CQB) {
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier2Json.inventory.FirstPrimaryWeapon_cqb;
         }
-        if (RaidInfoTracker.mapType === "outdoor") {
+        if (RaidInfoTracker.mapType == MapType.Outdoor) {
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier2Json.inventory.FirstPrimaryWeapon_outdoor;
         }
 
@@ -1655,7 +1705,7 @@ export class BotLoader {
             botJsonTemplate.inventory.equipment.FaceCover["59e7715586f7742ee5789605"] = 10; //resp
         }
 
-        this.mergeEquipmentItems(botJsonTemplate, userWeapons.bear.tier2);
+        this.mergeWithUserEquipmentItems(botJsonTemplate, "bear.tier2");
 
         if (this.modConfig.logEverything == true) {
             this.logger.info("bearLoad2 loaded");
@@ -1699,27 +1749,27 @@ export class BotLoader {
 
         } else {
             botJsonTemplate.chances.equipmentMods.mod_nvg = 0;
-            if (RaidInfoTracker.mapType === "urban") {
+            if (RaidInfoTracker.mapType == MapType.Urban) {
                 botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 70;
                 botJsonTemplate.chances.equipmentMods.mod_equipment = 70;
             }
-            if (RaidInfoTracker.mapType === "cqb") {
+            if (RaidInfoTracker.mapType == MapType.CQB) {
                 botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 100;
                 botJsonTemplate.chances.equipmentMods.mod_equipment = 100;
             }
-            if (RaidInfoTracker.mapType === "outdoor") {
+            if (RaidInfoTracker.mapType == MapType.Outdoor) {
                 botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 20;
                 botJsonTemplate.chances.equipmentMods.mod_equipment = 20;
             }
         }
 
-        if (RaidInfoTracker.mapType === "urban") {
+        if (RaidInfoTracker.mapType == MapType.Urban) {
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier3Json.inventory.FirstPrimaryWeapon_urban;
         }
-        if (RaidInfoTracker.mapType === "cqb") {
+        if (RaidInfoTracker.mapType == MapType.CQB) {
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier3Json.inventory.FirstPrimaryWeapon_cqb;
         }
-        if (RaidInfoTracker.mapType === "outdoor") {
+        if (RaidInfoTracker.mapType == MapType.Outdoor) {
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier3Json.inventory.FirstPrimaryWeapon_outdoor;
         }
 
@@ -1748,7 +1798,7 @@ export class BotLoader {
             botJsonTemplate.inventory.equipment.FaceCover["59e7715586f7742ee5789605"] = 5; //resp
         }
 
-        this.mergeEquipmentItems(botJsonTemplate, userWeapons.bear.tier3);
+        this.mergeWithUserEquipmentItems(botJsonTemplate, "bear.tier3");
 
         if (this.modConfig.logEverything == true) {
             this.logger.info("bearLoad3 loaded");
@@ -1790,27 +1840,27 @@ export class BotLoader {
             botJsonTemplate.inventory.equipment.Headwear = tier4Json.inventory.Headwear_night;
         } else {
             botJsonTemplate.chances.equipmentMods.mod_nvg = 0;
-            if (RaidInfoTracker.mapType === "urban") {
+            if (RaidInfoTracker.mapType == MapType.Urban) {
                 botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 100;
                 botJsonTemplate.chances.equipmentMods.mod_equipment = 100;
             }
-            if (RaidInfoTracker.mapType === "cqb") {
+            if (RaidInfoTracker.mapType == MapType.CQB) {
                 botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 100;
                 botJsonTemplate.chances.equipmentMods.mod_equipment = 100;
             }
-            if (RaidInfoTracker.mapType === "outdoor") {
+            if (RaidInfoTracker.mapType == MapType.Outdoor) {
                 botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 20;
                 botJsonTemplate.chances.equipmentMods.mod_equipment = 20;
             }
         }
 
-        if (RaidInfoTracker.mapType === "urban") {
+        if (RaidInfoTracker.mapType == MapType.Urban) {
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier4Json.inventory.FirstPrimaryWeapon_urban;
         }
-        if (RaidInfoTracker.mapType === "cqb") {
+        if (RaidInfoTracker.mapType == MapType.CQB) {
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier4Json.inventory.FirstPrimaryWeapon_cqb;
         }
-        if (RaidInfoTracker.mapType === "outdoor") {
+        if (RaidInfoTracker.mapType == MapType.Outdoor) {
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier4Json.inventory.FirstPrimaryWeapon_outdoor;
         }
 
@@ -1838,7 +1888,7 @@ export class BotLoader {
             botJsonTemplate.inventory.equipment.FaceCover["60363c0c92ec1c31037959f5"] = 20; //gp7
         }
 
-        this.mergeEquipmentItems(botJsonTemplate, userWeapons.bear.tier4);
+        this.mergeWithUserEquipmentItems(botJsonTemplate, "bear.tier4");
 
         if (this.modConfig.logEverything == true) {
             this.logger.info("bearLoad4 loaded");
@@ -1906,30 +1956,30 @@ export class BotLoader {
             botJsonTemplate.inventory.equipment.Headwear = tier5Json.inventory.Headwear_night;
         } else {
             botJsonTemplate.chances.equipmentMods.mod_nvg = 0;
-            if (RaidInfoTracker.mapType === "urban") {
+            if (RaidInfoTracker.mapType == MapType.Urban) {
                 botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 100;
                 botJsonTemplate.chances.equipmentMods.mod_equipment = 100;
                 botJsonTemplate.inventory.equipment.Headwear = tier5Json.inventory.Headwear_cqb;
             }
-            if (RaidInfoTracker.mapType === "cqb") {
+            if (RaidInfoTracker.mapType == MapType.CQB) {
                 botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 100;
                 botJsonTemplate.chances.equipmentMods.mod_equipment = 100;
                 botJsonTemplate.inventory.equipment.Headwear = tier5Json.inventory.Headwear_cqb;
             }
-            if (RaidInfoTracker.mapType === "outdoor") {
+            if (RaidInfoTracker.mapType == MapType.Outdoor) {
                 botJsonTemplate.chances.equipmentMods.mod_equipment_000 = 25;
                 botJsonTemplate.chances.equipmentMods.mod_equipment = 25;
             }
         }
 
         //don't want TOD to be a factor
-        if (RaidInfoTracker.mapType === "urban") {
+        if (RaidInfoTracker.mapType == MapType.Urban) {
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier5Json.inventory.FirstPrimaryWeapon_urban;
         }
-        if (RaidInfoTracker.mapType === "cqb") {
+        if (RaidInfoTracker.mapType == MapType.CQB) {
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier5Json.inventory.FirstPrimaryWeapon_cqb;
         }
-        if (RaidInfoTracker.mapType === "outdoor") {
+        if (RaidInfoTracker.mapType == MapType.Outdoor) {
             botJsonTemplate.inventory.equipment.FirstPrimaryWeapon = tier5Json.inventory.FirstPrimaryWeapon_outdoor;
         }
 
@@ -1944,7 +1994,7 @@ export class BotLoader {
             this.addOptionalGasMasks(botJsonTemplate);
         }
 
-        this.mergeEquipmentItems(botJsonTemplate, userWeapons.tier5);
+        this.mergeWithUserEquipmentItems(botJsonTemplate, "tier5");
 
         if (RaidInfoTracker.mapName === "reservebase" || RaidInfoTracker.mapName === "rezervbase") {
             botJsonTemplate.inventory.equipment.FaceCover["60363c0c92ec1c31037959f5"] = 20; //gp7
@@ -1986,30 +2036,30 @@ export class BotLoader {
         } else {
             this.raiderBase.chances.equipmentMods.mod_nvg = 0;
             this.botConf().equipment["pmcbot"].nvgIsActiveChanceDayPercent = 0;
-            if (RaidInfoTracker.mapType === "urban") {
+            if (RaidInfoTracker.mapType == MapType.Urban) {
                 this.raiderBase.chances.equipmentMods.mod_equipment_000 = 50;
                 this.raiderBase.chances.equipmentMods.mod_equipment = 50;
                 this.botConf().equipment["pmcbot"].lightIsActiveDayChancePercent = 50;
             }
-            if (RaidInfoTracker.mapType === "cqb") {
+            if (RaidInfoTracker.mapType == MapType.CQB) {
                 this.raiderBase.chances.equipmentMods.mod_equipment_000 = 80;
                 this.raiderBase.chances.equipmentMods.mod_equipment = 80;
                 this.botConf().equipment["pmcbot"].lightIsActiveDayChancePercent = 100;
             }
-            if (RaidInfoTracker.mapType === "outdoor") {
+            if (RaidInfoTracker.mapType == MapType.Outdoor) {
                 this.raiderBase.chances.equipmentMods.mod_equipment_000 *= 0.5;
                 this.raiderBase.chances.equipmentMods.mod_equipment *= 0.5;
                 this.botConf().equipment["pmcbot"].lightIsActiveDayChancePercent = 0;
             }
         }
 
-        if (RaidInfoTracker.mapType === "urban") {
+        if (RaidInfoTracker.mapType == MapType.Urban) {
             this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier1Json.inventory.FirstPrimaryWeapon_urban;
         }
-        if (RaidInfoTracker.mapType === "cqb") {
+        if (RaidInfoTracker.mapType == MapType.CQB) {
             this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier1Json.inventory.FirstPrimaryWeapon_cqb;
         }
-        if (RaidInfoTracker.mapType === "outdoor") {
+        if (RaidInfoTracker.mapType == MapType.Outdoor) {
             this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier1Json.inventory.FirstPrimaryWeapon_outdoor;
         }
 
@@ -2065,30 +2115,30 @@ export class BotLoader {
         } else {
             this.raiderBase.chances.equipmentMods.mod_nvg = 0;
             this.botConf().equipment["pmcbot"].nvgIsActiveChanceDayPercent = 0;
-            if (RaidInfoTracker.mapType === "urban") {
+            if (RaidInfoTracker.mapType == MapType.Urban) {
                 this.raiderBase.chances.equipmentMods.mod_equipment_000 = 70;
                 this.raiderBase.chances.equipmentMods.mod_equipment = 70;
                 this.botConf().equipment["pmcbot"].lightIsActiveDayChancePercent = 60;
             }
-            if (RaidInfoTracker.mapType === "cqb") {
+            if (RaidInfoTracker.mapType == MapType.CQB) {
                 this.raiderBase.chances.equipmentMods.mod_equipment_000 = 90;
                 this.raiderBase.chances.equipmentMods.mod_equipment = 90;
                 this.botConf().equipment["pmcbot"].lightIsActiveDayChancePercent = 100;
             }
-            if (RaidInfoTracker.mapType === "outdoor") {
+            if (RaidInfoTracker.mapType == MapType.Outdoor) {
                 this.raiderBase.chances.equipmentMods.mod_equipment_000 *= 0.5;
                 this.raiderBase.chances.equipmentMods.mod_equipment *= 0.5;
                 this.botConf().equipment["pmcbot"].lightIsActiveDayChancePercent = 0;
             }
         }
 
-        if (RaidInfoTracker.mapType === "urban") {
+        if (RaidInfoTracker.mapType == MapType.Urban) {
             this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier2Json.inventory.FirstPrimaryWeapon_urban;
         }
-        if (RaidInfoTracker.mapType === "cqb") {
+        if (RaidInfoTracker.mapType == MapType.CQB) {
             this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier2Json.inventory.FirstPrimaryWeapon_cqb;
         }
-        if (RaidInfoTracker.mapType === "outdoor") {
+        if (RaidInfoTracker.mapType == MapType.Outdoor) {
             this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier2Json.inventory.FirstPrimaryWeapon_outdoor;
         }
 
@@ -2146,30 +2196,30 @@ export class BotLoader {
         } else {
             this.raiderBase.chances.equipmentMods.mod_nvg = 0;
             this.botConf().equipment["pmcbot"].nvgIsActiveChanceDayPercent = 0;
-            if (RaidInfoTracker.mapType === "urban") {
+            if (RaidInfoTracker.mapType == MapType.Urban) {
                 this.raiderBase.chances.equipmentMods.mod_equipment_000 = 100;
                 this.raiderBase.chances.equipmentMods.mod_equipment = 100;
                 this.botConf().equipment["pmcbot"].lightIsActiveDayChancePercent = 80;
             }
-            if (RaidInfoTracker.mapType === "cqb") {
+            if (RaidInfoTracker.mapType == MapType.CQB) {
                 this.raiderBase.chances.equipmentMods.mod_equipment_000 = 100;
                 this.raiderBase.chances.equipmentMods.mod_equipment = 100;
                 this.botConf().equipment["pmcbot"].lightIsActiveDayChancePercent = 100;
             }
-            if (RaidInfoTracker.mapType === "outdoor") {
+            if (RaidInfoTracker.mapType == MapType.Outdoor) {
                 this.raiderBase.chances.equipmentMods.mod_equipment_000 *= 0.5;
                 this.raiderBase.chances.equipmentMods.mod_equipment *= 0.5;
                 this.botConf().equipment["pmcbot"].lightIsActiveDayChancePercent = 0;
             }
         }
 
-        if (RaidInfoTracker.mapType === "urban") {
+        if (RaidInfoTracker.mapType == MapType.Urban) {
             this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier3Json.inventory.FirstPrimaryWeapon_urban;
         }
-        if (RaidInfoTracker.mapType === "cqb") {
+        if (RaidInfoTracker.mapType == MapType.CQB) {
             this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier3Json.inventory.FirstPrimaryWeapon_cqb;
         }
-        if (RaidInfoTracker.mapType === "outdoor") {
+        if (RaidInfoTracker.mapType == MapType.Outdoor) {
             this.raiderBase.inventory.equipment.FirstPrimaryWeapon = tier3Json.inventory.FirstPrimaryWeapon_outdoor;
         }
 
@@ -2225,11 +2275,11 @@ export class BotLoader {
         if (!RaidInfoTracker.isNight) {
             this.rogueBase.chances.equipmentMods.mod_nvg = 0;
             this.botConf().equipment["exusec"].nvgIsActiveChanceDayPercent = 0;
-            if (RaidInfoTracker.mapType === "urban" || RaidInfoTracker.mapType === "cqb") {
+            if (RaidInfoTracker.mapType == MapType.Urban || RaidInfoTracker.mapType == MapType.CQB) {
                 this.botConf().equipment["exusec"].faceShieldIsActiveChancePercent = 100;
                 this.botConf().equipment["exusec"].lightIsActiveDayChancePercent = 100;
             }
-            if (RaidInfoTracker.mapType === "outdoor") {
+            if (RaidInfoTracker.mapType == MapType.Outdoor) {
                 this.botConf().equipment["exusec"].faceShieldIsActiveChancePercent = 30;
                 this.botConf().equipment["exusec"].lightIsActiveDayChancePercent = 0;
             }
@@ -2274,11 +2324,11 @@ export class BotLoader {
         if (!RaidInfoTracker.isNight) {
             this.rogueBase.chances.equipmentMods.mod_nvg = 0;
             this.botConf().equipment["exusec"].nvgIsActiveChanceDayPercent = 0;
-            if (RaidInfoTracker.mapType === "urban" || RaidInfoTracker.mapType === "cqb") {
+            if (RaidInfoTracker.mapType == MapType.Urban || RaidInfoTracker.mapType == MapType.CQB) {
                 this.botConf().equipment["exusec"].faceShieldIsActiveChancePercent = 100;
                 this.botConf().equipment["exusec"].lightIsActiveDayChancePercent = 100;
             }
-            if (RaidInfoTracker.mapType === "outdoor") {
+            if (RaidInfoTracker.mapType == MapType.Outdoor) {
                 this.botConf().equipment["exusec"].faceShieldIsActiveChancePercent = 30;
                 this.botConf().equipment["exusec"].lightIsActiveDayChancePercent = 0;
             }
@@ -2323,11 +2373,11 @@ export class BotLoader {
         if (!RaidInfoTracker.isNight) {
             this.rogueBase.chances.equipmentMods.mod_nvg = 0;
             this.botConf().equipment["exusec"].nvgIsActiveChanceDayPercent = 0;
-            if (RaidInfoTracker.mapType === "urban" || RaidInfoTracker.mapType === "cqb") {
+            if (RaidInfoTracker.mapType == MapType.Urban || RaidInfoTracker.mapType == MapType.CQB) {
                 this.botConf().equipment["exusec"].faceShieldIsActiveChancePercent = 100;
                 this.botConf().equipment["exusec"].lightIsActiveDayChancePercent = 100;
             }
-            if (RaidInfoTracker.mapType === "outdoor") {
+            if (RaidInfoTracker.mapType == MapType.Outdoor) {
                 this.botConf().equipment["exusec"].faceShieldIsActiveChancePercent = 30;
                 this.botConf().equipment["exusec"].lightIsActiveDayChancePercent = 0;
             }
@@ -2450,7 +2500,7 @@ export class BotLoader {
             this.botConf().equipment["followerbigpipe"].nvgIsActiveChanceDayPercent = 0;
             this.botConf().equipment["followerbirdeye"].nvgIsActiveChanceDayPercent = 0;
 
-            if (RaidInfoTracker.mapType === "urban" || RaidInfoTracker.mapType === "cqb") {
+            if (RaidInfoTracker.mapType == MapType.Urban || RaidInfoTracker.mapType == MapType.CQB) {
 
                 if (randNum >= 6) {
                     this.knightBase.chances.equipment.Headwear = 100;
@@ -2480,7 +2530,7 @@ export class BotLoader {
                 this.botConf().equipment["followerbirdeye"].lightIsActiveDayChancePercent = 0;
 
             }
-            if (RaidInfoTracker.mapType === "outdoor") {
+            if (RaidInfoTracker.mapType == MapType.Outdoor) {
 
                 if (randNum >= 8) {
                     this.knightBase.chances.equipment.Headwear = 100;
@@ -2514,16 +2564,16 @@ export class BotLoader {
         }
 
 
-        if (RaidInfoTracker.mapType === "cqb") {
+        if (RaidInfoTracker.mapType == MapType.CQB) {
             this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = bird1Json.inventory.FirstPrimaryWeapon_cqb;
             this.birdeyeBase.inventory.equipment.SecondPrimaryWeapon = {};
         }
-        if (RaidInfoTracker.mapType === "urban") {
+        if (RaidInfoTracker.mapType == MapType.Urban) {
             this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = bird1Json.inventory.FirstPrimaryWeapon_urban;
             this.birdeyeBase.inventory.equipment.SecondPrimaryWeapon = {};
             this.birdeyeBase.chances.equipmentMods.mod_equipment_000 = 0;
         }
-        if (RaidInfoTracker.mapType === "outdoor") {
+        if (RaidInfoTracker.mapType == MapType.Outdoor) {
             this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = bird1Json.inventory.FirstPrimaryWeapon_outdoor;
             this.birdeyeBase.inventory.equipment.Holster = {};
         }
@@ -2646,7 +2696,7 @@ export class BotLoader {
             this.botConf().equipment["followerbigpipe"].nvgIsActiveChanceDayPercent = 0;
             this.botConf().equipment["followerbirdeye"].nvgIsActiveChanceDayPercent = 0;
 
-            if (RaidInfoTracker.mapType === "urban" || RaidInfoTracker.mapType === "cqb") {
+            if (RaidInfoTracker.mapType == MapType.Urban || RaidInfoTracker.mapType == MapType.CQB) {
 
                 if (randNum >= 4) {
                     this.knightBase.chances.equipment.Headwear = 100;
@@ -2675,7 +2725,7 @@ export class BotLoader {
                 this.birdeyeBase.inventory.equipment.Headwear["61bca7cda0eae612383adf57"] = 1;
                 this.botConf().equipment["followerbirdeye"].lightIsActiveDayChancePercent = 0;
             }
-            if (RaidInfoTracker.mapType === "outdoor") {
+            if (RaidInfoTracker.mapType == MapType.Outdoor) {
 
                 if (randNum >= 5) {
                     this.knightBase.chances.equipment.Headwear = 100;
@@ -2708,16 +2758,16 @@ export class BotLoader {
             }
         }
 
-        if (RaidInfoTracker.mapType === "cqb") {
+        if (RaidInfoTracker.mapType == MapType.CQB) {
             this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = bird2Json.inventory.FirstPrimaryWeapon_cqb;
             this.birdeyeBase.inventory.equipment.SecondPrimaryWeapon = {};
         }
-        if (RaidInfoTracker.mapType === "urban") {
+        if (RaidInfoTracker.mapType == MapType.Urban) {
             this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = bird2Json.inventory.FirstPrimaryWeapon_urban;
             this.birdeyeBase.inventory.equipment.SecondPrimaryWeapon = {};
             this.birdeyeBase.chances.equipmentMods.mod_equipment_000 = 0;
         }
-        if (RaidInfoTracker.mapType === "outdoor") {
+        if (RaidInfoTracker.mapType == MapType.Outdoor) {
             this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = bird2Json.inventory.FirstPrimaryWeapon_outdoor;
             this.birdeyeBase.inventory.equipment.Holster = {};
         }
@@ -2843,7 +2893,7 @@ export class BotLoader {
             this.botConf().equipment["followerbigpipe"].nvgIsActiveChanceDayPercent = 0;
             this.botConf().equipment["followerbirdeye"].nvgIsActiveChanceDayPercent = 0;
 
-            if (RaidInfoTracker.mapType === "urban" || RaidInfoTracker.mapType === "cqb") {
+            if (RaidInfoTracker.mapType == MapType.Urban || RaidInfoTracker.mapType == MapType.CQB) {
 
                 if (randNum >= 3) {
                     this.knightBase.chances.equipment.Headwear = 100;
@@ -2873,7 +2923,7 @@ export class BotLoader {
                 this.birdeyeBase.inventory.equipment.Headwear["61bca7cda0eae612383adf57"] = 1;
                 this.botConf().equipment["followerbirdeye"].lightIsActiveDayChancePercent = 0;
             }
-            if (RaidInfoTracker.mapType === "outdoor") {
+            if (RaidInfoTracker.mapType == MapType.Outdoor) {
 
                 if (randNum >= 4) {
                     this.knightBase.chances.equipment.Headwear = 100;
@@ -2907,16 +2957,16 @@ export class BotLoader {
             }
         }
 
-        if (RaidInfoTracker.mapType === "cqb") {
+        if (RaidInfoTracker.mapType == MapType.CQB) {
             this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = bird3Json.inventory.FirstPrimaryWeapon_cqb;
             this.birdeyeBase.inventory.equipment.SecondPrimaryWeapon = {};
         }
-        if (RaidInfoTracker.mapType === "urban") {
+        if (RaidInfoTracker.mapType == MapType.Urban) {
             this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = bird3Json.inventory.FirstPrimaryWeapon_urban;
             this.birdeyeBase.inventory.equipment.SecondPrimaryWeapon = {};
             this.birdeyeBase.chances.equipmentMods.mod_equipment_000 = 0;
         }
-        if (RaidInfoTracker.mapType === "outdoor") {
+        if (RaidInfoTracker.mapType == MapType.Outdoor) {
             this.birdeyeBase.inventory.equipment.FirstPrimaryWeapon = bird3Json.inventory.FirstPrimaryWeapon_outdoor;
             this.birdeyeBase.inventory.equipment.Holster = {};
         }
@@ -3257,7 +3307,7 @@ export class BotLoader {
             this.botConf().equipment["bosssanitar"].laserIsActiveChancePercent = 25;
             this.botConf().equipment["followersanitar"].lightIsActiveDayChancePercent = 25;
             this.botConf().equipment["followersanitar"].laserIsActiveChancePercent = 25;
-            if (RaidInfoTracker.mapType === "cqb") {
+            if (RaidInfoTracker.mapType == MapType.CQB) {
                 this.botConf().equipment["bosssanitar"].lightIsActiveDayChancePercent = 90;
                 this.botConf().equipment["bosssanitar"].laserIsActiveChancePercent = 90;
                 this.botConf().equipment["followersanitar"].lightIsActiveDayChancePercent = 90;
@@ -3327,7 +3377,7 @@ export class BotLoader {
             this.botConf().equipment["bosssanitar"].laserIsActiveChancePercent = 25;
             this.botConf().equipment["followersanitar"].lightIsActiveDayChancePercent = 25;
             this.botConf().equipment["followersanitar"].laserIsActiveChancePercent = 25;
-            if (RaidInfoTracker.mapType === "cqb") {
+            if (RaidInfoTracker.mapType == MapType.CQB) {
                 this.botConf().equipment["bosssanitar"].lightIsActiveDayChancePercent = 90;
                 this.botConf().equipment["bosssanitar"].laserIsActiveChancePercent = 90;
                 this.botConf().equipment["followersanitar"].lightIsActiveDayChancePercent = 90;
@@ -3397,7 +3447,7 @@ export class BotLoader {
             this.botConf().equipment["bosssanitar"].laserIsActiveChancePercent = 25;
             this.botConf().equipment["followersanitar"].lightIsActiveDayChancePercent = 25;
             this.botConf().equipment["followersanitar"].laserIsActiveChancePercent = 25;
-            if (RaidInfoTracker.mapType === "cqb") {
+            if (RaidInfoTracker.mapType == MapType.CQB) {
                 this.botConf().equipment["bosssanitar"].lightIsActiveDayChancePercent = 90;
                 this.botConf().equipment["bosssanitar"].laserIsActiveChancePercent = 90;
                 this.botConf().equipment["followersanitar"].lightIsActiveDayChancePercent = 90;
@@ -3467,7 +3517,7 @@ export class BotLoader {
             this.botConf().equipment["followerbully"].lightIsActiveDayChancePercent = 25;
             this.botConf().equipment["followerbully"].laserIsActiveChancePercent = 25;
 
-            if (RaidInfoTracker.mapType === "cqb") {
+            if (RaidInfoTracker.mapType == MapType.CQB) {
                 this.botConf().equipment["bossbully"].lightIsActiveDayChancePercent = 50;
                 this.botConf().equipment["bossbully"].laserIsActiveChancePercent = 50;
                 this.botConf().equipment["followerbully"].lightIsActiveDayChancePercent = 50;
@@ -3517,7 +3567,7 @@ export class BotLoader {
             this.botConf().equipment["followerbully"].lightIsActiveDayChancePercent = 25;
             this.botConf().equipment["followerbully"].laserIsActiveChancePercent = 25;
 
-            if (RaidInfoTracker.mapType === "cqb") {
+            if (RaidInfoTracker.mapType == MapType.CQB) {
                 this.botConf().equipment["bossbully"].lightIsActiveDayChancePercent = 25;
                 this.botConf().equipment["bossbully"].laserIsActiveChancePercent = 25;
                 this.botConf().equipment["followerbully"].lightIsActiveDayChancePercent = 75;
@@ -3565,7 +3615,7 @@ export class BotLoader {
             this.botConf().equipment["followerbully"].lightIsActiveDayChancePercent = 25;
             this.botConf().equipment["followerbully"].laserIsActiveChancePercent = 25;
 
-            if (RaidInfoTracker.mapType === "cqb") {
+            if (RaidInfoTracker.mapType == MapType.CQB) {
                 this.botConf().equipment["bossbully"].lightIsActiveDayChancePercent = 0;
                 this.botConf().equipment["bossbully"].laserIsActiveChancePercent = 0;
                 this.botConf().equipment["followerbully"].lightIsActiveDayChancePercent = 75;

@@ -42,7 +42,8 @@ class Gear {
         this.itemDB()["60363c0c92ec1c31037959f5"]._props.ConflictingItems = this.itemDB()["60363c0c92ec1c31037959f5"]._props.ConflictingItems.filter(i => i !== "5e4bfc1586f774264f7582d3");
         for (let item in this.itemDB()) {
             let serverItem = this.itemDB()[item];
-            if (serverItem._props.FaceShieldComponent == true) {
+            //gas masks need lvl 1 armor min to have durability, so 269 repair cost is the only alternative identifier
+            if (serverItem._props.FaceShieldComponent == true && serverItem._props?.armorClass && Number(serverItem._props.armorClass) > 0 && serverItem._props?.RepairCost != 269) {
                 faceShieldArray.push(serverItem._id);
             }
             if (this.modConfig.headgear_conflicts == true) {
@@ -55,10 +56,6 @@ class Gear {
                         }
                     }
                 }
-                // if (StaticArrays.conflHats.includes(serverItem._id)) {
-                //     let confItems = this.itemDB()[item]._props.ConflictingItems;
-                //     this.itemDB()[item]._props.ConflictingItems = StaticArrays.conflMasks.concat(confItems);
-                // }
             }
         }
         //custom mask overlays will bug out if using actual faceshield at the same time

@@ -18,6 +18,9 @@ import { IPmcData } from "@spt/models/eft/common/IPmcData";
 import { LogTextColor } from "@spt/models/spt/logging/LogTextColor";
 import { IInsuranceConfig } from "@spt/models/spt/config/IInsuranceConfig";
 import { StaticArrays } from "../utils/arrays";
+import { HandbookHelper } from "@spt/helpers/HandbookHelper";
+import { IItemConfig } from "@spt/models/spt/config/IItemConfig";
+import { IHandbookItem } from "@spt/models/eft/common/tables/IHandbookBase";
 
 const modConfig = require("../../config/config.json");
 
@@ -241,10 +244,52 @@ export class Traders {
         }
     }
 
-    public loadTraderRefreshTimes() {
+    public setTraderRefreshTimes() {
         for (let trader in this.traderConf.updateTime) {
             this.traderConf.updateTime[trader].seconds.min = modConfig.trader_refresh_time;
             this.traderConf.updateTime[trader].seconds.max = modConfig.trader_refresh_time * 1.5;
+        }
+    }
+
+    public adjustArmorHandbookPrices() {
+        const templateFiles = [
+            ArmorComponentsTemplates,
+            ArmorMasksTemplates,
+            ArmorPlateTemplates,
+            ArmorVestsTemplates,
+            ArmorChestrigTemplates,
+            HelmetTemplates
+        ];
+
+        const handbookMap = new Map(this.tables.templates.handbook.Items.map(obj => [obj.Id, obj]));
+
+        for (const templateFile of templateFiles) {
+            for (const i in templateFile) {
+                const templateItem = templateFile[i];
+                this.updateHandbookPrice(templateItem, handbookMap);
+            }
+        }
+    }
+
+    private updateHandbookPrice(templateItem: any,  handbookMap: Map<string, IHandbookItem>){
+        if (!templateItem?.Price || templateItem.Price <= 0) return;
+        const handbookItem = handbookMap.get(templateItem.ItemID);
+        if (handbookItem) {
+            handbookItem.Price = Math.round(templateItem.Price * 0.7);
+            this.adjustBuiltInArmorPrices(templateItem.ItemID, handbookMap);
+        }
+    }
+
+    //we need to set the price of imbeded armor items to 1 (0 means it can't be sold)
+    private adjustBuiltInArmorPrices(tempalteId: string, handbookMap: Map<string, IHandbookItem>) {
+        const serverItem = this.itemDB()[tempalteId];
+        for (const slot of serverItem._props.Slots) {
+            const filter = slot._props.filters[0];
+            for (const filterItem of filter.Filter) {
+                if (this.itemDB()[filterItem]._parent == ParentClasses.BUILT_IN_ARMOR) {
+                    handbookMap.get(filterItem).Price = 1;
+                }
+            }
         }
     }
 
@@ -324,7 +369,7 @@ export class Traders {
                         if (childTemplate == null || childTemplate?.Price == null || childTemplate.Price == 0) continue;
                         totalPrice += childTemplate.Price;
                     }
-                    const conversionRate = barterItem._tpl == "5696686a4bdc2da3298b456a" ? 108 :  barterItem._tpl == "5696686a4bdc2da3298b456a"  ? 117 : 1;
+                    const conversionRate = barterItem._tpl == "5696686a4bdc2da3298b456a" ? 108 : barterItem._tpl == "5696686a4bdc2da3298b456a" ? 117 : 1;
                     barterItem.count = Math.round(totalPrice / conversionRate);
                 }
             }
@@ -629,7 +674,6 @@ export class Traders {
         }
 
         this.assortPusherHelper(assort, assortId, price, saleCurrency, loyalLvl, itemId, buyRestriction, priceMulti);
-
     }
 
     private handBookPriceLookup(itemId: string): number {
@@ -719,8 +763,8 @@ export class RandomizeTraderAssort {
         return avgLL;
     }
 
-
     public adjustTraderStockAtGameStart(pmcData: IPmcData[]) {
+
         if (EventTracker.isChristmas == true) {
             this.logger.warning("====== Christmas Sale, Everything 15% Off! ======");
         }
@@ -788,6 +832,17 @@ export class RandomizeTraderAssort {
                 return 2;
         }
         return 0;
+    }
+
+    //re-roll based on ll level
+    private getStockCount(allowedAttemps: number, attempt: number, min: number, max: number): number {
+        let stockCount = this.utils.pickRandNumInRange(min, max);
+        if (stockCount == 0 && attempt < allowedAttemps) {
+            return this.getStockCount(allowedAttemps, attempt + 1, min, max);
+        }
+        else {
+            return stockCount;
+        }
     }
 
     private randomizeStockHelper(assortItemParent: string, targetParent: string, item: IItem, min: number, max: number, llFactor: number, canBeOutOfStock: boolean = true) {
@@ -914,7 +969,6 @@ export class RandomizeTraderAssort {
     }
 
     private randomizeAmmoStock(assortItemParent: string, item: IItem, llStackableFactor: number, llStockFactor: number) {
-
         if (assortItemParent === ParentClasses.AMMO && item.slotId !== "cartridges") {
             let llOutOfStockFactor = llStockFactor * 10;
             if (this.randomizeAmmoStockHelper(item, Calibers._9x18mm, 40 * modConfig.rand_stackable_modifier * llStackableFactor, 110 * modConfig.rand_stackable_modifier * llStackableFactor, 15 - llOutOfStockFactor, 20)) return;
@@ -983,17 +1037,6 @@ export class RandomizeTraderAssort {
         return false;
     }
 
-    //re-roll based on ll level
-    private getStockCount(allowedAttemps: number, attempt: number, min: number, max: number): number {
-        let stockCount = this.utils.pickRandNumInRange(min, max);
-        if (stockCount == 0 && attempt < allowedAttemps) {
-            return this.getStockCount(allowedAttemps, attempt + 1, min, max);
-        }
-        else {
-            return stockCount;
-        }
-    }
-
     public setAndRandomizeCost(utils: Utils, barter: IBarterScheme[][]) {
         const barterItem = barter[0][0];
         if (this.itemDB[barterItem._tpl]._parent === ParentClasses.MONEY) {
@@ -1045,14 +1088,10 @@ export class TraderRefresh extends TraderAssortHelper {
         const traderId = trader.base._id;
         trader.assort = this.cloner.clone(this.traderAssortService.getPristineTraderAssort(traderId));
 
-        let pmcData: IPmcData[] = [];
-
-        ProfileTracker.profileIds.forEach(element => {
-            pmcData.push(this.profileHelper.getPmcProfile(element));
-        });
+        const profilesData: IPmcData[] = ProfileTracker.getPmcProfileData(this.profileHelper);
 
         if (modConfig.randomize_trader_prices == true || modConfig.randomize_trader_stock == true || modConfig.randomize_trader_ll == true) {
-            trader.assort.items = this.modifyTraderAssorts(trader, this.logger, pmcData);
+            trader.assort.items = this.modifyTraderAssorts(trader, profilesData);
         }
 
         trader.base.nextResupply = this.traderHelper.getNextUpdateTimestamp(trader.base._id);
@@ -1064,14 +1103,14 @@ export class TraderRefresh extends TraderAssortHelper {
 
     }
 
-    private modifyTraderAssorts(trader: ITrader, logger: ILogger, pmcData: IPmcData[]): IItem[] {
+    private modifyTraderAssorts(trader: ITrader, profilesData: IPmcData[]): IItem[] {
         const tables = this.databaseService.getTables();
         const randomTraderAss = new RandomizeTraderAssort();
         const utils = Utils.getInstance();
 
         let assortItems = trader.assort.items;
         let assortBarters = trader.assort.barter_scheme;
-        let averageLL = randomTraderAss.getAverageLL(pmcData, trader.base._id);
+        let averageLL = randomTraderAss.getAverageLL(profilesData, trader.base._id);
 
         if (modConfig.randomize_trader_ll == true) {
             let ll = trader.assort.loyal_level_items;
@@ -1079,13 +1118,14 @@ export class TraderRefresh extends TraderAssortHelper {
                 randomTraderAss.randomizeLL(ll, lvl);
             }
         }
+
         for (let i in assortItems) {
             let item = assortItems[i];
             let itemId = assortItems[i]._id;
             let itemTemplId = assortItems[i]._tpl;
             if (modConfig.randomize_trader_stock == true) {
                 if (item.upd?.StackObjectsCount != null) {
-                    randomTraderAss.randomizeStock(item, averageLL, pmcData.length);
+                    randomTraderAss.randomizeStock(item, averageLL, profilesData.length);
                 }
                 if (item.upd?.UnlimitedCount != null) {
                     item.upd.UnlimitedCount = false;

@@ -67,7 +67,7 @@
         "ReloadSpeedMulti": 1,
         "Comfort": 0.8,
         "TemplateType": "gear",
-        "Price": 3000
+        "Price": 0
     },
     "61bca7cda0eae612383adf57": {
         "$type": "RealismMod.Gear, RealismMod",

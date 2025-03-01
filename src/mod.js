@@ -44,7 +44,6 @@ const json_gen_1 = require("./json/json_gen");
 const quests_1 = require("./traders/quests");
 const insurance_1 = require("./traders/insurance");
 const traders_1 = require("./traders/traders");
-// import { Airdrops } from "./misc/airdrops";
 const spawns_1 = require("./bots/spawns");
 const gear_1 = require("./items/gear");
 const seasonalevents_1 = require("./misc/seasonalevents");
@@ -55,6 +54,7 @@ const ammo_1 = require("./ballistics/ammo");
 const armor_1 = require("./ballistics/armor");
 const path = __importStar(require("path"));
 const fs = __importStar(require("fs"));
+const instance_manager_1 = require("./instance_manager");
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");
 const medBuffs = require("../db/items/buffs.json");
@@ -96,6 +96,7 @@ class Main {
         const preSptModLoader = container.resolve("PreSptModLoader");
         const traderRefersh = new traders_1.TraderRefresh(logger, mathUtil, timeUtil, databaseService, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator, traderAssortService, localisationService, traderPurchasePefrsisterService, traderHelper, fenceService, configServer, cloner);
         const flea = new fleamarket_1.FleaChangesPreDBLoad(logger, fleaConf, modConfig);
+        const instanceManager = instance_manager_1.InstanceManager.getInstance();
         this.checkForMods(preSptModLoader, logger, modConfig);
         flea.loadFleaConfig();
         //way of checking if QB spawn system is active, and disabling certain aspects of Realism's spawn changes to compenstate
@@ -116,12 +117,12 @@ class Main {
                         return jsonUtil.serialize(modConfig);
                     }
                     catch (e) {
-                        console.error("Realism: Failed to read config file", e);
+                        logger.error("Realism: Failed to read config file" + e);
                     }
                 }
             }
         ], "RealismMod");
-        dynamicRouter.registerDynamicRouter("realismTemplateData", [
+        dynamicRouter.registerDynamicRouter("realismGetTemplateData", [
             {
                 url: "/RealismMod/GetTemplateData",
                 action: async (url, info, sessionID, output) => {
@@ -131,7 +132,7 @@ class Main {
                         return jsonUtil.serialize(data);
                     }
                     catch (e) {
-                        console.error("Realism: Failed to get server template data", e);
+                        logger.error("Realism: Failed to get server template data" + e);
                     }
                 }
             }
@@ -150,7 +151,7 @@ class Main {
                         return jsonUtil.serialize(realismInfo);
                     }
                     catch (e) {
-                        console.error("Realism: Failed to read info file", e);
+                        logger.error("Realism: Failed to read info file" + e);
                     }
                 }
             }
@@ -164,7 +165,7 @@ class Main {
                         return jsonUtil.serialize(realismInfo);
                     }
                     catch (e) {
-                        console.error("Failed to read info file", e);
+                        logger.error("Failed to read info file" + e);
                     }
                 }
             }
@@ -178,13 +179,7 @@ class Main {
             const botGeneratorHelper = container.resolve("BotGeneratorHelper");
             const botNameService = container.resolve("BotNameService");
             const itemFilterService = container.resolve("ItemFilterService");
-            const durabilityLimitsHelper = container.resolve("DurabilityLimitsHelper");
-            const appContext = container.resolve("ApplicationContext");
-            const itemHelper = container.resolve("ItemHelper");
-            const inventoryHelper = container.resolve("InventoryHelper");
-            const containerHelper = container.resolve("ContainerHelper");
             const botGen = new bot_gen_1.BotGen(logger, hashUtil, randomUtil, timeUtil, profileHelper, databaseService, botInventoryGenerator, botLevelGenerator, botEquipmentFilterService, weightedRandomHelper, botHelper, botGeneratorHelper, seasonalEventService, itemFilterService, botNameService, configServer, cloner);
-            const myBotGenHelper = new bot_gen_1.BotGenHelper(logger, randomUtil, databaseService, durabilityLimitsHelper, itemHelper, inventoryHelper, containerHelper, appContext, localisationService, configServer);
             container.afterResolution("BotGenerator", (_t, result) => {
                 result.prepareAndGenerateBot = (sessionId, botGenerationDetails) => {
                     return botGen.myPrepareAndGenerateBot(sessionId, botGenerationDetails);
@@ -195,11 +190,6 @@ class Main {
                     return botGen.myGeneratePlayerScav(sessionId, role, difficulty, botTemplate);
                 };
             }, { frequency: "Always" });
-            // container.afterResolution("BotGeneratorHelper", (_t, result: BotGeneratorHelper) => {
-            //     result.generateExtraPropertiesForItem = (itemTemplate: ITemplateItem, botRole: string = null): { upd?: IUpd } => {
-            //         return myBotGenHelper.myGenerateExtraPropertiesForItem(itemTemplate, botRole);
-            //     }
-            // }, { frequency: "Always" });
         }
         container.afterResolution("TraderAssortHelper", (_t, result) => {
             result.resetExpiredTrader = (trader) => {
@@ -235,20 +225,7 @@ class Main {
                 };
             }, { frequency: "Always" });
         }
-        // if (modConfig.airdrop_changes == true) {
-        //     const locationGenerator = container.resolve<LocationGenerator>("LocationGenerator");
-        //     const lootGenerator = container.resolve<LootGenerator>("LootGenerator");
-        //     const raidTimeAdjustmentService = container.resolve<RaidTimeAdjustmentService>("RaidTimeAdjustmentService");
-        //     const appContext = container.resolve<ApplicationContext>("ApplicationContext");
-        //     const itemFilterService = container.resolve<ItemFilterService>("ItemFilterService");
-        //     const airdropController = new AirdropLootgen(jsonUtil, hashUtil, randomUtil, weightedRandomHelper, logger, locationGenerator, localisationService, raidTimeAdjustmentService, itemFilterService, lootGenerator, databaseServer, timeUtil, configServer, appContext)
-        //     container.afterResolution("LocationController", (_t, result: LocationController) => {
-        //         result.getAirdropLoot = (): IAirdropLootResult => {
-        //             return airdropController.myGetAirdropLoot();
-        //         }
-        //     }, { frequency: "Always" });
-        // }
-        staticRouterModService.registerStaticRouter("Realism-CheckProfile", [
+        staticRouterModService.registerStaticRouter("Realism-OnValidate", [
             {
                 url: "/client/game/version/validate",
                 action: async (url, info, sessionID, output) => {
@@ -272,7 +249,7 @@ class Main {
                     const scavData = profileHelper.getScavProfile(sessionID);
                     const profileData = profileHelper.getFullProfile(sessionID);
                     try {
-                        this.checkPlayerLevel(sessionID, profileData, pmcData, logger, true);
+                        utils_1.ProfileTracker.checkLoggedInProfiles(pmcData, profileData, false);
                         if (modConfig.backup_profiles == true)
                             this.backupProfile(profileData, logger);
                         if (modConfig.enable_hazard_zones)
@@ -301,16 +278,13 @@ class Main {
                             }
                         }
                         if (adjustedTradersOnStart == false) {
-                            let pmcData = [];
-                            utils_1.ProfileTracker.profileIds.forEach(element => {
-                                pmcData.push(profileHelper.getPmcProfile(element));
-                            });
-                            randomizeTraderAssort.adjustTraderStockAtGameStart(pmcData);
+                            const profilesData = utils_1.ProfileTracker.getPmcProfileData(profileHelper);
+                            randomizeTraderAssort.adjustTraderStockAtGameStart(profilesData);
                         }
                         adjustedTradersOnStart = true;
                         const traders = ragfairServer.getUpdateableTraders();
-                        for (let traderID in traders) {
-                            ragfairOfferGenerator.generateFleaOffersForTrader(traders[traderID]);
+                        for (let traderID of traders) {
+                            ragfairOfferGenerator.generateFleaOffersForTrader(traderID);
                         }
                         if (modConfig.tiered_flea == true) {
                             tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, utils_1.ProfileTracker.averagePlayerLevel);
@@ -334,20 +308,9 @@ class Main {
                 url: "/client/game/logout",
                 action: async (url, info, sessionID, output) => {
                     try {
-                        const profileHelper = container.resolve("ProfileHelper");
+                        const pmcData = profileHelper.getPmcProfile(sessionID);
                         const profileData = profileHelper.getFullProfile(sessionID);
-                        let playerCount = 0;
-                        let cumulativePlayerLevel = 0;
-                        delete utils_1.ProfileTracker.playerRecord[profileData.info.id];
-                        Object.values(utils_1.ProfileTracker.playerRecord).forEach(value => {
-                            const playerLevel = Number(value);
-                            if (!isNaN(playerLevel)) {
-                                cumulativePlayerLevel += playerLevel;
-                                playerCount += 1;
-                            }
-                        });
-                        utils_1.ProfileTracker.averagePlayerLevel = playerCount > 0 ? cumulativePlayerLevel / playerCount : 1;
-                        logger.logWithColor(`Realism Mod: Players in server ${playerCount}, average level: ${utils_1.ProfileTracker.averagePlayerLevel}`, LogTextColor_1.LogTextColor.GREEN);
+                        utils_1.ProfileTracker.checkLoggedInProfiles(pmcData, profileData, true);
                     }
                     catch (err) {
                         logger.error("Realism Mod: Error At Log Out: " + err);
@@ -406,9 +369,9 @@ class Main {
                         const baseTime = weatherGenerator.calculateGameTime({ acceleration: 0, time: "", date: "", weather: undefined, season: 1 }).time; //apparently regenerates weather?
                         utils_1.RaidInfoTracker.mapName = matchInfo.location.toLowerCase();
                         let realTime = "";
-                        let mapType = "";
+                        let mapType;
                         //update global player level
-                        this.checkPlayerLevel(sessionID, profileData, pmcData, logger);
+                        utils_1.ProfileTracker.checkLoggedInProfiles(pmcData, profileData, false);
                         if (matchInfo.timeVariant === "PAST") {
                             realTime = utils.getTime(baseTime, 12);
                         }
@@ -417,13 +380,13 @@ class Main {
                         }
                         utils_1.RaidInfoTracker.isNight = utils.isNight(realTime, matchInfo.location);
                         if (arrays_1.StaticArrays.cqbMaps.includes(utils_1.RaidInfoTracker.mapName)) {
-                            mapType = "cqb";
+                            mapType = utils_1.MapType.CQB;
                         }
                         if (arrays_1.StaticArrays.outdoorMaps.includes(utils_1.RaidInfoTracker.mapName)) {
-                            mapType = "outdoor";
+                            mapType = utils_1.MapType.Outdoor;
                         }
                         if (arrays_1.StaticArrays.urbanMaps.includes(utils_1.RaidInfoTracker.mapName)) {
-                            mapType = "urban";
+                            mapType = utils_1.MapType.Urban;
                         }
                         utils_1.RaidInfoTracker.mapType = mapType;
                         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
@@ -483,7 +446,7 @@ class Main {
                     try {
                         utils_1.RaidInfoTracker.generatedBotsCount = 0;
                         //update global player level
-                        this.checkPlayerLevel(sessionID, profileData, pmcData, logger);
+                        utils_1.ProfileTracker.checkLoggedInProfiles(pmcData, profileData, false);
                         if (modConfig.tiered_flea == true)
                             tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, utils_1.ProfileTracker.averagePlayerLevel);
                         if (modConfig.enable_hazard_zones)
@@ -523,7 +486,7 @@ class Main {
             else {
                 fs.mkdir(path.join(profileFolderPath, profileData.info.id), (err) => {
                     if (err) {
-                        return console.error("Realism Mod: Error Backing Up Profile; " + err);
+                        return logger.error("Realism Mod: Error Backing Up Profile; " + err);
                     }
                     logger.log("Realism Mod: Backup path does not exist, creating folder....", "magenta");
                 });
@@ -545,7 +508,7 @@ class Main {
             mode: 0o666
         }, (err) => {
             if (err)
-                console.log("Realism Mod: Error Backing Up Profile; " + err);
+                logger.error("Realism Mod: Error Backing Up Profile; " + err);
             else {
                 logger.log(`Realism Mod: Profile backup executed successfully: ${combinedTime}`, "green");
             }
@@ -566,7 +529,6 @@ class Main {
         const inventoryConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.INVENTORY);
         const raidConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.IN_RAID);
         const itemConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.ITEM);
-        const airConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.AIRDROP);
         const traderConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.TRADER);
         const insConf = configServer.getConfig(ConfigTypes_1.ConfigTypes.INSURANCE);
         const arrays = new arrays_1.BotArrays(tables);
@@ -584,7 +546,6 @@ class Main {
         const fleaChangesPreDB = new fleamarket_1.FleaChangesPreDBLoad(logger, aKIFleaConf, modConfig);
         const quests = new quests_1.Quests(logger, tables, modConfig);
         const traders = new traders_1.Traders(logger, tables, modConfig, traderConf, utils);
-        // const airdrop = new Airdrops(logger, modConfig, airConf);
         const maps = new spawns_1.Spawns(logger, tables, modConfig, tables.locations, utils);
         const gear = new gear_1.Gear(tables, logger, modConfig);
         const itemCloning = new item_cloning_1.ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
@@ -620,7 +581,6 @@ class Main {
             maps.openZonesFix();
         }
         maps.loadSpawnChanges(locationConfig);
-        //airdrop.loadAirdropChanges();
         if (modConfig.bot_changes == true && utils_1.ModTracker.alpPresent == false) {
             botLoader.loadBots();
         }
@@ -662,7 +622,6 @@ class Main {
         botLoader.botHpMulti();
         fleaChangesPostDB.loadFleaGlobal(); //has to run post db load, otherwise item templates are undefined 
         fleaChangesPreDB.loadFleaConfig(); //probably redundant, but just in case
-        traders.loadTraderRepairs();
         // if (modConfig.headset_changes) {
         //     gear.loadHeadsetTweaks();
         // }
@@ -680,13 +639,16 @@ class Main {
             attachBase.loadAttRequirements();
         }
         if (modConfig.trader_refresh_time > 0) {
-            traders.loadTraderRefreshTimes();
+            traders.setTraderRefreshTimes();
         }
         itemsClass.loadItemBlacklists();
         itemsClass.loadItemsRestrictions();
         player.loadPlayerStats();
         player.playerProfiles(jsonUtil);
         weaponsGlobals.loadGlobalWeps();
+        traders.loadTraderRepairs();
+        if (modConfig.realistic_ballistics)
+            traders.adjustArmorHandbookPrices();
         //have to run this async to ensure correct load order
         (async () => {
             if (modConfig.realistic_ballistics == true) {
@@ -764,23 +726,22 @@ class Main {
         let lootXp = 0;
         if (exitStatus !== ExitStatis_1.ExitStatus.KILLED && exitStatus !== ExitStatis_1.ExitStatus.MISSINGINACTION) {
             const counters = pmcData.Stats.Eft.OverallCounters.Items;
-            for (const i in counters) {
-                const counter = counters[i];
+            for (const counter of counters) {
                 if (counter.Key.includes("ExpLooting")) {
-                    lootXp += Math.min(counter.Value, 1000);
+                    lootXp = Math.min(lootXp + counter.Value, 1000);
                 }
             }
         }
-        const looseModifier = lootXp * 0.00004;
-        const staticModifier = lootXp * 0.00002;
-        const minLooseLoot = 0.3;
-        const minstaticLoot = 0.4;
-        const looseLootRegenRate = 0.1;
-        const staticLootRegenRate = 0.05;
+        const looseModifier = utils.clampNumber(lootXp * 0.000035, 0, 0.04);
+        const staticModifier = utils.clampNumber(lootXp * 0.00002, 0, 0.03);
+        const looseLootRegenRate = 0.04;
+        const staticLootRegenRate = 0.03;
         const baseLooseLoot = baseMapLoot.looseLootMultiplier;
         const baseStaticLoot = baseMapLoot.staticLootMultiplier;
         const originalLooseMapModi = baseLooseLoot[map];
         const originalStaticMapModi = baseStaticLoot[map];
+        const minLooseLoot = originalLooseMapModi * 0.75;
+        const minstaticLoot = originalLooseMapModi * 0.4;
         const mapAliases = {
             "factory4_day": ["factory4_day", "factory4_night"],
             "factory4_night": ["factory4_day", "factory4_night"]
@@ -894,7 +855,7 @@ class Main {
         seasonalevents_1.EventTracker.doExtraRaiderSpawns = false;
         seasonalevents_1.EventTracker.isPreExplosion = false;
         seasonalevents_1.EventTracker.endExplosionEvent = false;
-        let baseGasChance = seasonalevents_1.EventTracker.isHalloween ? 20 : 5;
+        let baseGasChance = seasonalevents_1.EventTracker.isHalloween ? 20 : 0;
         if (pmcData?.Quests != null) {
             pmcData.Quests.forEach(q => {
                 const isStarted = q.status === 2 || q.status === 3;
@@ -902,13 +863,13 @@ class Main {
                 //bad omens part 1
                 if (q.qid === "6702afe9504c9aca4ed75d9a") {
                     if (isStarted || isCompleted) {
-                        baseGasChance += 100;
+                        baseGasChance += 50;
                     }
                 }
                 //bad omens part 2
                 if (q.qid === "6702b0a1b9fb4619debd0697") {
                     if (isStarted || isCompleted) {
-                        baseGasChance += 100;
+                        baseGasChance += 50;
                     }
                 }
                 //bad omens part 3
@@ -920,13 +881,13 @@ class Main {
                 //former patients
                 if (q.qid === "6702b8b3c0f2f525d988e428") {
                     if (isStarted || isCompleted) {
-                        baseGasChance += 200;
+                        baseGasChance += 250;
                     }
                 }
                 //critical mass
                 if (q.qid === "670ae811bd43cbf026768126") {
                     if (isStarted || isCompleted) {
-                        baseGasChance += 100;
+                        baseGasChance += 150;
                     }
                 }
                 //do no harm
@@ -969,24 +930,6 @@ class Main {
         seasonalevents_1.EventTracker.doGasEvent = gasChance > utils.pickRandNumInRange(0, 1000);
         if (modConfig.logEverything)
             logger.warning("gas chance " + gasChance);
-    }
-    checkPlayerLevel(sessionID, profileData, pmcData, logger, shouldLog = false) {
-        let level = 1;
-        if (pmcData?.Info?.Level != null) {
-            level = pmcData.Info.Level;
-        }
-        let playerCount = 0;
-        let cumulativePlayerLevel = 0;
-        utils_1.ProfileTracker.playerRecord[profileData.info.id] = level;
-        Object.values(utils_1.ProfileTracker.playerRecord).forEach(value => {
-            cumulativePlayerLevel += value;
-            playerCount += 1;
-        });
-        utils_1.ProfileTracker.averagePlayerLevel = cumulativePlayerLevel / playerCount;
-        utils_1.ProfileTracker.profileIds.push(sessionID);
-        if (shouldLog) {
-            logger.logWithColor(`Realism Mod: Players in server ${playerCount}, average level: ${utils_1.ProfileTracker.averagePlayerLevel}`, LogTextColor_1.LogTextColor.GREEN);
-        }
     }
     checkProfile(pmcData, pmcEXP, utils, player, logger) {
         utils.correctItemResources(pmcData, pmcEXP, logger);

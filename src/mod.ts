@@ -10,8 +10,7 @@ import { ProfileHelper } from "@spt/helpers/ProfileHelper";
 import { HttpResponseUtil } from "@spt/utils/HttpResponseUtil";
 import { IRagfairConfig } from "@spt/models/spt/config/IRagfairConfig";
 import { ITraderConfig } from "@spt/models/spt/config/ITraderConfig";
-import { IAirdropConfig } from "@spt/models/spt/config/IAirdropConfig";
-import { IPmcData, IPostRaidPmcData } from "@spt/models/eft/common/IPmcData";
+import { IPmcData } from "@spt/models/eft/common/IPmcData";
 import { RandomUtil } from "@spt/utils/RandomUtil";
 import { HashUtil } from "@spt/utils/HashUtil";
 import { WeightedRandomHelper } from "@spt/helpers/WeightedRandomHelper";
@@ -91,7 +90,7 @@ import { ExitStatus } from "@spt/models/enums/ExitStatis";
 
 import { AttachmentBase } from "./weapons/attatchment_base";
 import { FleaChangesPreDBLoad, TieredFlea, FleaChangesPostDBLoad } from "./traders/fleamarket";
-import { ConfigChecker, Utils, ProfileTracker, RaidInfoTracker, ModTracker } from "./utils/utils"
+import { ConfigChecker, Utils, ProfileTracker, RaidInfoTracker, ModTracker, MapType } from "./utils/utils"
 import { BotArrays, StaticArrays } from "./utils/arrays"
 import { Consumables } from "./items/meds";
 import { Player } from "./player/player"
@@ -103,7 +102,6 @@ import { JsonGen } from "./json/json_gen";
 import { Quests } from "./traders/quests";
 import { InsuranceOverride } from "./traders/insurance";
 import { RagCallback, RandomizeTraderAssort, TraderRefresh, Traders } from "./traders/traders";
-// import { Airdrops } from "./misc/airdrops";
 import { Spawns } from "./bots/spawns";
 import { Gear } from "./items/gear";
 import { EventTracker } from "./misc/seasonalevents";
@@ -124,6 +122,11 @@ import { InventoryHelper } from "@spt/helpers/InventoryHelper";
 import { IUpd } from "@spt/models/eft/common/tables/IItem";
 import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 import { spawn } from "child_process";
+import { HandbookHelper } from "@spt/helpers/HandbookHelper";
+import { InstanceManager } from "./instance_manager";
+import { ExternalInventoryMagGen } from "@spt/generators/weapongen/implementations/ExternalInventoryMagGen";
+import { InventoryMagGen } from "@spt/generators/weapongen/InventoryMagGen";
+import { BotWeaponGeneratorHelper } from "@spt/helpers/BotWeaponGeneratorHelper";
 
 const crafts = require("../db/items/hideout_crafts.json");
 const medItems = require("../db/items/med_items.json");
@@ -172,6 +175,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         const traderRefersh = new TraderRefresh(logger, mathUtil, timeUtil, databaseService, profileHelper, assortHelper, paymentHelper, ragfairAssortGenerator, ragfairOfferGenerator,
             traderAssortService, localisationService, traderPurchasePefrsisterService, traderHelper, fenceService, configServer, cloner);
         const flea = new FleaChangesPreDBLoad(logger, fleaConf, modConfig);
+        const instanceManager = InstanceManager.getInstance();
 
         this.checkForMods(preSptModLoader, logger, modConfig);
         flea.loadFleaConfig();
@@ -200,7 +204,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         try {
                             return jsonUtil.serialize(modConfig);
                         } catch (e) {
-                            console.error("Realism: Failed to read config file", e);
+                            logger.error("Realism: Failed to read config file" + e);
                         }
                     }
                 }
@@ -219,7 +223,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             const data: { [key: string]: any } = await statHandler.processTemplateJson(true, path.join(__dirname, '..', 'db', 'templates'))
                             return jsonUtil.serialize(data);
                         } catch (e) {
-                            console.error("Realism: Failed to get server template data", e);
+                            logger.error("Realism: Failed to get server template data" + e);
                         }
                     }
                 }
@@ -243,7 +247,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
 
                             return jsonUtil.serialize(realismInfo);
                         } catch (e) {
-                            console.error("Realism: Failed to read info file", e);
+                            logger.error("Realism: Failed to read info file"+ e);
                         }
                     }
                 }
@@ -261,7 +265,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             this.setModInfo(logger);
                             return jsonUtil.serialize(realismInfo);
                         } catch (e) {
-                            console.error("Failed to read info file", e);
+                            logger.error("Failed to read info file" + e);
                         }
                     }
                 }
@@ -278,11 +282,6 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             const botGeneratorHelper = container.resolve<BotGeneratorHelper>("BotGeneratorHelper");
             const botNameService = container.resolve<BotNameService>("BotNameService");
             const itemFilterService = container.resolve<ItemFilterService>("ItemFilterService");
-            const durabilityLimitsHelper = container.resolve<DurabilityLimitsHelper>("DurabilityLimitsHelper");
-            const appContext = container.resolve<ApplicationContext>("ApplicationContext");
-            const itemHelper = container.resolve<ItemHelper>("ItemHelper");
-            const inventoryHelper = container.resolve<InventoryHelper>("InventoryHelper");
-            const containerHelper = container.resolve<ContainerHelper>("ContainerHelper");
 
             const botGen = new BotGen(
                 logger, hashUtil, randomUtil, timeUtil,
@@ -290,12 +289,6 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                 botLevelGenerator, botEquipmentFilterService, weightedRandomHelper,
                 botHelper, botGeneratorHelper, seasonalEventService,
                 itemFilterService, botNameService, configServer, cloner);
-
-            const myBotGenHelper = new BotGenHelper(
-                logger, randomUtil, databaseService,
-                durabilityLimitsHelper, itemHelper,
-                inventoryHelper, containerHelper,
-                appContext, localisationService, configServer);
 
 
             container.afterResolution("BotGenerator", (_t, result: BotGenerator) => {
@@ -309,12 +302,6 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                     return botGen.myGeneratePlayerScav(sessionId, role, difficulty, botTemplate);
                 }
             }, { frequency: "Always" });
-
-            // container.afterResolution("BotGeneratorHelper", (_t, result: BotGeneratorHelper) => {
-            //     result.generateExtraPropertiesForItem = (itemTemplate: ITemplateItem, botRole: string = null): { upd?: IUpd } => {
-            //         return myBotGenHelper.myGenerateExtraPropertiesForItem(itemTemplate, botRole);
-            //     }
-            // }, { frequency: "Always" });
         }
 
         container.afterResolution("TraderAssortHelper", (_t, result: TraderAssortHelper) => {
@@ -359,23 +346,9 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             }, { frequency: "Always" });
         }
 
-        // if (modConfig.airdrop_changes == true) {
-        //     const locationGenerator = container.resolve<LocationGenerator>("LocationGenerator");
-        //     const lootGenerator = container.resolve<LootGenerator>("LootGenerator");
-        //     const raidTimeAdjustmentService = container.resolve<RaidTimeAdjustmentService>("RaidTimeAdjustmentService");
-        //     const appContext = container.resolve<ApplicationContext>("ApplicationContext");
-        //     const itemFilterService = container.resolve<ItemFilterService>("ItemFilterService");
-        //     const airdropController = new AirdropLootgen(jsonUtil, hashUtil, randomUtil, weightedRandomHelper, logger, locationGenerator, localisationService, raidTimeAdjustmentService, itemFilterService, lootGenerator, databaseServer, timeUtil, configServer, appContext)
-
-        //     container.afterResolution("LocationController", (_t, result: LocationController) => {
-        //         result.getAirdropLoot = (): IAirdropLootResult => {
-        //             return airdropController.myGetAirdropLoot();
-        //         }
-        //     }, { frequency: "Always" });
-        // }
 
         staticRouterModService.registerStaticRouter(
-            "Realism-CheckProfile",
+            "Realism-OnValidate",
             [
                 {
                     url: "/client/game/version/validate",
@@ -402,7 +375,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         const profileData = profileHelper.getFullProfile(sessionID);
 
                         try {
-                            this.checkPlayerLevel(sessionID, profileData, pmcData, logger, true);
+                            ProfileTracker.checkLoggedInProfiles(pmcData, profileData, false);
                             if (modConfig.backup_profiles == true) this.backupProfile(profileData, logger);
                             if (modConfig.enable_hazard_zones) quests.resetRepeatableQuests(profileData);
                             this.checkForSeasonalEvents(logger, seasonalEventsService, seeasonalEventConfig, weatherConfig);
@@ -432,17 +405,14 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             }
 
                             if (adjustedTradersOnStart == false) {
-                                let pmcData: IPmcData[] = [];
-                                ProfileTracker.profileIds.forEach(element => {
-                                    pmcData.push(profileHelper.getPmcProfile(element));
-                                });
-                                randomizeTraderAssort.adjustTraderStockAtGameStart(pmcData);
+                                const profilesData: IPmcData[] = ProfileTracker.getPmcProfileData(profileHelper);
+                                randomizeTraderAssort.adjustTraderStockAtGameStart(profilesData);
                             }
                             adjustedTradersOnStart = true;
 
                             const traders: string[] = (ragfairServer as any).getUpdateableTraders();
-                            for (let traderID in traders) {
-                                ragfairOfferGenerator.generateFleaOffersForTrader(traders[traderID]);
+                            for (let traderID of traders) {
+                                ragfairOfferGenerator.generateFleaOffersForTrader(traderID);
                             }
 
                             if (modConfig.tiered_flea == true) {
@@ -473,22 +443,9 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                     url: "/client/game/logout",
                     action: async (url, info, sessionID, output) => {
                         try {
-                            const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
+                            const pmcData = profileHelper.getPmcProfile(sessionID);
                             const profileData = profileHelper.getFullProfile(sessionID)
-
-                            let playerCount = 0;
-                            let cumulativePlayerLevel = 0;
-                            delete ProfileTracker.playerRecord[profileData.info.id];
-                            Object.values(ProfileTracker.playerRecord).forEach(value => {
-                                const playerLevel = Number(value);
-                                if (!isNaN(playerLevel)) {
-                                    cumulativePlayerLevel += playerLevel;
-                                    playerCount += 1;
-                                }
-                            });
-
-                            ProfileTracker.averagePlayerLevel = playerCount > 0 ? cumulativePlayerLevel / playerCount : 1;
-                            logger.logWithColor(`Realism Mod: Players in server ${playerCount}, average level: ${ProfileTracker.averagePlayerLevel}`, LogTextColor.GREEN);
+                            ProfileTracker.checkLoggedInProfiles(pmcData, profileData, true);
                         }
                         catch (err) {
                             logger.error("Realism Mod: Error At Log Out: " + err);
@@ -567,10 +524,10 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             const baseTime = weatherGenerator.calculateGameTime({ acceleration: 0, time: "", date: "", weather: undefined, season: 1 }).time; //apparently regenerates weather?
                             RaidInfoTracker.mapName = matchInfo.location.toLowerCase();
                             let realTime = "";
-                            let mapType = "";
+                            let mapType: MapType;
 
                             //update global player level
-                            this.checkPlayerLevel(sessionID, profileData, pmcData, logger);
+                            ProfileTracker.checkLoggedInProfiles(pmcData, profileData, false);
 
                             if (matchInfo.timeVariant === "PAST") {
                                 realTime = utils.getTime(baseTime, 12);
@@ -581,13 +538,13 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                             RaidInfoTracker.isNight = utils.isNight(realTime, matchInfo.location);
 
                             if (StaticArrays.cqbMaps.includes(RaidInfoTracker.mapName)) {
-                                mapType = "cqb";
+                                mapType = MapType.CQB;
                             }
                             if (StaticArrays.outdoorMaps.includes(RaidInfoTracker.mapName)) {
-                                mapType = "outdoor";
+                                mapType = MapType.Outdoor;
                             }
                             if (StaticArrays.urbanMaps.includes(RaidInfoTracker.mapName)) {
-                                mapType = "urban";
+                                mapType = MapType.Urban;
                             }
                             RaidInfoTracker.mapType = mapType;
 
@@ -660,7 +617,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                         try {
                             RaidInfoTracker.generatedBotsCount = 0;
                             //update global player level
-                            this.checkPlayerLevel(sessionID, profileData, pmcData, logger);
+                            ProfileTracker.checkLoggedInProfiles(pmcData, profileData, false);
 
                             if (modConfig.tiered_flea == true) tieredFlea.updateFlea(logger, ragfairOfferGenerator, container, ProfileTracker.averagePlayerLevel);
 
@@ -709,7 +666,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
 
                 fs.mkdir(path.join(profileFolderPath, profileData.info.id), (err) => {
                     if (err) {
-                        return console.error("Realism Mod: Error Backing Up Profile; " + err);
+                        return logger.error("Realism Mod: Error Backing Up Profile; " + err);
                     }
                     logger.log("Realism Mod: Backup path does not exist, creating folder....", "magenta");
 
@@ -736,7 +693,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             mode: 0o666
         }, (err) => {
             if (err)
-                console.log("Realism Mod: Error Backing Up Profile; " + err);
+                logger.error("Realism Mod: Error Backing Up Profile; " + err);
             else {
                 logger.log(`Realism Mod: Profile backup executed successfully: ${combinedTime}`, "green");
             }
@@ -759,7 +716,6 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         const inventoryConf = configServer.getConfig<IInventoryConfig>(ConfigTypes.INVENTORY);
         const raidConf = configServer.getConfig<IInRaidConfig>(ConfigTypes.IN_RAID);
         const itemConf = configServer.getConfig<IItemConfig>(ConfigTypes.ITEM);
-        const airConf = configServer.getConfig<IAirdropConfig>(ConfigTypes.AIRDROP);
         const traderConf = configServer.getConfig<ITraderConfig>(ConfigTypes.TRADER);
         const insConf = configServer.getConfig<IInsuranceConfig>(ConfigTypes.INSURANCE);
         const arrays = new BotArrays(tables);
@@ -777,7 +733,6 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         const fleaChangesPreDB = new FleaChangesPreDBLoad(logger, aKIFleaConf, modConfig);
         const quests = new Quests(logger, tables, modConfig);
         const traders = new Traders(logger, tables, modConfig, traderConf, utils);
-        // const airdrop = new Airdrops(logger, modConfig, airConf);
         const maps = new Spawns(logger, tables, modConfig, tables.locations, utils);
         const gear = new Gear(tables, logger, modConfig);
         const itemCloning = new ItemCloning(logger, tables, modConfig, jsonUtil, medItems, crafts);
@@ -822,8 +777,6 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         }
 
         maps.loadSpawnChanges(locationConfig);
-
-        //airdrop.loadAirdropChanges();
 
         if (modConfig.bot_changes == true && ModTracker.alpPresent == false) {
             botLoader.loadBots();
@@ -877,8 +830,6 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         fleaChangesPostDB.loadFleaGlobal(); //has to run post db load, otherwise item templates are undefined 
         fleaChangesPreDB.loadFleaConfig(); //probably redundant, but just in case
 
-        traders.loadTraderRepairs();
-
         // if (modConfig.headset_changes) {
         //     gear.loadHeadsetTweaks();
         // }
@@ -900,7 +851,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         }
 
         if (modConfig.trader_refresh_time > 0) {
-            traders.loadTraderRefreshTimes();
+            traders.setTraderRefreshTimes();
         }
 
         itemsClass.loadItemBlacklists();
@@ -908,6 +859,11 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         player.loadPlayerStats();
         player.playerProfiles(jsonUtil);
         weaponsGlobals.loadGlobalWeps();
+
+
+        traders.loadTraderRepairs();
+        if (modConfig.realistic_ballistics) traders.adjustArmorHandbookPrices();
+
         //have to run this async to ensure correct load order
         (async () => {
 
@@ -936,7 +892,6 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
             }
 
             gear.loadGearConflicts();
-
             statHandler.modifiedItems = {}; //empty temp template object
         })();
     }
@@ -1001,24 +956,23 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         let lootXp = 0;
         if (exitStatus !== ExitStatus.KILLED && exitStatus !== ExitStatus.MISSINGINACTION) {
             const counters = pmcData.Stats.Eft.OverallCounters.Items;
-            for (const i in counters) {
-                const counter = counters[i];
+            for (const counter of counters) {
                 if (counter.Key.includes("ExpLooting")) {
-                    lootXp += Math.min(counter.Value, 1000);
+                    lootXp = Math.min(lootXp + counter.Value, 1000);
                 }
             }
         }
 
-        const looseModifier = lootXp * 0.00004;
-        const staticModifier = lootXp * 0.00002;
-        const minLooseLoot = 0.3;
-        const minstaticLoot = 0.4;
-        const looseLootRegenRate = 0.1;
-        const staticLootRegenRate = 0.05;
+        const looseModifier = utils.clampNumber(lootXp * 0.000035, 0, 0.04);
+        const staticModifier = utils.clampNumber(lootXp * 0.00002, 0, 0.03);
+        const looseLootRegenRate = 0.04;
+        const staticLootRegenRate = 0.03;
         const baseLooseLoot: ILootMultiplier = baseMapLoot.looseLootMultiplier;
         const baseStaticLoot: ILootMultiplier = baseMapLoot.staticLootMultiplier;
         const originalLooseMapModi = baseLooseLoot[map];
         const originalStaticMapModi = baseStaticLoot[map];
+        const minLooseLoot = originalLooseMapModi * 0.75;
+        const minstaticLoot = originalLooseMapModi * 0.4;
         const mapAliases: { [key: string]: string[] } = {
             "factory4_day": ["factory4_day", "factory4_night"],
             "factory4_night": ["factory4_day", "factory4_night"]
@@ -1147,7 +1101,7 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         EventTracker.isPreExplosion = false;
         EventTracker.endExplosionEvent = false;
 
-        let baseGasChance = EventTracker.isHalloween ? 20 : 5;
+        let baseGasChance = EventTracker.isHalloween ? 20 : 0;
         if (pmcData?.Quests != null) {
             pmcData.Quests.forEach(q => {
                 const isStarted = q.status === 2 || q.status === 3;
@@ -1155,13 +1109,13 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                 //bad omens part 1
                 if (q.qid === "6702afe9504c9aca4ed75d9a") {
                     if (isStarted || isCompleted) {
-                        baseGasChance += 100;
+                        baseGasChance += 50;
                     }
                 }
                 //bad omens part 2
                 if (q.qid === "6702b0a1b9fb4619debd0697") {
                     if (isStarted || isCompleted) {
-                        baseGasChance += 100;
+                        baseGasChance += 50;
                     }
                 }
                 //bad omens part 3
@@ -1173,13 +1127,13 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
                 //former patients
                 if (q.qid === "6702b8b3c0f2f525d988e428") {
                     if (isStarted || isCompleted) {
-                        baseGasChance += 200;
+                        baseGasChance += 250;
                     }
                 }
                 //critical mass
                 if (q.qid === "670ae811bd43cbf026768126") {
                     if (isStarted || isCompleted) {
-                        baseGasChance += 100;
+                        baseGasChance += 150;
                     }
                 }
                 //do no harm
@@ -1226,26 +1180,6 @@ export class Main implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod {
         const gasChance = this.checkEventQuests(pmcData);
         EventTracker.doGasEvent = gasChance > utils.pickRandNumInRange(0, 1000);
         if (modConfig.logEverything) logger.warning("gas chance " + gasChance);
-    }
-
-    private checkPlayerLevel(sessionID: string, profileData: ISptProfile, pmcData: IPmcData, logger: ILogger, shouldLog: boolean = false) {
-        let level = 1;
-        if (pmcData?.Info?.Level != null) {
-            level = pmcData.Info.Level;
-        }
-        let playerCount = 0;
-        let cumulativePlayerLevel = 0;
-        ProfileTracker.playerRecord[profileData.info.id] = level;
-        Object.values(ProfileTracker.playerRecord).forEach(value => {
-            cumulativePlayerLevel += value;
-            playerCount += 1;
-        });
-        ProfileTracker.averagePlayerLevel = cumulativePlayerLevel / playerCount;
-        ProfileTracker.profileIds.push(sessionID);
-
-        if (shouldLog) {
-            logger.logWithColor(`Realism Mod: Players in server ${playerCount}, average level: ${ProfileTracker.averagePlayerLevel}`, LogTextColor.GREEN);
-        }
     }
 
     private checkProfile(pmcData: IPmcData, pmcEXP: number, utils: Utils, player: Player, logger: ILogger) {

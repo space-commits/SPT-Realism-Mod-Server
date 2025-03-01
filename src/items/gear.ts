@@ -3,6 +3,7 @@ import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { StaticArrays } from "../utils/arrays";
 import { ParentClasses } from "../utils/enums";
 import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
+import { Utils } from "../utils/utils";
 
 export class Gear {
     constructor(private tables: IDatabaseTables, private logger: ILogger, private modConfig: any) { }
@@ -46,7 +47,8 @@ export class Gear {
         for (let item in this.itemDB()) {
             let serverItem = this.itemDB()[item];
 
-            if (serverItem._props.FaceShieldComponent == true) {
+            //gas masks need lvl 1 armor min to have durability, so 269 repair cost is the only alternative identifier
+            if (serverItem._props.FaceShieldComponent == true && serverItem._props?.armorClass && Number(serverItem._props.armorClass) > 0 && serverItem._props?.RepairCost != 269) {
                 faceShieldArray.push(serverItem._id);
             }
 
@@ -60,19 +62,14 @@ export class Gear {
                         }
                     }
                 }
-
-                // if (StaticArrays.conflHats.includes(serverItem._id)) {
-                //     let confItems = this.itemDB()[item]._props.ConflictingItems;
-                //     this.itemDB()[item]._props.ConflictingItems = StaticArrays.conflMasks.concat(confItems);
-                // }
             }
         }
 
         //custom mask overlays will bug out if using actual faceshield at the same time
         if ((this.modConfig.realistic_ballistics == true || this.modConfig.enable_hazard_zones == true)) {
-            for(const i of faceCoversWithOverlay){
+            for (const i of faceCoversWithOverlay) {
                 const item = this.itemDB()[i];
-                if(item == null) continue;
+                if (item == null) continue;
                 item._props.ConflictingItems = item._props.ConflictingItems.concat(faceShieldArray)
             }
         }

@@ -362,23 +362,44 @@ export class ItemCloning {
         container._props.Width = 2;
         container._props.CanSellOnRagfair = false;
         container._props.Weight = 10.2;
-        const grid = container._props.Grids[0];
-        grid._props.cellsH = 5;
-        grid._props.cellsV = 2;
-        grid._props.filters[0].Filter = [];
-        grid._props.filters[0].Filter.push(radSampleId, gasSampleId);
+
+        //some mods remove the filters of the cloned container, this ensures compatibility.
+        container._props.Grids = [
+            {
+                "_id": "67b85ebd5cd57c2f33728a76",
+                "_name": "main",
+                "_parent": "66fd588d397ed74159826cf0",
+                "_props": {
+                    "cellsH": 5,
+                    "cellsV": 2,
+                    "filters": [
+                        {
+                            "ExcludedFilter": [],
+                            "Filter": [
+                                radSampleId,
+                                gasSampleId
+                            ]
+                        }
+                    ],
+                    "isSortingTable": false,
+                    "maxCount": 0,
+                    "maxWeight": 0,
+                    "minCount": 0
+                },
+                "_proto": "55d329c24bdc2d892f8b4567"
+            }
+        ];
 
         //Makeshift Transmitter
         const transmitterId = "6703082a766cb6d11310094e";
-        this.cloneGenericItem("63a0b2eabea67a6d93009e52", transmitterId, "green", "assets/content/items/quest/item_quest_radio_repeater/item_quest_radio_repeater.bundle"); 
+        this.cloneGenericItem("63a0b2eabea67a6d93009e52", transmitterId, "green", "assets/content/items/quest/item_quest_radio_repeater/item_quest_radio_repeater.bundle");
         this.addToHandbook(transmitterId, "5b47574386f77428ca22b2ef", 15000);
         this.addToLocale(transmitterId, "Makeshift Transmitter", "Transmitter", "A makeshift transmitter that could reach the outside world if connected to a powerful enough satelite dish");
         const transmitter = this.itemDB()[transmitterId];
         transmitter._props.CanSellOnRagfair = false;
 
         StaticArrays.secureContainers.forEach(s => {
-            if (!this.itemDB()[s]._props.Grids[0]._props.filters[0]) return;
-
+            if (!this.itemDB()[s]._props.Grids[0]._props.filters[0]) return; //if SVM or another mod changed secure container filters
             this.itemDB()[s]._props.Grids[0]._props.filters[0].Filter.push(containerId);
             this.itemDB()[s]._props.Grids[0]._props.filters[0].ExcludedFilter.push(ramuId, gamuId, ramuDataId, gamuDataId);
         });
@@ -390,7 +411,7 @@ export class ItemCloning {
         const traders = this.tables.traders;
         StaticArrays.traders.forEach(t => {
             if (t === skierId || t === theraId) return;
-            traders[t].base.items_buy_prohibited.id_list.push("66fd588956f73c4f38dd07ae", "66fd57171f981640e667fbe2", "670120df4f0c4c37e6be90ae", "670120ce354987453daf3d0c","6703082a766cb6d11310094e");
+            traders[t].base.items_buy_prohibited.id_list.push("66fd588956f73c4f38dd07ae", "66fd57171f981640e667fbe2", "670120df4f0c4c37e6be90ae", "670120ce354987453daf3d0c", "6703082a766cb6d11310094e");
         });
 
         traders[skierId].base.items_buy.id_list.push("66fd588956f73c4f38dd07ae", "66fd57171f981640e667fbe2");
