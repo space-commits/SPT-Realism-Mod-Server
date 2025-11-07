@@ -164,7 +164,7 @@ export class ItemStatHandler {
             }
         }
         else if (fileItem?.MaskToUse != null) {
-            if (fileItem.MaskToUse == "ronin") {
+            if (fileItem.MaskToUse == "ronin" || fileItem.MaskToUse == "trooper") {
                 serverItem._props.FaceShieldMask = "NoMask";
             }
             else {

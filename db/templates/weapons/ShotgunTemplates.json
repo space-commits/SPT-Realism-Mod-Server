@@ -50,7 +50,7 @@
             "y": -0.4,
             "z": 0
         },
-        "EnableExtraBSGVisRecoil": false
+        "ReduceBSGVisRecoil": true
     },
     "60db29ce99594040e04c4a27": {
         "$type": "RealismMod.Gun, RealismMod",
@@ -99,7 +99,7 @@
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.01,
         "RecoilIntensity": 0.575,
-        "EnableExtraBSGVisRecoil": true
+        "ReduceBSGVisRecoil": true
     },
     "5580223e4bdc2d1c128b457f": {
         "$type": "RealismMod.Gun, RealismMod",
@@ -147,7 +147,7 @@
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.015,
         "RecoilIntensity": 0.36,
-        "EnableExtraBSGVisRecoil": true
+        "EnableBSGVisRecoil": true
     },
     "64748cb8de82c85eaf0a273a": {
         "$type": "RealismMod.Gun, RealismMod",
@@ -200,7 +200,7 @@
             "y": -0.5,
             "z": 0
         },
-        "EnableExtraBSGVisRecoil": false
+        "ReduceBSGVisRecoil": true
     },
     "54491c4f4bdc2db1078b4568": {
         "$type": "RealismMod.Gun, RealismMod",
@@ -214,7 +214,7 @@
         "Ergonomics": 80,
         "VerticalRecoil": 210,
         "HorizontalRecoil": 280,
-        "Dispersion": 4,
+        "Dispersion": 3,
         "CameraRecoil": 0.15,
         "VisualMulti": 2,
         "Convergence": 3,
@@ -253,7 +253,7 @@
             "y": -0.45,
             "z": 0
         },
-        "EnableExtraBSGVisRecoil": true
+        "EnableBSGVisRecoil": true
     },
     "5e870397991fd70db46995c8": {
         "$type": "RealismMod.Gun, RealismMod",
@@ -306,7 +306,7 @@
             "y": -0.45,
             "z": 0
         },
-        "EnableExtraBSGVisRecoil": true
+        "EnableBSGVisRecoil": true
     },
     "5a7828548dc32e5a9c28b516": {
         "$type": "RealismMod.Gun, RealismMod",
@@ -320,7 +320,7 @@
         "Ergonomics": 80,
         "VerticalRecoil": 210,
         "HorizontalRecoil": 280,
-        "Dispersion": 3,
+        "Dispersion": 2,
         "CameraRecoil": 0.15,
         "VisualMulti": 2,
         "Convergence": 3,
@@ -359,7 +359,7 @@
             "y": -0.45,
             "z": 0
         },
-        "EnableExtraBSGVisRecoil": true
+        "EnableBSGVisRecoil": true
     },
     "5e848cc2988a8701445df1e8": {
         "$type": "RealismMod.Gun, RealismMod",
@@ -373,7 +373,7 @@
         "Ergonomics": 80,
         "VerticalRecoil": 450,
         "HorizontalRecoil": 500,
-        "Dispersion": 5,
+        "Dispersion": 4,
         "CameraRecoil": 0.11,
         "VisualMulti": 2,
         "Convergence": 2,
@@ -412,7 +412,7 @@
             "y": -0.45,
             "z": 0
         },
-        "EnableExtraBSGVisRecoil": false
+        "ReduceBSGVisRecoil": true
     },
     "56dee2bdd2720bc8328b4567": {
         "$type": "RealismMod.Gun, RealismMod",
@@ -460,7 +460,7 @@
         "BaseFixSpeed": 0.77,
         "OffsetRotation": 0.015,
         "RecoilIntensity": 0.24,
-        "EnableExtraBSGVisRecoil": true
+        "ReduceBSGVisRecoil": true
     },
     "606dae0ab0e443224b421bb7": {
         "$type": "RealismMod.Gun, RealismMod",
@@ -508,7 +508,7 @@
         "BaseFixSpeed": 0.82,
         "OffsetRotation": 0.015,
         "RecoilIntensity": 0.225,
-        "EnableExtraBSGVisRecoil": true
+        "EnableBSGVisRecoil": true
     },
     "6259b864ebedf17603599e88": {
         "$type": "RealismMod.Gun, RealismMod",
@@ -556,7 +556,7 @@
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.012,
         "RecoilIntensity": 0.31,
-        "EnableExtraBSGVisRecoil": true
+        "ReduceBSGVisRecoil": true
     },
     "6783ae5bb52da6ed912e3d01": {
         "$type": "RealismMod.Gun, RealismMod",
@@ -604,7 +604,7 @@
         "BaseFixSpeed": 1.1,
         "OffsetRotation": 0.01,
         "RecoilIntensity": 0.295,
-        "EnableExtraBSGVisRecoil": true
+        "ReduceBSGVisRecoil": true
     },
     "576165642459773c7a400233": {
         "$type": "RealismMod.Gun, RealismMod",
@@ -652,7 +652,7 @@
         "BaseFixSpeed": 1.1,
         "OffsetRotation": 0.013,
         "RecoilIntensity": 0.26,
-        "EnableExtraBSGVisRecoil": true
+        "EnableBSGVisRecoil": true
     },
     "6783ae2805a0c56e8da43e4d": {
         "$type": "RealismMod.Gun, RealismMod",
@@ -700,7 +700,7 @@
         "BaseFixSpeed": 1.15,
         "OffsetRotation": 0.0145,
         "RecoilIntensity": 0.23,
-        "EnableExtraBSGVisRecoil": true
+        "ReduceBSGVisRecoil": true
     },
     "674fe9a75e51f1c47c04ec23": {
         "$type": "RealismMod.Gun, RealismMod",
@@ -748,7 +748,7 @@
         "BaseFixSpeed": 1.15,
         "OffsetRotation": 0.0145,
         "RecoilIntensity": 0.23,
-        "EnableExtraBSGVisRecoil": true
+        "ReduceBSGVisRecoil": true
     },
     "66ffa9b66e19cc902401c5e8": {
         "$type": "RealismMod.Gun, RealismMod",
@@ -796,7 +796,7 @@
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.015,
         "RecoilIntensity": 0.195,
-        "EnableExtraBSGVisRecoil": true
+        "ReduceBSGVisRecoil": true
     },
     "67124dcfa3541f2a1f0e788b": {
         "$type": "RealismMod.Gun, RealismMod",
@@ -844,6 +844,6 @@
         "BaseFixSpeed": 1,
         "OffsetRotation": 0.015,
         "RecoilIntensity": 0.195,
-        "EnableExtraBSGVisRecoil": true
+        "ReduceBSGVisRecoil": true
     }
 }

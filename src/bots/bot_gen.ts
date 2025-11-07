@@ -197,12 +197,12 @@ export class BotGen extends BotGenerator {
 
         equipment.FaceCover = gasMaskTier == 3 ? StaticArrays.gasEventMasksHigh : gasMaskTier == 2 ? StaticArrays.gasEventMasksMed : StaticArrays.gasEventMasksLow;
 
-        // if (ModTracker.tgcPresent && ((isPmc && gasMaskTier == 3) || botRole.includes("pmcbot") || botRole.includes("exusec") || botRole.includes("knight") || botRole.includes("pipe") || botRole.includes("bird"))) {
-        //     equipment.FaceCover["672e2e756803734b60f5ac1e"] = 2;
-        //     equipment.FaceCover["672e2e7517018293d11bbdc1"] = 2;
-        //     equipment.FaceCover["672e2e7504b1f1d5b0e4209c"] = 1;
-        //     equipment.FaceCover["67a13809c3bc1e2fa47e6eec"] = 1;
-        // }
+        if (ModTracker.tgcPresent && ((isPmc && gasMaskTier == 3) || botRole.includes("pmcbot") || botRole.includes("exusec") || botRole.includes("knight") || botRole.includes("pipe") || botRole.includes("bird"))) {
+            equipment.FaceCover["672e2e756803734b60f5ac1e"] = 2;
+            // equipment.FaceCover["672e2e7517018293d11bbdc1"] = 2; MCU seems to have been removed from TGC
+            equipment.FaceCover["672e2e7504b1f1d5b0e4209c"] = 1;
+            equipment.FaceCover["67a13809c3bc1e2fa47e6eec"] = 1;
+        }
 
         chances.equipment.Eyewear = 0;
         chances.equipment.FaceCover = 100;

@@ -311,9 +311,9 @@ export class StaticArrays {
     ]
 
     static gasMasks = [
-        // "672e2e756803734b60f5ac1e",
-        // "672e2e7504b1f1d5b0e4209c",
-        "672e2e7517018293d11bbdc1",
+        "672e2e756803734b60f5ac1e",
+        "672e2e7504b1f1d5b0e4209c",
+        //"672e2e7517018293d11bbdc1",
         "5b432c305acfc40019478128",
         "60363c0c92ec1c31037959f5",
         "67a13809c3bc1e2fa47e6eec",

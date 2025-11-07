@@ -149,7 +149,7 @@
         "Name": "mag_m60_capco_m60e3_assault_box_762x51_100",
         "ModType": "",
         "ReloadSpeed": 0,
-        "Ergonomics": -5,
+        "Ergonomics": 0,
         "MalfunctionChance": 0,
         "LoadUnloadModifier": 0,
         "CheckTimeModifier": 0,

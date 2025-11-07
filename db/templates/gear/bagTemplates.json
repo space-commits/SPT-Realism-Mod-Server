@@ -71,6 +71,18 @@
         "mousePenalty": 0,
         "weaponErgonomicPenalty": 0
     },
+    "67458794e21e5d724e066976": {
+        "$type": "RealismMod.Gear, RealismMod",
+        "ItemID": "67458794e21e5d724e066976",
+        "Name": "item_equipment_backpack_lbt1476a_alpine",
+        "AllowADS": true,
+        "LoyaltyLevel": 2,
+        "ReloadSpeedMulti": 1,
+        "Comfort": 0.88,
+        "speedPenaltyPercent": -2.5,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": 0
+    },
     "656f198fb27298d6fd005466": {
         "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "656f198fb27298d6fd005466",

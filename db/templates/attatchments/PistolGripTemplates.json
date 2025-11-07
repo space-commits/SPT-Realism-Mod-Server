@@ -1868,7 +1868,7 @@
         "AimSpeed": 0,
         "Ergonomics": 4.5,
         "Accuracy": 0,
-        "AimStability": 3,
+        "AimStability": 8,
         "ConflictingItems": [],
         "Weight": 0.039,
         "LoyaltyLevel": 2
@@ -1884,7 +1884,7 @@
         "AimSpeed": 0,
         "Ergonomics": 6,
         "Accuracy": 0,
-        "Handling": 4,
+        "Handling": 6,
         "ConflictingItems": [],
         "Weight": 0.042,
         "LoyaltyLevel": 3
@@ -1900,7 +1900,7 @@
         "AimSpeed": 0,
         "Ergonomics": 6,
         "Accuracy": 0,
-        "Handling": 4,
+        "Handling": 6,
         "ConflictingItems": [],
         "Weight": 0.042,
         "LoyaltyLevel": 3

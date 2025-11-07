@@ -134,6 +134,21 @@
         "mousePenalty": 0,
         "weaponErgonomicPenalty": 0
     },
+    "674589d98dd67746010329e6": {
+        "$type": "RealismMod.Gear, RealismMod",
+        "ItemID": "674589d98dd67746010329e6",
+        "Name": "item_equipment_rig_bankrobber_alpine",
+        "AllowADS": true,
+        "LoyaltyLevel": 1,
+        "ArmorClass": "",
+        "CanSpall": false,
+        "SpallReduction": 1,
+        "ReloadSpeedMulti": 1.17,
+        "Comfort": 1,
+        "speedPenaltyPercent": 0,
+        "mousePenalty": 0,
+        "weaponErgonomicPenalty": 0
+    },
     "5ab8dab586f77441cd04f2a2": {
         "$type": "RealismMod.Gear, RealismMod",
         "ItemID": "5ab8dab586f77441cd04f2a2",
