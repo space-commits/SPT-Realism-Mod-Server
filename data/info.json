@@ -3,7 +3,7 @@
     "IsChristmas": false,
     "DoGasEvent": false,
     "HasExploded": false,
-    "IsPreExplosion": false,
+    "IsPreExplosion": true,
     "DoExtraRaiders": false,
     "DoExtraCultists": false
 }

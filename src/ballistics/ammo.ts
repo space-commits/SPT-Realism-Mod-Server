@@ -2523,18 +2523,18 @@ export class Ammo {
             }
             // CBJ
             if (serverItem._id === "64b8725c4b75259c590fa899") {
-                serverItem._props.PenetrationPower = 62;
-                serverItem._props.ArmorDamage = 1.1;
+                serverItem._props.PenetrationPower = 74;
+                serverItem._props.ArmorDamage = 0.9;
                 serverItem._props.Damage = 70;
                 serverItem._props.InitialSpeed = 725;
-                serverItem._props.RicochetChance = 0.45;
+                serverItem._props.RicochetChance = 0.7;
                 serverItem._props.FragmentationChance = 0.06;
-                serverItem._props.BulletMassGram = 9.3;
+                serverItem._props.BulletMassGram = 7.1;
                 serverItem._props.HeavyBleedingDelta = 0.27;
                 serverItem._props.LightBleedingDelta = 0.6;
-                serverItem._props.ammoAccr = -10;
+                serverItem._props.ammoAccr = -15;
                 serverItem._props.ammoHear = 0;
-                serverItem._props.ammoRec = 10;
+                serverItem._props.ammoRec = 5;
 
                 if (this.modConf.malf_changes == true) {
                     serverItem._props.MalfMisfireChance = 0.3;

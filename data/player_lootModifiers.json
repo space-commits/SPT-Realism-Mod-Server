@@ -376,5 +376,47 @@
             "sandbox_high": 1,
             "town": 1
         }
+    },
+    "6916588900045fc8fca8d6e0": {
+        "looseLootMultiplier": {
+            "bigmap": 2.7750000000000004,
+            "develop": 2.7750000000000004,
+            "factory4_day": 2.7750000000000004,
+            "factory4_night": 3,
+            "interchange": 2.7750000000000004,
+            "laboratory": 2.8,
+            "rezervbase": 2.9,
+            "shoreline": 3.7,
+            "woods": 2.7750000000000004,
+            "hideout": 2.7750000000000004,
+            "lighthouse": 2.8,
+            "privatearea": 2.7750000000000004,
+            "suburbs": 2.7750000000000004,
+            "tarkovstreets": 3,
+            "terminal": 2.7750000000000004,
+            "sandbox": 2.8,
+            "sandbox_high": 2.7750000000000004,
+            "town": 2.7750000000000004
+        },
+        "staticLootMultiplier": {
+            "bigmap": 1.4800000000000002,
+            "develop": 1.4800000000000002,
+            "factory4_day": 1.4800000000000002,
+            "factory4_night": 1.4800000000000002,
+            "interchange": 1.4800000000000002,
+            "laboratory": 1.4800000000000002,
+            "rezervbase": 1.4800000000000002,
+            "shoreline": 1.4800000000000002,
+            "woods": 1.4800000000000002,
+            "hideout": 1.4800000000000002,
+            "lighthouse": 1.4800000000000002,
+            "privatearea": 1.4800000000000002,
+            "suburbs": 1.4800000000000002,
+            "tarkovstreets": 1.4800000000000002,
+            "terminal": 1.4800000000000002,
+            "sandbox": 1.4800000000000002,
+            "sandbox_high": 1.4800000000000002,
+            "town": 1.4800000000000002
+        }
     }
 }
