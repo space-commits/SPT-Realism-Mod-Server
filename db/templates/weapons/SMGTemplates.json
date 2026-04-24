@@ -580,7 +580,7 @@
         "HorizontalRecoil": 115,
         "Dispersion": 8,
         "CameraRecoil": 0.0435,
-        "VisualMulti": 1.15,
+        "VisualMulti": 1.2,
         "Convergence": 20,
         "RecoilAngle": 87,
         "BaseMalfunctionChance": 0.0014,
@@ -595,7 +595,7 @@
         "HipInnaccuracyGain": 0.16,
         "ShotgunDispersion": 0,
         "Velocity": 0,
-        "RecoilDamping": 0.84,
+        "RecoilDamping": 0.81,
         "RecoilHandDamping": 0.45,
         "WeaponAllowADS": false,
         "Weight": 0.64,
@@ -610,7 +610,7 @@
         "IsManuallyOperated": false,
         "BaseChamberCheckSpeed": 1,
         "BaseFixSpeed": 1,
-        "OffsetRotation": 0.01,
+        "OffsetRotation": 0.012,
         "RecoilIntensity": 0.25
     },
     "5fc3f2d5900b1d5091531e57": {
